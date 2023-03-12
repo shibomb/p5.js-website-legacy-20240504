@@ -4,10 +4,7 @@
   "version": "0.1.0",
   "languages": [
     "en",
-    "es",
-    "hi",
-    "ko",
-    "zh-Hans"
+    "ja"
   ],
   "homepage": "https://github.com/processing/p5.js-website",
   "author": {
