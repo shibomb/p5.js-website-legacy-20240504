@@ -1,40 +1,34 @@
 /*
- * @name Coordinates
- * @arialabel Black background with a orange outline of a square in the middle and a blue line across at the top ⅓ point of the square
- * @description All shapes drawn to the screen have a position that is
- * specified as a coordinate. All coordinates are measured as the distance from
- * the origin in units of pixels. The origin [0, 0] is the coordinate in the
- * upper left of the window and the coordinate in the lower right is [width-1,
- * height-1].
+ * @name 座標
+ * @arialabel 中央にオレンジの正方形の輪郭、上部の1/3地点に青い線が引かれた黒背景
+ * @description 画面に描かれるすべての図形は、座標として指定される位置を持っています。
+ * すべての座標は、ピクセル単位で原点からの距離として測定されます。
+ * 原点 [0, 0] はウィンドウの左上の座標であり、右下の座標は [width-1, height-1] です。
  */
 function setup() {
-  // Sets the screen to be 720 pixels wide and 400 pixels high
+  // 画面の幅を720ピクセル、高さを400ピクセルに設定
   createCanvas(720, 400);
 }
 
 function draw() {
-  // Set the background to black and turn off the fill color
+  // 背景を黒に設定し、塗りつぶし色をオフにする
   background(0);
   noFill();
 
-  // The two parameters of the point() method each specify
-  // coordinates.
-  // The first parameter is the x-coordinate and the second is the Y
+  // point() メソッドの2つのパラメータはそれぞれ座標を指定します。
+  // 最初のパラメータはx座標で、2番目はY座標です
   stroke(255);
   point(width * 0.5, height * 0.5);
   point(width * 0.5, height * 0.25);
 
-  // Coordinates are used for drawing all shapes, not just points.
-  // Parameters for different functions are used for different
-  // purposes. For example, the first two parameters to line()
-  // specify the coordinates of the first endpoint and the second
-  // two parameters specify the second endpoint
+  // 座標はポイントだけでなく、すべての図形の描画に使用されます。
+  // 異なる関数のパラメータは異なる目的に使用されます。例えば、line()
+  // の最初の2つのパラメータは第1の端点の座標を指定し、次の2つのパラメータは第2の端点を指定します
   stroke(0, 153, 255);
   line(0, height * 0.33, width, height * 0.33);
 
-  // By default, the first two parameters to rect() are the
-  // coordinates of the upper-left corner and the second pair
-  // is the width and height
+  // デフォルトでは、rect()の最初の2つのパラメータは左上隅の座標で、
+  // 2番目のペアは幅と高さです
   stroke(255, 153, 0);
   rect(width * 0.25, height * 0.1, width * 0.5, height * 0.8);
 }

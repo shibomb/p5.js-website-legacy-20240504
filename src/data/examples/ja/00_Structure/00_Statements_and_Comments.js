@@ -1,23 +1,18 @@
 /*
- * @name Comments and Statements
- * @arialabel Mustard yellow background
- * @description Statements are the elements that make up programs. The ";" (semi-colon) symbol is used to end statements.
- * It is called the "statement terminator". Comments are used for making notes to help people better understand programs. A comment begins with two forward slashes ("//").
- * <br><br><small><em>This example is ported from the <a href="https://processing.org/examples/statementscomments.html">Statements and Comments example</a>
- * on the Processing website</em></small>
+ * @name コメントとステートメント
+ * @arialabel からし色の背景
+ * @description ステートメントは、プログラムを構成する要素です。";"（セミコロン）記号は、ステートメントを終了するために使用されます。
+ * これは「ステートメント終端記号」と呼ばれています。コメントは、プログラムを理解しやすくするためにメモを残すために使用されます。コメントは2つのスラッシュ(" // ")で始まります。
+ * <br><br><small><em>この例は、Processingのウェブサイトの<a href="https://processing.org/examples/statementscomments.html">ステートメントとコメントの例</a>から移植されています</em></small>
  */
-// The createCanvas function is a statement that tells the computer 
-// how large to make the window.
-// Each function statement has zero or more parameters. 
-// Parameters are data passed into the function
-// and are used as values for telling the computer what to do.
+// createCanvas関数は、コンピュータにウィンドウの大きさを指示するステートメントです。
+// 各関数ステートメントには0個以上のパラメータがあります。
+// パラメータは関数に渡されるデータであり、コンピュータに何をさせるかを指示する値として使用されます。
 function setup() {
-   createCanvas(710, 400);
+  createCanvas(710, 400);
 }
 
-// The background function is a statement that tells the computer
-// which color (or gray value) to make the background of the display window 
+// background関数は、コンピュータにディスプレイウィンドウの背景をどの色（またはグレー値）にするかを指示するステートメントです。
 function draw() {
-   background(204, 153, 0);
+  background(204, 153, 0);
 }
-
