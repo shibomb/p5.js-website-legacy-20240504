@@ -71,7 +71,7 @@
     "returns": "P5：p5インスタンス",
     "params": {
       "sketch": "Function: 与えられたp5インスタンスにオプションでpreload()、setup()、および/またはdraw()プロパティを設定できるクロージャ",
-      "node": "HTMLElement:（オプション）キャンバスをアタッチする要素"
+      "node": "HTMLElement:(オプション)キャンバスをアタッチする要素"
     },
     "describe": {
       "description": [
@@ -81,7 +81,7 @@
       ],
       "params": {
         "text": "String: キャンバスの説明",
-        "display": "Constant: （オプション）LABEL または FALLBACK のいずれか"
+        "display": "Constant: (オプション)LABEL または FALLBACK のいずれか"
       }
     },
     "describeElement": {
@@ -93,7 +93,7 @@
       "params": {
         "name": "String: 要素の名前",
         "text": "String: 要素の説明",
-        "display": "Constant: （オプション）LABEL または FALLBACK のいずれか"
+        "display": "Constant: (オプション)LABEL または FALLBACK のいずれか"
       }
     },
     "textOutput": {
@@ -102,7 +102,7 @@
         "<code class=\"language-javascript\">textOutput()</code>および<code class=\"language-javascript\">textOutput(FALLBACK)</code>は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブDOM</a>でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">textOutput(LABEL)</code>は、キャンバスに隣接する出力が含まれる追加のdivを作成し、これはコーディング時にキャンバスのサブDOM外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABELを使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみLABELを使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
       ],
       "params": {
-        "display": "Constant: （オプション）FALLBACK または LABEL のいずれか"
+        "display": "Constant: (オプション)FALLBACK または LABEL のいずれか"
       }
     },
     "gridOutput": {
@@ -111,7 +111,7 @@
         "<code class=\"language-javascript\">gridOutput()</code>および<code class=\"language-javascript\">gridOutput(FALLBACK)</code>は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブDOM</a>でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">gridOutput(LABEL)</code>は、キャンバスに隣接する出力が含まれる追加のdivを作成し、これはコーディング時にキャンバスのサブDOM外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABELを使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみLABELを使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
       ],
       "params": {
-        "display": "Constant: （オプション）FALLBACK または LABEL のいずれか"
+        "display": "Constant: (オプション)FALLBACK または LABEL のいずれか"
       }
     },
     "alpha": {
@@ -144,7 +144,7 @@
       "returns": "p5.Color: 結果の色",
       "params": {
         "gray": "Number: 白と黒の間の値を指定する数値。",
-        "alpha": "Number: （オプション）現在のカラーレンジに対するアルファ値（デフォルトは 0-255）",
+        "alpha": "Number: (オプション)現在のカラーレンジに対するアルファ値（デフォルトは 0-255）",
         "v1": "Number: 現在のカラーレンジに対する赤または色相値",
         "v2": "Number: 現在のカラーレンジに対する緑または彩度値",
         "v3": "Number: 現在のカラーレンジに対する青または明るさの値",
@@ -217,7 +217,7 @@
       "params": {
         "color": "p5.Color: <a href=\"#/p5/color\">color()</a> 関数で作成された任意の値",
         "colorstring": "String: カラー文字列、対応する形式は次のとおりです: 整数 rgb() または rgba()、パーセンテージ rgb() または rgba()、3 桁の 16 進数、6 桁の 16 進数",
-        "a": "Number: (任意) 現在のカラー範囲に対する背景の不透明度 (デフォルトは 0-255)",
+        "a": "Number: (オプション) 現在のカラー範囲に対する背景の不透明度 (デフォルトは 0-255)",
         "gray": "Number: 白と黒の間の値を指定",
         "v1": "Number: 現在のカラーモードに応じた赤または色相の値",
         "v2": "Number: 現在のカラーモードに応じた緑または彩度の値",
@@ -289,7 +289,7 @@
         "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
         "v2": "Number: 現在のカラーレンジに対する緑または彩度の値",
         "v3": "Number: 現在のカラーレンジに対する青または明度の値",
-        "alpha": "Number (任意)",
+        "alpha": "Number (オプション)",
         "value": "String: カラー文字列",
         "gray": "Number: グレーの値",
         "values": "Number[]: 色の赤、緑、青、アルファ成分を含む配列",
@@ -302,8 +302,8 @@
         "<a href=\"#/p5/erase\">erase()</a> と <a href=\"#/p5/noErase\">noErase()</a> の間にある <a href=\"#/p5/image\">image()</a> と <a href=\"#/p5/background\">background()</a> での描画は、キャンバスを消去せず、通常どおりに動作します。"
       ],
       "params": {
-        "strengthFill": "Number: (任意) 形状の塗りつぶしの消去強度の数値（0-255）。引数がない場合、デフォルトで 255 になり、最大強度になります。",
-        "strengthStroke": "Number: (任意) 形状のストロークの消去強度の数値（0-255）。引数がない場合、デフォルトで 255 になり、最大強度になります。"
+        "strengthFill": "Number: (オプション) 形状の塗りつぶしの消去強度の数値（0-255）。引数がない場合、デフォルトで 255 になり、最大強度になります。",
+        "strengthStroke": "Number: (オプション) 形状のストロークの消去強度の数値（0-255）。引数がない場合、デフォルトで 255 になり、最大強度になります。"
       }
     },
     "noErase": {
@@ -323,8 +323,8 @@
         "h": "Number: デフォルトでの円弧の楕円の高さ",
         "start": "Number: 円弧を開始する角度（ラジアンで指定）",
         "stop": "Number: 円弧を終了する角度（ラジアンで指定）",
-        "mode": "Constant: （オプション）円弧の描画方法を決定するオプションパラメータ。CHORD、PIE、または OPEN のいずれか",
-        "detail": "Integer: （オプション）WebGL モード専用のオプションパラメータ。これは、円弧の周囲を構成する頂点の数を指定するためのものです。デフォルト値は 25 です。50 を超える詳細にはストロークを描画しません。"
+        "mode": "Constant: (オプション)円弧の描画方法を決定するオプションパラメータ。CHORD、PIE、または OPEN のいずれか",
+        "detail": "Integer: (オプション)WebGL モード専用のオプションパラメータ。これは、円弧の周囲を構成する頂点の数を指定するためのものです。デフォルト値は 25 です。50 を超える詳細にはストロークを描画しません。"
       }
     },
     "ellipse": {
@@ -336,8 +336,8 @@
         "x": "Number: 楕円の中心の x 座標。",
         "y": "Number: 楕円の中心の y 座標。",
         "w": "Number: 楕円の幅。",
-        "h": "Number: （オプション）楕円の高さ。",
-        "detail": "Integer: （オプション）WEBGL モード専用のオプションパラメータ。これは、楕円の周囲を構成する頂点の数を指定するためのものです。デフォルト値は 25 です。50 を超える詳細にはストロークを描画しません。"
+        "h": "Number: (オプション)楕円の高さ。",
+        "detail": "Integer: (オプション)WEBGL モード専用のオプションパラメータ。これは、楕円の周囲を構成する頂点の数を指定するためのものです。デフォルト値は 25 です。50 を超える詳細にはストロークを描画しません。"
       }
     },
     "circle": {
@@ -370,7 +370,7 @@
       "params": {
         "x": "Number: x座標",
         "y": "Number: y座標",
-        "z": "Number: （オプション）z座標（WebGLモード用）",
+        "z": "Number: (オプション)z座標（WebGLモード用）",
         "coordinate_vector": "p5.Vector: 座標ベクトル"
       }
     },
@@ -387,8 +387,8 @@
         "y3": "Number: 3番目の点のy座標",
         "x4": "Number: 4番目の点のx座標",
         "y4": "Number: 4番目の点のy座標",
-        "detailX": "Integer: （オプション）x方向のセグメントの数",
-        "detailY": "Integer: （オプション）y方向のセグメントの数",
+        "detailX": "Integer: (オプション)x方向のセグメントの数",
+        "detailY": "Integer: (オプション)y方向のセグメントの数",
         "z1": "Number: 最初の点のz座標",
         "z2": "Number: 2番目の点のz座標",
         "z3": "Number: 3番目の点のz座標",
@@ -404,13 +404,13 @@
         "x": "Number: 長方形のx座標。",
         "y": "Number: 長方形のy座標。",
         "w": "Number: 長方形の幅。",
-        "h": "Number: （オプション）長方形の高さ。",
-        "tl": "Number: （オプション）左上の角の半径。",
-        "tr": "Number: （オプション）右上の角の半径。",
-        "br": "Number: （オプション）右下の角の半径。",
-        "bl": "Number: （オプション）左下の角の半径。",
-        "detailX": "Integer: （オプション）x方向のセグメント数（WebGLモード用）",
-        "detailY": "Integer: （オプション）y方向のセグメント数（WebGLモード用）"
+        "h": "Number: (オプション) 長方形の高さ。",
+        "tl": "Number: (オプション) 左上の角の半径。",
+        "tr": "Number: (オプション) 右上の角の半径。",
+        "br": "Number: (オプション) 右下の角の半径。",
+        "bl": "Number: (オプション) 左下の角の半径。",
+        "detailX": "Integer: (オプション) x方向のセグメント数（WebGLモード用）",
+        "detailY": "Integer: (オプション) y方向のセグメント数（WebGLモード用）"
       }
     },
     "square": {
@@ -647,7 +647,7 @@
         "<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a>などの変換は<a href=\"#/p5/beginShape\">beginShape()</a>内では機能しません。<a href=\"#/p5/ellipse\">ellipse()</a>や<a href=\"#/p5/rect\">rect()</a>などの他の図形も、<a href=\"#/p5/beginShape\">beginShape()</a>内では使用できません。"
       ],
       "params": {
-        "kind": "Constant: (任意) POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, QUAD_STRIP, TESS のいずれか"
+        "kind": "Constant: (オプション) POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, QUAD_STRIP, TESS のいずれか"
       }
     },
     "bezierVertex": {
@@ -713,9 +713,9 @@
       "params": {
         "x": "Number: 頂点のx座標",
         "y": "Number: 頂点のy座標",
-        "z": "Number: （オプション）頂点のz座標。指定されていない場合はデフォルトで0になります。",
-        "u": "Number: （オプション）頂点のテクスチャu座標",
-        "v": "Number: （オプション）頂点のテクスチャv座標"
+        "z": "Number: (オプション)頂点のz座標。指定されていない場合はデフォルトで0になります。",
+        "u": "Number: (オプション)頂点のテクスチャu座標",
+        "v": "Number: (オプション)頂点のテクスチャv座標"
       }
     },
     "normal": {
@@ -917,8 +917,8 @@
       ],
       "params": {
         "type": "String|Constant: 組み込み: ARROW, CROSS, HAND, MOVE, TEXT, WAIT  ネイティブCSSプロパティ: 'grab', 'progress', 'cell'など  外部: カーソル画像のパス（許可されるファイル拡張子: .cur, .gif, .jpg, .jpeg, .png）  ネイティブCSSカーソルとurlの詳細については、次のリンクを参照してください: <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/cursor\">https://developer.mozilla.org/en-US/docs/Web/CSS/cursor</a>",
-        "x": "Number: （オプション）カーソルの水平方向のアクティブスポット（32未満である必要があります）",
-        "y": "Number: （オプション）カーソルの垂直方向のアクティブスポット（32未満である必要があります）"
+        "x": "Number: (オプション) カーソルの水平方向のアクティブスポット（32未満である必要があります）",
+        "y": "Number: (オプション) カーソルの垂直方向のアクティブスポット（32未満である必要があります）"
       }
     },
     "frameRate": {
@@ -965,7 +965,7 @@
         "<a href=\"#/p5/windowResized\">windowResized()</a>関数は、ブラウザウィンドウがリサイズされるたびに一度呼び出されます。これは、キャンバスのサイズを変更したり、新しいウィンドウサイズに合わせて他の調整を行うのに適した場所です。"
       ],
       "params": {
-        "event": "Object: (Optional) オプションのイベントコールバック引数。"
+        "event": "Object: (オプション) オプションのイベントコールバック引数。"
       }
     },
     "width": {
@@ -3782,7 +3782,7 @@
       ],
       "returns": "String: フォーマットされた文字列",
       "params": {
-        "format": "String: （オプション）カラー文字列の書式設定方法。空白にすると、rgba(r、g、b、a)として文字列をフォーマットします。 '#rgb'、 '#rgba'、 '#rrggbb'、および'#rrggbbaa'は16進数のカラーコードとしてフォーマットされます。 'rgb'、 'hsb'、および'hsl'は、指定されたカラーモードでフォーマットされたカラーを返します。 'rgba'、 'hsba'、および'hsla'は、上記と同じですがアルファチャネルが含まれます。 'rgb%'、 'hsb%'、 'hsl%'、 'rgba%'、 'hsba%'、および'hsla%'はパーセントとしてフォーマットされます。"
+        "format": "String: (オプション)カラー文字列の書式設定方法。空白にすると、rgba(r、g、b、a)として文字列をフォーマットします。 '#rgb'、 '#rgba'、 '#rrggbb'、および'#rrggbbaa'は16進数のカラーコードとしてフォーマットされます。 'rgb'、 'hsb'、および'hsl'は、指定されたカラーモードでフォーマットされたカラーを返します。 'rgba'、 'hsba'、および'hsla'は、上記と同じですがアルファチャネルが含まれます。 'rgb%'、 'hsb%'、 'hsl%'、 'rgba%'、 'hsba%'、および'hsla%'はパーセントとしてフォーマットされます。"
       }
     },
     "setRed": {
@@ -3795,391 +3795,391 @@
     },
     "setGreen": {
       "description": [
-        "The setGreen method sets the green component of a color. The range depends on your color mode, in the default RGB mode it's between 0 and 255."
+        "setGreenメソッドは、色の緑成分を設定します。範囲はカラーモードによって異なり、デフォルトのRGBモードでは0から255の間です。"
       ],
       "params": {
-        "green": "Number: the new green value"
+        "green": "Number: 新しい緑の値"
       }
     },
     "setBlue": {
       "description": [
-        "The setBlue method sets the blue component of a color. The range depends on your color mode, in the default RGB mode it's between 0 and 255."
+        "setBlueメソッドは、色の青成分を設定します。範囲はカラーモードによって異なり、デフォルトのRGBモードでは0から255の間です。"
       ],
       "params": {
-        "blue": "Number: the new blue value"
+        "blue": "Number: 新しい青の値"
       }
     },
     "setAlpha": {
       "description": [
-        "The setAlpha method sets the transparency (alpha) value of a color. The range depends on your color mode, in the default RGB mode it's between 0 and 255."
+        "setAlphaメソッドは、色の透明度（アルファ）値を設定します。範囲はカラーモードによって異なり、デフォルトのRGBモードでは0から255の間です。"
       ],
       "params": {
-        "alpha": "Number: the new alpha value"
+        "alpha": "Number: 新しいアルファ値"
       }
     }
   },
   "p5.Element": {
     "description": [
-      "Base class for all elements added to a sketch, including canvas, graphics buffers, and other HTML elements. It is not called directly, but <a href=\"#/p5.Element\">p5.Element</a> objects are created by calling <a href=\"#/p5/createCanvas\">createCanvas()</a>, <a href=\"#/p5/createGraphics\">createGraphics()</a>, <a href=\"#/p5/createDiv\">createDiv()</a>, <a href=\"#/p5/createImg\">createImg()</a>, <a href=\"#/p5/createInput\">createInput()</a>, etc."
+      "スケッチに追加されるすべての要素の基底クラスで、キャンバス、グラフィックスバッファ、およびその他のHTML要素が含まれます。直接呼び出されることはありませんが、<a href=\"#/p5.Element\">p5.Element</a>オブジェクトは、<a href=\"#/p5/createCanvas\">createCanvas()</a>、<a href=\"#/p5/createGraphics\">createGraphics()</a>、<a href=\"#/p5/createDiv\">createDiv()</a>、<a href=\"#/p5/createImg\">createImg()</a>、<a href=\"#/p5/createInput\">createInput()</a>などを呼び出すことで作成されます。"
     ],
     "params": {
-      "elt": "String: DOM node that is wrapped",
-      "pInst": "P5: (Optional) pointer to p5 instance"
+      "elt": "String: ラップされたDOMノード",
+      "pInst": "P5: (オプション) p5インスタンスへのポインタ"
     },
     "elt": {
       "description": [
-        "Underlying HTML element. All normal HTML methods can be called on this."
+        "基礎となるHTML要素。これに対してすべての通常のHTMLメソッドを呼び出すことができます。"
       ]
     },
     "parent": {
       "description": [
-        "Attaches the element to the parent specified. A way of setting  the container for the element. Accepts either a string ID, DOM  node, or <a href=\"#/p5.Element\">p5.Element</a>. If no arguments are given, parent node is returned.  For more ways to position the canvas, see the  <a href='https://github.com/processing/p5.js/wiki/Positioning-your-canvas'>  positioning the canvas</a> wiki page."
+        "指定された親要素に要素をアタッチします。要素のコンテナを設定する方法です。文字列ID、DOMノード、または<a href=\"#/p5.Element\">p5.Element</a>を受け入れます。引数がない場合、親ノードが返されます。キャンバスの位置を決める他の方法については、<a href='https://github.com/processing/p5.js/wiki/Positioning-your-canvas'>キャンバスの配置</a>のwikiページを参照してください。"
       ],
       "params": {
-        "parent": "String|p5.Element|Object: the ID, DOM node, or <a href=\"#/p5.Element\">p5.Element</a>  of desired parent element"
+        "parent": "String|p5.Element|Object: 望ましい親要素のID、DOMノード、または<a href=\"#/p5.Element\">p5.Element</a>"
       }
     },
     "id": {
       "description": [
-        "Sets the ID of the element. If no ID argument is passed in, it instead  returns the current ID of the element.  Note that only one element can have a particular id in a page.  The <a href=\"#/p5.Element/class\">class()</a> method can be used  to identify multiple elements with the same class name."
+        "要素のIDを設定します。ID引数が渡されない場合は、代わりに要素の現在のIDが返されます。ページ内で特定のIDを持つ要素は1つだけであることに注意してください。<a href=\"#/p5.Element/class\">class()</a>メソッドは、同じクラス名を持つ複数の要素を識別するために使用できます。"
       ],
       "params": {
-        "id": "String: ID of the element"
+        "id": "String: 要素のID"
       }
     },
     "class": {
       "description": [
-        "Adds given class to the element. If no class argument is passed in, it  instead returns a string containing the current class(es) of the element."
+        "指定されたクラスを要素に追加します。クラス引数が渡されない場合は、代わりに要素の現在のクラスを含む文字列が返されます。"
       ],
       "params": {
-        "class": "String: class to add"
+        "class": "String: 追加するクラス"
       }
     },
     "mousePressed": {
       "description": [
-        "The <a href=\"#/p5.Element/mousePressed\">mousePressed()</a> method is called once after every time a mouse button is pressed over the element. Some mobile browsers may also trigger this event on a touch screen, if the user performs a quick tap. This can be used to attach element-specific event listeners."
+        "<a href=\"#/p5.Element/mousePressed\">mousePressed()</a>メソッドは、要素の上でマウスボタンが押されるたびに1回呼び出されます。一部のモバイルブラウザでは、ユーザーが素早くタップすると、タッチスクリーンでもこのイベントがトリガーされる場合があります。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when mouse is  pressed over the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: 要素の上でマウスが押されたときに発火する関数。代わりに<code>false</code>が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "doubleClicked": {
       "description": [
-        "The <a href=\"#/p5.Element/doubleClicked\">doubleClicked()</a> method is called once after every time a mouse button is pressed twice over the element. This can be used to attach element and action-specific event listeners."
+        "<a href=\"#/p5.Element/doubleClicked\">doubleClicked()</a>メソッドは、要素の上でマウスボタンが2回押されるたびに1回呼び出されます。これは、要素とアクション固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "returns": "p5.Element:",
       "params": {
-        "fxn": "Function|Boolean: function to be fired when mouse is  double clicked over the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: 要素の上でマウスがダブルクリックされたときに発火する関数。代わりに<code>false</code>が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "mouseWheel": {
       "description": [
-        "The <a href=\"#/p5.Element/mouseWheel\">mouseWheel()</a> method is called once after every time a mouse wheel is scrolled over the element. This can be used to attach element-specific event listeners.",
-        "The method accepts a callback function as argument which will be executed when the <code>wheel</code> event is triggered on the element, the callback function is passed one argument <code>event</code>. The <code>event.deltaY</code> property returns negative values if the mouse wheel is rotated up or away from the user and positive in the other direction. The <code>event.deltaX</code> does the same as <code>event.deltaY</code> except it reads the horizontal wheel scroll of the mouse wheel.",
-        "On macOS with \"natural\" scrolling enabled, the <code>event.deltaY</code> values are reversed."
+        "要素の上でマウスホイールがスクロールされるたびに、<a href=\"#/p5.Element/mouseWheel\">mouseWheel()</a>メソッドが1回呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。",
+        "このメソッドは、コールバック関数を引数として受け入れ、要素で<code>wheel</code>イベントがトリガーされると実行されます。コールバック関数には、<code>event</code>という1つの引数が渡されます。<code>event.deltaY</code>プロパティは、マウスホイールが上に回転するか、ユーザーから離れる方向に回転すると負の値を返し、他の方向では正の値を返します。<code>event.deltaX</code>は、<code>event.deltaY</code>と同様のことを行いますが、マウスホイールの水平方向のスクロールを読み取ります。",
+        "macOSで「ナチュラル」スクロールが有効になっている場合、<code>event.deltaY</code>の値は反転します。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when mouse is  scrolled over the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: 要素の上でマウスがスクロールされたときに発火する関数。代わりに<code>false</code>が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "mouseReleased": {
       "description": [
-        "The <a href=\"#/p5.Element/mouseReleased\">mouseReleased()</a> method is called once after every time a mouse button is released over the element. Some mobile browsers may also trigger this event on a touch screen, if the user performs a quick tap. This can be used to attach element-specific event listeners."
+        "要素の上でマウスボタンが離されるたびに、<a href=\"#/p5.Element/mouseReleased\">mouseReleased()</a>メソッドが1回呼び出されます。一部のモバイルブラウザでは、ユーザーが素早くタップすると、タッチスクリーンでもこのイベントがトリガーされる場合があります。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when mouse is  released over the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: 要素の上でマウスが離されたときに発火する関数。代わりに<code>false</code>が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "mouseClicked": {
       "description": [
-        "The <a href=\"#/p5.Element/mouseClicked\">mouseClicked()</a> method is called once after a mouse button is pressed and released over the element. Some mobile browsers may also trigger this event on a touch screen, if the user performs a quick tap. This can be used to attach element-specific event listeners."
+        "要素の上でマウスボタンが押されて離された後、<a href=\"#/p5.Element/mouseClicked\">mouseClicked()</a>メソッドが1回呼び出されます。一部のモバイルブラウザでは、ユーザーが素早くタップすると、タッチスクリーンでもこのイベントがトリガーされる場合があります。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when mouse is  clicked over the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: 要素の上でマウスがクリックされたときに発火する関数。代わりに<code>false</code>が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "mouseMoved": {
       "description": [
-        "The <a href=\"#/p5.Element/mouseMoved\">mouseMoved()</a> method is called once every time a mouse moves over the element. This can be used to attach an element-specific event listener."
+        "マウスが要素の上を移動するたびに、<a href=\"#/p5.Element/mouseMoved\">mouseMoved()</a>メソッドが1回呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when a mouse moves  over the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: マウスが要素の上を移動したときに発火する関数。代わりに<code>false</code>が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "mouseOver": {
       "description": [
-        "The <a href=\"#/p5.Element/mouseOver\">mouseOver()</a> method is called once after every time a mouse moves onto the element. This can be used to attach an element-specific event listener."
+        "マウスが要素に移動するたびに、<a href=\"#/p5.Element/mouseOver\">mouseOver()</a>メソッドが1回呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when a mouse moves  onto the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: マウスが要素に移動したときに発火する関数。代わりに<code>false</code>が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "mouseOut": {
       "description": [
-        "The <a href=\"#/p5.Element/mouseOut\">mouseOut()</a> method is called once after every time a mouse moves off the element. This can be used to attach an element-specific event listener."
+        "マウスが要素から離れるたびに、<a href=\"#/p5.Element/mouseOut\">mouseOut()</a>メソッドが1回呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when a mouse  moves off of an element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: マウスが要素から離れたときに発火する関数。代わりに<code>false</code>が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "touchStarted": {
       "description": [
-        "The <a href=\"#/p5.Element/touchStarted\">touchStarted()</a> method is called once after every time a touch is registered. This can be used to attach element-specific event listeners."
+        "タッチが登録されるたびに、<a href=\"#/p5.Element/touchStarted\">touchStarted()</a>メソッドが1回呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when a touch  starts over the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: 要素上でタッチが開始されたときに発火する関数。代わりに<code>false</code>が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "touchMoved": {
       "description": [
-        "The <a href=\"#/p5.Element/touchMoved\">touchMoved()</a> method is called once after every time a touch move is registered. This can be used to attach element-specific event listeners."
+        "touchMoved()メソッドは、タッチが移動するたびに一度呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when a touch moves over  the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: タッチが要素の上を移動するときに発火する関数。代わりに<code>false</code>を渡すと、以前に発火していた関数はもう発火しなくなります。"
       }
     },
     "touchEnded": {
       "description": [
-        "The <a href=\"#/p5.Element/touchEnded\">touchEnded()</a> method is called once after every time a touch is registered. This can be used to attach element-specific event listeners."
+        "touchEnded()メソッドは、タッチが終了するたびに一度呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when a touch ends  over the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: タッチが要素の上で終了するときに発火する関数。代わりに<code>false</code>を渡すと、以前に発火していた関数はもう発火しなくなります。"
       }
     },
     "dragOver": {
       "description": [
-        "The <a href=\"#/p5.Element/dragOver\">dragOver()</a> method is called once after every time a file is dragged over the element. This can be used to attach an element-specific event listener."
+        "dragOver()メソッドは、ファイルが要素の上にドラッグされるたびに一度呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when a file is  dragged over the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: ファイルが要素の上にドラッグされるときに発火する関数。代わりに<code>false</code>を渡すと、以前に発火していた関数はもう発火しなくなります。"
       }
     },
     "dragLeave": {
       "description": [
-        "The <a href=\"#/p5.Element/dragLeave\">dragLeave()</a> method is called once after every time a dragged file leaves the element area. This can be used to attach an element-specific event listener."
+        "dragLeave()メソッドは、ドラッグされたファイルが要素領域を離れるたびに一度呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when a file is  dragged off the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: ファイルが要素からドラッグされたときに発火する関数。代わりに<code>false</code>を渡すと、以前に発火していた関数はもう発火しなくなります。"
       }
     },
     "addClass": {
-      "description": ["Adds specified class to the element."],
+      "description": ["指定されたクラスを要素に追加します。"],
       "params": {
-        "class": "String: name of class to add"
+        "class": "String: 追加するクラスの名前"
       }
     },
     "removeClass": {
-      "description": ["Removes specified class from the element."],
+      "description": ["指定されたクラスを要素から削除します。"],
       "params": {
-        "class": "String: name of class to remove"
+        "class": "String: 削除するクラスの名前"
       }
     },
     "hasClass": {
       "description": [
-        "Checks if specified class is already applied to element."
+        "指定されたクラスが既に要素に適用されているかどうかを確認します。"
       ],
-      "returns": "Boolean: a boolean value if element has specified class",
+      "returns": "Boolean: 要素が指定されたクラスを持っているかどうかの真偽値",
       "params": {
-        "c": "String: class name of class to check"
+        "c": "String: 確認するクラスのクラス名"
       }
     },
     "toggleClass": {
-      "description": ["Toggles element class."],
+      "description": ["要素のクラスを切り替えます。"],
       "params": {
-        "c": "String: class name to toggle"
+        "c": "String: 切り替えるクラス名"
       }
     },
     "child": {
       "description": [
-        "Attaches the element as a child to the parent specified.  Accepts either a string ID, DOM node, or <a href=\"#/p5.Element\">p5.Element</a>.  If no argument is specified, an array of children DOM nodes is returned."
+        "要素を指定された親に子としてアタッチします。文字列ID、DOMノード、または<a href=\"#/p5.Element\">p5.Element</a>を受け入れます。引数が指定されていない場合、子DOMノードの配列が返されます。"
       ],
-      "returns": "Node[]: an array of child nodes",
+      "returns": "Node[]: 子ノードの配列",
       "params": {
-        "child": "String|p5.Element: (Optional) the ID, DOM node, or <a href=\"#/p5.Element\">p5.Element</a>  to add to the current element"
+        "child": "String|p5.Element: (オプション) 現在の要素に追加するID、DOMノード、または<a href=\"#/p5.Element\">p5.Element</a>"
       }
     },
     "center": {
       "description": [
-        "Centers a p5.Element either vertically, horizontally, or both, relative to its parent or according to the body if the p5.Element has no parent. If no argument is passed the p5.Element is aligned both vertically and horizontally."
+        "p5.Elementを親に対して垂直方向、水平方向、または両方で中央に配置します。親がない場合は、ボディに対して中央に配置されます。引数が渡されない場合、p5.Elementは垂直方向と水平方向の両方で整列されます。"
       ],
       "params": {
-        "align": "String: (Optional) passing 'vertical', 'horizontal' aligns element accordingly"
+        "align": "String: (オプション) 'vertical'、'horizontal'を渡すと、要素がそれに応じて整列されます"
       }
     },
     "html": {
       "description": [
-        "If an argument is given, sets the inner HTML of the element,  replacing any existing HTML. If true is included as a second  argument, HTML is appended instead of replacing existing HTML.  If no arguments are given, returns  the inner HTML of the element."
+        "引数が与えられた場合、要素の内部HTMLを設定し、既存のHTMLを置き換えます。trueが2番目の引数として含まれている場合、HTMLは既存のHTMLを置き換えるのではなく追加されます。引数が与えられない場合、要素の内部HTMLが返されます。"
       ],
-      "returns": "String: the inner HTML of the element",
+      "returns": "String: 要素の内部HTML",
       "params": {
-        "html": "String: (Optional) the HTML to be placed inside the element",
-        "append": "Boolean: (Optional) whether to append HTML to existing"
+        "html": "String: (オプション) 要素内に配置されるHTML",
+        "append": "Boolean: (オプション) HTMLを既存のものに追加するかどうか"
       }
     },
     "position": {
       "description": [
-        "Sets the position of the element. If no position type argument is given, the  position will be relative to (0, 0) of the window.  Essentially, this sets position:absolute and left and top  properties of style. If an optional third argument specifying position type is given,  the x and y-coordinates will be interpreted based on the <a target=\"_blank\"  href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/position\">positioning scheme</a>.  If no arguments given, the function returns the x and y position of the element. found documentation on how to be more specific with object type  <a href=\"https://stackoverflow.com/questions/14714314/how-do-i-comment-object-literals-in-yuidoc\">https://stackoverflow.com/questions/14714314/how-do-i-comment-object-literals-in-yuidoc</a>"
+        "要素の位置を設定します。位置タイプの引数が与えられない場合、位置はウィンドウの(0, 0)に対して相対的になります。基本的に、これによりposition:absoluteおよびstyleのleftおよびtopプロパティが設定されます。位置タイプを指定するオプションの第3引数が与えられた場合、x座標とy座標は<a target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/position\">位置決めスキーム</a>に基づいて解釈されます。引数が与えられない場合、関数は要素のxおよびy位置を返します。"
       ],
-      "returns": "Object: object of form { x: 0, y: 0 } containing the position of the element in an object",
+      "returns": "Object: 要素の位置を含むオブジェクト { x: 0, y: 0 } 形式のオブジェクト",
       "params": {
-        "x": "Number: (Optional) x-position relative to upper left of window (optional)",
-        "y": "Number: (Optional) y-position relative to upper left of window (optional)",
-        "positionType": "String: (Optional) it can be static, fixed, relative, sticky, initial or inherit (optional)"
+        "x": "Number: (オプション) ウィンドウの左上を基準としたx位置(オプション)",
+        "y": "Number: (オプション) ウィンドウの左上を基準としたy位置(オプション)",
+        "positionType": "String: (オプション) static, fixed, relative, sticky, initial, inherit のいずれか(オプション)"
       }
     },
     "style": {
       "description": [
-        "Sets the given style (CSS) property (1st arg) of the element with the given value (2nd arg). If a single argument is given, .style() returns the value of the given property; however, if a single argument is given in CSS syntax ('text-align:center'), .style() sets the CSS appropriately."
+        "与えられたスタイル（CSS）プロパティ（第1引数）を、与えられた値（第2引数）で要素に設定します。単一の引数が与えられた場合、.style()は指定されたプロパティの値を返します。ただし、単一の引数がCSS構文（'text-align:center'）で与えられた場合、.style()は適切にCSSを設定します。"
       ],
-      "returns": "String: value of property",
+      "returns": "String: プロパティの値",
       "params": {
-        "property": "String: property to be set",
-        "value": "String|p5.Color: value to assign to property"
+        "property": "String: 設定するプロパティ",
+        "value": "String|p5.Color: プロパティに割り当てる値"
       }
     },
     "attribute": {
       "description": [
-        "Adds a new attribute or changes the value of an existing attribute  on the specified element. If no value is specified, returns the  value of the given attribute, or null if the attribute is not set."
+        "指定された要素に新しい属性を追加するか、既存の属性の値を変更します。値が指定されていない場合、指定された属性の値を返すか、属性が設定されていない場合はnullを返します。"
       ],
-      "returns": "String: value of attribute",
+      "returns": "String: 属性の値",
       "params": {
-        "attr": "String: attribute to set",
-        "value": "String: value to assign to attribute"
+        "attr": "String: 設定する属性",
+        "value": "String: 属性に割り当てる値"
       }
     },
     "removeAttribute": {
-      "description": ["Removes an attribute on the specified element."],
+      "description": ["指定された要素の属性を削除します。"],
       "params": {
-        "attr": "String: attribute to remove"
+        "attr": "String: 削除する属性"
       }
     },
     "value": {
       "description": [
-        "Either returns the value of the element if no arguments given, or sets the value of the element."
+        "引数が与えられない場合は要素の値を返すか、要素の値を設定します。"
       ],
-      "returns": "String|Number: value of the element",
+      "returns": "String|Number: 要素の値",
       "params": {
         "value": "String|Number"
       }
     },
     "show": {
       "description": [
-        "Shows the current element. Essentially, setting display:block for the style."
+        "現在の要素を表示します。基本的に、styleにdisplay:blockを設定します。"
       ]
     },
     "hide": {
       "description": [
-        "Hides the current element. Essentially, setting display:none for the style."
+        "現在の要素を非表示にします。基本的に、styleにdisplay:noneを設定します。"
       ]
     },
     "size": {
       "description": [
-        "Sets the width and height of the element. AUTO can be used to  only adjust one dimension at a time. If no arguments are given, it  returns the width and height of the element in an Object. In the case of  elements that need to be loaded, such as images, it is recommended  to call the function after the element has finished loading."
+        "要素の幅と高さを設定します。AUTOを使用して、一度に1つの次元だけを調整することもできます。引数が与えられない場合、オブジェクトで要素の幅と高さを返します。画像など、読み込む必要のある要素の場合は、要素の読み込みが完了した後に関数を呼び出すことをお勧めします。"
       ],
-      "returns": "Object: the width and height of the element in an object",
+      "returns": "Object: オブジェクト内の要素の幅と高さ",
       "params": {
-        "w": "Number|Constant: width of the element, either AUTO, or a number",
-        "h": "Number|Constant: (Optional) height of the element, either AUTO, or a number"
+        "w": "Number|Constant: 要素の幅で、AUTOまたは数値",
+        "h": "Number|Constant: (オプション) 要素の高さで、AUTOまたは数値"
       }
     },
     "remove": {
       "description": [
-        "Removes the element, stops all media streams, and deregisters all listeners."
+        "要素を削除し、すべてのメディアストリームを停止し、すべてのリスナーを登録解除します。"
       ]
     },
     "drop": {
       "description": [
-        "Registers a callback that gets called every time a file that is dropped on the element has been loaded. p5 will load every dropped file into memory and pass it as a p5.File object to the callback. Multiple files dropped at the same time will result in multiple calls to the callback.",
-        "You can optionally pass a second callback which will be registered to the raw <a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/drop\">drop</a> event. The callback will thus be provided the original <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/DragEvent\">DragEvent</a>. Dropping multiple files at the same time will trigger the second callback once per drop, whereas the first callback will trigger for each loaded file."
+        "要素にドロップされたファイルがすべて読み込まれるたびに呼び出されるコールバックを登録します。p5は、ドロップされたすべてのファイルをメモリに読み込み、p5.Fileオブジェクトとしてコールバックに渡します。同時にドロップされた複数のファイルは、コールバックが複数回呼び出される結果となります。",
+        "必要に応じて、2つ目のコールバックを渡すこともできます。これは、生の<a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/drop\">drop</a>イベントに登録されます。そのため、コールバックは元の<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/DragEvent\">DragEvent</a>が提供されます。同時に複数のファイルをドロップすると、2つ目のコールバックは1回のドロップごとにトリガーされますが、最初のコールバックはロードされたファイルごとにトリガーされます。"
       ],
       "params": {
-        "callback": "Function: callback to receive loaded file, called for each file dropped.",
-        "fxn": "Function: (Optional) callback triggered once when files are dropped with the drop event."
+        "callback": "Function: 読み込まれたファイルを受け取るコールバックで、ドロップされた各ファイルに対して呼び出されます。",
+        "fxn": "Function: (オプション) ファイルがドロップされたときに、ドロップイベントでトリガーされるコールバック。"
       }
     }
   },
   "p5.Graphics": {
     "description": [
-      "Thin wrapper around a renderer, to be used for creating a graphics buffer object. Use this class if you need to draw into an off-screen graphics buffer. The two parameters define the width and height in pixels. The fields and methods for this class are extensive, but mirror the normal drawing API for p5."
+      "レンダラーを薄くラップするために使用される、グラフィックスバッファオブジェクトを作成するためのクラスです。オフスクリーングラフィックスバッファに描画する必要がある場合は、このクラスを使用してください。2つのパラメータは、ピクセル単位での幅と高さを定義します。このクラスのフィールドとメソッドは多岐にわたりますが、p5の通常の描画APIを反映しています。"
     ],
     "params": {
-      "w": "Number: width",
-      "h": "Number: height",
-      "renderer": "Constant: the renderer to use, either P2D or WEBGL",
-      "pInst": "P5: (Optional) pointer to p5 instance"
+      "w": "Number: 幅",
+      "h": "Number: 高さ",
+      "renderer": "Constant: 使用するレンダラーで、P2DまたはWEBGLのいずれか",
+      "pInst": "P5: (オプション) p5インスタンスへのポインタ"
     },
     "reset": {
       "description": [
-        "Resets certain values such as those modified by functions in the Transform category and in the Lights category that are not automatically reset with graphics buffer objects. Calling this in <a href='#/p5/draw'>draw()</a> will copy the behavior of the standard canvas."
+        "グラフィックスバッファオブジェクトで自動的にリセットされない、変換カテゴリやライトカテゴリの関数によって変更された値などをリセットします。<a href='#/p5/draw'>draw()</a>でこれを呼び出すと、標準キャンバスの動作がコピーされます。"
       ]
     },
     "remove": {
       "description": [
-        "Removes a Graphics object from the page and frees any resources associated with it."
+        "グラフィックスオブジェクトをページから削除し、関連するリソースを解放します。"
       ]
     }
   },
   "p5.Renderer": {
     "description": [
-      "Main graphics and rendering context, as well as the base API implementation for p5.js \"core\". To be used as the superclass for Renderer2D and Renderer3D classes, respectively."
+      "p5.js「コア」の主要なグラフィックスとレンダリングコンテキスト、および基本API実装です。Renderer2DおよびRenderer3Dクラスのそれぞれのスーパークラスとして使用されます。"
     ],
     "params": {
-      "elt": "String: DOM node that is wrapped",
-      "pInst": "P5: (Optional) pointer to p5 instance",
-      "isMainCanvas": "Boolean: (Optional) whether we're using it as main canvas"
+      "elt": "String: ラップされたDOMノード",
+      "pInst": "P5: (オプション) p5インスタンスへのポインタ",
+      "isMainCanvas": "Boolean: (オプション) メインキャンバスとして使用するかどうか"
     }
   },
   "JSON": {
     "stringify": {
       "description": [
-        "From <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify\">the MDN entry</a>: The JSON.stringify() method converts a JavaScript object or value to a JSON <a href=\"#/p5/string\">string</a>."
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify\">MDNエントリ</a>から: JSON.stringify()メソッドは、JavaScriptオブジェクトまたは値をJSON<a href=\"#/p5/string\">文字列</a>に変換します。"
       ],
       "params": {
-        "object": "Object: :Javascript object that you would like to convert to JSON"
+        "object": "Object: JSONに変換したいJavaScriptオブジェクト"
       }
     }
   },
   "console": {
     "log": {
       "description": [
-        "Prints a message to your browser's web console. When using p5, you can use <a href=\"#/p5/print\">print</a> and <a href=\"#/p5/console/log\">console.log</a> interchangeably.",
-        "The console is opened differently depending on which browser you are using. Here are links on how to open the console in <a href=\"https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console\">Firefox</a> , <a href=\"https://developers.google.com/web/tools/chrome-devtools/open\">Chrome</a>, <a href=\"https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/console\">Edge</a>, and <a href=\"https://support.apple.com/en-ca/guide/safari/sfri20948/mac\">Safari</a>. With the <a href=\"https://editor.p5js.org/\">online p5 editor</a> the console is embedded directly in the page underneath the code editor.",
-        "From <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Console/log\">the MDN entry</a>: The Console method log() outputs a message to the web console. The message may be a single <a href=\"#/p5/string\">string</a> (with optional substitution values), or it may be any one or more JavaScript <a href=\"#/p5/object\">objects</a>."
+        "メッセージをブラウザのウェブコンソールに出力します。p5を使用する場合、<a href=\"#/p5/print\">print</a>と<a href=\"#/p5/console/log\">console.log</a>を互換性があります。",
+        "コンソールは、使用しているブラウザによって異なる方法で開きます。以下は、<a href=\"https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console\">Firefox</a>、<a href=\"https://developers.google.com/web/tools/chrome-devtools/open\">Chrome</a>、<a href=\"https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/console\">Edge</a>、および<a href=\"https://support.apple.com/en-ca/guide/safari/sfri20948/mac\">Safari</a>でコンソールを開く方法に関するリンクです。 <a href=\"https://editor.p5js.org/\">オンラインp5エディタ</a>では、コンソールはコードエディタの下に直接埋め込まれています。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Console/log\">MDNエントリ</a>から: Consoleメソッドlog()は、ウェブコンソールにメッセージを出力します。メッセージは、単一の<a href=\"#/p5/string\">文字列</a>（オプションの置換値付き）であっても、1つ以上のJavaScript <a href=\"#/p5/object\">オブジェクト</a>であっても構いません。"
       ],
       "params": {
-        "message": "String|Expression|Object: :Message that you would like to print to the console"
+        "message": "String|Expression|Object: コンソールに出力したいメッセージ"
       }
     }
   },
   "p5.TypedDict": {
     "description": [
-      "Base class for all p5.Dictionary types. Specifically  typed Dictionary classes inherit from this class."
+      "すべてのp5.Dictionaryタイプの基本クラス。具体的な型付きDictionaryクラスは、このクラスから継承されます。"
     ],
     "size": {
       "description": [
-        "Returns the number of key-value pairs currently stored in the Dictionary."
+        "現在Dictionaryに格納されているキーと値のペアの数を返します。"
       ],
-      "returns": "Integer: the number of key-value pairs in the Dictionary"
+      "returns": "Integer: Dictionary内のキーと値のペアの数"
     },
     "hasKey": {
       "description": [
-        "Returns true if the given key exists in the Dictionary, otherwise returns false."
+        "指定されたキーがDictionaryに存在する場合はtrueを返し、それ以外の場合はfalseを返します。"
       ],
-      "returns": "Boolean: whether that key exists in Dictionary",
+      "returns": "Boolean: そのキーがDictionaryに存在するかどうか",
       "params": {
-        "key": "Number|String: that you want to look up"
+        "key": "Number|String: 調べたいキー"
       }
     },
     "get": {
-      "description": ["Returns the value stored at the given key."],
-      "returns": "Number|String: the value stored at that key",
+      "description": ["指定されたキーに格納されている値を返します。"],
+      "returns": "Number|String: そのキーに格納されている値",
       "params": {
-        "the": "Number|String: key you want to access"
+        "the": "Number|String: アクセスしたいキー"
       }
     },
     "set": {
       "description": [
-        "Updates the value associated with the given key in case it already exists in the Dictionary. Otherwise a new key-value pair is added."
+        "指定されたキーがDictionaryにすでに存在する場合、そのキーに関連付けられた値を更新します。それ以外の場合は、新しいキーと値のペアが追加されます。"
       ],
       "params": {
         "key": "Number|String",
@@ -4187,236 +4187,228 @@
       }
     },
     "create": {
-      "description": ["Creates a new key-value pair in the Dictionary."],
+      "description": ["Dictionaryに新しいキーと値のペアを作成します。"],
       "params": {
         "key": "Number|String",
         "value": "Number|String",
-        "obj": "Object: key/value pair"
+        "obj": "Object: キー/値のペア"
       }
     },
     "clear": {
       "description": [
-        "Removes all previously stored key-value pairs from the Dictionary."
+        "Dictionaryから以前に格納されたすべてのキーと値のペアを削除します。"
       ]
     },
     "remove": {
       "description": [
-        "Removes the key-value pair stored at the given key from the Dictionary."
+        "指定されたキーで格納されているキーと値のペアをDictionaryから削除します。"
       ],
       "params": {
-        "key": "Number|String: for the pair to remove"
+        "key": "Number|String: 削除するペアのキー"
       }
     },
     "print": {
       "description": [
-        "Logs the set of items currently stored in the Dictionary to the console."
+        "現在Dictionaryに格納されているアイテムのセットをコンソールにログします。"
       ]
     },
     "saveTable": {
       "description": [
-        "Converts the Dictionary into a CSV file for local download."
+        "DictionaryをCSVファイルに変換してローカルにダウンロードします。"
       ]
     },
     "saveJSON": {
       "description": [
-        "Converts the Dictionary into a JSON file for local download."
+        "DictionaryをJSONファイルに変換してローカルにダウンロードします。"
       ]
     }
   },
   "p5.StringDict": {
-    "description": ["A simple Dictionary class for Strings."]
+    "description": ["文字列用のシンプルなDictionaryクラス。"]
   },
   "p5.NumberDict": {
-    "description": ["A simple Dictionary class for Numbers."],
+    "description": ["数値用のシンプルなDictionaryクラス。"],
     "add": {
       "description": [
-        "Add the given number to the value currently stored at the given key. The sum then replaces the value previously stored in the Dictionary."
+        "指定されたキーで現在保存されている値に指定された数値を追加します。合計は、以前に辞書に保存されていた値を置き換えます。"
       ],
       "params": {
-        "Key": "Number: for the value you wish to add to",
-        "Number": "Number: to add to the value"
+        "Key": "Number: 追加したい値のキー",
+        "Number": "Number: 値に追加する数"
       }
     },
     "sub": {
       "description": [
-        "Subtract the given number from the value currently stored at the given key. The difference then replaces the value previously stored in the Dictionary."
+        "指定されたキーで現在保存されている値から指定された数値を減算します。差は、以前に辞書に保存されていた値を置き換えます。"
       ],
       "params": {
-        "Key": "Number: for the value you wish to subtract from",
-        "Number": "Number: to subtract from the value"
+        "Key": "Number: 減算したい値のキー",
+        "Number": "Number: 値から減算する数"
       }
     },
     "mult": {
       "description": [
-        "Multiply the given number with the value currently stored at the given key. The product then replaces the value previously stored in the Dictionary."
+        "指定されたキーで現在保存されている値に指定された数値を乗算します。積は、以前に辞書に保存されていた値を置き換えます。"
       ],
       "params": {
-        "Key": "Number: for value you wish to multiply",
-        "Amount": "Number: to multiply the value by"
+        "Key": "Number: 乗算したい値のキー",
+        "Amount": "Number: 値に乗算する数"
       }
     },
     "div": {
       "description": [
-        "Divide the given number with the value currently stored at the given key. The quotient then replaces the value previously stored in the Dictionary."
+        "指定されたキーで現在保存されている値に指定された数値で除算します。商は、以前に辞書に保存されていた値を置き換えます。"
       ],
       "params": {
-        "Key": "Number: for value you wish to divide",
-        "Amount": "Number: to divide the value by"
+        "Key": "Number: 除算したい値のキー",
+        "Amount": "Number: 値を除算する数"
       }
     },
     "minValue": {
-      "description": [
-        "Return the lowest number currently stored in the Dictionary."
-      ],
+      "description": ["辞書に現在保存されている最小の数値を返します。"],
       "returns": "Number:"
     },
     "maxValue": {
-      "description": [
-        "Return the highest number currently stored in the Dictionary."
-      ],
+      "description": ["辞書に現在保存されている最大の数値を返します。"],
       "returns": "Number:"
     },
     "minKey": {
-      "description": [
-        "Return the lowest key currently used in the Dictionary."
-      ],
+      "description": ["辞書で現在使用されている最小のキーを返します。"],
       "returns": "Number:"
     },
     "maxKey": {
-      "description": [
-        "Return the highest key currently used in the Dictionary."
-      ],
+      "description": ["辞書で現在使用されている最大のキーを返します。"],
       "returns": "Number:"
     }
   },
   "p5.MediaElement": {
     "description": [
-      "Extends <a href=\"#/p5.Element\">p5.Element</a> to handle audio and video. In addition to the methods of <a href=\"#/p5.Element\">p5.Element</a>, it also contains methods for controlling media. It is not called directly, but <a href=\"#/p5.MediaElement\">p5.MediaElement</a>s are created by calling <a href=\"#/p5/createVideo\">createVideo</a>, <a href=\"#/p5/createAudio\">createAudio</a>, and <a href=\"#/p5/createCapture\">createCapture</a>."
+      "<a href=\"#/p5.Element\">p5.Element</a>を拡張してオーディオとビデオを処理します。 <a href=\"#/p5.Element\">p5.Element</a>のメソッドに加えて、メディアを制御するメソッドも含まれています。直接呼び出されることはありませんが、<a href=\"#/p5/createVideo\">createVideo</a>、<a href=\"#/p5/createAudio\">createAudio</a>、および<a href=\"#/p5/createCapture\">createCapture</a>を呼び出すことで<a href=\"#/p5.MediaElement\">p5.MediaElement</a>が作成されます。"
     ],
     "params": {
-      "elt": "String: DOM node that is wrapped"
+      "elt": "String: ラップされるDOMノード"
     },
     "src": {
-      "description": ["Path to the media element source."],
+      "description": ["メディア要素のソースへのパス。"],
       "returns": "String: src"
     },
     "play": {
-      "description": ["Play an HTML5 media element."]
+      "description": ["HTML5メディア要素を再生します。"]
     },
     "stop": {
       "description": [
-        "Stops an HTML5 media element (sets current time to zero)."
+        "HTML5メディア要素を停止します（現在の時間をゼロに設定）。"
       ]
     },
     "pause": {
-      "description": ["Pauses an HTML5 media element."]
+      "description": ["HTML5メディア要素を一時停止します。"]
     },
     "loop": {
       "description": [
-        "Set 'loop' to true for an HTML5 media element, and starts playing."
+        "HTML5メディア要素の'loop'をtrueに設定し、再生を開始します。"
       ]
     },
     "noLoop": {
       "description": [
-        "Set 'loop' to false for an HTML5 media element. Element will stop when it reaches the end."
+        "HTML5メディア要素の'loop'をfalseに設定します。要素は最後に達すると停止します。"
       ]
     },
     "autoplay": {
       "description": [
-        "Set HTML5 media element to autoplay or not. If no argument is specified, by default it will autoplay."
+        "HTML5メディア要素を自動再生するかどうかを設定します。引数が指定されていない場合、デフォルトで自動再生されます。"
       ],
       "params": {
-        "shouldAutoplay": "Boolean: whether the element should autoplay"
+        "shouldAutoplay": "Boolean: 要素が自動再生すべきかどうか"
       }
     },
     "volume": {
       "description": [
-        "Sets volume for this HTML5 media element. If no argument is given, returns the current volume."
+        "このHTML5メディア要素の音量を設定します。引数が与えられていない場合、現在の音量を返します。"
       ],
-      "returns": "Number: current volume",
+      "returns": "Number: 現在の音量",
       "params": {
-        "val": "Number: volume between 0.0 and 1.0"
+        "val": "Number: 0.0から1.0の間の音量"
       }
     },
     "speed": {
       "description": [
-        "If no arguments are given, returns the current playback speed of the element. The speed parameter sets the speed where 2.0 will play the element twice as fast, 0.5 will play at half the speed, and -1 will play the element in normal speed in reverse.(Note that not all browsers support backward playback and even if they do, playback might not be smooth.)"
+        "引数が与えられていない場合、要素の現在の再生速度を返します。speedパラメータは、2.0で要素を2倍の速度で再生し、0.5で半分の速度で再生し、-1で通常の速度で逆再生します。（すべてのブラウザが後方再生をサポートしているわけではなく、サポートしていても再生がスムーズでない場合があります。）"
       ],
-      "returns": "Number: current playback speed of the element",
+      "returns": "Number: 要素の現在の再生速度",
       "params": {
-        "speed": "Number: speed multiplier for element playback"
+        "speed": "Number: 要素の再生速度の乗数"
       }
     },
     "time": {
       "description": [
-        "If no arguments are given, returns the current time of the element. If an argument is given the current time of the element is set to it."
+        "引数が与えられていない場合、要素の現在の時間を返します。引数が与えられた場合、要素の現在の時間がそれに設定されます。"
       ],
-      "returns": "Number: current time (in seconds)",
+      "returns": "Number: 現在の時間（秒単位）",
       "params": {
-        "time": "Number: time to jump to (in seconds)"
+        "time": "Number: 移動する時間（秒単位）"
       }
     },
     "duration": {
-      "description": ["Returns the duration of the HTML5 media element."],
-      "returns": "Number: duration"
+      "description": ["HTML5メディア要素の再生時間を返します。"],
+      "returns": "Number: 再生時間"
     },
     "onended": {
       "description": [
-        "Schedule an event to be called when the audio or video element reaches the end. If the element is looping, this will not be called. The element is passed in as the argument to the onended callback."
+        "オーディオまたはビデオ要素が終了したときに呼び出されるイベントをスケジュールします。要素がループしている場合、これは呼び出されません。要素は、onendedコールバックの引数として渡されます。"
       ],
       "params": {
-        "callback": "Function: function to call when the  soundfile has ended. The  media element will be passed  in as the argument to the  callback."
+        "callback": "Function: サウンドファイルが終了したときに呼び出す関数。メディア要素がコールバックの引数として渡されます。"
       }
     },
     "connect": {
       "description": [
-        "Send the audio output of this element to a specified audioNode or p5.sound object. If no element is provided, connects to p5's main output. That connection is established when this method is first called. All connections are removed by the .disconnect() method.",
-        "This method is meant to be used with the p5.sound.js addon library."
+        "この要素のオーディオ出力を指定されたaudioNodeまたはp5.soundオブジェクトに送信します。要素が指定されていない場合、p5のメイン出力に接続します。その接続は、このメソッドが最初に呼び出されたときに確立されます。すべての接続は、.disconnect()メソッドによって削除されます。",
+        "このメソッドは、p5.sound.jsアドオンライブラリと一緒に使用することを目的としています。"
       ],
       "params": {
-        "audioNode": "AudioNode|Object: AudioNode from the Web Audio API, or an object from the p5.sound library"
+        "audioNode": "AudioNode|Object: Web Audio APIのAudioNode、またはp5.soundライブラリのオブジェクト"
       }
     },
     "disconnect": {
       "description": [
-        "Disconnect all Web Audio routing, including to main output. This is useful if you want to re-route the output through audio effects, for example."
+        "メイン出力を含むすべてのWeb Audioルーティングを切断します。これは、たとえば、出力をオーディオエフェクトを介して再ルーティングしたい場合に便利です。"
       ]
     },
     "showControls": {
       "description": [
-        "Show the default MediaElement controls, as determined by the web browser."
+        "ウェブブラウザによって決定されるデフォルトのMediaElementコントロールを表示します。"
       ]
     },
     "hideControls": {
-      "description": ["Hide the default mediaElement controls."]
+      "description": ["デフォルトのmediaElementコントロールを非表示にします。"]
     },
     "addCue": {
       "description": [
-        "Schedule events to trigger every time a MediaElement (audio/video) reaches a playback cue point.",
-        "Accepts a callback function, a time (in seconds) at which to trigger the callback, and an optional parameter for the callback.",
-        "Time will be passed as the first parameter to the callback function, and param will be the second parameter."
+        "MediaElement（オーディオ/ビデオ）が再生キューポイントに到達するたびにトリガーされるイベントをスケジュールします。",
+        "コールバック関数、トリガーする時間（秒単位）、およびコールバックのオプションのパラメータを受け入れます。",
+        "時間はコールバック関数の最初のパラメータとして渡され、paramは2番目のパラメータとして渡されます。"
       ],
-      "returns": "Number: id ID of this cue,  useful for removeCue(id)",
+      "returns": "Number: id このキューのID。removeCue(id)に便利です。",
       "params": {
-        "time": "Number: Time in seconds, relative to this media  element's playback. For example, to trigger  an event every time playback reaches two  seconds, pass in the number 2. This will be  passed as the first parameter to  the callback function.",
-        "callback": "Function: Name of a function that will be  called at the given time. The callback will  receive time and (optionally) param as its  two parameters.",
-        "value": "Object: (Optional) An object to be passed as the  second parameter to the  callback function."
+        "time": "Number: このメディア要素の再生に関連する秒単位の時間。例えば、再生が2秒に達するたびにイベントをトリガーするには、数値2を渡します。これは、コールバック関数に最初のパラメータとして渡されます。",
+        "callback": "Function: 指定された時間に呼び出される関数の名前。コールバックは、時間と（オプションで）パラメータを2つのパラメータとして受け取ります。",
+        "value": "Object: （オプション）コールバック関数に2番目のパラメータとして渡されるオブジェクト。"
       }
     },
     "removeCue": {
       "description": [
-        "Remove a callback based on its ID. The ID is returned by the addCue method."
+        "IDに基づいてコールバックを削除します。IDはaddCueメソッドによって返されます。"
       ],
       "params": {
-        "id": "Number: ID of the cue, as returned by addCue"
+        "id": "Number: addCueによって返されるキューのID"
       }
     },
     "clearCues": {
       "description": [
-        "Remove all of the callbacks that had originally been scheduled via the addCue method."
+        "addCueメソッドを介して元々スケジュールされていたすべてのコールバックを削除します。"
       ],
       "params": {
-        "id": "Number: ID of the cue, as returned by addCue"
+        "id": "Number: addCueによって返されるキューのID"
       }
     }
   },
