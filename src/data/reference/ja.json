@@ -64,684 +64,680 @@
   "Camera": "カメラ",
   "p5": {
     "description": [
-      "This is the p5 instance constructor.",
-      "A p5 instance holds all the properties and methods related to a p5 sketch. It expects an incoming sketch closure and it can also take an optional node parameter for attaching the generated p5 canvas to a node. The sketch closure takes the newly created p5 instance as its sole argument and may optionally set <a href=\"#/p5/preload\">preload()</a>, <a href=\"#/p5/setup\">setup()</a>, and/or <a href=\"#/p5/draw\">draw()</a> properties on it for running a sketch.",
-      "A p5 sketch can run in \"global\" or \"instance\" mode: \"global\" - all properties and methods are attached to the window \"instance\" - all properties and methods are bound to this p5 object"
+      "これはp5インスタンスコンストラクタです。",
+      "p5インスタンスには、p5スケッチに関連するすべてのプロパティとメソッドが含まれています。入力されたスケッチクロージャを受け取り、生成されたp5キャンバスをノードにアタッチするためのオプションのノードパラメータを取ることもできます。スケッチクロージャは、新しく作成されたp5インスタンスを唯一の引数として受け取り、スケッチの実行に必要なpreload()、setup()、および/またはdraw()プロパティを設定することもできます。",
+      "p5スケッチは、「グローバル」モードまたは「インスタンス」モードで実行できます。「グローバル」 - すべてのプロパティとメソッドがウィンドウにアタッチされます「インスタンス」 - すべてのプロパティとメソッドがこのp5オブジェクトにバインドされます"
     ],
-    "returns": "P5: a p5 instance",
+    "returns": "P5：p5インスタンス",
     "params": {
-      "sketch": "Function: a closure that can set optional <a href=\"#/p5/preload\">preload()</a>,  <a href=\"#/p5/setup\">setup()</a>, and/or <a href=\"#/p5/draw\">draw()</a> properties on the  given p5 instance",
-      "node": "HTMLElement: (Optional) element to attach canvas to"
+      "sketch": "Function: 与えられたp5インスタンスにオプションでpreload()、setup()、および/またはdraw()プロパティを設定できるクロージャ",
+      "node": "HTMLElement:（オプション）キャンバスをアタッチする要素"
     },
     "describe": {
       "description": [
-        "Creates a screen reader accessible description for the canvas. The first parameter should be a string with a description of the canvas. The second parameter is optional. If specified, it determines how the description is displayed.",
-        "<code class=\"language-javascript\">describe(text, LABEL)</code> displays the description to all users as a <a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\"> tombstone or exhibit label/caption</a> in a div adjacent to the canvas. You can style it as you wish in your CSS.",
-        "<code class=\"language-javascript\">describe(text, FALLBACK)</code> makes the description accessible to screen-reader users only, in <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\"> a sub DOM inside the canvas element</a>. If a second parameter is not specified, by default, the description will only be available to screen-reader users."
+        "キャンバスにスクリーンリーダー対応の説明を作成します。最初のパラメータは、キャンバスの説明を示す文字列である必要があります。2つ目のパラメータはオプションです。指定された場合、説明の表示方法が決まります。",
+        "<code class=\"language-javascript\">describe(text, LABEL)</code>は、キャンバスに隣接するdiv内にある<a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">墓石または展示ラベル/キャプション</a>として、すべてのユーザーに説明を表示します。CSSで好みのスタイルに変更できます。",
+        "<code class=\"language-javascript\">describe(text, FALLBACK)</code>は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブDOM</a>で、スクリーンリーダーユーザー専用に説明を利用可能にします。2つ目のパラメータが指定されていない場合、デフォルトで説明はスクリーンリーダーユーザーにのみ利用可能です。"
       ],
       "params": {
-        "text": "String: description of the canvas",
-        "display": "Constant: (Optional) either LABEL or FALLBACK"
+        "text": "String: キャンバスの説明",
+        "display": "Constant: （オプション）LABEL または FALLBACK のいずれか"
       }
     },
     "describeElement": {
       "description": [
-        "This function creates a screen-reader accessible description for elements —shapes or groups of shapes that create meaning together— in the canvas. The first paramater should be the name of the element. The second parameter should be a string with a description of the element. The third parameter is optional. If specified, it determines how the element description is displayed.",
-        "<code class=\"language-javascript\">describeElement(name, text, LABEL)</code> displays the element description to all users as a <a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\"> tombstone or exhibit label/caption</a> in a div adjacent to the canvas. You can style it as you wish in your CSS.",
-        "<code class=\"language-javascript\">describeElement(name, text, FALLBACK)</code> makes the element description accessible to screen-reader users only, in <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\"> a sub DOM inside the canvas element</a>. If a second parameter is not specified, by default, the element description will only be available to screen-reader users."
+        "この関数は、キャンバス内の要素（一緒に意味を作り出す形状または形状のグループ）に対してスクリーンリーダー対応の説明を作成します。最初のパラメータは要素の名前である必要があります。2つ目のパラメータは、要素の説明を示す文字列である必要があります。3つ目のパラメータはオプションです。指定された場合、要素の説明の表示方法が決まります。",
+        "<code class=\"language-javascript\">describeElement(name, text, LABEL)</code>は、キャンバスに隣接するdiv内にある<a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">墓石または展示ラベル/キャプション</a>として、すべてのユーザーに要素の説明を表示します。CSSで好みのスタイルに変更できます。",
+        "<code class=\"language-javascript\">describeElement(name, text, FALLBACK)</code>は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブDOM</a>で、スクリーンリーダーユーザー専用に要素の説明を利用可能にします。2つ目のパラメータが指定されていない場合、デフォルトで要素の説明はスクリーンリーダーユーザーにのみ利用可能です。"
       ],
       "params": {
-        "name": "String: name of the element",
-        "text": "String: description of the element",
-        "display": "Constant: (Optional) either LABEL or FALLBACK"
+        "name": "String: 要素の名前",
+        "text": "String: 要素の説明",
+        "display": "Constant: （オプション）LABEL または FALLBACK のいずれか"
       }
     },
     "textOutput": {
       "description": [
-        "<code class=\"language-javascript\">textOutput()</code> creates a screenreader accessible output that describes the shapes present on the canvas. The general description of the canvas includes canvas size, canvas color, and number of elements in the canvas (example: 'Your output is a, 400 by 400 pixels, lavender blue canvas containing the following 4 shapes:'). This description is followed by a list of shapes where the color, position, and area of each shape are described (example: \"orange ellipse at top left covering 1% of the canvas\"). Each element can be selected to get more details. A table of elements is also provided. In this table, shape, color, location, coordinates and area are described (example: \"orange ellipse location=top left area=2\").",
-        "<code class=\"language-javascript\">textOutput()</code> and <code class=\"language-javascript\">textOutput(FALLBACK)</code> make the output available in <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\"> a sub DOM inside the canvas element</a> which is accessible to screen readers. <code class=\"language-javascript\">textOutput(LABEL)</code> creates an additional div with the output adjacent to the canvas, this is useful for non-screen reader users that might want to display the output outside of the canvas' sub DOM as they code. However, using LABEL will create unnecessary redundancy for screen reader users. We recommend using LABEL only as part of the development process of a sketch and removing it before publishing or sharing with screen reader users."
+        "<code class=\"language-javascript\">textOutput()</code>は、キャンバス上に存在する形状を説明するスクリーンリーダー対応の出力を作成します。キャンバスの一般的な説明には、キャンバスのサイズ、キャンバスの色、キャンバス内の要素の数（例：「あなたの出力は、400x400ピクセルのラベンダーブルーのキャンバスで、以下の4つの形状が含まれています：」）が含まれます。この説明の後に、各形状の色、位置、面積が説明された形状のリストが続きます（例：「キャンバスの1％を覆う左上のオレンジ色の楕円」）。各要素を選択すると、詳細が表示されます。要素のテーブルも提供されます。このテーブルでは、形状、色、位置、座標、面積が説明されています（例：「オレンジ色の楕円 位置=左上 面積=2」）。",
+        "<code class=\"language-javascript\">textOutput()</code>および<code class=\"language-javascript\">textOutput(FALLBACK)</code>は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブDOM</a>でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">textOutput(LABEL)</code>は、キャンバスに隣接する出力が含まれる追加のdivを作成し、これはコーディング時にキャンバスのサブDOM外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABELを使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみLABELを使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
       ],
       "params": {
-        "display": "Constant: (Optional) either FALLBACK or LABEL"
+        "display": "Constant: （オプション）FALLBACK または LABEL のいずれか"
       }
     },
     "gridOutput": {
       "description": [
-        "<code class=\"language-javascript\">gridOutput()</code> lays out the content of the canvas in the form of a grid (html table) based on the spatial location of each shape. A brief description of the canvas is available before the table output. This description includes: color of the background, size of the canvas, number of objects, and object types (example: \"lavender blue canvas is 200 by 200 and contains 4 objects - 3 ellipses 1 rectangle\"). The grid describes the content spatially, each element is placed on a cell of the table depending on its position. Within each cell an element the color and type of shape of that element are available (example: \"orange ellipse\"). These descriptions can be selected individually to get more details. A list of elements where shape, color, location, and area are described (example: \"orange ellipse location=top left area=1%\") is also available.",
-        "<code class=\"language-javascript\">gridOutput()</code> and <code class=\"language-javascript\">gridOutput(FALLBACK)</code> make the output available in <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\"> a sub DOM inside the canvas element</a> which is accessible to screen readers. <code class=\"language-javascript\">gridOutput(LABEL)</code> creates an additional div with the output adjacent to the canvas, this is useful for non-screen reader users that might want to display the output outside of the canvas' sub DOM as they code. However, using LABEL will create unnecessary redundancy for screen reader users. We recommend using LABEL only as part of the development process of a sketch and removing it before publishing or sharing with screen reader users."
+        "<code class=\"language-javascript\">gridOutput()</code>は、キャンバスの内容を、各形状の空間的な位置に基づいたグリッド（htmlテーブル）の形でレイアウトします。テーブル出力の前に、キャンバスの簡単な説明が利用可能です。この説明には、背景の色、キャンバスのサイズ、オブジェクトの数、オブジェクトの種類（例：「ラベンダーブルーのキャンバスは200x200で、3つの楕円と1つの長方形が含まれています」）が含まれます。グリッドは空間的にコンテンツを記述し、各要素はその位置に応じてテーブルのセルに配置されます。各セル内の要素には、その要素の色と形状のタイプが利用可能です（例：「オレンジ色の楕円」）。これらの説明は個別に選択して詳細を取得できます。形状、色、位置、面積が説明された要素のリスト（例：「オレンジ色の楕円 位置=左上 面積=1％」）も利用可能です。",
+        "<code class=\"language-javascript\">gridOutput()</code>および<code class=\"language-javascript\">gridOutput(FALLBACK)</code>は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブDOM</a>でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">gridOutput(LABEL)</code>は、キャンバスに隣接する出力が含まれる追加のdivを作成し、これはコーディング時にキャンバスのサブDOM外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABELを使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみLABELを使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
       ],
       "params": {
-        "display": "Constant: (Optional) either FALLBACK or LABEL"
+        "display": "Constant: （オプション）FALLBACK または LABEL のいずれか"
       }
     },
     "alpha": {
-      "description": ["Extracts the alpha value from a color or pixel array."],
-      "returns": "Number: the alpha value",
+      "description": ["色またはピクセル配列からアルファ値を抽出します。"],
+      "returns": "Number: アルファ値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, color components,  or CSS color"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "blue": {
-      "description": ["Extracts the blue value from a color or pixel array."],
-      "returns": "Number: the blue value",
+      "description": ["色またはピクセル配列から青の値を抽出します。"],
+      "returns": "Number: 青の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, color components,  or CSS color"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "brightness": {
-      "description": [
-        "Extracts the HSB brightness value from a color or pixel array."
-      ],
-      "returns": "Number: the brightness value",
+      "description": ["色またはピクセル配列からHSB明るさ値を抽出します。"],
+      "returns": "Number: 明るさの値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, color components,  or CSS color"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "color": {
       "description": [
-        "Creates colors for storing in variables of the color datatype. The parameters are interpreted as RGB or HSB values depending on the current <a href=\"#/p5/colorMode\">colorMode()</a>. The default mode is RGB values from 0 to 255 and, therefore, the function call color(255, 204, 0) will return a bright yellow color.",
-        "Note that if only one value is provided to <a href=\"#/p5/color\">color()</a>, it will be interpreted as a grayscale value. Add a second value, and it will be used for alpha transparency. When three values are specified, they are interpreted as either RGB or HSB values. Adding a fourth value applies alpha transparency.",
-        "If a single string argument is provided, RGB, RGBA and Hex CSS color strings and all named color strings are supported. In this case, an alpha number value as a second argument is not supported, the RGBA form should be used."
+        "色データ型の変数に格納するための色を作成します。パラメータは、現在の <a href=\"#/p5/colorMode\">colorMode()</a> に応じて RGB または HSB の値として解釈されます。デフォルトモードは 0 から 255 の RGB 値であり、したがって、関数コール color(255, 204, 0) は鮮やかな黄色の色を返します。",
+        "<a href=\"#/p5/color\">color()</a> に 1 つの値のみが提供される場合、グレースケールの値として解釈されることに注意してください。2 つ目の値を追加すると、それがアルファ透明度に使用されます。3 つの値が指定されると、それらは RGB または HSB の値として解釈されます。4 つ目の値を追加すると、アルファ透明度が適用されます。",
+        "単一の文字列引数が提供される場合、RGB、RGBA、および 16 進数 CSS カラー文字列およびすべての名前付きカラー文字列がサポートされます。この場合、2 番目の引数としてのアルファ数値値はサポートされず、RGBA 形式を使用する必要があります。"
       ],
-      "returns": "p5.Color: resulting color",
+      "returns": "p5.Color: 結果の色",
       "params": {
-        "gray": "Number: number specifying value between white and black.",
-        "alpha": "Number: (Optional) alpha value relative to current color range  (default is 0-255)",
-        "v1": "Number: red or hue value relative to  the current color range",
-        "v2": "Number: green or saturation value  relative to the current color range",
-        "v3": "Number: blue or brightness value  relative to the current color range",
-        "value": "String: a color string",
-        "values": "Number[]: an array containing the red,green,blue &  and alpha components of the color",
+        "gray": "Number: 白と黒の間の値を指定する数値。",
+        "alpha": "Number: （オプション）現在のカラーレンジに対するアルファ値（デフォルトは 0-255）",
+        "v1": "Number: 現在のカラーレンジに対する赤または色相値",
+        "v2": "Number: 現在のカラーレンジに対する緑または彩度値",
+        "v3": "Number: 現在のカラーレンジに対する青または明るさの値",
+        "value": "String: カラー文字列",
+        "values": "Number[]: 色の赤、緑、青、およびアルファ成分を含む配列",
         "color": "p5.Color"
       }
     },
     "green": {
-      "description": ["Extracts the green value from a color or pixel array."],
-      "returns": "Number: the green value",
+      "description": ["色またはピクセル配列から緑の値を抽出します。"],
+      "returns": "Number: 緑の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, color components,  or CSS color"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "hue": {
       "description": [
-        "Extracts the hue value from a color or pixel array.",
-        "Hue exists in both HSB and HSL. This function will return the HSB-normalized hue when supplied with an HSB color object (or when supplied with a pixel array while the color mode is HSB), but will default to the HSL-normalized hue otherwise. (The values will only be different if the maximum hue setting for each system is different.)"
+        "色またはピクセル配列から色相値を抽出します。",
+        "色相は HSB と HSL の両方に存在します。この関数は、HSB カラーオブジェクトが与えられた場合（またはカラーモードが HSB の場合にピクセル配列が与えられた場合）、HSB 正規化された色相を返しますが、それ以外の場合は HSL 正規化された色相をデフォルトで返します。 （最大色相設定がそれぞれのシステムで異なる場合のみ、値が異なります。）"
       ],
-      "returns": "Number: the hue",
+      "returns": "Number: 色相",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, color components,  or CSS color"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "lerpColor": {
       "description": [
-        "Blends two colors to find a third color somewhere between them. The amt parameter is the amount to interpolate between the two values where 0.0 is equal to the first color, 0.1 is very near the first color, 0.5 is halfway in between, etc. An amount below 0 will be treated as 0. Likewise, amounts above 1 will be capped at 1. This is different from the behavior of <a href=\"#/p5/lerp\">lerp()</a>, but necessary because otherwise numbers outside the range will produce strange and unexpected colors.",
-        "The way that colors are interpolated depends on the current color mode."
+        "2つの色をブレンドして、それらの間にある第3の色を見つけます。amt パラメータは、2つの値の間で補間する量で、0.0 は最初の色に等しく、0.1 は最初の色に非常に近く、0.5 はちょうど中間です。0 未満の量は 0 として扱われます。同様に、1を超える量は1でキャップされます。<a href=\"#/p5/lerp\">lerp()</a> の動作とは異なりますが、範囲外の数値が奇妙で予期しない色を生成しないようにするために必要です。",
+        "色の補間方法は、現在のカラーモードに依存します。"
       ],
-      "returns": "p5.Color: interpolated color",
+      "returns": "p5.Color: 補間された色",
       "params": {
-        "c1": "p5.Color: interpolate from this color",
-        "c2": "p5.Color: interpolate to this color",
-        "amt": "Number: number between 0 and 1"
+        "c1": "p5.Color: この色から補間",
+        "c2": "p5.Color: この色へ補間",
+        "amt": "Number: 0 から 1 の間の数値"
       }
     },
     "lightness": {
-      "description": [
-        "Extracts the HSL lightness value from a color or pixel array."
-      ],
-      "returns": "Number: the lightness",
+      "description": ["色またはピクセル配列から HSL 輝度値を抽出します。"],
+      "returns": "Number: 輝度",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, color components,  or CSS color"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "red": {
-      "description": ["Extracts the red value from a color or pixel array."],
-      "returns": "Number: the red value",
+      "description": ["色またはピクセル配列から赤の値を抽出します。"],
+      "returns": "Number: 赤の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, color components,  or CSS color"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "saturation": {
       "description": [
-        "Extracts the saturation value from a color or pixel array.",
-        "Saturation is scaled differently in HSB and HSL. This function will return the HSB saturation when supplied with an HSB color object (or when supplied with a pixel array while the color mode is HSB), but will default to the HSL saturation otherwise."
+        "色またはピクセル配列から彩度の値を抽出します。",
+        "彩度は、HSB と HSL で異なるスケールで表されます。この関数は、HSB カラーオブジェクトを指定した場合（またはカラーモードが HSB の場合にピクセル配列を指定した場合）には、HSB 彩度を返しますが、それ以外の場合は HSL 彩度がデフォルトになります。"
       ],
-      "returns": "Number: the saturation value",
+      "returns": "Number: 彩度の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, color components,  or CSS color"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "background": {
       "description": [
-        "The <a href=\"#/p5/background\">background()</a> function sets the color used for the background of the p5.js canvas. The default background is transparent. This function is typically used within <a href=\"#/p5/draw\">draw()</a> to clear the display window at the beginning of each frame, but it can be used inside <a href=\"#/p5/setup\">setup()</a> to set the background on the first frame of animation or if the background need only be set once.",
-        "The color is either specified in terms of the RGB, HSB, or HSL color depending on the current <a href=\"#/p5/colorMode\">colorMode</a>. (The default color space is RGB, with each value in the range from 0 to 255). The alpha range by default is also 0 to 255.",
-        "If a single string argument is provided, RGB, RGBA and Hex CSS color strings and all named color strings are supported. In this case, an alpha number value as a second argument is not supported, the RGBA form should be used.",
-        "A <a href=\"#/p5.Color\">p5.Color</a> object can also be provided to set the background color.",
-        "A <a href=\"#/p5.Image\">p5.Image</a> can also be provided to set the background image."
+        "<a href=\"#/p5/background\">background()</a> 関数は、p5.js キャンバスの背景に使用される色を設定します。デフォルトの背景は透明です。この関数は通常、<a href=\"#/p5/draw\">draw()</a> 内で各フレームの開始時にディスプレイウィンドウをクリアするために使用されますが、<a href=\"#/p5/setup\">setup()</a> 内で最初のフレームの背景を設定するために使用されることもありますし、背景を一度だけ設定する必要がある場合にも使用できます。",
+        "色は、現在の <a href=\"#/p5/colorMode\">colorMode</a> に応じて、RGB、HSB、または HSL カラーで指定されます。(デフォルトのカラースペースは RGB で、各値の範囲は 0 から 255 です)。デフォルトでは、アルファの範囲も 0 から 255 です。",
+        "単一の文字列引数が提供された場合、RGB、RGBA、および 16 進数の CSS カラー文字列およびすべての名前付きカラー文字列がサポートされます。この場合、2 番目の引数としてのアルファ数値はサポートされず、RGBA 形式を使用する必要があります。",
+        "背景色を設定するために、<a href=\"#/p5.Color\">p5.Color</a> オブジェクトも提供できます。",
+        "背景画像として設定するために、<a href=\"#/p5.Image\">p5.Image</a> も提供できます。"
       ],
       "params": {
-        "color": "p5.Color: any value created by the <a href=\"#/p5/color\">color()</a> function",
-        "colorstring": "String: color string, possible formats include: integer  rgb() or rgba(), percentage rgb() or rgba(),  3-digit hex, 6-digit hex",
-        "a": "Number: (Optional) opacity of the background relative to current  color range (default is 0-255)",
-        "gray": "Number: specifies a value between white and black",
-        "v1": "Number: red or hue value (depending on the current color  mode)",
-        "v2": "Number: green or saturation value (depending on the current  color mode)",
-        "v3": "Number: blue or brightness value (depending on the current  color mode)",
-        "values": "Number[]: an array containing the red, green, blue  and alpha components of the color",
-        "image": "p5.Image: image created with <a href=\"#/p5/loadImage\">loadImage()</a> or <a href=\"#/p5/createImage\">createImage()</a>,  to set as background  (must be same size as the sketch window)"
+        "color": "p5.Color: <a href=\"#/p5/color\">color()</a> 関数で作成された任意の値",
+        "colorstring": "String: カラー文字列、対応する形式は次のとおりです: 整数 rgb() または rgba()、パーセンテージ rgb() または rgba()、3 桁の 16 進数、6 桁の 16 進数",
+        "a": "Number: (任意) 現在のカラー範囲に対する背景の不透明度 (デフォルトは 0-255)",
+        "gray": "Number: 白と黒の間の値を指定",
+        "v1": "Number: 現在のカラーモードに応じた赤または色相の値",
+        "v2": "Number: 現在のカラーモードに応じた緑または彩度の値",
+        "v3": "Number: 現在のカラーモードに応じた青または明るさの値",
+        "values": "Number[]: 色の赤、緑、青、およびアルファ成分を含む配列",
+        "image": "p5.Image: 背景として設定する <a href=\"#/p5/loadImage\">loadImage()</a> または <a href=\"#/p5/createImage\">createImage()</a> で作成された画像（スケッチウィンドウと同じサイズである必要があります）"
       }
     },
     "clear": {
       "description": [
-        "Clears the pixels within a buffer. This function only clears the canvas. It will not clear objects created by createX() methods such as <a href=\"#/p5/createVideo\">createVideo()</a> or <a href=\"#/p5/createDiv\">createDiv()</a>. Unlike the main graphics context, pixels in additional graphics areas created with <a href=\"#/p5/createGraphics\">createGraphics()</a> can be entirely or partially transparent. This function clears everything to make all of the pixels 100% transparent.",
-        "Note: In WebGL mode, this function can be passed normalized RGBA color values in order to clear the screen to a specific color. In addition to color, it will also clear the depth buffer. If you are not using the webGL renderer these color values will have no effect."
+        "バッファ内のピクセルをクリアします。この関数はキャンバスのみをクリアします。<a href=\"#/p5/createVideo\">createVideo()</a> や <a href=\"#/p5/createDiv\">createDiv()</a> などの createX() メソッドで作成されたオブジェクトはクリアされません。メインのグラフィックスコンテキストとは異なり、<a href=\"#/p5/createGraphics\">createGraphics()</a> で作成された追加のグラフィックス領域のピクセルは完全または部分的に透明にできます。この関数はすべてをクリアして、すべてのピクセルを 100% 透明にします。",
+        "注: WebGL モードでは、この関数に正規化された RGBA カラー値を渡して、画面を特定の色にクリアできます。色に加えて、デプスバッファもクリアされます。WebGL レンダラーを使用していない場合、これらのカラー値は効果がありません。"
       ],
       "params": {
-        "r": "Number: normalized red val.",
-        "g": "Number: normalized green val.",
-        "b": "Number: normalized blue val.",
-        "a": "Number: normalized alpha val."
+        "r": "Number: 正規化された赤の値。",
+        "g": "Number: 正規化された緑の値。",
+        "b": "Number: 正規化された青の値。",
+        "a": "Number: 正規化されたアルファの値。"
       }
     },
     "colorMode": {
       "description": [
-        "<a href=\"#/p5/colorMode\">colorMode()</a> changes the way p5.js interprets color data. By default, the parameters for <a href=\"#/p5/fill\">fill()</a>, <a href=\"#/p5/stroke\">stroke()</a>, <a href=\"#/p5/background\">background()</a>, and <a href=\"#/p5/color\">color()</a> are defined by values between 0 and 255 using the RGB color model. This is equivalent to setting colorMode(RGB, 255). Setting colorMode(HSB) lets you use the HSB system instead. By default, this is colorMode(HSB, 360, 100, 100, 1). You can also use HSL.",
-        "Note: existing color objects remember the mode that they were created in, so you can change modes as you like without affecting their appearance."
+        "<a href=\"#/p5/colorMode\">colorMode()</a> は、p5.jsが色データを解釈する方法を変更します。デフォルトでは、<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/stroke\">stroke()</a>、<a href=\"#/p5/background\">background()</a>、および <a href=\"#/p5/color\">color()</a> のパラメータは、RGBカラーモデルを使用して0から255の間の値で定義されます。これは、colorMode(RGB, 255) を設定することと同等です。colorMode(HSB) を設定すると、代わりにHSBシステムを使用できます。デフォルトでは、これは colorMode(HSB, 360, 100, 100, 1) です。HSLも使用できます。",
+        "注: 既存のカラーオブジェクトは、それらが作成されたモードを記憶しているため、外観に影響を与えることなく、好きなようにモードを変更できます。"
       ],
       "params": {
-        "mode": "Constant: either RGB, HSB or HSL, corresponding to  Red/Green/Blue and Hue/Saturation/Brightness  (or Lightness)",
-        "max": "Number: (Optional) range for all values",
-        "max1": "Number: range for the red or hue depending on the  current color mode",
-        "max2": "Number: range for the green or saturation depending  on the current color mode",
-        "max3": "Number: range for the blue or brightness/lightness  depending on the current color mode",
-        "maxA": "Number: (Optional) range for the alpha"
+        "mode": "Constant: RGB、HSB、またはHSLのいずれか。それぞれ、赤/緑/青と色相/彩度/明度（または輝度）に対応します。",
+        "max": "Number: (オプション) すべての値の範囲",
+        "max1": "Number: 現在のカラーモードに応じて、赤または色相の範囲",
+        "max2": "Number: 現在のカラーモードに応じて、緑または彩度の範囲",
+        "max3": "Number: 現在のカラーモードに応じて、青または明度/輝度の範囲",
+        "maxA": "Number: (オプション) アルファの範囲"
       }
     },
     "fill": {
       "description": [
-        "Sets the color used to fill shapes. For example, if you run fill(204, 102, 0), all shapes drawn after the fill command will be filled with the color orange. This color is either specified in terms of the RGB or HSB color depending on the current <a href=\"#/p5/colorMode\">colorMode()</a>. (The default color space is RGB, with each value in the range from 0 to 255). The alpha range by default is also 0 to 255.",
-        "If a single string argument is provided, RGB, RGBA and Hex CSS color strings and all named color strings are supported. In this case, an alpha number value as a second argument is not supported, the RGBA form should be used.",
-        "A <a href=\"#/p5.Color\">p5.Color</a> object can also be provided to set the fill color."
+        "図形に塗りつぶし色を設定します。例えば、fill(204, 102, 0) を実行すると、その後に描画される全ての図形はオレンジ色で塗りつぶされます。この色は、現在の <a href=\"#/p5/colorMode\">colorMode()</a> によってRGBまたはHSBのいずれかで指定されます。 (デフォルトのカラースペースはRGBで、各値の範囲は0から255です) アルファの範囲もデフォルトでは0から255です。",
+        "単一の文字列引数が提供された場合、RGB、RGBA、Hex CSS カラーストリングおよびすべての名前付きカラーストリングがサポートされます。この場合、2番目の引数としてのアルファ数値はサポートされず、RGBA形式を使用する必要があります。",
+        "塗りつぶし色を設定するために、<a href=\"#/p5.Color\">p5.Color</a> オブジェクトも提供できます。"
       ],
       "params": {
-        "v1": "Number: red or hue value relative to  the current color range",
-        "v2": "Number: green or saturation value  relative to the current color range",
-        "v3": "Number: blue or brightness value  relative to the current color range",
-        "alpha": "Number (Optional)",
-        "value": "String: a color string",
-        "gray": "Number: a gray value",
-        "values": "Number[]: an array containing the red,green,blue &  and alpha components of the color",
-        "color": "p5.Color: the fill color"
+        "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
+        "v2": "Number: 現在のカラーレンジに対する緑または彩度の値",
+        "v3": "Number: 現在のカラーレンジに対する青または明度の値",
+        "alpha": "Number (オプション)",
+        "value": "String: カラー文字列",
+        "gray": "Number: グレーの値",
+        "values": "Number[]: 赤、緑、青、およびアルファ成分を含む配列",
+        "color": "p5.Color: 塗りつぶし色"
       }
     },
     "noFill": {
       "description": [
-        "Disables filling geometry. If both <a href=\"#/p5/noStroke\">noStroke()</a> and <a href=\"#/p5/noFill\">noFill()</a> are called, nothing will be drawn to the screen."
+        "ジオメトリの塗りつぶしを無効にします。 <a href=\"#/p5/noStroke\">noStroke()</a> と <a href=\"#/p5/noFill\">noFill()</a> の両方が呼び出されると、画面には何も描画されません。"
       ]
     },
     "noStroke": {
       "description": [
-        "Disables drawing the stroke (outline). If both <a href=\"#/p5/noStroke\">noStroke()</a> and <a href=\"#/p5/noFill\">noFill()</a> are called, nothing will be drawn to the screen."
+        "ストローク（輪郭）の描画を無効にします。<a href=\"#/p5/noStroke\">noStroke()</a> と <a href=\"#/p5/noFill\">noFill()</a> の両方が呼び出されると、画面には何も描画されません。"
       ]
     },
     "stroke": {
       "description": [
-        "Sets the color used to draw lines and borders around shapes. This color is either specified in terms of the RGB or HSB color depending on the current <a href=\"#/p5/colorMode\">colorMode()</a> (the default color space is RGB, with each value in the range from 0 to 255). The alpha range by default is also 0 to 255.",
-        "If a single string argument is provided, RGB, RGBA and Hex CSS color strings and all named color strings are supported. In this case, an alpha number value as a second argument is not supported, the RGBA form should be used.",
-        "A <a href=\"#/p5.Color\">p5.Color</a> object can also be provided to set the stroke color."
+        "線や図形の境界線を描画する際に使用される色を設定します。この色は、現在の <a href=\"#/p5/colorMode\">colorMode()</a> に応じて RGB または HSB 色で指定されます（デフォルトの色空間は RGB で、各値の範囲は 0 から 255 です）。デフォルトのアルファ範囲も 0 から 255 です。",
+        "単一の文字列引数が与えられた場合、RGB、RGBA、Hex CSS カラー文字列およびすべての名前付きカラー文字列がサポートされます。この場合、2 番目の引数としてアルファ数値はサポートされず、RGBA 形式を使用する必要があります。",
+        "<a href=\"#/p5.Color\">p5.Color</a> オブジェクトも、ストロークカラーを設定するために提供できます。"
       ],
       "params": {
-        "v1": "Number: red or hue value relative to  the current color range",
-        "v2": "Number: green or saturation value  relative to the current color range",
-        "v3": "Number: blue or brightness value  relative to the current color range",
-        "alpha": "Number (Optional)",
-        "value": "String: a color string",
-        "gray": "Number: a gray value",
-        "values": "Number[]: an array containing the red,green,blue &  and alpha components of the color",
-        "color": "p5.Color: the stroke color"
+        "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
+        "v2": "Number: 現在のカラーレンジに対する緑または彩度の値",
+        "v3": "Number: 現在のカラーレンジに対する青または明度の値",
+        "alpha": "Number (任意)",
+        "value": "String: カラー文字列",
+        "gray": "Number: グレーの値",
+        "values": "Number[]: 色の赤、緑、青、アルファ成分を含む配列",
+        "color": "p5.Color: ストロークカラー"
       }
     },
     "erase": {
       "description": [
-        "All drawing that follows <a href=\"#/p5/erase\">erase()</a> will subtract from the canvas. Erased areas will reveal the web page underneath the canvas. Erasing can be canceled with <a href=\"#/p5/noErase\">noErase()</a>.",
-        "Drawing done with <a href=\"#/p5/image\">image()</a> and <a href=\"#/p5/background\"> background()</a> in between <a href=\"#/p5/erase\">erase()</a> and <a href=\"#/p5/noErase\">noErase()</a> will not erase the canvas but works as usual."
+        "<a href=\"#/p5/erase\">erase()</a> に続くすべての描画は、キャンバスから減算されます。消去された領域は、キャンバスの下にあるウェブページが表示されます。<a href=\"#/p5/noErase\">noErase()</a> で消去をキャンセルできます。",
+        "<a href=\"#/p5/erase\">erase()</a> と <a href=\"#/p5/noErase\">noErase()</a> の間にある <a href=\"#/p5/image\">image()</a> と <a href=\"#/p5/background\">background()</a> での描画は、キャンバスを消去せず、通常どおりに動作します。"
       ],
       "params": {
-        "strengthFill": "Number: (Optional) A number (0-255) for the strength of erasing for a shape's fill.  This will default to 255 when no argument is given, which  is full strength.",
-        "strengthStroke": "Number: (Optional) A number (0-255) for the strength of erasing for a shape's stroke.  This will default to 255 when no argument is given, which  is full strength."
+        "strengthFill": "Number: (任意) 形状の塗りつぶしの消去強度の数値（0-255）。引数がない場合、デフォルトで 255 になり、最大強度になります。",
+        "strengthStroke": "Number: (任意) 形状のストロークの消去強度の数値（0-255）。引数がない場合、デフォルトで 255 になり、最大強度になります。"
       }
     },
     "noErase": {
       "description": [
-        "Ends erasing that was started with <a href=\"#/p5/erase\">erase()</a>. The <a href=\"#/p5/fill\">fill()</a>, <a href=\"#/p5/stroke\">stroke()</a>, and <a href=\"#/p5/blendMode\">blendMode()</a> settings will return to what they were prior to calling <a href=\"#/p5/erase\">erase()</a>."
+        "<a href=\"#/p5/erase\">erase()</a> で開始された消去を終了します。<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/stroke\">stroke()</a>、および <a href=\"#/p5/blendMode\">blendMode()</a> の設定は、<a href=\"#/p5/erase\">erase()</a> を呼び出す前の状態に戻ります。"
       ]
     },
     "arc": {
       "description": [
-        "Draw an arc to the screen. If called with only x, y, w, h, start and stop, the arc will be drawn and filled as an open pie segment. If a mode parameter is provided, the arc will be filled like an open semi-circle (OPEN), a closed semi-circle (CHORD), or as a closed pie segment (PIE). The origin may be changed with the <a href=\"#/p5/ellipseMode\">ellipseMode()</a> function.",
-        "The arc is always drawn clockwise from wherever start falls to wherever stop falls on the ellipse. Adding or subtracting TWO_PI to either angle does not change where they fall. If both start and stop fall at the same place, a full ellipse will be drawn. Be aware that the y-axis increases in the downward direction, therefore angles are measured clockwise from the positive x-direction (\"3 o'clock\")."
+        "画面に円弧を描画します。x、y、w、h、start、stop のみで呼び出されると、円弧は開いた扇形として描画され、塗りつぶされます。mode パラメータが提供された場合、円弧は開いた半円（OPEN）、閉じた半円（CHORD）、または閉じた扇形（PIE）として塗りつぶされます。原点は <a href=\"#/p5/ellipseMode\">ellipseMode()</a> 関数で変更できます。",
+        "円弧は、start が楕円上でどこにあるかから、stop が楕円上でどこにあるかまで、常に時計回りに描画されます。start または stop に TWO_PI を加算または減算しても、それらが楕円上でどこにあるかは変わりません。start と stop が同じ場所にある場合、完全な楕円が描画されます。y 軸が下向きに増加するため、角度は正の x 方向（\"3 時\"）から時計回りに測定されることに注意してください。"
       ],
       "params": {
-        "x": "Number: x-coordinate of the arc's ellipse",
-        "y": "Number: y-coordinate of the arc's ellipse",
-        "w": "Number: width of the arc's ellipse by default",
-        "h": "Number: height of the arc's ellipse by default",
-        "start": "Number: angle to start the arc, specified in radians",
-        "stop": "Number: angle to stop the arc, specified in radians",
-        "mode": "Constant: (Optional) optional parameter to determine the way of drawing  the arc. either CHORD, PIE or OPEN",
-        "detail": "Integer: (Optional) optional parameter for WebGL mode only. This is to  specify the number of vertices that makes up the  perimeter of the arc. Default value is 25. Won't  draw a stroke for a detail of more than 50."
+        "x": "Number: 円弧の楕円の x 座標",
+        "y": "Number: 円弧の楕円の y 座標",
+        "w": "Number: デフォルトでの円弧の楕円の幅",
+        "h": "Number: デフォルトでの円弧の楕円の高さ",
+        "start": "Number: 円弧を開始する角度（ラジアンで指定）",
+        "stop": "Number: 円弧を終了する角度（ラジアンで指定）",
+        "mode": "Constant: （オプション）円弧の描画方法を決定するオプションパラメータ。CHORD、PIE、または OPEN のいずれか",
+        "detail": "Integer: （オプション）WebGL モード専用のオプションパラメータ。これは、円弧の周囲を構成する頂点の数を指定するためのものです。デフォルト値は 25 です。50 を超える詳細にはストロークを描画しません。"
       }
     },
     "ellipse": {
       "description": [
-        "Draws an ellipse (oval) to the screen. By default, the first two parameters set the location of the center of the ellipse, and the third and fourth parameters set the shape's width and height. If no height is specified, the value of width is used for both the width and height. If a negative height or width is specified, the absolute value is taken.",
-        "An ellipse with equal width and height is a circle. The origin may be changed with the <a href=\"#/p5/ellipseMode\">ellipseMode()</a> function."
+        "画面に楕円（オーバル）を描画します。デフォルトでは、最初の2つのパラメーターは楕円の中心の位置を設定し、3番目と4番目のパラメーターは形状の幅と高さを設定します。高さが指定されていない場合、幅の値が幅と高さの両方に使用されます。負の高さまたは幅が指定された場合、絶対値が使用されます。",
+        "幅と高さが等しい楕円は円です。原点は <a href=\"#/p5/ellipseMode\">ellipseMode()</a> 関数で変更できます。"
       ],
       "params": {
-        "x": "Number: x-coordinate of the center of the ellipse.",
-        "y": "Number: y-coordinate of the center of the ellipse.",
-        "w": "Number: width of the ellipse.",
-        "h": "Number: (Optional) height of the ellipse.",
-        "detail": "Integer: (Optional) optional parameter for WEBGL mode only. This is to  specify the number of vertices that makes up the  perimeter of the ellipse. Default value is 25. Won't  draw a stroke for a detail of more than 50."
+        "x": "Number: 楕円の中心の x 座標。",
+        "y": "Number: 楕円の中心の y 座標。",
+        "w": "Number: 楕円の幅。",
+        "h": "Number: （オプション）楕円の高さ。",
+        "detail": "Integer: （オプション）WEBGL モード専用のオプションパラメータ。これは、楕円の周囲を構成する頂点の数を指定するためのものです。デフォルト値は 25 です。50 を超える詳細にはストロークを描画しません。"
       }
     },
     "circle": {
       "description": [
-        "Draws a circle to the screen. A circle is a simple closed shape. It is the set of all points in a plane that are at a given distance from a given point, the center. This function is a special case of the <a href=\"#/p5/ellipse\">ellipse()</a> function, where the width and height of the ellipse are the same. Height and width of the ellipse correspond to the diameter of the circle. By default, the first two parameters set the location of the center of the circle, the third sets the diameter of the circle."
+        "画面に円を描画します。円は単純な閉じた図形です。中心と呼ばれる特定の点から与えられた距離にある平面上のすべての点の集合です。この関数は、楕円の幅と高さが同じ場合の<a href=\"#/p5/ellipse\">ellipse()</a>関数の特殊なケースです。楕円の高さと幅は、円の直径に対応します。デフォルトでは、最初の2つのパラメーターは円の中心の位置を設定し、3番目のパラメーターは円の直径を設定します。"
       ],
       "params": {
-        "x": "Number: x-coordinate of the center of the circle.",
-        "y": "Number: y-coordinate of the center of the circle.",
-        "d": "Number: diameter of the circle."
+        "x": "Number: 円の中心の x 座標。",
+        "y": "Number: 円の中心の y 座標。",
+        "d": "Number: 円の直径。"
       }
     },
     "line": {
       "description": [
-        "Draws a line (a direct path between two points) to the screen. If called with only 4 parameters, it will draw a line in 2D with a default width of 1 pixel. This width can be modified by using the <a href=\"#/p5/strokeWeight\"> strokeWeight()</a> function. A line cannot be filled, therefore the <a href=\"#/p5/fill\">fill()</a> function will not affect the color of a line. So to color a line, use the <a href=\"#/p5/stroke\">stroke()</a> function."
+        "画面に線（2点間の直接の経路）を描画します。4つのパラメーターで呼び出されると、デフォルトの幅1ピクセルの2Dの線を描画します。この幅は、<a href=\"#/p5/strokeWeight\"> strokeWeight()</a>関数を使用して変更できます。線は塗りつぶしができないため、<a href=\"#/p5/fill\">fill()</a>関数は線の色に影響しません。線の色を変更するには、<a href=\"#/p5/stroke\">stroke()</a>関数を使用してください。"
       ],
       "params": {
-        "x1": "Number: the x-coordinate of the first point",
-        "y1": "Number: the y-coordinate of the first point",
-        "x2": "Number: the x-coordinate of the second point",
-        "y2": "Number: the y-coordinate of the second point",
-        "z1": "Number: the z-coordinate of the first point",
-        "z2": "Number: the z-coordinate of the second point"
+        "x1": "Number: 最初の点のx座標",
+        "y1": "Number: 最初の点のy座標",
+        "x2": "Number: 2番目の点のx座標",
+        "y2": "Number: 2番目の点のy座標",
+        "z1": "Number: 最初の点のz座標",
+        "z2": "Number: 2番目の点のz座標"
       }
     },
     "point": {
       "description": [
-        "Draws a point, a coordinate in space at the dimension of one pixel. The first parameter is the horizontal value for the point, the second param is the vertical value for the point. The color of the point is changed with the <a href=\"#/p5/stroke\">stroke()</a> function. The size of the point can be changed with the <a href=\"#/p5/strokeWeight\">strokeWeight()</a> function."
+        "1ピクセルの次元での空間内の座標である点を描画します。最初のパラメーターは点の水平方向の値であり、2番目のパラメーターは点の垂直方向の値です。点の色は<a href=\"#/p5/stroke\">stroke()</a>関数で変更されます。点のサイズは、<a href=\"#/p5/strokeWeight\">strokeWeight()</a>関数で変更できます。"
       ],
       "params": {
-        "x": "Number: the x-coordinate",
-        "y": "Number: the y-coordinate",
-        "z": "Number: (Optional) the z-coordinate (for WebGL mode)",
-        "coordinate_vector": "p5.Vector: the coordinate vector"
+        "x": "Number: x座標",
+        "y": "Number: y座標",
+        "z": "Number: （オプション）z座標（WebGLモード用）",
+        "coordinate_vector": "p5.Vector: 座標ベクトル"
       }
     },
     "quad": {
       "description": [
-        "Draws a quad on the canvas. A quad is a quadrilateral, a four-sided polygon. It is similar to a rectangle, but the angles between its edges are not constrained to ninety degrees. The first pair of parameters (x1,y1) sets the first vertex and the subsequent pairs should proceed clockwise or counter-clockwise around the defined shape. z-arguments only work when quad() is used in WEBGL mode."
+        "キャンバスに四角形を描画します。四角形は、四辺多角形です。長方形に似ていますが、その辺の間の角度は90度に制約されていません。最初のパラメータのペア（x1、y1）が最初の頂点を設定し、その後のペアは定義された形状を時計回りまたは反時計回りに進むべきです。z引数は、quad()がWEBGLモードで使用されている場合にのみ機能します。"
       ],
       "params": {
-        "x1": "Number: the x-coordinate of the first point",
-        "y1": "Number: the y-coordinate of the first point",
-        "x2": "Number: the x-coordinate of the second point",
-        "y2": "Number: the y-coordinate of the second point",
-        "x3": "Number: the x-coordinate of the third point",
-        "y3": "Number: the y-coordinate of the third point",
-        "x4": "Number: the x-coordinate of the fourth point",
-        "y4": "Number: the y-coordinate of the fourth point",
-        "detailX": "Integer: (Optional) number of segments in the x-direction",
-        "detailY": "Integer: (Optional) number of segments in the y-direction",
-        "z1": "Number: the z-coordinate of the first point",
-        "z2": "Number: the z-coordinate of the second point",
-        "z3": "Number: the z-coordinate of the third point",
-        "z4": "Number: the z-coordinate of the fourth point"
+        "x1": "Number: 最初の点のx座標",
+        "y1": "Number: 最初の点のy座標",
+        "x2": "Number: 2番目の点のx座標",
+        "y2": "Number: 2番目の点のy座標",
+        "x3": "Number: 3番目の点のx座標",
+        "y3": "Number: 3番目の点のy座標",
+        "x4": "Number: 4番目の点のx座標",
+        "y4": "Number: 4番目の点のy座標",
+        "detailX": "Integer: （オプション）x方向のセグメントの数",
+        "detailY": "Integer: （オプション）y方向のセグメントの数",
+        "z1": "Number: 最初の点のz座標",
+        "z2": "Number: 2番目の点のz座標",
+        "z3": "Number: 3番目の点のz座標",
+        "z4": "Number: 4番目の点のz座標"
       }
     },
     "rect": {
       "description": [
-        "Draws a rectangle on the canvas. A rectangle is a four-sided closed shape with every angle at ninety degrees. By default, the first two parameters set the location of the upper-left corner, the third sets the width, and the fourth sets the height. The way these parameters are interpreted may be changed with the <a href=\"#/p5/rectMode\">rectMode()</a> function.",
-        "The fifth, sixth, seventh and eighth parameters, if specified, determine corner radius for the top-left, top-right, lower-right and lower-left corners, respectively. An omitted corner radius parameter is set to the value of the previously specified radius value in the parameter list."
+        "キャンバスに長方形を描画します。長方形は、すべての角度が90度の四辺閉形状です。デフォルトでは、最初の2つのパラメータは左上隅の位置を設定し、3番目は幅を設定し、4番目は高さを設定します。これらのパラメータの解釈方法は、<a href=\"#/p5/rectMode\">rectMode()</a>関数で変更できます。",
+        "指定された場合、5番目、6番目、7番目、8番目のパラメータは、それぞれ左上、右上、右下、左下の角の半径を決定します。省略された角の半径パラメータは、パラメータリスト内の前に指定された半径値に設定されます。"
       ],
       "params": {
-        "x": "Number: x-coordinate of the rectangle.",
-        "y": "Number: y-coordinate of the rectangle.",
-        "w": "Number: width of the rectangle.",
-        "h": "Number: (Optional) height of the rectangle.",
-        "tl": "Number: (Optional) optional radius of top-left corner.",
-        "tr": "Number: (Optional) optional radius of top-right corner.",
-        "br": "Number: (Optional) optional radius of bottom-right corner.",
-        "bl": "Number: (Optional) optional radius of bottom-left corner.",
-        "detailX": "Integer: (Optional) number of segments in the x-direction (for WebGL mode)",
-        "detailY": "Integer: (Optional) number of segments in the y-direction (for WebGL mode)"
+        "x": "Number: 長方形のx座標。",
+        "y": "Number: 長方形のy座標。",
+        "w": "Number: 長方形の幅。",
+        "h": "Number: （オプション）長方形の高さ。",
+        "tl": "Number: （オプション）左上の角の半径。",
+        "tr": "Number: （オプション）右上の角の半径。",
+        "br": "Number: （オプション）右下の角の半径。",
+        "bl": "Number: （オプション）左下の角の半径。",
+        "detailX": "Integer: （オプション）x方向のセグメント数（WebGLモード用）",
+        "detailY": "Integer: （オプション）y方向のセグメント数（WebGLモード用）"
       }
     },
     "square": {
       "description": [
-        "Draws a square to the screen. A square is a four-sided shape with every angle at ninety degrees, and equal side size. This function is a special case of the rect() function, where the width and height are the same, and the parameter is called \"s\" for side size. By default, the first two parameters set the location of the upper-left corner, the third sets the side size of the square. The way these parameters are interpreted, may be changed with the <a href=\"#/p5/rectMode\">rectMode()</a> function.",
-        "The fourth, fifth, sixth and seventh parameters, if specified, determine corner radius for the top-left, top-right, lower-right and lower-left corners, respectively. An omitted corner radius parameter is set to the value of the previously specified radius value in the parameter list."
+        "画面に正方形を描画します。正方形は4つの角度が90度で、4つの辺が等しい4辺形です。この関数は、幅と高さが同じで、パラメータが「s」で辺の長さが設定されているrect()関数の特殊な場合です。デフォルトでは、最初の2つのパラメータは左上の角の位置を設定し、3つ目のパラメータは正方形の辺の長さを設定します。これらのパラメータの解釈方法は、rectMode()関数で変更できます。",
+        "4番目から7番目のパラメータが指定された場合、それぞれ左上、右上、右下、左下の角の半径が決定されます。省略されたコーナー半径パラメータは、パラメータリストで前に指定された半径値に設定されます。"
       ],
       "params": {
-        "x": "Number: x-coordinate of the square.",
-        "y": "Number: y-coordinate of the square.",
-        "s": "Number: side size of the square.",
-        "tl": "Number: (Optional) optional radius of top-left corner.",
-        "tr": "Number: (Optional) optional radius of top-right corner.",
-        "br": "Number: (Optional) optional radius of bottom-right corner.",
-        "bl": "Number: (Optional) optional radius of bottom-left corner."
+        "x": "Number: 正方形のx座標。",
+        "y": "Number: 正方形のy座標。",
+        "s": "Number: 正方形の辺の長さ。",
+        "tl": "Number: (オプション) 左上の角の半径。",
+        "tr": "Number: (オプション) 右上の角の半径。",
+        "br": "Number: (オプション) 右下の角の半径。",
+        "bl": "Number: (オプション) 左下の角の半径。"
       }
     },
     "triangle": {
       "description": [
-        "Draws a triangle to the canvas. A triangle is a plane created by connecting three points. The first two arguments specify the first point, the middle two arguments specify the second point, and the last two arguments specify the third point."
+        "三角形をキャンバスに描画します。三角形は3つの点を結びつけて作られる平面です。最初の2つの引数は最初の点を指定し、その次の2つの引数は2番目の点を指定し、最後の2つの引数は3番目の点を指定します。"
       ],
       "params": {
-        "x1": "Number: x-coordinate of the first point",
-        "y1": "Number: y-coordinate of the first point",
-        "x2": "Number: x-coordinate of the second point",
-        "y2": "Number: y-coordinate of the second point",
-        "x3": "Number: x-coordinate of the third point",
-        "y3": "Number: y-coordinate of the third point"
+        "x1": "Number: 最初の点のx座標。",
+        "y1": "Number: 最初の点のy座標。",
+        "x2": "Number: 2番目の点のx座標。",
+        "y2": "Number: 2番目の点のy座標。",
+        "x3": "Number: 3番目の点のx座標。",
+        "y3": "Number: 3番目の点のy座標。"
       }
     },
     "ellipseMode": {
       "description": [
-        "Modifies the location from which ellipses are drawn by changing the way in which parameters given to <a href=\"#/p5/ellipse\">ellipse()</a>, <a href=\"#/p5/circle\">circle()</a> and <a href=\"#/p5/arc\">arc()</a> are interpreted.",
-        "The default mode is <code>CENTER</code>, in which the first two parameters are interpreted as the shape's center point's x and y coordinates respectively, while the third and fourth parameters are its width and height.",
-        "<code>ellipseMode(RADIUS)</code> also uses the first two parameters as the shape's center point's x and y coordinates, but uses the third and fourth parameters to specify half of the shapes's width and height.",
-        "<code>ellipseMode(CORNER)</code> interprets the first two parameters as the upper-left corner of the shape, while the third and fourth parameters are its width and height.",
-        "<code>ellipseMode(CORNERS)</code> interprets the first two parameters as the location of one corner of the ellipse's bounding box, and the third and fourth parameters as the location of the opposite corner.",
-        "The parameter to this method must be written in ALL CAPS because they are predefined as constants in ALL CAPS and Javascript is a case-sensitive language."
+        "楕円を描画するときの基準点を変更することができます。具体的には、<a href=\"#/p5/ellipse\">ellipse()</a>、<a href=\"#/p5/circle\">circle()</a>、<a href=\"#/p5/arc\">arc()</a> のパラメータの解釈方法を変更します。",
+        "デフォルトのモードは <code>CENTER</code> で、最初の2つのパラメータは中心点のx座標とy座標として解釈され、3つ目と4つ目のパラメータは幅と高さとして解釈されます。",
+        "<code>ellipseMode(RADIUS)</code> では、最初の2つのパラメータも中心点のx座標とy座標として解釈されますが、3つ目と4つ目のパラメータは、幅と高さの半分をそれぞれ指定します。",
+        "<code>ellipseMode(CORNER)</code> では、最初の2つのパラメータは楕円の左上隅として解釈され、3つ目と4つ目のパラメータは幅と高さとして解釈されます。",
+        "<code>ellipseMode(CORNERS)</code> では、最初の2つのパラメータは楕円の境界ボックスの1つの隅の位置として解釈され、3つ目と4つ目のパラメータは対角線上の相対的な位置として解釈されます。",
+        "このメソッドのパラメータは、事前に定義された定数であるため、大文字で書く必要があります。JavaScriptは大文字小文字を区別するためです。"
       ],
       "params": {
-        "mode": "Constant: either CENTER, RADIUS, CORNER, or CORNERS"
+        "mode": "定数: CENTER、RADIUS、CORNER、またはCORNERS"
       }
     },
     "noSmooth": {
       "description": [
-        "Draws all geometry with jagged (aliased) edges.",
-        "Note that <a href=\"#/p5/smooth\">smooth()</a> is active by default in 2D mode, so it is necessary to call <a href=\"#/p5/noSmooth\">noSmooth()</a> to disable smoothing of geometry, images, and fonts.",
-        "In 3D mode, <a href=\"#/p5/noSmooth\">noSmooth()</a> is enabled by default, so it is necessary to call <a href=\"#/p5/smooth\">smooth()</a> if you would like smooth (antialiased) edges on your geometry."
+        "すべてのジオメトリをジャギー（エイリアス）のあるエッジで描画します。",
+        "2Dモードでは、デフォルトで<a href=\"#/p5/smooth\">smooth()</a>が有効になっているため、ジオメトリ、イメージ、フォントのスムージングを無効にするには<a href=\"#/p5/noSmooth\">noSmooth()</a>を呼び出す必要があります。",
+        "3Dモードでは、デフォルトで<a href=\"#/p5/noSmooth\">noSmooth()</a>が有効になっているため、ジオメトリのスムーズ（アンチエイリアス）エッジを使用するには<a href=\"#/p5/smooth\">smooth()</a>を呼び出す必要があります。"
       ]
     },
     "rectMode": {
       "description": [
-        "Modifies the location from which rectangles are drawn by changing the way in which parameters given to <a href=\"#/p5/rect\">rect()</a> are interpreted.",
-        "The default mode is <code>CORNER</code>, which interprets the first two parameters as the upper-left corner of the shape, while the third and fourth parameters are its width and height.",
-        "<code>rectMode(CORNERS)</code> interprets the first two parameters as the location of one of the corners, and the third and fourth parameters as the location of the diagonally opposite corner. Note, the rectangle is drawn between the coordinates, so it is not necessary that the first corner be the upper left corner.",
-        "<code>rectMode(CENTER)</code> interprets the first two parameters as the shape's center point, while the third and fourth parameters are its width and height.",
-        "<code>rectMode(RADIUS)</code> also uses the first two parameters as the shape's center point, but uses the third and fourth parameters to specify half of the shape's width and height respectively.",
-        "The parameter to this method must be written in ALL CAPS because they are predefined as constants in ALL CAPS and Javascript is a case-sensitive language."
+        "rect()で描画される矩形の描画開始位置を変更します。",
+        "デフォルトのモードは<code>CORNER</code>で、最初の2つのパラメータは形状の左上隅を表し、3番目と4番目のパラメータは幅と高さです。",
+        "<code>rectMode(CORNERS)</code>は、最初の2つのパラメータを1つの隅の位置とし、3番目と4番目のパラメータを対角線上の反対側の位置として解釈します。注意：矩形は座標の間に描画されるため、最初の隅が左上隅である必要はありません。",
+        "<code>rectMode(CENTER)</code>は、最初の2つのパラメータを形状の中心点とし、3番目と4番目のパラメータを幅と高さとして解釈します。",
+        "<code>rectMode(RADIUS)</code>も最初の2つのパラメータを形状の中心点として使用しますが、3番目と4番目のパラメータをそれぞれ形状の幅と高さの半分として指定します。",
+        "このメソッドのパラメータはすべて大文字で書かれている必要があります。これは、定数がすべて大文字で定義されているためであり、JavaScriptは大文字と小文字を区別する言語であるためです。"
       ],
       "params": {
-        "mode": "Constant: either CORNER, CORNERS, CENTER, or RADIUS"
+        "mode": "Constant: CORNER、CORNERS、CENTER、RADIUSのいずれか"
       }
     },
     "smooth": {
       "description": [
-        "Draws all geometry with smooth (anti-aliased) edges. <a href=\"#/p5/smooth\">smooth()</a> will also improve image quality of resized images.",
-        "Note that <a href=\"#/p5/smooth\">smooth()</a> is active by default in 2D mode; <a href=\"#/p5/noSmooth\">noSmooth()</a> can be used to disable smoothing of geometry, images, and fonts.",
-        "In 3D mode, <a href=\"#/p5/noSmooth\">noSmooth()</a> is enabled by default, so it is necessary to call <a href=\"#/p5/smooth\">smooth()</a> if you would like smooth (antialiased) edges on your geometry."
+        "スムーズ（アンチエイリアス）のエッジを使用してすべてのジオメトリを描画します。 <a href=\"#/p5/smooth\">smooth()</a>は、リサイズされたイメージの品質も向上させます。",
+        "2Dモードでは、<a href=\"#/p5/smooth\">smooth()</a>がデフォルトで有効になっていることに注意してください。 <a href=\"#/p5/noSmooth\">noSmooth()</a>を使用して、ジオメトリ、イメージ、フォントのスムージングを無効にすることができます。",
+        "3Dモードでは、<a href=\"#/p5/noSmooth\">noSmooth()</a>がデフォルトで有効になっているため、ジオメトリにスムーズ（アンチエイリアス）エッジを使用するには<a href=\"#/p5/smooth\">smooth()</a>を呼び出す必要があります。"
       ]
     },
     "strokeCap": {
       "description": [
-        "Sets the style for rendering line endings. These ends are either rounded, squared, or extended, each of which specified with the corresponding parameters: <code>ROUND</code>, <code>SQUARE</code>, or <code>PROJECT</code>. The default cap is <code>ROUND</code>.",
-        "The parameter to this method must be written in ALL CAPS because they are predefined as constants in ALL CAPS and Javascript is a case-sensitive language."
+        "線の終端部の描画スタイルを設定します。これらの終端部は、丸められたもの、角ばったもの、または延長されたもののいずれかで、それぞれのパラメータで指定されます：<code>ROUND</code>、<code>SQUARE</code>、または<code>PROJECT</code>。デフォルトのスタイルは<code>ROUND</code>です。",
+        "このメソッドのパラメータはすべて大文字で書かれている必要があります。これは、定数がすべて大文字で定義されているためであり、JavaScriptは大文字と小文字を区別する言語であるためです。"
       ],
       "params": {
-        "cap": "Constant: either ROUND, SQUARE, or PROJECT"
+        "cap": "Constant: ROUND、SQUARE、またはPROJECTのいずれか"
       }
     },
     "strokeJoin": {
       "description": [
-        "Sets the style of the joints which connect line segments. These joints are either mitered, beveled, or rounded and specified with the corresponding parameters: <code>MITER</code>, <code>BEVEL</code>, or <code>ROUND</code>. The default joint is <code>MITER</code> in 2D mode and <code>ROUND</code> in WebGL mode.",
-        "The parameter to this method must be written in ALL CAPS because they are predefined as constants in ALL CAPS and Javascript is a case-sensitive language."
+        "線分を接続するジョイントのスタイルを設定します。これらのジョイントは、それぞれのパラメータで指定される、マイター、ベベル、またはラウンドになっています：<code>MITER</code>、<code>BEVEL</code>、または<code>ROUND</code>。2Dモードではデフォルトのジョイントは<code>MITER</code>で、WebGLモードでは<code>ROUND</code>です。",
+        "このメソッドのパラメータはすべて大文字で書かれている必要があります。これは、定数がすべて大文字で定義されているためであり、JavaScriptは大文字と小文字を区別する言語であるためです。"
       ],
       "params": {
-        "join": "Constant: either MITER, BEVEL, or ROUND"
+        "join": "Constant: MITER、BEVEL、またはROUNDのいずれか"
       }
     },
     "strokeWeight": {
       "description": [
-        "Sets the width of the stroke used for lines, points, and the border around shapes. All widths are set in units of pixels.",
-        "Note that it is affected by any transformation or scaling that has been applied previously."
+        "線、点、および形状の周囲の境界に使用されるストロークの幅を設定します。すべての幅はピクセル単位で設定されます。",
+        "以前に適用された変換やスケーリングに影響を受けることに注意してください。"
       ],
       "params": {
-        "weight": "Number: the weight of the stroke (in pixels)"
+        "weight": "Number: ストロークの幅（ピクセル単位）"
       }
     },
     "bezier": {
       "description": [
-        "Draws a cubic Bezier curve on the screen. These curves are defined by a series of anchor and control points. The first two parameters specify the first anchor point and the last two parameters specify the other anchor point, which become the first and last points on the curve. The middle parameters specify the two control points which define the shape of the curve. Approximately speaking, control points \"pull\" the curve towards them.",
-        "Bezier curves were developed by French automotive engineer Pierre Bezier, and are commonly used in computer graphics to define gently sloping curves. See also <a href=\"#/p5/curve\">curve()</a>."
+        "画面上にキュビックベジェ曲線を描画します。これらの曲線は、アンカーポイントとコントロールポイントの系列で定義されます。最初の2つのパラメータは最初のアンカーポイントを指定し、最後の2つのパラメータは他のアンカーポイントを指定します。これらのアンカーポイントは曲線の最初と最後のポイントになります。中間のパラメータは曲線の形状を定義する2つのコントロールポイントを指定します。大まかに言うと、コントロールポイントは曲線を自分の方向に「引っ張ります」。",
+        "ベジェ曲線は、フランスの自動車技師ピエール・ベジエによって開発され、ゆるやかに傾斜した曲線を定義するためにコンピュータグラフィックスで一般的に使用されます。 <a href=\"#/p5/curve\">curve()</a>も参照してください。"
       ],
       "params": {
-        "x1": "Number: x-coordinate for the first anchor point",
-        "y1": "Number: y-coordinate for the first anchor point",
-        "x2": "Number: x-coordinate for the first control point",
-        "y2": "Number: y-coordinate for the first control point",
-        "x3": "Number: x-coordinate for the second control point",
-        "y3": "Number: y-coordinate for the second control point",
-        "x4": "Number: x-coordinate for the second anchor point",
-        "y4": "Number: y-coordinate for the second anchor point",
-        "z1": "Number: z-coordinate for the first anchor point",
-        "z2": "Number: z-coordinate for the first control point",
-        "z3": "Number: z-coordinate for the second control point",
-        "z4": "Number: z-coordinate for the second anchor point"
+        "x1": "Number: 最初のアンカーポイントのx座標",
+        "y1": "Number: 最初のアンカーポイントのy座標",
+        "x2": "Number: 最初のコントロールポイントのx座標",
+        "y2": "Number: 最初のコントロールポイントのy座標",
+        "x3": "Number: 2番目のコントロールポイントのx座標",
+        "y3": "Number: 2番目のコントロールポイントのy座標",
+        "x4": "Number: 2番目のアンカーポイントのx座標",
+        "y4": "Number: 2番目のアンカーポイントのy座標",
+        "z1": "Number: 最初のアンカーポイントのz座標",
+        "z2": "Number: 最初のコントロールポイントのz座標",
+        "z3": "Number: 2番目のコントロールポイントのz座標",
+        "z4": "Number: 2番目のアンカーポイントのz座標"
       }
     },
     "bezierDetail": {
       "description": [
-        "Sets the resolution at which Bezier's curve is displayed. The default value is 20.",
-        "Note, This function is only useful when using the WEBGL renderer as the default canvas renderer does not use this information."
+        "ベジェ曲線の表示に使用される解像度を設定します。デフォルト値は20です。",
+        "なお、この関数はWEBGLレンダラーを使用する場合にのみ有用であり、デフォルトのキャンバスレンダラーはこの情報を使用しません。"
       ],
       "params": {
-        "detail": "Number: resolution of the curves"
+        "detail": "Number: 曲線の解像度"
       }
     },
     "bezierPoint": {
       "description": [
-        "Given the x or y co-ordinate values of control and anchor points of a bezier curve, it evaluates the x or y coordinate of the bezier at position t. The parameters a and d are the x or y coordinates of first and last points on the curve while b and c are of the control points.The final parameter t is the position of the resultant point which is given between 0 and 1. This can be done once with the x coordinates and a second time with the y coordinates to get the location of a bezier curve at t."
+        "ベジェ曲線の制御点とアンカーポイントのx座標またはy座標の値が与えられた場合、この関数はベジェ曲線のt位置でのx座標またはy座標を評価します。パラメータaとdは曲線上の最初と最後の点のxまたはy座標であり、bとcは制御点の座標です。最後のパラメータtは、0から1の値で示される結果の点の位置です。これをx座標で1回、y座標で1回実行することで、ベジェ曲線のt位置での位置を取得できます。"
       ],
-      "returns": "Number: the value of the Bezier at position t",
+      "returns": "Number: t位置でのベジェ曲線の値",
       "params": {
-        "a": "Number: coordinate of first point on the curve",
-        "b": "Number: coordinate of first control point",
-        "c": "Number: coordinate of second control point",
-        "d": "Number: coordinate of second point on the curve",
-        "t": "Number: value between 0 and 1"
+        "a": "Number: 曲線上の最初の点の座標",
+        "b": "Number: 最初の制御点の座標",
+        "c": "Number: 2番目の制御点の座標",
+        "d": "Number: 曲線上の最後の点の座標",
+        "t": "Number: 0から1までの値"
       }
     },
     "bezierTangent": {
       "description": [
-        "Evaluates the tangent to the Bezier at position t for points a, b, c, d. The parameters a and d are the first and last points on the curve, and b and c are the control points. The final parameter t varies between 0 and 1."
+        "ベジェ曲線のパラメータ a, b, c, d における位置 t における接線を評価します。パラメータ a と d は曲線の最初と最後の点で、b と c は制御点です。t の最終的な値は 0 から 1 まで変化します。"
       ],
-      "returns": "Number: the tangent at position t",
+      "returns": "Number: 位置 t における接線の値",
       "params": {
-        "a": "Number: coordinate of first point on the curve",
-        "b": "Number: coordinate of first control point",
-        "c": "Number: coordinate of second control point",
-        "d": "Number: coordinate of second point on the curve",
-        "t": "Number: value between 0 and 1"
+        "a": "Number: 曲線の最初の点の座標",
+        "b": "Number: 最初の制御点の座標",
+        "c": "Number: 2番目の制御点の座標",
+        "d": "Number: 曲線の最後の点の座標",
+        "t": "Number: 0 から 1 の値"
       }
     },
     "curve": {
       "description": [
-        "Draws a curved line on the screen between two points, given as the middle four parameters. The first two parameters are a control point, as if the curve came from this point even though it's not drawn. The last two parameters similarly describe the other control point. <br /><br /> Longer curves can be created by putting a series of <a href=\"#/p5/curve\">curve()</a> functions together or using <a href=\"#/p5/curveVertex\">curveVertex()</a>. An additional function called <a href=\"#/p5/curveTightness\">curveTightness()</a> provides control for the visual quality of the curve. The <a href=\"#/p5/curve\">curve()</a> function is an implementation of Catmull-Rom splines."
+        "2点間を曲線で結ぶ。曲線は、中間の4つのパラメーターで指定された2点の間に描画される。最初の2つのパラメーターはコントロールポイントであり、曲線が描かれない場合でも、曲線がこの点から来たように見える。最後の2つのパラメーターも同様に、他のコントロールポイントを指定する。  \n長い曲線は、<a href=\"#/p5/curve\">curve()</a>関数を連結して使用するか、<a href=\"#/p5/curveVertex\">curveVertex()</a>を使用して作成できる。追加の<a href=\"#/p5/curveTightness\">curveTightness()</a>関数を使用すると、曲線のビジュアル品質を制御できる。<a href=\"#/p5/curve\">curve()</a>関数はCatmull-Romスプラインの実装である。"
       ],
       "params": {
-        "x1": "Number: x-coordinate for the beginning control point",
-        "y1": "Number: y-coordinate for the beginning control point",
-        "x2": "Number: x-coordinate for the first point",
-        "y2": "Number: y-coordinate for the first point",
-        "x3": "Number: x-coordinate for the second point",
-        "y3": "Number: y-coordinate for the second point",
-        "x4": "Number: x-coordinate for the ending control point",
-        "y4": "Number: y-coordinate for the ending control point",
-        "z1": "Number: z-coordinate for the beginning control point",
-        "z2": "Number: z-coordinate for the first point",
-        "z3": "Number: z-coordinate for the second point",
-        "z4": "Number: z-coordinate for the ending control point"
+        "x1": "Number: 最初のコントロールポイントのx座標",
+        "y1": "Number: 最初のコントロールポイントのy座標",
+        "x2": "Number: 最初の点のx座標",
+        "y2": "Number: 最初の点のy座標",
+        "x3": "Number: 2番目の点のx座標",
+        "y3": "Number: 2番目の点のy座標",
+        "x4": "Number: 最後のコントロールポイントのx座標",
+        "y4": "Number: 最後のコントロールポイントのy座標",
+        "z1": "Number: 最初のコントロールポイントのz座標",
+        "z2": "Number: 最初の点のz座標",
+        "z3": "Number: 2番目の点のz座標",
+        "z4": "Number: 最後のコントロールポイントのz座標"
       }
     },
     "curveDetail": {
       "description": [
-        "Sets the resolution at which curves display. The default value is 20 while the minimum value is 3.",
-        "This function is only useful when using the WEBGL renderer as the default canvas renderer does not use this information."
+        "曲線の表示解像度を設定します。デフォルト値は20で、最小値は3です。",
+        "この関数は、WEBGLレンダラーを使用している場合にのみ有用であり、デフォルトのキャンバスレンダラーはこの情報を使用しません。"
       ],
       "params": {
-        "resolution": "Number: resolution of the curves"
+        "resolution": "Number: 曲線の解像度"
       }
     },
     "curveTightness": {
       "description": [
-        "Modifies the quality of forms created with <a href=\"#/p5/curve\">curve()</a> and <a href=\"#/p5/curveVertex\">curveVertex()</a>.The parameter tightness determines how the curve fits to the vertex points. The value 0.0 is the default value for tightness (this value defines the curves to be Catmull-Rom splines) and the value 1.0 connects all the points with straight lines. Values within the range -5.0 and 5.0 will deform the curves but will leave them recognizable and as values increase in magnitude, they will continue to deform."
+        "曲線描画に使用される<a href=\"#/p5/curve\">curve()</a>や<a href=\"#/p5/curveVertex\">curveVertex()</a>の形状の品質を変更します。tightnessパラメータは、曲線を頂点ポイントに合わせる方法を決定します。値0.0はtightnessのデフォルト値であり、Catmull-Rom splineで曲線が定義されます。値1.0はすべてのポイントを直線でつなぎます。-5.0から5.0の範囲内の値は曲線を変形させますが、それでも認識可能な形状を保ち、値が増大すると曲線はさらに変形します。"
       ],
       "params": {
-        "amount": "Number: amount of deformation from the original vertices"
+        "amount": "Number: 元の頂点からの変形量"
       }
     },
     "curvePoint": {
       "description": [
-        "Evaluates the curve at position t for points a, b, c, d. The parameter t varies between 0 and 1, a and d are control points of the curve, and b and c are the start and end points of the curve. This can be done once with the x coordinates and a second time with the y coordinates to get the location of a curve at t."
+        "パラメータtが0から1の間で変化し、aとdは曲線のコントロールポイントであり、bとcは曲線の始点と終点です。これはx座標で1回、y座標で2回行われ、tにおける曲線の位置を取得できます。"
       ],
-      "returns": "Number: <a href=\"#/p5/curve\">Curve</a> value at position t",
+      "returns": "Number: <a href=\"#/p5/curve\">曲線</a>上の位置tの値",
       "params": {
-        "a": "Number: coordinate of first control point of the curve",
-        "b": "Number: coordinate of first point",
-        "c": "Number: coordinate of second point",
-        "d": "Number: coordinate of second control point",
-        "t": "Number: value between 0 and 1"
+        "a": "Number: 曲線の最初の制御点の座標",
+        "b": "Number: 最初の点の座標",
+        "c": "Number: 2番目の点の座標",
+        "d": "Number: 曲線の2番目の制御点の座標",
+        "t": "Number: 0から1の値"
       }
     },
     "curveTangent": {
       "description": [
-        "Evaluates the tangent to the curve at position t for points a, b, c, d. The parameter t varies between 0 and 1, a and d are points on the curve, and b and c are the control points."
+        "パラメータtが0から1の間で変化し、aとdは曲線上の点であり、bとcはコントロールポイントです。"
       ],
-      "returns": "Number: the tangent at position t",
+      "returns": "Number: 位置tにおける曲線の接線",
       "params": {
-        "a": "Number: coordinate of first control point",
-        "b": "Number: coordinate of first point on the curve",
-        "c": "Number: coordinate of second point on the curve",
-        "d": "Number: coordinate of second conrol point",
-        "t": "Number: value between 0 and 1"
+        "a": "Number: 最初のコントロールポイントの座標",
+        "b": "Number: 曲線上の最初の点の座標",
+        "c": "Number: 曲線上の2番目の点の座標",
+        "d": "Number: 2番目のコントロールポイントの座標",
+        "t": "Number: 0から1の値"
       }
     },
     "beginContour": {
       "description": [
-        "Use the <a href=\"#/p5/beginContour\">beginContour()</a> and <a href=\"#/p5/endContour\">endContour()</a> functions to create negative shapes within shapes such as the center of the letter 'O'. <a href=\"#/p5/beginContour\">beginContour()</a> begins recording vertices for the shape and <a href=\"#/p5/endContour\">endContour()</a> stops recording. The vertices that define a negative shape must \"wind\" in the opposite direction from the exterior shape. First draw vertices for the exterior clockwise order, then for internal shapes, draw vertices shape in counter-clockwise.",
-        "These functions can only be used within a <a href=\"#/p5/beginShape\">beginShape()</a>/<a href=\"#/p5/endShape\">endShape()</a> pair and transformations such as <a href=\"#/p5/translate\">translate()</a>, <a href=\"#/p5/rotate\">rotate()</a>, and <a href=\"#/p5/scale\">scale()</a> do not work within a <a href=\"#/p5/beginContour\">beginContour()</a>/<a href=\"#/p5/endContour\">endContour()</a> pair. It is also not possible to use other shapes, such as <a href=\"#/p5/ellipse\">ellipse()</a> or <a href=\"#/p5/rect\">rect()</a> within."
+        "<a href=\"#/p5/beginContour\">beginContour()</a>関数と<a href=\"#/p5/endContour\">endContour()</a>関数を使用して、文字の中心などの形状内の負の形状を作成します。 <a href=\"#/p5/beginContour\">beginContour()</a>関数は、形状の頂点を記録し始め、<a href=\"#/p5/endContour\">endContour()</a>関数は記録を停止します。負の形状を定義する頂点は、外部形状とは逆方向に「巻き」ます。最初に、外部の頂点を時計回りの順序で描き、内部の形状に対しては反時計回りの順序で描きます。",
+        "これらの関数は、<a href=\"#/p5/beginShape\">beginShape()</a>/<a href=\"#/p5/endShape\">endShape()</a>のペア内でのみ使用でき、<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a>などの変換は、<a href=\"#/p5/beginContour\">beginContour()</a>/<a href=\"#/p5/endContour\">endContour()</a>のペア内では機能しません。また、<a href=\"#/p5/ellipse\">ellipse()</a>や<a href=\"#/p5/rect\">rect()</a>などの他の形状を使用することもできません。"
       ]
     },
     "beginShape": {
       "description": [
-        "Using the <a href=\"#/p5/beginShape\">beginShape()</a> and <a href=\"#/p5/endShape\">endShape()</a> functions allow creating more complex forms. <a href=\"#/p5/beginShape\">beginShape()</a> begins recording vertices for a shape and <a href=\"#/p5/endShape\">endShape()</a> stops recording. The value of the kind parameter tells it which types of shapes to create from the provided vertices. With no mode specified, the shape can be any irregular polygon.",
-        "The parameters available for <a href=\"#/p5/beginShape\">beginShape()</a> are:",
-        "POINTS Draw a series of points",
-        "LINES Draw a series of unconnected line segments (individual lines)",
-        "TRIANGLES Draw a series of separate triangles",
-        "TRIANGLE_FAN Draw a series of connected triangles sharing the first vertex in a fan-like fashion",
-        "TRIANGLE_STRIP Draw a series of connected triangles in strip fashion",
-        "QUADS Draw a series of separate quads",
-        "QUAD_STRIP Draw quad strip using adjacent edges to form the next quad",
-        "TESS (WEBGL only) Handle irregular polygon for filling curve by explicit tessellation",
-        "After calling the <a href=\"#/p5/beginShape\">beginShape()</a> function, a series of <a href=\"#/p5/vertex\">vertex()</a> commands must follow. To stop drawing the shape, call <a href=\"#/p5/endShape\">endShape()</a>. Each shape will be outlined with the current stroke color and filled with the fill color.",
-        "Transformations such as <a href=\"#/p5/translate\">translate()</a>, <a href=\"#/p5/rotate\">rotate()</a>, and <a href=\"#/p5/scale\">scale()</a> do not work within <a href=\"#/p5/beginShape\">beginShape()</a>. It is also not possible to use other shapes, such as <a href=\"#/p5/ellipse\">ellipse()</a> or <a href=\"#/p5/rect\">rect()</a> within <a href=\"#/p5/beginShape\">beginShape()</a>."
+        "<a href=\"#/p5/beginShape\">beginShape()</a>関数と<a href=\"#/p5/endShape\">endShape()</a>関数を使用することで、より複雑な形状を作成できます。<a href=\"#/p5/beginShape\">beginShape()</a>は、形状の頂点を記録するために使用され、<a href=\"#/p5/endShape\">endShape()</a>は記録を停止します。 kindパラメータの値によって、提供された頂点からどのタイプの形状を作成するかを指定できます。 モードが指定されていない場合、形状は任意の不規則なポリゴンである可能性があります。",
+        "<a href=\"#/p5/beginShape\">beginShape()</a>関数で利用可能なパラメータは次のとおりです:",
+        "POINTS: 点のシリーズを描画します。",
+        "LINES: つながっていない線分のシリーズを描画します。",
+        "TRIANGLES: 別々の三角形のシリーズを描画します。",
+        "TRIANGLE_FAN: ファンのように、最初の頂点を共有する接続された三角形のシリーズを描画します。",
+        "TRIANGLE_STRIP: ストリップ状に接続された三角形のシリーズを描画します。",
+        "QUADS: 別々の四角形のシリーズを描画します。",
+        "QUAD_STRIP: 隣接する辺を使用して次の四角形を形成する四角形ストリップを描画します。",
+        "TESS(WEBGLのみ):明示的なテッセレーションによる曲線の塗りつぶしに対応します。",
+        "<a href=\"#/p5/beginShape\">beginShape()</a>関数を呼び出した後、一連の<a href=\"#/p5/vertex\">vertex()</a>コマンドが続きます。<a href=\"#/p5/endShape\">endShape()</a>を呼び出して図形の描画を停止します。各図形は現在のストロークカラーで輪郭が描かれ、塗りつぶしカラーで塗りつぶされます。",
+        "<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a>などの変換は<a href=\"#/p5/beginShape\">beginShape()</a>内では機能しません。<a href=\"#/p5/ellipse\">ellipse()</a>や<a href=\"#/p5/rect\">rect()</a>などの他の図形も、<a href=\"#/p5/beginShape\">beginShape()</a>内では使用できません。"
       ],
       "params": {
-        "kind": "Constant: (Optional) either POINTS, LINES, TRIANGLES, TRIANGLE_FAN  TRIANGLE_STRIP, QUADS, QUAD_STRIP or TESS"
+        "kind": "Constant: (任意) POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, QUAD_STRIP, TESS のいずれか"
       }
     },
     "bezierVertex": {
       "description": [
-        "Specifies vertex coordinates for Bezier curves. Each call to bezierVertex() defines the position of two control points and one anchor point of a Bezier curve, adding a new segment to a line or shape. For WebGL mode bezierVertex() can be used in 2D as well as 3D mode. 2D mode expects 6 parameters, while 3D mode expects 9 parameters (including z coordinates).",
-        "The first time bezierVertex() is used within a <a href=\"#/p5/beginShape\">beginShape()</a> call, it must be prefaced with a call to <a href=\"#/p5/vertex\">vertex()</a> to set the first anchor point. This function must be used between <a href=\"#/p5/beginShape\">beginShape()</a> and <a href=\"#/p5/endShape\">endShape()</a> and only when there is no MODE or POINTS parameter specified to <a href=\"#/p5/beginShape\">beginShape()</a>."
+        "Bezier曲線の頂点座標を指定します。bezierVertex()を呼び出すごとに、Bezier曲線の2つの制御点と1つのアンカーポイントの位置が定義され、線または図形に新しいセグメントが追加されます。WebGLモードでは、bezierVertex()は2Dおよび3Dモードで使用できます。2Dモードでは6つのパラメータが期待され、3Dモードでは9つのパラメータ（z座標を含む）が期待されます。",
+        "<a href=\"#/p5/beginShape\">beginShape()</a>呼び出しで初めてbezierVertex()が使用される場合、最初のアンカーポイントを設定するために<a href=\"#/p5/vertex\">vertex()</a>の呼び出しで前置する必要があります。この関数は<a href=\"#/p5/beginShape\">beginShape()</a>と<a href=\"#/p5/endShape\">endShape()</a>の間で使用され、<a href=\"#/p5/beginShape\">beginShape()</a>にMODEまたはPOINTSパラメータが指定されていない場合に限ります。"
       ],
       "params": {
-        "x2": "Number: x-coordinate for the first control point",
-        "y2": "Number: y-coordinate for the first control point",
-        "x3": "Number: x-coordinate for the second control point",
-        "y3": "Number: y-coordinate for the second control point",
-        "x4": "Number: x-coordinate for the anchor point",
-        "y4": "Number: y-coordinate for the anchor point",
-        "z2": "Number: z-coordinate for the first control point (for WebGL mode)",
-        "z3": "Number: z-coordinate for the second control point (for WebGL mode)",
-        "z4": "Number: z-coordinate for the anchor point (for WebGL mode)"
+        "x2": "Number: 第1制御点のx座標",
+        "y2": "Number: 第1制御点のy座標",
+        "x3": "Number: 第2制御点のx座標",
+        "y3": "Number: 第2制御点のy座標",
+        "x4": "Number: アンカーポイントのx座標",
+        "y4": "Number: アンカーポイントのy座標",
+        "z2": "Number: 第1制御点のz座標 (WebGLモード用)",
+        "z3": "Number: 第2制御点のz座標 (WebGLモード用)",
+        "z4": "Number: アンカーポイントのz座標 (WebGLモード用)"
       }
     },
     "curveVertex": {
       "description": [
-        "Specifies vertex coordinates for curves. This function may only be used between <a href=\"#/p5/beginShape\">beginShape()</a> and <a href=\"#/p5/endShape\">endShape()</a> and only when there is no MODE parameter specified to <a href=\"#/p5/beginShape\">beginShape()</a>. For WebGL mode curveVertex() can be used in 2D as well as 3D mode. 2D mode expects 2 parameters, while 3D mode expects 3 parameters.",
-        "The first and last points in a series of curveVertex() lines will be used to guide the beginning and end of the curve. A minimum of four points is required to draw a tiny curve between the second and third points. Adding a fifth point with curveVertex() will draw the curve between the second, third, and fourth points. The curveVertex() function is an implementation of Catmull-Rom splines."
+        "曲線の頂点座標を指定します。この関数は、<a href=\"#/p5/beginShape\">beginShape()</a>と<a href=\"#/p5/endShape\">endShape()</a>の間でのみ使用でき、<a href=\"#/p5/beginShape\">beginShape()</a>にMODEパラメータが指定されていない場合に限ります。WebGLモードでは、curveVertex()は2Dおよび3Dモードで使用できます。2Dモードは2つのパラメータを期待し、3Dモードは3つのパラメータを期待します。",
+        "curveVertex()ラインの一連の最初と最後の点は、曲線の始点と終点をガイドするために使用されます。2番目と3番目の点の間に小さな曲線を描画するには、最低4つの点が必要です。curveVertex()で5番目の点を追加すると、2番目、3番目、4番目の点の間に曲線が描かれます。curveVertex()関数は、Catmull-Romスプラインの実装です。"
       ],
       "params": {
-        "x": "Number: x-coordinate of the vertex",
-        "y": "Number: y-coordinate of the vertex",
-        "z": "Number: (Optional) z-coordinate of the vertex (for WebGL mode)"
+        "x": "Number: 頂点のx座標",
+        "y": "Number: 頂点のy座標",
+        "z": "Number: (オプション) 頂点のz座標 (WebGLモード用)"
       }
     },
     "endContour": {
       "description": [
-        "Use the <a href=\"#/p5/beginContour\">beginContour()</a> and <a href=\"#/p5/endContour\">endContour()</a> functions to create negative shapes within shapes such as the center of the letter 'O'. <a href=\"#/p5/beginContour\">beginContour()</a> begins recording vertices for the shape and <a href=\"#/p5/endContour\">endContour()</a> stops recording. The vertices that define a negative shape must \"wind\" in the opposite direction from the exterior shape. First draw vertices for the exterior clockwise order, then for internal shapes, draw vertices shape in counter-clockwise.",
-        "These functions can only be used within a <a href=\"#/p5/beginShape\">beginShape()</a>/<a href=\"#/p5/endShape\">endShape()</a> pair and transformations such as <a href=\"#/p5/translate\">translate()</a>, <a href=\"#/p5/rotate\">rotate()</a>, and <a href=\"#/p5/scale\">scale()</a> do not work within a <a href=\"#/p5/beginContour\">beginContour()</a>/<a href=\"#/p5/endContour\">endContour()</a> pair. It is also not possible to use other shapes, such as <a href=\"#/p5/ellipse\">ellipse()</a> or <a href=\"#/p5/rect\">rect()</a> within."
+        "<a href=\"#/p5/beginContour\">beginContour()</a>と<a href=\"#/p5/endContour\">endContour()</a>関数を使用して、文字'O'の中心など、図形内に負の図形を作成します。<a href=\"#/p5/beginContour\">beginContour()</a>は図形の頂点の記録を開始し、<a href=\"#/p5/endContour\">endContour()</a>は記録を停止します。負の形状を定義する頂点は、外部形状とは逆方向に\"巻かれる\"必要があります。まず、外部の時計回りの順序で頂点を描画し、内部の形状では、反時計回りに頂点を描画します。",
+        "これらの関数は、<a href=\"#/p5/beginShape\">beginShape()</a>/<a href=\"#/p5/endShape\">endShape()</a>のペア内でのみ使用でき、<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、および<a href=\"#/p5/scale\">scale()</a>などの変換は、<a href=\"#/p5/beginContour\">beginContour()</a>/<a href=\"#/p5/endContour\">endContour()</a>ペア内では動作しません。また、<a href=\"#/p5/ellipse\">ellipse()</a>や<a href=\"#/p5/rect\">rect()</a>などの他の図形を内部で使用することもできません。"
       ]
     },
     "endShape": {
       "description": [
-        "The <a href=\"#/p5/endShape\">endShape()</a> function is the companion to <a href=\"#/p5/beginShape\">beginShape()</a> and may only be called after <a href=\"#/p5/beginShape\">beginShape()</a>. When <a href=\"#/p5/endshape\">endShape()</a> is called, all of the image data defined since the previous call to <a href=\"#/p5/beginShape\">beginShape()</a> is written into the image buffer. The constant CLOSE as the value for the <code>mode</code> parameter to close the shape (to connect the beginning and the end)."
+        "<a href=\"#/p5/endShape\">endShape()</a>関数は、<a href=\"#/p5/beginShape\">beginShape()</a>とペアで使用され、<a href=\"#/p5/beginShape\">beginShape()</a>の後でのみ呼び出すことができます。<a href=\"#/p5/endshape\">endShape()</a>が呼び出されると、前回の<a href=\"#/p5/beginShape\">beginShape()</a>の呼び出し以降に定義されたすべての画像データが画像バッファに書き込まれます。定数CLOSEを<code>mode</code>パラメータの値として使用して、図形を閉じる（始点と終点を接続する）ことができます。"
       ],
       "params": {
-        "mode": "Constant: (Optional) use CLOSE to close the shape"
+        "mode": "定数: (オプション) 図形を閉じるためにCLOSEを使用"
       }
     },
     "quadraticVertex": {
       "description": [
-        "Specifies vertex coordinates for quadratic Bezier curves. Each call to quadraticVertex() defines the position of one control points and one anchor point of a Bezier curve, adding a new segment to a line or shape. The first time quadraticVertex() is used within a <a href=\"#/p5/beginShape\">beginShape()</a> call, it must be prefaced with a call to <a href=\"#/p5/vertex\">vertex()</a> to set the first anchor point. For WebGL mode quadraticVertex() can be used in 2D as well as 3D mode. 2D mode expects 4 parameters, while 3D mode expects 6 parameters (including z coordinates).",
-        "This function must be used between <a href=\"#/p5/beginShape\">beginShape()</a> and <a href=\"#/p5/endShape\">endShape()</a> and only when there is no MODE or POINTS parameter specified to <a href=\"#/p5/beginShape\">beginShape()</a>."
+        "quadraticVertex()は、二次ベジェ曲線の頂点座標を指定します。quadraticVertex()の各呼び出しで、ベジェ曲線の1つの制御点と1つのアンカーポイントの位置が定義され、線や図形に新しいセグメントが追加されます。<a href=\"#/p5/beginShape\">beginShape()</a>の呼び出しでquadraticVertex()を初めて使用する場合、最初のアンカーポイントを設定するために<a href=\"#/p5/vertex\">vertex()</a>の呼び出しで前置しなければなりません。WebGLモードでは、quadraticVertex()は2Dモードと3Dモードの両方で使用できます。2Dモードでは4つのパラメータが必要で、3Dモードでは6つのパラメータが必要です（z座標を含む）。",
+        "この関数は、<a href=\"#/p5/beginShape\">beginShape()</a>と<a href=\"#/p5/endShape\">endShape()</a>の間でのみ使用し、<a href=\"#/p5/beginShape\">beginShape()</a>にMODEやPOINTSパラメータが指定されていない場合にのみ使用できます。"
       ],
       "params": {
-        "cx": "Number: x-coordinate for the control point",
-        "cy": "Number: y-coordinate for the control point",
-        "x3": "Number: x-coordinate for the anchor point",
-        "y3": "Number: y-coordinate for the anchor point",
-        "cz": "Number: z-coordinate for the control point (for WebGL mode)",
-        "z3": "Number: z-coordinate for the anchor point (for WebGL mode)"
+        "cx": "Number: 制御点のx座標",
+        "cy": "Number: 制御点のy座標",
+        "x3": "Number: アンカーポイントのx座標",
+        "y3": "Number: アンカーポイントのy座標",
+        "cz": "Number: 制御点のz座標（WebGLモード用）",
+        "z3": "Number: アンカーポイントのz座標（WebGLモード用）"
       }
     },
     "vertex": {
       "description": [
-        "All shapes are constructed by connecting a series of vertices. <a href=\"#/p5/vertex\">vertex()</a> is used to specify the vertex coordinates for points, lines, triangles, quads, and polygons. It is used exclusively within the <a href=\"#/p5/beginShape\">beginShape()</a> and <a href=\"#/p5/endShape\">endShape()</a> functions."
+        "すべての図形は、一連の頂点を接続することで構築されます。<a href=\"#/p5/vertex\">vertex()</a>は、点、線、三角形、四角形、多角形の頂点座標を指定するために使用されます。これは、<a href=\"#/p5/beginShape\">beginShape()</a>および<a href=\"#/p5/endShape\">endShape()</a>関数内でのみ使用されます。"
       ],
       "params": {
-        "x": "Number: x-coordinate of the vertex",
-        "y": "Number: y-coordinate of the vertex",
-        "z": "Number: (Optional) z-coordinate of the vertex.  Defaults to 0 if not specified.",
-        "u": "Number: (Optional) the vertex's texture u-coordinate",
-        "v": "Number: (Optional) the vertex's texture v-coordinate"
+        "x": "Number: 頂点のx座標",
+        "y": "Number: 頂点のy座標",
+        "z": "Number: （オプション）頂点のz座標。指定されていない場合はデフォルトで0になります。",
+        "u": "Number: （オプション）頂点のテクスチャu座標",
+        "v": "Number: （オプション）頂点のテクスチャv座標"
       }
     },
     "normal": {
       "description": [
-        "Sets the 3d vertex normal to use for subsequent vertices drawn with <a href=\"#/p5/vertex\">vertex()</a>. A normal is a vector that is generally nearly perpendicular to a shape's surface which controls how much light will be reflected from that part of the surface."
+        "以降で<a href=\"#/p5/vertex\">vertex()</a>で描画される頂点に使用する3D頂点法線を設定します。法線は、一般的に形状の表面にほぼ垂直なベクトルであり、その表面の部分からどれだけの光が反射されるかを制御します。"
       ],
       "params": {
-        "vector": "Vector: A p5.Vector representing the vertex normal.",
-        "x": "Number: The x component of the vertex normal.",
-        "y": "Number: The y component of the vertex normal.",
-        "z": "Number: The z component of the vertex normal."
+        "vector": "Vector: 頂点法線を表すp5.Vector。",
+        "x": "Number: 頂点法線のx成分。",
+        "y": "Number: 頂点法線のy成分。",
+        "z": "Number: 頂点法線のz成分。"
       }
     },
     "VERSION": {
-      "description": ["Version of this p5.js."]
+      "description": ["このp5.jsのバージョン。"]
     },
     "P2D": {
-      "description": ["The default, two-dimensional renderer."]
+      "description": ["デフォルトの二次元レンダラー。"]
     },
     "WEBGL": {
       "description": [
-        "One of the two render modes in p5.js: P2D (default renderer) and WEBGL Enables 3D render by introducing the third dimension: Z"
+        "p5.jsの2つのレンダリングモードのうちの1つ：P2D（デフォルトのレンダラー）とWEBGL。3次元：Zを導入して3Dレンダリングを可能にします。"
       ]
     },
     "ARROW": {},
@@ -752,37 +748,37 @@
     "WAIT": {},
     "HALF_PI": {
       "description": [
-        "HALF_PI is a mathematical constant with the value 1.57079632679489661923. It is half the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions <a href=\"#/p5/sin\">sin()</a> and <a href=\"#/p5/cos\">cos()</a>."
+        "HALF_PIは、値が1.57079632679489661923の数学定数です。これは、円の円周と直径の比率の半分です。三角関数<a href=\"#/p5/sin\">sin()</a>および<a href=\"#/p5/cos\">cos()</a>と組み合わせて便利です。"
       ]
     },
     "PI": {
       "description": [
-        "PI is a mathematical constant with the value 3.14159265358979323846. It is the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions <a href=\"#/p5/sin\">sin()</a> and <a href=\"#/p5/cos\">cos()</a>."
+        "PIは、値が3.14159265358979323846の数学定数です。これは、円の円周と直径の比率です。三角関数<a href=\"#/p5/sin\">sin()</a>および<a href=\"#/p5/cos\">cos()</a>と組み合わせて便利です。"
       ]
     },
     "QUARTER_PI": {
       "description": [
-        "QUARTER_PI is a mathematical constant with the value 0.7853982. It is one quarter the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions <a href=\"#/p5/sin\">sin()</a> and <a href=\"#/p5/cos\">cos()</a>."
+        "QUARTER_PIは、値が0.7853982の数学定数です。これは、円の円周と直径の比率の4分の1です。三角関数<a href=\"#/p5/sin\">sin()</a>および<a href=\"#/p5/cos\">cos()</a>と組み合わせて便利です。"
       ]
     },
     "TAU": {
       "description": [
-        "TAU is an alias for TWO_PI, a mathematical constant with the value 6.28318530717958647693. It is twice the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions <a href=\"#/p5/sin\">sin()</a> and <a href=\"#/p5/cos\">cos()</a>."
+        "TAUは、TWO_PIの別名であり、値が6.28318530717958647693の数学定数です。これは、円の円周と直径の比率の2倍です。三角関数<a href=\"#/p5/sin\">sin()</a>および<a href=\"#/p5/cos\">cos()</a>と組み合わせて便利です。"
       ]
     },
     "TWO_PI": {
       "description": [
-        "TWO_PI is a mathematical constant with the value 6.28318530717958647693. It is twice the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions <a href=\"#/p5/sin\">sin()</a> and <a href=\"#/p5/cos\">cos()</a>."
+        "TWO_PIは、値が6.28318530717958647693の数学定数です。これは、円の円周と直径の比率の2倍です。三角関数<a href=\"#/p5/sin\">sin()</a>および<a href=\"#/p5/cos\">cos()</a>と組み合わせて便利です。"
       ]
     },
     "DEGREES": {
       "description": [
-        "Constant to be used with the <a href=\"#/p5/angleMode\">angleMode()</a> function, to set the mode in which p5.js interprets and calculates angles (either DEGREES or RADIANS)."
+        "<a href=\"#/p5/angleMode\">angleMode()</a>関数で使用する定数で、p5.jsが角度を解釈および計算するモード（DEGREESまたはRADIANS）を設定します。"
       ]
     },
     "RADIANS": {
       "description": [
-        "Constant to be used with the <a href=\"#/p5/angleMode\">angleMode()</a> function, to set the mode in which p5.js interprets and calculates angles (either RADIANS or DEGREES)."
+        "<a href=\"#/p5/angleMode\">angleMode()</a>関数で使用する定数で、p5.jsが角度を解釈および計算するモード（RADIANSまたはDEGREES）を設定します。"
       ]
     },
     "CORNER": {},
@@ -816,13 +812,13 @@
     "RGB": {},
     "HSB": {
       "description": [
-        "HSB (hue, saturation, brightness) is a type of color model. You can learn more about it at <a href=\"https://learnui.design/blog/the-hsb-color-system-practicioners-primer.html\">HSB</a>."
+        "HSB（hue、saturation、brightness）は、カラーモデルの一種です。詳細については、<a href=\"https://learnui.design/blog/the-hsb-color-system-practicioners-primer.html\">HSB</a>で学ぶことができます。"
       ]
     },
     "HSL": {},
     "AUTO": {
       "description": [
-        "AUTO allows us to automatically set the width or height of an element (but not both), based on the current height and width of the element. Only one parameter can be passed to the <a href=\"/#/p5.Element/size\">size</a> function as AUTO, at a time."
+        "AUTOを使用すると、要素の現在の高さと幅に基づいて、要素の幅または高さ（両方ではない）を自動的に設定できます。<a href=\"/#/p5.Element/size\">size</a>関数には、一度にAUTOとして渡すことができるパラメータが1つだけです。"
       ]
     },
     "ALT": {},
@@ -892,168 +888,168 @@
     "COVER": {},
     "print": {
       "description": [
-        "The <a href=\"#/p5/print\">print()</a> function writes to the console area of your browser. This function is often helpful for looking at the data a program is producing. This function creates a new line of text for each call to the function. Individual elements can be separated with quotes (\"\") and joined with the addition operator (+).",
-        "Note that calling print() without any arguments invokes the window.print() function which opens the browser's print dialog. To print a blank line to console you can write print('\\n')."
+        "<a href=\"#/p5/print\">print()</a>関数は、ブラウザのコンソールエリアに書き込みます。この関数は、プログラムが生成しているデータを確認するのに役立ちます。この関数は、関数が呼び出されるたびに新しい行のテキストが作成されます。個々の要素は、クォート（\"\"）で区切られ、加算演算子（+）で結合できます。",
+        "引数なしでprint()を呼び出すと、window.print()関数が呼び出され、ブラウザの印刷ダイアログが開きます。コンソールに空行を印刷するには、print('\\n')と記述します。"
       ],
       "params": {
-        "contents": "Any: any combination of Number, String, Object, Boolean,  Array to print"
+        "contents": "Any: 印刷するNumber、String、Object、Boolean、Arrayの任意の組み合わせ"
       }
     },
     "frameCount": {
       "description": [
-        "The system variable <a href=\"#/p5/frameCount\">frameCount</a> contains the number of frames that have been displayed since the program started. Inside <a href=\"#/p5/setup\">setup()</a> the value is 0, after the first iteration of <a href=\"#/p5/draw\">draw()</a> it is 1, etc."
+        "システム変数<a href=\"#/p5/frameCount\">frameCount</a>は、プログラムが開始されてから表示されたフレームの数を格納します。<a href=\"#/p5/setup\">setup()</a>内では値は0で、<a href=\"#/p5/draw\">draw()</a>の最初の反復後に1になります。"
       ]
     },
     "deltaTime": {
       "description": [
-        "The system variable <a href=\"#/p5/deltaTime\">deltaTime</a> contains the time difference between the beginning of the previous frame and the beginning of the current frame in milliseconds.",
-        "This variable is useful for creating time sensitive animation or physics calculation that should stay constant regardless of frame rate."
+        "システム変数<a href=\"#/p5/deltaTime\">deltaTime</a>には、前のフレームの開始と現在のフレームの開始の間の時間差がミリ秒単位で格納されます。",
+        "この変数は、フレームレートに関係なく一定のままであるべき時間に敏感なアニメーションや物理計算を作成するのに便利です。"
       ]
     },
     "focused": {
       "description": [
-        "Confirms if the window a p5.js program is in is \"focused,\" meaning that the sketch will accept mouse or keyboard input. This variable is \"true\" if the window is focused and \"false\" if not."
+        "ウィンドウがp5.jsプログラムで「フォーカス」されているかどうかを確認します。これは、スケッチがマウスやキーボードの入力を受け付けることを意味します。ウィンドウがフォーカスされている場合、この変数は「true」で、フォーカスされていない場合は「false」です。"
       ]
     },
     "cursor": {
       "description": [
-        "Sets the cursor to a predefined symbol or an image, or makes it visible if already hidden. If you are trying to set an image as the cursor, the recommended size is 16×16 or 32×32 pixels. The values for parameters x and y must be less than the dimensions of the image."
+        "カーソルを事前定義された記号や画像に設定するか、既に非表示の場合は表示するようにします。カーソルとして画像を設定しようとしている場合、推奨されるサイズは16×16または32×32ピクセルです。パラメータxとyの値は、画像の寸法よりも小さい必要があります。"
       ],
       "params": {
-        "type": "String|Constant: Built-In: either ARROW, CROSS, HAND, MOVE, TEXT and WAIT  Native CSS properties: 'grab', 'progress', 'cell' etc.  External: path for cursor's images  (Allowed File extensions: .cur, .gif, .jpg, .jpeg, .png)  For more information on Native CSS cursors and url visit:  <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/cursor\">https://developer.mozilla.org/en-US/docs/Web/CSS/cursor</a>",
-        "x": "Number: (Optional) the horizontal active spot of the cursor (must be less than 32)",
-        "y": "Number: (Optional) the vertical active spot of the cursor (must be less than 32)"
+        "type": "String|Constant: 組み込み: ARROW, CROSS, HAND, MOVE, TEXT, WAIT  ネイティブCSSプロパティ: 'grab', 'progress', 'cell'など  外部: カーソル画像のパス（許可されるファイル拡張子: .cur, .gif, .jpg, .jpeg, .png）  ネイティブCSSカーソルとurlの詳細については、次のリンクを参照してください: <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/cursor\">https://developer.mozilla.org/en-US/docs/Web/CSS/cursor</a>",
+        "x": "Number: （オプション）カーソルの水平方向のアクティブスポット（32未満である必要があります）",
+        "y": "Number: （オプション）カーソルの垂直方向のアクティブスポット（32未満である必要があります）"
       }
     },
     "frameRate": {
       "description": [
-        "Specifies the number of frames to be displayed every second. For example, the function call frameRate(30) will attempt to refresh 30 times a second. If the processor is not fast enough to maintain the specified rate, the frame rate will not be achieved. Setting the frame rate within <a href=\"#/p5/setup\">setup()</a> is recommended. The default frame rate is based on the frame rate of the display (here also called \"refresh rate\"), which is set to 60 frames per second on most computers. A frame rate of 24 frames per second (usual for movies) or above will be enough for smooth animations. This is the same as setFrameRate(val).",
-        "Calling <a href=\"#/p5/frameRate\">frameRate()</a> with no arguments returns the current framerate. The draw function must run at least once before it will return a value. This is the same as <a href=\"#/p5/getFrameRate\">getFrameRate()</a>.",
-        "Calling <a href=\"#/p5/frameRate\">frameRate()</a> with arguments that are not of the type Number or are non-positive also returns current framerate."
+        "1秒あたりに表示されるフレーム数を指定します。たとえば、関数コールframeRate(30)は、毎秒30回リフレッシュしようとします。プロセッサが指定されたレートを維持できない場合、フレームレートは達成されません。<a href=\"#/p5/setup\">setup()</a>内でフレームレートを設定することが推奨されます。デフォルトのフレームレートは、ディスプレイのフレームレート（ここでは「リフレッシュレート」とも呼ばれます）に基づいており、ほとんどのコンピュータでは1秒あたり60フレームに設定されています。映画で一般的な24フレーム/秒以上のフレームレートで、アニメーションがスムーズになります。これは、setFrameRate(val)と同じです。",
+        "<a href=\"#/p5/frameRate\">frameRate()</a>を引数なしで呼び出すと、現在のフレームレートが返されます。draw関数は、値を返す前に少なくとも1回実行する必要があります。これは、<a href=\"#/p5/getFrameRate\">getFrameRate()</a>と同じです。",
+        "型がNumberでない、または非正の引数で<a href=\"#/p5/frameRate\">frameRate()</a>を呼び出すと、現在のフレームレートも返されます。"
       ],
       "params": {
-        "fps": "Number: number of frames to be displayed every second"
+        "fps": "Number: 1秒あたりに表示されるフレーム数"
       }
     },
     "getTargetFrameRate": {
       "description": [
-        "Returns _targetFrameRate variable. The default _targetFrameRate is set to 60. This could be changed by calling frameRate() and setting it to the desired value. When getTargetFrameRate() is called, it should return the value that was set."
+        "_targetFrameRate変数を返します。デフォルトの_targetFrameRateは60に設定されています。これは、frameRate()を呼び出して所望の値に設定することで変更できます。getTargetFrameRate()が呼び出されると、設定された値が返されるべきです。"
       ],
       "returns": "Number: _targetFrameRate"
     },
     "noCursor": {
-      "description": ["Hides the cursor from view."]
+      "description": ["ビューからカーソルを非表示にします。"]
     },
     "displayWidth": {
       "description": [
-        "System variable that stores the width of the screen display according to The default <a href=\"#/p5/pixelDensity\">pixelDensity</a>. This is used to run a full-screen program on any display size. To return actual screen size, multiply this by pixelDensity."
+        "デフォルトの<a href=\"#/p5/pixelDensity\">pixelDensity</a>に従って画面表示の幅を保存するシステム変数です。これは、任意の表示サイズでフルスクリーンプログラムを実行するために使用されます。実際の画面サイズを返すには、これにpixelDensityを掛けます。"
       ]
     },
     "displayHeight": {
       "description": [
-        "System variable that stores the height of the screen display according to The default <a href=\"#/p5/pixelDensity\">pixelDensity</a>. This is used to run a full-screen program on any display size. To return actual screen size, multiply this by pixelDensity."
+        "デフォルトの<a href=\"#/p5/pixelDensity\">pixelDensity</a>に従って画面表示の高さを保存するシステム変数です。これは、任意の表示サイズでフルスクリーンプログラムを実行するために使用されます。実際の画面サイズを返すには、これにpixelDensityを掛けます。"
       ]
     },
     "windowWidth": {
       "description": [
-        "System variable that stores the width of the inner window, it maps to window.innerWidth."
+        "内部ウィンドウの幅を保存するシステム変数で、window.innerWidthにマップされます。"
       ]
     },
     "windowHeight": {
       "description": [
-        "System variable that stores the height of the inner window, it maps to window.innerHeight."
+        "内部ウィンドウの高さを保存するシステム変数で、window.innerHeightにマップされます。"
       ]
     },
     "windowResized": {
       "description": [
-        "The <a href=\"#/p5/windowResized\">windowResized()</a> function is called once every time the browser window is resized. This is a good place to resize the canvas or do any other adjustments to accommodate the new window size."
+        "<a href=\"#/p5/windowResized\">windowResized()</a>関数は、ブラウザウィンドウがリサイズされるたびに一度呼び出されます。これは、キャンバスのサイズを変更したり、新しいウィンドウサイズに合わせて他の調整を行うのに適した場所です。"
       ],
       "params": {
-        "event": "Object: (Optional) optional Event callback argument."
+        "event": "Object: (Optional) オプションのイベントコールバック引数。"
       }
     },
     "width": {
       "description": [
-        "System variable that stores the width of the drawing canvas. This value is set by the first parameter of the <a href=\"#/p5/createCanvas\">createCanvas()</a> function. For example, the function call createCanvas(320, 240) sets the width variable to the value 320. The value of width defaults to 100 if <a href=\"#/p5/createCanvas\">createCanvas()</a> is not used in a program."
+        "描画キャンバスの幅を保存するシステム変数です。<a href=\"#/p5/createCanvas\">createCanvas()</a>関数の最初のパラメータによってこの値が設定されます。例えば、関数呼び出しcreateCanvas(320, 240)は、width変数の値を320に設定します。<a href=\"#/p5/createCanvas\">createCanvas()</a>がプログラムで使用されていない場合、widthの値はデフォルトで100になります。"
       ]
     },
     "height": {
       "description": [
-        "System variable that stores the height of the drawing canvas. This value is set by the second parameter of the <a href=\"#/p5/createCanvas\">createCanvas()</a> function. For example, the function call createCanvas(320, 240) sets the height variable to the value 240. The value of height defaults to 100 if <a href=\"#/p5/createCanvas\">createCanvas()</a> is not used in a program."
+        "描画キャンバスの高さを保存するシステム変数です。<a href=\"#/p5/createCanvas\">createCanvas()</a>関数の2番目のパラメータによってこの値が設定されます。例えば、関数呼び出しcreateCanvas(320, 240)は、height変数の値を240に設定します。<a href=\"#/p5/createCanvas\">createCanvas()</a>がプログラムで使用されていない場合、heightの値はデフォルトで100になります。"
       ]
     },
     "fullscreen": {
       "description": [
-        "If argument is given, sets the sketch to fullscreen or not based on the value of the argument. If no argument is given, returns the current fullscreen state. Note that due to browser restrictions this can only be called on user input, for example, on mouse press like the example below."
+        "引数が与えられた場合、引数の値に基づいてスケッチをフルスクリーンにするかどうかを設定します。引数が与えられなかった場合、現在のフルスクリーン状態を返します。ただし、ブラウザの制限により、これはユーザー入力時にのみ呼び出すことができます。例えば、下記の例のようにマウスプレス時です。"
       ],
-      "returns": "Boolean: current fullscreen state",
+      "returns": "Boolean: 現在のフルスクリーン状態",
       "params": {
-        "val": "Boolean: (Optional) whether the sketch should be in fullscreen mode or not"
+        "val": "Boolean: (オプション) スケッチがフルスクリーンモードであるべきかどうか"
       }
     },
     "pixelDensity": {
       "description": [
-        "Sets the pixel scaling for high pixel density displays. By default pixel density is set to match display density, call pixelDensity(1) to turn this off. Calling <a href=\"#/p5/pixelDensity\">pixelDensity()</a> with no arguments returns the current pixel density of the sketch."
+        "高ピクセル密度ディスプレイのピクセルスケーリングを設定します。デフォルトでは、ピクセル密度は表示密度に合わせて設定されています。これをオフにするには、pixelDensity(1)を呼び出します。<a href=\"#/p5/pixelDensity\">pixelDensity()</a>を引数なしで呼び出すと、スケッチの現在のピクセル密度が返されます。"
       ],
       "params": {
-        "val": "Number: whether or how much the sketch should scale"
+        "val": "Number: スケッチがスケーリングするかどうか、またはどの程度スケーリングするか"
       }
     },
     "displayDensity": {
       "description": [
-        "Returns the pixel density of the current display the sketch is running on."
+        "スケッチが実行されている現在のディスプレイのピクセル密度を返します。"
       ],
-      "returns": "Number: current pixel density of the display"
+      "returns": "Number: ディスプレイの現在のピクセル密度"
     },
     "getURL": {
       "description": [
-        "Gets the current URL. Note: when using the p5 Editor, this will return an empty object because the sketch is embedded in an iframe. It will work correctly if you view the sketch using the editor's present or share URLs."
+        "現在のURLを取得します。注意：p5エディターを使用している場合、スケッチがiframeに埋め込まれているため、これは空のオブジェクトを返します。エディターのプレゼントURLやシェアURLでスケッチを表示すると、正しく機能します。"
       ],
       "returns": "String: url"
     },
     "getURLPath": {
       "description": [
-        "Gets the current URL path as an array. Note: when using the p5 Editor, this will return an empty object because the sketch is embedded in an iframe. It will work correctly if you view the sketch using the editor's present or share URLs."
+        "現在のURLパスを配列として取得します。注意：p5エディターを使用している場合、スケッチがiframeに埋め込まれているため、これは空のオブジェクトを返します。エディターのプレゼントURLやシェアURLでスケッチを表示すると、正しく機能します。"
       ],
-      "returns": "String[]: path components"
+      "returns": "String[]: パスコンポーネント"
     },
     "getURLParams": {
       "description": [
-        "Gets the current URL params as an Object. Note: when using the p5 Editor, this will return an empty object because the sketch is embedded in an iframe. It will work correctly if you view the sketch using the editor's present or share URLs."
+        "現在のURLパラメータをオブジェクトとして取得します。注意：p5エディターを使用している場合、スケッチがiframeに埋め込まれているため、これは空のオブジェクトを返します。エディターのプレゼントURLやシェアURLでスケッチを表示すると、正しく機能します。"
       ],
-      "returns": "Object: URL params"
+      "returns": "Object: URLパラメータ"
     },
     "preload": {
       "description": [
-        "Called directly before <a href=\"#/p5/setup\">setup()</a>, the <a href=\"#/p5/preload\">preload()</a> function is used to handle asynchronous loading of external files in a blocking way. If a preload function is defined, <a href=\"#/p5/setup\">setup()</a> will wait until any load calls within have finished. Nothing besides load calls (<a href=\"#/p5/loadImage\">loadImage</a>, <a href=\"#/p5/loadJSON\">loadJSON</a>, <a href=\"#/p5/loadFont\">loadFont</a>, <a href=\"#/p5/loadStrings\">loadStrings</a>, etc.) should be inside the preload function. If asynchronous loading is preferred, the load methods can instead be called in <a href=\"#/p5/setup\">setup()</a> or anywhere else with the use of a callback parameter.",
-        "By default the text \"loading...\" will be displayed. To make your own loading page, include an HTML element with id \"p5_loading\" in your page. More information <a href=\"http://bit.ly/2kQ6Nio\">here</a>."
+        "<a href=\"#/p5/setup\">setup()</a>の直前に呼び出される<a href=\"#/p5/preload\">preload()</a>関数は、外部ファイルの非同期ロードをブロッキング方式で処理するために使用されます。preload関数が定義されている場合、<a href=\"#/p5/setup\">setup()</a>はその中のloadコールがすべて終了するまで待機します。preload関数の中には、loadコール（<a href=\"#/p5/loadImage\">loadImage</a>、<a href=\"#/p5/loadJSON\">loadJSON</a>、<a href=\"#/p5/loadFont\">loadFont</a>、<a href=\"#/p5/loadStrings\">loadStrings</a>など）以外のものは入れないでください。非同期ロードが望ましい場合は、代わりにコールバックパラメータを使用して<a href=\"#/p5/setup\">setup()</a>や他の場所でloadメソッドを呼び出すことができます。",
+        "デフォルトでは、「loading...」というテキストが表示されます。独自のローディングページを作成するには、ページにID「p5_loading」のHTML要素を含めてください。詳細は<a href=\"http://bit.ly/2kQ6Nio\">こちら</a>。"
       ]
     },
     "setup": {
       "description": [
-        "The <a href=\"#/p5/setup\">setup()</a> function is called once when the program starts. It's used to define initial environment properties such as screen size and background color and to load media such as images and fonts as the program starts. There can only be one <a href=\"#/p5/setup\">setup()</a> function for each program and it shouldn't be called again after its initial execution.",
-        "Note: Variables declared within <a href=\"#/p5/setup\">setup()</a> are not accessible within other functions, including <a href=\"#/p5/draw\">draw()</a>."
+        "プログラムが開始されるときに一度だけ呼び出される<a href=\"#/p5/setup\">setup()</a>関数は、スクリーンサイズや背景色などの初期環境プロパティを定義し、プログラムの開始時に画像やフォントなどのメディアをロードするために使用されます。各プログラムには1つの<a href=\"#/p5/setup\">setup()</a>関数があり、初回実行後に再度呼び出すことはできません。",
+        "注意：<a href=\"#/p5/setup\">setup()</a>内で宣言された変数は、<a href=\"#/p5/draw\">draw()</a>を含む他の関数内ではアクセスできません。"
       ]
     },
     "draw": {
       "description": [
-        "Called directly after <a href=\"#/p5/setup\">setup()</a>, the <a href=\"#/p5/draw\">draw()</a> function continuously executes the lines of code contained inside its block until the program is stopped or <a href=\"#/p5/noLoop\">noLoop()</a> is called. Note if <a href=\"#/p5/noLoop\">noLoop()</a> is called in <a href=\"#/p5/setup\">setup()</a>, <a href=\"#/p5/draw\">draw()</a> will still be executed once before stopping. <a href=\"#/p5/draw\">draw()</a> is called automatically and should never be called explicitly.",
-        "It should always be controlled with <a href=\"#/p5/noLoop\">noLoop()</a>, <a href=\"#/p5/redraw\">redraw()</a> and <a href=\"#/p5/loop\">loop()</a>. After <a href=\"#/p5/noLoop\">noLoop()</a> stops the code in <a href=\"#/p5/draw\">draw()</a> from executing, <a href=\"#/p5/redraw\">redraw()</a> causes the code inside <a href=\"#/p5/draw\">draw()</a> to execute once, and <a href=\"#/p5/loop\">loop()</a> will cause the code inside <a href=\"#/p5/draw\">draw()</a> to resume executing continuously.",
-        "The number of times <a href=\"#/p5/draw\">draw()</a> executes in each second may be controlled with the <a href=\"#/p5/frameRate\">frameRate()</a> function.",
-        "There can only be one <a href=\"#/p5/draw\">draw()</a> function for each sketch, and <a href=\"#/p5/draw\">draw()</a> must exist if you want the code to run continuously, or to process events such as <a href=\"#/p5/mousePressed\">mousePressed()</a>. Sometimes, you might have an empty call to <a href=\"#/p5/draw\">draw()</a> in your program, as shown in the above example.",
-        "It is important to note that the drawing coordinate system will be reset at the beginning of each <a href=\"#/p5/draw\">draw()</a> call. If any transformations are performed within <a href=\"#/p5/draw\">draw()</a> (ex: scale, rotate, translate), their effects will be undone at the beginning of <a href=\"#/p5/draw\">draw()</a>, so transformations will not accumulate over time. On the other hand, styling applied (ex: fill, stroke, etc) will remain in effect."
+        "<a href=\"#/p5/setup\">setup()</a>の直後に呼び出される<a href=\"#/p5/draw\">draw()</a>関数は、プログラムが停止するか<a href=\"#/p5/noLoop\">noLoop()</a>が呼び出されるまで、そのブロック内に含まれるコードを連続して実行します。ただし、<a href=\"#/p5/setup\">setup()</a>で<a href=\"#/p5/noLoop\">noLoop()</a>が呼び出された場合でも、<a href=\"#/p5/draw\">draw()</a>は停止する前に一度だけ実行されます。<a href=\"#/p5/draw\">draw()</a>は自動的に呼び出されるため、明示的に呼び出すことはありません。",
+        "<a href=\"#/p5/noLoop\">noLoop()</a>、<a href=\"#/p5/redraw\">redraw()</a>、<a href=\"#/p5/loop\">loop()</a>を使って制御する必要があります。<a href=\"#/p5/noLoop\">noLoop()</a>が<a href=\"#/p5/draw\">draw()</a>内のコードの実行を停止した後、<a href=\"#/p5/redraw\">redraw()</a>は<a href=\"#/p5/draw\">draw()</a>内のコードを1回だけ実行し、<a href=\"#/p5/loop\">loop()</a>は<a href=\"#/p5/draw\">draw()</a>内のコードを連続して実行し続けるようになります。",
+        "<a href=\"#/p5/draw\">draw()</a>が1秒間に何回実行されるかは、<a href=\"#/p5/frameRate\">frameRate()</a>関数で制御できます。",
+        "各スケッチには1つの<a href=\"#/p5/draw\">draw()</a>関数があり、コードを連続して実行する場合や、<a href=\"#/p5/mousePressed\">mousePressed()</a>などのイベントを処理する場合には、<a href=\"#/p5/draw\">draw()</a>が必要です。場合によっては、上記の例のようにプログラム内で<a href=\"#/p5/draw\">draw()</a>を空呼び出しすることがあります。",
+        "描画座標系は、各<a href=\"#/p5/draw\">draw()</a>呼び出しの最初にリセットされることに注意が必要です。<a href=\"#/p5/draw\">draw()</a>内で変換が実行された場合（例：スケール、回転、移動）、その効果は<a href=\"#/p5/draw\">draw()</a>の最初に元に戻されるため、変換は時間とともに蓄積されません。一方で、適用されたスタイリング（例：塗りつぶし、ストロークなど）は継続して効果があります。"
       ]
     },
     "remove": {
       "description": [
-        "Removes the entire p5 sketch. This will remove the canvas and any elements created by p5.js. It will also stop the draw loop and unbind any properties or methods from the window global scope. It will leave a variable p5 in case you wanted to create a new p5 sketch. If you like, you can set p5 = null to erase it. While all functions and variables and objects created by the p5 library will be removed, any other global variables created by your code will remain."
+        "p5スケッチ全体を削除します。これにより、キャンバスとp5.jsによって作成された要素が削除されます。また、描画ループを停止し、ウィンドウのグローバルスコープからプロパティやメソッドのバインドを解除します。新しいp5スケッチを作成したい場合のために、変数p5を残します。必要に応じて、p5 = nullを設定して消去することができます。p5ライブラリによって作成されたすべての関数や変数やオブジェクトが削除されますが、コードによって作成された他のグローバル変数は残ります。"
       ]
     },
     "disableFriendlyErrors": {
       "description": [
-        "Turn off some features of the friendly error system (FES), which can give a significant boost to performance when needed.",
-        "Note that this will disable the parts of the FES that cause performance slowdown (like argument checking). Friendly errors that have no performance cost (like giving a descriptive error if a file load fails, or warning you if you try to override p5.js functions in the global space), will remain in place.",
-        "See <a href='https://github.com/processing/p5.js/wiki/Optimizing-p5.js-Code-for-Performance#disable-the-friendly-error-system-fes'> disabling the friendly error system</a>."
+        "フレンドリーエラーシステム（FES）の一部の機能をオフにし、必要に応じてパフォーマンスを大幅に向上させます。",
+        "これにより、パフォーマンス低下を引き起こすFESの部分（引数チェックなど）が無効になります。パフォーマンスコストがないフレンドリーエラー（ファイルの読み込みに失敗した場合に説明的なエラーを表示する、グローバル空間でp5.js関数をオーバーライドしようとした場合に警告を表示するなど）はそのまま残ります。",
+        "<a href='https://github.com/processing/p5.js/wiki/Optimizing-p5.js-Code-for-Performance#disable-the-friendly-error-system-fes'>フレンドリーエラーシステムの無効化</a>を参照してください。"
       ]
     },
     "let": {
