@@ -209,7 +209,7 @@ download:
   link: 'リンク：'
   statically-hosted-file: 静的ホストされたファイル
   etc-title: Githubリソース
-  older-releases: 以前のバージョン（リリースノートあり）
+  older-releases: 以前のバージョン（過去のリリースと変更履歴）
   github-repository: コードリポジトリ（GitHub）
   report-bugs: '問題、バグ、エラーを報告する'
   supported-browsers: 'サポートされているブラウザー'
