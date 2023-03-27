@@ -226,31 +226,31 @@ download:
   support-17: >-
     ピッツバーグのCMU STUDIO for Creative Inquiryで開催されたp5.js貢献者会議（画像クレジット：Taeyoon Choi）
   support-18: >-
-    Processing FellowのSaskia Freekeが、ロンドンでのCode Liberation x Processingワークショップを主催しています（画像クレジット：Code Liberation Foundation）
+    ProcessingのフェローであるSaskia Freekeが、ロンドンでのCode Liberation x Processingワークショップを主催しています（画像クレジット：Code Liberation Foundation）
   support-19: >-
     SFPCによる「教えることを学び、学ぶことを教えること」カンファレンス（画像クレジット：Kira Simon-Kennedy）
   support-20: >-
-    Processing Foundation FellowのCassie TarakajianがCode Art Miamiで開催したワークショップ（画像クレジット：Christian Arévalo Photography）
+    Processing財団のフェローであるCassie TarakajianがCode Art Miamiで開催したワークショップ（画像クレジット：Christian Arévalo Photography）
   support-21: >-
     Taeyoon Choi氏が主催するSigning Coders p5.jsワークショップでのASL通訳者（画像クレジット：Taeyoon Choi）
   support-22: 'Google Summer of Codeのキックオフ（画像クレジット：Taeyoon Choi）'
   support-23: >-
-    Processing Foundation FellowのCassie TarakajianがCode Art Miamiで開催したワークショップ（画像クレジット：Christian Arévalo Photography）
+    Processing財団のフェローであるCassie TarakajianがCode Art Miamiで開催したワークショップ（画像クレジット：Christian Arévalo Photography）
   support-24: >-
     Taeyoon Choi氏が主催する手話を使ったp5.jsワークショップを補助するLuisa PereiraとYeseul Song（画像クレジット：Taeyoon Choi）
   support-25: >-
     ピッツバーグのCMU STUDIO for Creative Inquiryで開催されたp5.js貢献者会議（画像クレジット：Taeyoon Choi）
   support-26: >-
-    Processing FoundationのフェローであるDigital Citizens Labは、International Center of PhotographyでSTEM教育に関するパネルを主催しました（画像クレジット：International Center of Photography）。
+    Processing財団のフェローであるDigital Citizens Labは、International Center of PhotographyでSTEM教育に関するパネルを主催しました（画像クレジット：International Center of Photography）。
   support-27: >-
     アーロン・モントーヤ・モラガ氏が指導するp5.jsワークショップに参加する参加者たち（画像クレジット：Aarón Montoya-Moraga）。
   support-28: >-
     Taeyoon Choi氏が主催する手話を基にしたp5.jsワークショップを支援するクレア・カーニー・ボルプ氏（画像クレジット：Taeyoon Choi）。
   support-29: >-
-    Processing FoundationのフェローであるDIY Girlsがロサンゼルスでクリエイティブなコーディングプログラムを運営しています（画像クレジット：DIY Girls）。
-  support-30: Processing FoundationのフェローであるDigital Citizens Lab。
+    Processing財団のフェローであるDIY Girlsがロサンゼルスでクリエイティブなコーディングプログラムを運営しています（画像クレジット：DIY Girls）。
+  support-30: Processing財団のフェローであるDigital Citizens Lab。
   support-31: UCLA DMAとNYU ITPで行われたBicoastal p5.jsミートアップ。
-  support-32: The Processing Foundation
+  support-32: Processing財団
   support-33: 'は、元々のProcessingソフトウェアとの10年以上の取り組みの後、2012年に設立されました。同財団の使命は、視覚芸術におけるソフトウェアリテラシーと技術関連分野における視覚リテラシーを促進し、これらの分野を多様なコミュニティにアクセス可能にすることです。私たちの目標は、特にこれらのツールやリソースにアクセスできないかもしれない人々を含め、すべての興味やバックグラウンドを持つ人々がプログラムを学び、コードでクリエイティブな作品を作成する力を与えることです。 '
   support-17-alt: ''
   support-18-alt: ''
@@ -1146,7 +1146,7 @@ community:
   create3: にご提出ください。
   donate-title: 寄付する
   donate1: 'p5.jsは、アーティストが制作した無料かつオープンソースです。p5.jsの開発を支援するために、'
-  donate2: Processing Foundation
+  donate2: Processing財団
   donate3: に寄付してください。
   contributors-conference-title: p5.js貢献者会議
   contributors-conference1: 'ほとんどの作業はオンラインで行われますが、私たちはIRLでも集まります。過去2回、'
@@ -1160,7 +1160,7 @@ community:
   support5: と
   support6: の寛大なサポートにより実現しました。ありがとうございます！
   mailing-list-title: メーリングリスト
-  mailing-list-1: 'ご登録いただくと、Processing Foundationから時々更新情報を受け取ることができます。'
+  mailing-list-1: 'ご登録いただくと、Processing財団から時々更新情報を受け取ることができます。'
   2015contributors-conference-title: Contributors Conference 2015
   2015contributors-conference-date: May 25-31
   2015contributors-conference1: 'A group of approximately 30 participants gathered spent a week at the '
