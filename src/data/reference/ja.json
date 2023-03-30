@@ -68,7 +68,7 @@
       "p5インスタンスには、p5スケッチに関連するすべてのプロパティとメソッドが含まれています。入力されたスケッチクロージャを受け取り、生成されたp5キャンバスをノードにアタッチするためのオプションのノードパラメータを取ることもできます。スケッチクロージャは、新しく作成されたp5インスタンスを唯一の引数として受け取り、スケッチの実行に必要なpreload()、setup()、および/またはdraw()プロパティを設定することもできます。",
       "p5スケッチは、「グローバル」モードまたは「インスタンス」モードで実行できます。「グローバル」 - すべてのプロパティとメソッドがウィンドウにアタッチされます「インスタンス」 - すべてのプロパティとメソッドがこのp5オブジェクトにバインドされます"
     ],
-    "returns": "P5：p5インスタンス",
+    "returns": "p5: p5インスタンス",
     "params": {
       "sketch": "Function: 与えられたp5インスタンスにオプションでpreload()、setup()、および/またはdraw()プロパティを設定できるクロージャ",
       "node": "HTMLElement:(オプション)キャンバスをアタッチする要素"
@@ -1054,309 +1054,309 @@
     },
     "let": {
       "description": [
-        "Creates and names a new variable. A variable is a container for a value.",
-        "Variables that are declared with <a href=\"#/p5/let\">let</a> will have block-scope. This means that the variable only exists within the <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block\"> block</a> that it is created within.",
-        "From <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let\">the MDN entry</a>: Declares a block scope local variable, optionally initializing it to a value."
+        "新しい変数を作成し、名前を付けます。変数は値のコンテナです。",
+        "letで宣言された変数はブロックスコープを持ちます。これは、変数は<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block\">ブロック</a>内で作成された範囲でのみ存在することを意味します。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let\">MDNのエントリ</a>より：ブロックスコープのローカル変数を宣言し、オプションで値を初期化します。"
       ]
     },
     "const": {
       "description": [
-        "Creates and names a new constant. Like a variable created with <a href=\"#/p5/let\">let</a>, a constant that is created with <a href=\"#/p5/const\">const</a> is a container for a value, however constants cannot be reassigned once they are declared. Although it is noteworthy that for non-primitive data types like objects & arrays, their elements can still be changeable. So if a variable is assigned an array, you can still add or remove elements from the array but cannot reassign another array to it. Also unlike <code>let</code>, you cannot declare variables without value using const.",
-        "Constants have block-scope. This means that the constant only exists within the <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block\"> block</a> that it is created within. A constant cannot be redeclared within a scope in which it already exists.",
-        "From <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const\">the MDN entry</a>: Declares a read-only named constant. Constants are block-scoped, much like variables defined using the 'let' statement. The value of a constant can't be changed through reassignment, and it can't be redeclared."
+        "新しい定数を作成し、名前を付けます。letで作成された変数のように、constで作成された定数も値のコンテナですが、宣言された後は再代入できません。ただし、オブジェクトや配列などの非プリミティブデータ型の要素は変更可能です。したがって、変数に配列が割り当てられている場合でも、配列から要素を追加したり削除したりできますが、別の配列を再割り当てすることはできません。また、constを使って値なしで変数を宣言することはできません。",
+        "定数はブロックスコープを持ちます。これは、定数は<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block\">ブロック</a>内で作成された範囲でのみ存在することを意味します。定数は、すでに存在するスコープ内で再宣言することはできません。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const\">MDNのエントリ</a>より：読み取り専用の名前付き定数を宣言します。定数はブロックスコープであり、'let'文で定義された変数と同様です。定数の値は再代入で変更できず、再宣言もできません。"
       ]
     },
     "===": {
       "description": [
-        "The strict equality operator <a href=\"#/p5/===\">===</a> checks to see if two values are equal and of the same type.",
-        "A comparison expression always evaluates to a <a href=\"#/p5/boolean\">boolean</a>.",
-        "From <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">the MDN entry</a>: The non-identity operator returns true if the operands are not equal and/or not of the same type.",
-        "Note: In some examples around the web you may see a double-equals-sign <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality\">==</a>, used for comparison instead. This is the non-strict equality operator in Javascript. This will convert the two values being compared to the same type before comparing them."
+        "厳密な等価演算子 <a href=\"#/p5/===\">===</a> は、2つの値が等しく、同じ型であるかどうかをチェックします。",
+        "比較式は常に <a href=\"#/p5/boolean\">ブール値</a> に評価されます。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDNエントリ</a>より: 非同一性演算子は、オペランドが等しくないおよび/または同じ型でない場合にtrueを返します。",
+        "注: ウェブ上の一部の例では、比較に代わりに使われる <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality\">==</a> のような二重等号を見ることがあります。これはJavascriptの非厳密な等価演算子です。これは、比較する前に比較される2つの値を同じ型に変換します。"
       ]
     },
     ">": {
       "description": [
-        "The greater than operator <a href=\"#/p5/>\">></a> evaluates to true if the left value is greater than the right value. <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\"> There is more info on comparison operators on MDN.</a>"
+        "より大きい演算子 <a href=\"#/p5/>\">></a> は、左の値が右の値より大きい場合にtrueに評価されます。 <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDNで比較演算子に関する詳細情報があります。</a>"
       ]
     },
     ">=": {
       "description": [
-        "The greater than or equal to operator <a href=\"#/p5/>=\">>=</a> evaluates to true if the left value is greater than or equal to the right value.",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">There is more info on comparison operators on MDN.</a>"
+        "大きいか等しい演算子 <a href=\"#/p5/>=\">>=</a> は、左の値が右の値より大きいか等しい場合にtrueに評価されます。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDNで比較演算子に関する詳細情報があります。</a>"
       ]
     },
     "<": {
       "description": [
-        "The less than operator <a href=\"#/p5/<\"><</a> evaluates to true if the left value is less than the right value.",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">There is more info on comparison operators on MDN.</a>"
+        "より小さい演算子 <a href=\"#/p5/<\"><</a> は、左の値が右の値より小さい場合にtrueに評価されます。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDNで比較演算子に関する詳細情報があります。</a>"
       ]
     },
     "<=": {
       "description": [
-        "The less than or equal to operator <a href=\"#/p5/<=\"><=</a> evaluates to true if the left value is less than or equal to the right value.",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">There is more info on comparison operators on MDN.</a>"
+        "小さいか等しい演算子 <a href=\"#/p5/<=\"><=</a> は、左の値が右の値より小さいか等しい場合にtrueに評価されます。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDNで比較演算子に関する詳細情報があります。</a>"
       ]
     },
     "if-else": {
       "description": [
-        "The <a href=\"#/p5/if-else\">if-else</a> statement helps control the flow of your code.",
-        "A condition is placed between the parenthesis following 'if', when that condition evalues to <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/truthy\">truthy</a>, the code between the following curly braces is run. Alternatively, when the condition evaluates to <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Falsy\">falsy</a>, the code between the curly braces of 'else' block is run instead. Writing an else block is optional.",
-        "From <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else\">the MDN entry</a>: The 'if' statement executes a statement if a specified condition is truthy. If the condition is falsy, another statement can be executed"
+        "<a href=\"#/p5/if-else\">if-else</a> 文は、コードのフローを制御するのに役立ちます。",
+        "'if'に続く括弧の間に条件が置かれ、その条件が<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/truthy\">truthy</a>に評価されると、次の中括弧の間のコードが実行されます。逆に、条件が<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Falsy\">falsy</a>に評価されると、'else'ブロックの中括弧の間のコードが代わりに実行されます。elseブロックの記述はオプションです。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else\">MDNエントリ</a>より: 'if'文は、指定された条件がtruthyである場合に文を実行します。条件がfalsyである場合、別の文を実行することができます。"
       ]
     },
     "function": {
       "description": [
-        "Creates and names a <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions\">function</a>. A <a href=\"#/p5/function\">function</a> is a set of statements that perform a task.",
-        "Optionally, functions can have parameters. <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Parameter\">Parameters</a> are variables that are scoped to the function, that can be assigned a value when calling the function.Multiple parameters can be given by seperating them with commmas.",
-        "From <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function\">the MDN entry</a>: Declares a function with the specified parameters."
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions\">関数</a>を作成し、名前を付けます。 <a href=\"#/p5/function\">関数</a>は、タスクを実行する一連の文です。",
+        "オプションで、関数はパラメータを持つことができます。<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Parameter\">パラメータ</a>は、関数にスコープされた変数で、関数を呼び出す際に値を割り当てることができます。複数のパラメータは、カンマで区切って与えることができます。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function\">MDNエントリ</a>より: 指定されたパラメータで関数を宣言します。"
       ]
     },
     "return": {
       "description": [
-        "Specifies the value to be returned by a function. For more info checkout <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return\"> the MDN entry for return</a>."
+        "関数から返される値を指定します。詳細は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return\">MDNのreturnエントリ</a>をご覧ください。"
       ]
     },
     "boolean": {
       "description": [
-        "Converts a number or string to its boolean representation. For a number, any non-zero value (positive or negative) evaluates to true, while zero evaluates to false. For a string, the value \"true\" evaluates to true, while any other value evaluates to false. When an array of number or string values is passed in, then a array of booleans of the same length is returned."
+        "数値または文字列をそのブール表現に変換します。数値の場合、ゼロ以外の値（正または負）はtrueと評価され、ゼロはfalseと評価されます。文字列の場合、値「true」はtrueと評価され、それ以外の値はfalseと評価されます。数値または文字列の配列が渡されると、同じ長さのブール配列が返されます。"
       ],
-      "returns": "Boolean: boolean representation of value",
+      "returns": "Boolean: 値のブール表現",
       "params": {
-        "n": "String|Boolean|Number|Array: value to parse"
+        "n": "String|Boolean|Number|Array: 解析する値"
       }
     },
     "string": {
       "description": [
-        "A <a href=\"#/p5/string\">string</a> is one of the 7 <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Primitive_values\">primitive data types</a> in Javascript. A string is a series of text characters. In Javascript, a string value must be surrounded by either single-quotation marks(') or double-quotation marks(\").",
-        "From <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/string\">the MDN entry</a>: A string is a sequence of characters used to represent text."
+        "<a href=\"#/p5/string\">文字列</a>は、JavaScriptの7つの<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Primitive_values\">プリミティブデータ型</a>の1つです。文字列は一連のテキスト文字です。JavaScriptでは、文字列値はシングルクォーテーション（'）またはダブルクォーテーション（\"）で囲む必要があります。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/string\">MDNエントリ</a>から：文字列とは、テキストを表す一連の文字です。"
       ]
     },
     "number": {
       "description": [
-        "A <a href=\"#/p5/number\">number</a> is one of the 7 <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Primitive_values\">primitive data types</a> in Javascript. A number can be a whole number or a decimal number.",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/number\">The MDN entry for number</a>"
+        "<a href=\"#/p5/number\">数値</a>は、JavaScriptの7つの<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Primitive_values\">プリミティブデータ型</a>の1つです。数値は整数または小数です。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/number\">数値のMDNエントリ</a>"
       ]
     },
     "object": {
       "description": [
-        "From <a href=\"https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics\">MDN's object basics</a>:  An <a href=\"#/p5/object\">object</a> is a collection of related data and/or  functionality (which usually consists of several variables and functions —  which are called properties and methods when they are inside objects.)"
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics\">MDNのオブジェクトの基本</a>から：<a href=\"#/p5/object\">オブジェクト</a>は、関連するデータおよび/または機能（通常、いくつかの変数と関数で構成されます。これらは、オブジェクト内にあるときにプロパティとメソッドと呼ばれます。）のコレクションです。"
       ]
     },
     "class": {
       "description": [
-        "Creates and names a <a href=\"#/p5/class\">class</a> which is a template for the creation of <a href=\"#/p5/object\">objects</a>.",
-        "From <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class\">the MDN entry</a>: The class declaration creates a new Class with a given name using prototype-based inheritance."
+        "<a href=\"#/p5/class\">クラス</a>は、<a href=\"#/p5/object\">オブジェクト</a>の作成に使用されるテンプレートを作成および命名するためのものです。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class\">MDNエントリ</a>から：クラス宣言は、プロトタイプベースの継承を使用して、指定された名前を持つ新しいクラスを作成します。"
       ]
     },
     "for": {
       "description": [
-        "<a href=\"#/p5/for\">for</a> creates a loop that is useful for executing one section of code multiple times.",
-        "A 'for loop' consists of three different expressions inside of a parenthesis, all of which are optional.These expressions are used to control the number of times the loop is run.The first expression is a statement that is used to set the initial state for the loop.The second expression is a condition that you would like to check before each loop. If this expression returns false then the loop will exit.The third expression is executed at the end of each loop. These expression are separated by ; (semi-colon).In case of an empty expression, only a semi-colon is written.",
-        "The code inside of the loop body (in between the curly braces) is executed between the evaluation of the second and third expression.",
-        "As with any loop, it is important to ensure that the loop can 'exit', or that the test condition will eventually evaluate to false. The test condition with a <a href=\"#/p5/for\">for</a> loop is the second expression detailed above. Ensuring that this expression can eventually become false ensures that your loop doesn't attempt to run an infinite amount of times, which can crash your browser.",
-        "From <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for\">the MDN entry</a>: Creates a loop that executes a specified statement until the test condition evaluates to false. The condition is evaluated after executing the statement, resulting in the specified statement executing at least once."
+        "<a href=\"#/p5/for\">for</a>は、コードの1つのセクションを複数回実行するために便利なループを作成します。",
+        "'forループ'は、括弧内に3つの異なる式が含まれ、すべてがオプションです。これらの式は、ループが実行される回数を制御するために使用されます。最初の式は、ループの初期状態を設定するために使用される文です。2番目の式は、各ループの前にチェックする条件です。この式がfalseを返すと、ループは終了します。3番目の式は、各ループの終わりに実行されます。これらの式は、セミコロン（;）で区切られます。空の式の場合、セミコロンだけが書かれます。",
+        "ループ本体の（波括弧内の）コードは、2番目の式と3番目の式の評価の間に実行されます。",
+        "どのループにおいても、ループを '終了' するか、テスト条件がfalseに評価されることを確認することが重要です。forループにおけるテスト条件は、上記で詳述された2番目の式です。この式が最終的にfalseになるように確保することで、ループが無限に実行されることがなく、ブラウザがクラッシュすることを防ぎます。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for\">MDNエントリ</a>から：指定された文がfalseに評価されるまで、文を繰り返し実行するループを作成します。条件は文を実行した後に評価され、指定された文が少なくとも1回実行されます。"
       ]
     },
     "while": {
       "description": [
-        "<a href=\"#/p5/while\">while</a> creates a loop that is useful for executing one section of code multiple times.",
-        "With a 'while loop', the code inside of the loop body (between the curly braces) is run repeatedly until the test condition (inside of the parenthesis) evaluates to false. The condition is tested before executing the code body with <a href=\"#/p5/while\">while</a>, so if the condition is initially false the loop body, or statement, will never execute.",
-        "As with any loop, it is important to ensure that the loop can 'exit', or that the test condition will eventually evaluate to false. This is to keep your loop from trying to run an infinite amount of times, which can crash your browser.",
-        "From <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while\">the MDN entry</a>: The while statement creates a loop that executes a specified statement as long as the test condition evaluates to true.The condition is evaluated before executing the statement."
+        "<a href=\"#/p5/while\">while</a>は、コードの1つのセクションを複数回実行するために便利なループを作成します。",
+        "'whileループ'では、ループ本体のコード（波括弧内）は、テスト条件（括弧内）がfalseになるまで繰り返し実行されます。<a href=\"#/p5/while\">while</a>では、コード本体を実行する前に条件をテストするため、条件が最初からfalseの場合、ループ本体または文は実行されません。",
+        "どのループにおいても、ループを '終了' するか、テスト条件がfalseに評価されることを確認することが重要です。これにより、ループが無限に実行されることがなく、ブラウザがクラッシュすることを防ぎます。",
+        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while\">MDNエントリ</a>から：指定された条件がtrueに評価される限り、指定された文を繰り返し実行するループを作成します。条件は文を実行する前に評価されます。"
       ]
     },
     "createCanvas": {
       "description": [
-        "Creates a canvas element in the document and sets its dimensions in pixels. This method should be called only once at the start of <a href=\"#/p5/setup\">setup()</a>. Calling <a href=\"#/p5/createCanvas\">createCanvas</a> more than once in a sketch will result in very unpredictable behavior. If you want more than one drawing canvas you could use <a href=\"#/p5/createGraphics\">createGraphics()</a> (hidden by default but it can be shown).",
-        "Important note: in 2D mode (i.e. when <code>p5.Renderer</code> is not set) the origin (0,0) is positioned at the top left of the screen. In 3D mode (i.e. when <code>p5.Renderer</code> is set to <code>WEBGL</code>), the origin is positioned at the center of the canvas. See <a href=\"https://github.com/processing/p5.js/issues/1545\">this issue</a> for more information.",
-        "The system variables width and height are set by the parameters passed to this function. If <a href=\"#/p5/createCanvas\">createCanvas()</a> is not used, the window will be given a default size of 100×100 pixels.",
-        "For more ways to position the canvas, see the <a href='https://github.com/processing/p5.js/wiki/Positioning-your-canvas'> positioning the canvas</a> wiki page."
+        "ドキュメント内にキャンバス要素を作成し、ピクセル単位でその寸法を設定します。<a href=\"#/p5/setup\">setup()</a> の開始時にのみ、このメソッドを呼び出す必要があります。 <a href=\"#/p5/createCanvas\">createCanvas</a> をスケッチ内で複数回呼び出すと、非常に予測不可能な動作が発生します。複数の描画キャンバスを使用する場合は、<a href=\"#/p5/createGraphics\">createGraphics()</a>（デフォルトでは非表示ですが表示できます）を使用できます。",
+        "重要な注意：2Dモード（つまり、<code>p5.Renderer</code>が設定されていない場合）では、原点（0,0）は画面の左上に位置します。3Dモード（つまり、<code>p5.Renderer</code>が<code>WEBGL</code>に設定されている場合）では、原点はキャンバスの中心に位置します。詳細については、<a href=\"https://github.com/processing/p5.js/issues/1545\">この問題</a>を参照してください。",
+        "システム変数の幅と高さは、この関数に渡されたパラメータによって設定されます。 <a href=\"#/p5/createCanvas\">createCanvas()</a> を使用しない場合、ウィンドウにはデフォルトサイズの100×100ピクセルが与えられます。",
+        "キャンバスを配置する別の方法については、<a href='https://github.com/processing/p5.js/wiki/Positioning-your-canvas'>キャンバスの位置づけ</a> Wikiページを参照してください。"
       ],
-      "returns": "p5.Renderer: pointer to p5.Renderer holding canvas",
+      "returns": "p5.Renderer: キャンバスを保持するp5.Rendererへのポインタ",
       "params": {
-        "w": "Number: width of the canvas",
-        "h": "Number: height of the canvas",
-        "renderer": "Constant: (Optional) either P2D or WEBGL"
+        "w": "Number: キャンバスの幅",
+        "h": "Number: キャンバスの高さ",
+        "renderer": "Constant: (Optional) P2DまたはWEBGL"
       }
     },
     "resizeCanvas": {
       "description": [
-        "Resizes the canvas to given width and height. The canvas will be cleared and draw will be called immediately, allowing the sketch to re-render itself in the resized canvas."
+        "キャンバスを指定された幅と高さにリサイズします。キャンバスはクリアされ、直ちに描画が呼び出され、スケッチがリサイズされたキャンバスで再レンダリングされます。"
       ],
       "params": {
-        "w": "Number: width of the canvas",
-        "h": "Number: height of the canvas",
-        "noRedraw": "Boolean: (Optional) don't redraw the canvas immediately"
+        "w": "Number: キャンバスの幅",
+        "h": "Number: キャンバスの高さ",
+        "noRedraw": "Boolean: (オプション) キャンバスを直ちに再描画しない"
       }
     },
     "noCanvas": {
       "description": [
-        "Removes the default canvas for a p5 sketch that doesn't require a canvas"
+        "canvasが必要ないp5スケッチのデフォルトのcanvasを削除します。"
       ]
     },
     "createGraphics": {
       "description": [
-        "Creates and returns a new p5.Renderer object. Use this class if you need to draw into an off-screen graphics buffer. The two parameters define the width and height in pixels."
+        "新しいp5.Rendererオブジェクトを作成して返します。オフスクリーングラフィックバッファに描画する必要がある場合に、このクラスを使用します。2つのパラメータはピクセル単位の幅と高さを定義します。"
       ],
-      "returns": "p5.Graphics: offscreen graphics buffer",
+      "returns": "p5.Graphics: オフスクリーングラフィックバッファ",
       "params": {
-        "w": "Number: width of the offscreen graphics buffer",
-        "h": "Number: height of the offscreen graphics buffer",
-        "renderer": "Constant: (Optional) either P2D or WEBGL  undefined defaults to p2d"
+        "w": "Number: オフスクリーングラフィックバッファの幅",
+        "h": "Number: オフスクリーングラフィックバッファの高さ",
+        "renderer": "Constant: (オプション) P2D または WEBGL。未定義の場合はp2dがデフォルトです。"
       }
     },
     "blendMode": {
       "description": [
-        "Blends the pixels in the display window according to the defined mode. There is a choice of the following modes to blend the source pixels (A) with the ones of pixels already in the display window (B): <ul> <li><code>BLEND</code> - linear interpolation of colours: C = A*factor + B. <b>This is the default blending mode.</b></li> <li><code>ADD</code> - sum of A and B</li> <li><code>DARKEST</code> - only the darkest colour succeeds: C = min(A*factor, B).</li> <li><code>LIGHTEST</code> - only the lightest colour succeeds: C = max(A*factor, B).</li> <li><code>DIFFERENCE</code> - subtract colors from underlying image. <em>(2D)</em></li> <li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less extreme.</li> <li><code>MULTIPLY</code> - multiply the colors, result will always be darker.</li> <li><code>SCREEN</code> - opposite multiply, uses inverse values of the colors.</li> <li><code>REPLACE</code> - the pixels entirely replace the others and don't utilize alpha (transparency) values.</li> <li><code>REMOVE</code> - removes pixels from B with the alpha strength of A.</li> <li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN </code>. Multiplies dark values, and screens light values. <em>(2D)</em></li> <li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50% gray, <code>MULTIPLY</code> when lower. <em>(2D)</em></li> <li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and <code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh. <em>(2D)</em> </li> <li><code>DODGE</code> - lightens light tones and increases contrast, ignores darks. <em>(2D)</em></li> <li><code>BURN</code> - darker areas are applied, increasing contrast, ignores lights. <em>(2D)</em></li> <li><code>SUBTRACT</code> - remainder of A and B <em>(3D)</em></li> </ul>",
-        "<em>(2D)</em> indicates that this blend mode <b>only</b> works in the 2D renderer. <em>(3D)</em> indicates that this blend mode <b>only</b> works in the WEBGL renderer."
+        "定義されたモードに従って、ディスプレイウィンドウ内のピクセルをブレンドします。ソースピクセル（A）をディスプレイウィンドウ内の既存のピクセル（B）とブレンドするために、次のモードを選択できます。: <ul> <li><code>BLEND</code> - 色の線形補間：C = A*factor + B。 <b>これがデフォルトのブレンドモードです。</b></li> <li><code>ADD</code> - AとBの和</li> <li><code>DARKEST</code> - 最も暗い色だけが成功：C = min(A*factor, B)。</li> <li><code>LIGHTEST</code> - 最も明るい色だけが成功：C = max(A*factor, B)。</li> <li><code>DIFFERENCE</code> - 背景画像から色を減算します。<em>(2D)</em></li> <li><code>EXCLUSION</code> - <code>DIFFERENCE</code>に似ていますが、それほど極端ではありません。</li> <li><code>MULTIPLY</code> - 色を乗算し、結果は常に暗くなります。</li> <li><code>SCREEN</code> - 乗算の反対で、色の逆数を使用します。</li> <li><code>REPLACE</code> - ピクセルは他のピクセルと完全に置き換えられ、アルファ（透明度）値を使用しません。</li> <li><code>REMOVE</code> - Aのアルファ強度でBからピクセルを削除します。</li> <li><code>OVERLAY</code> - <code>MULTIPLY</code>と<code>SCREEN </code>のミックス。暗い値を乗算し、明るい値をスクリーンにします。<em>(2D)</em></li> <li><code>HARD_LIGHT</code> - 50%以上の灰色の場合は<code>SCREEN</code>、それ以下の場合は<code>MULTIPLY</code>。<em>(2D)</em></li> <li><code>SOFT_LIGHT</code> - <code>DARKEST</code>と<code>LIGHTEST</code>のミックス。<code>OVERLAY</code>のように機能しますが、それほど厳しくありません。<em>(2D)</em></li> <li><code>DODGE</code> - 明るいトーンを明るくし、コントラストを高め、暗い部分を無視します。<em>(2D)</em></li> <li><code>BURN</code> - 暗い領域が適用され、コントラストが増加し、ライトを無視します。<em>(2D)</em></li> <li><code>SUBTRACT</code> - AとBの残差 <em>(3D)</em></li> </ul>",
+        "<em>(2D)</em>は、このブレンドモードが<b>2Dレンダラーのみ</b>で動作することを示します。<em>(3D)</em>は、このブレンドモードが<b>WEBGLレンダラーのみ</b>で動作することを示します。"
       ],
       "params": {
-        "mode": "Constant: blend mode to set for canvas.  either BLEND, DARKEST, LIGHTEST, DIFFERENCE, MULTIPLY,  EXCLUSION, SCREEN, REPLACE, OVERLAY, HARD_LIGHT,  SOFT_LIGHT, DODGE, BURN, ADD, REMOVE or SUBTRACT"
+        "mode": "キャンバスに設定するブレンドモードの定数。BLEND、DARKEST、LIGHTEST、DIFFERENCE、MULTIPLY、EXCLUSION、SCREEN、REPLACE、OVERLAY、HARD_LIGHT、SOFT_LIGHT、DODGE、BURN、ADD、REMOVE、またはSUBTRACTのいずれか。"
       }
     },
     "drawingContext": {
       "description": [
-        "The p5.js API provides a lot of functionality for creating graphics, but there is some native HTML5 Canvas functionality that is not exposed by p5. You can still call it directly using the variable <code>drawingContext</code>, as in the example shown. This is the equivalent of calling <code>canvas.getContext('2d');</code> or <code>canvas.getContext('webgl');</code>. See this <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D\"> reference for the native canvas API</a> for possible drawing functions you can call."
+        "p5.js APIにはグラフィックを作成するための多くの機能がありますが、p5では公開されていないネイティブのHTML5 Canvas機能があります。ただし、変数<code>drawingContext</code>を使用して直接呼び出すことができます。これは<code>canvas.getContext('2d');</code>または<code>canvas.getContext('webgl');</code>を呼び出すのと同等です。可能な描画関数については、ネイティブキャンバスAPIの<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D\">リファレンス</a>を参照してください。"
       ]
     },
     "noLoop": {
       "description": [
-        "Stops p5.js from continuously executing the code within <a href=\"#/p5/draw\">draw()</a>. If <a href=\"#/p5/loop\">loop()</a> is called, the code in <a href=\"#/p5/draw\">draw()</a> begins to run continuously again. If using <a href=\"#/p5/noLoop\">noLoop()</a> in <a href=\"#/p5/setup\">setup()</a>, it should be the last line inside the block.",
-        "When <a href=\"#/p5/noLoop\">noLoop()</a> is used, it's not possible to manipulate or access the screen inside event handling functions such as <a href=\"#/p5/mousePressed\">mousePressed()</a> or <a href=\"#/p5/keyPressed\">keyPressed()</a>. Instead, use those functions to call <a href=\"#/p5/redraw\">redraw()</a> or <a href=\"#/p5/loop\">loop()</a>, which will run <a href=\"#/p5/draw\">draw()</a>, which can update the screen properly. This means that when <a href=\"#/p5/noLoop\">noLoop()</a> has been called, no drawing can happen, and functions like <a href=\"#/p5/saveFrames\">saveFrames()</a> or <a href=\"#/p5/loadPixels\">loadPixels()</a> may not be used.",
-        "Note that if the sketch is resized, <a href=\"#/p5/redraw\">redraw()</a> will be called to update the sketch, even after <a href=\"#/p5/noLoop\">noLoop()</a> has been specified. Otherwise, the sketch would enter an odd state until <a href=\"#/p5/loop\">loop()</a> was called.",
-        "Use <a href=\"#/p5/isLooping\">isLooping()</a> to check the current state of <a href=\"#/p5/loop\">loop()</a>."
+        "<a href=\"#/p5/draw\">draw()</a>内のコードを継続的に実行することを停止します。 <a href=\"#/p5/loop\">loop()</a>が呼び出された場合、<a href=\"#/p5/draw\">draw()</a>内のコードが再び継続的に実行されます。 <a href=\"#/p5/setup\">setup()</a>内の<a href=\"#/p5/noLoop\">noLoop()</a>を使用する場合は、ブロック内の最後の行にする必要があります。",
+        "<a href=\"#/p5/noLoop\">noLoop()</a>を使用すると、<a href=\"#/p5/mousePressed\">mousePressed()</a>や<a href=\"#/p5/keyPressed\">keyPressed()</a>などのイベント処理関数内で画面を操作またはアクセスすることができません。 代わりに、これらの関数を使用して<a href=\"#/p5/redraw\">redraw()</a>または<a href=\"#/p5/loop\">loop()</a>を呼び出し、<a href=\"#/p5/draw\">draw()</a>を実行して、画面を適切に更新します。つまり、<a href=\"#/p5/noLoop\">noLoop()</a>が呼び出された場合、描画は行われず、<a href=\"#/p5/saveFrames\">saveFrames()</a>や<a href=\"#/p5/loadPixels\">loadPixels()</a>などの関数を使用できない可能性があることに注意してください。",
+        "スケッチがサイズ変更された場合、<a href=\"#/p5/noLoop\">noLoop()</a>が指定された後でも、<a href=\"#/p5/redraw\">redraw()</a>が呼び出されてスケッチが更新されることに注意してください。そうしないと、スケッチが奇妙な状態になり、<a href=\"#/p5/loop\">loop()</a>が呼び出されるまで戻らなくなります。",
+        "<a href=\"#/p5/isLooping\">isLooping()</a>を使用して、<a href=\"#/p5/loop\">loop()</a>の現在の状態を確認してください。"
       ]
     },
     "loop": {
       "description": [
-        "By default, p5.js loops through draw() continuously, executing the code within it. However, the <a href=\"#/p5/draw\">draw()</a> loop may be stopped by calling <a href=\"#/p5/noLoop\">noLoop()</a>. In that case, the <a href=\"#/p5/draw\">draw()</a> loop can be resumed with loop().",
-        "Avoid calling loop() from inside setup().",
-        "Use <a href=\"#/p5/isLooping\">isLooping()</a> to check the current state of <a href=\"#/p5/loop\">loop()</a>."
+        "デフォルトでは、p5.jsはdraw()を継続的にループし、その中にあるコードを実行します。ただし、<a href=\"#/p5/draw\">draw()</a>ループは<a href=\"#/p5/noLoop\">noLoop()</a>を呼び出すことで停止させることができます。その場合、<a href=\"#/p5/draw\">draw()</a>ループはloop()で再開できます。",
+        "setup()内からloop()を呼び出さないでください。",
+        "<a href=\"#/p5/isLooping\">isLooping()</a>を使用して、<a href=\"#/p5/loop\">loop()</a>の現在の状態を確認してください。"
       ]
     },
     "isLooping": {
       "description": [
-        "By default, p5.js loops through <a href=\"#/p5/draw\">draw()</a> continuously, executing the code within it. If the sketch is stopped with <a href=\"#/p5/noLoop\">noLoop()</a> or resumed with <a href=\"#/p5/loop\">loop()</a>, isLooping() returns the current state for use within custom event handlers."
+        "デフォルトでは、p5.jsはdraw()を継続的にループし、その中にあるコードを実行します。スケッチが<a href=\"#/p5/noLoop\">noLoop()</a>で停止された場合、または<a href=\"#/p5/loop\">loop()</a>で再開された場合、isLooping()はカスタムイベントハンドラ内で使用するために現在の状態を返します。"
       ],
       "returns": "Boolean:"
     },
     "push": {
       "description": [
-        "The <a href=\"#/p5/push\">push()</a> function saves the current drawing style settings and transformations, while <a href=\"#/p5/pop\">pop()</a> restores these settings. Note that these functions are always used together. They allow you to change the style and transformation settings and later return to what you had. When a new state is started with <a href=\"#/p5/push\">push()</a>, it builds on the current style and transform information. The <a href=\"#/p5/push\">push()</a> and <a href=\"#/p5/pop\">pop()</a> functions can be embedded to provide more control. (See the second example for a demonstration.)",
-        "<a href=\"#/p5/push\">push()</a> stores information related to the current transformation state and style settings controlled by the following functions: <a href=\"#/p5/fill\">fill()</a>, <a href=\"#/p5/noFill\">noFill()</a>, <a href=\"#/p5/noStroke\">noStroke()</a>, <a href=\"#/p5/stroke\">stroke()</a>, <a href=\"#/p5/tint\">tint()</a>, <a href=\"#/p5/noTint\">noTint()</a>, <a href=\"#/p5/strokeWeight\">strokeWeight()</a>, <a href=\"#/p5/strokeCap\">strokeCap()</a>, <a href=\"#/p5/strokeJoin\">strokeJoin()</a>, <a href=\"#/p5/imageMode\">imageMode()</a>, <a href=\"#/p5/rectMode\">rectMode()</a>, <a href=\"#/p5/ellipseMode\">ellipseMode()</a>, <a href=\"#/p5/colorMode\">colorMode()</a>, <a href=\"#/p5/textAlign\">textAlign()</a>, <a href=\"#/p5/textFont\">textFont()</a>, <a href=\"#/p5/textSize\">textSize()</a>, <a href=\"#/p5/textLeading\">textLeading()</a>, <a href=\"#/p5/applyMatrix\">applyMatrix()</a>, <a href=\"#/p5/resetMatrix\">resetMatrix()</a>, <a href=\"#/p5/rotate\">rotate()</a>, <a href=\"#/p5/scale\">scale()</a>, <a href=\"#/p5/shearX\">shearX()</a>, <a href=\"#/p5/shearY\">shearY()</a>, <a href=\"#/p5/translate\">translate()</a>, <a href=\"#/p5/noiseSeed\">noiseSeed()</a>.",
-        "In WEBGL mode additional style settings are stored. These are controlled by the following functions: <a href=\"#/p5/setCamera\">setCamera()</a>, <a href=\"#/p5/ambientLight\">ambientLight()</a>, <a href=\"#/p5/directionalLight\">directionalLight()</a>, <a href=\"#/p5/pointLight\">pointLight()</a>, <a href=\"#/p5/texture\">texture()</a>, <a href=\"#/p5/specularMaterial\">specularMaterial()</a>, <a href=\"#/p5/shininess\">shininess()</a>, <a href=\"#/p5/normalMaterial\">normalMaterial()</a> and <a href=\"#/p5/shader\">shader()</a>."
+        "<a href=\"#/p5/push\">push()</a>関数は、現在の描画スタイルの設定と変換を保存し、<a href=\"#/p5/pop\">pop()</a>関数はこれらの設定を復元します。これらの関数は常に一緒に使用されることに注意してください。これにより、スタイルと変換の設定を変更し、後で元に戻すことができます。<a href=\"#/p5/push\">push()</a>で新しい状態が開始されると、現在のスタイルと変換情報が利用されます。<a href=\"#/p5/push\">push()</a>と<a href=\"#/p5/pop\">pop()</a>関数は、より多くの制御を提供するために組み込むことができます（2つ目の例を参照してください）。",
+        "<a href=\"#/p5/push\">push()</a>は、次の関数によって制御される現在の変換状態とスタイル設定に関連する情報を保存します：<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/noFill\">noFill()</a>、<a href=\"#/p5/noStroke\">noStroke()</a>、<a href=\"#/p5/stroke\">stroke()</a>、<a href=\"#/p5/tint\">tint()</a>、<a href=\"#/p5/noTint\">noTint()</a>、<a href=\"#/p5/strokeWeight\">strokeWeight()</a>、<a href=\"#/p5/strokeCap\">strokeCap()</a>、<a href=\"#/p5/strokeJoin\">strokeJoin()</a>、<a href=\"#/p5/imageMode\">imageMode()</a>、<a href=\"#/p5/rectMode\">rectMode()</a>、<a href=\"#/p5/ellipseMode\">ellipseMode()</a>、<a href=\"#/p5/colorMode\">colorMode()</a>、<a href=\"#/p5/textAlign\">textAlign()</a>、<a href=\"#/p5/textFont\">textFont()</a>、<a href=\"#/p5/textSize\">textSize()</a>、<a href=\"#/p5/textLeading\">textLeading()</a>、<a href=\"#/p5/applyMatrix\">applyMatrix()</a>、<a href=\"#/p5/resetMatrix\">resetMatrix()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a>、<a href=\"#/p5/shearX\">shearX()</a>、<a href=\"#/p5/shearY\">shearY()</a>、<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/noiseSeed\">noiseSeed()</a>。",
+        "WEBGLモードでは、追加のスタイル設定が保存されます。これらは、次の関数によって制御されます：<a href=\"#/p5/setCamera\">setCamera()</a>、<a href=\"#/p5/ambientLight\">ambientLight()</a>、<a href=\"#/p5/directionalLight\">directionalLight()</a>、<a href=\"#/p5/pointLight\">pointLight()</a>、<a href=\"#/p5/texture\">texture()</a>、<a href=\"#/p5/specularMaterial\">specularMaterial()</a>、<a href=\"#/p5/shininess\">shininess()</a>、<a href=\"#/p5/normalMaterial\">normalMaterial()</a>、および<a href=\"#/p5/shader\">shader()</a>。"
       ]
     },
     "pop": {
       "description": [
-        "The <a href=\"#/p5/push\">push()</a> function saves the current drawing style settings and transformations, while <a href=\"#/p5/pop\">pop()</a> restores these settings. Note that these functions are always used together. They allow you to change the style and transformation settings and later return to what you had. When a new state is started with <a href=\"#/p5/push\">push()</a>, it builds on the current style and transform information. The <a href=\"#/p5/push\">push()</a> and <a href=\"#/p5/pop\">pop()</a> functions can be embedded to provide more control. (See the second example for a demonstration.)",
-        "<a href=\"#/p5/push\">push()</a> stores information related to the current transformation state and style settings controlled by the following functions: <a href=\"#/p5/fill\">fill()</a>, <a href=\"#/p5/noFill\">noFill()</a>, <a href=\"#/p5/noStroke\">noStroke()</a>, <a href=\"#/p5/stroke\">stroke()</a>, <a href=\"#/p5/tint\">tint()</a>, <a href=\"#/p5/noTint\">noTint()</a>, <a href=\"#/p5/strokeWeight\">strokeWeight()</a>, <a href=\"#/p5/strokeCap\">strokeCap()</a>, <a href=\"#/p5/strokeJoin\">strokeJoin()</a>, <a href=\"#/p5/imageMode\">imageMode()</a>, <a href=\"#/p5/rectMode\">rectMode()</a>, <a href=\"#/p5/ellipseMode\">ellipseMode()</a>, <a href=\"#/p5/colorMode\">colorMode()</a>, <a href=\"#/p5/textAlign\">textAlign()</a>, <a href=\"#/p5/textFont\">textFont()</a>, <a href=\"#/p5/textSize\">textSize()</a>, <a href=\"#/p5/textLeading\">textLeading()</a>, <a href=\"#/p5/applyMatrix\">applyMatrix()</a>, <a href=\"#/p5/resetMatrix\">resetMatrix()</a>, <a href=\"#/p5/rotate\">rotate()</a>, <a href=\"#/p5/scale\">scale()</a>, <a href=\"#/p5/shearX\">shearX()</a>, <a href=\"#/p5/shearY\">shearY()</a>, <a href=\"#/p5/translate\">translate()</a>, <a href=\"#/p5/noiseSeed\">noiseSeed()</a>.",
-        "In WEBGL mode additional style settings are stored. These are controlled by the following functions: <a href=\"#/p5/setCamera\">setCamera()</a>, <a href=\"#/p5/ambientLight\">ambientLight()</a>, <a href=\"#/p5/directionalLight\">directionalLight()</a>, <a href=\"#/p5/pointLight\">pointLight()</a>, <a href=\"#/p5/texture\">texture()</a>, <a href=\"#/p5/specularMaterial\">specularMaterial()</a>, <a href=\"#/p5/shininess\">shininess()</a>, <a href=\"#/p5/normalMaterial\">normalMaterial()</a> and <a href=\"#/p5/shader\">shader()</a>."
+        "<a href=\"#/p5/push\">push()</a>関数は現在の描画スタイル設定と変換を保存し、<a href=\"#/p5/pop\">pop()</a>関数でこれらの設定を復元します。これらの関数は常に一緒に使用されることに注意してください。これにより、スタイルと変換の設定を変更し、後で元の設定に戻ることができます。<a href=\"#/p5/push\">push()</a>で新しい状態が開始されると、現在のスタイルと変換情報に基づいて構築されます。<a href=\"#/p5/push\">push()</a>と<a href=\"#/p5/pop\">pop()</a>関数は、より多くの制御を提供するために埋め込むことができます（デモンストレーションには第2の例を参照してください）。",
+        "<a href=\"#/p5/push\">push()</a>は、次の関数によって制御される現在の変換状態とスタイル設定に関連する情報を保存します：<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/noFill\">noFill()</a>、<a href=\"#/p5/noStroke\">noStroke()</a>、<a href=\"#/p5/stroke\">stroke()</a>、<a href=\"#/p5/tint\">tint()</a>、<a href=\"#/p5/noTint\">noTint()</a>、<a href=\"#/p5/strokeWeight\">strokeWeight()</a>、<a href=\"#/p5/strokeCap\">strokeCap()</a>、<a href=\"#/p5/strokeJoin\">strokeJoin()</a>、<a href=\"#/p5/imageMode\">imageMode()</a>、<a href=\"#/p5/rectMode\">rectMode()</a>、<a href=\"#/p5/ellipseMode\">ellipseMode()</a>、<a href=\"#/p5/colorMode\">colorMode()</a>、<a href=\"#/p5/textAlign\">textAlign()</a>、<a href=\"#/p5/textFont\">textFont()</a>、<a href=\"#/p5/textSize\">textSize()</a>、<a href=\"#/p5/textLeading\">textLeading()</a>、<a href=\"#/p5/applyMatrix\">applyMatrix()</a>、<a href=\"#/p5/resetMatrix\">resetMatrix()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a>、<a href=\"#/p5/shearX\">shearX()</a>、<a href=\"#/p5/shearY\">shearY()</a>、<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/noiseSeed\">noiseSeed()</a>。",
+        "WEBGLモードでは、追加のスタイル設定が保存されます。これらは、次の関数によって制御されます：<a href=\"#/p5/setCamera\">setCamera()</a>、<a href=\"#/p5/ambientLight\">ambientLight()</a>、<a href=\"#/p5/directionalLight\">directionalLight()</a>、<a href=\"#/p5/pointLight\">pointLight()</a>、<a href=\"#/p5/texture\">texture()</a>、<a href=\"#/p5/specularMaterial\">specularMaterial()</a>、<a href=\"#/p5/shininess\">shininess()</a>、<a href=\"#/p5/normalMaterial\">normalMaterial()</a>、および<a href=\"#/p5/shader\">shader()</a>。"
       ]
     },
     "redraw": {
       "description": [
-        "Executes the code within <a href=\"#/p5/draw\">draw()</a> one time. This function allows the program to update the display window only when necessary, for example when an event registered by <a href=\"#/p5/mousePressed\">mousePressed()</a> or <a href=\"#/p5/keyPressed\">keyPressed()</a> occurs.",
-        "In structuring a program, it only makes sense to call <a href=\"#/p5/redraw\">redraw()</a> within events such as <a href=\"#/p5/mousePressed\">mousePressed()</a>. This is because <a href=\"#/p5/redraw\">redraw()</a> does not run <a href=\"#/p5/draw\">draw()</a> immediately (it only sets a flag that indicates an update is needed).",
-        "The <a href=\"#/p5/redraw\">redraw()</a> function does not work properly when called inside <a href=\"#/p5/draw\">draw()</a>.To enable/disable animations, use <a href=\"#/p5/loop\">loop()</a> and <a href=\"#/p5/noLoop\">noLoop()</a>.",
-        "In addition you can set the number of redraws per method call. Just add an integer as single parameter for the number of redraws."
+        "<a href=\"#/p5/draw\">draw()</a>内のコードを1回実行します。この関数は、<a href=\"#/p5/mousePressed\">mousePressed()</a>や<a href=\"#/p5/keyPressed\">keyPressed()</a>で登録されたイベントが発生した場合など、必要に応じて表示ウィンドウを更新するプログラムに使用します。",
+        "プログラムの構造では、<a href=\"#/p5/redraw\">redraw()</a>は、<a href=\"#/p5/mousePressed\">mousePressed()</a>などのイベント内で呼び出すのが理にかなっています。これは、<a href=\"#/p5/redraw\">redraw()</a>が<a href=\"#/p5/draw\">draw()</a>を即座に実行しないからです（更新が必要であることを示すフラグのみが設定されます）。",
+        "<a href=\"#/p5/redraw\">redraw()</a>関数は、<a href=\"#/p5/draw\">draw()</a>内で呼び出されると正常に動作しません。アニメーションの有効/無効を切り替えるには、<a href=\"#/p5/loop\">loop()</a>と<a href=\"#/p5/noLoop\">noLoop()</a>を使用してください。",
+        "さらに、メソッド呼び出しごとの再描画回数を設定できます。再描画の回数として整数を1つだけパラメータに追加してください。"
       ],
       "params": {
-        "n": "Integer: (Optional) Redraw for n-times. The default value is 1."
+        "n": "Integer:（オプション）n回再描画します。デフォルト値は1です。"
       }
     },
     "p5": {
       "description": [
-        "The <code>p5()</code> constructor enables you to activate \"instance mode\" instead of normal \"global mode\". This is an advanced topic. A short description and example is included below. Please see <a target=\"blank\" href=\"https://www.youtube.com/watch?v=Su792jEauZg&feature=youtu.be\"> Dan Shiffman's Coding Train video tutorial</a> or this <a target=\"blank\" href=\"https://github.com/processing/p5.js/wiki/p5.js-overview#instantiation--namespace\">tutorial page</a> for more info.",
-        "By default, all p5.js functions are in the global namespace (i.e. bound to the window object), meaning you can call them simply <code>ellipse()</code>, <code>fill()</code>, etc. However, this might be inconvenient if you are mixing with other JS libraries (synchronously or asynchronously) or writing long programs of your own. p5.js currently supports a way around this problem called \"instance mode\". In instance mode, all p5 functions are bound up in a single variable instead of polluting your global namespace.",
-        "Optionally, you can specify a default container for the canvas and any other elements to append to with a second argument. You can give the ID of an element in your html, or an html node itself.",
-        "Note that creating instances like this also allows you to have more than one p5 sketch on a single web page, as they will each be wrapped up with their own set up variables. Of course, you could also use iframes to have multiple sketches in global mode."
+        "<code>p5()</code>コンストラクタを使用すると、「グローバルモード」の代わりに「インスタンスモード」を有効にすることができます。これは高度な話題です。以下に簡単な説明と例を示します。詳細については、<a target=\"blank\" href=\"https://www.youtube.com/watch?v=Su792jEauZg&feature=youtu.be\">Dan Shiffman's Coding Trainビデオチュートリアル</a>または<a target=\"blank\" href=\"https://github.com/processing/p5.js/wiki/p5.js-overview#instantiation--namespace\">チュートリアルページ</a>を参照してください。",
+        "デフォルトでは、すべてのp5.js関数はグローバル名前空間（つまり、windowオブジェクトにバインド）にあります。これは、<code>ellipse()</code>、<code>fill()</code>などの関数を単純に呼び出すことができます。ただし、他のJSライブラリと混ぜて使っている場合（同期的または非同期的に）、または独自の長いプログラムを書いている場合、これは不便になるかもしれません。現在、p5.jsでは、この問題を回避するための「インスタンスモード」という方法をサポートしています。インスタンスモードでは、すべてのp5関数が単一の変数にバインドされ、グローバル名前空間を汚染しません。",
+        "オプションで、キャンバスやその他の要素に追加するデフォルトのコンテナを、2番目の引数で指定できます。html内の要素のID、またはhtmlノード自体を指定できます。",
+        "このようにインスタンスを作成することで、各々が独自のセットアップ変数でラップされるため、1つのWebページに複数のp5スケッチを持つことができることに注意してください。もちろん、グローバルモードで複数のスケッチを持つために、iframesを使うこともできます。"
       ],
       "params": {
-        "sketch": "Object: a function containing a p5.js sketch",
-        "node": "String|Object: ID or pointer to HTML DOM node to contain sketch in"
+        "sketch": "Object: p5.jsスケッチを含む関数",
+        "node": "String|Object: スケッチを含むHTML DOMノードのIDまたはポインタ"
       }
     },
     "applyMatrix": {
       "description": [
-        "Multiplies the current matrix by the one specified through the parameters. This is a powerful operation that can perform the equivalent of translate, scale, shear and rotate all at once. You can learn more about transformation matrices on <a href=\"https://en.wikipedia.org/wiki/Transformation_matrix\"> Wikipedia</a>.",
-        "The naming of the arguments here follows the naming of the <a href= \"https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-transform\"> WHATWG specification</a> and corresponds to a transformation matrix of the form: <blockquote>",
-        "<img style=\"max-width: 150px\" src=\"assets/transformation-matrix.png\" alt=\"The transformation matrix used when applyMatrix is called\"/> </blockquote>",
-        "<img style=\"max-width: 300px\" src=\"assets/transformation-matrix-4-4.png\" alt=\"The transformation matrix used when applyMatrix is called with 4x4 matrix\"/>"
+        "現在の行列に、パラメータで指定された行列を乗算します。これは、translate, scale, shear, rotateを一度に実行できる強力な操作です。変換行列については、<a href=\"https://en.wikipedia.org/wiki/Transformation_matrix\">Wikipedia</a>で詳しく学ぶことができます。",
+        "ここでの引数の命名は、<a href= \"https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-transform\"> WHATWG仕様</a>の命名に従っており、以下の形式の変換行列に対応しています：<blockquote>",
+        "<img style=\"max-width: 150px\" src=\"assets/transformation-matrix.png\" alt=\"applyMatrixが呼び出されたときに使用される変換行列\"/> </blockquote>",
+        "<img style=\"max-width: 300px\" src=\"assets/transformation-matrix-4-4.png\" alt=\"applyMatrixが4x4行列で呼び出されたときに使用される変換行列\"/>"
       ],
       "params": {
-        "arr": "Array: an array of numbers - should be 6 or 16 length (2<em>3 or 4</em>4 matrix values)",
-        "a": "Number: numbers which define the 2×3 or 4x4 matrix to be multiplied",
-        "b": "Number: numbers which define the 2×3 or 4x4 matrix to be multiplied",
-        "c": "Number: numbers which define the 2×3 or 4x4 matrix to be multiplied",
-        "d": "Number: numbers which define the 2×3 or 4x4 matrix to be multiplied",
-        "e": "Number: numbers which define the 2×3 or 4x4 matrix to be multiplied",
-        "f": "Number: numbers which define the 2×3 or 4x4 matrix to be multiplied",
-        "g": "Number: numbers which define the 4x4 matrix to be multiplied",
-        "h": "Number: numbers which define the 4x4 matrix to be multiplied",
-        "i": "Number: numbers which define the 4x4 matrix to be multiplied",
-        "j": "Number: numbers which define the 4x4 matrix to be multiplied",
-        "k": "Number: numbers which define the 4x4 matrix to be multiplied",
-        "l": "Number: numbers which define the 4x4 matrix to be multiplied",
-        "m": "Number: numbers which define the 4x4 matrix to be multiplied",
-        "n": "Number: numbers which define the 4x4 matrix to be multiplied",
-        "o": "Number: numbers which define the 4x4 matrix to be multiplied",
-        "p": "Number: numbers which define the 4x4 matrix to be multiplied"
+        "arr": "Array: 数値の配列 - 6または16の長さである必要があります（2<em>3または4</em>4行列値）",
+        "a": "Number: 乗算される2x3または4x4行列を定義する数値",
+        "b": "Number: 乗算される2x3または4x4行列を定義する数値",
+        "c": "Number: 乗算される2x3または4x4行列を定義する数値",
+        "d": "Number: 乗算される2x3または4x4行列を定義する数値",
+        "e": "Number: 乗算される2x3または4x4行列を定義する数値",
+        "f": "Number: 乗算される2x3または4x4行列を定義する数値",
+        "g": "Number: 乗算される4x4行列を定義する数値",
+        "h": "Number: 乗算される4x4行列を定義する数値",
+        "i": "Number: 乗算される4x4行列を定義する数値",
+        "j": "Number: 乗算される4x4行列を定義する数値",
+        "k": "Number: 乗算される4x4行列を定義する数値",
+        "l": "Number: 乗算される4x4行列を定義する数値",
+        "m": "Number: 乗算される4x4行列を定義する数値",
+        "n": "Number: 乗算される4x4行列を定義する数値",
+        "o": "Number: 乗算される4x4行列を定義する数値",
+        "p": "Number: 乗算される4x4行列を定義する数値"
       }
     },
     "resetMatrix": {
-      "description": ["Replaces the current matrix with the identity matrix."]
+      "description": ["現在の行列を単位行列に置き換えます。"]
     },
     "rotate": {
       "description": [
-        "Rotates a shape by the amount specified by the angle parameter. This function accounts for <a href=\"#/p5/angleMode\">angleMode</a>, so angles can be entered in either RADIANS or DEGREES.",
-        "Objects are always rotated around their relative position to the origin and positive numbers rotate objects in a clockwise direction. Transformations apply to everything that happens after and subsequent calls to the function accumulate the effect. For example, calling rotate(HALF_PI) and then rotate(HALF_PI) is the same as rotate(PI). All transformations are reset when <a href=\"#/p5/draw\">draw()</a> begins again.",
-        "Technically, <a href=\"#/p5/rotate\">rotate()</a> multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by <a href=\"#/p5/push\">push()</a> and <a href=\"#/p5/pop\">pop()</a>."
+        "指定された角度パラメータで図形を回転させます。この関数は<a href=\"#/p5/angleMode\">angleMode</a>を考慮しているため、角度はRADIANSまたはDEGREESで入力できます。",
+        "オブジェクトは常に原点に対する相対位置を中心に回転し、正の数値はオブジェクトを時計回りに回転させます。変換はその後のすべての操作に適用され、関数への後続の呼び出しは効果を累積します。例えば、rotate(HALF_PI)を呼び出した後にrotate(HALF_PI)を呼び出すことは、rotate(PI)と同じです。すべての変換は、<a href=\"#/p5/draw\">draw()</a>が再度始まるとリセットされます。",
+        "技術的には、<a href=\"#/p5/rotate\">rotate()</a>は現在の変換行列に回転行列を乗算します。この関数は、<a href=\"#/p5/push\">push()</a>および<a href=\"#/p5/pop\">pop()</a>でさらに制御できます。"
       ],
       "params": {
-        "angle": "Number: the angle of rotation, specified in radians  or degrees, depending on current angleMode",
-        "axis": "p5.Vector|Number[]: (Optional) (in 3d) the axis to rotate around"
+        "angle": "Number: 現在のangleModeに応じて、ラジアンまたは度で指定された回転角",
+        "axis": "p5.Vector|Number[]: (オプション) (3Dの場合) 回転する軸"
       }
     },
     "rotateX": {
       "description": [
-        "Rotates a shape around X axis by the amount specified in angle parameter. The angles can be entered in either RADIANS or DEGREES.",
-        "Objects are always rotated around their relative position to the origin and positive numbers rotate objects in a clockwise direction. All transformations are reset when <a href=\"#/p5/draw\">draw()</a> begins again."
+        "指定された角度パラメータでX軸を中心に図形を回転させます。角度はRADIANSまたはDEGREESで入力できます。",
+        "オブジェクトは常に原点に対する相対位置を中心に回転し、正の数値はオブジェクトを時計回りに回転させます。すべての変換は、<a href=\"#/p5/draw\">draw()</a>が再度始まるとリセットされます。"
       ],
       "params": {
-        "angle": "Number: the angle of rotation, specified in radians  or degrees, depending on current angleMode"
+        "angle": "Number: 現在のangleModeに応じて、ラジアンまたは度で指定された回転角"
       }
     },
     "rotateY": {
       "description": [
-        "Rotates a shape around Y axis by the amount specified in angle parameter. The angles can be entered in either RADIANS or DEGREES.",
-        "Objects are always rotated around their relative position to the origin and positive numbers rotate objects in a clockwise direction. All transformations are reset when <a href=\"#/p5/draw\">draw()</a> begins again."
+        "指定された角度パラメータでY軸を中心に図形を回転させます。角度はRADIANSまたはDEGREESで入力できます。",
+        "オブジェクトは常に原点に対する相対位置を中心に回転し、正の数値はオブジェクトを時計回りに回転させます。すべての変換は、<a href=\"#/p5/draw\">draw()</a>が再度始まるとリセットされます。"
       ],
       "params": {
-        "angle": "Number: the angle of rotation, specified in radians  or degrees, depending on current angleMode"
+        "angle": "Number: 現在のangleModeに応じて、ラジアンまたは度で指定された回転角"
       }
     },
     "rotateZ": {
       "description": [
-        "Rotates a shape around Z axis by the amount specified in angle parameter. The angles can be entered in either RADIANS or DEGREES.",
-        "This method works in WEBGL mode only.",
-        "Objects are always rotated around their relative position to the origin and positive numbers rotate objects in a clockwise direction. All transformations are reset when <a href=\"#/p5/draw\">draw()</a> begins again."
+        "指定された角度パラメータでZ軸を中心に図形を回転させます。角度はRADIANSまたはDEGREESで入力できます。",
+        "このメソッドは、WEBGLモードでのみ動作します。",
+        "オブジェクトは常に原点に対する相対位置を中心に回転し、正の数値はオブジェクトを時計回りに回転させます。すべての変換は、<a href=\"#/p5/draw\">draw()</a>が再度始まるとリセットされます。"
       ],
       "params": {
-        "angle": "Number: the angle of rotation, specified in radians  or degrees, depending on current angleMode"
+        "angle": "Number: 現在のangleModeに応じて、ラジアンまたは度で指定された回転角"
       }
     },
     "scale": {
       "description": [
-        "Increases or decreases the size of a shape by expanding or contracting vertices. Objects always scale from their relative origin to the coordinate system. Scale values are specified as decimal percentages. For example, the function call scale(2.0) increases the dimension of a shape by 200%.",
-        "Transformations apply to everything that happens after and subsequent calls to the function multiply the effect. For example, calling scale(2.0) and then scale(1.5) is the same as scale(3.0). If <a href=\"#/p5/scale\">scale()</a> is called within <a href=\"#/p5/draw\">draw()</a>, the transformation is reset when the loop begins again.",
-        "Using this function with the z parameter is only available in WEBGL mode. This function can be further controlled with <a href=\"#/p5/push\">push()</a> and <a href=\"#/p5/pop\">pop()</a>."
+        "図形のサイズを拡大または縮小して、頂点を拡大または縮小します。オブジェクトは常に座標系に対する相対原点からスケーリングします。スケール値は10進数のパーセンテージで指定されます。たとえば、関数呼び出しscale(2.0)は、図形の寸法を200%増加させます。",
+        "変換は、それ以降に発生するすべてのことに適用され、関数への後続の呼び出しは効果を乗算します。たとえば、scale(2.0)を呼び出してからscale(1.5)を呼び出すことは、scale(3.0)と同じです。 <a href=\"#/p5/scale\">scale()</a>が<a href=\"#/p5/draw\">draw()</a>内で呼び出される場合、ループが再開すると変換がリセットされます。",
+        "この関数は、zパラメータを使用してWEBGLモードでのみ利用できます。この関数は、<a href=\"#/p5/push\">push()</a>および<a href=\"#/p5/pop\">pop()</a>でさらに制御できます。"
       ],
       "params": {
-        "s": "Number|p5.Vector|Number[]: percent to scale the object, or percentage to  scale the object in the x-axis if multiple arguments  are given",
-        "y": "Number: (Optional) percent to scale the object in the y-axis",
-        "z": "Number: (Optional) percent to scale the object in the z-axis (webgl only)",
-        "scales": "p5.Vector|Number[]: per-axis percents to scale the object"
+        "s": "Number|p5.Vector|Number[]: オブジェクトのスケール率、または複数の引数が与えられた場合はx軸でのオブジェクトのスケール率",
+        "y": "Number: (オプション) y軸でのオブジェクトのスケール率",
+        "z": "Number: (オプション) z軸でのオブジェクトのスケール率（webglのみ）",
+        "scales": "p5.Vector|Number[]: オブジェクトをスケーリングするための各軸のパーセント"
       }
     },
     "shearX": {
