@@ -123,11 +123,11 @@ get started:
   environment16: ）
   environment13: ' '
   your-first-sketch-title: 最初のスケッチ
-  your-first-sketch-intro1: 'In the '
+  your-first-sketch-intro1: ''
   your-first-sketch-intro2: 'https://editor.p5js.org/'
   your-first-sketch-intro3: p5.js web editor
   your-first-sketch-intro4: の中で、以下のコードを見つけることができます：
-  your-first-sketch1: 'After '
+  your-first-sketch1: ''
   your-first-sketch2: の下に、以下のコードを追加します：
   your-first-sketch3: ここまでで、コードは以下のようになります：
   your-first-sketch4: 今追加した行は「中心が左から50ピクセル、上から50ピクセルの位置にある、幅と高さが80ピクセルの楕円」を描画します。
@@ -155,17 +155,17 @@ get started:
   first-sketch-heading2: スクリーンリーダーユーザー向け注意事項
   first-sketch-heading3: インタラクションを含むコードサンプル
   what-next-title: 次に何をすべきか？
-  learn1: 'Check out the '
+  learn1: ''
   learn2: 「学ぶ」ページ
   learn3: と
   learn4: 「サンプル」ページ
   learn5: をチェックしてください。
-  learn6: 'Watch '
+  learn6: ''
   learn7: The Coding Train
   learn8: と
   learn9: Kadenze
   learn10: のビデオチュートリアルを見てください。
-  reference1: 'View the '
+  reference1: ''
   reference2: リファレンス
   reference3: を表示して、完全なドキュメントを確認してください。
   learn11: スクリーンリーダーでp5を使用したい場合は、
