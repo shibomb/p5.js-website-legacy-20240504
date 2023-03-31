@@ -900,92 +900,75 @@ learn:
     ここでは、形状をより完全な形で表現したコードを見てみましょう。キャンバスの寸法は200 x
     200であることに注意してください。キャンバスの幅と高さを指定するために、createCanvas()関数を使用していることにも注目してください。
   curves-description1: >-
-    This tutorial is written by J David Eisenberg and ported by Sally Chen. If
-    you see any errors or have comments, 
-  curves-description2: ' please let us know.'
-  curves-description3: 'This work is licensed under a '
-  curves-description4: ' Creative Commons Attribution-NonCommercial-ShareAlinke 4.0 International License.'
+    このチュートリアルは、J David Eisenbergによって執筆され、Sally Chenによって移植されました。
+    もしエラーがあったりコメントがあれば、
+  curves-description2: ' お知らせください。'
+  curves-description3: 'この作品は、'
+  curves-description4: ' クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際 ライセンスでライセンスされています。'
   curves-p1x1: >-
-    This short tutorial introduces you to the three types of curves in p5.js:
-    arcs, spline curves, and Bézier curves.
-  curves-arcs-title: ' Arcs '
+    この短いチュートリアルでは、p5.jsの3つのカーブタイプを紹介します: 円弧、スプライン曲線、およびベジェ曲線。
+  curves-arcs-title: ' 円弧 '
   curves-arcs-p1x1: >-
-    Arcs are the simplest curves to draw, it is defined an arc as a section of
-    an ellipse. You call the function with these parameters:
+    円弧は描画するのに最も簡単なカーブであり、楕円の一部として定義されています。次のパラメータで関数を呼び出します:
   curves-arcs-p2x1: 'arc (x, y, w, h, start, stop, [mode])'
   curves-arcs-p3x1: >-
-    The first four parameters (x,y,w,h) define the boundary box for your arc and
-    the next two (start, stop), are the start and stop angles for the arc. These
-    angles are given in radians and are measured clockwise with zero degrees
-    pointing east and PI radians equals 180°.
-  curves-spline-curves-title: Spline Curves
+    最初の4つのパラメータ（x,y,w,h）は、円弧の境界ボックスを定義し、次の2つ（start, stop）は、円弧の開始角度と終了角度です。
+    これらの角度はラジアンで与えられ、0度が東を指し、PIラジアンが180°に相当します。
+  curves-spline-curves-title: スプライン曲線
   curves-spline-curves-p1x1: >-
-    Arcs are fine, but they’re plain. The next function, curve(), lets you draw
-    curves that aren’t necessarily part of an arc. This function draws what is
-    technically called a Rom-Catmull Spline. To draw the curve, you must specify
-    the (x, y) coordinates of the points where the curve starts and ends. You
-    must also specify two control points which determine the direction and
-    amount of curvature. The first two and last two parameters are the control
-    points of the curve. A call to curve() uses these parameters:
+    円弧は良いですが、単純です。次の関数curve()では、必ずしも円弧の一部であるとは限らない曲線を描画できます。
+    この関数は、技術的にはロム-カトマルスプラインと呼ばれるものを描画します。
+    曲線を描画するには、曲線が始まる点と終わる点の(x, y)座標を指定する必要があります。
+    また、曲線の方向と湾曲量を決定する2つの制御点も指定する必要があります。
+    最初の2つと最後の2つのパラメータが曲線の制御点です。
+    curve()への呼び出しでは、これらのパラメータが使われます:
   curves-spline-curves-p2x1: 'curve (cpx1, cpy1, x1, y1, x2, y2, cpx2, cpy2);'
-  curves-spline-curves-p3x1: How do the control points affect the way the curve looks?
+  curves-spline-curves-p3x1: 制御点は曲線の見た目にどのように影響しますか？
   curves-spline-curves-p4x1: >-
-    The tangent to the curve at the start point is parallel to the line between
-    control point one and the end of the curve. The tangent to the curve at the
-    end point is parallel to the line between the start point and control point
-    2.
+    曲線の始点における接線は、制御点1と曲線の終点との間の直線に平行です。
+    曲線の終点における接線は、始点と制御点2との間の直線に平行です。
   curves-spline-curves-p5x1: >-
-    The following diagram shows a curve and the points can be dragged to show
-    how the control point affects the curve:
-  curves-continuous-spline-curves-title: Continuous Spline Curves
+    次の図は、曲線とその制御点がどのように曲線に影響するかを示すためにドラッグできる点を示しています:
+  curves-continuous-spline-curves-title: 連続スプライン曲線
   curves-continuous-spline-curves-p1x1: >-
-    In isolation, a single curve() is not particularly appealing. To draw a
-    continuous curve through several points, you are better off using the
-    curveVertex() function. You can only use this function when you are creating
-    a shape with the beginShape() and endShape() functions.In common usage,
-    people use the first point of the curve as the first control point and the
-    last point of the curve as the last control point.
-  curves-bezier-curves-title: Bézier Curves
+    単独でのcurve()はあまり魅力的ではありません。
+    複数の点を通る連続した曲線を描画するには、curveVertex()関数を使用した方が良いでしょう。
+    この関数は、beginShape()関数とendShape()関数で図形を作成しているときにのみ使用できます。
+    一般的な使い方では、曲線の最初の点を最初の制御点とし、曲線の最後の点を最後の制御点として使用します。
+  curves-bezier-curves-title: ベジェ曲線
   curves-bezier-curves-p1x1: >-
-    Though better than arcs, spline curves don’t seem to have those graceful,
-    swooping curves that say “art.” For those, you need to draw Bézier curves
-    with the bezier() function. As with spline curves, the bezier() function has
-    eight parameters, but the order is different. The first two and last two
-    parameters are the start and end points while middle  four points are the
-    control points.
+    スプライン曲線は円弧よりも優れていますが、芸術的な印象を与える流麗で滑らかな曲線はありません。
+    そういった曲線を描画するには、bezier()関数を使ってベジェ曲線を描画する必要があります。
+    スプライン曲線と同様に、bezier()関数には8つのパラメータがありますが、順序が異なります。
+    最初の2つと最後の2つのパラメータは開始点と終了点であり、中間の4つの点が制御点です。
   curves-bezier-curves-p2x1: ' bezier(x1, y1, cpx1, cpy1, cpx2, cpy2, x2, y2); '
   curves-bezier-curves-p3x1: >-
-    While it is difficult to visualize how the control points affect a curve(),
-    it is slightly easier to see how the control points affect Bézier curves.
-    Imagine two poles and several rubber bands. The poles connect the control
-    points to the endpoints of the curve. A rubber band connects the tops of the
-    poles. Two more rubber bands connect the midpoints of the poles to the
-    midpoint of the first rubber band. One more rubber band connects their
-    midpoints. The center of that last rubber band is tied to the curve. This
-    diagram helps to explain, the points can be moved to change the curve.
-  curves-continuous-bezier-curves-title: ' Continuous Bézier Curves'
+    制御点がcurve()にどのように影響するかを視覚化することは難しいですが、制御点がベジェ曲線にどのように影響するかを見るのは少し容易です。
+    2本のポールといくつかのゴムバンドを想像してください。
+    ポールは制御点を曲線の端点に接続します。ゴムバンドはポールの上部を接続します。
+    さらに2本のゴムバンドがポールの中間点を最初のゴムバンドの中間点に接続します。
+    もう1本のゴムバンドがそれらの中間点を接続します。
+    その最後のゴムバンドの中心は曲線に結ばれています。
+    この図は説明に役立ち、点を移動させることで曲線を変更できます。
+  curves-continuous-bezier-curves-title: ' 連続ベジェ曲線'
   curves-continuous-bezier-curves-p1x1: >-
-    Just as curveVertex() allows you to make continuous spline curves,
-    bezierVertex() lets you make continuous Bézier curves. Again, you must be
-    within a beginShape() / endShape() sequence. You must use vertex(startX,
-    startY) to specify the starting anchor point of the curve. Subsequent points
-    are specified with a call to:
+    curveVertex()が連続スプライン曲線を作成するのを可能にするように、bezierVertex()を使用すると連続ベジェ曲線を作成できます。
+    再び、beginShape() / endShape()のシーケンス内である必要があります。
+    vertex(startX, startY)を使って曲線の開始アンカーポイントを指定する必要があります。
+    次のポイントは、次のような呼び出しで指定されます:
   curves-continuous-bezier-curves-p2x1: 'bezierVertex(cpx1, cpy1, cpx2, cpy2, x, y);'
   curves-continuous-bezier-curves-p3x1: >-
-    Here is a continuous Bézier curve, but it doesn’t join smoothly. In order to
-    make two curves A and B smoothly continuous, the last control point of A,
-    the last point of A, and the first control point of B have to be on a
-    straight line.
-  curves-summary-title: Summary
+    これは連続ベジェ曲線ですが、滑らかにはつながっていません。
+    曲線AとBを滑らかに連続させるためには、Aの最後の制御点、Aの最後の点、およびBの最初の制御点が直線上になければなりません。
+  curves-summary-title: まとめ
   curves-summary-li1: >-
-    Use arc() when you need a segment of a circle or an ellipse. You can’t make
-    continuous arcs or use them as part of a shape.
+    円や楕円の一部が必要な場合は、arc()を使用します。連続した円弧を作成したり、図形の一部として使用することはできません。
   curves-summary-li2: >-
-    Use curve() when you need a small curve between two points. Use
-    curveVertex() to make a continuous series of curves as part of a shape.
+    2点間の小さな曲線が必要な場合は、curve()を使用します。
+    図形の一部として連続した曲線のシリーズを作成するには、curveVertex()を使用します。
   curves-summary-li3: >-
-    Use bezier() when you need long, smooth curves. Use bezierVertex() to make a
-    continuous series of Bézier curves as part of a shape.
+    長くて滑らかな曲線が必要な場合は、bezier()を使用します。
+    図形の一部として連続したベジェ曲線のシリーズを作成するには、bezierVertex()を使用します。
   teach-desc: p5のワークショップやクラスを教えたり、教材を作成しましょう！
 libraries:
   Libraries: ライブラリ
