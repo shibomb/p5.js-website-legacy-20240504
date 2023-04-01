@@ -1262,7 +1262,7 @@
         "さらに、メソッド呼び出しごとの再描画回数を設定できます。再描画の回数として整数を1つだけパラメータに追加してください。"
       ],
       "params": {
-        "n": "Integer:（オプション）n回再描画します。デフォルト値は1です。"
+        "n": "Integer:(オプション)n回再描画します。デフォルト値は1です。"
       }
     },
     "p5": {
@@ -1361,39 +1361,39 @@
     },
     "shearX": {
       "description": [
-        "Shears a shape around the x-axis by the amount specified by the angle parameter. Angles should be specified in the current angleMode. Objects are always sheared around their relative position to the origin and positive numbers shear objects in a clockwise direction.",
-        "Transformations apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling shearX(PI/2) and then shearX(PI/2) is the same as shearX(PI). If <a href=\"#/p5/shearX\">shearX()</a> is called within the <a href=\"#/p5/draw\">draw()</a>, the transformation is reset when the loop begins again.",
-        "Technically, <a href=\"#/p5/shearX\">shearX()</a> multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by the <a href=\"#/p5/push\">push()</a> and <a href=\"#/p5/pop\">pop()</a> functions."
+        "angleパラメータで指定された量に応じて、図形をx軸周りにシアします。角度は現在のangleModeで指定する必要があります。オブジェクトは常に原点に対する相対位置を中心にシアされ、正の数値はオブジェクトを時計回りにシアします。",
+        "変換は、それ以降に発生するすべてのことに適用され、関数への後続の呼び出しは効果を蓄積します。例えば、shearX(PI/2)を呼び出した後にshearX(PI/2)を呼び出すと、shearX(PI)と同じになります。<a href=\"#/p5/shearX\">shearX()</a>が<a href=\"#/p5/draw\">draw()</a>内で呼び出された場合、ループが再度始まるときに変換がリセットされます。",
+        "技術的には、<a href=\"#/p5/shearX\">shearX()</a>は現在の変換行列に回転行列を乗算します。この関数は、<a href=\"#/p5/push\">push()</a>および<a href=\"#/p5/pop\">pop()</a>関数でさらに制御できます。"
       ],
       "params": {
-        "angle": "Number: angle of shear specified in radians or degrees,  depending on current angleMode"
+        "angle": "Number: 角度は、現在のangleModeに応じて、ラジアンまたは度で指定します"
       }
     },
     "shearY": {
       "description": [
-        "Shears a shape around the y-axis the amount specified by the angle parameter. Angles should be specified in the current angleMode. Objects are always sheared around their relative position to the origin and positive numbers shear objects in a clockwise direction.",
-        "Transformations apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling shearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If <a href=\"#/p5/shearY\">shearY()</a> is called within the <a href=\"#/p5/draw\">draw()</a>, the transformation is reset when the loop begins again.",
-        "Technically, <a href=\"#/p5/shearY\">shearY()</a> multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by the <a href=\"#/p5/push\">push()</a> and <a href=\"#/p5/pop\">pop()</a> functions."
+        "angleパラメータで指定された量に応じて、図形をy軸周りにシアします。角度は現在のangleModeで指定する必要があります。オブジェクトは常に原点に対する相対位置を中心にシアされ、正の数値はオブジェクトを時計回りにシアします。",
+        "変換は、それ以降に発生するすべてのことに適用され、関数への後続の呼び出しは効果を蓄積します。例えば、shearY(PI/2)を呼び出した後にshearY(PI/2)を呼び出すと、shearY(PI)と同じになります。<a href=\"#/p5/shearY\">shearY()</a>が<a href=\"#/p5/draw\">draw()</a>内で呼び出された場合、ループが再度始まるときに変換がリセットされます。",
+        "技術的には、<a href=\"#/p5/shearY\">shearY()</a>は現在の変換行列に回転行列を乗算します。この関数は、<a href=\"#/p5/push\">push()</a>および<a href=\"#/p5/pop\">pop()</a>関数でさらに制御できます。"
       ],
       "params": {
-        "angle": "Number: angle of shear specified in radians or degrees,  depending on current angleMode"
+        "angle": "Number: 角度は、現在のangleModeに応じて、ラジアンまたは度で指定します"
       }
     },
     "translate": {
       "description": [
-        "Specifies an amount to displace objects within the display window. The x parameter specifies left/right translation, the y parameter specifies up/down translation.",
-        "Transformations are cumulative and apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling translate(50, 0) and then translate(20, 0) is the same as translate(70, 0). If <a href=\"#/p5/translate\">translate()</a> is called within <a href=\"#/p5/draw\">draw()</a>, the transformation is reset when the loop begins again. This function can be further controlled by using <a href=\"#/p5/push\">push()</a> and <a href=\"#/p5/pop\">pop()</a>."
+        "表示ウィンドウ内のオブジェクトを移動する量を指定します。xパラメータは左/右の移動を指定し、yパラメータは上/下の移動を指定します。",
+        "変換は累積的であり、それ以降に発生するすべてのことに適用され、関数への後続の呼び出しは効果を蓄積します。例えば、translate(50, 0)を呼び出した後にtranslate(20, 0)を呼び出すと、translate(70, 0)と同じになります。 <a href=\"#/p5/translate\">translate()</a>が<a href=\"#/p5/draw\">draw()</a>内で呼び出された場合、ループが再度始まるときに変換がリセットされます。この関数は、<a href=\"#/p5/push\">push()</a>および<a href=\"#/p5/pop\">pop()</a>を使用してさらに制御できます。"
       ],
       "params": {
-        "x": "Number: left/right translation",
-        "y": "Number: up/down translation",
-        "z": "Number: (Optional) forward/backward translation (WEBGL only)",
-        "vector": "p5.Vector: the vector to translate by"
+        "x": "Number: 左/右の移動",
+        "y": "Number: 上/下の移動",
+        "z": "Number: (オプション) 前/後ろの移動 (WEBGLのみ)",
+        "vector": "p5.Vector: 移動するベクトル"
       }
     },
     "storeItem": {
       "description": [
-        "Stores a value in local storage under the key name.  Local storage is saved in the browser and persists  between browsing sessions and page reloads.  The key can be the name of the variable but doesn't  have to be. To retrieve stored items  see <a href=\"#/p5/getItem\">getItem</a>. Sensitive data such as passwords or personal information  should not be stored in local storage."
+        "キー名の下にローカルストレージに値を保存します。ローカルストレージはブラウザに保存され、閲覧セッションやページのリロード間で持続します。キーは変数名であることができますが、必ずしもそうである必要はありません。<a href=\"#/p5/getItem\">getItem</a>を参照して保存されたアイテムを取得してください。パスワードや個人情報などの機密データは、ローカルストレージに保存しないでください。"
       ],
       "params": {
         "key": "String",
@@ -1402,575 +1402,575 @@
     },
     "getItem": {
       "description": [
-        "Returns the value of an item that was stored in local storage  using storeItem()"
+        "storeItem()を使用してローカルストレージに保存されたアイテムの値を返します。"
       ],
-      "returns": "Number|Object|String|Boolean|p5.Color|p5.Vector: Value of stored item",
+      "returns": "Number|Object|String|Boolean|p5.Color|p5.Vector: 保存されたアイテムの値",
       "params": {
-        "key": "String: name that you wish to use to store in local storage"
+        "key": "String: ローカルストレージに保存するために使用した名前"
       }
     },
     "clearStorage": {
       "description": [
-        "Clears all local storage items set with storeItem()  for the current domain."
+        "現在のドメインに対してstoreItem()で設定されたすべてのローカルストレージアイテムをクリアします。"
       ]
     },
     "removeItem": {
-      "description": ["Removes an item that was stored with storeItem()"],
+      "description": ["storeItem()で保存されたアイテムを削除します。"],
       "params": {
         "key": "String"
       }
     },
     "createStringDict": {
       "description": [
-        "Creates a new instance of p5.StringDict using the key-value pair  or the object you provide."
+        "キー・バリューペアや提供されたオブジェクトを使用して、p5.StringDictの新しいインスタンスを作成します。"
       ],
       "returns": "p5.StringDict:",
       "params": {
         "key": "String",
         "value": "String",
-        "object": "Object: object"
+        "object": "Object: オブジェクト"
       }
     },
     "createNumberDict": {
       "description": [
-        "Creates a new instance of <a href=\"#/p5.NumberDict\">p5.NumberDict</a> using the key-value pair  or object you provide."
+        "提供されたキー・バリューペアやオブジェクトを使用して、<a href=\"#/p5.NumberDict\">p5.NumberDict</a>の新しいインスタンスを作成します。"
       ],
       "returns": "p5.NumberDict:",
       "params": {
         "key": "Number",
         "value": "Number",
-        "object": "Object: object"
+        "object": "Object: オブジェクト"
       }
     },
     "select": {
       "description": [
-        "Searches the page for the first element that matches the given CSS selector string (can be an ID, class, tag name or a combination) and returns it as a <a href=\"#/p5.Element\">p5.Element</a>. The DOM node itself can be accessed with .elt. Returns null if none found. You can also specify a container to search within."
+        "与えられたCSSセレクタ文字列（ID、クラス、タグ名、またはそれらの組み合わせ）と一致するページ上の最初の要素を検索し、<a href=\"#/p5.Element\">p5.Element</a>として返します。DOMノード自体は.eltでアクセスできます。見つからない場合はnullを返します。検索範囲としてコンテナを指定することもできます。"
       ],
-      "returns": "p5.Element|null: <a href=\"#/p5.Element\">p5.Element</a> containing node found",
+      "returns": "p5.Element|null: 見つかったノードを含む<a href=\"#/p5.Element\">p5.Element</a>",
       "params": {
-        "selectors": "String: CSS selector string of element to search for",
-        "container": "String|p5.Element|HTMLElement: (Optional) CSS selector string, <a href=\"#/p5.Element\">p5.Element</a>, or  HTML element to search within"
+        "selectors": "String: 検索対象の要素のCSSセレクタ文字列",
+        "container": "String|p5.Element|HTMLElement: (オプション) CSSセレクタ文字列、<a href=\"#/p5.Element\">p5.Element</a>、または検索対象のHTML要素"
       }
     },
     "selectAll": {
       "description": [
-        "Searches the page for elements that match the given CSS selector string (can be an ID a class, tag name or a combination) and returns them as <a href=\"#/p5.Element\">p5.Element</a>s in an array. The DOM node itself can be accessed with .elt. Returns an empty array if none found. You can also specify a container to search within."
+        "与えられたCSSセレクタ文字列（ID、クラス、タグ名、またはそれらの組み合わせ）と一致するページ上の要素を検索し、それらを配列内の<a href=\"#/p5.Element\">p5.Element</a>として返します。DOMノード自体は.eltでアクセスできます。見つからない場合は空の配列を返します。検索範囲としてコンテナを指定することもできます。"
       ],
-      "returns": "p5.Element[]: Array of <a href=\"#/p5.Element\">p5.Element</a>s containing nodes found",
+      "returns": "p5.Element[]: 見つかったノードを含む<a href=\"#/p5.Element\">p5.Element</a>の配列",
       "params": {
-        "selectors": "String: CSS selector string of elements to search for",
-        "container": "String|p5.Element|HTMLElement: (Optional) CSS selector string, <a href=\"#/p5.Element\">p5.Element</a>  , or HTML element to search within"
+        "selectors": "String: 検索対象の要素のCSSセレクタ文字列",
+        "container": "String|p5.Element|HTMLElement: (オプション) CSSセレクタ文字列、<a href=\"#/p5.Element\">p5.Element</a> 、または検索対象のHTML要素"
       }
     },
     "removeElements": {
       "description": [
-        "Removes all elements created by p5, except any canvas / graphics elements created by <a href=\"#/p5/createCanvas\">createCanvas</a> or <a href=\"#/p5/createGraphics\">createGraphics</a>. Event handlers are removed, and element is removed from the DOM."
+        "p5によって作成されたすべての要素を削除しますが、<a href=\"#/p5/createCanvas\">createCanvas</a>や<a href=\"#/p5/createGraphics\">createGraphics</a>で作成されたキャンバス/グラフィック要素は除外されます。イベントハンドラが削除され、要素がDOMから削除されます。"
       ]
     },
     "changed": {
       "description": [
-        "The .<a href=\"#/p5.Element/changed\">changed()</a> function is called when the value of an element changes. This can be used to attach an element specific event listener."
+        ".<a href=\"#/p5.Element/changed\">changed()</a>関数は、要素の値が変更されたときに呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when the value of  an element changes.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: 要素の値が変更されたときに発火する関数。代わりに<code>false</code>が渡されると、以前に発火していた関数はもう発火しなくなります。"
       }
     },
     "input": {
       "description": [
-        "The .<a href=\"#/p5.Element/input\">input()</a> function is called when any user input is detected with an element. The input event is often used to detect keystrokes in a input element, or changes on a slider element. This can be used to attach an element specific event listener."
+        ".<a href=\"#/p5.Element/input\">input()</a>関数は、要素でユーザー入力が検出されると呼び出されます。inputイベントは、入力要素でのキーストロークや、スライダー要素の変更を検出するためによく使われます。これを使って、要素固有のイベントリスナーをアタッチできます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: function to be fired when any user input is  detected within the element.  if <code>false</code> is passed instead, the previously  firing function will no longer fire."
+        "fxn": "Function|Boolean: 要素内でユーザー入力が検出されると発火する関数。 <code>false</code>が代わりに渡されると、以前に発火していた関数はもう発火しなくなります。"
       }
     },
     "createDiv": {
       "description": [
-        "Creates a <code>&lt;div&gt;&lt;/div&gt;</code> element in the DOM with given inner HTML."
+        "与えられた内部HTMLを持つDOM内に<code>&lt;div&gt;&lt;/div&gt;</code>要素を作成します。"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created node",
+      "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "html": "String: (Optional) inner HTML for element created"
+        "html": "String: (オプション) 作成された要素の内部HTML"
       }
     },
     "createP": {
       "description": [
-        "Creates a <code>&lt;p&gt;&lt;/p&gt;</code> element in the DOM with given inner HTML. Used for paragraph length text."
+        "与えられた内部HTMLを持つDOM内の<code>&lt;p&gt;&lt;/p&gt;</code>要素を作成します。段落の長さのテキストに使用されます。"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created node",
+      "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "html": "String: (Optional) inner HTML for element created"
+        "html": "String: (オプション) 作成された要素の内部HTML"
       }
     },
     "createSpan": {
       "description": [
-        "Creates a <code>&lt;span&gt;&lt;/span&gt;</code> element in the DOM with given inner HTML."
+        "与えられた内部HTMLを持つDOM内の<code>&lt;span&gt;&lt;/span&gt;</code>要素を作成します。"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created node",
+      "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "html": "String: (Optional) inner HTML for element created"
+        "html": "String: (オプション) 作成された要素の内部HTML"
       }
     },
     "createImg": {
       "description": [
-        "Creates an <code>&lt;img&gt;</code> element in the DOM with given src and alternate text."
+        "与えられたsrcおよび代替テキストを使用して、DOM内に<code>&lt;img&gt;</code>要素を作成します。"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created node",
+      "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "src": "String: src path or url for image",
-        "alt": "String: <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img#Attributes\">alternate text</a> to be used if image does not load. You can use also an empty string (<code>\"\"</code>) if that an image is not intended to be viewed.",
-        "crossOrigin": "String: <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes\">crossOrigin property</a> of the <code>img</code> element; use either 'anonymous' or 'use-credentials' to retrieve the image with cross-origin access (for later use with <code>canvas</code>. if an empty string(<code>\"\"</code>) is passed, CORS is not used",
-        "successCallback": "Function: (Optional) callback to be called once image data is loaded with the <a href=\"#/p5.Element\">p5.Element</a> as argument"
+        "src": "String: 画像のsrcパスまたはURL",
+        "alt": "String: 画像が読み込まれない場合に使用される<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img#Attributes\">代替テキスト</a>。画像が意図的に表示されない場合は空の文字列（<code>\"\"</code>）を使用できます。",
+        "crossOrigin": "String: <code>img</code>要素の<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes\">crossOriginプロパティ</a>。'anonymous'または'use-credentials'を使用して、クロスオリジンアクセスで画像を取得します（後で<code>canvas</code>として使用するため）。空の文字列（<code>\"\"</code>）が渡された場合、CORSは使用されません",
+        "successCallback": "Function: (オプション) 画像データが読み込まれると、引数として<a href=\"#/p5.Element\">p5.Element</a>を使用して呼び出されるコールバック"
       }
     },
     "createA": {
       "description": [
-        "Creates an <code>&lt;a&gt;&lt;/a&gt;</code> element in the DOM for including a hyperlink."
+        "DOMに<code>&lt;a&gt;&lt;/a&gt;</code>要素を作成し、ハイパーリンクを含めます。"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created node",
+      "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "href": "String: url of page to link to",
-        "html": "String: inner html of link element to display",
-        "target": "String: (Optional) target where new link should open,  could be _blank, _self, _parent, _top."
+        "href": "String: リンク先のページのURL",
+        "html": "String: リンク要素内に表示する内部HTML",
+        "target": "String: (オプション) 新しいリンクを開く対象。_blank、_self、_parent、_topのいずれか。"
       }
     },
     "createSlider": {
       "description": [
-        "Creates a slider <code>&lt;input&gt;&lt;/input&gt;</code> element in the DOM. Use .size() to set the display length of the slider."
+        "DOMにスライダーの<code>&lt;input&gt;&lt;/input&gt;</code>要素を作成します。.size()を使って、スライダーの表示長さを設定します。"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding the created node",
+      "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "min": "Number: minimum value of the slider",
-        "max": "Number: maximum value of the slider",
-        "value": "Number: (Optional) default value of the slider",
-        "step": "Number: (Optional) step size for each tick of the slider (if step is set to 0, the slider will move continuously from the minimum to the maximum value)"
+        "min": "数値: スライダーの最小値",
+        "max": "数値: スライダーの最大値",
+        "value": "数値: (オプション) スライダーのデフォルト値",
+        "step": "数値: (オプション) スライダーの各目盛りのステップサイズ (ステップが0に設定されている場合、スライダーは最小値から最大値まで連続して移動します)"
       }
     },
     "createButton": {
       "description": [
-        "Creates a <code>&lt;button&gt;&lt;/button&gt;</code> element in the DOM. Use .size() to set the display size of the button. Use .mousePressed() to specify behavior on press."
+        "DOMに<code>&lt;button&gt;&lt;/button&gt;</code>要素を作成します。.size()を使って、ボタンの表示サイズを設定します。.mousePressed()を使って、押下時の動作を指定します。"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created node",
+      "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "label": "String: label displayed on the button",
-        "value": "String: (Optional) value of the button"
+        "label": "文字列: ボタンに表示されるラベル",
+        "value": "文字列: (オプション) ボタンの値"
       }
     },
     "createCheckbox": {
       "description": [
-        "Creates a checkbox <code>&lt;input&gt;&lt;/input&gt;</code> element in the DOM. Calling .checked() on a checkbox returns a boolean indicating whether it is checked or not."
+        "DOM にチェックボックスの <code>&lt;input&gt;&lt;/input&gt;</code> 要素を作成します。チェックボックスに対して .checked() を呼び出すと、チェックされているかどうかを示すブール値が返されます。"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created node",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
       "params": {
-        "label": "String: (Optional) label displayed after checkbox",
-        "value": "Boolean: (Optional) value of the checkbox; checked is true, unchecked is false"
+        "label": "String: (オプション) チェックボックスの後に表示されるラベル",
+        "value": "Boolean: (オプション) チェックボックスの値; チェックされている場合は true、チェックされていない場合は false"
       }
     },
     "createSelect": {
       "description": [
-        "Creates a dropdown menu <code>&lt;select&gt;&lt;/select&gt;</code> element in the DOM. It also assigns select-related methods to <a href=\"#/p5.Element\">p5.Element</a> when selecting an existing select box. Options in the menu are unique by <code>name</code> (the display text). <ul> <li><code>.option(name, [value])</code> can be used to add an option with <code>name</code> (the display text) and <code>value</code> to the select element. If an option with <code>name</code> already exists within the select element, this method will change its value to <code>value</code>.</li> <li><code>.value()</code> will return the currently selected option.</li> <li><code>.selected()</code> will return the current dropdown element which is an instance of <a href=\"#/p5.Element\">p5.Element</a>.</li> <li><code>.selected(value)</code> can be used to make given option selected by default when the page first loads.</li> <li><code>.disable()</code> marks the whole dropdown element as disabled.</li> <li><code>.disable(value)</code> marks a given option as disabled.</li> </ul>"
+        "DOMにドロップダウンメニュー<code>&lt;select&gt;&lt;/select&gt;</code>要素を作成します。また、既存のセレクトボックスを選択すると、<a href=\"#/p5.Element\">p5.Element</a>にselect関連のメソッドが割り当てられます。メニューのオプションは、<code>name</code>（表示テキスト）で一意です。<ul> <li><code>.option(name, [value])</code>は、<code>name</code>（表示テキスト）と<code>value</code>を持つオプションをセレクト要素に追加するために使用できます。セレクト要素内に<code>name</code>が既に存在する場合、このメソッドはその値を<code>value</code>に変更します。</li> <li><code>.value()</code>は、現在選択されているオプションを返します。</li> <li><code>.selected()</code>は、<a href=\"#/p5.Element\">p5.Element</a>のインスタンスである現在のドロップダウン要素を返します。</li> <li><code>.selected(value)</code>は、ページが最初に読み込まれたときに指定したオプションがデフォルトで選択されるようにするために使用できます。</li> <li><code>.disable()</code>は、ドロップダウン要素全体を無効にする印をつけます。</li> <li><code>.disable(value)</code>は、指定したオプションを無効にする印をつけます。</li> </ul>"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created node",
+      "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "multiple": "Boolean: (Optional) true if dropdown should support multiple selections",
-        "existing": "Object: DOM select element"
+        "multiple": "Boolean: (オプション) ドロップダウンが複数の選択肢をサポートする場合はtrue",
+        "existing": "Object: DOMのselect要素"
       }
     },
     "createRadio": {
       "description": [
-        "Creates a radio button element in the DOM. It also helps existing radio buttons assign methods of <a href=\"#/p5.Element/\">p5.Element</a>. <ul> <li><code>.option(value, [label])</code> can be used to create a new option for the element. If an option with a value already exists, it will be returned. It is recommended to use string values as input for <code>value</code>. Optionally, a label can be provided as second argument for the option.</li> <li><code>.remove(value)</code> can be used to remove an option for the element. String values recommended as input for <code>value</code>.</li> <li><code>.value()</code> method will return the currently selected value.</li> <li><code>.selected()</code> method will return the currently selected input element.</li> <li><code>.selected(value)</code> method will select the option and return it. String values recommended as input for <code>value</code>.</li> <li><code>.disable(Boolean)</code> method will enable/disable the whole radio button element.</li> </ul>"
+        "DOMにラジオボタン要素を作成します。また、既存のラジオボタンに<a href=\"#/p5.Element/\">p5.Element</a>のメソッドを割り当てるのに役立ちます。 <ul> <li><code>.option(value, [label])</code>は、要素に新しいオプションを作成するために使用できます。すでに値が存在するオプションがある場合は、それが返されます。<code>value</code>の入力として文字列値を使用することが推奨されます。オプションとして、2つ目の引数としてラベルを提供できます。</li> <li><code>.remove(value)</code>は、要素のオプションを削除するために使用できます。<code>value</code>の入力として文字列値が推奨されます。</li> <li><code>.value()</code>メソッドは、現在選択されている値を返します。</li> <li><code>.selected()</code>メソッドは、現在選択されている入力要素を返します。</li> <li><code>.selected(value)</code>メソッドは、オプションを選択して返します。<code>value</code>の入力として文字列値が推奨されます。</li> <li><code>.disable(Boolean)</code>メソッドは、ラジオボタン要素全体を有効/無効にします。</li> </ul>"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created node",
+      "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "containerElement": "Object: A container HTML Element, either a div or span, inside which all existing radio inputs will be considered as options.",
-        "name": "String: (Optional) A name parameter for each Input Element."
+        "containerElement": "Object: すべての既存のラジオ入力がオプションと見なされるdivまたはspanのHTML要素コンテナ。",
+        "name": "String: (オプション) 各入力要素の名前パラメータ。"
       }
     },
     "createColorPicker": {
       "description": [
-        "Creates a colorPicker element in the DOM for color input. The .value() method will return a hex string (#rrggbb) of the color. The .color() method will return a <a href=\"#/p5.Color\">p5.Color</a> object with the current chosen color."
+        "DOM上でカラー入力のためのcolorPicker要素を作成します。.value()メソッドはカラーの16進数文字列（#rrggbb）を返します。.color()メソッドは現在選択されているカラーの<a href=\"#/p5.Color\">p5.Color</a>オブジェクトを返します。"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created node",
+      "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "value": "String|p5.Color: (Optional) default color of element"
+        "value": "String|p5.Color: 要素のデフォルトカラー(オプション)"
       }
     },
     "createInput": {
       "description": [
-        "Creates an <code>&lt;input&gt;&lt;/input&gt;</code> element in the DOM for text input. Use .<a href=\"#/p5.Element/size\">size()</a> to set the display length of the box."
+        "DOMでテキスト入力用の<code>&lt;input&gt;&lt;/input&gt;</code>要素を作成します。.<a href=\"#/p5.Element/size\">size()</a>を使ってボックスの表示長さを設定します。"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created node",
+      "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "value": "String: default value of the input box",
-        "type": "String: (Optional) type of text, ie text, password etc. Defaults to text.  Needs a value to be specified first."
+        "value": "String: 入力ボックスのデフォルト値",
+        "type": "String: テキストの種類(オプション)、例：text、password など。デフォルトは text。最初に値を指定する必要があります。"
       }
     },
     "createFileInput": {
       "description": [
-        "Creates an <code>&lt;input&gt;&lt;/input&gt;</code> element in the DOM of type 'file'. This allows users to select local files for use in a sketch."
+        "DOMに 'file' タイプの <code>&lt;input&gt;&lt;/input&gt;</code> 要素を作成します。これにより、ユーザーはローカルファイルをスケッチで使用するために選択できます。"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created DOM element",
+      "returns": "p5.Element: 作成されたDOM要素を保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "callback": "Function: callback function for when a file is loaded",
-        "multiple": "Boolean: (Optional) optional, to allow multiple files to be selected"
+        "callback": "Function: ファイルが読み込まれたときのコールバック関数",
+        "multiple": "Boolean: (オプション)複数のファイルを選択できるようにするオプション"
       }
     },
     "createVideo": {
       "description": [
-        "Creates an HTML5 <code>&lt;video&gt;</code> element in the DOM for simple playback of audio/video. Shown by default, can be hidden with .<a href=\"#/p5.Element/hide\">hide()</a> and drawn into canvas using <a href=\"#/p5/image\">image()</a>. The first parameter can be either a single string path to a video file, or an array of string paths to different formats of the same video. This is useful for ensuring that your video can play across different browsers, as each supports different formats. See <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats'>this page</a> for further information about supported formats."
+        "HTML5の<code>&lt;video&gt;</code>要素をDOMに作成し、オーディオ/ビデオのシンプルな再生ができます。デフォルトで表示され、.<a href=\"#/p5.Element/hide\">hide()</a>で非表示にし、<a href=\"#/p5/image\">image()</a>を使ってキャンバスに描画できます。第1引数は、ビデオファイルへの単一の文字列パス、または同じビデオの異なる形式への文字列パスの配列のいずれかです。これは、異なるブラウザでビデオを再生できるようにするために役立ちます。各ブラウザは異なる形式をサポートしています。サポートされている形式についての詳細は、<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats'>このページ</a>を参照してください。"
       ],
-      "returns": "p5.MediaElement: pointer to video <a href=\"#/p5.MediaElement\">p5.MediaElement</a>",
+      "returns": "p5.MediaElement: ビデオ<a href=\"#/p5.MediaElement\">p5.MediaElement</a>へのポインタ",
       "params": {
-        "src": "String|String[]: path to a video file, or array of paths for  supporting different browsers",
-        "callback": "Function: (Optional) callback function to be called upon  'canplaythrough' event fire, that is, when the  browser can play the media, and estimates that  enough data has been loaded to play the media  up to its end without having to stop for  further buffering of content"
+        "src": "String|String[]: ビデオファイルへのパス、または異なるブラウザをサポートするためのパスの配列",
+        "callback": "Function: (オプション) 'canplaythrough' イベントが発火したときに呼ばれるコールバック関数。つまり、ブラウザがメディアを再生でき、コンテンツのさらなるバッファリングが不要な状態でメディアを最後まで再生できると推定されるデータがロードされたとき"
       }
     },
     "createAudio": {
       "description": [
-        "Creates a hidden HTML5 <code>&lt;audio&gt;</code> element in the DOM for simple audio playback. The first parameter can be either a single string path to a audio file, or an array of string paths to different formats of the same audio. This is useful for ensuring that your audio can play across different browsers, as each supports different formats. See <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats'>this page for further information about supported formats</a>."
+        "HTML5の<code>&lt;audio&gt;</code>要素をDOM内に隠し、シンプルなオーディオ再生を行います。第1引数は、オーディオファイルへの単一の文字列パス、または同じオーディオの異なる形式への文字列パスの配列のいずれかです。これは、各ブラウザが異なる形式をサポートしているため、オーディオが異なるブラウザ間で再生できることを確認するために役立ちます。<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats'>このページでは、サポートされている形式に関する詳細情報が提供されています</a>。"
       ],
-      "returns": "p5.MediaElement: pointer to audio <a href=\"#/p5.MediaElement\">p5.MediaElement</a>",
+      "returns": "p5.MediaElement: オーディオへのポインタ <a href=\"#/p5.MediaElement\">p5.MediaElement</a>",
       "params": {
-        "src": "String|String[]: (Optional) path to an audio file, or array of paths  for supporting different browsers",
-        "callback": "Function: (Optional) callback function to be called upon  'canplaythrough' event fire, that is, when the  browser can play the media, and estimates that  enough data has been loaded to play the media  up to its end without having to stop for  further buffering of content"
+        "src": "String|String[]: (オプション)オーディオファイルへのパス、または異なるブラウザをサポートするためのパスの配列",
+        "callback": "Function: (オプション)'canplaythrough' イベントが発火した際に呼び出されるコールバック関数。つまり、ブラウザがメディアを再生でき、コンテンツのさらなるバッファリングなしにメディアを最後まで再生できると予測される十分なデータがロードされたとき"
       }
     },
     "createCapture": {
       "description": [
-        "Creates a new HTML5 <code>&lt;video&gt;</code> element that contains the audio/video feed from a webcam. The element is separate from the canvas and is displayed by default. The element can be hidden using .<a href=\"#/p5.Element/hide\">hide()</a>. The feed can be drawn onto the canvas using <a href=\"#/p5/image\">image()</a>. The loadedmetadata property can be used to detect when the element has fully loaded (see second example).",
-        "More specific properties of the feed can be passing in a Constraints object. See the <a href='http://w3c.github.io/mediacapture-main/getusermedia.html#media-track-constraints'> W3C spec</a> for possible properties. Note that not all of these are supported by all browsers.",
-        "<em>Security note</em>: A new browser security specification requires that getUserMedia, which is behind <a href=\"#/p5/createCapture\">createCapture()</a>, only works when you're running the code locally, or on HTTPS. Learn more <a href='http://stackoverflow.com/questions/34197653/getusermedia-in-chrome-47-without-using-https'>here</a> and <a href='https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia'>here</a>."
+        "ウェブカメラの音声/ビデオフィードを含む新しいHTML5の<code>&lt;video&gt;</code>要素を作成します。この要素はキャンバスとは別で、デフォルトで表示されます。要素は、.<a href=\"#/p5.Element/hide\">hide()</a>を使って非表示にすることができます。フィードは<a href=\"#/p5/image\">image()</a>を使ってキャンバスに描画することができます。loadedmetadataプロパティは要素が完全にロードされたことを検出するために使用できます(第二の例を参照)。",
+        "フィードのより具体的なプロパティは、Constraintsオブジェクトを渡すことで指定できます。<a href='http://w3c.github.io/mediacapture-main/getusermedia.html#media-track-constraints'>W3Cの仕様</a>に可能なプロパティが記載されています。ただし、すべてのブラウザでこれらがサポートされているわけではありません。",
+        "<em>セキュリティに関する注意</em>：新しいブラウザのセキュリティ仕様では、<a href=\"#/p5/createCapture\">createCapture()</a>の背後にあるgetUserMediaは、コードをローカルで実行している場合、またはHTTPSでのみ動作するようになっています。詳細は<a href='http://stackoverflow.com/questions/34197653/getusermedia-in-chrome-47-without-using-https'>こちら</a>と<a href='https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia'>こちら</a>を参照してください。"
       ],
-      "returns": "p5.Element: capture video <a href=\"#/p5.Element\">p5.Element</a>",
+      "returns": "p5.Element: キャプチャビデオ <a href=\"#/p5.Element\">p5.Element</a>",
       "params": {
-        "type": "String|Constant|Object: type of capture, either VIDEO or  AUDIO if none specified, default both,  or a Constraints object",
-        "callback": "Function: (Optional) function to be called once  stream has loaded"
+        "type": "String|Constant|Object: キャプチャのタイプで、VIDEO や AUDIO が指定されていない場合はデフォルトで両方、または Constraints オブジェクト",
+        "callback": "Function: (オプション) ストリームがロードされたら呼ばれる関数"
       }
     },
     "createElement": {
       "description": [
-        "Creates element with given tag in the DOM with given content."
+        "指定されたタグと内容でDOM内に要素を作成します。"
       ],
-      "returns": "p5.Element: pointer to <a href=\"#/p5.Element\">p5.Element</a> holding created node",
+      "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "tag": "String: tag for the new element",
-        "content": "String: (Optional) html content to be inserted into the element"
+        "tag": "String: 新しい要素のタグ",
+        "content": "String: (オプション) 要素に挿入されるHTMLコンテンツ"
       }
     },
     "deviceOrientation": {
       "description": [
-        "The system variable deviceOrientation always contains the orientation of the device. The value of this variable will either be set 'landscape' or 'portrait'. If no data is available it will be set to 'undefined'. either LANDSCAPE or PORTRAIT."
+        "システム変数 deviceOrientation には、常にデバイスの向きが格納されます。この変数の値は 'landscape' または 'portrait' に設定されます。データが利用できない場合、'undefined' に設定されます。LANDSCAPE または PORTRAIT です。"
       ]
     },
     "accelerationX": {
       "description": [
-        "The system variable accelerationX always contains the acceleration of the device along the x axis. Value is represented as meters per second squared."
+        "システム変数 accelerationX には、常にデバイスの x 軸に沿った加速度が格納されます。値は、メートル毎秒の二乗で表されます。"
       ]
     },
     "accelerationY": {
       "description": [
-        "The system variable accelerationY always contains the acceleration of the device along the y axis. Value is represented as meters per second squared."
+        "システム変数 accelerationY には、常にデバイスの y 軸に沿った加速度が格納されます。値は、メートル毎秒の二乗で表されます。"
       ]
     },
     "accelerationZ": {
       "description": [
-        "The system variable accelerationZ always contains the acceleration of the device along the z axis. Value is represented as meters per second squared."
+        "システム変数 accelerationZ には、常にデバイスの z 軸に沿った加速度が格納されます。値は、メートル毎秒の二乗で表されます。"
       ]
     },
     "pAccelerationX": {
       "description": [
-        "The system variable pAccelerationX always contains the acceleration of the device along the x axis in the frame previous to the current frame. Value is represented as meters per second squared."
+        "システム変数 pAccelerationX には、常に現在のフレームの前のフレームでのデバイスの x 軸に沿った加速度が格納されます。値は、メートル毎秒の二乗で表されます。"
       ]
     },
     "pAccelerationY": {
       "description": [
-        "The system variable pAccelerationY always contains the acceleration of the device along the y axis in the frame previous to the current frame. Value is represented as meters per second squared."
+        "システム変数 pAccelerationY には、常に現在のフレームの前のフレームでのデバイスの y 軸に沿った加速度が格納されます。値は、メートル毎秒の二乗で表されます。"
       ]
     },
     "pAccelerationZ": {
       "description": [
-        "The system variable pAccelerationZ always contains the acceleration of the device along the z axis in the frame previous to the current frame. Value is represented as meters per second squared."
+        "システム変数 pAccelerationZ には、常に現在のフレームの前のフレームでのデバイスの z 軸に沿った加速度が格納されます。値は、メートル毎秒の二乗で表されます。"
       ]
     },
     "rotationX": {
       "description": [
-        "The system variable rotationX always contains the rotation of the device along the x axis. If the sketch <a href=\"#/p5/angleMode\"> angleMode()</a> is set to DEGREES, the value will be -180 to 180. If it is set to RADIANS, the value will be -PI to PI.",
-        "Note: The order the rotations are called is important, ie. if used together, it must be called in the order Z-X-Y or there might be unexpected behaviour."
+        "システム変数rotationXは常にデバイスのx軸に沿った回転を格納しています。<a href=\"#/p5/angleMode\"> angleMode()</a>がDEGREESに設定されている場合、値は-180から180になります。RADIANSに設定されている場合、値は-PIからPIになります。",
+        "注：回転が呼び出される順序は重要であり、つまり、一緒に使用される場合、Z-X-Yの順序で呼び出さなければならず、そうでないと予期しない動作が発生する可能性があります。"
       ]
     },
     "rotationY": {
       "description": [
-        "The system variable rotationY always contains the rotation of the device along the y axis. If the sketch <a href=\"#/p5/angleMode\"> angleMode()</a> is set to DEGREES, the value will be -90 to 90. If it is set to RADIANS, the value will be -PI/2 to PI/2.",
-        "Note: The order the rotations are called is important, ie. if used together, it must be called in the order Z-X-Y or there might be unexpected behaviour."
+        "システム変数rotationYは常にデバイスのy軸に沿った回転を格納しています。<a href=\"#/p5/angleMode\"> angleMode()</a>がDEGREESに設定されている場合、値は-90から90になります。RADIANSに設定されている場合、値は-PI/2からPI/2になります。",
+        "注：回転が呼び出される順序は重要であり、つまり、一緒に使用される場合、Z-X-Yの順序で呼び出さなければならず、そうでないと予期しない動作が発生する可能性があります。"
       ]
     },
     "rotationZ": {
       "description": [
-        "The system variable rotationZ always contains the rotation of the device along the z axis. If the sketch <a href=\"#/p5/angleMode\"> angleMode()</a> is set to DEGREES, the value will be 0 to 360. If it is set to RADIANS, the value will be 0 to 2*PI.",
-        "Unlike rotationX and rotationY, this variable is available for devices with a built-in compass only.",
-        "Note: The order the rotations are called is important, ie. if used together, it must be called in the order Z-X-Y or there might be unexpected behaviour."
+        "システム変数rotationZは常にデバイスのz軸に沿った回転を格納しています。<a href=\"#/p5/angleMode\"> angleMode()</a>がDEGREESに設定されている場合、値は0から360になります。RADIANSに設定されている場合、値は0から2*PIになります。",
+        "rotationXおよびrotationYとは異なり、この変数は内蔵コンパスのあるデバイスでのみ利用可能です。",
+        "注：回転が呼び出される順序は重要であり、つまり、一緒に使用される場合、Z-X-Yの順序で呼び出さなければならず、そうでないと予期しない動作が発生する可能性があります。"
       ]
     },
     "pRotationX": {
       "description": [
-        "The system variable pRotationX always contains the rotation of the device along the x axis in the frame previous to the current frame. If the sketch <a href=\"#/p5/angleMode\"> angleMode()</a> is set to DEGREES, the value will be -180 to 180. If it is set to RADIANS, the value will be -PI to PI.",
-        "pRotationX can also be used with rotationX to determine the rotate direction of the device along the X-axis."
+        "システム変数 pRotationX は、前のフレームから現在のフレームにかけてのデバイスの x 軸に沿った回転を常に格納しています。スケッチの<a href=\"#/p5/angleMode\"> angleMode()</a> が DEGREES に設定されている場合、値は -180 から 180 になります。RADIANS に設定されている場合、値は -PI から PI になります。",
+        "pRotationX は、X 軸に沿ったデバイスの回転方向を決定するために、rotationX と一緒に使用することもできます。"
       ]
     },
     "pRotationY": {
       "description": [
-        "The system variable pRotationY always contains the rotation of the device along the y axis in the frame previous to the current frame. If the sketch <a href=\"#/p5/angleMode\"> angleMode()</a> is set to DEGREES, the value will be -90 to 90. If it is set to RADIANS, the value will be -PI/2 to PI/2.",
-        "pRotationY can also be used with rotationY to determine the rotate direction of the device along the Y-axis."
+        "システム変数 pRotationY は、前のフレームから現在のフレームにかけてのデバイスの y 軸に沿った回転を常に格納しています。スケッチの<a href=\"#/p5/angleMode\"> angleMode()</a> が DEGREES に設定されている場合、値は -90 から 90 になります。RADIANS に設定されている場合、値は -PI/2 から PI/2 になります。",
+        "pRotationY は、Y 軸に沿ったデバイスの回転方向を決定するために、rotationY と一緒に使用することもできます。"
       ]
     },
     "pRotationZ": {
       "description": [
-        "The system variable pRotationZ always contains the rotation of the device along the z axis in the frame previous to the current frame. If the sketch <a href=\"#/p5/angleMode\"> angleMode()</a> is set to DEGREES, the value will be 0 to 360. If it is set to RADIANS, the value will be 0 to 2*PI.",
-        "pRotationZ can also be used with rotationZ to determine the rotate direction of the device along the Z-axis."
+        "システム変数 pRotationZ は、前のフレームから現在のフレームにかけてのデバイスの z 軸に沿った回転を常に格納しています。スケッチの<a href=\"#/p5/angleMode\"> angleMode()</a> が DEGREES に設定されている場合、値は 0 から 360 になります。RADIANS に設定されている場合、値は 0 から 2*PI になります。",
+        "pRotationZ は、Z 軸に沿ったデバイスの回転方向を決定するために、rotationZ と一緒に使用することもできます。"
       ]
     },
     "turnAxis": {
       "description": [
-        "When a device is rotated, the axis that triggers the <a href=\"#/p5/deviceTurned\">deviceTurned()</a> method is stored in the turnAxis variable. The turnAxis variable is only defined within the scope of deviceTurned()."
+        "デバイスが回転すると、<a href=\"#/p5/deviceTurned\">deviceTurned()</a>メソッドをトリガーする軸がturnAxis変数に格納されます。turnAxis変数は、deviceTurned()のスコープ内でのみ定義されています。"
       ]
     },
     "setMoveThreshold": {
       "description": [
-        "The <a href=\"#/p5/setMoveThreshold\">setMoveThreshold()</a> function is used to set the movement threshold for the <a href=\"#/p5/deviceMoved\">deviceMoved()</a> function. The default threshold is set to 0.5."
+        "<a href=\"#/p5/setMoveThreshold\">setMoveThreshold()</a>関数は、<a href=\"#/p5/deviceMoved\">deviceMoved()</a>関数の動作閾値を設定するために使用されます。デフォルトの閾値は0.5に設定されています。"
       ],
       "params": {
-        "value": "Number: The threshold value"
+        "value": "Number: 閾値"
       }
     },
     "setShakeThreshold": {
       "description": [
-        "The <a href=\"#/p5/setShakeThreshold\">setShakeThreshold()</a> function is used to set the movement threshold for the <a href=\"#/p5/deviceShaken\">deviceShaken()</a> function. The default threshold is set to 30."
+        "<a href=\"#/p5/setShakeThreshold\">setShakeThreshold()</a>関数は、<a href=\"#/p5/deviceShaken\">deviceShaken()</a>関数の動作閾値を設定するために使用されます。デフォルトの閾値は30に設定されています。"
       ],
       "params": {
-        "value": "Number: The threshold value"
+        "value": "Number: 閾値"
       }
     },
     "deviceMoved": {
       "description": [
-        "The <a href=\"#/p5/deviceMoved\">deviceMoved()</a> function is called when the device is moved by more than the threshold value along X, Y or Z axis. The default threshold is set to 0.5. The threshold value can be changed using <a href=\"https://p5js.org/reference/#/p5/setMoveThreshold\">setMoveThreshold()</a>."
+        "<a href=\"#/p5/deviceMoved\">deviceMoved()</a>関数は、X、Y、またはZ軸に沿って閾値を超える量だけデバイスが移動したときに呼び出されます。デフォルトの閾値は0.5に設定されています。閾値は、<a href=\"https://p5js.org/reference/#/p5/setMoveThreshold\">setMoveThreshold()</a>を使用して変更できます。"
       ]
     },
     "deviceTurned": {
       "description": [
-        "The <a href=\"#/p5/deviceTurned\">deviceTurned()</a> function is called when the device rotates by more than 90 degrees continuously.",
-        "The axis that triggers the <a href=\"#/p5/deviceTurned\">deviceTurned()</a> method is stored in the turnAxis variable. The <a href=\"#/p5/deviceTurned\">deviceTurned()</a> method can be locked to trigger on any axis: X, Y or Z by comparing the turnAxis variable to 'X', 'Y' or 'Z'."
+        "<a href=\"#/p5/deviceTurned\">deviceTurned()</a>関数は、デバイスが90度以上連続して回転したときに呼び出されます。",
+        "turnAxis変数には、<a href=\"#/p5/deviceTurned\">deviceTurned()</a>メソッドをトリガーする軸が格納されます。<a href=\"#/p5/deviceTurned\">deviceTurned()</a>メソッドは、turnAxis変数と 'X'、'Y'、または 'Z'を比較することで、任意の軸（X、Y、またはZ）でトリガーするようにロックできます。"
       ]
     },
     "deviceShaken": {
       "description": [
-        "The <a href=\"#/p5/deviceShaken\">deviceShaken()</a> function is called when the device total acceleration changes of accelerationX and accelerationY values is more than the threshold value. The default threshold is set to 30. The threshold value can be changed using <a href=\"https://p5js.org/reference/#/p5/setShakeThreshold\">setShakeThreshold()</a>."
+        "<a href=\"#/p5/deviceShaken\">deviceShaken()</a>関数は、デバイスの合計加速度が、accelerationXおよびaccelerationYの値の変化が閾値を超えたときに呼び出されます。デフォルトの閾値は30に設定されています。閾値は、<a href=\"https://p5js.org/reference/#/p5/setShakeThreshold\">setShakeThreshold()</a>を使用して変更できます。"
       ]
     },
     "keyIsPressed": {
       "description": [
-        "The boolean system variable <a href=\"#/p5/keyIsPressed\">keyIsPressed</a> is true if any key is pressed and false if no keys are pressed."
+        "ブール型のシステム変数 <a href=\"#/p5/keyIsPressed\">keyIsPressed</a> は、キーが押されている場合は true、キーが押されていない場合は false です。"
       ]
     },
     "key": {
       "description": [
-        "The system variable key always contains the value of the most recent key on the keyboard that was typed. To get the proper capitalization, it is best to use it within <a href=\"#/p5/keyTyped\">keyTyped()</a>. For non-ASCII keys, use the <a href=\"#/p5/keyCode\">keyCode</a> variable."
+        "システム変数 key には、最後にキーボードで入力されたキーの値が常に格納されます。正しい大文字/小文字を取得するには、<a href=\"#/p5/keyTyped\">keyTyped()</a> の中で使うことが最適です。非 ASCII キーの場合は、<a href=\"#/p5/keyCode\">keyCode</a> 変数を使用してください。"
       ]
     },
     "keyCode": {
       "description": [
-        "The variable keyCode is used to detect special keys such as BACKSPACE, DELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL, OPTION, ALT, UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW. You can also check for custom keys by looking up the keyCode of any key on a site like this: <a href=\"http://keycode.info/\">keycode.info</a>."
+        "変数keyCodeは、BACKSPACE、DELETE、ENTER、RETURN、TAB、ESCAPE、SHIFT、CONTROL、OPTION、ALT、UP_ARROW、DOWN_ARROW、LEFT_ARROW、RIGHT_ARROWなどの特殊キーを検出するために使用されます。このようなサイトでキーのkeyCodeを調べることで、カスタムキーのチェックもできます：<a href=\"http://keycode.info/\">keycode.info</a>。"
       ]
     },
     "keyPressed": {
       "description": [
-        "The <a href=\"#/p5/keyPressed\">keyPressed()</a> function is called once every time a key is pressed. The keyCode for the key that was pressed is stored in the <a href=\"#/p5/keyCode\">keyCode</a> variable.",
-        "For non-ASCII keys, use the keyCode variable. You can check if the keyCode equals BACKSPACE, DELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL, OPTION, ALT, UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.",
-        "For ASCII keys, the key that was pressed is stored in the key variable. However, it does not distinguish between uppercase and lowercase. For this reason, it is recommended to use <a href=\"#/p5/keyTyped\">keyTyped()</a> to read the key variable, in which the case of the variable will be distinguished.",
-        "Because of how operating systems handle key repeats, holding down a key may cause multiple calls to <a href=\"#/p5/keyTyped\">keyTyped()</a> (and <a href=\"#/p5/keyReleased\">keyReleased()</a> as well). The rate of repeat is set by the operating system and how each computer is configured. Browsers may have different default behaviors attached to various key events. To prevent any default behavior for this event, add \"return false\" to the end of the method."
+        "<a href=\"#/p5/keyPressed\">keyPressed()</a>関数は、キーが押されるたびに1回呼び出されます。押されたキーのkeyCodeは、<a href=\"#/p5/keyCode\">keyCode</a>変数に格納されます。",
+        "非ASCIIキーの場合は、keyCode変数を使用してください。keyCodeがBACKSPACE、DELETE、ENTER、RETURN、TAB、ESCAPE、SHIFT、CONTROL、OPTION、ALT、UP_ARROW、DOWN_ARROW、LEFT_ARROW、RIGHT_ARROWに等しいかどうかを確認できます。",
+        "ASCIIキーの場合、押されたキーはkey変数に格納されます。ただし、大文字と小文字は区別されません。このため、変数の大文字と小文字を区別するkeyTyped()を使用してkey変数を読み取ることが推奨されます。<a href=\"#/p5/keyTyped\">keyTyped()</a>を参照してください。",
+        "オペレーティングシステムがキーのリピートを処理する方法のため、キーを押し続けると、<a href=\"#/p5/keyTyped\">keyTyped()</a>（および<a href=\"#/p5/keyReleased\">keyReleased()</a>も）が複数回呼び出される場合があります。リピートの速度は、オペレーティングシステムと各コンピュータの設定によって決まります。ブラウザは、さまざまなキーイベントに対してデフォルトの動作を持つ場合があります。このイベントのデフォルト動作を防ぐには、「return false」をメソッドの最後に追加してください。"
       ],
       "params": {
-        "event": "Object: (Optional) optional KeyboardEvent callback argument."
+        "event": "Object: (オプション) 任意のKeyboardEventコールバック引数。"
       }
     },
     "keyReleased": {
       "description": [
-        "The <a href=\"#/p5/keyReleased\">keyReleased()</a> function is called once every time a key is released. See <a href=\"#/p5/key\">key</a> and <a href=\"#/p5/keyCode\">keyCode</a> for more information. Browsers may have different default behaviors attached to various key events. To prevent any default behavior for this event, add \"return false\" to the end of the function."
+        "<a href=\"#/p5/keyReleased\">keyReleased()</a> 関数は、キーが離されるたびに1回呼び出されます。<a href=\"#/p5/key\">key</a> および <a href=\"#/p5/keyCode\">keyCode</a> を参照してください。ブラウザには、さまざまなキーイベントに対して異なるデフォルトの動作が関連付けられている場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に \"return false\" を追加してください。"
       ],
       "params": {
-        "event": "Object: (Optional) optional KeyboardEvent callback argument."
+        "event": "Object: (オプション) 任意の KeyboardEvent コールバック引数。"
       }
     },
     "keyTyped": {
       "description": [
-        "The <a href=\"#/p5/keyTyped\">keyTyped()</a> function is called once every time a key is pressed, but action keys such as Backspace, Delete, Ctrl, Shift, and Alt are ignored. If you are trying to detect a keyCode for one of these keys, use the <a href=\"#/p5/keyPressed\">keyPressed()</a> function instead. The most recent key typed will be stored in the key variable.",
-        "Because of how operating systems handle key repeats, holding down a key will cause multiple calls to <a href=\"#/p5/keyTyped\">keyTyped()</a> (and <a href=\"#/p5/keyReleased\">keyReleased()</a> as well). The rate of repeat is set by the operating system and how each computer is configured. Browsers may have different default behaviors attached to various key events. To prevent any default behavior for this event, add \"return false\" to the end of the function."
+        "<a href=\"#/p5/keyTyped\">keyTyped()</a>関数は、キーが押されるたびに1回呼び出されますが、Backspace、Delete、Ctrl、Shift、Altなどのアクションキーは無視されます。これらのキーのkeyCodeを検出しようとしている場合は、代わりに<a href=\"#/p5/keyPressed\">keyPressed()</a>関数を使用してください。最も最近に入力されたキーは、key変数に格納されます。",
+        "オペレーティングシステムがキーリピートを処理する方法のため、キーを押し続けると、<a href=\"#/p5/keyTyped\">keyTyped()</a>（および<a href=\"#/p5/keyReleased\">keyReleased()</a>）が複数回呼び出されます。リピートの速度は、オペレーティングシステムと各コンピュータの設定によって決まります。ブラウザには、さまざまなキーイベントに対して異なるデフォルトの動作が付与されている場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (Optional) optional KeyboardEvent callback argument."
+        "event": "オブジェクト: (オプション) オプションのKeyboardEventコールバック引数。"
       }
     },
     "keyIsDown": {
       "description": [
-        "The <a href=\"#/p5/keyIsDown\">keyIsDown()</a> function checks if the key is currently down, i.e. pressed. It can be used if you have an object that moves, and you want several keys to be able to affect its behaviour simultaneously, such as moving a sprite diagonally. You can put in any number representing the keyCode of the key, or use any of the variable <a href=\"#/p5/keyCode\">keyCode</a> names listed <a href=\"http://p5js.org/reference/#p5/keyCode\">here</a>."
+        "<a href=\"#/p5/keyIsDown\">keyIsDown()</a> 関数は、キーが現在押されている（ダウン）かどうかをチェックします。これは、オブジェクトが動き、複数のキーが同時にその動作に影響を与えることができる場合に使用できます。例えば、スプライトを斜めに移動させる場合などです。キーの keyCode を表す任意の数値を入力するか、<a href=\"#/p5/keyCode\">keyCode</a> の変数名を <a href=\"http://p5js.org/reference/#p5/keyCode\">こちら</a> にリストされているものから使用することができます。"
       ],
-      "returns": "Boolean: whether key is down or not",
+      "returns": "Boolean: キーがダウンかどうか",
       "params": {
-        "code": "Number: The key to check for."
+        "code": "Number: チェックするキー"
       }
     },
     "movedX": {
       "description": [
-        "The variable movedX contains the horizontal movement of the mouse since the last frame"
+        "変数movedXには、最後のフレーム以降のマウスの水平方向の移動が含まれます。"
       ]
     },
     "movedY": {
       "description": [
-        "The variable movedY contains the vertical movement of the mouse since the last frame"
+        "変数movedYには、最後のフレーム以降のマウスの垂直方向の移動が含まれます。"
       ]
     },
     "mouseX": {
       "description": [
-        "The system variable mouseX always contains the current horizontal position of the mouse, relative to (0, 0) of the canvas. The value at the top-left corner is (0, 0) for 2-D and (-width/2, -height/2) for WebGL. If touch is used instead of mouse input, mouseX will hold the x value of the most recent touch point."
+        "システム変数mouseXは、常にキャンバスの(0, 0)に対するマウスの現在の水平位置を格納しています。左上隅の値は、2-Dの場合は(0, 0)、WebGLの場合は(-width/2, -height/2)です。タッチ入力がマウス入力の代わりに使用される場合、mouseXは最新のタッチポイントのx値を保持します。"
       ]
     },
     "mouseY": {
       "description": [
-        "The system variable mouseY always contains the current vertical position of the mouse, relative to (0, 0) of the canvas. The value at the top-left corner is (0, 0) for 2-D and (-width/2, -height/2) for WebGL. If touch is used instead of mouse input, mouseY will hold the y value of the most recent touch point."
+        "システム変数mouseYは、常にキャンバスの(0, 0)に対するマウスの現在の垂直位置を格納しています。左上隅の値は、2-Dの場合は(0, 0)、WebGLの場合は(-width/2, -height/2)です。タッチ入力がマウス入力の代わりに使用される場合、mouseYは最新のタッチポイントのy値を保持します。"
       ]
     },
     "pmouseX": {
       "description": [
-        "The system variable pmouseX always contains the horizontal position of the mouse or finger in the frame previous to the current frame, relative to (0, 0) of the canvas. The value at the top-left corner is (0, 0) for 2-D and (-width/2, -height/2) for WebGL. Note: pmouseX will be reset to the current mouseX value at the start of each touch event."
+        "システム変数 pmouseX は、常にマウスまたは指の水平位置を、前のフレームに対してキャンバスの (0, 0) を基準にして格納します。左上隅の値は、2-D の場合は (0, 0) 、WebGL の場合は (-width/2, -height/2) です。注意：各タッチイベントの開始時に、pmouseX は現在の mouseX 値にリセットされます。"
       ]
     },
     "pmouseY": {
       "description": [
-        "The system variable pmouseY always contains the vertical position of the mouse or finger in the frame previous to the current frame, relative to (0, 0) of the canvas. The value at the top-left corner is (0, 0) for 2-D and (-width/2, -height/2) for WebGL. Note: pmouseY will be reset to the current mouseY value at the start of each touch event."
+        "システム変数 pmouseY は、常にマウスまたは指の垂直位置を、前のフレームに対してキャンバスの (0, 0) を基準にして格納します。左上隅の値は、2-D の場合は (0, 0) 、WebGL の場合は (-width/2, -height/2) です。注意：各タッチイベントの開始時に、pmouseY は現在の mouseY 値にリセットされます。"
       ]
     },
     "winMouseX": {
       "description": [
-        "The system variable winMouseX always contains the current horizontal position of the mouse, relative to (0, 0) of the window."
+        "システム変数 winMouseX は、常にマウスの水平位置を、ウィンドウの (0, 0) を基準にして格納します。"
       ]
     },
     "winMouseY": {
       "description": [
-        "The system variable winMouseY always contains the current vertical position of the mouse, relative to (0, 0) of the window."
+        "システム変数 winMouseY は、常にマウスの垂直位置を、ウィンドウの (0, 0) を基準にして格納します。"
       ]
     },
     "pwinMouseX": {
       "description": [
-        "The system variable pwinMouseX always contains the horizontal position of the mouse in the frame previous to the current frame, relative to (0, 0) of the window. Note: pwinMouseX will be reset to the current winMouseX value at the start of each touch event."
+        "システム変数 pwinMouseX は、現在のフレームの前のフレームにおける、ウィンドウの (0, 0) に対するマウスの水平位置を常に含んでいます。注意：pwinMouseX は、各タッチイベントの開始時に現在の winMouseX の値にリセットされます。"
       ]
     },
     "pwinMouseY": {
       "description": [
-        "The system variable pwinMouseY always contains the vertical position of the mouse in the frame previous to the current frame, relative to (0, 0) of the window. Note: pwinMouseY will be reset to the current winMouseY value at the start of each touch event."
+        "システム変数 pwinMouseY は、現在のフレームの前のフレームにおける、ウィンドウの (0, 0) に対するマウスの垂直位置を常に含んでいます。注意：pwinMouseY は、各タッチイベントの開始時に現在の winMouseY の値にリセットされます。"
       ]
     },
     "mouseButton": {
       "description": [
-        "p5 automatically tracks if the mouse button is pressed and which button is pressed. The value of the system variable mouseButton is either LEFT, RIGHT, or CENTER depending on which button was pressed last. Warning: different browsers may track mouseButton differently."
+        "p5 はマウスボタンが押されているかどうかと、どのボタンが押されているかを自動的に追跡します。システム変数 mouseButton の値は、最後に押されたボタンに応じて、LEFT、RIGHT、または CENTER になります。警告：異なるブラウザでは、mouseButton の追跡方法が異なる場合があります。"
       ]
     },
     "mouseIsPressed": {
       "description": [
-        "The boolean system variable mouseIsPressed is true if the mouse is pressed and false if not."
+        "真偽値のシステム変数 mouseIsPressed は、マウスが押されている場合は true、押されていない場合は false です。"
       ]
     },
     "mouseMoved": {
       "description": [
-        "The <a href=\"#/p5/mouseMoved\">mouseMoved()</a> function is called every time the mouse moves and a mouse button is not pressed. Browsers may have different default behaviors attached to various mouse events. To prevent any default behavior for this event, add \"return false\" to the end of the method."
+        "<a href=\"#/p5/mouseMoved\">mouseMoved()</a> 関数は、マウスが移動し、マウスボタンが押されていない場合に呼び出されます。ブラウザには、さまざまなマウスイベントに関連付けられたデフォルトの動作が異なる場合があります。このイベントのデフォルトの動作を防ぐには、「return false」をメソッドの最後に追加します。"
       ],
       "params": {
-        "event": "Object: (Optional) optional MouseEvent callback argument."
+        "event": "Object: (Optional) オプションの MouseEvent コールバック引数。"
       }
     },
     "mouseDragged": {
       "description": [
-        "The <a href=\"#/p5/mouseDragged\">mouseDragged()</a> function is called once every time the mouse moves and a mouse button is pressed. If no <a href=\"#/p5/mouseDragged\">mouseDragged()</a> function is defined, the <a href=\"#/p5/touchMoved\">touchMoved()</a> function will be called instead if it is defined. Browsers may have different default behaviors attached to various mouse events. To prevent any default behavior for this event, add \"return false\" to the end of the function."
+        "<a href=\"#/p5/mouseDragged\">mouseDragged()</a>関数は、マウスが移動し、マウスボタンが押されるたびに1回呼び出されます。 <a href=\"#/p5/mouseDragged\">mouseDragged()</a>関数が定義されていない場合、代わりに<a href=\"#/p5/touchMoved\">touchMoved()</a>関数が呼び出されます（定義されている場合）。ブラウザには、さまざまなマウスイベントに対して異なるデフォルトの動作が付随している場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (Optional) optional MouseEvent callback argument."
+        "event": "Object: (オプション) 任意のMouseEventコールバック引数。"
       }
     },
     "mousePressed": {
       "description": [
-        "The <a href=\"#/p5/mousePressed\">mousePressed()</a> function is called once after every time a mouse button is pressed. The mouseButton variable (see the related reference entry) can be used to determine which button has been pressed. If no <a href=\"#/p5/mousePressed\">mousePressed()</a> function is defined, the <a href=\"#/p5/touchStarted\">touchStarted()</a> function will be called instead if it is defined. Browsers may have different default behaviors attached to various mouse events. To prevent any default behavior for this event, add \"return false\" to the end of the function."
+        "<a href=\"#/p5/mousePressed\">mousePressed()</a>関数は、マウスボタンが押されるたびに1回呼び出されます。mouseButton変数（関連するリファレンスエントリを参照）を使用して、どのボタンが押されたかを判断できます。<a href=\"#/p5/mousePressed\">mousePressed()</a>関数が定義されていない場合、代わりに<a href=\"#/p5/touchStarted\">touchStarted()</a>関数が呼び出されます（定義されている場合）。ブラウザには、さまざまなマウスイベントに対して異なるデフォルトの動作が付随している場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (Optional) optional MouseEvent callback argument."
+        "event": "Object: (オプション) 任意のMouseEventコールバック引数。"
       }
     },
     "mouseReleased": {
       "description": [
-        "The <a href=\"#/p5/mouseReleased\">mouseReleased()</a> function is called every time a mouse button is released. If no <a href=\"#/p5/mouseReleased\">mouseReleased()</a> function is defined, the <a href=\"#/p5/touchEnded\">touchEnded()</a> function will be called instead if it is defined. Browsers may have different default behaviors attached to various mouse events. To prevent any default behavior for this event, add \"return false\" to the end of the function."
+        "<a href=\"#/p5/mouseReleased\">mouseReleased()</a>関数は、マウスボタンが離されるたびに呼び出されます。 <a href=\"#/p5/mouseReleased\">mouseReleased()</a>関数が定義されていない場合、代わりに<a href=\"#/p5/touchEnded\">touchEnded()</a>関数が定義されている場合はそれが呼び出されます。ブラウザには、さまざまなマウスイベントに関連するデフォルトの動作が異なる場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (Optional) optional MouseEvent callback argument."
+        "event": "Object: (オプション)オプションのMouseEventコールバック引数。"
       }
     },
     "mouseClicked": {
       "description": [
-        "The <a href=\"#/p5/mouseClicked\">mouseClicked()</a> function is called once after a mouse button has been pressed and then released. Browsers handle clicks differently, so this function is only guaranteed to be run when the left mouse button is clicked. To handle other mouse buttons being pressed or released, see <a href=\"#/p5/mousePressed\">mousePressed()</a> or <a href=\"#/p5/mouseReleased\">mouseReleased()</a>. Browsers may have different default behaviors attached to various mouse events. To prevent any default behavior for this event, add \"return false\" to the end of the function."
+        "<a href=\"#/p5/mouseClicked\">mouseClicked()</a>関数は、マウスボタンが押されてから離された後に1回だけ呼び出されます。ブラウザはクリックを異なる方法で処理するため、この関数は左マウスボタンがクリックされたときに実行されることが保証されています。他のマウスボタンが押されたり離されたりするのを処理するには、<a href=\"#/p5/mousePressed\">mousePressed()</a>または<a href=\"#/p5/mouseReleased\">mouseReleased()</a>を参照してください。ブラウザには、さまざまなマウスイベントに関連するデフォルトの動作が異なる場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (Optional) optional MouseEvent callback argument."
+        "event": "Object: (オプション)オプションのMouseEventコールバック引数。"
       }
     },
     "doubleClicked": {
       "description": [
-        "The <a href=\"#/p5/doubleClicked\">doubleClicked()</a> function is executed every time a event listener has detected a dblclick event which is a part of the DOM L3 specification. The doubleClicked event is fired when a pointing device button (usually a mouse's primary button) is clicked twice on a single element. For more info on the dblclick event refer to mozilla's documentation here: <a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/dblclick\">https://developer.mozilla.org/en-US/docs/Web/Events/dblclick</a>"
+        "<a href=\"#/p5/doubleClicked\">doubleClicked()</a> 関数は、DOM L3仕様の一部であるdblclickイベントを検出したイベントリスナーがあるたびに実行されます。doubleClickedイベントは、ポインティングデバイスのボタン（通常はマウスのプライマリボタン）が1つの要素上で2回クリックされると発火します。dblclickイベントの詳細については、mozillaのドキュメントを参照してください: <a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/dblclick\">https://developer.mozilla.org/en-US/docs/Web/Events/dblclick</a>"
       ],
       "params": {
-        "event": "Object: (Optional) optional MouseEvent callback argument."
+        "event": "Object: (オプション) 任意のMouseEventコールバック引数。"
       }
     },
     "mouseWheel": {
       "description": [
-        "The function <a href=\"#/p5/mouseWheel\">mouseWheel()</a> is executed every time a vertical mouse wheel event is detected either triggered by an actual mouse wheel or by a touchpad. The event.delta property returns the amount the mouse wheel have scrolled. The values can be positive or negative depending on the scroll direction (on macOS with \"natural\" scrolling enabled, the signs are inverted). Browsers may have different default behaviors attached to various mouse events. To prevent any default behavior for this event, add \"return false\" to the end of the method. Due to the current support of the \"wheel\" event on Safari, the function may only work as expected if \"return false\" is included while using Safari."
+        "関数 <a href=\"#/p5/mouseWheel\">mouseWheel()</a> は、実際のマウスホイールまたはタッチパッドによってトリガーされるたびに、垂直方向のマウスホイールイベントが検出されるたびに実行されます。event.deltaプロパティは、マウスホイールがスクロールした量を返します。値は、スクロール方向によって正または負になることがあります（macOSで「ナチュラル」スクロールが有効になっている場合、符号が反転します）。ブラウザによっては、さまざまなマウスイベントにデフォルトの動作が関連付けられていることがあります。このイベントのデフォルトの動作を防ぐには、メソッドの最後に「return false」を追加します。現在のSafariにおける「wheel」イベントのサポート状況のため、Safariを使用している場合には、期待通りの動作をするために「return false」を含める必要があります。"
       ],
       "params": {
-        "event": "Object: (Optional) optional WheelEvent callback argument."
+        "event": "Object: (オプション) 任意のWheelEventコールバック引数。"
       }
     },
     "requestPointerLock": {
       "description": [
-        "The function <a href=\"#/p5/requestPointerLock\">requestPointerLock()</a> locks the pointer to its current position and makes it invisible. Use <a href=\"#/p5/movedX\">movedX</a> and <a href=\"#/p5/movedY\">movedY</a> to get the difference the mouse was moved since the last call of draw. Note that not all browsers support this feature. This enables you to create experiences that aren't limited by the mouse moving out of the screen even if it is repeatedly moved into one direction. For example, a first person perspective experience."
+        "関数 <a href=\"#/p5/requestPointerLock\">requestPointerLock()</a> は、ポインタを現在の位置にロックし、不可視にします。<a href=\"#/p5/movedX\">movedX</a> と <a href=\"#/p5/movedY\">movedY</a> を使って、drawの最後の呼び出し以降にマウスが移動した差分を取得します。すべてのブラウザがこの機能をサポートしているわけではないことに注意してください。これにより、マウスが画面の外に出ても、繰り返し一方向に移動しても制限されないエクスペリエンスを作成できます。例えば、一人称視点のエクスペリエンス。"
       ]
     },
     "exitPointerLock": {
       "description": [
-        "The function <a href=\"#/p5/exitPointerLock\">exitPointerLock()</a> exits a previously triggered <a href=\"#/p5/requestPointerLock\">pointer Lock</a> for example to make ui elements usable etc"
+        "関数 <a href=\"#/p5/exitPointerLock\">exitPointerLock()</a> は、以前にトリガーされた <a href=\"#/p5/requestPointerLock\">ポインタロック</a> を終了させます。例えば、UI要素を使用可能にするためなど。"
       ]
     },
     "touches": {
       "description": [
-        "The system variable touches[] contains an array of the positions of all current touch points, relative to (0, 0) of the canvas, and IDs identifying a unique touch as it moves. Each element in the array is an object with x, y, and id properties.",
-        "The touches[] array is not supported on Safari and IE on touch-based desktops (laptops)."
+        "システム変数 touches[] は、キャンバスの (0, 0) に対する現在のすべてのタッチポイントの位置と、移動するユニークなタッチを識別するIDが含まれた配列です。配列の各要素は、x, y, および id プロパティを持つオブジェクトです。",
+        "touches[] 配列は、タッチベースのデスクトップ（ノートパソコン）の Safari および IE ではサポートされていません。"
       ]
     },
     "touchStarted": {
       "description": [
-        "The touchStarted() function is called once after every time a touch is registered. If no <a href=\"#/p5/touchStarted\">touchStarted()</a> function is defined, the <a href=\"#/p5/mousePressed\">mousePressed()</a> function will be called instead if it is defined. Browsers may have different default behaviors attached to various touch events. To prevent any default behavior for this event, add \"return false\" to the end of the method."
+        "touchStarted() 関数は、タッチが登録されるたびに1回呼び出されます。もし <a href=\"#/p5/touchStarted\">touchStarted()</a> 関数が定義されていない場合、代わりに定義されている <a href=\"#/p5/mousePressed\">mousePressed()</a> 関数が呼び出されます。ブラウザは、さまざまなタッチイベントに対して異なるデフォルトの動作を持っている場合があります。このイベントのデフォルトの動作を防ぐには、メソッドの最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (Optional) optional TouchEvent callback argument."
+        "event": "Object: (オプション) 任意の TouchEvent コールバック引数。"
       }
     },
     "touchMoved": {
       "description": [
-        "The <a href=\"#/p5/touchMoved\">touchMoved()</a> function is called every time a touch move is registered. If no <a href=\"#/p5/touchMoved\">touchMoved()</a> function is defined, the <a href=\"#/p5/mouseDragged\">mouseDragged()</a> function will be called instead if it is defined. Browsers may have different default behaviors attached to various touch events. To prevent any default behavior for this event, add \"return false\" to the end of the method."
+        "<a href=\"#/p5/touchMoved\">touchMoved()</a> 関数は、タッチムーブが登録されるたびに呼び出されます。もし <a href=\"#/p5/touchMoved\">touchMoved()</a> 関数が定義されていない場合、代わりに定義されている <a href=\"#/p5/mouseDragged\">mouseDragged()</a> 関数が呼び出されます。ブラウザは、さまざまなタッチイベントに対して異なるデフォルトの動作を持っている場合があります。このイベントのデフォルトの動作を防ぐには、メソッドの最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (Optional) optional TouchEvent callback argument."
+        "event": "Object: (オプション) 任意の TouchEvent コールバック引数。"
       }
     },
     "touchEnded": {
       "description": [
-        "The <a href=\"#/p5/touchEnded\">touchEnded()</a> function is called every time a touch ends. If no <a href=\"#/p5/touchEnded\">touchEnded()</a> function is defined, the <a href=\"#/p5/mouseReleased\">mouseReleased()</a> function will be called instead if it is defined. Browsers may have different default behaviors attached to various touch events. To prevent any default behavior for this event, add \"return false\" to the end of the method."
+        "<a href=\"#/p5/touchEnded\">touchEnded()</a> 関数はタッチが終了するたびに呼び出されます。 <a href=\"#/p5/touchEnded\">touchEnded()</a> 関数が定義されていない場合、代わりに定義されている <a href=\"#/p5/mouseReleased\">mouseReleased()</a> 関数が呼び出されます。 ブラウザは、さまざまなタッチイベントに添付された異なるデフォルトの動作を持つことがあります。 このイベントのデフォルトの動作を防ぐには、メソッドの最後に \"return false\" を追加してください。"
       ],
       "params": {
-        "event": "Object: (Optional) optional TouchEvent callback argument."
+        "event": "Object: (オプション) 任意の TouchEvent コールバック引数。"
       }
     },
     "createImage": {
@@ -4392,7 +4392,7 @@
       "params": {
         "time": "Number: このメディア要素の再生に関連する秒単位の時間。例えば、再生が2秒に達するたびにイベントをトリガーするには、数値2を渡します。これは、コールバック関数に最初のパラメータとして渡されます。",
         "callback": "Function: 指定された時間に呼び出される関数の名前。コールバックは、時間と（オプションで）パラメータを2つのパラメータとして受け取ります。",
-        "value": "Object: （オプション）コールバック関数に2番目のパラメータとして渡されるオブジェクト。"
+        "value": "Object: (オプション)コールバック関数に2番目のパラメータとして渡されるオブジェクト。"
       }
     },
     "removeCue": {
