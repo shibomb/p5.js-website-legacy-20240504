@@ -1975,1020 +1975,1028 @@
     },
     "createImage": {
       "description": [
-        "Creates a new <a href=\"#/p5.Image\">p5.Image</a> (the datatype for storing images). This provides a fresh buffer of pixels to play with. Set the size of the buffer with the width and height parameters.",
-        ".<a href=\"#/p5.Image/pixels\">pixels</a> gives access to an array containing the values for all the pixels in the display window. These values are numbers. This array is the size (including an appropriate factor for the <a href=\"#/p5/pixelDensity\">pixelDensity</a>) of the display window x4, representing the R, G, B, A values in order for each pixel, moving from left to right across each row, then down each column. See .<a href=\"#/p5.Image/pixels\">pixels</a> for more info. It may also be simpler to use <a href=\"#/p5.Image/set\">set()</a> or <a href=\"#/p5.Image/get\">get()</a>.",
-        "Before accessing the pixels of an image, the data must loaded with the <a href=\"#/p5.Image/loadPixels\">loadPixels()</a> function. After the array data has been modified, the <a href=\"#/p5.Image/updatePixels\">updatePixels()</a> function must be run to update the changes."
+        "新しい <a href=\"#/p5.Image\">p5.Image</a>（画像を格納するデータ型）を作成します。これにより、新しいピクセルバッファが利用できるようになります。バッファのサイズを、width および height パラメータで設定します。",
+        ".<a href=\"#/p5.Image/pixels\">pixels</a> は、表示ウィンドウ内のすべてのピクセルの値を含む配列にアクセスできます。これらの値は数字です。この配列は、表示ウィンドウのサイズ（<a href=\"#/p5/pixelDensity\">pixelDensity</a> の適切な係数を含む）x4で、各ピクセルの R、G、B、A の値を順番に、各行を左から右に、各列を上から下に移動して表現しています。詳細については、.<a href=\"#/p5.Image/pixels\">pixels</a> を参照してください。また、<a href=\"#/p5.Image/set\">set()</a> や <a href=\"#/p5.Image/get\">get()</a> を使用する方が簡単かもしれません。",
+        "画像のピクセルにアクセスする前に、<a href=\"#/p5.Image/loadPixels\">loadPixels()</a> 関数を使用してデータをロードする必要があります。配列データが変更された後、変更を更新するために <a href=\"#/p5.Image/updatePixels\">updatePixels()</a> 関数を実行する必要があります。"
       ],
-      "returns": "p5.Image: the <a href=\"#/p5.Image\">p5.Image</a> object",
+      "returns": "p5.Image: <a href=\"#/p5.Image\">p5.Image</a> オブジェクト",
       "params": {
-        "width": "Integer: width in pixels",
-        "height": "Integer: height in pixels"
+        "width": "Integer: ピクセル単位の幅",
+        "height": "Integer: ピクセル単位の高さ"
       }
     },
     "saveCanvas": {
       "description": [
-        "Save the current canvas as an image. The browser will either save the file immediately, or prompt the user with a dialogue window."
+        "現在のキャンバスを画像として保存します。ブラウザは、ファイルをすぐに保存するか、ダイアログウィンドウでユーザーにプロンプトを表示します。"
       ],
       "params": {
-        "selectedCanvas": "p5.Element|HTMLCanvasElement: a variable  representing a specific html5 canvas (optional)",
-        "filename": "String (Optional)",
-        "extension": "String: (Optional) 'jpg' or 'png'"
+        "selectedCanvas": "p5.Element|HTMLCanvasElement: 特定のhtml5キャンバスを表す変数 (オプション)",
+        "filename": "String (オプション)",
+        "extension": "String: (オプション) 'jpg' または 'png'"
       }
     },
     "saveFrames": {
       "description": [
-        "Capture a sequence of frames that can be used to create a movie. Accepts a callback. For example, you may wish to send the frames to a server where they can be stored or converted into a movie. If no callback is provided, the browser will pop up save dialogues in an attempt to download all of the images that have just been created. With the callback provided the image data isn't saved by default but instead passed as an argument to the callback function as an array of objects, with the size of array equal to the total number of frames.",
-        "The arguments <code>duration</code> and <code>framerate</code> are constrained to be less or equal to 15 and 22, respectively, which means you can only download a maximum of 15 seconds worth of frames at 22 frames per second, adding up to 330 frames. This is done in order to avoid memory problems since a large enough canvas can fill up the memory in your computer very easily and crash your program or even your browser.",
-        "To export longer animations, you might look into a library like <a href=\"https://github.com/spite/ccapture.js/\">ccapture.js</a>."
+        "映画を作成するために使用できるフレームのシーケンスをキャプチャします。コールバックを受け入れます。例えば、フレームをサーバーに送信して保存したり、映画に変換したりする場合があります。コールバックが提供されない場合、ブラウザは作成されたばかりのすべての画像をダウンロードしようとする保存ダイアログをポップアップします。コールバックが提供された場合、画像データはデフォルトでは保存されず、代わりにコールバック関数の引数としてオブジェクトの配列として渡されます。配列のサイズは、フレームの合計数に等しくなります。",
+        "引数 <code>duration</code> と <code>framerate</code> は、それぞれ 15 以下、および 22 以下に制約されています。これは、1 秒あたり 22 フレームで最大 15 秒分のフレームをダウンロードできることを意味し、フレームの合計数は 330 になります。これは、十分な大きさのキャンバスが簡単にコンピュータのメモリを埋め尽くし、プログラムやブラウザをクラッシュさせる可能性があるため、メモリの問題を避けるために行われています。",
+        "より長いアニメーションをエクスポートするには、<a href=\"https://github.com/spite/ccapture.js/\">ccapture.js</a> のようなライブラリを検討してみてください。"
       ],
       "params": {
         "filename": "String",
-        "extension": "String: 'jpg' or 'png'",
-        "duration": "Number: Duration in seconds to save the frames for. This parameter will be constrained to be less or equal to 15.",
-        "framerate": "Number: Framerate to save the frames in. This parameter will be constrained to be less or equal to 22.",
-        "callback": "Function(Array): (Optional) A callback function that will be executed  to handle the image data. This function  should accept an array as argument. The  array will contain the specified number of  frames of objects. Each object has three  properties: imageData - an  image/octet-stream, filename and extension."
+        "extension": "String: 'jpg' または 'png'",
+        "duration": "Number: フレームを保存するための秒単位の期間。このパラメータは 15 以下に制約されます。",
+        "framerate": "Number: フレームを保存するフレームレート。このパラメータは 22 以下に制約されます。",
+        "callback": "Function(Array): (オプション) 画像データを処理するために実行されるコールバック関数。この関数は引数として配列を受け入れる必要があります。配列には、指定された数のフレームオブジェクトが含まれます。各オブジェクトには3つのプロパティがあります：imageData - image/octet-stream、filename、およびextension。"
       }
     },
     "loadImage": {
       "description": [
-        "Loads an image from a path and creates a <a href=\"#/p5.Image\">p5.Image</a> from it.",
-        "The image may not be immediately available for rendering. If you want to ensure that the image is ready before doing anything with it, place the <a href=\"#/p5/loadImage\">loadImage()</a> call in <a href=\"#/p5/preload\">preload()</a>. You may also supply a callback function to handle the image when it's ready.",
-        "The path to the image should be relative to the HTML file that links in your sketch. Loading an image from a URL or other remote location may be blocked due to your browser's built-in security.",
-        "You can also pass in a string of a base64 encoded image as an alternative to the file path. Remember to add \"data:image/png;base64,\" in front of the string."
+        "画像をパスから読み込み、<a href=\"#/p5.Image\">p5.Image</a> を作成します。",
+        "画像はレンダリングのためにすぐに利用できない場合があります。画像が準備完了してから何かを行いたい場合は、<a href=\"#/p5/loadImage\">loadImage()</a> を <a href=\"#/p5/preload\">preload()</a> の中に入れてください。また、準備ができたときに画像を処理するためのコールバック関数を提供することもできます。",
+        "画像へのパスは、スケッチにリンクするHTMLファイルに対して相対的であるべきです。URLや他のリモート場所からの画像の読み込みは、ブラウザの組み込みセキュリティによってブロックされることがあります。",
+        "ファイルパスの代わりに、base64でエンコードされた画像の文字列を渡すこともできます。文字列の前に \"data:image/png;base64,\" を追加することを忘れないでください。"
       ],
-      "returns": "p5.Image: the <a href=\"#/p5.Image\">p5.Image</a> object",
+      "returns": "p5.Image: <a href=\"#/p5.Image\">p5.Image</a> オブジェクト",
       "params": {
-        "path": "String: Path of the image to be loaded",
-        "successCallback": "function(p5.Image): (Optional) Function to be called once  the image is loaded. Will be passed the  <a href=\"#/p5.Image\">p5.Image</a>.",
-        "failureCallback": "Function(Event): (Optional) called with event error if  the image fails to load."
+        "path": "String: 読み込む画像のパス",
+        "successCallback": "function(p5.Image): (オプション) 画像が読み込まれたら呼び出される関数。<a href=\"#/p5.Image\">p5.Image</a> が渡されます。",
+        "failureCallback": "Function(Event): (オプション) 画像の読み込みに失敗した場合、イベントエラーとともに呼び出されます。"
       }
     },
     "saveGif": {
       "description": [
-        "Generates a gif of your current animation and downloads it to your computer!",
-        "The duration argument specifies how many seconds you want to record from your animation. This value is then converted to the necessary number of frames to generate it, depending on the value of units. More on that on the next paragraph.",
-        "An optional object that can contain two more arguments: delay (number) and units (string).",
-        "<code>delay</code>, specifying how much time we should wait before recording",
-        "<code>units</code>, a string that can be either 'seconds' or 'frames'. By default it's 'seconds'.",
-        "<code>units</code> specifies how the duration and delay arguments will behave. If 'seconds', these arguments will correspond to seconds, meaning that 3 seconds worth of animation will be created. If 'frames', the arguments now correspond to the number of frames you want your animation to be, if you are very sure of this number.",
-        "This may be called in setup, or, like in the example below, inside an event function, like keyPressed or mousePressed."
+        "現在のアニメーションをgifとして生成し、コンピュータにダウンロードします！",
+        "duration引数は、アニメーションから録画したい秒数を指定します。この値は、unitsの値に応じて、生成する必要があるフレーム数に変換されます。次の段落で詳しく説明します。",
+        "さらに2つの引数を含むオプションのオブジェクトです：delay（number）およびunits（string）。",
+        "<code>delay</code>は、録画を開始する前に待つ時間を指定します。",
+        "<code>units</code>は、'seconds'または'frames'のいずれかの文字列です。デフォルトでは'seconds'です。",
+        "<code>units</code>は、durationとdelay引数の動作方法を指定します。'seconds'の場合、これらの引数は秒に対応し、3秒間のアニメーションが作成されることを意味します。'frames'の場合、引数はアニメーションのフレーム数に対応し、この数値が非常に確実な場合に限ります。",
+        "これは、setupで呼び出すことも、以下の例のように、keyPressedやmousePressedなどのイベント関数内で呼び出すこともできます。"
       ],
       "params": {
-        "filename": "String: File name of your gif",
-        "duration": "Number: Duration in seconds that you wish to capture from your sketch",
-        "options": "Object: An optional object that can contain two more arguments: delay, specifying how much time we should wait before recording, and units, a string that can be either 'seconds' or 'frames'. By default it's 'seconds'."
+        "filename": "String: gifファイルのファイル名",
+        "duration": "Number: スケッチからキャプチャしたい秒数の長さ",
+        "options": "Object: delay（録画を開始する前に待つ時間を指定する）およびunits（'seconds'または'frames'のいずれかの文字列。デフォルトでは'seconds'）を含むオプションのオブジェクト。"
       }
     },
     "image": {
       "description": [
-        "Draw an image to the p5.js canvas.",
-        "This function can be used with different numbers of parameters. The simplest use requires only three parameters: img, x, and y—where (x, y) is the position of the image. Two more parameters can optionally be added to specify the width and height of the image.",
-        "This function can also be used with eight Number parameters. To differentiate between all these parameters, p5.js uses the language of \"destination rectangle\" (which corresponds to \"dx\", \"dy\", etc.) and \"source image\" (which corresponds to \"sx\", \"sy\", etc.) below. Specifying the \"source image\" dimensions can be useful when you want to display a subsection of the source image instead of the whole thing. Here's a diagram to explain further: <img src=\"assets/drawImage.png\"></img>",
-        "This function can also be used to draw images without distorting the orginal aspect ratio, by adding 9th parameter, fit, which can either be COVER or CONTAIN. CONTAIN, as the name suggests, contains the whole image within the specified destination box without distorting the image ratio. COVER covers the entire destination box."
+        "p5.jsキャンバスに画像を描画します。",
+        "この関数は、異なる数のパラメータで使用できます。最もシンプルな使い方では、img、x、およびyの3つのパラメータだけが必要で、(x, y)は画像の位置です。さらに2つのパラメータをオプションで追加して、画像の幅と高さを指定できます。",
+        "この関数は、8つのNumberパラメータでも使用できます。これらすべてのパラメータを区別するために、p5.jsでは、「destination rectangle」（これに対応するのは「dx」、「dy」など）と「source image」（これに対応するのは「sx」、「sy」など）という言葉を使用しています。ソース画像の一部を表示したい場合に、「source image」の寸法を指定すると便利です。さらに説明するための図を参照してください： <img src=\"assets/drawImage.png\"></img>",
+        "この関数は、9番目のパラメータであるfitを追加することで、元のアスペクト比を歪めずに画像を描画するためにも使用できます。fitは、COVERまたはCONTAINのいずれかになります。CONTAINは、名前が示すように、指定された宛先ボックス内に画像全体を含め、画像の比率を歪めません。COVERは、宛先ボックス全体を覆います。"
       ],
       "params": {
-        "img": "p5.Image|p5.Element|p5.Texture: the image to display",
-        "x": "Number: the x-coordinate of the top-left corner of the image",
-        "y": "Number: the y-coordinate of the top-left corner of the image",
-        "width": "Number: (Optional) the width to draw the image",
-        "height": "Number: (Optional) the height to draw the image",
-        "dx": "Number: the x-coordinate of the destination  rectangle in which to draw the source image",
-        "dy": "Number: the y-coordinate of the destination  rectangle in which to draw the source image",
-        "dWidth": "Number: the width of the destination rectangle",
-        "dHeight": "Number: the height of the destination rectangle",
-        "sx": "Number: the x-coordinate of the subsection of the source image to draw into the destination rectangle",
-        "sy": "Number: the y-coordinate of the subsection of the source image to draw into the destination rectangle",
-        "sWidth": "Number: (Optional) the width of the subsection of the  source image to draw into the destination  rectangle",
-        "sHeight": "Number: (Optional) the height of the subsection of the  source image to draw into the destination rectangle",
-        "fit": "Constant: (Optional) either CONTAIN or COVER",
-        "xAlign": "Constant: (Optional) either LEFT, RIGHT or CENTER default is CENTER",
-        "yAlign": "Constant: (Optional) either TOP, BOTTOM or CENTER default is CENTER"
+        "img": "p5.Image|p5.Element|p5.Texture: 表示する画像",
+        "x": "Number: 画像の左上隅のx座標",
+        "y": "Number: 画像の左上隅のy座標",
+        "width": "Number: (オプション) 画像を描画する幅",
+        "height": "Number: (オプション) 画像を描画する高さ",
+        "dx": "Number: ソース画像を描画する宛先矩形のx座標",
+        "dy": "Number: ソース画像を描画する宛先矩形のy座標",
+        "dWidth": "Number: 宛先矩形の幅",
+        "dHeight": "Number: 宛先矩形の高さ",
+        "sx": "Number: ソース画像のサブセクションを宛先矩形に描画するx座標",
+        "sy": "Number: ソース画像のサブセクションを宛先矩形に描画するy座標",
+        "sWidth": "Number: (オプション) ソース画像のサブセクションの幅で、目的の矩形に描画されます",
+        "sHeight": "Number: (オプション) ソース画像のサブセクションの高さで、目的の矩形に描画されます",
+        "fit": "Constant: (オプション) CONTAIN または COVER のいずれか",
+        "xAlign": "Constant: (オプション) LEFT, RIGHT, または CENTER のいずれか。デフォルトは CENTER",
+        "yAlign": "Constant: (オプション) TOP, BOTTOM, または CENTER のいずれか。デフォルトは CENTER"
       }
     },
     "tint": {
       "description": [
-        "Sets the fill value for displaying images. Images can be tinted to specified colors or made transparent by including an alpha value.",
-        "To apply transparency to an image without affecting its color, use white as the tint color and specify an alpha value. For instance, tint(255, 128) will make an image 50% transparent (assuming the default alpha range of 0-255, which can be changed with <a href=\"#/p5/colorMode\">colorMode()</a>).",
-        "The value for the gray parameter must be less than or equal to the current maximum value as specified by <a href=\"#/p5/colorMode\">colorMode()</a>. The default maximum value is 255."
+        "画像の表示に使用する塗りつぶしの値を設定します。画像は指定された色に着色されたり、アルファ値を含むことで透明になったりします。",
+        "画像の色に影響を与えずに透明性を適用するには、塗り色に白を使用し、アルファ値を指定してください。例えば、tint(255, 128)は、画像を50％透明にします（デフォルトのアルファ範囲が0-255であることを前提にしていますが、<a href=\"#/p5/colorMode\">colorMode()</a>で変更することができます）。",
+        "grayパラメータの値は、<a href=\"#/p5/colorMode\">colorMode()</a>で指定された現在の最大値以下でなければなりません。デフォルトの最大値は255です。"
       ],
       "params": {
-        "v1": "Number: red or hue value relative to  the current color range",
-        "v2": "Number: green or saturation value  relative to the current color range",
-        "v3": "Number: blue or brightness value  relative to the current color range",
+        "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
+        "v2": "Number: 現在のカラーレンジに対する緑または彩度の値",
+        "v3": "Number: 現在のカラーレンジに対する青または明度の値",
         "alpha": "Number (Optional)",
-        "value": "String: a color string",
-        "gray": "Number: a gray value",
-        "values": "Number[]: an array containing the red,green,blue &  and alpha components of the color",
-        "color": "p5.Color: the tint color"
+        "value": "String: カラー文字列",
+        "gray": "Number: グレーの値",
+        "values": "Number[]: 色の赤、緑、青、およびアルファ成分を含む配列",
+        "color": "p5.Color: 着色色"
       }
     },
     "noTint": {
       "description": [
-        "Removes the current fill value for displaying images and reverts to displaying images with their original hues."
+        "画像の表示に使用する現在の塗りつぶし値を削除し、元の色相で画像を表示するように戻します。"
       ]
     },
     "imageMode": {
       "description": [
-        "Set image mode. Modifies the location from which images are drawn by changing the way in which parameters given to <a href=\"#/p5/image\">image()</a> are interpreted. The default mode is imageMode(CORNER), which interprets the second and third parameters of <a href=\"#/p5/image\">image()</a> as the upper-left corner of the image. If two additional parameters are specified, they are used to set the image's width and height.",
-        "imageMode(CORNERS) interprets the second and third parameters of <a href=\"#/p5/image\">image()</a> as the location of one corner, and the fourth and fifth parameters as the opposite corner.",
-        "imageMode(CENTER) interprets the second and third parameters of <a href=\"#/p5/image\">image()</a> as the image's center point. If two additional parameters are specified, they are used to set the image's width and height."
+        "画像モードを設定します。 <a href=\"#/p5/image\">image()</a> に与えられるパラメータの解釈方法を変更することで、画像が描画される位置を変更します。デフォルトのモードは imageMode(CORNER) で、<a href=\"#/p5/image\">image()</a> の第2および第3のパラメータを画像の左上の角として解釈します。さらに2つのパラメータが指定されている場合、それらは画像の幅と高さを設定するために使用されます。",
+        "imageMode(CORNERS) は、<a href=\"#/p5/image\">image()</a> の第2および第3のパラメータを1つの角の位置として解釈し、第4および第5のパラメータを反対側の角として解釈します。",
+        "imageMode(CENTER) は、<a href=\"#/p5/image\">image()</a> の第2および第3のパラメータを画像の中心点として解釈します。さらに2つのパラメータが指定されている場合、それらは画像の幅と高さを設定するために使用されます。"
       ],
       "params": {
-        "mode": "Constant: either CORNER, CORNERS, or CENTER"
+        "mode": "定数: CORNER、CORNERS、または CENTER のいずれか"
       }
     },
     "pixels": {
       "description": [
-        "<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference /Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a> containing the values for all the pixels in the display window. These values are numbers. This array is the size (include an appropriate factor for <a href=\"#/p5/pixelDensity\">pixelDensity</a>) of the display window x4, representing the R, G, B, A values in order for each pixel, moving from left to right across each row, then down each column. Retina and other high density displays will have more pixels[] (by a factor of pixelDensity^2). For example, if the image is 100×100 pixels, there will be 40,000. On a retina display, there will be 160,000.",
-        "The first four values (indices 0-3) in the array will be the R, G, B, A values of the pixel at (0, 0). The second four values (indices 4-7) will contain the R, G, B, A values of the pixel at (1, 0). More generally, to set values for a pixel at (x, y): <pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
-        "While the above method is complex, it is flexible enough to work with any pixelDensity. Note that <a href=\"#/p5/set\">set()</a> will automatically take care of setting all the appropriate values in <a href=\"#/p5/pixels\">pixels[]</a> for a given (x, y) at any pixelDensity, but the performance may not be as fast when lots of modifications are made to the pixel array.",
-        "Before accessing this array, the data must loaded with the <a href=\"#/p5/loadPixels\">loadPixels()</a> function. After the array data has been modified, the <a href=\"#/p5/updatePixels\">updatePixels()</a> function must be run to update the changes.",
-        "Note that this is not a standard javascript array. This means that standard javascript functions such as <a href=\"#/p5/slice\">slice()</a> or <a href=\"#/p5/arrayCopy\">arrayCopy()</a> do not work."
+        "ディスプレイウィンドウ内のすべてのピクセルの値を含む<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference /Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a>です。これらの値は数値です。この配列は、ディスプレイウィンドウのサイズ（<a href=\"#/p5/pixelDensity\">pixelDensity</a>の適切な係数を含む）x4で、各ピクセルのR、G、B、Aの値を左から右へ、各行から下へ移動しながら順番に表現しています。Retinaやその他の高密度ディスプレイは、ピクセル密度の二乗の係数であるピクセル[]を持っています。例えば、画像が100×100ピクセルの場合、40,000になります。Retinaディスプレイでは160,000になります。",
+        "配列の最初の4つの値（インデックス0-3）は、ピクセル(0, 0)のR、G、B、Aの値です。次の4つの値（インデックス4-7）は、ピクセル(1, 0)のR、G、B、Aの値が含まれます。一般的には、(x, y)のピクセルの値を設定するには、次のようにします：<pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
+        "上記の方法は複雑ですが、任意のpixelDensityで動作する柔軟性があります。<a href=\"#/p5/set\">set()</a>は、任意のpixelDensityで指定された(x, y)に対して<a href=\"#/p5/pixels\">pixels[]</a>内の適切な値を自動的に設定しますが、ピクセル配列に多くの変更が加えられるとパフォーマンスが低下することがあります。",
+        "この配列にアクセスする前に、<a href=\"#/p5/loadPixels\">loadPixels()</a> 関数でデータをロードする必要があります。配列データが変更された後、<a href=\"#/p5/updatePixels\">updatePixels()</a> 関数を実行して変更を更新する必要があります。",
+        "これは標準的なJavaScriptの配列ではないことに注意してください。これは、<a href=\"#/p5/slice\">slice()</a> や <a href=\"#/p5/arrayCopy\">arrayCopy()</a> などの標準的なJavaScript関数が動作しないことを意味します。"
       ]
     },
     "blend": {
       "description": [
-        "Copies a region of pixels from one image to another, using a specified blend mode to do the operation."
+        "指定されたブレンドモードを使用して、ある画像のピクセル領域を別の画像にコピーします。"
       ],
       "params": {
-        "srcImage": "p5.Image: source image",
-        "sx": "Integer: X coordinate of the source's upper left corner",
-        "sy": "Integer: Y coordinate of the source's upper left corner",
-        "sw": "Integer: source image width",
-        "sh": "Integer: source image height",
-        "dx": "Integer: X coordinate of the destination's upper left corner",
-        "dy": "Integer: Y coordinate of the destination's upper left corner",
-        "dw": "Integer: destination image width",
-        "dh": "Integer: destination image height",
-        "blendMode": "Constant: the blend mode. either  BLEND, DARKEST, LIGHTEST, DIFFERENCE,  MULTIPLY, EXCLUSION, SCREEN, REPLACE, OVERLAY, HARD_LIGHT,  SOFT_LIGHT, DODGE, BURN, ADD or NORMAL."
+        "srcImage": "p5.Image: ソース画像",
+        "sx": "Integer: ソースの左上隅のX座標",
+        "sy": "Integer: ソースの左上隅のY座標",
+        "sw": "Integer: ソース画像の幅",
+        "sh": "Integer: ソース画像の高さ",
+        "dx": "Integer: 送り先の左上隅のX座標",
+        "dy": "Integer: 送り先の左上隅のY座標",
+        "dw": "Integer: 送り先画像の幅",
+        "dh": "Integer: 送り先画像の高さ",
+        "blendMode": "Constant: ブレンドモード。BLEND, DARKEST, LIGHTEST, DIFFERENCE, MULTIPLY, EXCLUSION, SCREEN, REPLACE, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN, ADD, または NORMAL のいずれか。"
       }
     },
     "copy": {
       "description": [
-        "Copies a region of the canvas to another region of the canvas and copies a region of pixels from an image used as the srcImg parameter into the canvas srcImage is specified this is used as the source. If the source and destination regions aren't the same size, it will automatically resize source pixels to fit the specified target region."
+        "キャンバスの一部を別の領域にコピーし、srcImgパラメータとして使用される画像のピクセル領域をキャンバスにコピーします。srcImageが指定されている場合、これがソースとして使用されます。ソースと宛先の領域が同じサイズでない場合、ソースのピクセルが自動的に指定されたターゲット領域に合わせてサイズ変更されます。"
       ],
       "params": {
-        "srcImage": "p5.Image|p5.Element: source image",
-        "sx": "Integer: X coordinate of the source's upper left corner",
-        "sy": "Integer: Y coordinate of the source's upper left corner",
-        "sw": "Integer: source image width",
-        "sh": "Integer: source image height",
-        "dx": "Integer: X coordinate of the destination's upper left corner",
-        "dy": "Integer: Y coordinate of the destination's upper left corner",
-        "dw": "Integer: destination image width",
-        "dh": "Integer: destination image height"
+        "srcImage": "p5.Image|p5.Element: ソース画像",
+        "sx": "Integer: ソースの左上隅のX座標",
+        "sy": "Integer: ソースの左上隅のY座標",
+        "sw": "Integer: ソース画像の幅",
+        "sh": "Integer: ソース画像の高さ",
+        "dx": "Integer: 宛先の左上隅のX座標",
+        "dy": "Integer: 宛先の左上隅のY座標",
+        "dw": "Integer: 宛先画像の幅",
+        "dh": "Integer: 宛先画像の高さ"
       }
     },
     "filter": {
       "description": [
-        "Applies a filter to the canvas. The presets options are:",
-        "THRESHOLD Converts the image to black and white pixels depending if they are above or below the threshold defined by the level parameter. The parameter must be between 0.0 (black) and 1.0 (white). If no level is specified, 0.5 is used.",
-        "GRAY Converts any colors in the image to grayscale equivalents. No parameter is used.",
-        "OPAQUE Sets the alpha channel to entirely opaque. No parameter is used.",
-        "INVERT Sets each pixel to its inverse value. No parameter is used.",
-        "POSTERIZE Limits each channel of the image to the number of colors specified as the parameter. The parameter can be set to values between 2 and 255, but results are most noticeable in the lower ranges.",
-        "BLUR Executes a Gaussian blur with the level parameter specifying the extent of the blurring. If no parameter is used, the blur is equivalent to Gaussian blur of radius 1. Larger values increase the blur.",
-        "ERODE Reduces the light areas. No parameter is used.",
-        "DILATE Increases the light areas. No parameter is used.",
-        "filter() does not work in WEBGL mode. A similar effect can be achieved in WEBGL mode using custom shaders. Adam Ferriss has written a <a href=\"https://github.com/aferriss/p5jsShaderExamples\" target='_blank'>selection of shader examples</a> that contains many of the effects present in the filter examples."
+        "キャンバスにフィルターを適用します。プリセットオプションは以下の通りです:",
+        "THRESHOLD 画像を、ピクセルがlevelパラメータで定義された閾値より上か下かによって、白黒のピクセルに変換します。パラメータは 0.0 (黒) から 1.0 (白) の間でなければなりません。levelが指定されていない場合、0.5 が使用されます。",
+        "GRAY 画像内のすべての色をグレースケールに変換します。パラメータは使用されません。",
+        "OPAQUE アルファチャンネルを完全に不透明に設定します。パラメータは使用されません。",
+        "INVERT 各ピクセルをその反転値に設定します。パラメータは使用されません。",
+        "POSTERIZE 画像の各チャンネルを、パラメータとして指定された色数に制限します。パラメータは2から255の間の値に設定できますが、低い範囲で結果が最も目立ちます。",
+        "BLUR レベルパラメータでぼかしの範囲を指定したガウシアンブラーを実行します。パラメータが使用されていない場合、ブラーは半径1のガウシアンブラーに相当します。値が大きいほど、ぼかしが増えます。",
+        "ERODE 明るい領域を減少させます。パラメータは使用されません。",
+        "DILATE 明るい領域を増加させます。パラメータは使用されません。",
+        "filter() は WEBGL モードでは動作しません。WEBGL モードではカスタムシェーダを使用して類似の効果を実現できます。Adam Ferriss は、フィルターの例にある多くの効果を含む <a href=\"https://github.com/aferriss/p5jsShaderExamples\" target='_blank'>シェーダーの例の選択</a> を書いています。"
       ],
       "params": {
-        "filterType": "Constant: either THRESHOLD, GRAY, OPAQUE, INVERT,  POSTERIZE, BLUR, ERODE, DILATE or BLUR.  See Filters.js for docs on  each available filter",
-        "filterParam": "Number: (Optional) an optional parameter unique  to each filter, see above"
+        "filterType": "定数: THRESHOLD, GRAY, OPAQUE, INVERT,  POSTERIZE, BLUR, ERODE, DILATE, または BLUR のいずれか。Filters.js のドキュメントに各利用可能なフィルターについて記載されています。",
+        "filterParam": "Number: (オプション) 各フィルタに固有のオプションパラメータ。上記を参照"
       }
     },
     "get": {
       "description": [
-        "Get a region of pixels, or a single pixel, from the canvas.",
-        "Returns an array of [R,G,B,A] values for any pixel or grabs a section of an image. If no parameters are specified, the entire image is returned. Use the x and y parameters to get the value of one pixel. Get a section of the display window by specifying additional w and h parameters. When getting an image, the x and y parameters define the coordinates for the upper-left corner of the image, regardless of the current <a href=\"#/p5/imageMode\">imageMode()</a>.",
-        "Getting the color of a single pixel with get(x, y) is easy, but not as fast as grabbing the data directly from <a href=\"#/p5/pixels\">pixels[]</a>. The equivalent statement to get(x, y) using <a href=\"#/p5/pixels\">pixels[]</a> with pixel density d is <pre><code class=\"language-javascript\">let x, y, d; // set these to the coordinates let off = (y * width + x) * d * 4; let components = [  pixels[off],  pixels[off + 1],  pixels[off + 2],  pixels[off + 3] ]; print(components); </code></pre>",
-        "See the reference for <a href=\"#/p5/pixels\">pixels[]</a> for more information.",
-        "If you want to extract an array of colors or a subimage from an p5.Image object, take a look at <a href=\"#/p5.Image/get\">p5.Image.get()</a>"
+        "キャンバスからピクセルの領域、または1つのピクセルを取得します。",
+        "任意のピクセルの[R,G,B,A]の値の配列を返すか、画像の一部を取得します。パラメータが指定されていない場合、画像全体が返されます。xとyパラメータを使用して1つのピクセルの値を取得します。表示ウィンドウの一部を取得するには、追加のwとhパラメータを指定します。画像を取得する場合、xおよびyパラメータは、現在の<a href=\"#/p5/imageMode\">imageMode()</a>に関係なく、画像の左上隅の座標を定義します。",
+        "get(x, y)を使用して1つのピクセルの色を取得することは簡単ですが、<a href=\"#/p5/pixels\">pixels[]</a>からデータを直接取得するより速くはありません。ピクセル密度dを持つ<a href=\"#/p5/pixels\">pixels[]</a>を使用したget(x, y)の同等の文は次のとおりです。<pre><code class=\"language-javascript\">let x, y, d; // これらを座標に設定します let off = (y * width + x) * d * 4; let components = [  pixels[off],  pixels[off + 1],  pixels[off + 2],  pixels[off + 3] ]; print(components); </code></pre>",
+        "<a href=\"#/p5/pixels\">pixels[]</a>に関する詳細情報は、リファレンスを参照してください。",
+        "p5.Imageオブジェクトから色の配列やサブ画像を抽出する場合は、<a href=\"#/p5.Image/get\">p5.Image.get()</a>を参照してください。"
       ],
-      "returns": "p5.Image: the rectangle <a href=\"#/p5.Image\">p5.Image</a>",
+      "returns": "p5.Image: 矩形 <a href=\"#/p5.Image\">p5.Image</a>",
       "params": {
-        "x": "Number: x-coordinate of the pixel",
-        "y": "Number: y-coordinate of the pixel",
-        "w": "Number: width",
-        "h": "Number: height"
+        "x": "Number: ピクセルのx座標",
+        "y": "Number: ピクセルのy座標",
+        "w": "Number: 幅",
+        "h": "Number: 高さ"
       }
     },
     "loadPixels": {
       "description": [
-        "Loads the pixel data for the display window into the <a href=\"#/p5/pixels\">pixels[]</a> array. This function must always be called before reading from or writing to <a href=\"#/p5/pixels\">pixels[]</a>. Note that only changes made with <a href=\"#/p5/set\">set()</a> or direct manipulation of <a href=\"#/p5/pixels\">pixels[]</a> will occur."
+        "表示ウィンドウのピクセルデータを<a href=\"#/p5/pixels\">pixels[]</a> 配列にロードします。この関数は、<a href=\"#/p5/pixels\">pixels[]</a>から読み取るか、書き込む前に必ず呼び出す必要があります。 <a href=\"#/p5/set\">set()</a>で行われた変更、または<a href=\"#/p5/pixels\">pixels[]</a>への直接の操作だけが発生することに注意してください。"
       ]
     },
     "set": {
       "description": [
-        "Changes the color of any pixel, or writes an image directly to the display window. The x and y parameters specify the pixel to change and the c parameter specifies the color value. This can be a <a href=\"#/p5.Color\">p5.Color</a> object, or [R, G, B, A] pixel array. It can also be a single grayscale value. When setting an image, the x and y parameters define the coordinates for the upper-left corner of the image, regardless of the current <a href=\"#/p5/imageMode\">imageMode()</a>.",
-        "After using <a href=\"#/p5/set\">set()</a>, you must call <a href=\"#/p5/updatePixels\">updatePixels()</a> for your changes to appear. This should be called once all pixels have been set, and must be called before calling .<a href=\"#/p5/get\">get()</a> or drawing the image.",
-        "Setting the color of a single pixel with set(x, y) is easy, but not as fast as putting the data directly into <a href=\"#/p5/pixels\">pixels[]</a>. Setting the <a href=\"#/p5/pixels\">pixels[]</a> values directly may be complicated when working with a retina display, but will perform better when lots of pixels need to be set directly on every loop. See the reference for <a href=\"#/p5/pixels\">pixels[]</a> for more information."
+        "任意のピクセルの色を変更するか、画像を直接表示ウィンドウに書き込みます。x および y パラメータは、変更するピクセルを指定し、c パラメータは色の値を指定します。これは、<a href=\"#/p5.Color\">p5.Color</a> オブジェクト、または [R, G, B, A] ピクセル配列であることができます。また、単一のグレースケール値でも構いません。画像を設定する場合、x および y パラメータは、現在の<a href=\"#/p5/imageMode\">imageMode()</a>に関係なく、画像の左上隅の座標を定義します。",
+        "<a href=\"#/p5/set\">set()</a>を使用した後、変更を反映させるために<a href=\"#/p5/updatePixels\">updatePixels()</a>を呼び出す必要があります。これは、すべてのピクセルが設定された後に一度だけ呼び出す必要があり、.<a href=\"#/p5/get\">get()</a>を呼び出すか、画像を描画する前に呼び出す必要があります。",
+        "set(x, y) を使って1つのピクセルの色を設定するのは簡単ですが、<a href=\"#/p5/pixels\">pixels[]</a>に直接データを入れるより速くはありません。リタイナディスプレイで作業している場合、<a href=\"#/p5/pixels\">pixels[]</a>の値を直接設定することは複雑になるかもしれませんが、多くのピクセルを毎回ループで直接設定する必要がある場合は、パフォーマンスが向上します。<a href=\"#/p5/pixels\">pixels[]</a>に関する詳細は、そのリファレンスを参照してください。"
       ],
       "params": {
-        "x": "Number: x-coordinate of the pixel",
-        "y": "Number: y-coordinate of the pixel",
-        "c": "Number|Number[]|Object: insert a grayscale value | a pixel array |  a <a href=\"#/p5.Color\">p5.Color</a> object | a <a href=\"#/p5.Image\">p5.Image</a> to copy"
+        "x": "Number: ピクセルのx座標",
+        "y": "Number: ピクセルのy座標",
+        "c": "Number|Number[]|Object: グレースケール値を挿入 | ピクセル配列 |  <a href=\"#/p5.Color\">p5.Color</a> オブジェクト | コピーする <a href=\"#/p5.Image\">p5.Image</a>"
       }
     },
     "updatePixels": {
       "description": [
-        "Updates the display window with the data in the <a href=\"#/p5/pixels\">pixels[]</a> array. Use in conjunction with <a href=\"#/p5/loadPixels\">loadPixels()</a>. If you're only reading pixels from the array, there's no need to call <a href=\"#/p5/updatePixels\">updatePixels()</a> — updating is only necessary to apply changes. <a href=\"#/p5/updatePixels\">updatePixels()</a> should be called anytime the pixels array is manipulated or <a href=\"#/p5/set\">set()</a> is called, and only changes made with <a href=\"#/p5/set\">set()</a> or direct changes to <a href=\"#/p5/pixels\">pixels[]</a> will occur."
+        "画面に<a href=\"#/p5/pixels\">pixels[]</a>配列のデータを更新します。 <a href=\"#/p5/loadPixels\">loadPixels()</a>と併用して使用してください。 配列からピクセルを読み取るだけであれば、<a href=\"#/p5/updatePixels\">updatePixels()</a>を呼び出す必要はありません。 更新は変更を適用する場合にのみ必要です。 <a href=\"#/p5/updatePixels\">updatePixels()</a>は、pixels配列が操作されるたび、または<a href=\"#/p5/set\">set()</a>が呼び出されるたびに呼び出されるべきであり、<a href=\"#/p5/set\">set()</a>で行われた変更や<a href=\"#/p5/pixels\">pixels[]</a>への直接の変更のみが発生します。"
       ],
       "params": {
-        "x": "Number: (Optional) x-coordinate of the upper-left corner of region  to update",
-        "y": "Number: (Optional) y-coordinate of the upper-left corner of region  to update",
-        "w": "Number: (Optional) width of region to update",
-        "h": "Number: (Optional) height of region to update"
+        "x": "Number: (オプション) 更新する領域の左上のx座標",
+        "y": "Number: (オプション) 更新する領域の左上のy座標",
+        "w": "Number: (オプション) 更新する領域の幅",
+        "h": "Number: (オプション) 更新する領域の高さ"
       }
     },
     "loadJSON": {
       "description": [
-        "Loads a JSON file from a file or a URL, and returns an Object. Note that even if the JSON file contains an Array, an Object will be returned with index numbers as keys.",
-        "This method is asynchronous, meaning it may not finish before the next line in your sketch is executed. JSONP is supported via a polyfill and you can pass in as the second argument an object with definitions of the json callback following the syntax specified <a href=\"https://github.com/camsong/ fetch-jsonp\">here</a>.",
-        "This method is suitable for fetching files up to size of 64MB."
+        "ファイルまたはURLからJSONファイルをロードし、オブジェクトを返します。JSONファイルに配列が含まれていても、インデックス番号がキーとなるオブジェクトが返されることに注意してください。",
+        "このメソッドは非同期であり、スケッチの次の行が実行される前に終了しない場合があります。JSONPはポリフィルを介してサポートされており、<a href=\"https://github.com/camsong/ fetch-jsonp\">こちら</a>で指定されている構文に従ったJSONコールバックの定義を含むオブジェクトを2番目の引数として渡すことができます。",
+        "このメソッドは、最大64MBのファイルをフェッチするのに適しています。"
       ],
-      "returns": "Object|Array: JSON data",
+      "returns": "Object|Array: JSONデータ",
       "params": {
-        "path": "String: name of the file or url to load",
-        "jsonpOptions": "Object: (Optional) options object for jsonp related settings",
-        "datatype": "String: (Optional) \"json\" or \"jsonp\"",
-        "callback": "Function: (Optional) function to be executed after  <a href=\"#/p5/loadJSON\">loadJSON()</a> completes, data is passed  in as first argument",
-        "errorCallback": "Function: (Optional) function to be executed if  there is an error, response is passed  in as first argument"
+        "path": "String: ロードするファイル名またはURL",
+        "jsonpOptions": "Object: (オプション) jsonp関連設定のオプションオブジェクト",
+        "datatype": "String: (オプション) \"json\" または \"jsonp\"",
+        "callback": "Function: (オプション) <a href=\"#/p5/loadJSON\">loadJSON()</a> 完了後に実行される関数。データが最初の引数として渡されます。",
+        "errorCallback": "Function: (オプション) エラーがあった場合に実行される関数。レスポンスが最初の引数として渡されます。"
       }
     },
     "loadStrings": {
       "description": [
-        "Reads the contents of a file and creates a String array of its individual lines. If the name of the file is used as the parameter, as in the above example, the file must be located in the sketch directory/folder.",
-        "Alternatively, the file maybe be loaded from anywhere on the local computer using an absolute path (something that starts with / on Unix and Linux, or a drive letter on Windows), or the filename parameter can be a URL for a file found on a network.",
-        "This method is asynchronous, meaning it may not finish before the next line in your sketch is executed.",
-        "This method is suitable for fetching files up to size of 64MB."
+        "ファイルの内容を読み込み、個々の行からなる文字列配列を作成します。ファイル名がパラメータとして使用される場合、上記の例のように、ファイルはスケッチディレクトリ/フォルダ内に配置する必要があります。",
+        "また、ファイルはローカルコンピュータのどこからでも絶対パスを使ってロードすることができます（UnixおよびLinuxでは/で始まるもの、Windowsではドライブレターで始まるもの）、またはファイル名パラメータはネットワーク上にあるファイルのURLになることがあります。",
+        "このメソッドは非同期であり、スケッチの次の行が実行される前に終了しない場合があります。",
+        "このメソッドは、最大64MBのファイルをフェッチするのに適しています。"
       ],
-      "returns": "String[]: Array of Strings",
+      "returns": "String[]: 文字列の配列",
       "params": {
-        "filename": "String: name of the file or url to load",
-        "callback": "Function: (Optional) function to be executed after <a href=\"#/p5/loadStrings\">loadStrings()</a>  completes, Array is passed in as first  argument",
-        "errorCallback": "Function: (Optional) function to be executed if  there is an error, response is passed  in as first argument"
+        "filename": "String: ロードするファイル名またはURL",
+        "callback": "Function: (オプション) <a href=\"#/p5/loadStrings\">loadStrings()</a> 完了後に実行される関数。配列が最初の引数として渡されます。",
+        "errorCallback": "Function: (オプション) エラーがあった場合に実行される関数。レスポンスが最初の引数として渡されます。"
       }
     },
     "loadTable": {
       "description": [
-        "Reads the contents of a file or URL and creates a <a href=\"#/p5.Table\">p5.Table</a> object with its values. If a file is specified, it must be located in the sketch's \"data\" folder. The filename parameter can also be a URL to a file found online. By default, the file is assumed to be comma-separated (in CSV format). Table only looks for a header row if the 'header' option is included.",
-        "This method is asynchronous, meaning it may not finish before the next line in your sketch is executed. Calling <a href=\"#/p5/loadTable\">loadTable()</a> inside <a href=\"#/p5/preload\">preload()</a> guarantees to complete the operation before <a href=\"#/p5/setup\">setup()</a> and <a href=\"#/p5/draw\">draw()</a> are called. Outside of <a href=\"#/p5/preload\">preload()</a>, you may supply a callback function to handle the object:",
-        "All files loaded and saved use UTF-8 encoding. This method is suitable for fetching files up to size of 64MB."
+        "ファイルまたはURLの内容を読み込み、その値を持つ<a href=\"#/p5.Table\">p5.Table</a>オブジェクトを作成します。ファイルが指定されている場合、スケッチの「data」フォルダ内に配置する必要があります。filenameパラメータは、オンラインで見つかったファイルのURLでも構いません。デフォルトでは、ファイルはカンマ区切り（CSV形式）であると想定されています。'header'オプションが含まれている場合にのみ、テーブルはヘッダー行を探します。",
+        "このメソッドは非同期であり、スケッチの次の行が実行される前に終了しない場合があります。<a href=\"#/p5/loadTable\">loadTable()</a> を<a href=\"#/p5/preload\">preload()</a>内で呼び出すと、<a href=\"#/p5/setup\">setup()</a>および<a href=\"#/p5/draw\">draw()</a>が呼び出される前に操作が完了することが保証されます。<a href=\"#/p5/preload\">preload()</a>の外では、オブジェクトを処理するコールバック関数を提供することができます。",
+        "すべてのロードおよび保存されたファイルはUTF-8エンコーディングを使用します。このメソッドは、最大64MBのファイルをフェッチするのに適しています。"
       ],
-      "returns": "Object: <a href=\"#/p5.Table\">Table</a> object containing data",
+      "returns": "Object: データを含む<a href=\"#/p5.Table\">Table</a>オブジェクト",
       "params": {
-        "filename": "String: name of the file or URL to load",
-        "extension": "String: (Optional) parse the table by comma-separated values \"csv\", semicolon-separated  values \"ssv\", or tab-separated values \"tsv\"",
-        "header": "String: (Optional) \"header\" to indicate table has header row",
-        "callback": "Function: (Optional) function to be executed after  <a href=\"#/p5/loadTable\">loadTable()</a> completes. On success, the  <a href=\"#/p5.Table\">Table</a> object is passed in as the  first argument.",
-        "errorCallback": "Function: (Optional) function to be executed if  there is an error, response is passed  in as first argument"
+        "filename": "String: ロードするファイル名またはURL",
+        "extension": "String: (オプション) カンマ区切りの値「csv」、セミコロン区切りの値「ssv」、タブ区切りの値「tsv」でテーブルを解析する",
+        "header": "String: (オプション) テーブルにヘッダー行があることを示す「header」",
+        "callback": "Function: (オプション) <a href=\"#/p5/loadTable\">loadTable()</a> 完了後に実行される関数。成功時には、<a href=\"#/p5.Table\">Table</a> オブジェクトが最初の引数として渡されます。",
+        "errorCallback": "Function: (オプション) エラーがあった場合に実行される関数。レスポンスが最初の引数として渡されます。"
       }
     },
     "loadXML": {
       "description": [
-        "Reads the contents of a file and creates an XML object with its values. If the name of the file is used as the parameter, as in the above example, the file must be located in the sketch directory/folder.",
-        "Alternatively, the file maybe be loaded from anywhere on the local computer using an absolute path (something that starts with / on Unix and Linux, or a drive letter on Windows), or the filename parameter can be a URL for a file found on a network.",
-        "This method is asynchronous, meaning it may not finish before the next line in your sketch is executed. Calling <a href=\"#/p5/loadXML\">loadXML()</a> inside <a href=\"#/p5/preload\">preload()</a> guarantees to complete the operation before <a href=\"#/p5/setup\">setup()</a> and <a href=\"#/p5/draw\">draw()</a> are called.",
-        "Outside of <a href=\"#/p5/preload\">preload()</a>, you may supply a callback function to handle the object.",
-        "This method is suitable for fetching files up to size of 64MB."
+        "ファイルの内容を読み込み、その値を持つXMLオブジェクトを作成します。ファイル名がパラメータとして使用される場合、上記の例のように、ファイルはスケッチディレクトリ/フォルダ内に配置する必要があります。",
+        "また、ファイルはローカルコンピュータのどこからでも絶対パスを使ってロードすることができます（UnixおよびLinuxでは/で始まるもの、Windowsではドライブレターで始まるもの）、またはファイル名パラメータはネットワーク上にあるファイルのURLになることがあります。",
+        "このメソッドは非同期であり、スケッチの次の行が実行される前に終了しない場合があります。<a href=\"#/p5/loadXML\">loadXML()</a> を<a href=\"#/p5/preload\">preload()</a>内で呼び出すと、<a href=\"#/p5/setup\">setup()</a>および<a href=\"#/p5/draw\">draw()</a>が呼び出される前に操作が完了することが保証されます。",
+        "<a href=\"#/p5/preload\">preload()</a>の外では、オブジェクトを処理するコールバック関数を提供することができます。",
+        "このメソッドは、最大64MBのファイルをフェッチするのに適しています。"
       ],
-      "returns": "Object: XML object containing data",
+      "returns": "Object: データを含むXMLオブジェクト",
       "params": {
-        "filename": "String: name of the file or URL to load",
-        "callback": "Function: (Optional) function to be executed after <a href=\"#/p5/loadXML\">loadXML()</a>  completes, XML object is passed in as  first argument",
-        "errorCallback": "Function: (Optional) function to be executed if  there is an error, response is passed  in as first argument"
+        "filename": "String: ロードするファイル名またはURL",
+        "callback": "Function: (オプション) <a href=\"#/p5/loadXML\">loadXML()</a> 完了後に実行される関数。XMLオブジェクトが最初の引数として渡されます。",
+        "errorCallback": "Function: (オプション) エラーがあった場合に実行される関数。レスポンスが最初の引数として渡されます。"
       }
     },
     "loadBytes": {
       "description": [
-        "This method is suitable for fetching files up to size of 64MB."
+        "このメソッドは、最大64MBのファイルをフェッチするのに適しています。"
       ],
-      "returns": "Object: an object whose 'bytes' property will be the loaded buffer",
+      "returns": "Object: ロードされたバッファを持つ 'bytes' プロパティを持つオブジェクト",
       "params": {
-        "file": "String: name of the file or URL to load",
-        "callback": "Function: (Optional) function to be executed after <a href=\"#/p5/loadBytes\">loadBytes()</a>  completes",
-        "errorCallback": "Function: (Optional) function to be executed if there  is an error"
+        "file": "String: ロードするファイル名またはURL",
+        "callback": "Function: (オプション) <a href=\"#/p5/loadBytes\">loadBytes()</a> 完了後に実行される関数",
+        "errorCallback": "Function: (オプション) エラーがあった場合に実行される関数"
       }
     },
     "httpGet": {
       "description": [
-        "Method for executing an HTTP GET request. If data type is not specified, p5 will try to guess based on the URL, defaulting to text. This is equivalent to calling <code>httpDo(path, 'GET')</code>. The 'binary' datatype will return a Blob object, and the 'arrayBuffer' datatype will return an ArrayBuffer which can be used to initialize typed arrays (such as Uint8Array)."
+        "HTTP GETリクエストを実行するメソッドです。データ型が指定されていない場合、p5はURLに基づいて推測し、テキストをデフォルトとします。これは、<code>httpDo(path, 'GET')</code>を呼び出すことと同等です。'binary'データ型はBlobオブジェクトを返し、'arrayBuffer'データ型は、タイプ付き配列（Uint8Arrayなど）を初期化するために使用できるArrayBufferを返します。"
       ],
-      "returns": "Promise: A promise that resolves with the data when the operation  completes successfully or rejects with the error after  one occurs.",
+      "returns": "Promise: 操作が正常に完了した場合はデータを含むPromise、エラーが発生した場合はエラーを含むPromiseを返します。",
       "params": {
-        "path": "String: name of the file or url to load",
-        "datatype": "String: (Optional) \"json\", \"jsonp\", \"binary\", \"arrayBuffer\",  \"xml\", or \"text\"",
-        "data": "Object|Boolean: (Optional) param data passed sent with request",
-        "callback": "Function: (Optional) function to be executed after  <a href=\"#/p5/httpGet\">httpGet()</a> completes, data is passed in  as first argument",
-        "errorCallback": "Function: (Optional) function to be executed if  there is an error, response is passed  in as first argument"
+        "path": "String: ロードするファイル名またはURL",
+        "datatype": "String: (オプション) \"json\", \"jsonp\", \"binary\", \"arrayBuffer\",  \"xml\", または \"text\"",
+        "data": "Object|Boolean: (オプション) リクエストとともに送信されるパラメータデータ",
+        "callback": "Function: (オプション) <a href=\"#/p5/httpGet\">httpGet()</a> が完了した後に実行される関数、データは最初の引数として渡されます。",
+        "errorCallback": "Function: (オプション) エラーが発生した場合に実行される関数、レスポンスは最初の引数として渡されます。"
       }
     },
     "httpPost": {
       "description": [
-        "Method for executing an HTTP POST request. If data type is not specified, p5 will try to guess based on the URL, defaulting to text. This is equivalent to calling <code>httpDo(path, 'POST')</code>."
+        "HTTP POSTリクエストを実行するメソッドです。データ型が指定されていない場合、p5はURLに基づいて推測し、テキストをデフォルトとします。これは、<code>httpDo(path, 'POST')</code>を呼び出すことと同等です。"
       ],
-      "returns": "Promise: A promise that resolves with the data when the operation  completes successfully or rejects with the error after  one occurs.",
+      "returns": "Promise: 操作が正常に完了した場合はデータを含むPromise、エラーが発生した場合はエラーを含むPromiseを返します。",
       "params": {
-        "path": "String: name of the file or url to load",
-        "datatype": "String: (Optional) \"json\", \"jsonp\", \"xml\", or \"text\".  If omitted, <a href=\"#/p5/httpPost\">httpPost()</a> will guess.",
-        "data": "Object|Boolean: (Optional) param data passed sent with request",
-        "callback": "Function: (Optional) function to be executed after  <a href=\"#/p5/httpPost\">httpPost()</a> completes, data is passed in  as first argument",
-        "errorCallback": "Function: (Optional) function to be executed if  there is an error, response is passed  in as first argument"
+        "path": "String: ロードするファイル名またはURL",
+        "datatype": "String: (オプション) \"json\", \"jsonp\", \"xml\", または \"text\"。省略された場合、<a href=\"#/p5/httpPost\">httpPost()</a> が推測します。",
+        "data": "Object|Boolean: (オプション) リクエストとともに送信されるパラメータデータ",
+        "callback": "Function: (オプション) <a href=\"#/p5/httpPost\">httpPost()</a>が完了した後に実行される関数で、データが最初の引数として渡されます。",
+        "errorCallback": "Function: (オプション) エラーが発生した場合に実行される関数で、レスポンスが最初の引数として渡されます。"
       }
     },
     "httpDo": {
       "description": [
-        "Method for executing an HTTP request. If data type is not specified, p5 will try to guess based on the URL, defaulting to text. For more advanced use, you may also pass in the path as the first argument and a object as the second argument, the signature follows the one specified in the Fetch API specification. This method is suitable for fetching files up to size of 64MB when \"GET\" is used."
+        "HTTPリクエストを実行するためのメソッドです。データ型が指定されていない場合、p5はURLに基づいて推測し、デフォルトではテキストになります。より高度な使用法として、最初の引数にパス、2番目の引数にオブジェクトを渡すこともできます。シグネチャはFetch API仕様に従っています。このメソッドは、\"GET\"が使用された場合、最大64MBのファイルを取得するのに適しています。"
       ],
-      "returns": "Promise: A promise that resolves with the data when the operation  completes successfully or rejects with the error after  one occurs.",
+      "returns": "Promise: 操作が正常に完了した場合にデータで解決されるプロミス、またはエラーが発生した後にエラーでリジェクトされるプロミス。",
       "params": {
-        "path": "String: name of the file or url to load",
-        "method": "String: (Optional) either \"GET\", \"POST\", or \"PUT\",  defaults to \"GET\"",
-        "datatype": "String: (Optional) \"json\", \"jsonp\", \"xml\", or \"text\"",
-        "data": "Object: (Optional) param data passed sent with request",
-        "callback": "Function: (Optional) function to be executed after  <a href=\"#/p5/httpGet\">httpGet()</a> completes, data is passed in  as first argument",
-        "errorCallback": "Function: (Optional) function to be executed if  there is an error, response is passed  in as first argument",
-        "options": "Object: Request object options as documented in the  \"fetch\" API <a href=\"https://developer.mozilla.org/en/docs/Web/API/Fetch_API\">reference</a>"
+        "path": "String: 読み込むファイル名またはURL",
+        "method": "String: (オプション) \"GET\"、\"POST\"、または\"PUT\"のいずれかで、デフォルトは\"GET\"",
+        "datatype": "String: (オプション) \"json\"、\"jsonp\"、\"xml\"、または\"text\"",
+        "data": "Object: (オプション) リクエストとともに送信されるパラメータデータ",
+        "callback": "Function: (オプション) <a href=\"#/p5/httpGet\">httpGet()</a>が完了した後に実行される関数で、データが最初の引数として渡されます。",
+        "errorCallback": "Function: (オプション) エラーが発生した場合に実行される関数で、レスポンスが最初の引数として渡されます。",
+        "options": "Object: リクエストオブジェクトのオプションで、\"fetch\" APIの<a href=\"https://developer.mozilla.org/en/docs/Web/API/Fetch_API\">リファレンス</a>に記載されています。"
       }
     },
     "createWriter": {
       "returns": "p5.PrintWriter:",
       "params": {
-        "name": "String: name of the file to be created",
-        "extension": "String (Optional)"
+        "name": "String: 作成するファイルの名前",
+        "extension": "String (オプション)"
       }
     },
     "save": {
       "description": [
-        "Saves a given element(image, text, json, csv, wav, or html) to the client's computer. The first parameter can be a pointer to element we want to save. The element can be one of <a href=\"#/p5.Element\">p5.Element</a>,an Array of Strings, an Array of JSON, a JSON object, a <a href=\"#/p5.Table\">p5.Table </a>, a <a href=\"#/p5.Image\">p5.Image</a>, or a p5.SoundFile (requires p5.sound). The second parameter is a filename (including extension).The third parameter is for options specific to this type of object. This method will save a file that fits the given parameters. If it is called without specifying an element, by default it will save the whole canvas as an image file. You can optionally specify a filename as the first parameter in such a case. <strong>Note that it is not recommended to call this method within draw, as it will open a new save dialog on every render.</strong>"
+        "指定された要素（画像、テキスト、json、csv、wav、html）をクライアントのコンピュータに保存します。最初のパラメータは、保存したい要素へのポインターが指定できます。要素は、<a href=\"#/p5.Element\">p5.Element</a>、文字列の配列、JSONの配列、JSONオブジェクト、<a href=\"#/p5.Table\">p5.Table </a>、<a href=\"#/p5.Image\">p5.Image</a>、または p5.SoundFile（p5.soundが必要）のいずれかです。2番目のパラメータはファイル名（拡張子を含む）。3番目のパラメータは、このタイプのオブジェクトに特有のオプションです。このメソッドは、指定されたパラメータに適合するファイルを保存します。要素を指定せずに呼び出された場合、デフォルトでは画像ファイルとしてキャンバス全体が保存されます。そのような場合、最初のパラメータとしてファイル名をオプションで指定できます。 <strong>draw内でこのメソッドを呼び出すことはお勧めしません。なぜなら、レンダリングごとに新しい保存ダイアログが開くためです。</strong>"
       ],
       "params": {
-        "objectOrFilename": "Object|String: (Optional) If filename is provided, will  save canvas as an image with  either png or jpg extension  depending on the filename.  If object is provided, will  save depending on the object  and filename (see examples  above).",
-        "filename": "String: (Optional) If an object is provided as the first  parameter, then the second parameter  indicates the filename,  and should include an appropriate  file extension (see examples above).",
-        "options": "Boolean|String: (Optional) Additional options depend on  filetype. For example, when saving JSON,  <code>true</code> indicates that the  output will be optimized for filesize,  rather than readability."
+        "objectOrFilename": "Object|String: (オプション) ファイル名が指定された場合、ファイル名に応じてpngまたはjpg拡張子の画像としてキャンバスを保存します。 オブジェクトが指定された場合、オブジェクトとファイル名に応じて保存されます（上記の例を参照）。",
+        "filename": "String: (オプション) オブジェクトが最初のパラメータとして提供された場合、2番目のパラメータはファイル名を示し、適切なファイル拡張子を含める必要があります（上記の例を参照）。",
+        "options": "Boolean|String: (オプション) 追加のオプションはファイルタイプに依存します。 たとえば、JSONを保存する場合、<code>true</code>は出力がファイルサイズに最適化され、読みやすさではなくなります。"
       }
     },
     "saveJSON": {
       "description": [
-        "Writes the contents of an Array or a JSON object to a .json file. The file saving process and location of the saved file will vary between web browsers."
+        "配列またはJSONオブジェクトの内容を.jsonファイルに書き込みます。ファイルの保存プロセスと保存されたファイルの場所は、ウェブブラウザ間で異なります。"
       ],
       "params": {
-        "json": "Array|Object",
-        "filename": "String",
-        "optimize": "Boolean: (Optional) If true, removes line breaks  and spaces from the output  file to optimize filesize  (but not readability)."
+      "json": "Array|Object",
+      "filename": "String",
+      "optimize": "Boolean: (オプション) true の場合、ファイルサイズを最適化するために、出力ファイルから改行とスペースを削除します (読みやすさは向上しません)。"
       }
     },
     "saveStrings": {
       "description": [
-        "Writes an array of Strings to a text file, one line per String. The file saving process and location of the saved file will vary between web browsers."
+        "文字列の配列をテキストファイルに書き込みます。1つの文字列ごとに1行。ファイルの保存プロセスと保存されたファイルの場所は、ウェブブラウザ間で異なります。"
       ],
       "params": {
-        "list": "String[]: string array to be written",
-        "filename": "String: filename for output",
-        "extension": "String: (Optional) the filename's extension",
-        "isCRLF": "Boolean: (Optional) if true, change line-break to CRLF"
+        "list": "String[]: 書き込むための文字列配列",
+        "filename": "String: 出力用のファイル名",
+        "extension": "String: (オプション) ファイル名の拡張子",
+        "isCRLF": "Boolean: (オプション) trueの場合、改行をCRLFに変更"
       }
     },
     "saveTable": {
       "description": [
-        "Writes the contents of a <a href=\"#/p5.Table\">Table</a> object to a file. Defaults to a text file with comma-separated-values ('csv') but can also use tab separation ('tsv'), or generate an HTML table ('html'). The file saving process and location of the saved file will vary between web browsers."
+        "<a href=\"#/p5.Table\">Table</a>オブジェクトの内容をファイルに書き込みます。デフォルトでは、カンマ区切りの値（'csv'）を含むテキストファイルですが、タブ区切り（'tsv'）を使用することもできますし、HTMLテーブル（'html'）を生成することもできます。ファイルの保存プロセスと保存されたファイルの場所は、ウェブブラウザ間で異なります。"
       ],
       "params": {
-        "Table": "p5.Table: the <a href=\"#/p5.Table\">Table</a> object to save to a file",
-        "filename": "String: the filename to which the Table should be saved",
-        "options": "String: (Optional) can be one of \"tsv\", \"csv\", or \"html\""
+        "Table": "p5.Table: ファイルに保存する <a href=\"#/p5.Table\">Table</a> オブジェクト",
+        "filename": "String: Table が保存されるべきファイル名",
+        "options": "String: (オプション) \"tsv\"、\"csv\"、または \"html\" のいずれか"
       }
     },
     "abs": {
       "description": [
-        "Calculates the absolute value (magnitude) of a number. Maps to Math.abs(). The absolute value of a number is always positive."
+        "数値の絶対値（大きさ）を計算します。Math.abs()にマッピングされます。数値の絶対値は常に正です。"
       ],
-      "returns": "Number: absolute value of given number",
+      "returns": "Number: 与えられた数値の絶対値",
       "params": {
-        "n": "Number: number to compute"
+        "n": "Number: 計算する数値"
       }
     },
     "ceil": {
       "description": [
-        "Calculates the closest int value that is greater than or equal to the value of the parameter. Maps to Math.ceil(). For example, ceil(9.03) returns the value 10."
+        "パラメータの値以上の最も近いint値を計算します。Math.ceil()にマッピングされます。例えば、ceil(9.03)は値10を返します。"
       ],
-      "returns": "Integer: rounded up number",
+      "returns": "Integer: 切り上げられた数値",
       "params": {
-        "n": "Number: number to round up"
+        "n": "Number: 切り上げる数値"
       }
     },
     "constrain": {
       "description": [
-        "Constrains a value between a minimum and maximum value."
+        "最小値と最大値の間に値を制限します。"
       ],
-      "returns": "Number: constrained number",
+      "returns": "Number: 制限された数値",
       "params": {
-        "n": "Number: number to constrain",
-        "low": "Number: minimum limit",
-        "high": "Number: maximum limit"
+        "n": "Number: 制限する数値",
+        "low": "Number: 最小限",
+        "high": "Number: 最大限"
       }
     },
     "dist": {
       "description": [
-        "Calculates the distance between two points, in either two or three dimensions. If you looking for distance between two vectors see <a herf=\"#/p5.Vector/dist\">p5.Vector.dist()</a>"
+        "2点間の距離を、2次元または3次元で計算します。2つのベクトル間の距離を探している場合は、<a herf=\"#/p5.Vector/dist\">p5.Vector.dist()</a>を参照してください。"
       ],
-      "returns": "Number: distance between the two points",
+      "returns": "Number: 2点間の距離",
       "params": {
-        "x1": "Number: x-coordinate of the first point",
-        "y1": "Number: y-coordinate of the first point",
-        "x2": "Number: x-coordinate of the second point",
-        "y2": "Number: y-coordinate of the second point",
-        "z1": "Number: z-coordinate of the first point",
-        "z2": "Number: z-coordinate of the second point"
+        "x1": "Number: 第1点のx座標",
+        "y1": "Number: 第1点のy座標",
+        "x2": "Number: 第2点のx座標",
+        "y2": "Number: 第2点のy座標",
+        "z1": "Number: 第1点のz座標",
+        "z2": "Number: 第2点のz座標"
       }
     },
     "exp": {
       "description": [
-        "Returns Euler's number e (2.71828...) raised to the power of the n parameter. Maps to Math.exp()."
+        "オイラーの数e（2.71828...）を、nパラメータの冪乗にしたものを返します。Math.exp()にマッピングされます。"
       ],
       "returns": "Number: e^n",
       "params": {
-        "n": "Number: exponent to raise"
+        "n": "Number: 上げる指数"
       }
     },
     "floor": {
       "description": [
-        "Calculates the closest int value that is less than or equal to the value of the parameter. Maps to Math.floor()."
+        "パラメータの値以下の最も近いint値を計算します。Math.floor()にマッピングされます。"
       ],
-      "returns": "Integer: rounded down number",
+      "returns": "Integer: 切り捨てられた数値",
       "params": {
-        "n": "Number: number to round down"
+        "n": "Number: 切り捨てる数値"
       }
     },
     "lerp": {
       "description": [
-        "Calculates a number between two numbers at a specific increment. The amt parameter is the amount to interpolate between the two values where 0.0 is equal to the first point, 0.1 is very near the first point, 0.5 is half-way in between, and 1.0 is equal to the second point. If the value of amt is more than 1.0 or less than 0.0, the number will be calculated accordingly in the ratio of the two given numbers. The lerp() function is convenient for creating motion along a straight path and for drawing dotted lines."
+        "特定の増分で2つの数値の間の数値を計算します。amt パラメータは、2つの値の間で補間する量で、0.0 は最初のポイントと等しく、0.1 は最初のポイントに非常に近く、0.5 は中間で、1.0 は2番目のポイントと等しいです。amt の値が 1.0 を超えるか、0.0 未満の場合、2つの与えられた数値の比率に応じて数値が計算されます。lerp() 関数は、直線上の動きを作成したり、点線を描画するのに便利です。"
       ],
-      "returns": "Number: lerped value",
+      "returns": "Number: lerped値",
       "params": {
-        "start": "Number: first value",
-        "stop": "Number: second value",
-        "amt": "Number: number"
+        "start": "Number: 最初の値",
+        "stop": "Number: 2番目の値",
+        "amt": "Number: 数値"
       }
     },
     "log": {
       "description": [
-        "Calculates the natural logarithm (the base-e logarithm) of a number. This function expects the n parameter to be a value greater than 0.0. Maps to Math.log()."
+        "数値の自然対数（底eの対数）を計算します。この関数は、n パラメータが 0.0 より大きい値であることを期待しています。Math.log() にマップされます。"
       ],
-      "returns": "Number: natural logarithm of n",
+      "returns": "Number: n の自然対数",
       "params": {
-        "n": "Number: number greater than 0"
+        "n": "Number: 0より大きい数"
       }
     },
     "mag": {
       "description": [
-        "Calculates the magnitude (or length) of a vector. A vector is a direction in space commonly used in computer graphics and linear algebra. Because it has no \"start\" position, the magnitude of a vector can be thought of as the distance from the coordinate 0,0 to its x,y value. Therefore, <a href=\"#/p5/mag\">mag()</a> is a shortcut for writing dist(0, 0, x, y)."
+        "ベクトルの大きさ（または長さ）を計算します。ベクトルは、コンピュータグラフィックスや線形代数でよく使われる空間上の方向を表します。ベクトルには「開始」位置がないため、ベクトルの大きさは座標 0,0 からその x,y 値までの距離と考えることができます。したがって、<a href=\"#/p5/mag\">mag()</a> は、dist(0, 0, x, y) を書くためのショートカットです。"
       ],
-      "returns": "Number: magnitude of vector from (0,0) to (a,b)",
+      "returns": "Number: (0,0) から (a,b) までのベクトルの大きさ",
       "params": {
-        "a": "Number: first value",
-        "b": "Number: second value"
+        "a": "Number: 第一の値",
+        "b": "Number: 第二の値"
       }
     },
     "map": {
       "description": [
-        "Re-maps a number from one range to another.",
-        "In the first example above, the number 25 is converted from a value in the range of 0 to 100 into a value that ranges from the left edge of the window (0) to the right edge (width)."
+        "ある範囲の数値を別の範囲に再マップします。",
+        "最初の例では、数値 25 が、0 から 100 の範囲の値から、ウィンドウの左端 (0) から右端 (width) までの範囲の値に変換されます。"
       ],
-      "returns": "Number: remapped number",
+      "returns": "Number: 再マップされた数値",
       "params": {
-        "value": "Number: the incoming value to be converted",
-        "start1": "Number: lower bound of the value's current range",
-        "stop1": "Number: upper bound of the value's current range",
-        "start2": "Number: lower bound of the value's target range",
-        "stop2": "Number: upper bound of the value's target range",
-        "withinBounds": "Boolean: (Optional) constrain the value to the newly mapped range"
+        "value": "Number: 変換される入力値",
+        "start1": "Number: 値の現在の範囲の下限",
+        "stop1": "Number: 値の現在の範囲の上限",
+        "start2": "Number: 値の目標範囲の下限",
+        "stop2": "Number: 値の目標範囲の上限",
+        "withinBounds": "Boolean: (オプション) 値を新しくマップされた範囲に制約する"
       }
     },
     "max": {
       "description": [
-        "Determines the largest value in a sequence of numbers, and then returns that value. <a href=\"#/p5/max\">max()</a> accepts any number of Number parameters, or an Array of any length."
+        "一連の数値の中で最大の値を決定し、その値を返します。 <a href=\"#/p5/max\">max()</a> は、任意の数の Number パラメータ、または任意の長さの配列を受け入れます。"
       ],
-      "returns": "Number: maximum Number",
+      "returns": "Number: 最大の数値",
       "params": {
-        "n0": "Number: Number to compare",
-        "n1": "Number: Number to compare",
-        "nums": "Number[]: Numbers to compare"
+        "n0": "Number: 比較する数値",
+        "n1": "Number: 比較する数値",
+        "nums": "Number[]: 比較する数値"
       }
     },
     "min": {
       "description": [
-        "Determines the smallest value in a sequence of numbers, and then returns that value. <a href=\"#/p5/min\">min()</a> accepts any number of Number parameters, or an Array of any length."
+        "一連の数値の中で最小の値を決定し、その値を返します。<a href=\"#/p5/min\">min()</a>は、任意の数のNumberパラメータ、または任意の長さの配列を受け入れます。"
       ],
-      "returns": "Number: minimum Number",
+      "returns": "Number: 最小の数値",
       "params": {
-        "n0": "Number: Number to compare",
-        "n1": "Number: Number to compare",
-        "nums": "Number[]: Numbers to compare"
+        "n0": "Number: 比較する数値",
+        "n1": "Number: 比較する数値",
+        "nums": "Number[]: 比較する数値"
       }
     },
     "norm": {
       "description": [
-        "Normalizes a number from another range into a value between 0 and 1. Identical to map(value, low, high, 0, 1). Numbers outside of the range are not clamped to 0 and 1, because out-of-range values are often intentional and useful. (See the example above.)"
+        "別の範囲の数値を0から1の範囲に正規化します。map(value, low, high, 0, 1)と同一です。範囲外の数値は、範囲外の値が意図的で有用であることがよくあるため、0および1にクランプされません。(上記の例を参照してください。)"
       ],
-      "returns": "Number: normalized number",
+      "returns": "Number: 正規化された数値",
       "params": {
-        "value": "Number: incoming value to be normalized",
-        "start": "Number: lower bound of the value's current range",
-        "stop": "Number: upper bound of the value's current range"
+        "value": "Number: 正規化されるべき入力値",
+        "start": "Number: 値の現在の範囲の下限",
+        "stop": "Number: 値の現在の範囲の上限"
       }
     },
     "pow": {
       "description": [
-        "Facilitates exponential expressions. The <a href=\"#/p5/pow\">pow()</a> function is an efficient way of multiplying numbers by themselves (or their reciprocals) in large quantities. For example, pow(3, 5) is equivalent to the expression 3 × 3 × 3 × 3 × 3 and pow(3, -5) is equivalent to 1 / 3 × 3 × 3 × 3 × 3. Maps to Math.pow()."
+        "指数表現を容易にします。<a href=\"#/p5/pow\">pow()</a>関数は、数値を自分自身（またはその逆数）と大量にかける効率的な方法です。例えば、pow(3, 5)は式3 × 3 × 3 × 3 × 3と等価であり、pow(3, -5)は1 / 3 × 3 × 3 × 3 × 3と等価です。Math.pow()にマップされます。"
       ],
       "returns": "Number: n^e",
       "params": {
-        "n": "Number: base of the exponential expression",
-        "e": "Number: power by which to raise the base"
+        "n": "Number: 指数表現の底",
+        "e": "Number: 底を上げるべき指数"
       }
     },
     "round": {
       "description": [
-        "Calculates the integer closest to the n parameter. For example, round(133.8) returns the value 134. Maps to Math.round()."
+        "nパラメータに最も近い整数を計算します。例えば、round(133.8)は値134を返します。Math.round()にマップされます。"
       ],
-      "returns": "Integer: rounded number",
+      "returns": "Integer: 四捨五入された数値",
       "params": {
-        "n": "Number: number to round",
-        "decimals": "Number: (Optional) number of decimal places to round to, default is 0"
+        "n": "Number: 四捨五入する数値",
+        "decimals": "Number: (オプション) 四捨五入する小数点以下の桁数。デフォルトは0"
       }
     },
     "sq": {
       "description": [
-        "Squares a number (multiplies a number by itself). The result is always a positive number, as multiplying two negative numbers always yields a positive result. For example, -1 * -1 = 1."
+        "数値の二乗（数値を自分自身で乗算）。結果は常に正の数です。なぜなら、2つの負の数を乗算すると常に正の結果が得られるからです。例えば、-1 * -1 = 1。"
       ],
-      "returns": "Number: squared number",
+      "returns": "Number: 二乗された数値",
       "params": {
-        "n": "Number: number to square"
+        "n": "Number: 二乗する数値"
       }
     },
     "sqrt": {
       "description": [
-        "Calculates the square root of a number. The square root of a number is always positive, even though there may be a valid negative root. The square root s of number a is such that s*s = a. It is the opposite of squaring. Maps to Math.sqrt()."
+        "数値の平方根を計算します。数値の平方根は常に正ですが、有効な負のルートがある場合もあります。数値aの平方根sは、s*s = aとなるものです。二乗の逆の操作です。Math.sqrt()にマップされます。"
       ],
-      "returns": "Number: square root of number",
+      "returns": "Number: 数値の平方根",
       "params": {
-        "n": "Number: non-negative number to square root"
+        "n": "Number: 平方根を求める非負の数値"
       }
     },
     "fract": {
-      "description": ["Calculates the fractional part of a number."],
-      "returns": "Number: fractional part of x, i.e, {x}",
+      "description": ["数値の小数部分を計算します。"],
+      "returns": "Number: x の小数部分、すなわち、 {x}",
       "params": {
-        "num": "Number: Number whose fractional part needs to be found out"
+        "num": "Number: 小数部分を求める数値"
       }
     },
     "createVector": {
       "description": [
-        "Creates a new <a href=\"#/p5.Vector\">p5.Vector</a> (the datatype for storing vectors). This provides a two or three-dimensional vector, specifically a Euclidean (also known as geometric) vector. A vector is an entity that has both magnitude and direction."
+        "新しい<a href=\"#/p5.Vector\">p5.Vector</a>（ベクトルを格納するデータ型）を作成します。これにより、二次元または三次元のユークリッド（幾何学的）ベクトルが提供されます。ベクトルとは、大きさと方向の両方を持つエンティティです。"
       ],
       "returns": "p5.Vector:",
       "params": {
-        "x": "Number: (Optional) x component of the vector",
-        "y": "Number: (Optional) y component of the vector",
-        "z": "Number: (Optional) z component of the vector"
+        "x": "Number: (オプション) ベクトルのx成分",
+        "y": "Number: (オプション) ベクトルのy成分",
+        "z": "Number: (オプション) ベクトルのz成分"
       }
     },
     "noise": {
       "description": [
-        "Returns the Perlin noise value at specified coordinates. Perlin noise is a random sequence generator producing a more naturally ordered, harmonic succession of numbers compared to the standard <a href=\"#/p5/random\">random()</a> function. It was invented by Ken Perlin in the 1980s and been used since in graphical applications to produce procedural textures, natural motion, shapes, terrains etc.<br /><br /> The main difference to the <a href=\"#/p5/random\">random()</a> function is that Perlin noise is defined in an infinite n-dimensional space where each pair of coordinates corresponds to a fixed semi-random value (fixed only for the lifespan of the program; see the <a href=\"#/p5/noiseSeed\">noiseSeed()</a> function). p5.js can compute 1D, 2D and 3D noise, depending on the number of coordinates given. The resulting value will always be between 0.0 and 1.0. The noise value can be animated by moving through the noise space as demonstrated in the example above. The 2nd and 3rd dimensions can also be interpreted as time.<br /><br />The actual noise is structured similar to an audio signal, in respect to the function's use of frequencies. Similar to the concept of harmonics in physics, Perlin noise is computed over several octaves which are added together for the final result. <br /><br />Another way to adjust the character of the resulting sequence is the scale of the input coordinates. As the function works within an infinite space the value of the coordinates doesn't matter as such, only the distance between successive coordinates does (eg. when using <a href=\"#/p5/noise\">noise()</a> within a loop). As a general rule the smaller the difference between coordinates, the smoother the resulting noise sequence will be. Steps of 0.005-0.03 work best for most applications, but this will differ depending on use."
+        "指定された座標でのPerlinノイズ値を返します。",
+        "Perlinノイズは、標準の<a href=\"#/p5/random\">random()</a>関数と比較して、より自然に順序付けられた調和のある数列を生成するランダムシーケンスジェネレータです。",
+        "1980年代にKen Perlinによって発明され、以降、グラフィカルアプリケーションで手続き的テクスチャ、自然な動き、形状、地形などを生成するために使用されています。<br /><br />",
+        "<a href=\"#/p5/random\">random()</a>関数との主な違いは、Perlinノイズは無限のn次元空間で定義されており、座標のペアごとに固定の半乱数値（プログラムの寿命に対してのみ固定; <a href=\"#/p5/noiseSeed\">noiseSeed()</a>関数を参照）が対応していることです。",
+        "p5.jsは、与えられた座標の数に応じて1D、2D、3Dのノイズを計算することができます。",
+        "結果として得られる値は常に0.0から1.0の間になります。ノイズ値は、上記の例で示されているように、ノイズ空間を移動することでアニメーション化することができます。第2および第3の次元は、時間としても解釈できます。<br /><br />",
+        "実際のノイズは、周波数の利用に関してオーディオ信号に似た構造を持っています。物理学の調和の概念に似て、Perlinノイズはいくつかのオクターブで計算され、最終結果に加算されます。<br /><br />",
+        "結果として得られるシーケンスの性格を調整するもう一つの方法は、入力座標のスケールです。関数が無限の空間で動作するため、座標の値自体は重要ではなく、連続する座標間の距離だけが重要です(例えば、ループ内で <a href=\"#/p5/noise\">noise()</a> を使用する場合)。",
+        "一般的には、座標間の差が小さいほど、得られるノイズシーケンスは滑らかになります。ほとんどのアプリケーションでは0.005-0.03のステップが最適ですが、用途によっては異なります。"
       ],
-      "returns": "Number: Perlin noise value (between 0 and 1) at specified  coordinates",
+      "returns": "Number: 指定された座標でのPerlinノイズ値（0から1の間）",
       "params": {
-        "x": "Number: x-coordinate in noise space",
-        "y": "Number: (Optional) y-coordinate in noise space",
-        "z": "Number: (Optional) z-coordinate in noise space"
+        "x": "Number: ノイズ空間のx座標",
+        "y": "Number: (オプション) ノイズ空間のy座標",
+        "z": "Number: (オプション) ノイズ空間のz座標"
       }
     },
     "noiseDetail": {
       "description": [
-        "Adjusts the character and level of detail produced by the Perlin noise  function. Similar to harmonics in physics, noise is computed over  several octaves. Lower octaves contribute more to the output signal and  as such define the overall intensity of the noise, whereas higher octaves  create finer-grained details in the noise sequence. By default, noise is computed over 4 octaves with each octave contributing  exactly half as much as its predecessor, starting at 50% strength for the 1st  octave. This falloff amount can be changed by adding an additional function  parameter. Eg. a falloff factor of 0.75 means each octave will now have  75% impact (25% less) of the previous lower octave. Any value between  0.0 and 1.0 is valid, however, note that values greater than 0.5 might  result in greater than 1.0 values returned by <a href=\"#/p5/noise\">noise()</a>. By changing these parameters, the signal created by the <a href=\"#/p5/noise\">noise()</a>  function can be adapted to fit very specific needs and characteristics."
+        "Perlinノイズ関数で生成されるノイズの特性とディテールのレベルを調整します。物理学の調和に似て、ノイズはいくつかのオクターブで計算されます。低オクターブは出力信号に大きく寄与し、ノイズの全体的な強度を定義します。一方、高オクターブはノイズ配列の細かいディテールを作成します。デフォルトでは、ノイズは4つのオクターブで計算され、各オクターブは直前のオクターブのちょうど半分の寄与をしています。1つ目のオクターブの強度は50%から始まります。この減衰量は、追加の関数パラメータを追加することで変更することができます。例えば、減衰係数が0.75の場合、各オクターブは前の低オクターブの75%の影響を持つことになります（25%少なくなります）。0.0から1.0の間の任意の値が有効ですが、0.5より大きい値は、<a href=\"#/p5/noise\">noise()</a>が1.0より大きい値を返す可能性があることに注意してください。これらのパラメータを変更することで、<a href=\"#/p5/noise\">noise()</a>関数で生成される信号は、非常に特定のニーズや特性に適応させることができます。"
       ],
       "params": {
-        "lod": "Number: number of octaves to be used by the noise",
-        "falloff": "Number: falloff factor for each octave"
+        "lod": "Number: ノイズに使用されるオクターブの数",
+        "falloff": "Number: 各オクターブの減衰係数"
       }
     },
     "noiseSeed": {
       "description": [
-        "Sets the seed value for <a href=\"#/p5/noise\">noise()</a>. By default, <a href=\"#/p5/noise\">noise()</a> produces different results each time the program is run. Set the <code>seed</code> parameter to a constant to return the same pseudo-random numbers each time the software is run."
+        "<a href=\"#/p5/noise\">noise()</a>のシード値を設定します。デフォルトでは、<a href=\"#/p5/noise\">noise()</a>はプログラムが実行されるたびに異なる結果を生成します。<code>seed</code>パラメータを定数に設定すると、ソフトウェアが実行されるたびに同じ疑似乱数が返されます。"
       ],
       "params": {
-        "seed": "Number: the seed value"
+        "seed": "Number: シード値"
       }
     },
     "randomSeed": {
       "description": [
-        "Sets the seed value for <a href=\"#/p5/random\">random()</a>.",
-        "By default, <a href=\"#/p5/random\">random()</a> produces different results each time the program is run. Set the seed parameter to a constant to return the same pseudo-random numbers each time the software is run."
+        "<a href=\"#/p5/random\">random()</a>のシード値を設定します。",
+        "デフォルトでは、<a href=\"#/p5/random\">random()</a>はプログラムが実行されるたびに異なる結果を生成します。シードパラメータを定数に設定すると、ソフトウェアが実行されるたびに同じ疑似乱数が返されます。"
       ],
       "params": {
-        "seed": "Number: the seed value"
+        "seed": "Number: シード値"
       }
     },
     "random": {
       "description": [
-        "Return a random floating-point number.",
-        "Takes either 0, 1 or 2 arguments.",
-        "If no argument is given, returns a random number from 0 up to (but not including) 1.",
-        "If one argument is given and it is a number, returns a random number from 0 up to (but not including) the number.",
-        "If one argument is given and it is an array, returns a random element from that array.",
-        "If two arguments are given, returns a random number from the first argument up to (but not including) the second argument."
+        "ランダムな浮動小数点数を返します。",
+        "0、1、または2の引数を取ります。",
+        "引数がない場合、0から1未満のランダムな数を返します。",
+        "引数が1つで、それが数値の場合、0からその数未満のランダムな数を返します。",
+        "引数が1つで、それが配列の場合、その配列からランダムな要素を返します。",
+        "引数が2つ与えられた場合、最初の引数から（ただし、第二引数未満まで）ランダムな数を返します。"
       ],
-      "returns": "Number: the random number",
+      "returns": "Number: ランダムな数",
       "params": {
-        "min": "Number: (Optional) the lower bound (inclusive)",
-        "max": "Number: (Optional) the upper bound (exclusive)",
-        "choices": "Array: the array to choose from"
+        "min": "Number: (オプション) 下限 (含む)",
+        "max": "Number: (オプション) 上限 (含まない)",
+        "choices": "Array: 選択肢となる配列"
       }
     },
     "randomGaussian": {
       "description": [
-        "Returns a random number fitting a Gaussian, or  normal, distribution. There is theoretically no minimum or maximum  value that <a href=\"#/p5/randomGaussian\">randomGaussian()</a> might return. Rather, there is  just a very low probability that values far from the mean will be  returned; and a higher probability that numbers near the mean will  be returned. Takes either 0, 1 or 2 arguments.  If no args, the mean is 0 and the standard deviation is 1.  If one arg, that arg is the mean and the standard deviation is 1.  If two args, the first arg is the mean and the second is the standard deviation."
+        "ガウス分布、または正規分布に従うランダムな数を返します。<a href=\"#/p5/randomGaussian\">randomGaussian()</a>が理論的に返す最小値や最大値はありません。むしろ、平均値から離れた値が返される確率は非常に低く、平均値に近い数が返される確率が高いです。0、1、または2の引数を取ります。引数がない場合、平均は0で標準偏差は1です。引数が1つの場合、その引数が平均で標準偏差は1です。引数が2つの場合、最初の引数が平均で、2つ目が標準偏差です。"
       ],
-      "returns": "Number: the random number",
+      "returns": "Number: ランダムな数",
       "params": {
-        "mean": "Number: (Optional) the mean",
-        "sd": "Number: (Optional) the standard deviation"
+        "mean": "Number: (オプション) 平均",
+        "sd": "Number: (オプション) 標準偏差"
       }
     },
     "acos": {
       "description": [
-        "The inverse of <a href=\"#/p5/cos\">cos()</a>, returns the arc cosine of a value. This function expects the values in the range of -1 to 1 and values are returned in the range 0 to PI (3.1415927) if the <a href=\"#/p5/angleMode\">angleMode()</a> is RADIANS or 0 to 180 if the <a href=\"#/p5/angleMode\">angleMode()</a> is DEGREES."
+        "<a href=\"#/p5/cos\">cos()</a>の逆関数で、値の逆余弦を返します。この関数は、-1から1の範囲の値を想定しており、<a href=\"#/p5/angleMode\">angleMode()</a>がRADIANSの場合は0からPI (3.1415927)の範囲の値が、DEGREESの場合は0から180の範囲の値が返されます。"
       ],
-      "returns": "Number: the arc cosine of the given value",
+      "returns": "Number: 与えられた値の逆余弦",
       "params": {
-        "value": "Number: the value whose arc cosine is to be returned"
+        "value": "Number: 逆余弦を返す値"
       }
     },
     "asin": {
       "description": [
-        "The inverse of <a href=\"#/p5/sin\">sin()</a>, returns the arc sine of a value. This function expects the values in the range of -1 to 1 and values are returned in the range -PI/2 to PI/2 if the angleMode is RADIANS or -90 to 90 if the angle mode is DEGREES."
+        "<a href=\"#/p5/sin\">sin()</a>の逆関数で、値の逆正弦を返します。この関数は、-1から1の範囲の値を想定しており、angleModeがRADIANSの場合は-PI/2からPI/2の範囲の値が、DEGREESの場合は-90から90の範囲の値が返されます。"
       ],
-      "returns": "Number: the arc sine of the given value",
+      "returns": "Number: 与えられた値の逆正弦",
       "params": {
-        "value": "Number: the value whose arc sine is to be returned"
+        "value": "Number: 逆正弦を返す値"
       }
     },
     "atan": {
       "description": [
-        "The inverse of <a href=\"#/p5/tan\">tan()</a>, returns the arc tangent of a value. This function expects the values in the range of -Infinity to Infinity (exclusive) and values are returned in the range -PI/2 to PI/2 if the angleMode is RADIANS or -90 to 90 if the angle mode is DEGREES."
+        "<a href=\"#/p5/tan\">tan()</a>の逆関数で、値の逆正接を返します。この関数は、-InfinityからInfinity (exclusive)の範囲の値を想定しており、angleModeがRADIANSの場合は-PI/2からPI/2の範囲の値が、DEGREESの場合は-90から90の範囲の値が返されます。"
       ],
-      "returns": "Number: the arc tangent of the given value",
+      "returns": "Number: 与えられた値の逆正接",
       "params": {
-        "value": "Number: the value whose arc tangent is to be returned"
+        "value": "Number: 逆正接を返す値"
       }
     },
     "atan2": {
       "description": [
-        "Calculates the angle (in radians) from a specified point to the coordinate origin as measured from the positive x-axis. Values are returned as a float in the range from PI to -PI if the <a href=\"#/p5/angleMode\">angleMode()</a> is RADIANS or 180 to -180 if the <a href=\"#/p5/angleMode\">angleMode()</a> is DEGREES. The <a href=\"#/p5/\">atan2()</a> function is most often used for orienting geometry to the position of the cursor.",
-        "Note: The y-coordinate of the point is the first parameter, and the x-coordinate is the second parameter, due to the structure of calculating the tangent."
+        "指定した点から座標原点までの角度を、正のx軸から測定したラジアン単位で計算します。値は、<a href=\"#/p5/angleMode\">angleMode()</a>がRADIANSの場合はPIから-PIの範囲の浮動小数点で返され、DEGREESの場合は180から-180の範囲で返されます。<a href=\"#/p5/\">atan2()</a>関数は、ジオメトリをカーソルの位置に合わせて向きを決定するために最もよく使用されます。",
+        "注: 点のy座標が最初のパラメータで、x座標が2番目のパラメータです。これは、正接を計算する構造によるものです。"
       ],
-      "returns": "Number: the arc tangent of the given point",
+      "returns": "Number: 与えられた点の逆正接",
       "params": {
-        "y": "Number: y-coordinate of the point",
-        "x": "Number: x-coordinate of the point"
+        "y": "Number: 点のy座標",
+        "x": "Number: 点のx座標"
       }
     },
     "cos": {
       "description": [
-        "Calculates the cosine of an angle. This function takes into account the current <a href=\"#/p5/angleMode\">angleMode</a>. Values are returned in the range -1 to 1."
+        "角度の余弦を計算します。この関数は、現在の<a href=\"#/p5/angleMode\">angleMode</a>を考慮しています。値は、-1から1の範囲で返されます。"
       ],
-      "returns": "Number: the cosine of the angle",
+      "returns": "Number: 角度の余弦",
       "params": {
-        "angle": "Number: the angle"
+        "angle": "Number: 角度"
       }
     },
     "sin": {
       "description": [
-        "Calculates the sine of an angle. This function takes into account the current <a href=\"#/p5/angleMode\">angleMode</a>. Values are returned in the range -1 to 1."
+        "角度の正弦を計算します。この関数は、現在の<a href=\"#/p5/angleMode\">angleMode</a>を考慮しています。値は、-1から1の範囲で返されます。"
       ],
-      "returns": "Number: the sine of the angle",
+      "returns": "Number: 角度の正弦",
       "params": {
-        "angle": "Number: the angle"
+        "angle": "Number: 角度"
       }
     },
     "tan": {
       "description": [
-        "Calculates the tangent of an angle. This function takes into account the current <a href=\"#/p5/angleMode\">angleMode</a>. Values are returned in the range of all real numbers."
+        "角度の正接を計算します。この関数は、現在の<a href=\"#/p5/angleMode\">angleMode</a>を考慮しています。値は、すべての実数の範囲で返されます。"
       ],
-      "returns": "Number: the tangent of the angle",
+      "returns": "Number: 角度の正接",
       "params": {
-        "angle": "Number: the angle"
+        "angle": "Number: 角度"
       }
     },
     "degrees": {
       "description": [
-        "Converts a radian measurement to its corresponding value in degrees. Radians and degrees are two ways of measuring the same thing. There are 360 degrees in a circle and 2*PI radians in a circle. For example, 90° = PI/2 = 1.5707964. This function does not take into account the current <a href=\"#/p5/angleMode\">angleMode()</a>."
+        "ラジアン単位の測定値を、対応する角度の値に変換します。ラジアンと角度は、同じことを測定する2つの方法です。円には360度があり、円には2*PIラジアンがあります。例えば、90° = PI/2 = 1.5707964。この関数は、現在の<a href=\"#/p5/angleMode\">angleMode()</a>は考慮しません。"
       ],
-      "returns": "Number: the converted angle",
+      "returns": "Number: 変換された角度",
       "params": {
-        "radians": "Number: the radians value to convert to degrees"
+        "radians": "Number: 度数法に変換するラジアン値"
       }
     },
     "radians": {
       "description": [
-        "Converts a degree measurement to its corresponding value in radians. Radians and degrees are two ways of measuring the same thing. There are 360 degrees in a circle and 2*PI radians in a circle. For example, 90° = PI/2 = 1.5707964. This function does not take into account the current <a href=\"#/p5/angleMode\">angleMode</a>."
+        "角度の測定値を、対応するラジアンの値に変換します。ラジアンと角度は、同じことを測定する2つの方法です。円には360度があり、円には2*PIラジアンがあります。例えば、90° = PI/2 = 1.5707964。この関数は、現在の<a href=\"#/p5/angleMode\">angleMode</a>は考慮しません。"
       ],
-      "returns": "Number: the converted angle",
+      "returns": "Number: 変換された角度",
       "params": {
-        "degrees": "Number: the degree value to convert to radians"
+        "degrees": "Number: ラジアンに変換する度数法の値"
       }
     },
     "angleMode": {
       "description": [
-        "Sets the current mode of p5 to the given mode. Default mode is RADIANS.",
-        "Calling <a href=\"#/p5/angleMode\">angleMode()</a> with no arguments returns current anglemode."
+        "p5の現在のモードを指定されたモードに設定します。デフォルトのモードはRADIANSです。",
+        "<a href=\"#/p5/angleMode\">angleMode()</a>を引数なしで呼び出すと、現在のangleModeが返されます。"
       ],
       "params": {
-        "mode": "Constant: either RADIANS or DEGREES"
+        "mode": "Constant: RADIANSまたはDEGREESのいずれか"
       }
     },
     "textAlign": {
       "description": [
-        "Sets the current alignment for drawing text. Accepts two arguments: horizAlign (LEFT, CENTER, or RIGHT) and vertAlign (TOP, BOTTOM, CENTER, or BASELINE).",
-        "The horizAlign parameter is in reference to the x value of the <a href=\"#/p5/text\">text()</a> function, while the vertAlign parameter is in reference to the y value.",
-        "So if you write textAlign(LEFT), you are aligning the left edge of your text to the x value you give in <a href=\"#/p5/text\">text()</a>. If you write textAlign(RIGHT, TOP), you are aligning the right edge of your text to the x value and the top edge of the text to the y value."
+        "テキストの描画に使用する現在のアライメントを設定します。2つの引数を受け入れます: horizAlign（LEFT、CENTER、またはRIGHT）とvertAlign（TOP、BOTTOM、CENTER、またはBASELINE）。",
+        "horizAlignパラメータは、<a href=\"#/p5/text\">text()</a>関数のx値を参照し、vertAlignパラメータはy値を参照します。",
+        "したがって、textAlign(LEFT)と記述すると、テキストの左端を<a href=\"#/p5/text\">text()</a>で指定したx値に揃えます。textAlign(RIGHT, TOP)と記述すると、テキストの右端をx値に、上端をy値に揃えます。"
       ],
       "params": {
-        "horizAlign": "Constant: horizontal alignment, either LEFT,  CENTER, or RIGHT",
-        "vertAlign": "Constant: (Optional) vertical alignment, either TOP,  BOTTOM, CENTER, or BASELINE"
+        "horizAlign": "Constant: 水平方向のアライメント。LEFT、CENTER、またはRIGHT",
+        "vertAlign": "Constant: （オプション）垂直方向のアライメント。TOP、BOTTOM、CENTER、またはBASELINE"
       }
     },
     "textLeading": {
       "description": [
-        "Sets/gets the spacing, in pixels, between lines of text. This setting will be used in all subsequent calls to the <a href=\"#/p5/text\">text()</a> function."
+        "テキストの行間をピクセル単位で設定/取得します。この設定は、以降の<a href=\"#/p5/text\">text()</a>関数の呼び出しで使用されます。"
       ],
       "params": {
-        "leading": "Number: the size in pixels for spacing between lines"
+        "leading": "Number: 行間のピクセル単位のサイズ"
       }
     },
     "textSize": {
       "description": [
-        "Sets/gets the current font size. This size will be used in all subsequent calls to the <a href=\"#/p5/text\">text()</a> function. Font size is measured in pixels."
+        "現在のフォントサイズを設定/取得します。このサイズは、以降の<a href=\"#/p5/text\">text()</a>関数の呼び出しで使用されます。フォントサイズはピクセル単位で測定されます。"
       ],
       "params": {
-        "theSize": "Number: the size of the letters in units of pixels"
+        "theSize": "Number: 文字のサイズ（ピクセル単位）"
       }
     },
     "textStyle": {
       "description": [
-        "Sets/gets the style of the text for system fonts to NORMAL, ITALIC, BOLD or BOLDITALIC. Note: this may be is overridden by CSS styling. For non-system fonts (opentype, truetype, etc.) please load styled fonts instead."
+        "システムフォントのテキストスタイルをNORMAL、ITALIC、BOLD、またはBOLDITALICに設定/取得します。注意: これはCSSのスタイル設定によって上書きされる場合があります。非システムフォント（オープンタイプ、トゥルータイプなど）の場合は、代わりにスタイル付きフォントを読み込んでください。"
       ],
       "params": {
-        "theStyle": "Constant: styling for text, either NORMAL,  ITALIC, BOLD or BOLDITALIC"
+        "theStyle": "Constant: テキストのスタイル。NORMAL、ITALIC、BOLD、またはBOLDITALIC"
       }
     },
     "textWidth": {
       "description": [
-        "Calculates and returns the width of any character or text string."
+        "任意の文字やテキスト文字列の幅を計算して返します。"
       ],
-      "returns": "Number: the calculated width",
+      "returns": "Number: 計算された幅",
       "params": {
-        "theText": "String: the String of characters to measure"
+        "theText": "String: 測定する文字の文字列"
       }
     },
     "textAscent": {
       "description": [
-        "Returns the ascent of the current font at its current size. The ascent represents the distance, in pixels, of the tallest character above the baseline."
+        "現在のフォントの上昇を、現在のサイズで返します。上昇は、ベースラインから最も高い文字までの距離（ピクセル単位）を表します。"
       ],
       "returns": "Number:"
     },
     "textDescent": {
       "description": [
-        "Returns the descent of the current font at its current size. The descent represents the distance, in pixels, of the character with the longest descender below the baseline."
+        "現在のフォントの下降を、現在のサイズで返します。下降は、ベースラインから最も長い降り幅を持つ文字までの距離（ピクセル単位）を表します。"
       ],
       "returns": "Number:"
     },
     "textWrap": {
       "description": [
-        "Specifies how lines of text are wrapped within a text box. This requires a max-width set on the text area, specified in <a href=\"#/p5/text\">text()</a> as parameter <code>x2</code>.",
-        "WORD wrap style only breaks lines at spaces. A single string without spaces that exceeds the boundaries of the canvas or text area is not truncated, and will overflow the desired area, disappearing at the canvas edge.",
-        "CHAR wrap style breaks lines wherever needed to stay within the text box.",
-        "WORD is the default wrap style, and both styles will still break lines at any line breaks (<code>\\n</code>) specified in the original text. The text area max-height parameter (<code>y2</code>) also still applies to wrapped text in both styles, lines of text that do not fit within the text area will not be drawn to the screen."
+        "テキストボックス内でのテキスト行の折り返し方法を指定します。これには、<a href=\"#/p5/text\">text()</a>のパラメータ<code>x2</code>で指定されたテキスト領域の最大幅が必要です。",
+        "WORDラップスタイルは、空白でのみ行を折り返します。空白がない単一の文字列で、キャンバスやテキスト領域の境界を超える場合は、テキストは切り捨てられず、指定された領域をオーバーフローし、キャンバスの端で消えます。",
+        "CHARラップスタイルは、テキストボックス内に収まるように必要に応じて行を折り返します。",
+        "WORDはデフォルトのラップスタイルであり、両方のスタイルでは、元のテキストで指定された改行（<code>\\n</code>）で行が折り返されます。テキストエリアの最大高さパラメータ（<code>y2</code>）は、両方のスタイルで折り返されたテキストにも適用され、テキストエリアに収まらないテキストの行は画面に描画されません。"
       ],
       "returns": "String: wrapStyle",
       "params": {
-        "wrapStyle": "Constant: text wrapping style, either WORD or CHAR"
+        "wrapStyle": "Constant: テキストの折り返しスタイル。WORDまたはCHAR"
       }
     },
     "loadFont": {
       "description": [
-        "Loads an opentype font file (.otf, .ttf) from a file or a URL, and returns a <a href=\"#/p5.Font\">p5.Font</a> object. This function is asynchronous, meaning it may not finish before the next line in your sketch is executed.",
-        "The path to the font should be relative to the HTML file that links in your sketch. Loading fonts from a URL or other remote location may be blocked due to your browser's built-in security."
+        "ファイルまたはURLからOpenTypeフォントファイル（.otf、.ttf）をロードし、<a href=\"#/p5.Font\">p5.Font</a>オブジェクトを返します。この関数は非同期であり、スケッチの次の行が実行される前に終了しない場合があります。",
+        "フォントへのパスは、スケッチにリンクされたHTMLファイルに対して相対的である必要があります。URLや他のリモート場所からのフォントの読み込みは、ブラウザの組み込みセキュリティによりブロックされることがあります。"
       ],
-      "returns": "p5.Font: <a href=\"#/p5.Font\">p5.Font</a> object",
+      "returns": "p5.Font: <a href=\"#/p5.Font\">p5.Font</a>オブジェクト",
       "params": {
-        "path": "String: name of the file or url to load",
-        "callback": "Function: (Optional) function to be executed after  <a href=\"#/p5/loadFont\">loadFont()</a> completes",
-        "onError": "Function: (Optional) function to be executed if  an error occurs"
+        "path": "文字列: ロードするファイルまたはURLの名前",
+        "callback": "関数: (オプション) <a href=\"#/p5/loadFont\">loadFont()</a>が完了した後に実行される関数",
+        "onError": "関数: (オプション) エラーが発生した場合に実行される関数"
       }
     },
     "text": {
       "description": [
-        "Draws text to the screen. Displays the information specified in the first parameter on the screen in the position specified by the additional parameters. A default font will be used unless a font is set with the <a href=\"#/p5/textFont\">textFont()</a> function and a default size will be used unless a font is set with <a href=\"#/p5/textSize\">textSize()</a>. Change the color of the text with the <a href=\"#/p5/fill\">fill()</a> function. Change the outline of the text with the <a href=\"#/p5/stroke\">stroke()</a> and <a href=\"#/p5/strokeWeight\">strokeWeight()</a> functions.",
-        "The text displays in relation to the <a href=\"#/p5/textAlign\">textAlign()</a> function, which gives the option to draw to the left, right, and center of the coordinates.",
-        "The x2 and y2 parameters define a rectangular area to display within and may only be used with string data. When these parameters are specified, they are interpreted based on the current <a href=\"#/p5/rectMode\">rectMode()</a> setting. Text that does not fit completely within the rectangle specified will not be drawn to the screen. If x2 and y2 are not specified, the baseline alignment is the default, which means that the text will be drawn upwards from x and y.",
-        "<b>WEBGL</b>: Only opentype/truetype fonts are supported. You must load a font using the <a href=\"#/p5/loadFont\">loadFont()</a> method (see the example above). <a href=\"#/p5/stroke\">stroke()</a> currently has no effect in webgl mode. Learn more about working with text in webgl mode on the <a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#text\">wiki</a>."
+        "画面上にテキストを描画します。追加のパラメータで指定された位置に、最初のパラメータで指定された情報を画面上に表示します。<a href=\"#/p5/textFont\">textFont()</a>関数でフォントが設定されていない場合はデフォルトのフォントが使用され、<a href=\"#/p5/textSize\">textSize()</a>でフォントサイズが設定されていない場合はデフォルトのサイズが使用されます。テキストの色を<a href=\"#/p5/fill\">fill()</a>関数で変更します。テキストのアウトラインを<a href=\"#/p5/stroke\">stroke()</a>関数と<a href=\"#/p5/strokeWeight\">strokeWeight()</a>関数で変更します。",
+        "テキストは<a href=\"#/p5/textAlign\">textAlign()</a>関数に関連して表示され、座標の左、右、および中央に描画するオプションがあります。",
+        "x2およびy2パラメータは、文字列データのみで使用できる表示範囲を定義し、現在の<a href=\"#/p5/rectMode\">rectMode()</a>設定に基づいて解釈されます。指定された矩形内に完全に収まらないテキストは画面に描画されません。x2とy2が指定されていない場合、デフォルトのベースライン揃えが適用され、テキストはxおよびyから上向きに描画されます。",
+        "<b>WEBGL</b>: Opentype/Truetypeフォントのみがサポートされています。上記の例のように、<a href=\"#/p5/loadFont\">loadFont()</a>メソッドを使ってフォントを読み込む必要があります。<a href=\"#/p5/stroke\">stroke()</a>は、現在webglモードでは効果がありません。WebGLモードでテキストを操作する方法については、<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#text\">wiki</a>を参照してください。"
       ],
       "params": {
-        "str": "String|Object|Array|Number|Boolean: the alphanumeric  symbols to be displayed",
-        "x": "Number: x-coordinate of text",
-        "y": "Number: y-coordinate of text",
-        "x2": "Number: (Optional) by default, the width of the text box,  see <a href=\"#/p5/rectMode\">rectMode()</a> for more info",
-        "y2": "Number: (Optional) by default, the height of the text box,  see <a href=\"#/p5/rectMode\">rectMode()</a> for more info"
+        "str": "String|Object|Array|Number|Boolean: 表示する英数字のシンボル",
+        "x": "Number: テキストのx座標",
+        "y": "Number: テキストのy座標",
+        "x2": "Number: (オプション) デフォルトでは、テキストボックスの幅で、<a href=\"#/p5/rectMode\">rectMode()</a>で詳細を確認できます",
+        "y2": "Number: (オプション) デフォルトでは、テキストボックスの高さで、<a href=\"#/p5/rectMode\">rectMode()</a>で詳細を確認できます"
       }
     },
     "textFont": {
       "description": [
-        "Sets the current font that will be drawn with the <a href=\"#/p5/text\">text()</a> function. If textFont() is called without any argument, it will return the current font if one has been set already. If not, it will return the name of the default font as a string. If textFont() is called with a font to use, it will return the p5 object.",
-        "<b>WEBGL</b>: Only fonts loaded via <a href=\"#/p5/loadFont\">loadFont()</a> are supported."
+        "<a href=\"#/p5/text\">text()</a>関数で描画される現在のフォントを設定します。textFont()が引数なしで呼び出されると、すでに設定されているフォントがあれば現在のフォントを返します。そうでなければ、デフォルトフォントの名前を文字列として返します。textFont()が使用するフォントで呼び出されると、p5オブジェクトを返します。",
+        "<b>WEBGL</b>: <a href=\"#/p5/loadFont\">loadFont()</a>で読み込まれたフォントのみがサポートされています。"
       ],
-      "returns": "Object: the current font / p5 Object",
+      "returns": "Object: 現在のフォント / p5オブジェクト",
       "params": {
-        "font": "Object|String: a font loaded via <a href=\"#/p5/loadFont\">loadFont()</a>, or a String representing a <a href=\"https://mzl.la/2dOw8WD\">web safe font</a> (a font that is generally available across all systems)",
-        "size": "Number: (Optional) the font size to use"
+        "font": "Object|String: <a href=\"#/p5/loadFont\">loadFont()</a>で読み込まれたフォント、または<a href=\"https://mzl.la/2dOw8WD\">ウェブセーフフォント</a>（一般的にすべてのシステムで利用可能なフォント）を表す文字列",
+        "size": "Number: （オプション）使用するフォントサイズ"
       }
     },
     "append": {
       "description": [
-        "Adds a value to the end of an array. Extends the length of the array by one. Maps to Array.push()."
+        "配列の末尾に値を追加します。配列の長さが1つ延びます。Array.push()に対応します。"
       ],
-      "returns": "Array: the array that was appended to",
+      "returns": "Array: 追加された配列",
       "params": {
-        "array": "Array: Array to append",
-        "value": "Any: to be added to the Array"
+        "array": "Array: 追加する配列",
+        "value": "Any: 配列に追加される値"
       }
     },
     "arrayCopy": {
       "description": [
-        "Copies an array (or part of an array) to another array. The src array is copied to the dst array, beginning at the position specified by srcPosition and into the position specified by dstPosition. The number of elements to copy is determined by length. Note that copying values overwrites existing values in the destination array. To append values instead of overwriting them, use <a href=\"#/p5/concat\">concat()</a>.",
-        "The simplified version with only two arguments, arrayCopy(src, dst), copies an entire array to another of the same size. It is equivalent to arrayCopy(src, 0, dst, 0, src.length).",
-        "Using this function is far more efficient for copying array data than iterating through a for() loop and copying each element individually."
+        "配列（または配列の一部）を別の配列にコピーします。src 配列は、srcPosition で指定された位置から始まり、dstPosition で指定された位置にある dst 配列にコピーされます。コピーする要素の数は length で決定されます。値のコピーは、destination 配列内の既存の値を上書きすることに注意してください。上書きする代わりに値を追加するには、<a href=\"#/p5/concat\">concat()</a>を使用してください。",
+        "2つの引数のみの単純化されたバージョンである arrayCopy(src, dst) は、同じサイズの別の配列に配列全体をコピーします。arrayCopy(src, 0, dst, 0, src.length) と同等です。",
+        "この関数を使用することは、for() ループを反復処理して各要素を個別にコピーするよりも、配列データをコピーするのにはるかに効率的です。"
       ],
       "params": {
-        "src": "Array: the source Array",
-        "srcPosition": "Integer: starting position in the source Array",
-        "dst": "Array: the destination Array",
-        "dstPosition": "Integer: starting position in the destination Array",
-        "length": "Integer: number of Array elements to be copied"
+        "src": "Array: ソース配列",
+        "srcPosition": "Integer: ソース配列内の開始位置",
+        "dst": "Array: 送信先配列",
+        "dstPosition": "Integer: 送信先配列内の開始位置",
+        "length": "Integer: コピーされる配列要素の数"
       }
     },
     "concat": {
       "description": [
-        "Concatenates two arrays, maps to Array.concat(). Does not modify the input arrays."
+        "2つの配列を連結します。Array.concat()に対応します。入力配列は変更されません。"
       ],
-      "returns": "Array: concatenated array",
+      "returns": "Array: 連結された配列",
       "params": {
-        "a": "Array: first Array to concatenate",
-        "b": "Array: second Array to concatenate"
+        "a": "Array: 連結する最初の配列",
+        "b": "Array: 連結する2番目の配列"
       }
     },
     "reverse": {
       "description": [
-        "Reverses the order of an array, maps to Array.reverse()"
+        "配列の順序を逆にします。Array.reverse()に対応します。"
       ],
-      "returns": "Array: the reversed list",
+      "returns": "Array: 逆順に並べられたリスト",
       "params": {
-        "list": "Array: Array to reverse"
+        "list": "Array: 逆にする配列"
       }
     },
     "shorten": {
       "description": [
-        "Decreases an array by one element and returns the shortened array, maps to Array.pop()."
+        "配列を1つの要素で減らし、短くなった配列を返します。Array.pop()に対応します。"
       ],
-      "returns": "Array: shortened Array",
+      "returns": "Array: 短くなった配列",
       "params": {
-        "list": "Array: Array to shorten"
+        "list": "Array: 短くする配列"
       }
     },
     "shuffle": {
       "description": [
-        "Randomizes the order of the elements of an array. Implements <a href='http://Bost.Ocks.org/mike/shuffle/' target=_blank> Fisher-Yates Shuffle Algorithm</a>."
+        "配列の要素の順序をランダム化します。<a href='http://Bost.Ocks.org/mike/shuffle/' target=_blank>フィッシャー・イェーツ シャッフル アルゴリズム</a>を実装します。"
       ],
-      "returns": "Array: shuffled Array",
+      "returns": "Array: シャッフルされた配列",
       "params": {
-        "array": "Array: Array to shuffle",
-        "bool": "Boolean: (Optional) modify passed array"
+        "array": "Array: シャッフルする配列",
+        "bool": "Boolean: (オプション) 渡された配列を変更"
       }
     },
     "sort": {
       "description": [
-        "Sorts an array of numbers from smallest to largest, or puts an array of words in alphabetical order. The original array is not modified; a re-ordered array is returned. The count parameter states the number of elements to sort. For example, if there are 12 elements in an array and count is set to 5, only the first 5 elements in the array will be sorted."
+        "数字の配列を最小から最大まで並べ替えるか、単語の配列をアルファベット順に並べます。元の配列は変更されず、並べ替えられた配列が返されます。count パラメータは、並べ替える要素の数を示します。たとえば、配列に12個の要素があり、count が5に設定されている場合、配列の最初の5つの要素のみが並べ替えられます。"
       ],
-      "returns": "Array: the sorted list",
+      "returns": "Array: ソートされたリスト",
       "params": {
-        "list": "Array: Array to sort",
-        "count": "Integer: (Optional) number of elements to sort, starting from 0"
+        "list": "Array: 並べ替える配列",
+        "count": "Integer: (オプション) 0から始まる並べ替える要素の数"
       }
     },
     "splice": {
       "description": [
-        "Inserts a value or an array of values into an existing array. The first parameter specifies the initial array to be modified, and the second parameter defines the data to be inserted. The third parameter is an index value which specifies the array position from which to insert data. (Remember that array index numbering starts at zero, so the first position is 0, the second position is 1, and so on.)"
+        "既存の配列に値または値の配列を挿入します。第一パラメータは変更される初期配列を指定し、第二パラメータは挿入されるデータを定義します。第三パラメータは、データを挿入する配列の位置を指定するインデックス値です。（配列のインデックス番号は0から始まることを覚えておいてください。つまり、最初の位置は0、2番目の位置は1、という具合です。）"
       ],
-      "returns": "Array: the list",
+      "returns": "Array: リスト",
       "params": {
-        "list": "Array: Array to splice into",
-        "value": "Any: value to be spliced in",
-        "position": "Integer: in the array from which to insert data"
+        "list": "Array: スプライスする配列",
+        "value": "Any: スプライスされる値",
+        "position": "Integer: データを挿入する配列内の位置"
       }
     },
     "subset": {
       "description": [
-        "Extracts an array of elements from an existing array. The list parameter defines the array from which the elements will be copied, and the start and count parameters specify which elements to extract. If no count is given, elements will be extracted from the start to the end of the array. When specifying the start, remember that the first array element is 0. This function does not change the source array."
+        "既存の配列から要素の配列を抽出します。list パラメータは、要素がコピーされる配列を定義し、start と count パラメータは抽出する要素を指定します。countが指定されていない場合、配列の最初から最後までの要素が抽出されます。start を指定するときは、最初の配列要素が 0 であることを覚えておいてください。この関数はソース配列を変更しません。"
       ],
-      "returns": "Array: Array of extracted elements",
+      "returns": "Array: 抽出された要素の配列",
       "params": {
-        "list": "Array: Array to extract from",
-        "start": "Integer: position to begin",
-        "count": "Integer: (Optional) number of values to extract"
+        "list": "Array: 抽出元の配列",
+        "start": "Integer: 開始位置",
+        "count": "Integer: (オプション) 抽出する値の数"
       }
     },
     "float": {
       "description": [
-        "Converts a string to its floating point representation. The contents of a string must resemble a number, or NaN (not a number) will be returned. For example, float(\"1234.56\") evaluates to 1234.56, but float(\"giraffe\") will return NaN.",
-        "When an array of values is passed in, then an array of floats of the same length is returned."
+        "文字列を浮動小数点表現に変換します。文字列の内容は数値に似ていなければならず、そうでない場合は NaN（数値ではない）が返されます。例えば、float(\"1234.56\")は1234.56に評価されますが、float(\"キリン\")はNaNが返されます。",
+        "値の配列が渡された場合、同じ長さの浮動小数点の配列が返されます。"
       ],
-      "returns": "Number: floating point representation of string",
+      "returns": "Number: 文字列の浮動小数点表現",
       "params": {
-        "str": "String: float string to parse"
+        "str": "String: 解析する浮動小数点の文字列"
       }
     },
     "int": {
       "description": [
-        "Converts a boolean, string, or float to its integer representation. When an array of values is passed in, then an int array of the same length is returned."
+        "ブール値、文字列、または浮動小数点数を整数表現に変換します。値の配列が渡された場合、同じ長さのint配列が返されます。"
       ],
-      "returns": "Number: integer representation of value",
+      "returns": "Number: 値の整数表現",
       "params": {
-        "n": "String|Boolean|Number: value to parse",
-        "radix": "Integer: (Optional) the radix to convert to (default: 10)",
-        "ns": "Array: values to parse"
+        "n": "String|Boolean|Number: 解析する値",
+        "radix": "Integer: （オプション）変換する基数（デフォルト：10）",
+        "ns": "Array: 解析する値"
       }
     },
     "str": {
       "description": [
-        "Converts a boolean, string or number to its string representation. When an array of values is passed in, then an array of strings of the same length is returned."
+        "ブール値、文字列、または数値をその文字列表現に変換します。値の配列が渡された場合、同じ長さの文字列の配列が返されます。"
       ],
-      "returns": "String: string representation of value",
+      "returns": "String: 値の文字列表現",
       "params": {
-        "n": "String|Boolean|Number|Array: value to parse"
+        "n": "String|Boolean|Number|Array: 解析する値"
       }
     },
     "byte": {
       "description": [
-        "Converts a number, string representation of a number, or boolean to its byte representation. A byte can be only a whole number between -128 and 127, so when a value outside of this range is converted, it wraps around to the corresponding byte representation. When an array of number, string or boolean values is passed in, then an array of bytes the same length is returned."
+        "数値、数値の文字列表現、またはブール値をそのバイト表現に変換します。バイトは-128から127までの整数のみになるため、この範囲外の値が変換されると、対応するバイト表現にラップされます。数値、文字列、ブール値の配列が渡された場合、同じ長さのバイトの配列が返されます。"
       ],
-      "returns": "Number: byte representation of value",
+      "returns": "Number: 値のバイト表現",
       "params": {
-        "n": "String|Boolean|Number: value to parse",
-        "ns": "Array: values to parse"
+        "n": "String|Boolean|Number: 解析する値",
+        "ns": "Array: 解析する値"
       }
     },
     "char": {
       "description": [
-        "Converts a number or string to its corresponding single-character string representation. If a string parameter is provided, it is first parsed as an integer and then translated into a single-character string. When an array of number or string values is passed in, then an array of single-character strings of the same length is returned."
+        "数値または文字列をそれに対応する1文字の文字列表現に変換します。文字列パラメータが指定された場合、まず整数として解析され、その後1文字の文字列に変換されます。数値または文字列の値の配列が渡された場合、同じ長さの1文字の文字列の配列が返されます。"
       ],
-      "returns": "String: string representation of value",
+      "returns": "String: 値の文字列表現",
       "params": {
-        "n": "String|Number: value to parse",
-        "ns": "Array: values to parse"
+        "n": "String|Number: 解析する値",
+        "ns": "Array: 解析する値"
       }
     },
     "unchar": {
       "description": [
-        "Converts a single-character string to its corresponding integer representation. When an array of single-character string values is passed in, then an array of integers of the same length is returned."
+        "1文字の文字列を対応する整数表現に変換します。1文字の文字列の値の配列が渡された場合、同じ長さの整数の配列が返されます。"
       ],
-      "returns": "Number: integer representation of value",
+      "returns": "Number: 値の整数表現",
       "params": {
-        "n": "String: value to parse",
-        "ns": "Array: values to parse"
+        "n": "String: 解析する値",
+        "ns": "Array: 解析する値"
       }
     },
     "hex": {
       "description": [
-        "Converts a number to a string in its equivalent hexadecimal notation. If a second parameter is passed, it is used to set the number of characters to generate in the hexadecimal notation. When an array is passed in, an array of strings in hexadecimal notation of the same length is returned."
+        "数値をそれに相当する16進数表記の文字列に変換します。2つ目のパラメータが渡された場合、16進数表記で生成する文字数を設定するために使用されます。配列が渡された場合、同じ長さの16進数表記の文字列の配列が返されます。"
       ],
-      "returns": "String: hexadecimal string representation of value",
+      "returns": "String: 値の16進数の文字列表現",
       "params": {
-        "n": "Number: value to parse",
+        "n": "Number: 解析する値",
         "digits": "Number (Optional)",
-        "ns": "Number[]: array of values to parse"
+        "ns": "Number[]: 解析する値の配列"
       }
     },
     "unhex": {
       "description": [
-        "Converts a string representation of a hexadecimal number to its equivalent integer value. When an array of strings in hexadecimal notation is passed in, an array of integers of the same length is returned."
+        "16進数表記の文字列表現を、それに相当する整数値に変換します。16進数表記の文字列の配列が渡された場合、同じ長さの整数の配列が返されます。"
       ],
-      "returns": "Number: integer representation of hexadecimal value",
+      "returns": "Number: 16進数の値の整数表現",
       "params": {
-        "n": "String: value to parse",
-        "ns": "Array: values to parse"
+        "n": "String: 解析する値",
+        "ns": "Array: 解析する値"
       }
     },
     "join": {
