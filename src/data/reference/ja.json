@@ -4679,7 +4679,7 @@
     "removeRow": {
       "description": ["テーブルオブジェクトから行を削除します。"],
       "params": {
-        "id": "整数: 削除する行のID番号"
+        "id": "Integer: 削除する行のID番号"
       }
     },
     "getRow": {
@@ -4688,7 +4688,7 @@
       ],
       "returns": "p5.TableRow: <a href=\"#/p5.TableRow\">p5.TableRow</a>オブジェクト",
       "params": {
-        "rowID": "整数: 取得する行のID番号"
+        "rowID": "Integer: 取得する行のID番号"
       }
     },
     "getRows": {
@@ -4703,8 +4703,8 @@
       ],
       "returns": "p5.TableRow:",
       "params": {
-        "value": "文字列: マッチする値",
-        "column": "整数|文字列: 検索する列のID番号またはタイトル"
+        "value": "String: マッチする値",
+        "column": "Integer|String: 検索する列のID番号またはタイトル"
       }
     },
     "findRows": {
@@ -4713,8 +4713,8 @@
       ],
       "returns": "p5.TableRow[]: <a href=\"#/p5.TableRow\">p5.TableRow</a>オブジェクトの配列",
       "params": {
-        "value": "文字列: マッチする値",
-        "column": "整数|文字列: 検索する列のID番号またはタイトル"
+        "value": "String: マッチする値",
+        "column": "Integer|String: 検索する列のID番号またはタイトル"
       }
     },
     "matchRow": {
@@ -4723,8 +4723,8 @@
       ],
       "returns": "p5.TableRow: TableRowオブジェクト",
       "params": {
-        "regexp": "文字列|正規表現: 一致する正規表現",
-        "column": "文字列|整数: 列ID（数字）またはタイトル（文字列）"
+        "regexp": "String|RegExp: 一致する正規表現",
+        "column": "String|Integer:  列ID（数字）またはタイトル（文字列）"
       }
     },
     "matchRows": {
@@ -4733,17 +4733,17 @@
       ],
       "returns": "p5.TableRow[]: <a href=\"#/p5.TableRow\">p5.TableRow</a>オブジェクトの配列",
       "params": {
-        "regexp": "文字列: 一致する正規表現",
-        "column": "文字列|整数: (オプション) 列ID（数字）またはタイトル（文字列）"
+        "regexp": "String: 一致する正規表現",
+        "column": "String|Integer:  (オプション) 列ID（数字）またはタイトル（文字列）"
       }
     },
     "getColumn": {
       "description": [
         "指定した列内のすべての値を取得し、それらを配列として返します。列は、IDまたはタイトルで指定できます。"
       ],
-      "returns": "配列: 列値の配列",
+      "returns": "Array:  列値の配列",
       "params": {
-        "column": "文字列|数値: 列の文字列または数値"
+        "column": "String|Number: 列の文字列または数値"
       }
     },
     "clearRows": {
@@ -4756,7 +4756,7 @@
         "<a href=\"#/p5.Table\">Table</a>オブジェクトに新しい列を追加するには、<a href=\"#/p5/addColumn\">addColumn()</a>を使用します。通常、列を名前で簡単に参照できるようにするために、タイトルを指定する必要があります。（タイトルが指定されていない場合、新しい列のタイトルはnullになります。）"
       ],
       "params": {
-        "title": "文字列: (オプション) 列のタイトル"
+        "title": "String: (オプション) 列のタイトル"
       }
     },
     "getColumnCount": {
@@ -5403,7 +5403,7 @@
     },
     "textToPoints": {
       "description": ["指定されたテキストのパスに従って点の配列を計算します。"],
-      "returns": "配列: x、y、alpha（パスの角度）を持つ各ポイントの配列",
+      "returns": "Array:  x、y、alpha（パスの角度）を持つ各ポイントの配列",
       "params": {
         "txt": "String: テキストの行",
         "x": "Number: x座標",
