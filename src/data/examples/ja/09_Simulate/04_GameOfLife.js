@@ -1,7 +1,7 @@
 /*
- * @name Game of Life
- * @arialabel Grid of white squares on a black background with some squares flickering between white and black to generate random patterns
- * @description A basic implementation of John Conway's Game of Life CA
+ * @name ライフゲーム
+ * @arialabel 黒い背景の白い正方形のグリッドで、いくつかの正方形が白と黒の間で点滅してランダムなパターンを生成
+ * @description ジョン・コンウェイのライフゲームの基本的な実装
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 
@@ -12,19 +12,19 @@ let board;
 let next;
 
 function setup() {
-  // Set simulation framerate to 10 to avoid flickering
+  // 点滅を防ぐためにシミュレーションのフレームレートを10に設定
   frameRate(10);
   createCanvas(720, 400);
   w = 20;
-  // Calculate columns and rows
+  // 列と行を計算
   columns = floor(width / w);
   rows = floor(height / w);
-  // Wacky way to make a 2D array is JS
+  // JSで2次元配列を作成する奇妙な方法
   board = new Array(columns);
   for (let i = 0; i < columns; i++) {
     board[i] = new Array(rows);
   }
-  // Going to use multiple 2D arrays and swap them
+  // 複数の2次元配列を使って入れ替える
   next = new Array(columns);
   for (i = 0; i < columns; i++) {
     next[i] = new Array(rows);
@@ -46,31 +46,31 @@ function draw() {
 
 }
 
-// reset board when mouse is pressed
+// マウスが押されたときにボードをリセット
 function mousePressed() {
   init();
 }
 
-// Fill board randomly
+// ボードをランダムに埋める
 function init() {
   for (let i = 0; i < columns; i++) {
     for (let j = 0; j < rows; j++) {
-      // Lining the edges with 0s
+      // 端を0で埋める
       if (i == 0 || j == 0 || i == columns-1 || j == rows-1) board[i][j] = 0;
-      // Filling the rest randomly
+      // それ以外をランダムに埋める
       else board[i][j] = floor(random(2));
       next[i][j] = 0;
     }
   }
 }
 
-// The process of creating the new generation
+// 新世代を作成するプロセス
 function generate() {
 
-  // Loop through every spot in our 2D array and check spots neighbors
+  // 2次元配列のすべての場所をループし、隣の場所をチェックする
   for (let x = 1; x < columns - 1; x++) {
     for (let y = 1; y < rows - 1; y++) {
-      // Add up all the states in a 3x3 surrounding grid
+      // 周囲の3x3のグリッド内のすべての状態を加算する
       let neighbors = 0;
       for (let i = -1; i <= 1; i++) {
         for (let j = -1; j <= 1; j++) {
@@ -78,20 +78,19 @@ function generate() {
         }
       }
 
-      // A little trick to subtract the current cell's state since
-      // we added it in the above loop
+      // 現在のセルの状態を減算する小さなトリック
+      // 上記のループで加算したため
       neighbors -= board[x][y];
-      // Rules of Life
-      if      ((board[x][y] == 1) && (neighbors <  2)) next[x][y] = 0;           // Loneliness
-      else if ((board[x][y] == 1) && (neighbors >  3)) next[x][y] = 0;           // Overpopulation
-      else if ((board[x][y] == 0) && (neighbors == 3)) next[x][y] = 1;           // Reproduction
-      else                                             next[x][y] = board[x][y]; // Stasis
+      // ライフのルール
+      if      ((board[x][y] == 1) && (neighbors <  2)) next[x][y] = 0;           // 孤独
+      else if ((board[x][y] == 1) && (neighbors >  3)) next[x][y] = 0;           // 過密
+      else if ((board[x][y] == 0) && (neighbors == 3)) next[x][y] = 1;           // 繁殖
+      else                                             next[x][y] = board[x][y]; // 安定
     }
   }
 
-  // Swap!
+  // 交換！
   let temp = board;
   board = next;
   next = temp;
 }
-

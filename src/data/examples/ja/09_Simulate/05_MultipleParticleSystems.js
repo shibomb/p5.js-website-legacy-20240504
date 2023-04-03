@@ -1,8 +1,8 @@
 /*
- * @name Multiple Particle Systems
- * @arialabel When the user clicks anywhere on the black background, a particle system begins where light grey circles flow out from the point like a sparkler  
- * @description Click the mouse to generate a burst of particles at mouse location.<br>Each burst is one instance of a particle system with Particles and CrazyParticles (a subclass of Particle).<br>Note use of Inheritance and Polymorphism here.<br>
- * Original by Daniel Shiffman.
+ * @name 複数のパーティクルシステム
+ * @arialabel ユーザーが黒い背景の任意の場所をクリックすると、スパークラーのように点から薄い灰色の円が流れ出すパーティクルシステムが始まる
+ * @description マウスをクリックして、マウスの位置でパーティクルの破裂を生成します。<br>各破裂は、ParticlesとCrazyParticles（Particleのサブクラス）で構成されるパーティクルシステムの1インスタンスです。<br>ここで継承と多態性の使用に注意してください。<br>
+ * オリジナル: Daniel Shiffman.
  */
 let systems;
 
@@ -22,7 +22,7 @@ function draw() {
     fill(255);
     textAlign(CENTER);
     textSize(32);
-    text("click mouse to add particle systems", width / 2, height / 2);
+    text("マウスをクリックしてパーティクルシステムを追加する", width / 2, height / 2);
   }
 }
 
@@ -31,7 +31,7 @@ function mousePressed() {
   systems.push(p);
 }
 
-// A simple Particle class
+// シンプルなParticleクラス
 let Particle = function(position) {
   this.acceleration = createVector(0, 0.05);
   this.velocity = createVector(random(-1, 1), random(-1, 0));
@@ -44,14 +44,14 @@ Particle.prototype.run = function() {
   this.display();
 };
 
-// Method to update position
+// 位置を更新するメソッド
 Particle.prototype.update = function(){
   this.velocity.add(this.acceleration);
   this.position.add(this.velocity);
   this.lifespan -= 2;
 };
 
-// Method to display
+// 表示するメソッド
 Particle.prototype.display = function () {
   stroke(200, this.lifespan);
   strokeWeight(2);
@@ -59,7 +59,7 @@ Particle.prototype.display = function () {
   ellipse(this.position.x, this.position.y, 12, 12);
 };
 
-// Is the particle still useful?
+// パーティクルはまだ有用ですか？
 Particle.prototype.isDead = function () {
   if (this.lifespan < 0) {
     return true;
@@ -74,7 +74,7 @@ let ParticleSystem = function (position) {
 };
 
 ParticleSystem.prototype.addParticle = function () {
-  // Add either a Particle or CrazyParticle to the system
+  // システムにParticleまたはCrazyParticleを追加する
   if (int(random(0, 2)) == 0) {
     p = new Particle(this.origin);
   }
@@ -94,42 +94,41 @@ ParticleSystem.prototype.run = function () {
   }
 };
 
-// A subclass of Particle
+// Particleのサブクラス
 
 function CrazyParticle(origin) {
-  // Call the parent constructor, making sure (using Function#call)
-  // that "this" is set correctly during the call
+  // 親コンストラクタを呼び出し、Function#callを使用して
+  // "this"が呼び出し中に正しく設定されることを確認する
   Particle.call(this, origin);
 
-  // Initialize our added properties
+  // 追加されたプロパティを初期化する
   this.theta = 0.0;
 };
 
-// Create a Crazy.prototype object that inherits from Particle.prototype.
-// Note: A common error here is to use "new Particle()" to create the
-// Crazy.prototype. That's incorrect for several reasons, not least
-// that we don't have anything to give Particle for the "origin"
-// argument. The correct place to call Particle is above, where we call
-// it from Crazy.
-CrazyParticle.prototype = Object.create(Particle.prototype); // See note below
+// Particle.prototypeから継承したCrazy.prototypeオブジェクトを作成する
+// 注意: ここでよくある間違いは、Crazy.prototypeを作成するために
+// "new Particle()"を使用することです。これはいくつかの理由で間違いです。
+// 特に、"origin"引数に何も与えるものがないためです。
+// Particleを呼び出す正しい場所は上記で、Crazyから呼び出すところです。
+CrazyParticle.prototype = Object.create(Particle.prototype); // 以下の注意を参照
 
-// Set the "constructor" property to refer to CrazyParticle
+// "constructor"プロパティをCrazyParticleを指すように設定する
 CrazyParticle.prototype.constructor = CrazyParticle;
 
-// Notice we don't have the method run() here; it is inherited from Particle
+// ここではメソッドrun()は存在しません。これはParticleから継承されます
 
-// This update() method overrides the parent class update() method
+// このupdate()メソッドは、親クラスのupdate()メソッドをオーバーライドします
 CrazyParticle.prototype.update=function() {
   Particle.prototype.update.call(this);
-  // Increment rotation based on horizontal velocity
+  // 水平方向の速度に基づいて回転を増加させる
   this.theta += (this.velocity.x * this.velocity.mag()) / 10.0;
 }
 
-// This display() method overrides the parent class display() method
+// このdisplay()メソッドは親クラスのdisplay()メソッドをオーバーライドします
 CrazyParticle.prototype.display=function() {
-  // Render the ellipse just like in a regular particle
+  // 通常のパーティクルと同様に楕円を描画します
   Particle.prototype.display.call(this);
-  // Then add a rotating line
+  // その後、回転する線を追加します
   push();
   translate(this.position.x, this.position.y);
   rotate(this.theta);

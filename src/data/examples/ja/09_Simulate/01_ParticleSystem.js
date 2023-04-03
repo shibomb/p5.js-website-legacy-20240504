@@ -1,7 +1,7 @@
 /*
- * @name Particle System
- * @arialabel Light grey circles flowing out from a point like a sparkler 
- * @description This is a basic Particle System
+ * @name パーティクルシステム
+ * @arialabel 点火されたスパークラーのように点から軽い灰色の円が流れ出す
+ * @description 基本的なパーティクルシステムです
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 let system;
@@ -17,7 +17,7 @@ function draw() {
   system.run();
 }
 
-// A simple Particle class
+// シンプルなパーティクルクラス
 let Particle = function(position) {
   this.acceleration = createVector(0, 0.05);
   this.velocity = createVector(random(-1, 1), random(-1, 0));
@@ -30,14 +30,14 @@ Particle.prototype.run = function() {
   this.display();
 };
 
-// Method to update position
+// 位置を更新するメソッド
 Particle.prototype.update = function(){
   this.velocity.add(this.acceleration);
   this.position.add(this.velocity);
   this.lifespan -= 2;
 };
 
-// Method to display
+// 表示するメソッド
 Particle.prototype.display = function() {
   stroke(200, this.lifespan);
   strokeWeight(2);
@@ -45,7 +45,7 @@ Particle.prototype.display = function() {
   ellipse(this.position.x, this.position.y, 12, 12);
 };
 
-// Is the particle still useful?
+// パーティクルはまだ役立つか？
 Particle.prototype.isDead = function(){
   return this.lifespan < 0;
 };

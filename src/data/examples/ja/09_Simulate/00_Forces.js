@@ -1,49 +1,49 @@
 /*
- * @name Forces
- * @arialabel 9 grey balls drop from the top of the window and slow down as they reach the bottom half of the screen which is dark grey in color. Their change in speed mimics objects slowing down due to water resistance
- * @description Demonstration of multiple force acting on bodies
+ * @name 様々な力
+ * @arialabel 9つのグレーボールが画面上部から落下し、画面下部の半分に達すると水抵抗により速度が遅くなります。速度の変化は水抵抗により物体が遅くなる様子を模倣しています。
+ * @description 複数の力が物体に作用するデモンストレーション
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
-// Demonstration of multiple force acting on
-// bodies (Mover class)
-// Bodies experience gravity continuously
-// Bodies experience fluid resistance when in "water"
+// 複数の力が作用するデモンストレーション
+// ボディ（Moverクラス）
+// ボディは常に重力を受ける
+// ボディは「水」の中にあるとき、流体抵抗を受ける
 
-// Five moving bodies
+// 5つの移動する物体
 let movers = [];
 
-// Liquid
+// 液体
 let liquid;
 
 function setup() {
   createCanvas(640, 360);
   reset();
-  // Create liquid object
+  // 液体オブジェクトを作成
   liquid = new Liquid(0, height / 2, width, height / 2, 0.1);
 }
 
 function draw() {
   background(127);
 
-  // Draw water
+  // 水を描画
   liquid.display();
 
   for (let i = 0; i < movers.length; i++) {
 
-    // Is the Mover in the liquid?
+    // Moverは液体の中にあるか？
     if (liquid.contains(movers[i])) {
-      // Calculate drag force
+      // 抵抗力を計算
       let dragForce = liquid.calculateDrag(movers[i]);
-      // Apply drag force to Mover
+      // Moverに抵抗力を適用
       movers[i].applyForce(dragForce);
     }
 
-    // Gravity is scaled by mass here!
+    // ここで重力は質量によってスケーリングされます
     let gravity = createVector(0, 0.1 * movers[i].mass);
-    // Apply gravity
+    // 重力を適用
     movers[i].applyForce(gravity);
 
-    // Update and display
+    // 更新と表示
     movers[i].update();
     movers[i].display();
     movers[i].checkEdges();
@@ -56,7 +56,7 @@ function mousePressed() {
   reset();
 }
 
-// Restart all the Mover objects randomly
+// Moverオブジェクトをランダムに再開
 function reset() {
   for (let i = 0; i < 9; i++) {
     movers[i] = new Mover(random(0.5, 3), 40 + i * 70, 0);
@@ -71,24 +71,24 @@ let Liquid = function(x, y, w, h, c) {
   this.c = c;
 };
 
-// Is the Mover in the Liquid?
+// MoverはLiquidの中にいますか？
 Liquid.prototype.contains = function(m) {
   let l = m.position;
   return l.x > this.x && l.x < this.x + this.w &&
          l.y > this.y && l.y < this.y + this.h;
 };
 
-// Calculate drag force
+// 抵抗力を計算する
 Liquid.prototype.calculateDrag = function(m) {
-  // Magnitude is coefficient * speed squared
+  // 大きさは係数 * 速度の二乗
   let speed = m.velocity.mag();
   let dragMagnitude = this.c * speed * speed;
 
-  // Direction is inverse of velocity
+  // 方向は速度の逆
   let dragForce = m.velocity.copy();
   dragForce.mult(-1);
 
-  // Scale according to magnitude
+  // 大きさに応じてスケールする
   // dragForce.setMag(dragMagnitude);
   dragForce.normalize();
   dragForce.mult(dragMagnitude);
@@ -108,19 +108,19 @@ function Mover(m, x, y) {
   this.acceleration = createVector(0, 0);
 }
 
-// Newton's 2nd law: F = M * A
-// or A = F / M
+// ニュートンの第二法則: F = M * A
+// または A = F / M
 Mover.prototype.applyForce = function(force) {
   let f = p5.Vector.div(force, this.mass);
   this.acceleration.add(f);
 };
 
 Mover.prototype.update = function() {
-  // Velocity changes according to acceleration
+  // 加速度によって速度が変化する
   this.velocity.add(this.acceleration);
-  // position changes by velocity
+  // 位置が速度によって変化する
   this.position.add(this.velocity);
-  // We must clear acceleration each frame
+  // 各フレームで加速度をクリアする必要がある
   this.acceleration.mult(0);
 };
 
@@ -131,19 +131,11 @@ Mover.prototype.display = function() {
   ellipse(this.position.x, this.position.y, this.mass * 16, this.mass * 16);
 };
 
-// Bounce off bottom of window
+// ウィンドウの下端で跳ね返る
 Mover.prototype.checkEdges = function() {
   if (this.position.y > (height - this.mass * 8)) {
-    // A little dampening when hitting the bottom
+    // 下端にぶつかったときに少し減衰させる
     this.velocity.y *= -0.9;
     this.position.y = (height - this.mass * 8);
   }
 };
-
-
-
-
-
-
-
-

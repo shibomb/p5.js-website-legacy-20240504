@@ -1,68 +1,67 @@
-
 /*
- * @name Spirograph
- * @arialabel A spirograph is created by interlocking black circle outlines rotating around each other on a grey background. When the user clicks the space bar, the background turns white and paths of circles of various sizes in an indigo color are visible
- * @description This sketch uses simple transformations to create a
- * Spirograph-like effect with interlocking circles (called sines).
- * Press the spacebar to switch between tracing and showing the underlying geometry.<br>
- * Example created by <a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a>.<br>
+ * @name スパイログラフ
+ * @arialabel グレーの背景に黒い円のアウトラインが互いに絡まって回転しているスパイログラフが作成されます。ユーザーがスペースキーを押すと、背景が白くなり、さまざまなサイズの円のパスがインディゴ色で表示されます。
+ * @description このスケッチは、シンプルな変換を使用して、
+ * 互いに連動する円（サインと呼ばれる）を持つスパイログラフのような効果を作成します。
+ * スペースキーを押してトレースと基本のジオメトリを切り替えます。<br>
+ * 例作成者：<a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a>。<br>
  * <a href='http://en.wikipedia.org/wiki/Spirograph'>http://en.wikipedia.org/wiki/Spirograph</a>
  */
-let NUMSINES = 20; // how many of these things can we do at once?
-let sines = new Array(NUMSINES); // an array to hold all the current angles
-let rad; // an initial radius value for the central sine
-let i; // a counter variable
+let NUMSINES = 20; // 一度に何個できるか？
+let sines = new Array(NUMSINES); // 現在の角度を保持する配列
+let rad; // 中心のサインの初期半径値
+let i; // カウンタ変数
 
-// play with these to get a sense of what's going on:
-let fund = 0.005; // the speed of the central sine
-let ratio = 1; // what multiplier for speed is each additional sine?
-let alpha = 50; // how opaque is the tracing system
+// これらを操作して、何が起こっているかを理解しましょう：
+let fund = 0.005; // 中心のサインの速度
+let ratio = 1; // 追加されるサインの速度の乗数は？
+let alpha = 50; // トレースシステムの不透明度はどれくらいか
 
-let trace = false; // are we tracing?
+let trace = false; // トレースしていますか？
 
 function setup() {
   createCanvas(710, 400);
 
-  rad = height / 4; // compute radius for central circle
-  background(204); // clear the screen
+  rad = height / 4; // 中心円の半径を計算
+  background(204); // 画面をクリア
 
   for (let i = 0; i<sines.length; i++) {
-    sines[i] = PI; // start EVERYBODY facing NORTH
+    sines[i] = PI; // みんなを北向きにスタートさせる
   }
 }
 
 function draw() {
   if (!trace) {
-    background(204); // clear screen if showing geometry
-    stroke(0, 255); // black pen
-    noFill(); // don't fill
+    background(204); // ジオメトリを表示している場合は画面をクリア
+    stroke(0, 255); // 黒のペン
+    noFill(); // 塗りつぶし無し
   }
 
-  // MAIN ACTION
-  push(); // start a transformation matrix
-  translate(width / 2, height / 2); // move to middle of screen
+  // メインアクション
+  push(); // 変換行列を開始
+  translate(width / 2, height / 2); // 画面の真ん中に移動
 
   for (let i = 0; i < sines.length; i++) {
-    let erad = 0; // radius for small "point" within circle... this is the 'pen' when tracing
-    // setup for tracing
+    let erad = 0; // 円内の小さな "点" の半径... これはトレース時の 'ペン' です
+    // トレースの設定
     if (trace) {
-      stroke(0, 0, 255 * (float(i) / sines.length), alpha); // blue
-      fill(0, 0, 255, alpha / 2); // also, um, blue
-      erad = 5.0 * (1.0 - float(i) / sines.length); // pen width will be related to which sine
+      stroke(0, 0, 255 * (float(i) / sines.length), alpha); // 青色
+      fill(0, 0, 255, alpha / 2); // これも、ええと、青色
+      erad = 5.0 * (1.0 - float(i) / sines.length); // ペンの太さは、どのサインに関連しているかによって決まります
     }
-    let radius = rad / (i + 1); // radius for circle itself
-    rotate(sines[i]); // rotate circle
-    if (!trace) ellipse(0, 0, radius * 2, radius * 2); // if we're simulating, draw the sine
-    push(); // go up one level
-    translate(0, radius); // move to sine edge
-    if (!trace) ellipse(0, 0, 5, 5); // draw a little circle
-    if (trace) ellipse(0, 0, erad, erad); // draw with erad if tracing
-    pop(); // go down one level
-    translate(0, radius); // move into position for next sine
-    sines[i] = (sines[i] + (fund + (fund * i * ratio))) % TWO_PI; // update angle based on fundamental
+    let radius = rad / (i + 1); // 円自体の半径
+    rotate(sines[i]); // 円を回転させる
+    if (!trace) ellipse(0, 0, radius * 2, radius * 2); // シミュレーション中なら、サインを描画
+    push(); // 1つ上のレベルへ移動
+    translate(0, radius); // サインの端まで移動
+    if (!trace) ellipse(0, 0, 5, 5); // 小さな円を描画
+    if (trace) ellipse(0, 0, erad, erad); // トレース時にはeradで描画
+    pop(); // 1つ下のレベルへ戻る
+    translate(0, radius); // 次のサインの位置に移動
+    sines[i] = (sines[i] + (fund + (fund * i * ratio))) % TWO_PI; // 基本周波数に基づいて角度を更新
   }
 
-  pop(); // pop down final transformation
+  pop(); // 最終的な変換を取り消す
 
 }
 
