@@ -192,7 +192,7 @@ download:
   complete-library-intro2: スタート
   complete-library-intro3: でp5.jsプロジェクトのセットアップ方法を学びましょう。
   p5.js-complete: p5.js全体
-  includes-1: '以下を含む:'
+  includes-1: '以下を含みます:'
   includes-2: p5.js、p5.sound.js、サンプルプロジェクト
   includes-3: 'バージョン '
   single-files-title: シングルファイル
