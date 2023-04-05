@@ -407,15 +407,15 @@ learn:
   getting-started-in-webgl-coords-and-transform-heading3: >-
     変形：3D図形の位置とサイズ
   getting-started-in-webgl-coords-and-transform-p7x1: >-
-    p5.jsにはいくつかのメソッドがあります。
+    p5.jsにはいくつかのメソッドがあります:
   getting-started-in-webgl-coords-and-transform-p7x2: >-
-    'and '
+    と 
   getting-started-in-webgl-coords-and-transform-p7x3: >-
     。それらを使用して、オブジェクトを空間内に配置および方向付けできます。 
     これらの方法は、<em>モデル行列</em>として知られるものを影響します。
     これらは、オブジェクトの<em>変換</em>としてまとめて扱われます。 これらのメソッドは、2Dおよび3D描画の両方で使用できます。
   getting-started-in-webgl-coords-and-transform-subheading1: >-
-    'translate(): 物体を空間内で移動させる'
+    translate(): 物体を空間内で移動させる
   getting-started-in-webgl-coords-and-transform-p8x1: >-
     <a class="code">translate()</a>は、指定された方向に原点を移動します。
     この後に描かれたものは、その点に対して相対的に位置づけられます。 <a
@@ -423,7 +423,7 @@ learn:
     上記のスケッチのスライダーを使って、ボックスの移動を変更して、各軸に沿ってどのように移動するかを見てください。 以下のコードは、<a
     class="code">box()</a>形状の単純な移動を示しています。
   getting-started-in-webgl-coords-and-transform-subheading2: >-
-    'rotate(): 物体を空間内で向きを変える'
+    rotate(): 物体を空間内で向きを変える
   getting-started-in-webgl-coords-and-transform-p9x1: >-
     <a class="code">rotate()</a>は、
     それに続くものを再配置します。
@@ -544,7 +544,7 @@ learn:
     class="code">sphere()</a>などの基本的な形状がいくつかありますが、p5.jsは3Dモデルファイルやコードから複雑なカスタムジオメトリをレンダリングすることもできます。
     このチュートリアルでは、p5.jsに3Dモデルをインポートする方法、およびゼロからジオメトリを作成する方法について説明します。
   getting-started-in-webgl-custom-geometry-info1x1: >- 
-    3Dに新しい場合は、次のチュートリアルを参照してください。
+    3Dをはじめて扱う方は、先にこのチュートリアルを参照してください:
   getting-started-in-webgl-custom-geometry-info1x2: >- 
     チュートリアル。
   getting-started-in-webgl-custom-geometry-toc-title: 目次
@@ -575,14 +575,14 @@ learn:
     自分自身のルールに従ってジオメトリを作成する方法です。 <a class="code">quad()</a>、 <a class="code">triangle()</a>、<a class="code">rect()</a>、<a class="code">circle()</a>など、
     各メソッドには3Dで使用できるようにするための追加パラメータがあります。
   getting-started-in-webgl-custom-geometry-p5x1: >-
-    'ジオメトリを制御するための別の方法があります。 '
+    ジオメトリを制御するための別の方法があります。 
   getting-started-in-webgl-custom-geometry-p5x2: >-
-    'と '
+    と 
   getting-started-in-webgl-custom-geometry-p5x3: >-
     というメソッドを使って、点ごとに形状を定義することができます。 
     次の例では、これらのメソッドを使用して、数学的に3Dシェイプを構築する方法を示します。
   getting-started-in-webgl-custom-geometry-p6x1: >-
-    'また、p5.jsは内部的に<a class="code">loadModel()</a>で使用されている '
+    また、p5.jsは内部的に<a class="code">loadModel()</a>で使用されている 
   getting-started-in-webgl-custom-geometry-p6x1_: >-
     クラスがあり、カスタムジオメトリの定義にも使用できます。
     これは、面や法線を計算するための便利なツールを提供します。 
@@ -1035,7 +1035,7 @@ learn:
   color-custom-ranges-li2x2: —色の鮮やかさで、デフォルトでは0から100までの範囲です。
   color-custom-ranges-li3x1: Brightness(明度)
   color-custom-ranges-li3x2: —色の明るさで、デフォルトでは0から100の範囲です。
-  color-custom-ranges-p6x1: 'With '
+  color-custom-ranges-p6x1: 'さらに '
   color-custom-ranges-p6x2: >-
     を使用すれば、これらの値に独自の範囲を設定することもできます。色相については、色の円盤の360度を考えると0から360の範囲が好ましい場合があります。彩度と明度については、0から100％を考えると0から100までの範囲が好ましい場合があります。
   coordinate-system-description1: このチュートリアルは、
