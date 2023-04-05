@@ -1,10 +1,9 @@
 /*
- * @name Create Image
- * @arialabel Black background with a blue gradient square on the left. Another blue gradient square follows the user’s mouse as it moves
- * @description The createImage() function provides a fresh buffer of pixels to
- * play with. This example creates an image gradient.
+ * @name 画像を作成する
+ * @arialabel 黒い背景の左側に青色のグラデーションがかかった正方形。マウスに従って移動するもう1つの青色のグラデーションがかかった正方形があります。
+ * @description createImage()関数は、ピクセルの新しいバッファを提供します。この例では、画像のグラデーションを作成します。
  */
-let img; // Declare variable 'img'.
+let img; // 'img'変数を宣言する。
 
 function setup() {
   createCanvas(720, 400);

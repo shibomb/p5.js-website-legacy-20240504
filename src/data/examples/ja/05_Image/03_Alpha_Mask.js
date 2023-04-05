@@ -1,13 +1,10 @@
 /*
- * @name Alpha Mask
- * @arialabel An astronaut on a planet as the background with a slightly transparent version of this image on top that moves with the horizontal direction of the user’s mouse. Both have a light blue gradient on the right side.
- * @description Loads a "mask" for an image to specify the transparency in
- * different parts of the image. The two images are blended together using
- * the mask() method of p5.Image.
- * <p><em><span class="small"> To run this example locally, you will need two
- * image files, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">
- * local server</a>.</span></em></p>
- */
+ * @name アルファマスク
+ * @arialabel 宇宙飛行士の画像を背景に表示し、やや透明な宇宙飛行士の画像が上に表示されています。透過された画像はマウスの水平方向と一緒に移動します。両方の画像には右側に薄い青色のグラデーションがあります。
+ * @description 画像の異なる部分で透明度を指定するために、画像の「マスク」を読み込みます。2つの画像は、p5.Imageのmask()メソッドを使用してブレンドされます。
+ * <p><em><span class="small"> この例をローカルで実行するには、2つの画像ファイルと実行中の<a href="https://github.com/processing/p5.js/wiki/Local-server">
+ * ローカルサーバー</a>が必要です。</span></em></p>
+*/
 let img;
 let imgMask;
 
