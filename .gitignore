@@ -33,3 +33,6 @@ dist/*
 !dist/download/release.php
 !dist/books/media.zip
 !dist/learn/books/media.zip
+
+# i18n-ja working only. don't merge to original repo.
+!dist/download/version.json
