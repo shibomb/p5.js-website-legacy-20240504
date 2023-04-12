@@ -38,22 +38,16 @@ home:
   p1x1: >-
     p5.jsは、アーティスト、デザイナー、教育者、入門者、その他全ての人々が
     コーディングに触れられるようにすることを目的としたJavaScriptライブラリです！
-    p5.jsは、ソフトウェアやその学習ツールには全ての人々がアクセス可能であるべきという信念に基づき、
-    無料かつオープンソースで提供されています。
+    p5.jsは、ソフトウェアやその学習ツールには全ての人々がアクセス可能であるべきという信念に基づき、 無料かつオープンソースで提供されています。
   p1x2: >-
-    スケッチの比喩を用いて、p5.jsは完全な描画機能を備えています。
-    しかし、描画キャンバスに限定されることはありません。
-    テキスト、入力、ビデオ、Webカメラ、サウンドなどのHTML5オブジェクトを含め、
-    ブラウザのページ全体をスケッチと考えることができます。
+    スケッチの比喩を用いて、p5.jsは完全な描画機能を備えています。 しかし、描画キャンバスに限定されることはありません。
+    テキスト、入力、ビデオ、Webカメラ、サウンドなどのHTML5オブジェクトを含め、 ブラウザのページ全体をスケッチと考えることができます。
   p2xh2: コミュニティ
   p2x1: >-
     私たちは、性自認や表現、性的指向、人種、民族、言語、神経タイプ、サイズ、障がい、階級、宗教、文化、
-    サブカルチャー、政治的意見、年齢、スキルレベル、職業、バックグラウンドを問わず、
-    すべての人々と連帯しているコミュニティです。
-    誰もが積極的に参加する時間や経済的な手段、能力を持っているわけではありませんが、
-    あらゆる形態の参加を認識し、奨励しています。
-    私たちは、アクセスとエンパワーメントを促進・支援するために活動し、
-    常に学び続けることを大切にしています。
+    サブカルチャー、政治的意見、年齢、スキルレベル、職業、バックグラウンドを問わず、 すべての人々と連帯しているコミュニティです。
+    誰もが積極的に参加する時間や経済的な手段、能力を持っているわけではありませんが、 あらゆる形態の参加を認識し、奨励しています。
+    私たちは、アクセスとエンパワーメントを促進・支援するために活動し、 常に学び続けることを大切にしています。
   p2x2: p5.jsは、現代のWeb向けに
   p2x3: を解釈したものです。私たちは
   p2x4: のサポートを受けながらイベントを開催・運営しています。
@@ -78,23 +72,20 @@ home:
   sketch_info: Hunminjeongeum2020 created by Seonghyeon Kim
 copyright:
   copyright-title: Copyright Information
-  copyright1: 'The p5.js library is free software; you can redistribute it and/or modify it
-    under the terms of the '
+  copyright1: >-
+    The p5.js library is free software; you can redistribute it and/or modify it
+    under the terms of the 
   copyright2: ' as published by the Free Software Foundation, version 2.1.'
   copyright3: 'The Reference for the language is under a '
   copyright4: ' license which makes it possible to reuse this content for non-commercial purposes if it is credited.'
 get started:
   get-started-title: スタート
-  get-started1: >-
-    このページでは、p5.jsプロジェクトのセットアップと
-    最初のスケッチの作成方法について説明します。
+  get-started1: このページでは、p5.jsプロジェクトのセットアップと 最初のスケッチの作成方法について説明します。
   get-started2: 始めるには
   get-started3: p5.js editor
   get-started4: を使用するのが最も簡単です。Webエディターを開き、
   get-started5: 最初のスケッチ
-  get-started6: >-
-    を作成できます。
-    p5.jsのデスクトップ版で作業したい場合は、こちらを参照してください:
+  get-started6: 'を作成できます。 p5.jsのデスクトップ版で作業したい場合は、こちらを参照してください:'
   get-started7: ダウンロード手順
   get-started-button: コピー
   settingUp-title: 自分のコンピューターにエディターを使ってp5.jsをセットアップする
@@ -109,12 +100,10 @@ get started:
   download11: 'http://localhost:{your-port-num}/empty-example'
   download4: >-
     index.htmlを見ると、p5.jsとリンクされていることがわかります。minified
-    version（ページの読み込みを高速化するために圧縮されたもの）を使用する場合は、
-    リンクをp5.min.jsに変更してください。
+    version（ページの読み込みを高速化するために圧縮されたもの）を使用する場合は、 リンクをp5.min.jsに変更してください。
   download5: >-
     代わりに、オンラインでホストされているp5.jsファイルにリンクすることもできます。
-    p5.jsのすべてのバージョンはCDN（コンテンツ配信ネットワーク）に保存されています。
-    これらのバージョンの履歴は
+    p5.jsのすべてのバージョンはCDN（コンテンツ配信ネットワーク）に保存されています。 これらのバージョンの履歴は
   download6: で確認できます。この場合、リンクを以下のように変更できます。
   download7: サンプルHTMLページは以下のようになります。
   environment-title: 環境
@@ -124,22 +113,14 @@ get started:
   environment3: を使うことができます。
   environment4: でセットアップする手順を以下に示しますが、他の良いエディタオプションには
   environment5: また、
-  environment6: >-
-    もあります。
-    スクリーン・リーダー・ユーザーでp5ウェブ・エディタを使用しない場合は、これらも良いでしょう:
+  environment6: 'もあります。 スクリーン・リーダー・ユーザーでp5ウェブ・エディタを使用しない場合は、これらも良いでしょう:'
   environment7: または
   environment8: >-
-    Sublimeを開き、ファイルメニューから開くを選択して、
-    htmlファイルとjsファイルが含まれるフォルダを選択します。
-    左側のサイドバーには、フォルダ名が上部に表示され、
-    直接下に含まれるファイルの一覧が表示されます。
-  environment9: >-
-    sketch.jsファイルをクリックすると、
-    編集することができます。
+    Sublimeを開き、ファイルメニューから開くを選択して、 htmlファイルとjsファイルが含まれるフォルダを選択します。
+    左側のサイドバーには、フォルダ名が上部に表示され、 直接下に含まれるファイルの一覧が表示されます。
+  environment9: sketch.jsファイルをクリックすると、 編集することができます。
   environment10: p5スターターコードがSublimeエディタで開かれます。
-  environment11: >-
-    ファイルマネージャーでindex.htmlファイルをダブルクリックして開くか、
-    ブラウザのアドレスバーにアドレスを入力してスケッチを表示してください:
+  environment11: 'ファイルマネージャーでindex.htmlファイルをダブルクリックして開くか、 ブラウザのアドレスバーにアドレスを入力してスケッチを表示してください:'
   environment12: 'file:///the/file/path/to/your/html'
   environment14: ' （またはローカルサーバーを使用してる場合:'
   environment15: 'http://localhost:{your-port-num}/empty-example'
@@ -153,42 +134,26 @@ get started:
   your-first-sketch1: ' '
   your-first-sketch2: の下に、以下のコードを追加します：
   your-first-sketch3: ここまでで、コードは以下のようになります：
-  your-first-sketch4: >-
-    今追加した行は
-    「中心が左から50ピクセル、上から50ピクセルの位置にある、幅と高さが80ピクセルの楕円」
-    を描画します。
+  your-first-sketch4: 今追加した行は 「中心が左から50ピクセル、上から50ピクセルの位置にある、幅と高さが80ピクセルの楕円」 を描画します。
   your-first-sketch5: エディターで再生ボタンを押して、コードが実行されるのを確認しましょう！
   your-first-sketch6: >-
-    もしスクリーンリーダーを使用している場合は、
-    p5オンラインエディターでアクセシブル出力をオンにする必要があります。
+    もしスクリーンリーダーを使用している場合は、 p5オンラインエディターでアクセシブル出力をオンにする必要があります。
     エディターの外部では、HTMLにアクセシビリティライブラリを追加する必要があります。 詳細については、 これを参照してください:
   your-first-sketch7: 「スクリーンリーダーを使用したp5チュートリアル」
-  your-first-sketch8: >-
-    すべて正しく入力した場合、
-    以下がディスプレイウィンドウに表示されます。
+  your-first-sketch8: すべて正しく入力した場合、 以下がディスプレイウィンドウに表示されます。
   your-first-sketch9: キャンバスには、幅と高さが50で位置が80 x、80 yの円が描かれています。
   your-first-sketch10: >-
-    何も表示されない場合、
-    エディターが入力内容を理解できていない可能性があります。
+    何も表示されない場合、 エディターが入力内容を理解できていない可能性があります。
     この場合、サンプルのコードを正確にコピーしていることを確認してください。
-    数値は括弧内に含まれ、それらの間にはカンマが必要であり、行末にはセミコロンが必要です。
-    また、ellipseは正しい綴りで記述されている必要があります。
+    数値は括弧内に含まれ、それらの間にはカンマが必要であり、行末にはセミコロンが必要です。 また、ellipseは正しい綴りで記述されている必要があります。
   your-first-sketch11: >-
-    プログラミングを始める上で最も難しいことの一つは、
-    構文を非常に具体的に指定する必要があることです。
-    ブラウザはあなたが何を言いたいかを常に正確に把握するほど賢くはなく、
-    句読点の配置に関してはかなり厳格です。
-    少し練習すれば慣れていきます。
-    エディタの左下にコンソールセクションがあります。
-    ここでは、エディタからのエラーに関する詳細なメッセージを確認することができます。
-  your-first-sketch12: >-
-    次に、もう少しエキサイティングなスケッチに進んでみましょう。
-    前のサンプルを修正して、次のようにしてみてください。
+    プログラミングを始める上で最も難しいことの一つは、 構文を非常に具体的に指定する必要があることです。
+    ブラウザはあなたが何を言いたいかを常に正確に把握するほど賢くはなく、 句読点の配置に関してはかなり厳格です。 少し練習すれば慣れていきます。
+    エディタの左下にコンソールセクションがあります。 ここでは、エディタからのエラーに関する詳細なメッセージを確認することができます。
+  your-first-sketch12: 次に、もう少しエキサイティングなスケッチに進んでみましょう。 前のサンプルを修正して、次のようにしてみてください。
   your-first-sketch13: >-
-    このプログラムは、「400ピクセルの幅と400ピクセルの高さのキャンバスを作成し、
-    マウスの位置で白い円」を描き始めます。
-    マウスボタンが押されると、円の色が黒に変わります。
-    コードを実行し、マウスを動かしてクリックして、体験してみてください。
+    このプログラムは、「400ピクセルの幅と400ピクセルの高さのキャンバスを作成し、 マウスの位置で白い円」を描き始めます。
+    マウスボタンが押されると、円の色が黒に変わります。 コードを実行し、マウスを動かしてクリックして、体験してみてください。
   your-first-sketch14: キャンバスには、マウスの軌跡に沿って複数の円が描かれています。
   first-sketch-heading1: 円を描画するコードサンプル
   first-sketch-heading2: スクリーンリーダーユーザー向け注意事項
@@ -215,26 +180,20 @@ get started:
   processing-transition4: を読んでください。
   book1: >-
     このチュートリアルの一部は、Lauren McCarthy、Casey Reas、Ben Fryによる書籍「Getting Started with
-    p5.js」（O'Reilly / Make 2015）から改変されています。
-    著作権は2015年に保護されており、すべての権利は保持されています。
+    p5.js」（O'Reilly / Make 2015）から改変されています。 著作権は2015年に保護されており、すべての権利は保持されています。
     最終的な修正はp5.js 2019貢献者会議で行われました。
 download:
   Download: ダウンロード
   download-intro: >-
     ようこそ！このページは「ダウンロード」というタイトルですが、
     実際にはライブラリをダウンロードするためのリンク集またはオンラインで使用するためのリンク集が含まれています。
-    初心者が最初に欲しいと思うリソースから、より経験豊富なプログラマーが探しているリソースまで、
-    順序を考慮して並べています。
+    初心者が最初に欲しいと思うリソースから、より経験豊富なプログラマーが探しているリソースまで、 順序を考慮して並べています。
   editor-title: エディタ
   p5.js-editor: p5.jsエディタ
-  p5.js-editor-intro: >-
-    このリンクは、p5.jsエディタに直接アクセスできるようになっており、
-    p5.jsをすぐに使用できます。
+  p5.js-editor-intro: このリンクは、p5.jsエディタに直接アクセスできるようになっており、 p5.jsをすぐに使用できます。
   editor-includes: セットアップ不要でp5.jsエディタを使用しましょう！
   complete-library-title: ライブラリ全体
-  complete-library-intro1: >-
-    p5.jsライブラリファイル、p5.soundアドオン、サンプルプロジェクトを含むダウンロードです。
-    エディタは含まれていません。
+  complete-library-intro1: p5.jsライブラリファイル、p5.soundアドオン、サンプルプロジェクトを含むダウンロードです。 エディタは含まれていません。
   complete-library-intro2: スタート
   complete-library-intro3: でp5.jsプロジェクトのセットアップ方法を学びましょう。
   p5.js-complete: p5.js全体
@@ -242,9 +201,7 @@ download:
   includes-2: p5.js、p5.sound.js、サンプルプロジェクト
   includes-3: 'バージョン '
   single-files-title: シングルファイル
-  single-files-intro: >-
-    これらはp5.jsライブラリファイルへのダウンロードまたはリンクです。
-    追加のコンテンツは含まれていません。
+  single-files-intro: これらはp5.jsライブラリファイルへのダウンロードまたはリンクです。 追加のコンテンツは含まれていません。
   single-file: シングルファイル：
   p5.js-uncompressed: フル非圧縮版
   compressed: 圧縮版
@@ -258,31 +215,25 @@ download:
   support-title: p5.jsをサポートしよう！
   support-options: サポートオプション
   support-1: >-
-    あなたの助けが必要です！
-    p5.jsは無料かつオープンソースのソフトウェアです。
+    あなたの助けが必要です！ p5.jsは無料かつオープンソースのソフトウェアです。
     私たちは、私たちのコミュニティを可能な限りオープンで包括的なものにしたいと考えています。p5.jsをサポートする組織である
   support-2: >-
-    に寄付をすることで、この活動をサポートできます。
-    あなたの寄付はこれらをサポートします：
+    に寄付をすることで、この活動をサポートできます。 あなたの寄付はこれらをサポートします：
     p5.jsのソフトウェア開発、コードサンプルやチュートリアルなどの教育リソース、
   support-3: フェローシップ
   support-4: 、および、
   support-5: コミュニティイベント。
   support-17: >-
-    ピッツバーグのCMU STUDIO for Creative Inquiryで
-    開催されたp5.js貢献者会議（画像クレジット：Taeyoon Choi）
+    ピッツバーグのCMU STUDIO for Creative Inquiryで 開催されたp5.js貢献者会議（画像クレジット：Taeyoon
+    Choi）
   support-18: >-
     ProcessingのフェローであるSaskia Freekeが、ロンドンでのCode Liberation x
     Processingワークショップを主催しています（画像クレジット：Code Liberation Foundation）
-  support-19: >-
-    SFPCによる「教えることを学び、
-    学ぶことを教えること」カンファレンス（画像クレジット：Kira Simon-Kennedy）
+  support-19: SFPCによる「教えることを学び、 学ぶことを教えること」カンファレンス（画像クレジット：Kira Simon-Kennedy）
   support-20: >-
     Processing財団のフェローであるCassie TarakajianがCode Art
     Miamiで開催したワークショップ（画像クレジット：Christian Arévalo Photography）
-  support-21: >-
-    Taeyoon Choi氏が主催するSigning Coders p5.jsワークショップでの
-    ASL通訳者（画像クレジット：Taeyoon Choi）
+  support-21: Taeyoon Choi氏が主催するSigning Coders p5.jsワークショップでの ASL通訳者（画像クレジット：Taeyoon Choi）
   support-22: Google Summer of Codeのキックオフ（画像クレジット：Taeyoon Choi）
   support-23: >-
     Processing財団のフェローであるCassie TarakajianがCode Art
@@ -291,15 +242,13 @@ download:
     Taeyoon Choi氏が主催する手話を使ったp5.jsワークショップを補助するLuisa PereiraとYeseul
     Song（画像クレジット：Taeyoon Choi）
   support-25: >-
-    ピッツバーグのCMU STUDIO for Creative Inquiryで開催された
-    p5.js貢献者会議（画像クレジット：Taeyoon Choi）
+    ピッツバーグのCMU STUDIO for Creative Inquiryで開催された p5.js貢献者会議（画像クレジット：Taeyoon
+    Choi）
   support-26: >-
     Processing財団のフェローであるDigital Citizens Labは、International Center of
     PhotographyでSTEM教育に関するパネルを主催しました（画像クレジット：International Center of
     Photography）。
-  support-27: >-
-    アーロン・モントーヤ・モラガ氏が指導するp5.jsワークショップに参加する
-    参加者たち（画像クレジット：Aarón Montoya-Moraga）。
+  support-27: アーロン・モントーヤ・モラガ氏が指導するp5.jsワークショップに参加する 参加者たち（画像クレジット：Aarón Montoya-Moraga）。
   support-28: >-
     Taeyoon Choi氏が主催する手話を基にしたp5.jsワークショップを支援するクレア・カーニー・ボルプ氏（画像クレジット：Taeyoon
     Choi）。
@@ -309,7 +258,8 @@ download:
   support-30: Processing財団のフェローであるDigital Citizens Lab。
   support-31: UCLA DMAとNYU ITPで行われたBicoastal p5.jsミートアップ。
   support-32: Processing財団
-  support-33: 'は、元々のソフトウェアProcessingに10年以上取り組んだ後、2012年に設立されました。同財団の使命は、視覚芸術におけるソフトウェアリテラシーと技術関連分野における視覚リテラシーを促進し、これらの分野を多様なコミュニティにとって利用しやすいものにすることです。私たちの目標は、あらゆる興味やバックグラウンドを持つ人々がプログラミングの方法を学び、コードを介してクリエイティブな作品を作成する力を与えることであり、特にこれらのツールやリソースにアクセスできないかもしれない人々をサポートすることです。 '
+  support-33: >-
+    は、元々のソフトウェアProcessingに10年以上取り組んだ後、2012年に設立されました。同財団の使命は、視覚芸術におけるソフトウェアリテラシーと技術関連分野における視覚リテラシーを促進し、これらの分野を多様なコミュニティにとって利用しやすいものにすることです。私たちの目標は、あらゆる興味やバックグラウンドを持つ人々がプログラミングの方法を学び、コードを介してクリエイティブな作品を作成する力を与えることであり、特にこれらのツールやリソースにアクセスできないかもしれない人々をサポートすることです。 
   support-17-alt: ''
   support-18-alt: ''
   support-19-alt: ''
@@ -328,26 +278,18 @@ download:
 learn:
   learn-title: 学ぶ
   teach-title2: 教える
-  learn1: >-
-    これらのチュートリアルは、特定のトピックのより詳細な説明やステップバイステップの概要を提供します。
-    以下の
+  learn1: これらのチュートリアルは、特定のトピックのより詳細な説明やステップバイステップの概要を提供します。 以下の
   learn2: サンプルページ
   learn3: をチェックして、さまざまなp5.jsトピックの短いデモを探索してください。
   introduction-to-p5js-title: p5.jsの紹介
   hello-p5js-title: Hello p5.js
-  hello-p5js: >-
-    この短いビデオでは、
-    p5.jsライブラリとそれができることを紹介します。
+  hello-p5js: この短いビデオでは、 p5.jsライブラリとそれができることを紹介します。
   getting-started-title: 初めに
-  getting-started: >-
-    p5.jsへようこそ！<br>
-    このイントロダクションでは、p5.jsプロジェクトの基本的な設定について説明します。
+  getting-started: p5.jsへようこそ！<br> このイントロダクションでは、p5.jsプロジェクトの基本的な設定について説明します。
   p5js-overview-title: p5.js概要
   p5js-overview: p5.jsの主要な機能の概要です。
   p5js-processing-title: p5.jsとProcessing
-  p5js-processing: >-
-    両者の主な違い、および
-    どのように変換するかについて説明します。
+  p5js-processing: 両者の主な違い、および どのように変換するかについて説明します。
   p5-screen-reader-title: スクリーンリーダーとp5
   p5-screen-reader: スクリーンリーダーで簡単に使用できるようにp5を設定する方法です。
   using-local-server-title: ローカルサーバーの使用
@@ -363,8 +305,7 @@ learn:
   beyond-the-canvas-title: キャンバスを超えて
   beyond-the-canvas: キャンバス以外のページ上の要素の作成と操作です。
   getting-started-in-webgl-other-tutorials-title: その他のチュートリアル
-  getting-started-in-webgl-other-tutorials-p: >-
-    このチュートリアルは、p5.jsでWebGLを使用する基本についてのシリーズの一部です。以下の他のチュートリアルをすべてチェックしてください。
+  getting-started-in-webgl-other-tutorials-p: このチュートリアルは、p5.jsでWebGLを使用する基本についてのシリーズの一部です。以下の他のチュートリアルをすべてチェックしてください。
   getting-started-in-webgl-other-tutorials-tut1: 座標と変換
   getting-started-in-webgl-other-tutorials-tut2: WebGLでカスタムジオメトリの作成
   getting-started-in-webgl-other-tutorials-tut3: スタイルと外観
@@ -384,78 +325,55 @@ learn:
     簡単に言うと、それは我々に3Dの物体を配置して表示するためのあらゆる種類の数学的な操作を許可します。
     p5.jsは、特別なWebGLモードを介してWebGLとの作業を容易にします。
   getting-started-in-webgl-coords-and-transform-p3x1: >-
-    3Dで作業することは、スケッチに動き、テクスチャ、ライティングなどが含まれる場合には特に多くの複雑さを導入します。
-    幸いなことに、コンピューターには、
+    3Dで作業することは、スケッチに動き、テクスチャ、ライティングなどが含まれる場合には特に多くの複雑さを導入します。 幸いなことに、コンピューターには、
     特にピクセルや多くの空間内の多数の形状を扱う場合に重要なことが多数処理できる
     特別なハードウェア、グラフィックスプロセッシングユニット（GPU）があります。
   getting-started-in-webgl-coords-and-transform-p4x1: >-
-    まず、<a class="code">createCanvas()</a>に3番目のパラメータとしてWEBGLを渡すことで、p5.jsをWebGLを使用するように設定します。
-  getting-started-in-webgl-coords-and-transform-heading2: >-
-    3D座標空間：3Dでの位置決め
-  getting-started-in-webgl-coords-and-transform-info1x1: >-
-    座標系が理解できない場合は、以下のチュートリアルを再度確認することをお勧めします。
-  getting-started-in-webgl-coords-and-transform-info1x2: >-
-    座標系と図形
+    まず、<a
+    class="code">createCanvas()</a>に3番目のパラメータとしてWEBGLを渡すことで、p5.jsをWebGLを使用するように設定します。
+  getting-started-in-webgl-coords-and-transform-heading2: 3D座標空間：3Dでの位置決め
+  getting-started-in-webgl-coords-and-transform-info1x1: 座標系が理解できない場合は、以下のチュートリアルを再度確認することをお勧めします。
+  getting-started-in-webgl-coords-and-transform-info1x2: 座標系と図形
   getting-started-in-webgl-coords-and-transform-p5x1: >-
-    2Dで作業する場合との最も基本的な違いは、もっとも明らかなものです。
-    それは、作業するための1つの追加次元があることです。
+    2Dで作業する場合との最も基本的な違いは、もっとも明らかなものです。 それは、作業するための1つの追加次元があることです。
     描画の要素の水平方向と垂直方向の位置（x軸とy軸）に加えて、3Dでは深度、z軸が追加されます。
   getting-started-in-webgl-coords-and-transform-p6x1: >-
-    2Dで描画する場合、点（0,0）は画面の左上隅にあります。
-    WebGLモードでは、スケッチの原点（0,0,0）は画面の中央にあります。
+    2Dで描画する場合、点（0,0）は画面の左上隅にあります。 WebGLモードでは、スケッチの原点（0,0,0）は画面の中央にあります。
     デフォルトでは、x軸は左から右、y軸は上から下、z軸は遠くから近づく方向を指します。
-  getting-started-in-webgl-coords-and-transform-heading3: >-
-    変形：3D図形の位置とサイズ
-  getting-started-in-webgl-coords-and-transform-p7x1: >-
-    p5.jsにはいくつかのメソッドがあります:
-  getting-started-in-webgl-coords-and-transform-p7x2: >-
-    と
+  getting-started-in-webgl-coords-and-transform-heading3: 変形：3D図形の位置とサイズ
+  getting-started-in-webgl-coords-and-transform-p7x1: 'p5.jsにはいくつかのメソッドがあります:'
+  getting-started-in-webgl-coords-and-transform-p7x2: と
   getting-started-in-webgl-coords-and-transform-p7x3: >-
-    。それらを使用して、オブジェクトを空間内に配置および方向付けできます。
-    これらの方法は、<em>モデル行列</em>として知られるものを影響します。
+    。それらを使用して、オブジェクトを空間内に配置および方向付けできます。 これらの方法は、<em>モデル行列</em>として知られるものを影響します。
     これらは、オブジェクトの<em>変換</em>としてまとめて扱われます。 これらのメソッドは、2Dおよび3D描画の両方で使用できます。
-  getting-started-in-webgl-coords-and-transform-subheading1: >-
-    translate(): 物体を空間内で移動させる
+  getting-started-in-webgl-coords-and-transform-subheading1: 'translate(): 物体を空間内で移動させる'
   getting-started-in-webgl-coords-and-transform-p8x1: >-
     <a class="code">translate()</a>は、指定された方向に原点を移動します。
     この後に描かれたものは、その点に対して相対的に位置づけられます。 <a
     class="code">translate()</a>は、x、y、zの値を引数として受け取ります。
     上記のスケッチのスライダーを使って、ボックスの移動を変更して、各軸に沿ってどのように移動するかを見てください。 以下のコードは、<a
     class="code">box()</a>形状の単純な移動を示しています。
-  getting-started-in-webgl-coords-and-transform-subheading2: >-
-    rotate(): 物体を空間内で向きを変える
-  getting-started-in-webgl-coords-and-transform-p9x1: >-
-    <a class="code">rotate()</a>は、
-    それに続くものを再配置します。
-  getting-started-in-webgl-coords-and-transform-p10x1: >-
-    3D空間内でオブジェクトを回転させるために使用できるいくつかの方法があります。
-    ほとんどの場合、軸の周りの回転を許可するメソッド、
-  getting-started-in-webgl-coords-and-transform-p10x2: >-
-    、
+  getting-started-in-webgl-coords-and-transform-subheading2: 'rotate(): 物体を空間内で向きを変える'
+  getting-started-in-webgl-coords-and-transform-p9x1: <a class="code">rotate()</a>は、 それに続くものを再配置します。
+  getting-started-in-webgl-coords-and-transform-p10x1: 3D空間内でオブジェクトを回転させるために使用できるいくつかの方法があります。 ほとんどの場合、軸の周りの回転を許可するメソッド、
+  getting-started-in-webgl-coords-and-transform-p10x2: 、
   getting-started-in-webgl-coords-and-transform-p10x3: >-
-    などを呼び出すのが最も簡単です。
-    これらの各メソッドは、回転角度を指定する単一の引数を受け入れます。
-    上記の例のスライダーを動かして、各軸に対する回転の実行方法を確認してください。
-    以下のコードは、これらの各メソッドの使用方法を示しています。
+    などを呼び出すのが最も簡単です。 これらの各メソッドは、回転角度を指定する単一の引数を受け入れます。
+    上記の例のスライダーを動かして、各軸に対する回転の実行方法を確認してください。 以下のコードは、これらの各メソッドの使用方法を示しています。
   getting-started-in-webgl-coords-and-transform-p11x1: >-
     デフォルトでは、p5.jsは角度をラジアン単位で期待します。 ラジアンは、数値0〜<a
     class="code">TWO_PI</a>を使用して角度を指定します。 度数を使用するには、<a
-    class="code">radians()</a>を使用して度数をラジアンに変換するか、<a class="code">angleMode(DEGREES)</a>を使用します。
-  getting-started-in-webgl-coords-and-transform-info2x1: >-
-    また、2つ目の引数としてベクトルを使用することで、回転する軸を指定できる
-  getting-started-in-webgl-coords-and-transform-info2x2: >-
-    ことが
-    できます。
-  getting-started-in-webgl-coords-and-transform-subheading3: >-
-    scale（スケール）：空間でのサイズ
-  getting-started-in-webgl-coords-and-transform-p12x1: >-
-    描画されるもののサイズを変更します。
-    ここまで説明した他のメソッドと同様に、x、y、zの値の引数を受け取ります。
-  getting-started-in-webgl-coords-and-transform-heading4: >-
-    変換の順序は重要です！
+    class="code">radians()</a>を使用して度数をラジアンに変換するか、<a
+    class="code">angleMode(DEGREES)</a>を使用します。
+  getting-started-in-webgl-coords-and-transform-info2x1: また、2つ目の引数としてベクトルを使用することで、回転する軸を指定できる
+  getting-started-in-webgl-coords-and-transform-info2x2: ことが できます。
+  getting-started-in-webgl-coords-and-transform-subheading3: scale（スケール）：空間でのサイズ
+  getting-started-in-webgl-coords-and-transform-p12x1: 描画されるもののサイズを変更します。 ここまで説明した他のメソッドと同様に、x、y、zの値の引数を受け取ります。
+  getting-started-in-webgl-coords-and-transform-heading4: 変換の順序は重要です！
   getting-started-in-webgl-coords-and-transform-p13x1: >-
     変換の順序は、最初は予測不可能に感じることがあります。各変換は常に次の変換に影響します。 例えば、<a
-    class="code">rotate()</a>の後に<a class="code">translate()</a>が呼び出された場合、その移動の方向は回転に影響されます。
+    class="code">rotate()</a>の後に<a
+    class="code">translate()</a>が呼び出された場合、その移動の方向は回転に影響されます。
     全体の座標系が回転して移動しているため、形状自体だけでなく、周りの座標系も動いていることになります。
   getting-started-in-webgl-coords-and-transform-p14x1: >-
     変換は任意の順序で実行できますが、<strong>translate</strong>、<strong>rotate</strong>、そして<strong>scale</strong>を使用すると、最も直感的になります。
@@ -463,68 +381,46 @@ learn:
   getting-started-in-webgl-coords-and-transform-p15x1: >-
     下の例では、<a class="code">translate()</a>と<a
     class="code">rotateY()</a>の順序を変更して、どのようにオブジェクトが描画されるかを確認してみてください。
-  getting-started-in-webgl-coords-and-transform-p16x1: >-
-    p5.jsには、変形を適用するタイミングを制御できるいくつかのメソッドがあります。
-  getting-started-in-webgl-coords-and-transform-p16x2: >-
-    そして、
+  getting-started-in-webgl-coords-and-transform-p16x1: p5.jsには、変形を適用するタイミングを制御できるいくつかのメソッドがあります。
+  getting-started-in-webgl-coords-and-transform-p16x2: そして、
   getting-started-in-webgl-coords-and-transform-p16x3: >-
     。<a class="code">push()</a> と <a class="code">pop()</a>
     は、オブジェクトを個別に移動するのを簡単にします。 <a class="code">push()</a>
     メソッドは現在の変形とスタイル設定を保存します。 そして、新しい変形を行った後、<a class="code">pop()</a>
     メソッドを使用して元の変形に戻ります。 その結果、<a class="code">push()</a> と <a
-    class="code">pop()</a> の間で行われた変形やスタイル変更は、
-    コードのその部分に対してのみ分離されます。  <a
+    class="code">pop()</a> の間で行われた変形やスタイル変更は、 コードのその部分に対してのみ分離されます。  <a
     class="code">push()</a> と <a class="code">pop()</a>
     を使用しない場合、すでに行われた変形を追跡する必要がありますが、これは複雑になり、追跡が難しくなります。
-    次の例を考えてみてください。この例では、スケッチに2つの箱を配置します。
-    2番目のボックスを<a class="code">push()</a> と
-    <a class="code">pop()</a> を使用せずに位置に配置するには、
-    最初の変形を考慮する必要があります。
+    次の例を考えてみてください。この例では、スケッチに2つの箱を配置します。 2番目のボックスを<a class="code">push()</a> と
+    <a class="code">pop()</a> を使用せずに位置に配置するには、 最初の変形を考慮する必要があります。
     これは、より複雑な3Dシーンでは追跡が困難な場合があります。
   getting-started-in-webgl-coords-and-transform-p17x1: >-
     これで、<a class="code">push()</a> と <a class="code">pop()</a>
-    を使用した同じコードを試してみましょう。
-    これで、座標系がどこにあるかを覚える必要がなく、オブジェクトを簡単に移動できます。
+    を使用した同じコードを試してみましょう。 これで、座標系がどこにあるかを覚える必要がなく、オブジェクトを簡単に移動できます。
   getting-started-in-webgl-coords-and-transform-info3x1: >-
-    <p>これはもう少し高度なトピックですが、
-    これらの変換はそれぞれモデル行列と呼ばれるものに影響を与えます。
-    変換行列はビュー行列と射影行列と結合され、
-    どちらもカメラの視点をシミュレートするのに役立ちます。
-    そしてこの結合により、私たちの3Dシーンが作成されます！</p> <a
+    <p>これはもう少し高度なトピックですが、 これらの変換はそれぞれモデル行列と呼ばれるものに影響を与えます。 変換行列はビュー行列と射影行列と結合され、
+    どちらもカメラの視点をシミュレートするのに役立ちます。 そしてこの結合により、私たちの3Dシーンが作成されます！</p> <a
     href="https://developer.mozilla.org/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection">
     モデルビュープロジェクションについてもっと学ぶ</a>
   getting-started-in-webgl-coords-and-transform-p18x1: >-
     下の例で、<a class="code">push()</a>と<a
-    class="code">pop()</a>を取り除いて、描かれる2番目のオブジェクトに
-    変換がどのように影響するかを試してみてください。
-  getting-started-in-webgl-coords-and-transform-heading5: >-
-    3Dの基本形状
+    class="code">pop()</a>を取り除いて、描かれる2番目のオブジェクトに 変換がどのように影響するかを試してみてください。
+  getting-started-in-webgl-coords-and-transform-heading5: 3Dの基本形状
   getting-started-in-webgl-coords-and-transform-p19x1: >-
     これまで<a class="code">box()</a>のみを使用していましたが、p5.jsには7つの異なる事前定義済みジオメトリがあり、
     スケッチで使用できます。これらの基本的な事前定義済みジオメトリは「プリミティブ」と呼ばれることがよくあります。
-  getting-started-in-webgl-coords-and-transform-p20x1: >-
-    これらのプリミティブ形状メソッドは次のとおりです：
-  getting-started-in-webgl-coords-and-transform-p20x2: >-
-    、
+  getting-started-in-webgl-coords-and-transform-p20x1: これらのプリミティブ形状メソッドは次のとおりです：
+  getting-started-in-webgl-coords-and-transform-p20x2: 、
   getting-started-in-webgl-coords-and-transform-p21x1: >-
-    カスタムジオメトリを作成することもできます。
-    スクラッチから作成するか、別のプログラムで作成した3Dモデルから作成することもできます。
+    カスタムジオメトリを作成することもできます。 スクラッチから作成するか、別のプログラムで作成した3Dモデルから作成することもできます。
     カスタムジオメトリに関する詳細は、
-  getting-started-in-webgl-coords-and-transform-p21x2: >-
-    カスタムジオメトリのチュートリアル
-  getting-started-in-webgl-coords-and-transform-heading6: >-
-    結論
+  getting-started-in-webgl-coords-and-transform-p21x2: カスタムジオメトリのチュートリアル
+  getting-started-in-webgl-coords-and-transform-heading6: 結論
   getting-started-in-webgl-coords-and-transform-p22x1: >-
-    基本的な3Dシーンの制御について、
-    座標空間、変換、および基本的な形状について学びました。
-    この後の「WebGL入門」シリーズのチュートリアルでは、
-    カスタムジオメトリの導入、
-    シーンの外観の微調整、基本的なシェーダープログラミングの導入など、
-    スケッチをさらに進化させるための内容が紹介されます。
+    基本的な3Dシーンの制御について、 座標空間、変換、および基本的な形状について学びました。 この後の「WebGL入門」シリーズのチュートリアルでは、
+    カスタムジオメトリの導入、 シーンの外観の微調整、基本的なシェーダープログラミングの導入など、 スケッチをさらに進化させるための内容が紹介されます。
   getting-started-in-webgl-coords-and-transform-glossary-term1-title: GPU
-  getting-started-in-webgl-coords-and-transform-glossary-term1-definition: >-
-    GPU（グラフィックス処理ユニット）は、
-    多数の演算を並列に処理できるように特化された ハードウェアであり、3Dグラフィックスに特に強力です。
+  getting-started-in-webgl-coords-and-transform-glossary-term1-definition: GPU（グラフィックス処理ユニット）は、 多数の演算を並列に処理できるように特化された ハードウェアであり、3Dグラフィックスに特に強力です。
   getting-started-in-webgl-coords-and-transform-glossary-term2-title: モデル
   getting-started-in-webgl-coords-and-transform-glossary-term2-definition: ファイルに保存および読み込みできるカスタム3Dジオメトリ。
   getting-started-in-webgl-coords-and-transform-glossary-term3-title: マトリックス
@@ -543,68 +439,49 @@ learn:
     p5.jsには<a class="code">box()</a>や<a
     class="code">sphere()</a>などの基本的な形状がいくつかありますが、p5.jsは3Dモデルファイルやコードから複雑なカスタムジオメトリをレンダリングすることもできます。
     このチュートリアルでは、p5.jsに3Dモデルをインポートする方法、およびゼロからジオメトリを作成する方法について説明します。
-  getting-started-in-webgl-custom-geometry-info1x1: >-
-    3Dをはじめて扱う方は、先にこのチュートリアルを参照してください:
-  getting-started-in-webgl-custom-geometry-info1x2: >-
-    チュートリアル。
+  getting-started-in-webgl-custom-geometry-info1x1: '3Dをはじめて扱う方は、先にこのチュートリアルを参照してください:'
+  getting-started-in-webgl-custom-geometry-info1x2: チュートリアル。
   getting-started-in-webgl-custom-geometry-toc-title: 目次
   getting-started-in-webgl-custom-geometry-heading1: ファイルから3Dモデルを読み込む
   getting-started-in-webgl-custom-geometry-p2x1: >-
     カスタムジオメトリは、OBJファイルまたはSTLファイルを使用してp5.jsにインポートできます。
     これらのファイルは通常、Blenderなどの3Dモデリングツールで生成され、3Dシーンを構築するときにより多くの制御が可能です。
     これを読み込むためには<a class="code">preload()</a>内で使用する必要がある
-  getting-started-in-webgl-custom-geometry-p2x2: >-
-    を使用します。そうすると、
-  getting-started-in-webgl-custom-geometry-p2x3: >-
-    関数を使って、下記の例のように使用できます。
+  getting-started-in-webgl-custom-geometry-p2x2: を使用します。そうすると、
+  getting-started-in-webgl-custom-geometry-p2x3: 関数を使って、下記の例のように使用できます。
   getting-started-in-webgl-custom-geometry-p3x1: >-
     カスタムモデルで発生することがよくある問題は、スケーリングです。
-    モデルがどのように構築されているかに応じて、p5.jsで描画するとはるかに異なるサイズになる場合があり、
-    描画できない場合もあります。<a class="code">loadModel()</a>メソッドには、
+    モデルがどのように構築されているかに応じて、p5.jsで描画するとはるかに異なるサイズになる場合があり、 描画できない場合もあります。<a
+    class="code">loadModel()</a>メソッドには、
     p5.jsでうまく機能するサイズにモデルをリサイズするnormalizeパラメータが含まれています。
-  getting-started-in-webgl-custom-geometry-info2x1: >-
-    Note: 現時点では、
-    カラーがついたSTLファイルはサポートされていませんが、
-  getting-started-in-webgl-custom-geometry-info2x2: >-
-    スタイリングと外観
-  getting-started-in-webgl-custom-geometry-info2x3: >-
-    チュートリアルでマテリアルやテクスチャを使って色を付ける方法について学べます。
+  getting-started-in-webgl-custom-geometry-info2x1: 'Note: 現時点では、 カラーがついたSTLファイルはサポートされていませんが、'
+  getting-started-in-webgl-custom-geometry-info2x2: スタイリングと外観
+  getting-started-in-webgl-custom-geometry-info2x3: チュートリアルでマテリアルやテクスチャを使って色を付ける方法について学べます。
   getting-started-in-webgl-custom-geometry-heading2: 基本的なプロシージャルジオメトリの作成
   getting-started-in-webgl-custom-geometry-p4x1: >-
-    コードを使って、プロシージャルにジオメトリを定義することもできます。
-    自分自身のルールに従ってジオメトリを作成する方法です。 <a class="code">quad()</a>、 <a class="code">triangle()</a>、<a class="code">rect()</a>、<a class="code">circle()</a>など、
+    コードを使って、プロシージャルにジオメトリを定義することもできます。 自分自身のルールに従ってジオメトリを作成する方法です。 <a
+    class="code">quad()</a>、 <a class="code">triangle()</a>、<a
+    class="code">rect()</a>、<a class="code">circle()</a>など、
     各メソッドには3Dで使用できるようにするための追加パラメータがあります。
-  getting-started-in-webgl-custom-geometry-p5x1: >-
-    ジオメトリを制御するための別の方法があります。
-  getting-started-in-webgl-custom-geometry-p5x2: >-
-    と
-  getting-started-in-webgl-custom-geometry-p5x3: >-
-    というメソッドを使って、点ごとに形状を定義することができます。
-    次の例では、これらのメソッドを使用して、数学的に3Dシェイプを構築する方法を示します。
-  getting-started-in-webgl-custom-geometry-p6x1: >-
-    また、p5.jsは内部的に<a class="code">loadModel()</a>で使用されている
-  getting-started-in-webgl-custom-geometry-p6x1_: >-
-    クラスがあり、カスタムジオメトリの定義にも使用できます。
-    これは、面や法線を計算するための便利なツールを提供します。
+  getting-started-in-webgl-custom-geometry-p5x1: ジオメトリを制御するための別の方法があります。
+  getting-started-in-webgl-custom-geometry-p5x2: と
+  getting-started-in-webgl-custom-geometry-p5x3: というメソッドを使って、点ごとに形状を定義することができます。 次の例では、これらのメソッドを使用して、数学的に3Dシェイプを構築する方法を示します。
+  getting-started-in-webgl-custom-geometry-p6x1: また、p5.jsは内部的に<a class="code">loadModel()</a>で使用されている
+  getting-started-in-webgl-custom-geometry-p6x1_: クラスがあり、カスタムジオメトリの定義にも使用できます。 これは、面や法線を計算するための便利なツールを提供します。
   getting-started-in-webgl-custom-geometry-p6x2: >-
     3Dでは、面は表面を形成する3つまたは4つのポイントのコレクションを指します。
     法線は、面に垂直な方向であり、p5.jsが表面全体にわたって照明を計算するのに役立ちます。
-  getting-started-in-webgl-custom-geometry-p6x3: >-
-    次の例では、<a class="code">p5.Geometry</a>を使用して
-    ジオメトリのグリッドをプロットしています。
+  getting-started-in-webgl-custom-geometry-p6x3: 次の例では、<a class="code">p5.Geometry</a>を使用して ジオメトリのグリッドをプロットしています。
   getting-started-in-webgl-custom-geometry-heading3: 結論
   getting-started-in-webgl-custom-geometry-p7x1: >-
-    これでカスタムジオメトリを作成できるようになりました。
-    他のツールやコードからユニークな形状を作成できるようになりました。
+    これでカスタムジオメトリを作成できるようになりました。 他のツールやコードからユニークな形状を作成できるようになりました。
     様々な3Dモデリングツールで作業を行い、あなたに最適なツールを見つけるための時間を費やしてください。
   getting-started-in-webgl-custom-geometry-glossary-term1-title: プロシージャル
   getting-started-in-webgl-custom-geometry-glossary-term1-definition: 数学的に定義されたもので、ファイルなどの保存されたデータではないことを意味します。
   getting-started-in-webgl-custom-geometry-glossary-term2-title: モデル
   getting-started-in-webgl-custom-geometry-glossary-term2-definition: ジオメトリの表現方法。
   getting-started-in-webgl-custom-geometry-glossary-term3-title: STL
-  getting-started-in-webgl-custom-geometry-glossary-term3-definition: >-
-    STL("standard tesselation language"の略)3Dモデルのファイル形式。
-    ジオメトリに関する情報のみを保存します。
+  getting-started-in-webgl-custom-geometry-glossary-term3-definition: STL("standard tesselation language"の略)3Dモデルのファイル形式。 ジオメトリに関する情報のみを保存します。
   getting-started-in-webgl-custom-geometry-glossary-term4-title: OBJ
   getting-started-in-webgl-custom-geometry-glossary-term4-definition: >-
     ジオメトリデータだけでなく、一部のマテリアルやテクスチャデータも保存するオープンなファイル形式。
@@ -618,24 +495,19 @@ learn:
   getting-started-in-webgl-appearance-title: スタイリングと外観
   getting-started-in-webgl-appearance: WebGLでのマテリアルとライティングの基礎
   getting-started-in-webgl-appearance-p0x1: >-
-    3Dでの作成は、ジオメトリ以上のものです。
-    カメラ、ライト、そしてマテリアルは、視覚的に興味深い3Dシーンを作成するための重要な要素です。
+    3Dでの作成は、ジオメトリ以上のものです。 カメラ、ライト、そしてマテリアルは、視覚的に興味深い3Dシーンを作成するための重要な要素です。
     p5.jsには、ジオメトリの外観を変換するためのツールが多数用意されています。
   getting-started-in-webgl-appearance-toc-title: 目次
   getting-started-in-webgl-appearance-heading1: カメラとビュー
   getting-started-in-webgl-appearance-p1x1: >-
-    カメラは、3Dシーンの本質的な部分であり、
-    私たちに3Dで探求したい空間や次元感を与えます。
+    カメラは、3Dシーンの本質的な部分であり、 私たちに3Dで探求したい空間や次元感を与えます。
     p5.jsでは、WebGLモードはデフォルトで遠近法カメラを提供していますが、
-  getting-started-in-webgl-appearance-p1x2: >-
-    または
+  getting-started-in-webgl-appearance-p1x2: または
   getting-started-in-webgl-appearance-p2x1: >-
-    <em>透視投影カメラ</em>は、遠ざかるにつれて小さく見えるようにオブジェクトを傾けます。
-    一方、 <em>正射影カメラ</em>では、
+    <em>透視投影カメラ</em>は、遠ざかるにつれて小さく見えるようにオブジェクトを傾けます。 一方、 <em>正射影カメラ</em>では、
     ジオメトリは遠ざかるにつれて同じサイズで、消失点はありません。
   getting-started-in-webgl-appearance-p3x1: >-
-    透視投影カメラで変更できる設定の一つに、<em>視野角</em>またはFOVがあります。
-    これは、カメラが見ることができる角度で測定されるものです。
+    透視投影カメラで変更できる設定の一つに、<em>視野角</em>またはFOVがあります。 これは、カメラが見ることができる角度で測定されるものです。
     単純な例では、ズームのような効果が現れるように見えますが、遠くの形状がどのようにサイズ変化するかにも影響を与えます。
   getting-started-in-webgl-appearance-p4x1: >-
     3Dでカメラを扱う際のもう1つの重要な用語は、カメラの<em>フラスタム</em>です。カメラのフラスタムとは、カメラの視野の形状であり、幾何学的な形状を表示できるピラミッド状の形状です。
@@ -644,11 +516,10 @@ learn:
     これらのそれぞれを変更することで、カメラがどれだけ近く、どれだけ遠くを見ることができるかが影響を受けます。
     この選択的にジオメトリを含めるプロセスは、時々「クリッピング」と呼ばれます。
   getting-started-in-webgl-appearance-p5x1: >-
-    カメラは<a class="code">camera()</a>に引数を渡すことで移動できますが、コードでカメラを常に移動させたり調整したりするのは面倒です。特にアイデアを試しているときには。
+    カメラは<a
+    class="code">camera()</a>に引数を渡すことで移動できますが、コードでカメラを常に移動させたり調整したりするのは面倒です。特にアイデアを試しているときには。
     p5.jsには特別なカメラメソッドがあります、
-  getting-started-in-webgl-appearance-p5x2: >-
-    それを使って、
-    マウスを使ってカメラをズーム、パン、および位置決めすることができます。
+  getting-started-in-webgl-appearance-p5x2: それを使って、 マウスを使ってカメラをズーム、パン、および位置決めすることができます。
   getting-started-in-webgl-appearance-p6x1: >-
     シーンには複数のカメラがあることができますが、一度にアクティブにできるカメラは1台だけです。p5.jsのスケッチはデフォルトで1台の透視投影カメラがありますが、
     <a class="code">perspective()</a>（新しいパラメーターで）または<a
@@ -659,18 +530,12 @@ learn:
   getting-started-in-webgl-appearance-p7x1: >-
     ライティングは3Dシーンのもう1つの重要な部分です。
     3Dで形状や深さを伝えるためには、光源が必要です。p5.jsには、スケッチで使用できるいくつかの異なるタイプの光があります。
-  getting-started-in-webgl-appearance-lighting-list1: >-
-    アンビエントライトは、光の位置や方向を考慮せずに、
-    すべてのものを少しだけ明るく表示します。
+  getting-started-in-webgl-appearance-lighting-list1: アンビエントライトは、光の位置や方向を考慮せずに、 すべてのものを少しだけ明るく表示します。
   getting-started-in-webgl-appearance-lighting-list2: >-
     ディレクショナルライトは、1つの方向から光を放射し、シーンの深さを伝えたり、
     シーンに「太陽」の光が必要な場合に特に役立ちます。このメソッドは、色と方向を受け入れます。
-  getting-started-in-webgl-appearance-lighting-list3: >-
-    ポイントライトは、ある1点からすべての方向に光を放射し、
-    電球のようなものに似ています。このメソッドは、光の色と位置を受け入れます。
-  getting-started-in-webgl-appearance-lighting-list4: >-
-    スポットライトは、1点から1つの方向に光を放射します。
-    この光は円錐形状で放射され、その半径と集中度を調整することができます。
+  getting-started-in-webgl-appearance-lighting-list3: ポイントライトは、ある1点からすべての方向に光を放射し、 電球のようなものに似ています。このメソッドは、光の色と位置を受け入れます。
+  getting-started-in-webgl-appearance-lighting-list4: スポットライトは、1点から1つの方向に光を放射します。 この光は円錐形状で放射され、その半径と集中度を調整することができます。
   getting-started-in-webgl-appearance-lighting-list5: >-
     noLights()は、その後のすべてのジオメトリがライティングなしでレンダリングされるようにします。
     これは、フラットでシェーディングされていないジオメトリが必要な場合に役立ちます。
@@ -678,10 +543,8 @@ learn:
     これらのライトは、<a class="code">draw()</a>の中で使用する必要があります。
     最大5つのライトを同時にシーンで使用できます。これにより、さまざまで複雑な光源を持つシーンを構成することができます。
     以下のインタラクティブな例でボックスをチェックしたりチェックを外したりして、ライティングがどのように組み合わせられるかを確認してください。
-    アクティブな光源ごとに、その位置や方向を示す視覚的なインジケータがありますが、
-    これらは説明のために存在することを理解してください。
-  getting-started-in-webgl-appearance-p9x1: >-
-    次の例では、各ライトのコメントを追加・削除して、パラメーターを試してみてください。
+    アクティブな光源ごとに、その位置や方向を示す視覚的なインジケータがありますが、 これらは説明のために存在することを理解してください。
+  getting-started-in-webgl-appearance-p9x1: 次の例では、各ライトのコメントを追加・削除して、パラメーターを試してみてください。
   getting-started-in-webgl-appearance-heading3: マテリアルとテクスチャ
   getting-started-in-webgl-appearance-p10x1: >-
     オブジェクトは、そのマテリアルによって異なる外観になります。
@@ -690,42 +553,34 @@ learn:
   getting-started-in-webgl-appearance-p11x1: >-
     このインタラクティブな例では、異なるマテリアルを選択して、ジオメトリの外観にどのような影響を与えるか試してみてください。
     マウスを動かして、ディレクショナルライトがマテリアルに与える効果を確認できます。
-  getting-started-in-webgl-appearance-p12x1: >-
-    この例で、異なるライトのコメントを追加・削除して試してみてください:
+  getting-started-in-webgl-appearance-p12x1: 'この例で、異なるライトのコメントを追加・削除して試してみてください:'
   getting-started-in-webgl-appearance-p13x1: >-
     よりカスタマイズされたマテリアルは、<a class="code">texture()</a>を使用して達成できます。
     簡単に言うと、これらはジオメトリの表面にマッピングできる画像です。
     これらのテクスチャは、画像からインポートしたり、シェーダーを使用してコード内で生成したりすることができます。
-    ジオメトリにテクスチャをマップするには、<a class="code">preload()</a>の中で<a class="code">loadImage()</a>を使用し、形状を描画する前に<a class="code">texture()</a>を呼び出してください。
-  getting-started-in-webgl-appearance-info1x1: >-
-    シェーダーはジオメトリの外観を変更するのに役立ちますが、
-    このチュートリアルの範囲を超えているため、
-  getting-started-in-webgl-appearance-info1x2: >-
-    シェーダー入門
-  getting-started-in-webgl-appearance-info1x3: >-
-    のページを確認してください。
+    ジオメトリにテクスチャをマップするには、<a class="code">preload()</a>の中で<a
+    class="code">loadImage()</a>を使用し、形状を描画する前に<a
+    class="code">texture()</a>を呼び出してください。
+  getting-started-in-webgl-appearance-info1x1: シェーダーはジオメトリの外観を変更するのに役立ちますが、 このチュートリアルの範囲を超えているため、
+  getting-started-in-webgl-appearance-info1x2: シェーダー入門
+  getting-started-in-webgl-appearance-info1x3: のページを確認してください。
   getting-started-in-webgl-appearance-heading4: 結論
   getting-started-in-webgl-appearance-p14x1: >-
     カメラ、ライティング、マテリアルをコントロールできるようになることで、
     スケッチの見た目をより柔軟に決定できるようになり、3Dスケッチに独自のスタイルを導入する可能性が広がります。
-    WebGL入門シリーズの次のチュートリアルでは、シェーダーが紹介され、
-    スケッチの見た目をさらに面白い方法で変更することができるようになります。
+    WebGL入門シリーズの次のチュートリアルでは、シェーダーが紹介され、 スケッチの見た目をさらに面白い方法で変更することができるようになります。
   getting-started-in-webgl-appearance-glossary-term1-title: カメラ
   getting-started-in-webgl-appearance-glossary-term1-definition: 3Dシーンの視点
   getting-started-in-webgl-appearance-glossary-term2-title: ペルスペクティブ
   getting-started-in-webgl-appearance-glossary-term2-definition: 遠くのオブジェクトを小さく見せることで奥行き感を与えるカメラ投影
   getting-started-in-webgl-appearance-glossary-term3-title: オルソグラフィック
-  getting-started-in-webgl-appearance-glossary-term3-definition: >-
-    奥行きに影響されない<em>直交</em>なカメラ投影。
-    二次元的な外観を与えます。
+  getting-started-in-webgl-appearance-glossary-term3-definition: 奥行きに影響されない<em>直交</em>なカメラ投影。 二次元的な外観を与えます。
   getting-started-in-webgl-appearance-glossary-term4-title: 視野角
   getting-started-in-webgl-appearance-glossary-term4-definition: カメラがどれだけ見ることができるかを表す角度。
   getting-started-in-webgl-appearance-glossary-term5-title: フラスタム
   getting-started-in-webgl-appearance-glossary-term5-definition: カメラで表示できる全領域を表す幾何学的形状。
   getting-started-in-webgl-appearance-glossary-term6-title: 近接面と遠方面
-  getting-started-in-webgl-appearance-glossary-term6-definition: >-
-    近接面は、ジオメトリがカメラに表示されるために最小限離れる必要がある距離を表し、
-    遠方面は最大距離を表します。
+  getting-started-in-webgl-appearance-glossary-term6-definition: 近接面は、ジオメトリがカメラに表示されるために最小限離れる必要がある距離を表し、 遠方面は最大距離を表します。
   getting-started-in-webgl-appearance-glossary-term7-title: クリッピング
   getting-started-in-webgl-appearance-glossary-term7-definition: カメラのフラスタムの外にあるジオメトリのように、一部のジオメトリを選択的に表示し、他のジオメトリを表示しないこと。
   getting-started-in-webgl-shaders-title: シェーダー入門
@@ -735,13 +590,11 @@ learn:
     GPUを利用して多くのピクセルを一度に処理し、ノイズ生成、ぼかしのようなフィルターの適用、
     ポリゴンのシェーディングなどの特定のタスクに特に適していて高速です。
     シェーダープログラミングは最初はやりがいがありますが、p5.jsの2D描画とは異なるアプローチが必要です。
-    このドキュメントでは、シェーダープログラミングの基本を説明し、
-    他のリソースについて紹介します。
+    このドキュメントでは、シェーダープログラミングの基本を説明し、 他のリソースについて紹介します。
   getting-started-in-webgl-shaders-toc-title: 目次
   getting-started-in-webgl-shaders-heading1: セットアップ
   getting-started-in-webgl-shaders-p1x1: >-
-    p5.jsはシェーダーを扱うのに適したツールです。 なぜなら、WebGLのセットアップの多くを処理してくれるため、
-    シェーダーコード自体に集中できます。
+    p5.jsはシェーダーを扱うのに適したツールです。 なぜなら、WebGLのセットアップの多くを処理してくれるため、 シェーダーコード自体に集中できます。
     シェーダーを始める前に、キャンバスをp5.jsのWebGLモデルを使ってセットアップする必要があります。
   getting-started-in-webgl-shaders-p2x1: >-
     シェーダープログラムは、<strong>頂点シェーダー</strong>と
@@ -767,11 +620,9 @@ learn:
     int           // 小数点のない整数
     sampler2D     // テクスチャへの参照
   getting-started-in-webgl-shaders-p5x1: >-
-    一般的に、シェーディング言語はJavaScriptよりもはるかに厳格です。
-    たとえば、セミコロンがないとエラーメッセージが表示されます。
+    一般的に、シェーディング言語はJavaScriptよりもはるかに厳格です。 たとえば、セミコロンがないとエラーメッセージが表示されます。
     また、浮動小数点数や整数など、異なるタイプの数値を相互に使用することはできません。
-  getting-started-in-webgl-shaders-p6x1: >-
-    まず、基本的な頂点シェーダーを見てみましょう:
+  getting-started-in-webgl-shaders-p6x1: 'まず、基本的な頂点シェーダーを見てみましょう:'
   getting-started-in-webgl-shaders-p7x1: >-
     この頂点シェーダーは、<em>属性（attribute）</em>で始まります。
     これは、p5.jsがシェーダーと頂点位置情報を共有するために使用します。 この属性は、<a
@@ -781,10 +632,8 @@ learn:
     class="code">vertex()</a>などのp5.jsメソッドを使用すると、p5.jsは自動的に頂点情報をシェーダーに渡します。
   getting-started-in-webgl-shaders-p8x1: >-
     すべての頂点シェーダーには、頂点の位置を決めるための関数 <a class="code">main()</a> が必要です。
-    この例では、頂点シェーダーが頂点の位置を変更して、
-    シェーダーの出力が全体のスケッチを占めるようにします。 最後に <a
-    class="code">main()</a> の中で、
-    <a class="code">gl_Position</a> に値を割り当てます。
+    この例では、頂点シェーダーが頂点の位置を変更して、 シェーダーの出力が全体のスケッチを占めるようにします。 最後に <a
+    class="code">main()</a> の中で、 <a class="code">gl_Position</a> に値を割り当てます。
   getting-started-in-webgl-shaders-p9x1: >-
     まだ十分に理解できなくても心配しないでください。
     頂点シェーダーは重要な役割を果たしますが、フラグメントシェーダーで作成したものがジオメトリ上で適切に表示されるようにするだけで、
@@ -794,7 +643,8 @@ learn:
   getting-started-in-webgl-shaders-p10x1: >-
     フラグメントシェーダーは、floatの 'precision' を指定する行で始まります。 この値は、<a
     class="code">lowp</a>、<a class="code">mediump</a>、<a class="code">highp</a>
-    のいずれかになりますが、 通常は <a class="code">mediump</a> を使用し、特定の状況では <a class="code">highp</a> を使用することがあります。
+    のいずれかになりますが、 通常は <a class="code">mediump</a> を使用し、特定の状況では <a
+    class="code">highp</a> を使用することがあります。
   getting-started-in-webgl-shaders-p11x1: >-
     そして、頂点シェーダーと同様に、フラグメントシェーダーにも <a class="code">main()</a> 関数が必要ですが、 <a
     class="code">gl_Position</a> ではなく、<a class="code">gl_FragColor</a>
@@ -806,22 +656,20 @@ learn:
   getting-started-in-webgl-shaders-p13x1: >-
     頂点シェーダーとフラグメントシェーダーが用意できたら、これらを別々のファイル（shader.vert と shader.frag ）に保存し、<a
     class="code">loadShader()</a> を使用してスケッチに読み込むことができます。
-  getting-started-in-webgl-shaders-heading3: >-
-    Uniforms: スケッチからシェーダーへのデータの受け渡し
+  getting-started-in-webgl-shaders-heading3: 'Uniforms: スケッチからシェーダーへのデータの受け渡し'
   getting-started-in-webgl-shaders-p14x1: >-
     このようなシンプルなシェーダーは、それ自体で役立つことがありますが、p5.js スケッチからシェーダーに変数を伝達する必要がある場合もあります。
     ここでユニフォームが登場します。ユニフォームは、スケッチからシェーダーに送信できる特殊な変数です。
     これにより、シェーダーをより制御できるようになります。例えば、p5.js のメソッド <a class="code">millis()</a>
     を使用して 'time' ユニフォームをスケッチに渡し、動きを導入することができます。 シェーダーでは、ユニフォームはファイルの先頭、<a
     class="code">main()</a> の外部で定義されます。
-    次のフラグメントシェーダーでは、スケッチから色を変更できるようにするためのカラーユニフォーム、<a class="code">myColor</a>を作成しています。
-  getting-started-in-webgl-shaders-p15x1: >-
-    p5.jsスケッチに戻ると、この色は<a class="code">setUniform()</a>を使って送信できるようになります。
+    次のフラグメントシェーダーでは、スケッチから色を変更できるようにするためのカラーユニフォーム、<a
+    class="code">myColor</a>を作成しています。
+  getting-started-in-webgl-shaders-p15x1: p5.jsスケッチに戻ると、この色は<a class="code">setUniform()</a>を使って送信できるようになります。
   getting-started-in-webgl-shaders-p16x1: >-
     また、ジオメトリに関する特定のデータをスケッチと頂点シェーダー間で共有するために通常使用される<em>属性</em>や、
     頂点シェーダーとフラグメントシェーダー間でデータを共有する<em>バリング</em>変数があります。
-    これにより、フラグメントシェーダー内で位置やその他のジオメトリデータを
-    使用することができます。
+    これにより、フラグメントシェーダー内で位置やその他のジオメトリデータを 使用することができます。
   getting-started-in-webgl-shaders-p17x1: >-
     これでテクスチャ座標属性がバリング変数に割り当てられているため、フラグメントシェーダーでテクスチャ座標を使用できます。
     以下の例では、テクスチャ座標の青とマゼンタの可視化が表示されます。
@@ -829,14 +677,12 @@ learn:
     p5.jsは多くの属性とユニフォームを処理してくれます。<a
     href="https://github.com/processing/p5.js/blob/374acfb44588bfd565c54d61264df197d798d121/contributor_docs/webgl_mode_architecture.md">p5.jsが
     シェーダーに送信するすべての属性のリストをこちらで確認できます</a>。
-  getting-started-in-webgl-shaders-heading4: >-
-    結論
+  getting-started-in-webgl-shaders-heading4: 結論
   getting-started-in-webgl-shaders-p18x1: >-
     これらのスキルを持っていれば、基本的なシェーダーを作成することができますが、シェーダープログラミングは非常に深いものであり、
     このチュートリアルを超える多くのシェーダートピックがあります。
     p5.jsのシェーダーは、視覚的な効果やエフェクト、さらには3Dジオメトリにマップされるテクスチャを作成するための強力なツールになり得ます。
-  getting-started-in-webgl-shaders-p19x1: >-
-    シェーダーについてもっと学びたいですか？これらのウェブサイトをチェックしてみてください！
+  getting-started-in-webgl-shaders-p19x1: シェーダーについてもっと学びたいですか？これらのウェブサイトをチェックしてみてください！
   getting-started-in-webgl-shaders-resources: >-
     <li><a href="https://thebookofshaders.com/">The Book of Shaders</a>、Patricio
     Gonzalez Vivoと
@@ -844,49 +690,35 @@ learn:
     <li><a href="https://itp-xstory.github.io/p5js-shaders/#/">P5.js
     shaders</a>、Casey Conchinhaと
       Louise Lessélによるシェーダーガイド。</li>
-    <li><a href="https://www.shadertoy.com/">Shadertoy</a>、ブラウザエディタで書かれたシェーダーの大規模なオンラインコレクション。</li>
+    <li><a
+    href="https://www.shadertoy.com/">Shadertoy</a>、ブラウザエディタで書かれたシェーダーの大規模なオンラインコレクション。</li>
     <li><a
     href="https://github.com/aferriss/p5jsShaderExamples">p5jsShaderExamples</a>、Adam
     Ferrissによるリソースコレクション。</li>
   getting-started-in-webgl-shaders-glossary-term1-title: シェーダー
-  getting-started-in-webgl-shaders-glossary-term1-definition: >-
-    多くの視覚効果やフィルタを効率的に生成できる特殊なグラフィックカードプログラム。
+  getting-started-in-webgl-shaders-glossary-term1-definition: 多くの視覚効果やフィルタを効率的に生成できる特殊なグラフィックカードプログラム。
   getting-started-in-webgl-shaders-glossary-term2-title: GLSL
-  getting-started-in-webgl-shaders-glossary-term2-definition: >-
-    Graphics Library Shader Language（GLSL）は、シェーダーを記述するために使用されるプログラミング言語。
+  getting-started-in-webgl-shaders-glossary-term2-definition: Graphics Library Shader Language（GLSL）は、シェーダーを記述するために使用されるプログラミング言語。
   getting-started-in-webgl-shaders-glossary-term3-title: Uniform
-  getting-started-in-webgl-shaders-glossary-term3-definition: >-
-    スケッチからシェーダーに渡される変数。
+  getting-started-in-webgl-shaders-glossary-term3-definition: スケッチからシェーダーに渡される変数。
   getting-started-in-webgl-shaders-glossary-term4-title: ベクター
-  getting-started-in-webgl-shaders-glossary-term4-definition: >-
-    色、位置などを表すために、通常は2、3、
-    または4の数値を格納するデータ型。
+  getting-started-in-webgl-shaders-glossary-term4-definition: 色、位置などを表すために、通常は2、3、 または4の数値を格納するデータ型。
   getting-started-in-webgl-shaders-glossary-term5-title: Float
-  getting-started-in-webgl-shaders-glossary-term5-definition: >-
-    小数点を持つことができる浮動小数点数を格納するデータ型。
+  getting-started-in-webgl-shaders-glossary-term5-definition: 小数点を持つことができる浮動小数点数を格納するデータ型。
   getting-started-in-webgl-shaders-glossary-term6-title: Int
-  getting-started-in-webgl-shaders-glossary-term6-definition: >-
-    小数点のない整数を格納するデータ型。
+  getting-started-in-webgl-shaders-glossary-term6-definition: 小数点のない整数を格納するデータ型。
   getting-started-in-webgl-shaders-glossary-term7-title: サンプラー
-  getting-started-in-webgl-shaders-glossary-term7-definition: >-
-    シェーダーに渡されるテクスチャを表すデータ型。
+  getting-started-in-webgl-shaders-glossary-term7-definition: シェーダーに渡されるテクスチャを表すデータ型。
   getting-started-in-webgl-shaders-glossary-term8-title: 属性（Attribute）
-  getting-started-in-webgl-shaders-glossary-term8-definition: >-
-    p5.jsスケッチで生成され、頂点シェーダーで利用可能なGLSL変数。
-    ほとんどの場合、p5.jsによって提供されます。
+  getting-started-in-webgl-shaders-glossary-term8-definition: p5.jsスケッチで生成され、頂点シェーダーで利用可能なGLSL変数。 ほとんどの場合、p5.jsによって提供されます。
   getting-started-in-webgl-shaders-glossary-term9-title: テクスチャ
-  getting-started-in-webgl-shaders-glossary-term9-definition: >-
-    シェーダープログラムに渡される画像。
+  getting-started-in-webgl-shaders-glossary-term9-definition: シェーダープログラムに渡される画像。
   getting-started-in-webgl-shaders-glossary-term10-title: タイプ
-  getting-started-in-webgl-shaders-glossary-term10-definition: >-
-    データの特性を示すラベル。例えば、int、float、vectorなど。
+  getting-started-in-webgl-shaders-glossary-term10-definition: データの特性を示すラベル。例えば、int、float、vectorなど。
   getting-started-in-webgl-shaders-glossary-term11-title: 頂点シェーダー
-  getting-started-in-webgl-shaders-glossary-term11-definition: >-
-    シェーダープログラムの一部で、3D空間でのジオメトリの位置を決定する役割を担っています。
+  getting-started-in-webgl-shaders-glossary-term11-definition: シェーダープログラムの一部で、3D空間でのジオメトリの位置を決定する役割を担っています。
   getting-started-in-webgl-shaders-glossary-term12-title: フラグメントシェーダー
-  getting-started-in-webgl-shaders-glossary-term12-definition: >-
-    シェーダープログラムの一部で、
-    シェーダーが出力する各ピクセルの色と外観を決定する役割を担っています。
+  getting-started-in-webgl-shaders-glossary-term12-definition: シェーダープログラムの一部で、 シェーダーが出力する各ピクセルの色と外観を決定する役割を担っています。
   color-title: 色
   color: デジタルカラーの紹介。
   coordinate-system-and-shapes-title: 座標系と形状
@@ -1213,8 +1045,7 @@ libraries:
   p5.touchgui: p5.js用のマルチタッチおよびマウスGUIライブラリ。
   tramontana: >-
     Tramontanaは、多数のデバイス（iOS、Android、tramontana Boardなど）を簡単に利用して、
-    インタラクティブな環境や空間を作成したり、
-    大規模で空間内のプロトタイプ体験を実現できるプラットフォームです。
+    インタラクティブな環境や空間を作成したり、 大規模で空間内のプロトタイプ体験を実現できるプラットフォームです。
   TurtleGFX: TurtleGFXはJavaScriptでタートルグラフィックスでコードを記述することができます。教育やクリエイティブコーディングに最適です。
   p5.tween: p5.tweenを使用すると、簡単にオブジェクトや図形のトゥイーンアニメーションを作成できます。
   vida: Vidaは、カメラ（またはビデオ）ベースのモーション検出およびブロブ追跡機能をp5jsに追加するシンプルなライブラリです。
