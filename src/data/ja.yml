@@ -5,7 +5,7 @@ Home: ホーム
 Editor: エディター
 Download: ダウンロード
 Donate: 寄付する
-Start: スタート
+Start: はじめに
 Reference: リファレンス
 Libraries: ライブラリ
 Learn: 学ぶ
@@ -186,16 +186,21 @@ download:
   Download: ダウンロード
   download-intro: >-
     ようこそ！このページは「ダウンロード」というタイトルですが、
-    実際にはライブラリをダウンロードするためのリンク集またはオンラインで使用するためのリンク集が含まれています。
-    初心者が最初に欲しいと思うリソースから、より経験豊富なプログラマーが探しているリソースまで、 順序を考慮して並べています。
+    実際にはライブラリをダウンロードしたり、オンラインで使用するためのリンク集が含まれています。
+    初心者が最初に欲しいと思うリソースから、より経験豊富なプログラマーが探しているリソースまで、
+    順序を考慮して紹介しています。
   editor-title: エディタ
   p5.js-editor: p5.jsエディタ
-  p5.js-editor-intro: このリンクは、p5.jsエディタに直接アクセスできるようになっており、 p5.jsをすぐに使用できます。
-  editor-includes: セットアップ不要でp5.jsエディタを使用しましょう！
+  p5.js-editor-intro: >-
+    このリンクは、p5.jsエディタに直接アクセスできるようになっており、
+    p5.jsをすぐに使用できます。
+  editor-includes: p5.jsエディタを使用して、コーディングを始めましょう！セットアップは不要です！
   complete-library-title: ライブラリ全体
-  complete-library-intro1: p5.jsライブラリファイル、p5.soundアドオン、サンプルプロジェクトを含むダウンロードです。 エディタは含まれていません。
-  complete-library-intro2: スタート
-  complete-library-intro3: でp5.jsプロジェクトのセットアップ方法を学びましょう。
+  complete-library-intro1: >-
+    p5.jsライブラリファイル、p5.soundアドオン、サンプルプロジェクトを含むダウンロードです。
+    エディタは含まれていません。p5.jsプロジェクトの設定方法については、
+  complete-library-intro2: はじめに
+  complete-library-intro3: をご覧ください。
   p5.js-complete: p5.js全体
   includes-1: '以下を含みます:'
   includes-2: p5.js、p5.sound.js、サンプルプロジェクト
@@ -207,7 +212,7 @@ download:
   compressed: 圧縮版
   link: リンク：
   statically-hosted-file: 静的ホストされたファイル
-  etc-title: Githubリソース
+  etc-title: GitHubリソース
   older-releases: 以前のバージョン（過去のリリースと変更履歴）
   github-repository: コードリポジトリ（GitHub）
   report-bugs: 問題、バグ、エラーを報告する
