@@ -1,10 +1,10 @@
 /*
- * @name Spring
- * @arialabel Light grey horizontal rectangle on a black vertical rectangle on a grey background. The user can move the horizontal rectangle up and down. Upon releasing the horizontal rectangle, the system moves like a spring and the vertical rectangle expands and compresses as the horizontal rectangle moves up and down.
+ * @name スプリング
+ * @arialabel グレーの背景に黒い垂直長方形の上に薄灰色の水平長方形があり、ユーザーは水平長方形を上下に動かすことができます。水平長方形を離すと、システムはスプリングのように動き、垂直長方形が水平長方形が上下に動くにつれて伸縮します。
  * @frame 710, 400
- * @description Click, drag, and release the horizontal bar to start the spring.
+ * @description 水平バーをクリックしてドラッグし、スプリングを起動します。
  */
-// Spring drawing constants for top bar
+// 上部バーのスプリング描画定数
 let springHeight = 32,
     left,
     right,
@@ -13,19 +13,19 @@ let springHeight = 32,
     over = false,
     move = false;
 
-// Spring simulation constants
-let M = 0.8,  // Mass
-    K = 0.2,  // Spring constant
-    D = 0.92, // Damping
-    R = 150;  // Rest position
+// スプリングシミュレーション定数
+let M = 0.8, // 質量
+    K = 0.2, // スプリング定数
+    D = 0.92, // ダンピング
+    R = 150; // 安定位置
 
-// Spring simulation variables
-let ps = R,   // Position
-    vs = 0.0, // Velocity
-    as = 0,   // Acceleration
-    f = 0;    // Force
+// スプリングシミュレーション変数
+    let ps = R, // 位置
+    vs = 0.0, // 速度
+    as = 0, // 加速度
+    f = 0; // 力
 
-function setup() {
+    function setup() {
   createCanvas(710, 400);
   rectMode(CORNERS);
   noStroke();
@@ -40,12 +40,12 @@ function draw() {
 }
 
 function drawSpring() {
-  // Draw base
+  // ベースを描画
   fill(0.2);
   let baseWidth = 0.5 * ps + -8;
   rect(width / 2 - baseWidth, ps + springHeight, width / 2 + baseWidth, height);
 
-  // Set color and draw top bar
+  // 色を設定し、上部バーを描画
   if (over || move) {
     fill(255);
   } else {
@@ -56,26 +56,26 @@ function drawSpring() {
 }
 
 function updateSpring() {
-  // Update the spring position
+  // スプリング位置を更新
   if ( !move ) {
-    f = -K * ( ps - R ); // f=-ky
-    as = f / M;          // Set the acceleration, f=ma == a=f/m
-    vs = D * (vs + as);  // Set the velocity
-    ps = ps + vs;        // Updated position
+    f = -K * ( ps - R );  // f=-ky
+    as = f / M;           // 加速度を設定, f=ma == a=f/m
+    vs = D * (vs + as);   // 速度を設定
+    ps = ps + vs;         // 位置を更新
   }
 
   if (abs(vs) < 0.1) {
     vs = 0.0;
   }
 
-  // Test if mouse if over the top bar
+  // マウスが上部バーの上にあるかどうかをテスト
   if (mouseX > left && mouseX < right && mouseY > ps && mouseY < ps + springHeight) {
     over = true;
   } else {
     over = false;
   }
 
-  // Set and constrain the position of top bar
+  // 上部バーの位置を設定し、制約をかける
   if (move) {
     ps = mouseY - springHeight / 2;
     ps = constrain(ps, minHeight, maxHeight);
