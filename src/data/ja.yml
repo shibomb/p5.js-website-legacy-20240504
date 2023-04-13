@@ -1761,12 +1761,12 @@ showcase:
   project-a-5-2-moon: ' in Milan, Italy.'
 teach:
   teach-title2: 教える
-  teach-intro1: すべての教育には、独自の目標、メッセージ、条件、環境があります。
+  teach-intro1: どんな教育にも、独自の目標、メッセージ、条件、環境があります。
   teach-intro2: >-
-    p5ワークショップ、クラス、教材を文書化・共有することにより、世界中のp5.jsの学習者・教育者コミュニティをより良くつなげることを目指しています。あなた自身の指導経験を
+    p5のワークショップ、クラス、教材を文書化・共有することにより、世界中のp5.jsの学習者・教育者コミュニティをより良くつなげることを目指しています。あなた自身の指導経験を
   teach-intro3: 共有したり、推薦したり
   teach-intro4: することもできます！
-  teach-heading: p5教育リソース
+  teach-heading: p5の教育リソース
   teach-search-filter: 検索フィルター
   teach-filter1: 'Diversity & Inclusion : '
   teach-filter1-label1: Gender
