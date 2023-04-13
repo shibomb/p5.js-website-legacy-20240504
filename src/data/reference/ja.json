@@ -118,21 +118,27 @@
       }
     },
     "alpha": {
-      "description": ["色またはピクセル配列からアルファ値を抽出します。"],
+      "description": [
+        "色またはピクセル配列からアルファ値を抽出します。"
+      ],
       "returns": "Number: アルファ値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "blue": {
-      "description": ["色またはピクセル配列から青の値を抽出します。"],
+      "description": [
+        "色またはピクセル配列から青の値を抽出します。"
+      ],
       "returns": "Number: 青の値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "brightness": {
-      "description": ["色またはピクセル配列からHSB明るさ値を抽出します。"],
+      "description": [
+        "色またはピクセル配列からHSB明るさ値を抽出します。"
+      ],
       "returns": "Number: 明るさの値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
@@ -157,7 +163,9 @@
       }
     },
     "green": {
-      "description": ["色またはピクセル配列から緑の値を抽出します。"],
+      "description": [
+        "色またはピクセル配列から緑の値を抽出します。"
+      ],
       "returns": "Number: 緑の値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
@@ -186,14 +194,18 @@
       }
     },
     "lightness": {
-      "description": ["色またはピクセル配列から HSL 輝度値を抽出します。"],
+      "description": [
+        "色またはピクセル配列から HSL 輝度値を抽出します。"
+      ],
       "returns": "Number: 輝度",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "red": {
-      "description": ["色またはピクセル配列から赤の値を抽出します。"],
+      "description": [
+        "色またはピクセル配列から赤の値を抽出します。"
+      ],
       "returns": "Number: 赤の値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
@@ -733,10 +745,14 @@
       }
     },
     "VERSION": {
-      "description": ["このp5.jsのバージョン。"]
+      "description": [
+        "このp5.jsのバージョン。"
+      ]
     },
     "P2D": {
-      "description": ["デフォルトの二次元レンダラー。"]
+      "description": [
+        "デフォルトの二次元レンダラー。"
+      ]
     },
     "WEBGL": {
       "description": [
@@ -941,7 +957,9 @@
       "returns": "Number: _targetFrameRate"
     },
     "noCursor": {
-      "description": ["ビューからカーソルを非表示にします。"]
+      "description": [
+        "ビューからカーソルを非表示にします。"
+      ]
     },
     "displayWidth": {
       "description": [
@@ -1308,7 +1326,9 @@
       }
     },
     "resetMatrix": {
-      "description": ["現在の行列を単位行列に置き換えます。"]
+      "description": [
+        "現在の行列を単位行列に置き換えます。"
+      ]
     },
     "rotate": {
       "description": [
@@ -1418,7 +1438,9 @@
       ]
     },
     "removeItem": {
-      "description": ["storeItem()で保存されたアイテムを削除します。"],
+      "description": [
+        "storeItem()で保存されたアイテムを削除します。"
+      ],
       "params": {
         "key": "String"
       }
@@ -1650,7 +1672,9 @@
       }
     },
     "createElement": {
-      "description": ["指定されたタグと内容でDOM内に要素を作成します。"],
+      "description": [
+        "指定されたタグと内容でDOM内に要素を作成します。"
+      ],
       "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
         "tag": "String: 新しい要素のタグ",
@@ -2380,7 +2404,9 @@
       }
     },
     "constrain": {
-      "description": ["最小値と最大値の間に値を制限します。"],
+      "description": [
+        "最小値と最大値の間に値を制限します。"
+      ],
       "returns": "Number: 制限された数値",
       "params": {
         "n": "Number: 制限する数値",
@@ -2537,7 +2563,9 @@
       }
     },
     "fract": {
-      "description": ["数値の小数部分を計算します。"],
+      "description": [
+        "数値の小数部分を計算します。"
+      ],
       "returns": "Number: x の小数部分、すなわち、 {x}",
       "params": {
         "num": "Number: 小数部分を求める数値"
@@ -2556,15 +2584,7 @@
     },
     "noise": {
       "description": [
-        "指定された座標でのPerlinノイズ値を返します。",
-        "Perlinノイズは、標準の<a href=\"#/p5/random\">random()</a>関数と比較して、より自然に順序付けられた調和のある数列を生成するランダムシーケンスジェネレータです。",
-        "1980年代にKen Perlinによって発明され、以降、グラフィカルアプリケーションで手続き的テクスチャ、自然な動き、形状、地形などを生成するために使用されています。<br /><br />",
-        "<a href=\"#/p5/random\">random()</a>関数との主な違いは、Perlinノイズは無限のn次元空間で定義されており、座標のペアごとに固定の半乱数値（プログラムの寿命に対してのみ固定; <a href=\"#/p5/noiseSeed\">noiseSeed()</a>関数を参照）が対応していることです。",
-        "p5.jsは、与えられた座標の数に応じて1D、2D、3Dのノイズを計算することができます。",
-        "結果として得られる値は常に0.0から1.0の間になります。ノイズ値は、上記の例で示されているように、ノイズ空間を移動することでアニメーション化することができます。第2および第3の次元は、時間としても解釈できます。<br /><br />",
-        "実際のノイズは、周波数の利用に関してオーディオ信号に似た構造を持っています。物理学の調和の概念に似て、Perlinノイズはいくつかのオクターブで計算され、最終結果に加算されます。<br /><br />",
-        "結果として得られるシーケンスの性格を調整するもう一つの方法は、入力座標のスケールです。関数が無限の空間で動作するため、座標の値自体は重要ではなく、連続する座標間の距離だけが重要です(例えば、ループ内で <a href=\"#/p5/noise\">noise()</a> を使用する場合)。",
-        "一般的には、座標間の差が小さいほど、得られるノイズシーケンスは滑らかになります。ほとんどのアプリケーションでは0.005-0.03のステップが最適ですが、用途によっては異なります。"
+        "指定された座標でのPerlinノイズ値を返します。Perlinノイズは、標準の<a href=\"#/p5/random\">random()</a>関数と比較して、より自然に順序付けられた調和のある数列を生成するランダムシーケンスジェネレータです。1980年代にKen Perlinによって発明され、以降、グラフィカルアプリケーションで手続き的テクスチャ、自然な動き、形状、地形などを生成するために使用されています。<br /><br /><a href=\"#/p5/random\">random()</a>関数との主な違いは、Perlinノイズは無限のn次元空間で定義されており、座標のペアごとに固定の半乱数値（プログラムの寿命に対してのみ固定; <a href=\"#/p5/noiseSeed\">noiseSeed()</a>関数を参照）が対応していることです。p5.jsは、与えられた座標の数に応じて1D、2D、3Dのノイズを計算することができます。結果として得られる値は常に0.0から1.0の間になります。ノイズ値は、上記の例で示されているように、ノイズ空間を移動することでアニメーション化することができます。第2および第3の次元は、時間としても解釈できます。<br /><br />実際のノイズは、周波数の利用に関してオーディオ信号に似た構造を持っています。物理学の調和の概念に似て、Perlinノイズはいくつかのオクターブで計算され、最終結果に加算されます。<br /><br />結果として得られるシーケンスの性格を調整するもう一つの方法は、入力座標のスケールです。関数が無限の空間で動作するため、座標の値自体は重要ではなく、連続する座標間の距離だけが重要です(例えば、ループ内で <a href=\"#/p5/noise\">noise()</a> を使用する場合)。一般的には、座標間の差が小さいほど、得られるノイズシーケンスは滑らかになります。ほとんどのアプリケーションでは0.005-0.03のステップが最適ですが、用途によっては異なります。"
       ],
       "returns": "Number: 指定された座標でのPerlinノイズ値（0から1の間）",
       "params": {
@@ -2753,7 +2773,9 @@
       }
     },
     "textWidth": {
-      "description": ["任意の文字やテキスト文字列の幅を計算して返します。"],
+      "description": [
+        "任意の文字やテキスト文字列の幅を計算して返します。"
+      ],
       "returns": "Number: 計算された幅",
       "params": {
         "theText": "String: 測定する文字の文字列"
@@ -2856,7 +2878,9 @@
       }
     },
     "reverse": {
-      "description": ["配列の順序を逆にします。Array.reverse()に対応します。"],
+      "description": [
+        "配列の順序を逆にします。Array.reverse()に対応します。"
+      ],
       "returns": "Array: 逆順に並べられたリスト",
       "params": {
         "list": "Array: 逆にする配列"
@@ -3158,7 +3182,9 @@
       "returns": "Integer: 現在の年"
     },
     "plane": {
-      "description": ["指定された幅と高さで平面を描画する"],
+      "description": [
+        "指定された幅と高さで平面を描画する"
+      ],
       "params": {
         "width": "Number: (オプション) 平面の幅",
         "height": "Number: (オプション) 平面の高さ",
@@ -3167,7 +3193,9 @@
       }
     },
     "box": {
-      "description": ["指定された幅、高さ、奥行きで箱を描画する"],
+      "description": [
+        "指定された幅、高さ、奥行きで箱を描画する"
+      ],
       "params": {
         "width": "Number: (オプション) 箱の幅",
         "height": "Number: (オプション) 箱の高さ",
@@ -3271,7 +3299,9 @@
       }
     },
     "noDebugMode": {
-      "description": ["3DスケッチでdebugMode()をオフにします。"]
+      "description": [
+        "3DスケッチでdebugMode()をオフにします。"
+      ]
     },
     "ambientLight": {
       "description": [
@@ -3371,8 +3401,7 @@
         "<a href=\"#/p5/pointLight\">pointLight()</a>と同様に、spotLight()は特定の点（位置）から光を放射します。オブジェクトに対して遠くまたは近くに配置すると効果が異なります。",
         "ただし、pointLight()とは異なり、光は<strong>一方向</strong>に沿って円錐状に放射されます。円錐の形状は、<code>angle</code>および<code>concentration</code>パラメータを使用して制御できます。",
         "<code>angle</code>パラメータは、円錐の半径を決定するために使用されます。そして、<code>concentration</code>パラメータは、円錐の中心に向かって光を集めるために使用されます",
-        "両方のパラメータはオプションですが、<code>concentration</code>を指定する場合は、<code>angle</code>も指定する必要があります。最小集中値は1です。",
-        "一度に最大<strong>5</strong>つのスポットライトがアクティブにできます。",
+        "両方のパラメータはオプションですが、<code>concentration</code>を指定する場合は、<code>angle</code>も指定する必要があります。最小集中値は1です。一度に最大<strong>5</strong>つのスポットライトがアクティブにできます。",
         "注意: ループプログラム内でライトを持続させるためには、draw()内でライトを呼び出す必要があります（直接または間接的に）。setup()に配置すると、ループの最初の通過でのみ効果があります。"
       ],
       "params": {
@@ -3415,7 +3444,9 @@
       }
     },
     "model": {
-      "description": ["3Dモデルを画面にレンダリングします。"],
+      "description": [
+        "3Dモデルを画面にレンダリングします。"
+      ],
       "params": {
         "model": "p5.Geometry: レンダリングされるロード済みの3Dモデル"
       }
@@ -3643,8 +3674,7 @@
         "WebGL Drawing contextの属性を設定します。これは、WebGLレンダラーの表示とパフォーマンスを調整する方法です。",
         "注意: WebGLキャンバスが作成された後に呼び出されると、描画コンテキストが再初期化されます。",
         "パラメータとしてオブジェクトが渡された場合、オブジェクトで宣言されていない属性はすべてデフォルト値に設定されます。",
-        "利用可能な属性は以下の通りです:",
-        "alpha - キャンバスにアルファバッファが含まれているかどうかを示します。デフォルトはtrueです。",
+        "利用可能な属性は以下の通りです: alpha - キャンバスにアルファバッファが含まれているかどうかを示します。デフォルトはtrueです。",
         "depth - 描画バッファに少なくとも16ビットの深度バッファがあるかどうかを示します。デフォルトはtrueです。",
         "stencil - 描画バッファに少なくとも8ビットのステンシルバッファがあるかどうかを示します。",
         "antialias - アンチエイリアシングを実行するかどうかを示します。デフォルトはfalse（Safariではtrue）です。",
@@ -3678,7 +3708,9 @@
       }
     },
     "getOutputVolume": {
-      "description": ["このスケッチの音の出力ボリュームを表す数値を返します。"],
+      "description": [
+        "このスケッチの音の出力ボリュームを表す数値を返します。"
+      ],
       "returns": "Number: このスケッチの音の出力ボリューム。0.0（無音）から1.0の範囲内である必要があります。"
     },
     "outputVolume": {
@@ -3706,7 +3738,9 @@
       "returns": "Number: サンプルレート (1秒あたりのサンプル数)"
     },
     "freqToMidi": {
-      "description": ["指定された周波数に最も近い MIDI ノート値を返します。"],
+      "description": [
+        "指定された周波数に最も近い MIDI ノート値を返します。"
+      ],
       "returns": "Number: MIDI ノート値",
       "params": {
         "frequency": "Number: 周波数。たとえば、中央ドの上の「A」は440Hzです。"
@@ -3964,13 +3998,17 @@
       }
     },
     "addClass": {
-      "description": ["指定されたクラスを要素に追加します。"],
+      "description": [
+        "指定されたクラスを要素に追加します。"
+      ],
       "params": {
         "class": "String: 追加するクラスの名前"
       }
     },
     "removeClass": {
-      "description": ["指定されたクラスを要素から削除します。"],
+      "description": [
+        "指定されたクラスを要素から削除します。"
+      ],
       "params": {
         "class": "String: 削除するクラスの名前"
       }
@@ -3985,7 +4023,9 @@
       }
     },
     "toggleClass": {
-      "description": ["要素のクラスを切り替えます。"],
+      "description": [
+        "要素のクラスを切り替えます。"
+      ],
       "params": {
         "c": "String: 切り替えるクラス名"
       }
@@ -4049,7 +4089,9 @@
       }
     },
     "removeAttribute": {
-      "description": ["指定された要素の属性を削除します。"],
+      "description": [
+        "指定された要素の属性を削除します。"
+      ],
       "params": {
         "attr": "String: 削除する属性"
       }
@@ -4172,7 +4214,9 @@
       }
     },
     "get": {
-      "description": ["指定されたキーに格納されている値を返します。"],
+      "description": [
+        "指定されたキーに格納されている値を返します。"
+      ],
       "returns": "Number|String: そのキーに格納されている値",
       "params": {
         "the": "Number|String: アクセスしたいキー"
@@ -4188,7 +4232,9 @@
       }
     },
     "create": {
-      "description": ["Dictionaryに新しいキーと値のペアを作成します。"],
+      "description": [
+        "Dictionaryに新しいキーと値のペアを作成します。"
+      ],
       "params": {
         "key": "Number|String",
         "value": "Number|String",
@@ -4225,10 +4271,14 @@
     }
   },
   "p5.StringDict": {
-    "description": ["文字列用のシンプルなDictionaryクラス。"]
+    "description": [
+      "文字列用のシンプルなDictionaryクラス。"
+    ]
   },
   "p5.NumberDict": {
-    "description": ["数値用のシンプルなDictionaryクラス。"],
+    "description": [
+      "数値用のシンプルなDictionaryクラス。"
+    ],
     "add": {
       "description": [
         "指定されたキーで現在保存されている値に指定された数値を追加します。合計は、以前に辞書に保存されていた値を置き換えます。"
@@ -4266,19 +4316,27 @@
       }
     },
     "minValue": {
-      "description": ["辞書に現在保存されている最小の数値を返します。"],
+      "description": [
+        "辞書に現在保存されている最小の数値を返します。"
+      ],
       "returns": "Number:"
     },
     "maxValue": {
-      "description": ["辞書に現在保存されている最大の数値を返します。"],
+      "description": [
+        "辞書に現在保存されている最大の数値を返します。"
+      ],
       "returns": "Number:"
     },
     "minKey": {
-      "description": ["辞書で現在使用されている最小のキーを返します。"],
+      "description": [
+        "辞書で現在使用されている最小のキーを返します。"
+      ],
       "returns": "Number:"
     },
     "maxKey": {
-      "description": ["辞書で現在使用されている最大のキーを返します。"],
+      "description": [
+        "辞書で現在使用されている最大のキーを返します。"
+      ],
       "returns": "Number:"
     }
   },
@@ -4290,11 +4348,15 @@
       "elt": "String: ラップされるDOMノード"
     },
     "src": {
-      "description": ["メディア要素のソースへのパス。"],
+      "description": [
+        "メディア要素のソースへのパス。"
+      ],
       "returns": "String: src"
     },
     "play": {
-      "description": ["HTML5メディア要素を再生します。"]
+      "description": [
+        "HTML5メディア要素を再生します。"
+      ]
     },
     "stop": {
       "description": [
@@ -4302,7 +4364,9 @@
       ]
     },
     "pause": {
-      "description": ["HTML5メディア要素を一時停止します。"]
+      "description": [
+        "HTML5メディア要素を一時停止します。"
+    ]
     },
     "loop": {
       "description": [
@@ -4350,7 +4414,9 @@
       }
     },
     "duration": {
-      "description": ["HTML5メディア要素の再生時間を返します。"],
+      "description": [
+        "HTML5メディア要素の再生時間を返します。"
+      ],
       "returns": "Number: 再生時間"
     },
     "onended": {
@@ -4381,7 +4447,9 @@
       ]
     },
     "hideControls": {
-      "description": ["デフォルトのmediaElementコントロールを非表示にします。"]
+      "description": [
+        "デフォルトのmediaElementコントロールを非表示にします。"
+      ]
     },
     "addCue": {
       "description": [
@@ -4426,7 +4494,9 @@
       ]
     },
     "type": {
-      "description": ["ファイルの種類（画像、テキストなど）"]
+      "description": [
+        "ファイルの種類（画像、テキストなど）"
+      ]
     },
     "subtype": {
       "description": [
@@ -4434,10 +4504,14 @@
       ]
     },
     "name": {
-      "description": ["ファイル名"]
+      "description": [
+        "ファイル名"
+      ]
     },
     "size": {
-      "description": ["ファイルのサイズ"]
+      "description": [
+        "ファイルのサイズ"
+    ]
     },
     "data": {
       "description": [
@@ -4457,20 +4531,25 @@
       "height": "Number"
     },
     "width": {
-      "description": ["画像の幅。"]
+      "description": [
+        "画像の幅。"
+      ]
     },
     "height": {
-      "description": ["画像の高さ。"]
+      "description": [
+        "画像の高さ。"
+      ]
     },
     "pixels": {
       "description": [
-        "ディスプレイウィンドウ内のすべてのピクセルの値を含む配列です。これらの値は数値です。この配列のサイズは、ピクセル密度の適切な係数を含めたディスプレイウィンドウのサイズ×4で、各ピクセルのR、G、B、A値が順番に表示されます。左から右に各行を移動し、各列を下に移動します。Retinaやその他の高密度ディスプレイでは、ピクセルがより多く存在します（pixelDensity^2倍）。「例えば、画像が100×100ピクセルの場合、40000ピクセルがあります。pixelDensity = 2の場合、160000になります。配列内の最初の4つの値（インデックス0〜3）は、（0、0）のピクセルのR、G、B、A値です。次の4つの値（インデックス4〜7）には、（1、0）のピクセルのR、G、B、A値が含まれます。一般的に、（x、y）のピクセルの値を設定するには:",
-        "<pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
+        "ディスプレイウィンドウ内のすべてのピクセルの値を含む配列です。これらの値は数値です。この配列のサイズは、ピクセル密度の適切な係数を含めたディスプレイウィンドウのサイズ×4で、各ピクセルのR、G、B、A値が順番に表示されます。左から右に各行を移動し、各列を下に移動します。Retinaやその他の高密度ディスプレイでは、ピクセルがより多く存在します（pixelDensity^2倍）。「例えば、画像が100×100ピクセルの場合、40000ピクセルがあります。pixelDensity = 2の場合、160000になります。配列内の最初の4つの値（インデックス0〜3）は、（0、0）のピクセルのR、G、B、A値です。次の4つの値（インデックス4〜7）には、（1、0）のピクセルのR、G、B、A値が含まれます。一般的に、（x、y）のピクセルの値を設定するには:<pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
         "この配列にアクセスする前に、<a href=\"#/p5.Image/loadPixels\">loadPixels()</a>関数でデータを読み込む必要があります。配列データが変更された後、変更内容を反映させるには、<a href=\"#/p5.Image/updatePixels\">updatePixels()</a>関数を実行する必要があります。"
       ]
     },
     "loadPixels": {
-      "description": ["この画像のピクセルデータを[pixels]属性にロードします。"]
+      "description": [
+        "この画像のピクセルデータを[pixels]属性にロードします。"
+      ]
     },
     "updatePixels": {
       "description": [
@@ -4586,7 +4665,9 @@
       }
     },
     "reset": {
-      "description": ["アニメーションGIFを最初の状態から再生します。"]
+      "description": [
+        "アニメーションGIFを最初の状態から再生します。"
+      ]
     },
     "getCurrentFrame": {
       "description": [
@@ -4603,7 +4684,9 @@
       }
     },
     "numFrames": {
-      "description": ["アニメーションGIFのフレーム数を返します。"],
+      "description": [
+        "アニメーションGIFのフレーム数を返します。"
+      ],
       "returns": "Number: "
     },
     "play": {
@@ -4612,7 +4695,9 @@
       ]
     },
     "pause": {
-      "description": ["アニメーションGIFを一時停止します。"]
+      "description": [
+        "アニメーションGIFを一時停止します。"
+      ]
     },
     "delay": {
       "description": [
@@ -4630,7 +4715,9 @@
       "extension": "String (オプション)"
     },
     "write": {
-      "description": ["PrintWriter ストリームにデータを書き込みます"],
+      "description": [
+        "PrintWriter ストリームにデータを書き込みます"
+      ],
       "params": {
         "data": "Array: PrintWriter によって書き込まれるすべてのデータ"
       }
@@ -4649,7 +4736,9 @@
       ]
     },
     "close": {
-      "description": ["PrintWriter を閉じます"]
+      "description": [
+        "PrintWriter を閉じます"
+      ]
     }
   },
   "p5.Table": {
@@ -4680,7 +4769,9 @@
       }
     },
     "removeRow": {
-      "description": ["テーブルオブジェクトから行を削除します。"],
+      "description": [
+        "テーブルオブジェクトから行を削除します。"
+      ],
       "params": {
         "id": "Integer: 削除する行のID番号"
       }
@@ -4763,11 +4854,15 @@
       }
     },
     "getColumnCount": {
-      "description": ["Tableの列数を返します。"],
+      "description": [
+        "Tableの列数を返します。"
+      ],
       "returns": "Integer: このTableに含まれる列数"
     },
     "getRowCount": {
-      "description": ["Tableの行数を返します。"],
+      "description": [
+        "Tableの行数を返します。"
+      ],
       "returns": "Integer: このTableに含まれる行数"
     },
     "removeTokens": {
@@ -4947,11 +5042,15 @@
       "returns": "p5.XML:要素の親"
     },
     "getName": {
-      "description": ["要素の完全な名前を取得し、文字列として返します。"],
+      "description": [
+        "要素の完全な名前を取得し、文字列として返します。"
+      ],
       "returns": "String:ノードの名前"
     },
     "setName": {
-      "description": ["要素の名前を設定します。文字列として指定します。"],
+      "description": [
+        "要素の名前を設定します。文字列として指定します。"
+      ],
       "params": {
         "the": "String:ノードの新しい名前"
       }
@@ -4995,13 +5094,17 @@
       }
     },
     "removeChild": {
-      "description": ["名前またはインデックスで指定された要素を削除します。"],
+      "description": [
+        "名前またはインデックスで指定された要素を削除します。"
+      ],
       "params": {
         "name": "String|Integer:要素名またはインデックス"
       }
     },
     "getAttributeCount": {
-      "description": ["指定された要素の属性の数を数え、数値として返します。"],
+      "description": [
+        "指定された要素の属性の数を数え、数値として返します。"
+      ],
       "returns": "Integer:"
     },
     "listAttributes": {
@@ -5058,7 +5161,9 @@
       }
     },
     "setContent": {
-      "description": ["要素の内容を設定します。"],
+      "description": [
+        "要素の内容を設定します。"
+      ],
       "params": {
         "text": "String: 新しい内容"
       }
@@ -5082,13 +5187,19 @@
       "z": "Number:  (オプション)ベクトルの z 成分"
     },
     "x": {
-      "description": ["ベクトルの x 成分"]
+      "description": [
+        "ベクトルの x 成分"
+      ]
     },
     "y": {
-      "description": ["ベクトルの y 成分"]
+      "description": [
+        "ベクトルの y 成分"
+      ]
     },
     "z": {
-      "description": ["ベクトルの z 成分"]
+      "description": [
+        "ベクトルの z 成分"
+      ]
     },
     "toString": {
       "description": [
@@ -5244,7 +5355,9 @@
       }
     },
     "normalize": {
-      "description": ["ベクトルの長さを1に正規化します。"],
+      "description": [
+        "ベクトルの長さを1に正規化します。"
+      ],
       "returns": "p5.Vector: 正規化された<a href=\"#/p5.Vector\">p5.Vector</a>",
       "params": {
         "v": "p5.Vector: 正規化するベクトル",
@@ -5310,7 +5423,9 @@
       }
     },
     "lerp": {
-      "description": ["線形補間によってベクトルを別のベクトルに移動します。"],
+      "description": [
+        "線形補間によってベクトルを別のベクトルに移動します。"
+      ],
       "params": {
         "x": "Number: x成分。",
         "y": "Number: y成分。",
@@ -5356,7 +5471,9 @@
       }
     },
     "fromAngle": {
-      "description": ["指定した角度から2Dベクトルを作成します。"],
+      "description": [
+        "指定した角度から2Dベクトルを作成します。"
+      ],
       "returns": "p5.Vector: 新しい<a href=\"#/p5.Vector\">p5.Vector</a>オブジェクト",
       "params": {
         "angle": "Number: 角度（単位は弧度法、<a href=\"#/p5/angleMode\">angleMode</a>に影響されません）",
@@ -5364,7 +5481,9 @@
       }
     },
     "fromAngles": {
-      "description": ["2つのISO球面角から新しい3Dベクトルを作成します。"],
+      "description": [
+        "2つのISO球面角から新しい3Dベクトルを作成します。"
+      ],
       "returns": "p5.Vector: 新しい<a href=\"#/p5.Vector\">p5.Vector</a>オブジェクト",
       "params": {
         "theta": "Number: 極角（単位は弧度法、上を0度とします）",
@@ -5379,17 +5498,23 @@
       "returns": "p5.Vector: 新しい<a href=\"#/p5.Vector\">p5.Vector</a>オブジェクト"
     },
     "random3D": {
-      "description": ["新しいランダムな3次元単位ベクトルを作成します。"],
+      "description": [
+        "新しいランダムな3次元単位ベクトルを作成します。"
+      ],
       "returns": "p5.Vector: 新しい<a href=\"#/p5.Vector\">p5.Vector</a>オブジェクト"
     }
   },
   "p5.Font": {
-    "description": ["フォントのベースクラス"],
+    "description": [
+      "フォントのベースクラス"
+    ],
     "params": {
       "pInst": "P5: (オプション) p5インスタンスへのポインター"
     },
     "font": {
-      "description": ["内部のオープンタイプフォント実装"]
+      "description": [
+        "内部のオープンタイプフォント実装"
+      ]
     },
     "textBounds": {
       "description": [
@@ -5405,7 +5530,9 @@
       }
     },
     "textToPoints": {
-      "description": ["指定されたテキストのパスに従って点の配列を計算します。"],
+      "description": [
+        "指定されたテキストのパスに従って点の配列を計算します。"
+      ],
       "returns": "Array:  x、y、alpha（パスの角度）を持つ各ポイントの配列",
       "params": {
         "txt": "String: テキストの行",
@@ -5427,31 +5554,49 @@
       "rendererGL": "WebGLレンダラーのインスタンスであるRendererGL"
     },
     "eyeX": {
-      "description": ["x軸上のカメラ位置値"]
+      "description": [
+        "x軸上のカメラ位置値"
+      ]
     },
     "eyeY": {
-      "description": ["y軸上のカメラ位置値"]
+      "description": [
+        "y軸上のカメラ位置値"
+      ]
     },
     "eyeZ": {
-      "description": ["z軸上のカメラ位置値"]
+      "description": [
+        "z軸上のカメラ位置値"
+      ]
     },
     "centerX": {
-      "description": ["スケッチの中心を表すx座標"]
+      "description": [
+        "スケッチの中心を表すx座標"
+      ]
     },
     "centerY": {
-      "description": ["スケッチの中心を表すy座標"]
+      "description": [
+        "スケッチの中心を表すy座標"
+      ]
     },
     "centerZ": {
-      "description": ["スケッチの中心を表すz座標"]
+      "description": [
+        "スケッチの中心を表すz座標"
+      ]
     },
     "upX": {
-      "description": ["カメラから見た上方向のx成分"]
+      "description": [
+        "カメラから見た上方向のx成分"
+      ]
     },
     "upY": {
-      "description": ["カメラから見た上方向のy成分"]
+      "description": [
+        "カメラから見た上方向のy成分"
+      ]
     },
     "upZ": {
-      "description": ["カメラから見た上方向のz成分"]
+      "description": [
+        "カメラから見た上方向のz成分"
+      ]
     },
     "perspective": {
       "description": [
@@ -5469,13 +5614,17 @@
       ]
     },
     "pan": {
-      "description": ["パンは、カメラビューを左右に回転させます。"],
+      "description": [
+        "パンは、カメラビューを左右に回転させます。"
+      ],
       "params": {
         "angle": "Number: 現在の<a href=\"#/p5/angleMode\">angleMode</a>モード単位でカメラを回転する量。0より大きい値は反時計回りに回転（左）します。"
       }
     },
     "tilt": {
-      "description": ["チルトは、カメラビューを上下に回転させます。"],
+      "description": [
+        "チルトは、カメラビューを上下に回転させます。"
+      ],
       "params": {
         "angle": "Number: 現在の<a href=\"#/p5/angleMode\">angleMode</a>モード単位でカメラを回転する量。0より大きい値は反時計回りに回転（左）します。"
       }
@@ -5517,7 +5666,9 @@
     }
   },
   "p5.Geometry": {
-    "description": ["p5ジオメトリクラス"],
+    "description": [
+      "p5ジオメトリクラス"
+    ],
     "params": {
       "detailX": "Integer: (オプション) x軸に沿った頂点数。",
       "detailY": "Integer: (オプション) y軸に沿った頂点数。",
@@ -5534,7 +5685,9 @@
       ]
     },
     "averageNormals": {
-      "description": ["頂点の法線を平均化します。曲面で使用されます。"]
+      "description": [
+        "頂点の法線を平均化します。曲面で使用されます。"
+      ]
     },
     "averagePoleNormals": {
       "description": [
@@ -5548,7 +5701,9 @@
     }
   },
   "p5.Shader": {
-    "description": ["WEBGLモード用のShaderクラスです。"],
+    "description": [
+        "WEBGLモード用のShaderクラスです。"
+      ],
     "params": {
       "renderer": "p5.RendererGL: この新しいp5.ShaderにGLコンテキストを提供するp5.RendererGLのインスタンス",
       "vertSrc": "String: 頂点シェーダのソースコード（文字列形式）",
@@ -5586,7 +5741,9 @@
       "returns": "Boolean:"
     },
     "play": {
-      "description": ["p5.SoundFileを再生します。"],
+      "description": [
+        "p5.SoundFileを再生します。"
+      ],
       "params": {
         "startTime": "Number: (オプション) 再生をスケジュールする時刻（現在時刻からの秒数）",
         "rate": "Number: (オプション) 再生速度",
@@ -5651,7 +5808,9 @@
       "returns": "Boolean:"
     },
     "stop": {
-      "description": ["p5.SoundFileの再生を停止します。"],
+      "description": [
+        "p5.SoundFileの再生を停止します。"
+      ],
       "params": {
         "startTime": "Number: (オプション) 何秒後にイベントを予約するか指定します。"
       }
@@ -5666,7 +5825,9 @@
       }
     },
     "getPan": {
-      "description": ["現在のステレオパン位置（-1.0から1.0）を返します。"],
+      "description": [
+        "現在のステレオパン位置（-1.0から1.0）を返します。"
+      ],
       "returns": "Number: Oscillatorの現在のステレオパン設定を、-1.0（左）から1.0（右）までの数値で返します。デフォルトは0.0（中央）です。"
     },
     "rate": {
@@ -5689,7 +5850,9 @@
       }
     },
     "duration": {
-      "description": ["サウンドファイルの再生時間を秒単位で返します。"],
+      "description": [
+        "サウンドファイルの再生時間を秒単位で返します。"
+      ],
       "returns": "Number: サウンドファイルの再生時間（秒単位）を返します。"
     },
     "currentTime": {
@@ -5714,7 +5877,9 @@
       "returns": "Number: [channels]"
     },
     "sampleRate": {
-      "description": ["サウンドファイルのサンプルレートを返します。"],
+      "description": [
+        "サウンドファイルのサンプルレートを返します。"
+      ],
       "returns": "Number: [sampleRate]"
     },
     "frames": {
@@ -5755,7 +5920,9 @@
       }
     },
     "disconnect": {
-      "description": ["このp5soundオブジェクトの出力を切断します。"]
+      "description": [
+        "このp5soundオブジェクトの出力を切断します。"
+      ]
     },
     "setPath": {
       "description": [
@@ -5810,10 +5977,7 @@
     },
     "getBlob": {
       "description": [
-        "サーバーに送信するために、p5.SoundFileをBlobとして取得します。",
-        "Blobは、ファイルのようなデータオブジェクトで、<a href=\"/reference/#/p5/httpDo\">http</a>リクエストでサーバーにアップロードできます。",
-        "このメソッドを使用して、次のような特定のオプションを指定してPOSTリクエストを送信します:",
-        "<code>multipart/form-data</code>でリクエストをエンコードし、<code>FormData</code>を使用してblobをフォーム値の1つとして添付します。"
+        "サーバーに送信するために、p5.SoundFileをBlobとして取得します。Blobは、ファイルのようなデータオブジェクトで、<a href=\"/reference/#/p5/httpDo\">http</a>リクエストでサーバーにアップロードできます。このメソッドを使用して、次のような特定のオプションを指定してPOSTリクエストを送信します:<code>multipart/form-data</code>でリクエストをエンコードし、<code>FormData</code>を使用してblobをフォーム値の1つとして添付します。"
       ],
       "returns": "Blob: ファイルのようなデータオブジェクト"
     }
@@ -5990,7 +6154,9 @@
       }
     },
     "getAmp": {
-      "description": ["出力ゲインの値を返します。"],
+      "description": [
+        "出力ゲインの値を返します。"
+      ],
       "returns": "Number:0.0から1.0までの振幅値。"
     },
     "freq": {
@@ -6005,7 +6171,9 @@
       }
     },
     "getFreq": {
-      "description": ["オシレーターの周波数の値を返します。"],
+      "description": [
+        "オシレーターの周波数の値を返します。"
+      ],
       "returns": "Number: Hzでのオシレーターの周波数。"
     },
     "setType": {
@@ -6023,16 +6191,22 @@
       "returns": "String: オシレーターのタイプ。例: 'sine'、 'triangle'、 'sawtooth'、 'square'。"
     },
     "connect": {
-      "description": ["p5.sound / Web Audioオブジェクトに接続します。"],
+      "description": [
+        "p5.sound / Web Audioオブジェクトに接続します。"
+      ],
       "params": {
         "unit": "Object: p5.soundまたはWeb Audioオブジェクト"
       }
     },
     "disconnect": {
-      "description": ["すべての出力を切断します。"]
+      "description": [
+        "すべての出力を切断します。"
+      ]
     },
     "pan": {
-      "description": ["左（-1）から右（1）までの間でパンを設定します。"],
+      "description": [
+        "左（-1）から右（1）までの間でパンを設定します。"
+      ],
       "params": {
         "panning": "Number: -1から1までの数値",
         "timeFromNow": "Number: 現在からx秒後にこのイベントが発生するようスケジュールします"
@@ -6122,13 +6296,19 @@
       "エンベロープ全体を再生するには<code><a href=\"#/p5.Envelope/play\">play</a></code>メソッドを使用し、pingableトリガー用に<code><a href=\"#/p5.Envelope/ramp\">ramp</a></code>メソッドを使用します。また、<code><a href=\"#/p5.Envelope/triggerAttack\">triggerAttack</a></code>/<code><a href=\"#/p5.Envelope/triggerRelease\">triggerRelease</a></code>を使用してnoteOn/noteOffをトリガーできます。"
     ],
     "attackTime": {
-      "description": ["エンベロープがattackLevelに到達するまでの時間です。"]
+      "description": [
+        "エンベロープがattackLevelに到達するまでの時間です。"
+      ]
     },
     "attackLevel": {
-      "description": ["attackが完了した後のレベルです。"]
+      "description": [
+        "attackが完了した後のレベルです。"
+      ]
     },
     "decayTime": {
-      "description": ["エンベロープがdecayLevelに到達するまでの時間です。"]
+      "description": [
+        "エンベロープがdecayLevelに到達するまでの時間です。"
+      ]
     },
     "decayLevel": {
       "description": [
@@ -6136,13 +6316,19 @@
       ]
     },
     "releaseTime": {
-      "description": ["リリース部分の継続時間です。"]
+      "description": [
+        "リリース部分の継続時間です。"
+      ]
     },
     "releaseLevel": {
-      "description": ["リリースの終わりにあるレベルです。"]
+      "description": [
+        "リリースの終わりにあるレベルです。"
+      ]
     },
     "set": {
-      "description": ["一連の時間/値ペアでエンベロープをリセットします。"],
+      "description": [
+        "一連の時間/値ペアでエンベロープをリセットします。"
+      ],
       "params": {
         "attackTime": "Number: 攻撃レベルに到達するまでの時間（秒単位）",
         "attackLevel": "Number: 0.0から1.0の範囲内の通常の振幅",
@@ -6218,8 +6404,7 @@
     },
     "ramp": {
       "description": [
-        "最初の2つの値を使用して指数関数的に値を増加または減少させる。<code><a href=\"#/p5.Envelope/setADSR\">setADSR(attackTime, decayTime)</a></code> から時間定数を取得する。現在の値よりも高い場合はattackTimeを、低い場合はdecayTimeを使用する。",
-        "簡単な指数関数的なランプに対して<a href=\"https://en.wikipedia.org/wiki/RC_time_constant\">RC時間定数</a>が使用される。"
+        "最初の2つの値を使用して指数関数的に値を増加または減少させる。<code><a href=\"#/p5.Envelope/setADSR\">setADSR(attackTime, decayTime)</a></code> から時間定数を取得する。現在の値よりも高い場合はattackTimeを、低い場合はdecayTimeを使用する。簡単な指数関数的なランプに対して<a href=\"https://en.wikipedia.org/wiki/RC_time_constant\">RC時間定数</a>が使用される。"
       ],
       "params": {
         "unit": "Object: p5.soundオブジェクトまたはWeb Audio Paramオブジェクト",
@@ -6260,7 +6445,9 @@
     }
   },
   "p5.Noise": {
-    "description": ["Noiseはランダムな値を生成するタイプの発振器です。"],
+    "description": [
+      "Noiseはランダムな値を生成するタイプの発振器です。"
+      ],
     "params": {
       "type": "String: ノイズのタイプを指定します。'white' (デフォルト値), 'brown' もしくは 'pink' が指定できます。"
     },
@@ -6282,7 +6469,9 @@
       "w": "Number: (Optional) パルス間の幅 (0から1.0まで、デフォルトは0)"
     },
     "width": {
-      "description": ["Pulseオブジェクトの幅を設定します。"],
+      "description": [
+        "Pulseオブジェクトの幅を設定します。"
+      ],
       "params": {
         "width": "Number: (Optional) パルス間の幅 (0から1.0まで、デフォルトは0)"
       }
@@ -6321,60 +6510,60 @@
       "params": {
         "successCallback": "Function: (オプション) 成功時に呼び出す関数の名前。",
         "errorCallback": "Function: (オプション) エラーが発生した場合に呼び出す関数の名前。たとえば、一部のブラウザは getUserMedia をサポートしていないため、この関数が呼び出される場合があります。"
-      },
-      "stop": {
-        "description": [
-          "AudioIn をオフにします。AudioIn が停止している場合は、getLevel() を使用できません。再開する場合は、ユーザーにアクセス許可を求めることがあります。"
-        ]
-      },
-      "connect": {
-        "description": [
-          "オーディオユニットに接続します。パラメータが提供されない場合は、メイン出力（スピーカー）に接続します。<br/>"
-        ],
-        "params": {
-          "unit": "Object: (オプション) FFT など、オーディオ入力を受け入れるオブジェクト"
-        }
-      },
-      "disconnect": {
-        "description": [
-          "AudioIn をすべてのオーディオユニットから切断します。たとえば、connect() が呼び出されていた場合、disconnect() を呼び出すことでスピーカーに信号を送信するのを停止します。<br/>"
-        ]
-      },
-      "getLevel": {
-        "description": [
-          "AudioIn の Amplitude（音量レベル）を読み取ります。AudioIn クラスには、マイクの音量レベルを簡単に取得するための Amplitude クラスのインスタンスが含まれています。オプションのスムージング値（0.0 < 1.0）を受け取ります。<em>注意: AudioIn は .start() 後に .getLevel() を使用する必要があります。</em><br/>"
-        ],
-        "returns": "Number: 音量レベル（0.0 から 1.0 の間）",
-        "params": {
-          "smoothing": "Number: (オプション) スムージングはデフォルトで 0.0 です。以前の値に基づいて値を平滑化します。"
-        }
-      },
-      "amp": {
-        "description": [
-          "マイク入力の振幅（音量）を 0 から 1.0 の範囲で設定します。 <br/>"
-        ],
-        "params": {
-          "vol": "Number:0 から 1.0 の間の値",
-          "time": "Number: (オプション) ランプ時間(オプション)"
-        }
-      },
-      "getSources": {
-        "description": [
-          "利用可能な入力ソースのリストを返します。これは <a href=\"https://developer.mozilla.org/ en-US/docs/Web/API/MediaDevices/enumerateDevices\" target=\"_blank\">MediaDevices.enumerateDevices() - Web APIs | MDN</a> のラッパーで、Promise を返します。"
-        ],
-        "returns": "Promise: コールバックの代わりに使用できる Promise が返されます。enumerateDevices() メソッドと同様です",
-        "params": {
-          "successCallback": "Function: (オプション) デバイスリスト配列を唯一の引数として受け取るコールバック関数。",
-          "errorCallback": "Function: (オプション) エラーメッセージを受け取るオプションのコールバック関数。"
-        }
-      },
-      "setSource": {
-        "description": [
-          "入力ソースを設定します。getSources() が返す配列内の位置を表す数値を受け入れます。これは、<a href=\"https://developer.mozilla.org/ en-US/docs/Web/API/MediaDevices/enumerateDevices\" target=\"_blank\">navigator.mediaDevices.enumerateDevices()</a> をサポートしているブラウザでのみ利用可能です。"
-        ],
-        "params": {
-          "num": "Number: 配列内の入力ソースの位置"
-        }
+      }
+    },
+    "stop": {
+      "description": [
+        "AudioIn をオフにします。AudioIn が停止している場合は、getLevel() を使用できません。再開する場合は、ユーザーにアクセス許可を求めることがあります。"
+      ]
+    },
+    "connect": {
+      "description": [
+        "オーディオユニットに接続します。パラメータが提供されない場合は、メイン出力（スピーカー）に接続します。<br/>"
+      ],
+      "params": {
+        "unit": "Object: (オプション) FFT など、オーディオ入力を受け入れるオブジェクト"
+      }
+    },
+    "disconnect": {
+      "description": [
+        "AudioIn をすべてのオーディオユニットから切断します。たとえば、connect() が呼び出されていた場合、disconnect() を呼び出すことでスピーカーに信号を送信するのを停止します。<br/>"
+      ]
+    },
+    "getLevel": {
+      "description": [
+        "AudioIn の Amplitude（音量レベル）を読み取ります。AudioIn クラスには、マイクの音量レベルを簡単に取得するための Amplitude クラスのインスタンスが含まれています。オプションのスムージング値（0.0 < 1.0）を受け取ります。<em>注意: AudioIn は .start() 後に .getLevel() を使用する必要があります。</em><br/>"
+      ],
+      "returns": "Number: 音量レベル（0.0 から 1.0 の間）",
+      "params": {
+        "smoothing": "Number: (オプション) スムージングはデフォルトで 0.0 です。以前の値に基づいて値を平滑化します。"
+      }
+    },
+    "amp": {
+      "description": [
+        "マイク入力の振幅（音量）を 0 から 1.0 の範囲で設定します。 <br/>"
+      ],
+      "params": {
+        "vol": "Number:0 から 1.0 の間の値",
+        "time": "Number: (オプション) ランプ時間(オプション)"
+      }
+    },
+    "getSources": {
+      "description": [
+        "利用可能な入力ソースのリストを返します。これは <a href=\"https://developer.mozilla.org/ en-US/docs/Web/API/MediaDevices/enumerateDevices\" target=\"_blank\">MediaDevices.enumerateDevices() - Web APIs | MDN</a> のラッパーで、Promise を返します。"
+      ],
+      "returns": "Promise: コールバックの代わりに使用できる Promise が返されます。enumerateDevices() メソッドと同様です",
+      "params": {
+        "successCallback": "Function: (オプション) デバイスリスト配列を唯一の引数として受け取るコールバック関数。",
+        "errorCallback": "Function: (オプション) エラーメッセージを受け取るオプションのコールバック関数。"
+      }
+    },
+    "setSource": {
+      "description": [
+        "入力ソースを設定します。getSources() が返す配列内の位置を表す数値を受け入れます。これは、<a href=\"https://developer.mozilla.org/ en-US/docs/Web/API/MediaDevices/enumerateDevices\" target=\"_blank\">navigator.mediaDevices.enumerateDevices()</a> をサポートしているブラウザでのみ利用可能です。"
+      ],
+      "params": {
+        "num": "Number: 配列内の入力ソースの位置"
       }
     }
   },
@@ -6391,7 +6580,9 @@
       "wet": "AudioNode: (オプション) このクラスを拡張するエフェクトは、ドライ信号とウェット信号を適切にミックスするために、このゲインノードにウェット信号を接続する必要があります。"
     },
     "amp": {
-      "description": ["フィルターの出力音量を設定します。"],
+      "description": [
+        "フィルターの出力音量を設定します。"
+      ],
       "params": {
         "vol": "Number: (オプション) 0から1.0の振幅",
         "rampTime": "Number: (オプション) rampTimeまで続くフェードを作成します",
@@ -6407,7 +6598,9 @@
       }
     },
     "drywet": {
-      "description": ["ドライ/ウェット値を調整します。"],
+      "description": [
+        "ドライ/ウェット値を調整します。"
+      ],
       "params": {
         "fade": "Number: (オプション) 指定されたドライ/ウェット値（0〜1.0）"
       }
@@ -6421,7 +6614,9 @@
       }
     },
     "disconnect": {
-      "description": ["すべての出力を切断します。"]
+      "description": [
+        "すべての出力を切断します。"
+      ]
     }
   },
   "p5.Filter": {
@@ -6449,7 +6644,9 @@
       }
     },
     "set": {
-      "description": ["フィルタの周波数と共鳴を設定します。"],
+      "description": [
+        "フィルタの周波数と共鳴を設定します。"
+      ],
       "params": {
         "freq": "Number: (オプション) 10から22050Hzまでの周波数",
         "res": "Number: (オプション) 0.001から1000までの共鳴率（Q）",
@@ -6530,7 +6727,9 @@
       ]
     },
     "process": {
-      "description": ["入力を EQ に接続して処理します。"],
+      "description": [
+        "入力を EQ に接続して処理します。"
+      ],
       "params": {
         "src": "Object: オーディオソース"
       }
@@ -6548,13 +6747,17 @@
       ]
     },
     "process": {
-      "description": ["オーディオソースを接続します。"],
+      "description": [
+        "オーディオソースを接続します。"
+      ],
       "params": {
         "src": "Object: 入力ソース"
       }
     },
     "set": {
-      "description": ["パナーのX、Y、Z座標を設定します。"],
+      "description": [
+        "パナーのX、Y、Z座標を設定します。"
+      ],
       "returns": "Array: 更新されたx、y、z値を配列として返します。",
       "params": {
         "xVal": "Number",
@@ -6564,19 +6767,27 @@
       }
     },
     "positionX": {
-      "description": ["座標のゲッターとセッターメソッドです。"],
+      "description": [
+        "座標のゲッターとセッターメソッドです。"
+      ],
       "returns": "Number: 更新された座標値を返します。"
     },
     "positionY": {
-      "description": ["座標のゲッターとセッターメソッドです。"],
+      "description": [
+        "座標のゲッターとセッターメソッドです。"
+      ],
       "returns": "Number: 更新された座標値を返します。"
     },
     "positionZ": {
-      "description": ["座標のゲッターとセッターメソッドです。"],
+      "description": [
+        "座標のゲッターとセッターメソッドです。"
+      ],
       "returns": "Number: 更新された座標値を返します。"
     },
     "orient": {
-      "description": ["パナーのX、Y、Z座標を設定します。"],
+      "description": [
+        "パナーのX、Y、Z座標を設定します。"
+      ],
       "returns": "Array: 更新されたx、y、z値を配列として返します。",
       "params": {
         "xVal": "Number",
@@ -6586,26 +6797,36 @@
       }
     },
     "orientX": {
-      "description": ["方向座標のゲッターとセッターメソッドです。"],
+      "description": [
+        "方向座標のゲッターとセッターメソッドです。"
+      ],
       "returns": "Number: 更新された座標値を返します。"
     },
     "orientY": {
-      "description": ["方向座標のゲッターとセッターメソッドです。"],
+      "description": [
+        "方向座標のゲッターとセッターメソッドです。"
+      ],
       "returns": "Number: 更新された座標値を返します。"
     },
     "orientZ": {
-      "description": ["方向座標のゲッターとセッターメソッドです。"],
+      "description": [
+        "方向座標のゲッターとセッターメソッドです。"
+      ],
       "returns": "Number: 更新された座標値を返します。"
     },
     "setFalloff": {
-      "description": ["減衰率と最大距離を設定します。"],
+      "description": [
+        "減衰率と最大距離を設定します。"
+      ],
       "params": {
         "maxDistance": "Number (オプション)",
         "rolloffFactor": "Number (オプション)"
       }
     },
     "maxDist": {
-      "description": ["音源とリスナー間の最大距離"],
+      "description": [
+        "音源とリスナー間の最大距離"
+      ],
       "returns": "Number: 更新された値",
       "params": {
         "maxDistance": "Number"
@@ -6682,7 +6903,9 @@
       }
     },
     "amp": {
-      "description": ["遅延効果の出力レベルを設定します。"],
+      "description": [
+        "遅延効果の出力レベルを設定します。"
+      ],
       "params": {
         "volume": "Number: 0から1.0の振幅",
         "rampTime": "Number: (オプション)rampTimeが持続するフェードを作成します",
@@ -6698,7 +6921,9 @@
       }
     },
     "disconnect": {
-      "description": ["すべての出力を切断します。"]
+      "description": [
+        "すべての出力を切断します。"
+      ]
     }
   },
   "p5.Reverb": {
@@ -6728,7 +6953,9 @@
       }
     },
     "amp": {
-      "description": ["リバーブ効果の出力レベルを設定します。"],
+      "description": [
+        "リバーブ効果の出力レベルを設定します。"
+      ],
       "params": {
         "volume": "Number: 0から1.0の振幅",
         "rampTime": "Number: (オプション)rampTime秒続くフェードを作成します。",
@@ -6744,7 +6971,9 @@
       }
     },
     "disconnect": {
-      "description": ["すべての出力を切断します。"]
+      "description": [
+        "すべての出力を切断します。"
+      ]
     }
   },
   "p5.Convolver": {
@@ -6769,7 +6998,9 @@
       ]
     },
     "process": {
-      "description": ["ソースをコンボリューションに接続します。"],
+      "description": [
+        "ソースをコンボリューションに接続します。"
+      ],
       "params": {
         "src": "Object: 音声出力を持つp5.sound / Web Audioオブジェクト。"
       }
@@ -6830,14 +7061,18 @@
       "tatums": "Number: (オプション) 1拍子の分割数。例えば、四分音符の場合は1/4または0.25を使用します（デフォルトは1/16、16分音符）"
     },
     "setBPM": {
-      "description": ["このパートのテンポを、BPM（分速）で設定します。"],
+      "description": [
+        "このパートのテンポを、BPM（分速）で設定します。"
+      ],
       "params": {
         "BPM": "Number: Beats Per Minute",
         "rampTime": "Number: (オプション) 現在からの秒数"
       }
     },
     "getBPM": {
-      "description": ["このパートのテンポ（BPM）を返します。"],
+      "description": [
+        "このパートのテンポ（BPM）を返します。"
+      ],
       "returns": "Number:"
     },
     "start": {
@@ -6857,7 +7092,9 @@
       }
     },
     "noLoop": {
-      "description": ["このパートのループ再生を停止します。"]
+      "description": [
+        "このパートのループ再生を停止します。"
+      ]
     },
     "stop": {
       "description": [
@@ -6876,13 +7113,17 @@
       }
     },
     "addPhrase": {
-      "description": ["p5.Phraseをこのパートに追加します。"],
+      "description": [
+        "p5.Phraseをこのパートに追加します。"
+      ],
       "params": {
         "phrase": "p5.Phrase: p5.Phraseへの参照"
       }
     },
     "removePhrase": {
-      "description": ["名前が与えられたフレーズをこのパートから削除します。"],
+      "description": [
+        "名前が与えられたフレーズをこのパートから削除します。"
+      ],
       "params": {
         "phraseName": "String"
       }
@@ -6921,16 +7162,24 @@
       "parts": "p5.Part: (オプション) 一つまたは複数のパート。順番に再生されます。"
     },
     "start": {
-      "description": ["スコアの再生を開始します。"]
+      "description": [
+        "スコアの再生を開始します。"
+      ]
     },
     "stop": {
-      "description": ["スコアの再生を停止します。"]
+      "description": [
+        "スコアの再生を停止します。"
+      ]
     },
     "pause": {
-      "description": ["スコアの再生を一時停止します。"]
+      "description": [
+        "スコアの再生を一時停止します。"
+      ]
     },
     "loop": {
-      "description": ["スコアの再生をループします。"]
+      "description": [
+        "スコアの再生をループします。"
+      ]
     },
     "noLoop": {
       "description": [
@@ -6938,7 +7187,9 @@
       ]
     },
     "setBPM": {
-      "description": ["スコア内の全てのパートのテンポを設定します。"],
+      "description": [
+        "スコア内の全てのパートのテンポを設定します。"
+      ],
       "params": {
         "BPM": "Number: 一分間あたりのビート数",
         "rampTime": "Number: 現在からの秒数"
@@ -6946,7 +7197,9 @@
     }
   },
   "p5.SoundLoop": {
-    "description": ["SoundLoop"],
+    "description": [
+      "SoundLoop"
+    ],
     "params": {
       "callback": "Function: ループの各反復で呼び出されるコールバック関数",
       "interval": "Number|String: (オプション) ループの各反復の時間 (数値の場合) または拍子 (文字列の場合は、<a href = \"https://github.com/Tonejs/Tone.js/wiki/Time\">Tone.Time</a> の規則に従う)。デフォルトは1秒。"
@@ -6957,13 +7210,19 @@
       ]
     },
     "timeSignature": {
-      "description": ["小節の4分音符の数（デフォルトは4）"]
+      "description": [
+        "小節の4分音符の数（デフォルトは4）"
+      ]
     },
     "interval": {
-      "description": ["ループの間隔の長さ"]
+      "description": [
+        "ループの間隔の長さ"
+      ]
     },
     "iterations": {
-      "description": ["コールバックがこれまでに呼び出された回数"]
+      "description": [
+        "コールバックがこれまでに呼び出された回数"
+      ]
     },
     "musicalTimeMode": {
       "description": [
@@ -6976,19 +7235,25 @@
       ]
     },
     "start": {
-      "description": ["ループを開始します"],
+      "description": [
+        "ループを開始します"
+      ],
       "params": {
         "timeFromNow": "Number: (オプション) 開始時間をスケジュールします"
       }
     },
     "stop": {
-      "description": ["ループを停止します"],
+      "description": [
+        "ループを停止します"
+      ],
       "params": {
         "timeFromNow": "Number: (オプション) 停止時間をスケジュールします"
       }
     },
     "pause": {
-      "description": ["ループを一時停止します"],
+      "description": [
+        "ループを一時停止します"
+      ],
       "params": {
         "timeFromNow": "Number: (オプション) 一時停止時間をスケジュールします"
       }
@@ -7027,7 +7292,9 @@
       }
     },
     "set": {
-      "description": ["コンプレッサーのパラメーターを設定します。"],
+      "description": [
+        "コンプレッサーのパラメーターを設定します。"
+      ],
       "params": {
         "attack": "Number: ゲインを10dB減少させる時間（秒単位）、デフォルトは.003、範囲は0-1",
         "knee": "Number: しきい値よりも上の範囲を表すデシベル値で、カーブが「ratio」部分に滑らかに移行する範囲を表します。デフォルトは30、範囲は0-40",
@@ -7082,7 +7349,9 @@
       }
     },
     "reduction": {
-      "description": ["現在のreduction値を返します。"],
+      "description": [
+        "現在のreduction値を返します。"
+      ],
       "returns": "Number: シグナルに適用される減衰量の量の値。"
     }
   },
@@ -7178,18 +7447,24 @@
       }
     },
     "set": {
-      "description": ["waveshaper歪みの量とoversampleを設定します。"],
+      "description": [
+        "waveshaper歪みの量とoversampleを設定します。"
+      ],
       "params": {
         "amount": "Number: (オプション) 歪みの量。通常、値は0-1の範囲内です。",
         "oversample": "String: (オプション) 'none'、'2x'、または'4x'。"
       }
     },
     "getAmount": {
-      "description": ["歪みの量を返します。通常、値は0-1の範囲内です。"],
+      "description": [
+        "歪みの量を返します。通常、値は0-1の範囲内です。"
+      ],
       "returns": "Number: 歪みの量。通常、値は0-1の範囲内です。"
     },
     "getOversample": {
-      "description": ["oversamplingを返します。"],
+      "description": [
+        "oversamplingを返します。"
+      ],
       "returns": "String: oversampleは'none'、'2x'、または'4x'のいずれかです。"
     }
   },
@@ -7198,7 +7473,9 @@
       "ゲインノードは、音量の相対的な設定に使用されます。通常、ミキサーの構築に使用されます。"
     ],
     "setInput": {
-      "description": ["ソースをゲインノードに接続します。"],
+      "description": [
+        "ソースをゲインノードに接続します。"
+      ],
       "params": {
         "src": "Object: p5.sound / Web Audio オブジェクト (音声出力がある)"
       }
@@ -7212,10 +7489,14 @@
       }
     },
     "disconnect": {
-      "description": ["すべての出力を切断します。"]
+      "description": [
+        "すべての出力を切断します。"
+      ]
     },
     "amp": {
-      "description": ["ゲインノードの出力レベルを設定します。"],
+      "description": [
+        "ゲインノードの出力レベルを設定します。"
+      ],
       "params": {
         "volume": "Number: 0 から 1.0 の振幅値",
         "rampTime": "Number: (オプション) rampTime 秒間のフェードを作成します。",
@@ -7228,13 +7509,17 @@
       "モノフォニックシンセサイザーのための基底クラスです。このクラスの拡張は、p5.PolySynth()との互換性を維持するために、以下のメソッドを実装し、APIに従う必要があります。"
     ],
     "connect": {
-      "description": ["p5オブジェクトやWeb Audioノードに接続します。"],
+      "description": [
+        "p5オブジェクトやWeb Audioノードに接続します。"
+      ],
       "params": {
         "unit": "オブジェクト"
       }
     },
     "disconnect": {
-      "description": ["soundOutから切断します。"]
+      "description": [
+        "soundOutから切断します。"
+      ]
     }
   },
   "p5.MonoSynth": {
@@ -7242,7 +7527,9 @@
       "MonoSynthは音声合成の単一の声として使用されます。このクラスはPolySynthクラスと一緒に使用することが想定されています。カスタムシンセサイザーは、このクラスを継承して構築する必要があります。"
     ],
     "attack": {
-      "description": ["ゲッターとセッター"]
+      "description": [
+        "ゲッターとセッター"
+      ]
     },
     "decay": {},
     "sustain": {},
@@ -7288,7 +7575,9 @@
       }
     },
     "amp": {
-      "description": ["MonoSynthの音量を設定します。"],
+      "description": [
+        "MonoSynthの音量を設定します。"
+      ],
       "returns": "Number: 新しいボリューム値",
       "params": {
         "vol": "Number: 設定する音量",
@@ -7296,16 +7585,22 @@
       }
     },
     "connect": {
-      "description": ["p5.sound / Web Audioオブジェクトに接続します。"],
+      "description": [
+        "p5.sound / Web Audioオブジェクトに接続します。"
+      ],
       "params": {
         "unit": "Object: p5.soundまたはWeb Audioオブジェクト"
       }
     },
     "disconnect": {
-      "description": ["すべての出力を切断します。"]
+      "description": [
+        "すべての出力を切断します。"
+      ]
     },
     "dispose": {
-      "description": ["MonoSynthを破棄し、そのリソース/メモリを解放します。"]
+      "description": [
+        "MonoSynthを破棄し、そのリソース/メモリを解放します。"
+      ]
     }
   },
   "p5.OnsetDetect": {
@@ -7396,16 +7691,22 @@
       }
     },
     "connect": {
-      "description": ["p5.sound / Web Audioオブジェクトに接続します。"],
+      "description": [
+        "p5.sound / Web Audioオブジェクトに接続します。"
+      ],
       "params": {
         "unit": "Object: p5.soundまたはWeb Audioオブジェクト"
       }
     },
     "disconnect": {
-      "description": ["すべての出力を切断します。"]
+      "description": [
+        "すべての出力を切断します。"
+      ]
     },
     "dispose": {
-      "description": ["MonoSynthを取り除き、そのリソース/メモリを解放します。"]
+      "description": [
+        "MonoSynthを取り除き、そのリソース/メモリを解放します。"
+      ]
     }
   }
 }
