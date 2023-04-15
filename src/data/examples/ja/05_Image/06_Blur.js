@@ -1,90 +1,87 @@
 /*
- * @name Blur
- * @arialabel Astronaut rendered in black and white on the left and a blurred version of the image on the right
- * @description A low-pass filter that blurs an image. This program analyzes every pixel in an image and blends it with all the neighboring pixels to blur the image.
- * <br><br><span class="small"><em>This example is ported from the <a href="https://processing.org/examples/blur.html">Blur example</a>
- * on the Processing website</em></span>
+ * @name ブラー効果
+ * @arialabel 左側に白黒でレンダリングされた宇宙飛行士、右側に画像のぼかしバージョン
+ * @description 画像をぼかす低域通過フィルターです。このプログラムは、画像のすべてのピクセルを分析し、周囲のすべてのピクセルと混ぜ合わせて画像をぼかします。
+ * <br><br><span class="small"><em>この例は、Processingウェブサイトの<a href="https://processing.org/examples/blur.html">Blur example</a>を移植したものです</em></span>
  */
-// to consider all neighboring pixels we use a 3x3 array
-// and normalize these values
-// v is the normalized value
+// 周囲のすべてのピクセルを考慮するために、3x3の配列を使用します
+// そして、これらの値を正規化します
+// vは正規化された値です
 let v = 1.0 / 9.0;
-// kernel is the 3x3 matrix of normalized values
+// カーネルは、正規化された値の3x3行列です
 let kernel = [[ v, v, v ], [ v, v, v ], [ v, v, v ]]; 
 
-// preload() runs once, before setup()
-// loadImage() needs to occur here instead of setup()
-// if loadImage() is called in setup(), the image won't appear 
-// since noLoop() restricts draw() to execute only once
-// (one execution of draw() is not enough time for the image to load),
-// preload() makes sure image is loaded before anything else occurs
+// preload()はsetup()の前に1回だけ実行されます
+// loadImage()はsetup()で呼び出すのではなく、ここで実行する必要があります
+// setup()でloadImage()を呼び出すと、noLoop()によりdraw()が1回しか実行されないため、
+// 画像が表示されません(1回のdraw()では画像をロードするための十分な時間がありません)。
+// preload()は、他の処理が実行される前に画像がロードされることを保証します
 function preload() {
-  // load the original image
+  // オリジナルの画像を読み込む
   img = loadImage("assets/rover.png"); 
 }
 
-// setup() runs once after preload
+// setup()はpreload()の後に1回実行されます
 function setup() {
-  // create canvas
+  // キャンバスを作成する
   createCanvas(710, 400);
-  // noLoop() makes draw() run only once, not in a loop
+  // noLoop()はdraw()を1回のみ実行し、ループしないようにします
   noLoop();
 }
 
 
-// draw() runs after setup(), normally on a loop
-// in this case it runs only once, because of noDraw()
+// draw()は通常、setup()の後にループ実行されます
+// 今回はnoLoop()のため1回だけ実行されます
 function draw() {
-  // place the original image on the upper left corner
+  // オリジナルの画像を左上隅に配置する
   image(img, 0, 0);
 
-  // create a new image, same dimensions as img
+  // imgと同じ寸法の新しい画像を作成する
   edgeImg = createImage(img.width, img.height);
 
-  // load its pixels
+  // 画像のピクセルを読み込む
   edgeImg.loadPixels();
   
-  // two for() loops, to iterate in x axis and y axis
-  // since the kernel assumes that the pixel
-  // has pixels above, under, left, and right
-  // we need to skip the first and last column and row
-  // x then goes from 1 to width - 1
-  // y then goes from 1 to height - 1
+  // x軸とy軸を反復処理するための2つのfor()ループ
+  // カーネルは、ピクセルが上下左右にピクセルを持っていることを前提としているため、
+  // 最初の列と行、最後の列と行をスキップする必要があります
+  // xは1から画像の幅-1までになります
+  // yは1から画像の高さ-1までになります
   for (let x = 1; x < img.width; x++) {
     for (let y = 1; y < img.height; y++) {
-      // kernel sum for the current pixel starts as 0
+      // 現在のピクセルのカーネルの合計は0から始まります
       let sum = 0; 
 
-      // kx, ky variables for iterating over the kernel
-      // kx, ky have three different values: -1, 0, 1
+      // カーネルを反復処理するためのkx、ky変数
+      // kx、kyには3つの異なる値があります：-1、0、1
       for (kx = -1; kx <= 1; kx++) {
         for (ky = -1; ky <= 1; ky++) {
           let xpos = x + kx;
           let ypos = y + ky;
           
-          // since our image is grayscale, 
-          // RGB values are identical
-          // we retrieve the red value for this example 
-          // (green and blue work as well)
+          // 画像がグレースケールであるため、
+          // RGB値は同一です
+          // この例では赤の値を取得します
+          // (緑と青も同様に機能します)
           let val = red(img.get(xpos, ypos));
 
-          // accumulate the  kernel sum
-          // kernel is a 3x3 matrix
-          // kx and ky have values -1, 0, 1
-          // if we add 1 to kx and ky, we get 0, 1, 2
-          // with that we can use it to iterate over kernel
-          // and calculate the accumulated sum
+          // カーネルの合計を蓄積する
+          // カーネルは3x3の行列です
+          // kxとkyには-1、0、1の値があります
+          // kxとkyに1を加えると、0、1、2が得られます
+          // それを使用してカーネルを反復処理し、
+          // 累積和を計算できます
           sum += kernel[kx+1][ky+1] * val;
         }
       }
 
-      // set the value of the edgeImg pixel to the kernel sum
+      // edgeImgのピクセル値を設定します
       edgeImg.set(x, y, color(sum));
     }
   }
-  // updatePixels() to write the changes on edgeImg
+  // edgeImgの変更を書き込みます
   edgeImg.updatePixels();
   
-  // draw edgeImg at the right of the original image
+  // 元の画像の右側にedgeImg（ぼかした画像）を描画する
   image(edgeImg, img.width, 0);
 }
