@@ -11,13 +11,13 @@ let easing = 0.05;
 
 function setup() {
   createCanvas(720, 400);
-  img = loadImage('assets/moonwalk.jpg'); // プログラムに画像を読み込む。
+  img = loadImage('assets/moonwalk.jpg'); // プログラムに画像を読み込む
 }
 
 function draw() {
-  image(img, 0, 0); // 100%の不透明度で表示する。
+  image(img, 0, 0); // 100%の不透明度で表示する
   let dx = mouseX - img.width / 2 - offset;
   offset += dx * easing;
-  tint(255, 127); // 50%の不透明度で表示する。
+  tint(255, 127); // 50%の不透明度で表示する
   image(img, offset, 0);
 }
