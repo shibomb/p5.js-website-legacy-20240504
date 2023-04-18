@@ -9,7 +9,7 @@ let img; // 変数「img」を宣言する
 
 function setup() {
   createCanvas(720, 400);
-  img = loadImage('assets/moonwalk.jpg'); // 画像ファイルをロードする
+  img = loadImage('assets/moonwalk.jpg'); // 画像ファイルを読み込む
 }
 
 function draw() {
