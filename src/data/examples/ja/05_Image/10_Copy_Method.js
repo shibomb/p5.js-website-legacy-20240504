@@ -1,9 +1,9 @@
 /*
- * @name Copy() method
- * @arialabel Parrot rendered in black and white. The user’s cursor is a paint brush and as the user presses and holds on the image, the area becomes colored
- * @frame 600,400
- * @description An example of how to simulate coloring image with the copy() method.
- */
+* @name Copy() メソッド
+* @arialabel 白黒に描かれたオウムを表示します。ユーザーのカーソルがペイントブラシで、イメージ上でクリックし続けるとその領域が色付きます。
+* @frame 600,400
+* @description copy() メソッドを使用してイメージの着色をシミュレートする方法の例。
+*/
 let draft, ready;
 function preload() {
   ready = loadImage("assets/parrot-color.png");
