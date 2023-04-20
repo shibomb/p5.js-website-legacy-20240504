@@ -5,11 +5,11 @@
  * <p><em><span class="small"> この例をローカル環境で実行するには画像ファイルと実行中の
  * <a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
  */
-let img; // 変数imgを宣言する。
+let img; // 変数「img」を宣言する
 
 function setup() {
   createCanvas(720, 400);
-  img = loadImage('assets/moonwalk.jpg'); // 画像ファイルをロードする。
+  img = loadImage('assets/moonwalk.jpg'); // 画像ファイルを読み込む
 }
 
 function draw() {

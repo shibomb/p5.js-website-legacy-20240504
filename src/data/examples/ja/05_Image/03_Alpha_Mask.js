@@ -1,8 +1,8 @@
 /*
  * @name アルファマスク
- * @arialabel 宇宙飛行士の画像を背景に表示し、やや透明な宇宙飛行士の画像が上に表示されています。透過された画像はマウスの水平方向と一緒に移動します。両方の画像には右側に薄い青色のグラデーションがあります。
+ * @arialabel 宇宙飛行士の画像を背景に表示し、半透明な宇宙飛行士の画像が上に表示されています。半透明の画像はマウスの方向に移動します。両方の画像には右側に薄い青色のグラデーションがあります。
  * @description 画像の異なる部分で透明度を指定するために、画像の「マスク」を読み込みます。2つの画像は、p5.Imageのmask()メソッドを使用してブレンドされます。
- * <p><em><span class="small"> この例をローカルで実行するには、2つの画像ファイルと実行中の<a href="https://github.com/processing/p5.js/wiki/Local-server">
+ * <p><em><span class="small"> この例をローカルで実行するには2つの画像ファイルと実行中の<a href="https://github.com/processing/p5.js/wiki/Local-server">
  * ローカルサーバー</a>が必要です。</span></em></p>
 */
 let img;
