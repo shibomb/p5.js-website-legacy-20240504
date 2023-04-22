@@ -1,5 +1,5 @@
 /*
- * @name 様々な力
+ * @name さまざまな力
  * @arialabel 9つのグレーボールが画面上部から落下し、画面下部の半分に達すると水抵抗により速度が遅くなります。速度の変化は水抵抗により物体が遅くなる様子を模倣しています。
  * @description 複数の力が物体に作用するデモンストレーション
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
@@ -118,7 +118,7 @@ Mover.prototype.applyForce = function(force) {
 Mover.prototype.update = function() {
   // 加速度によって速度が変化する
   this.velocity.add(this.acceleration);
-  // 位置が速度によって変化する
+  // くらい置が速度によって変化する
   this.position.add(this.velocity);
   // 各フレームで加速度をクリアする必要がある
   this.acceleration.mult(0);
