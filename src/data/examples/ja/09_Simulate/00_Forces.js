@@ -118,7 +118,7 @@ Mover.prototype.applyForce = function(force) {
 Mover.prototype.update = function() {
   // 加速度によって速度が変化する
   this.velocity.add(this.acceleration);
-  // くらい置が速度によって変化する
+  // 位置が速度によって変化する
   this.position.add(this.velocity);
   // 各フレームで加速度をクリアする必要がある
   this.acceleration.mult(0);
