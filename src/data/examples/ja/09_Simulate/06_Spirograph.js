@@ -2,7 +2,7 @@
  * @name スパイログラフ
  * @arialabel グレーの背景に黒い円のアウトラインが互いに絡まって回転しているスパイログラフが作成されます。ユーザーがスペースキーを押すと、背景が白くなり、さまざまなサイズの円のパスがインディゴ色で表示されます。
  * @description このスケッチは、シンプルな変換を使用して、
- * 互いに連動する円（サインと呼ばれる）を持つスパイログラフのような効果を作成します。
+ * 互いに連動する円（サインと呼ばれる）をもつスパイログラフのような効果を作成します。
  * スペースキーを押してトレースと基本のジオメトリを切り替えます。<br>
  * 例作成者：<a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a>。<br>
  * <a href='http://en.wikipedia.org/wiki/Spirograph'>http://en.wikipedia.org/wiki/Spirograph</a>
@@ -52,11 +52,11 @@ function draw() {
     let radius = rad / (i + 1); // 円自体の半径
     rotate(sines[i]); // 円を回転させる
     if (!trace) ellipse(0, 0, radius * 2, radius * 2); // シミュレーション中なら、サインを描画
-    push(); // 1つ上のレベルへ移動
+    push(); // ひとつ上のレベルへ移動
     translate(0, radius); // サインの端まで移動
     if (!trace) ellipse(0, 0, 5, 5); // 小さな円を描画
     if (trace) ellipse(0, 0, erad, erad); // トレース時にはeradで描画
-    pop(); // 1つ下のレベルへ戻る
+    pop(); // ひとつ下のレベルへ戻る
     translate(0, radius); // 次のサインの位置に移動
     sines[i] = (sines[i] + (fund + (fund * i * ratio))) % TWO_PI; // 基本周波数に基づいて角度を更新
   }

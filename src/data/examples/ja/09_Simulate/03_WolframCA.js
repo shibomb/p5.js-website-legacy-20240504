@@ -1,6 +1,6 @@
 /*
  * @name Wolfram CA
- * @arialabel 1次元セルオートマトンは、白い正方形から構成されたデザインで、ピクセル化された外観を持つピラミッド形状が描かれています。
+ * @arialabel 1次元セルオートマトンは、白い正方形から構成されたデザインで、ピクセル化された外観をもつピラミッド形状が描かれています。
  * @description Wolframの1次元セルオートマトンのシンプルなデモンストレーション
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
@@ -45,7 +45,7 @@ function generate() {
   // 新しい値を格納するための空の配列を作成
   let nextgen = Array(cells.length);
   // 各セルについて、現在の状態と隣接するセルの状態を調べて、新しい状態を決定する
-  // 隣接するセルが1つしかない端のセルは無視する
+  // 隣接するセルがひとつしかない端のセルは無視する
   for (let i = 1; i < cells.length - 1; i++) {
     let left = cells[i - 1]; // 左側のセルの状態
     let me = cells[i]; // 現在のセルの状態
