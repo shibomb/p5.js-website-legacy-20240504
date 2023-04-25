@@ -68,7 +68,7 @@ function convolution(x, y, matrix, matrixsize, img) {
       const yloc = (y + j - offset);
       let loc = (xloc + img.width * yloc) * 4;
 
-      // 画像の範囲内かどうかを確認します。ここでlocの値をさらに正確に修正できます。
+      // 画像の範囲内かどうかを確認します。ここでlocの値をさらに上手く制限できるかもしれません。
       loc = constrain(loc, 0 , img.pixels.length - 1);
 
       // たたみ込みの計算
