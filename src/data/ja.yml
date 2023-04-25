@@ -281,7 +281,7 @@ learn:
   teach-title2: 教える
   learn1: これらのチュートリアルは、特定のトピックのより詳細な説明やステップバイステップの概要を提供します。 以下の
   learn2: サンプルページ
-  learn3: をチェックして、様々なp5.jsトピックの短いデモを探索してください。
+  learn3: をチェックして、さまざまなp5.jsトピックの短いデモを探索してください。
   introduction-to-p5js-title: p5.jsの紹介
   hello-p5js-title: Hello p5.js
   hello-p5js: この短いビデオでは、 p5.jsライブラリとそれができることを紹介します。
@@ -476,7 +476,7 @@ learn:
   getting-started-in-webgl-custom-geometry-heading3: 結論
   getting-started-in-webgl-custom-geometry-p7x1: >-
     これでカスタムジオメトリを作成できるようになりました。 他のツールやコードからユニークな形状を作成できるようになりました。
-    様々な3Dモデリングツールで作業を行い、あなたに最適なツールを見つけるための時間を費やしてください。
+    さまざまな3Dモデリングツールで作業を行い、あなたに最適なツールを見つけるための時間を費やしてください。
   getting-started-in-webgl-custom-geometry-glossary-term1-title: プロシージャル
   getting-started-in-webgl-custom-geometry-glossary-term1-definition: 数学的に定義されたもので、ファイルなどの保存されたデータではないことを意味します。
   getting-started-in-webgl-custom-geometry-glossary-term2-title: モデル
@@ -542,7 +542,7 @@ learn:
     これは、フラットでシェーディングされていないジオメトリが必要な場合に役立ちます。
   getting-started-in-webgl-appearance-p8x1: >-
     これらのライトは、<a class="code">draw()</a>の中で使用する必要があります。
-    最大5つのライトを同時にシーンで使用できます。これにより、様々で複雑な光源を持つシーンを構成することができます。
+    最大5つのライトを同時にシーンで使用できます。これにより、さまざまで複雑な光源を持つシーンを構成することができます。
     以下のインタラクティブな例でボックスをチェックしたりチェックを外したりして、ライティングがどのように組み合わせられるかを確認してください。
     アクティブな光源ごとに、その位置や方向を示す視覚的なインジケータがありますが、 これらは説明のために存在することを理解してください。
   getting-started-in-webgl-appearance-p9x1: 次の例では、各ライトのコメントを追加・削除して、パラメーターを試してみてください。
@@ -1076,7 +1076,7 @@ libraries:
   p5.projection: スケッチを現実世界の表面に簡単に投影マッピングすることができます。
   p5.Framebuffer: WebGLの高速オフスクリーンキャンバスで、フォグやぼかし効果のための深度データにアクセスできます。
   p5.capture: >-
-    p5.captureは、簡単なGUIを提供し、p5.jsアニメーションを簡単に記録して、様々な形式（webm、gif、mp4、png、jpg、webp）の動画ファイルを出力することができます。
+    p5.captureは、簡単なGUIを提供し、p5.jsアニメーションを簡単に記録して、さまざまな形式（webm、gif、mp4、png、jpg、webp）の動画ファイルを出力することができます。
   p5.input: p5.jsに追加のキー対応を追加します。
   p5.web-serial: セットアップ不要のArduinoなどのデバイスにアクセスするためのWeb Serial APIを使用するためのp5.jsライブラリです。
   p5.wasm.core: p5.js用のWeb Assemblyコア。
@@ -1108,7 +1108,7 @@ community:
   in-practice2: 私たちは、複雑であってもフィードバックのリクエストに積極的に関与することを強く求めます。
   in-practice3: >-
     私たちは新規参加者を歓迎し、他者の教育を優先します。私たちは新規参加者と同じ熱意ですべてのタスクに取り組むことを目指しています。この取り組みでは新規参加者にも専門家と同じくらいの価値があると信じているからです。
-  in-practice4: 私たちは、様々な種類の貢献を積極的に認め、認可する努力を継続します。
+  in-practice4: 私たちは、さまざまな種類の貢献を積極的に認め、認可する努力を継続します。
   in-practice5: 私たちは常に支援や指導を提供する用意があります。
   in-times-conflict-title: '衝突が起きたときは:'
   in-times-conflict1: 私たちは聞くことに徹します。
@@ -1127,7 +1127,7 @@ community:
   notes4: クリエイティブ・コモンズ・ライセンス
   notes5: の下でライセンスされています。帰属表示を含めれば自由に共有、改変できます。
   contribute-title: 貢献する
-  contribute1: 私たちのコミュニティでは、様々な方法で熱心な人々の協力を求めています。
+  contribute1: 私たちのコミュニティでは、さまざまな方法で熱心な人々の協力を求めています。
   develop-title: 開発する。
   develop1: GitHub
   develop2: は、コードの収集、問題の文書化、コードに関する議論が行われる主要な場所です。
