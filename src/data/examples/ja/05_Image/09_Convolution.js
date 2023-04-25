@@ -31,7 +31,7 @@ function draw() {
   // 画像の一部分だけを処理する予定なので、まずは全体を背景として設定しましょう。
   background(img);
 
-  // フィルターを適用する正方形の領域を計算する
+  // フィルターを適用する正方形の領域を計算します。
   const xstart = constrain(mouseX - w/2, 0, img.width);
   const ystart = constrain(mouseY - w/2, 0, img.height);
   const xend = constrain(mouseX + w/2, 0, img.width);
@@ -39,12 +39,12 @@ function draw() {
   const matrixsize = 3;
 
   loadPixels();
-  // 範囲内のすべてのピクセルに対して処理を開始する
+  // 範囲内のすべてのピクセルに対して処理を開始します。
   for (let x = xstart; x < xend; x++) {
     for (let y = ystart; y < yend; y++ ) {
       let c = convolution(x, y, matrix, matrixsize, img);
       
-      // 変数「c」からRGBAの値を取得してピクセルを更新する
+      // 変数「c」からRGBAの値を取得してピクセルを更新します。
       let loc = (x + y*img.width) * 4;
       pixels[loc] = red(c);
       pixels[loc + 1] = green(c);
@@ -78,11 +78,11 @@ function convolution(x, y, matrix, matrixsize, img) {
       btotal += (img.pixels[loc + 2]) * matrix[i][j];
     }
   }
-  // RGB値を0~255に制限する
+  // RGB値を0~255に制限します。
   rtotal = constrain(rtotal, 0, 255);
   gtotal = constrain(gtotal, 0, 255);
   btotal = constrain(btotal, 0, 255);
   
-  // たたみ込み処理をした結果の色を返す
+  // たたみ込み処理をした結果の色を返します。
   return color(rtotal, gtotal, btotal);
 } 
