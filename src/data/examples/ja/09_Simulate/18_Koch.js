@@ -2,7 +2,7 @@
  * @name コッホ曲線
  * @arialabel 一本の白い水平線が黒い背景上に描かれ、途中で三角形に変形し、三角形の各辺がまた二つの三角形になるようになり、これが5回繰り返されてできる雪の結晶を生成します。
  * @description 簡単なフラクタル：コッホ曲線を描画します。再帰レベルが順番に描かれます。
- * Daniel Shiffman によるものです。
+ * Daniel Shiffmanによって作成されました。
  */
 
 let k;
@@ -26,7 +26,7 @@ function draw() {
 }
 
 // フラクタルのひとつの線分を説明するクラス
-// コッホアルゴリズムにしたがって、線分に沿って中間p5.Vectorを計算するメソッドを含む
+// コッホアルゴリズムにしたがって、線分に沿って中間p5.Vectorを計算するメソッドを含みます。
 
 class KochLine {
   constructor(a,b) {
@@ -56,7 +56,7 @@ class KochLine {
 
   // もう少し複雑で、このp5.Vectorがどこにあるかを計算するために少し三角関数を使う必要があります！
   kochC() {
-    let a = this.start.copy(); // 最初から始めます
+    let a = this.start.copy(); // 最初から始めます。
     let v = p5.Vector.sub(this.end, this.start);
     v.div(3);
     a.add(v);  // ポイントBに移動
@@ -91,7 +91,7 @@ class KochFractal {
 
   nextLevel() {
     // 配列リストにある各線について
-    // 新しい配列リストに4つの線を作成します
+    // 新しい配列リストに4つの線を作成します。
     this.lines = this.iterate(this.lines);
     this.count++;
   }
@@ -106,32 +106,32 @@ class KochFractal {
     return this.count;
   }
 
-  // すべての線を描画するだけです
+  // すべての線を描画するだけです。
   render() {
     for(let i = 0; i < this.lines.length; i++) {
       this.lines[i].display();
     }
   }
 
-  // ここが **MAGIC**が起こる場所です
+  // ここが **MAGIC**が起こる場所です。
   // ステップ1：空の配列リストを作成
   // ステップ2：現在の配列リストにあるすべての線について
-  //   - コッホアルゴリズムに基づいて4つの線分を計算する
-  //   - すべての4つの線分を新しい配列リストに追加する
-  // ステップ3：新しい配列リストを返し、それが構造の線分リストになります
+  //   - コッホアルゴリズムに基づいて4つの線分を計算
+  //   - すべての4つの線分を新しい配列リストに追加
+  // ステップ3：新しい配列リストを返し、それが構造の線分リストになります。
 
-  // これを何度も繰り返すと、各線が4つの線に分かれ、4つの線に分かれ、、、と繰り返すようになります
+  // これを何度も繰り返すと、各線が4つの線に分かれ、4つの線に分かれ、、、と繰り返すようになります。
   iterate(before) {
     let now = [];    // 空のリストを作成します
     for(let i = 0; i < this.lines.length; i++) {
       let l = this.lines[i];
-      // コッホ p5.Vectorを5つ計算します（線オブジェクトによって行われます）
+      // コッホ p5.Vectorを5つ計算します（線オブジェクトによって行われます）。
       let a = l.kochA();
       let b = l.kochB();
       let c = l.kochC();
       let d = l.kochD();
       let e = l.kochE();
-      // すべてのp5.Vector間に線分を作成して追加します
+      // すべてのp5.Vector間に線分を作成して追加します。
       now.push(new KochLine(a,b));
       now.push(new KochLine(b,c));
       now.push(new KochLine(c,d));

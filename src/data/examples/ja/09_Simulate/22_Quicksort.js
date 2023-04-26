@@ -73,7 +73,7 @@ async function quickSort(start, end) {
   // ピボット要素の左側のすべての要素はそれより小さく、
   // 右側のすべての要素はそれより大きくなります。
   let index = await partition(start, end);
-  // 元の状態を復元する
+  // 元の状態を復元します。
   states[index] = -1;
   await Promise.all(
     [quickSort(start, index - 1), 
@@ -86,12 +86,12 @@ async function quickSort(start, end) {
 // たとえば、最初の要素をピボットとして選択することができます。
 async function partition(start, end) {
   for (let i = start; i < end; i++) {
-    // 現在考慮されている要素を識別する
+    // 現在考慮されている要素を識別します。
     states[i] = 1;
   }
   // クイックソートアルゴリズム
   let pivotIndex = start;
-  // 要素を識別する
+  // 要素を識別します。
   states[pivotIndex] = 0;
   let pivotElement = values[end];
   for (let i = start; i < end; i++) {
@@ -104,7 +104,7 @@ async function partition(start, end) {
   }
   await swap(end, pivotIndex);
   for (let i = start; i < end; i++) {
-    // 元の状態を復元する
+    // 元の状態を復元します。
     if (i != pivotIndex) {
       states[i] = -1;
     }
@@ -112,10 +112,10 @@ async function partition(start, end) {
   return pivotIndex;
 }
 
-// 'values'の要素をインデックス'i'と'j'で交換する
+// 'values'の要素をインデックス'i'と'j'で交換します。
 async function swap(i, j) {
   // 値を変更してシミュレーションのペースを
-  // 調整する
+  // 調整します。
   await sleep(25);
   let temp = values[i];
   values[i] = values[j];
@@ -123,7 +123,7 @@ async function swap(i, j) {
 }
 
 // ソートプロセスの速度を遅くして、
-// 可視化を容易にするためのカスタムヘルパー関数
+// 可視化を容易にするためのカスタムヘルパー関数です。
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }

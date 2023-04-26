@@ -10,7 +10,7 @@
  */
 
 // このクラスはブロックの構造と
-// 動きを記述します
+// 動きを記述します。
 class Brick{
   constructor(bc, y){
     this.brickColor = bc;
@@ -18,19 +18,19 @@ class Brick{
     this.xPos = 0;
   }
 
-  // この関数はブロックを作成します
+  // この関数はブロックを作成します。
   createBrick(){
     fill(this.brickColor);
     rect(this.xPos, this.yPos, 100, 50);
   }
 
   // この関数はブロックの動きの
-  // 速度を1に設定します
+  // 速度を1に設定します。
   setSpeed(){
     this.xSpeed = 1;
   }
 
-  // この関数はブロックを動かします
+  // この関数はブロックを動かします。
   moveBrick(){
     this.xPos+=this.xSpeed;
     if(this.xPos+100 >= width || this.xPos <= 0){
@@ -52,7 +52,7 @@ let brick1 = new Brick("white",100);
 let brick2 = new Brick("black",250);
 
 // この関数はブロック1とブロック2の
-// 速度を1に設定します
+// 速度を1に設定します。
 brick1.setSpeed();
 brick2.setSpeed();
 
@@ -71,7 +71,7 @@ function draw () {
 }
 
 // この関数は画面に
-// 白い棒と黒い棒を作成します
+// 白い棒と黒い棒を作成します。
 function createBars() {
   let len = 12;
   for(let i = 0;i<width/len;i++){

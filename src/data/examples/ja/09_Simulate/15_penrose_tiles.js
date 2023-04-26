@@ -1,6 +1,6 @@
 /*
- * @name ペンローズ・タイル
- * @arialabel 白い菱形が黒い背景に描かれたペンローズ・タイルの柄が作成されます。
+ * @name ペンローズ タイル
+ * @arialabel 白い菱形が黒い背景に描かれたペンローズ タイルの柄が作成されます。
  * @frame 710,400
  * @description これはprocessing.org/examplesの「Penrose Tile」を、David Blitzが移植したものです。
  */
@@ -10,7 +10,7 @@ let ds;
 function setup() {
   createCanvas(710, 400);
   ds = new PenroseLSystem();
-  // 以下の行で遊んでください
+  // 次の行で遊んでみてください。
   ds.simulate(5);
 }
 
@@ -23,16 +23,16 @@ function PenroseLSystem() {
   this.steps = 0;
 
   // ペンローズ菱形のL-システムの公理と規則
-  // リファレンスがあればいいのですが、私は見つけられませんでした
+  // リファレンスがあればいいのですが、私は見つけられませんでした。
   this.axiom = "[X]++[X]++[X]++[X]++[X]";
   this.ruleW = "YF++ZF----XF[-YF----WF]++";
   this.ruleX = "+YF--ZF[---WF--XF]+";
   this.ruleY = "-WF++XF[+++YF++ZF]-";
   this.ruleZ = "--YF++++WF[+ZF++++XF]--XF";
 
-  // 以下の2行で遊んでください
+  // 次の2行で遊んでみてください。
   this.startLength = 460.0;
-  this.theta = TWO_PI / 10.0; // 36度  TWO_PI / 6.0 でお試しください
+  this.theta = TWO_PI / 10.0; // 36度  TWO_PI / 6.0 でお試しください。
   this.reset();
 }
 
@@ -52,14 +52,14 @@ PenroseLSystem.prototype.getAge = function () {
   return this.generations;
 }
 
-// 代替規則を適用して生成用文字列の新しい繰り返しを作成する
+// 代替規則を適用して生成用文字列の新しい繰り返しを作成します。
 PenroseLSystem.prototype.iterate = function() {
   let newProduction = "";
 
   for(let i=0; i < this.production.length; ++i) {
     let step = this.production.charAt(i);
     // 現在の文字が 'W' である場合、
-    // 現在の文字を対応する規則で置き換える
+    // 現在の文字を対応する規則で置き換えます。
     if (step == 'W') {
       newProduction = newProduction + this.ruleW;
     }
@@ -86,7 +86,7 @@ PenroseLSystem.prototype.iterate = function() {
   this.production = newProduction;
 }
 
-// 生成用文字列をタートルグラフィックに変換する
+// 生成用文字列をタートルグラフィックに変換します。
 PenroseLSystem.prototype.render = function () {
   translate(width / 2, height / 2);
 
@@ -98,7 +98,7 @@ PenroseLSystem.prototype.render = function () {
   for(let i=0; i<this.steps; ++i) {
     let step = this.production.charAt(i);
 
-    //'W', 'X', 'Y', 'Z' シンボルは、実際にはタートルアクションに対応しません
+    //'W', 'X', 'Y', 'Z' シンボルは、実際にはタートルアクションに対応しません。
     if( step == 'F') {
       stroke(255, 60);
       for(let j=0; j < this.repeats; j++) {

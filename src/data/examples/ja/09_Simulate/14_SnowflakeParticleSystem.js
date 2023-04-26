@@ -1,9 +1,9 @@
 /*
  * @name スノーフレーク
- * @arialabel 赤い背景からランダムなパターンで白い雪片が落ちます。
+ * @arialabel 赤い背景の上部からランダムなパターンで白い雪片が降り注ぎます。
  * @description 落ちる雪片の動きをシミュレートするパーティクルシステム。
  * 雪片のパーティクルを保持するためのオブジェクト配列を使用しています。
- * Aatish Bhatiaによる貢献です。
+ * Aatish Bhatiaの貢献により作成されました。
  */
 
 let snowflakes = []; // 雪片のオブジェクトを保持する配列
@@ -30,7 +30,7 @@ function draw() {
   }
 }
 
-// 雪片クラス
+// snowflakeクラス
 function snowflake() {
   // 座標の初期化
   this.posX = 0;
@@ -38,20 +38,20 @@ function snowflake() {
   this.initialangle = random(0, 2 * PI);
   this.size = random(2, 5);
 
-  // 雪片のらせんの半径
-  // 雪片が面積で均等に広がるように選ばれています
+  // 雪片のらせんの半径。
+  // 雪片が領域内で均等に広がるように選ばれています。
   this.radius = sqrt(random(pow(width / 2, 2)));
 
   this.update = function(time) {
-    // x位置は円を追従します
+    // x位置は円に合わせて動きます。
     let w = 0.6; // 角速度
     let angle = w * time + this.initialangle;
     this.posX = width / 2 + this.radius * sin(angle);
 
-    // サイズの異なる雪片はわずかに異なるy速度で落ちます
+    // サイズの異なる雪片はわずかに異なるy速度で落ちます。
     this.posY += pow(this.size, 0.5);
 
-    // 画面の端を超えた雪片を削除する
+    // 画面の端を超えた雪片を削除します
     if (this.posY > height) {
       let index = snowflakes.indexOf(this);
       snowflakes.splice(index, 1);
