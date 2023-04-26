@@ -1,8 +1,8 @@
 /*
- * @name The Mandelbrot Set
- * @arialabel A fractal that roughly resembles a series of heart-shaped disks, to which smaller disks are attached and consists of a connected set
- * @description Simple rendering of the Mandelbrot set.
- * Based on Daniel Shiffman's <a href="https://processing.org/examples/mandelbrot.html">Mandelbrot Example</a> for Processing.
+ * @name マンデルブロ集合
+ * @arialabel 小さな円盤が付属している一連のハート形の円盤に、大まかに似たフラクタル形状で連結した集合です
+ * @description マンデルブロ集合のシンプルなレンダリング。
+ * ProcessingのDaniel Shiffmanの<a href="https://processing.org/examples/mandelbrot.html">マンデルブロサンプル</a>を基にしています。
  */
 
 function setup() {
@@ -14,41 +14,41 @@ function setup() {
 function draw() {
   background(0);
 
-  // Establish a range of values on the complex plane
-  // A different range will allow us to "zoom" in or out on the fractal
+  // 複素平面上の値の範囲を設定します。
+  // 異なる範囲を設定すると、フラクタルの「ズームイン」または「ズームアウト」が可能になります。
 
-  // It all starts with the width, try higher or lower values
+  // 全部は幅で始まります、高い値または低い値を試してみてください。
   const w = 4;
   const h = (w * height) / width;
 
-  // Start at negative half the width and height
+  // 幅と高さのマイナスハーフで始めます。
   const xmin = -w/2;
   const ymin = -h/2;
 
-  // Make sure we can write to the pixels[] array.
-  // Only need to do this once since we don't do any other drawing.
+  // pixels[]配列に書き込めるようになっていることを確認してください。
+  // 他に描画することがないため、一度だけ必要です。
   loadPixels();
 
-  // Maximum number of iterations for each point on the complex plane
+  // 複素平面上の各点についての最大反復回数
   const maxiterations = 100;
 
-  // x goes from xmin to xmax
+  // xはxminからxmaxまで行きます。
   const xmax = xmin + w;
-  // y goes from ymin to ymax
+  // yはyminからymaxまで行きます。
   const ymax = ymin + h;
 
-  // Calculate amount we increment x,y for each pixel
+  // 画素ごとに、xとyをどのように増やすかを計算します。
   const dx = (xmax - xmin) / (width);
   const dy = (ymax - ymin) / (height);
 
-  // Start y
+  // yを開始します。
   let y = ymin;
   for (let j = 0; j < height; j++) {
-    // Start x
+    // xを開始します。
     let x = xmin;
     for (let i = 0; i < width; i++) {
 
-      // Now we test, as we iterate z = z^2 + cm does z tend towards infinity?
+      // テストすることになるのは、z＝z^2+cmで、zが無限に近づくかどうかですか？
       let a = x;
       let b = y;
       let n = 0;
@@ -58,22 +58,22 @@ function draw() {
         const twoab = 2.0 * a * b;
         a = aa - bb + x;
         b = twoab + y;
-        // Infinty in our finite world is simple, let's just consider it 16
+        // 有限な世界の中の無限は簡単なもので、単にそれを16と考えることができます。
         if (dist(aa, bb, 0, 0) > 16) {
-          break;  // Bail
+          break;  // 脱出する
         }
         n++;
       }
 
-      // We color each pixel based on how long it takes to get to infinity
-      // If we never got there, let's pick the color black
+      // 各画素の色を、無限に到達するまでにかかった時間に基づいて塗りつぶします。
+      // 到達しなかった場合は、黒を選びます。
       const pix = (i+j*width)*4;
       const norm = map(n, 0, maxiterations, 0, 1);
       let bright = map(sqrt(norm), 0, 1, 0, 255);
       if (n == maxiterations) {
         bright = 0;
       } else {
-        // Gosh, we could make fancy colors here if we wanted
+        // もしファンシーな色が欲しい場合は、ここでを作ることができます。
         pixels[pix + 0] = bright;
         pixels[pix + 1] = bright;
         pixels[pix + 2] = bright;

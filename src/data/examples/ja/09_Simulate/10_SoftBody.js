@@ -1,10 +1,10 @@
 /*
- * @name Soft Body
- * @arialabel White pentagon on a black screen that morphs into a blob as it follows the user’s mouse
- * @description Original example by Ira Greenberg.
- * <br><br>Softbody dynamics simulation using curveVertex() and curveTightness().
+ * @name 柔らかい物体
+ * @arialabel 黒い画面の上の白い五角形があり、それは何かのかたまりに形を変化させながらマウスを追従します。
+ * @description Ira Greenberg氏によるオリジナルのサンプルです。
+ * <br><br>curveVertex()およびcurveTightness()を使用した柔らかい物体の動的シミュレーションです。
  */
-// center point
+// 中心点
 let centerX = 0.0, centerY = 0.0;
 
 let radius = 45, rotAngle = -90;
@@ -12,10 +12,10 @@ let accelX = 0.0, accelY = 0.0;
 let deltaX = 0.0, deltaY = 0.0;
 let springing = 0.0009, damping = 0.98;
 
-//corner nodes
+// 角のノード
 let nodes = 5;
 
-//zero fill arrays
+// ゼロで配列を埋める
 let nodeStartX = [];
 let nodeStartY = [];
 let nodeX = [];
@@ -23,17 +23,17 @@ let nodeY = [];
 let angle = [];
 let frequency = [];
 
-// soft-body dynamics
+// 柔らかい物体のダイナミクス
 let organicConstant = 1.0;
 
 function setup() {
   createCanvas(710, 400);
 
-  //center shape in window
+  // ウィンドウの中央に形状を置く
   centerX = width / 2;
   centerY = height / 2;
 
-  //initialize arrays to 0
+  // 配列を0で初期化
   for (let i = 0; i < nodes; i++){
     nodeStartX[i] = 0;
     nodeStartY[i] = 0;
@@ -42,7 +42,7 @@ function setup() {
     angle[i] = 0;
   }
 
-  // iniitalize frequencies for corner nodes
+  // 角のノードの周波数を初期化
   for (let i = 0; i < nodes; i++){
     frequency[i] = random(5, 12);
   }
@@ -52,7 +52,7 @@ function setup() {
 }
 
 function draw() {
-  //fade background
+  // 背景をフェードする
   fill(0, 100);
   rect(0, 0, width, height);
   drawShape();
@@ -60,14 +60,14 @@ function draw() {
 }
 
 function drawShape() {
-  //  calculate node  starting locations
+  // ノードの初期位置を計算
   for (let i = 0; i < nodes; i++){
     nodeStartX[i] = centerX + cos(radians(rotAngle)) * radius;
     nodeStartY[i] = centerY + sin(radians(rotAngle)) * radius;
     rotAngle += 360.0 / nodes;
   }
 
-  // draw polygon
+  // 多角形を描く
   curveTightness(organicConstant);
   fill(255);
   beginShape();
@@ -81,28 +81,28 @@ function drawShape() {
 }
 
 function moveShape() {
-  //move center point
+  // 中心点を移動
   deltaX = mouseX - centerX;
   deltaY = mouseY - centerY;
 
-  // create springing effect
+  // スプリングの効果を作成
   deltaX *= springing;
   deltaY *= springing;
   accelX += deltaX;
   accelY += deltaY;
 
-  // move predator's center
+  // 中心を移動
   centerX += accelX;
   centerY += accelY;
 
-  // slow down springing
+  // スプリングの減衰を遅くする
   accelX *= damping;
   accelY *= damping;
 
-  // change curve tightness
+  // 曲線の引っ張りを変更
   organicConstant = 1 - ((abs(accelX) + abs(accelY)) * 0.1);
 
-  //move nodes
+  // ノードを移動する
   for (let i = 0; i < nodes; i++){
     nodeX[i] = nodeStartX[i] + sin(radians(angle[i])) * (accelX * 2);
     nodeY[i] = nodeStartY[i] + sin(radians(angle[i])) * (accelY * 2);
