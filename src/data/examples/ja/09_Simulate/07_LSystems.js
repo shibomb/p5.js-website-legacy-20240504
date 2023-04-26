@@ -1,10 +1,10 @@
 /*
  * @name Lシステム
- * @arialabel さまざまな色とパターンの円が直交する黒い線でつながれて画面にグリッド形式で描かれます
+ * @arialabel さまざまな色とパターンの円が直交する黒い線でつながれて画面にグリッド形式で描かれます。
  * @description このスケッチは、Lindenmayer または（L-）システムに基づいた自動描画を作成します。
  * Lシステムは、手続き型グラフィックスで
  * 自然、幾何学的、または興味深い「フラクタル風」のパターンを作成するためによく使用されます。<br>
- * 例作成者：<a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a>。<br>
+ * サンプル作成者：<a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a><br>
  * <a href='https://en.wikipedia.org/wiki/L-system'>https://en.wikipedia.org/wiki/L-system</a>
  */
 // タートル関連の変数:

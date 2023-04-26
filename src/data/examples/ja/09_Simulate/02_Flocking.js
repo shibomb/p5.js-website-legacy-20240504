@@ -1,6 +1,6 @@
 /*
  * @name Flocking
- * @arialabel グレーの小さな三角形のグループが、より濃いグレーの背景を移動する
+ * @arialabel グレーの小さな三角形のグループが、より濃いグレーの背景を移動します。
  * @description Craig Reynoldsの「Flocking」動作のデモンストレーション。
  * 参照：http://www.red3d.com/cwr/
  * ルール：Cohesion（結束）、Separation（分離）、Alignment（整列）

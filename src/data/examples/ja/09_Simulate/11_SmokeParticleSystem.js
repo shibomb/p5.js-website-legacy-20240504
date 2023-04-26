@@ -1,8 +1,8 @@
 /*
  * @name 煙のパーティクル
  * @arialabel 画面の下部の中央に白い円があります。円から煙が出て、ユーザーのマウスの動きに合わせて左右に移動します。また、上部に白い矢印があり、ユーザーのマウスの位置を指示しています。
- * @description Processing用に元々Dan ShiffmanのSmokeParticleSystemの例の移植です。
- * 煙っぽいパーティクルを作成します :p
+ * @description Dan ShiffmanによってProcessing用に書かれたオリジナルのSmokeParticleSystemサンプルを移植したものです。
+ * 煙のようなパーティクルを作成します :p
  */
 
 // パーティクルのテクスチャ
@@ -41,7 +41,7 @@ function draw() {
 }
 
 /**
- *  風力がどの方向に吹いているかを表す矢印を描く関数
+ *  風がどの方向に吹いているかを表す矢印を描く関数
  */
 function drawVector(v, loc, scale){
   push();
@@ -68,7 +68,7 @@ function drawVector(v, loc, scale){
 let ParticleSystem = function(num, v, img_) {
 
   this.particles = [];
-  this.origin = v.copy(); // 万が一オリジナルを誤って変更しないようにベクトル値をコピーする
+  this.origin = v.copy(); // オリジナルを誤って変更しないようにベクトル値をコピーします。
   this.img = img_
   for(let i = 0; i < num; ++i){
     this.particles.push(new Particle(this.origin, this.img));
@@ -76,7 +76,7 @@ let ParticleSystem = function(num, v, img_) {
 };
 
 /**
- *  パーティクルシステム全体を実行する関数
+ *  パーティクルシステム全体を実行するメソッド
  */
 ParticleSystem.prototype.run = function() {
 
@@ -90,9 +90,9 @@ ParticleSystem.prototype.run = function() {
     let particle = this.particles[i];
     particle.run();
 
-    // パーティクルが死んだ場合は削除する。
-    // JavaScriptの配列には「remove」という関数がありませんが、「splice」を使って同じように動作します。
-    // 削除を始める位置のインデックス、そしてそのポイントから何個か削除するかを指定します。
+    // パーティクルが死んだ場合は削除します。
+    // JavaScriptの配列には「remove」関数がありませんが、「splice」を使って同じような処理ができます。
+    // 削除を始める位置のインデックス、そしてそのポイントから何個削除するかを指定します。
     if (particle.isDead()) {
       this.particles.splice(i, 1);
     }
@@ -111,7 +111,7 @@ ParticleSystem.prototype.applyForce = function(dir) {
 }
 
 /**
- * システムの原点に、最初に設定されたテクスチャで新しいパーティクルをシステムに追加する。
+ * システムの原点に、最初に設定されたテクスチャで新しいパーティクルをシステムに追加します。
  * 
  */
 ParticleSystem.prototype.addParticle = function() {
@@ -135,7 +135,7 @@ let Particle = function (pos, img_) {
 }
 
 /**
- *  パーティクルを同時に更新、表示するメソッド。
+ *  パーティクルを同時に更新、表示するメソッド
  */
 Particle.prototype.run = function() {
   this.update();
@@ -143,7 +143,7 @@ Particle.prototype.run = function() {
 }
 
 /**
- *  パーティクルを表示する関数
+ *  パーティクルを表示するメソッド
  */
 Particle.prototype.render = function() {
   imageMode(CENTER);
@@ -152,14 +152,14 @@ Particle.prototype.render = function() {
 }
 
 /**
- *  パーティクルに力のベクトルを適用するメソッド。
+ *  パーティクルに力のベクトルを適用するメソッド
  */
 Particle.prototype.applyForce = function(f) {
   this.acc.add(f);
 }
 
 /**
- *  パーティクルが寿命の終わりに達したかどうかをチェックする
+ *  パーティクルが寿命の終わりに達したかどうかをチェックします。
  *  寿命の終わりに達していた場合はtrue、そうでなければfalseを返します。
  */
 Particle.prototype.isDead = function () {
@@ -171,7 +171,7 @@ Particle.prototype.isDead = function () {
 }
 
 /**
- *  パーティクルの位置を更新するメソッド。
+ *  パーティクルの位置を更新するメソッド
  */
 Particle.prototype.update = function() {
   this.vel.add(this.acc);

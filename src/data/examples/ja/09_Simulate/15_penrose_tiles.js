@@ -1,8 +1,8 @@
 /*
  * @name ペンローズ・タイル
- * @arialabel 白い菱形が黒い背景に描かれたペンローズ・タイルの柄が作成されます
+ * @arialabel 白い菱形が黒い背景に描かれたペンローズ・タイルの柄が作成されます。
  * @frame 710,400
- * @description processing.org/examplesの「Penrose Tile」のデイヴィッド・ブリッツによる移植版です。
+ * @description これはprocessing.org/examplesの「Penrose Tile」を、David Blitzが移植したものです。
  */
 
 let ds;

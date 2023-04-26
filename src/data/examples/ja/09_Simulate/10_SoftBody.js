@@ -1,7 +1,7 @@
 /*
  * @name 柔らかい物体
- * @arialabel 黒い画面の上の白い五角形があり、それは何かのかたまりに形を変化させながらマウスを追従します。
- * @description Ira Greenberg氏によるオリジナルのサンプルです。
+ * @arialabel 黒い画面の上の白い五角形があり、それは何かのかたまりに形を変化させながらマウスの動きに合わせて移動します。
+ * @description Ira Greenbergによるオリジナルのサンプルです。
  * <br><br>curveVertex()およびcurveTightness()を使用した柔らかい物体の動的シミュレーションです。
  */
 // 中心点
@@ -29,7 +29,7 @@ let organicConstant = 1.0;
 function setup() {
   createCanvas(710, 400);
 
-  // ウィンドウの中央に形状を置く
+  // ウィンドウの中央に五角形を置く
   centerX = width / 2;
   centerY = height / 2;
 
