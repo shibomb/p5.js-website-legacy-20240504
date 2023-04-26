@@ -25,8 +25,8 @@ function draw() {
   }
 }
 
-// フラクタルの1つの線分を説明するクラス
-// コッホアルゴリズムに従って、線分に沿って中間p5.Vectorを計算するメソッドを含む
+// フラクタルのひとつの線分を説明するクラス
+// コッホアルゴリズムにしたがって、線分に沿って中間p5.Vectorを計算するメソッドを含む
 
 class KochLine {
   constructor(a,b) {
@@ -99,7 +99,7 @@ class KochFractal {
   restart() {
     this.count = 0;      // カウントをリセット
     this.lines = [];  // 配列リストを空にする
-    this.lines.push(new KochLine(this.start,this.end));  // 初期線（1つのエンドp5.Vectorからもう1つのエンドp5.Vectorへ）を追加
+    this.lines.push(new KochLine(this.start,this.end));  // 初期線（ひとつのエンドp5.Vectorからもうひとつのエンドp5.Vectorへ）を追加
   }
 
   getCount() {

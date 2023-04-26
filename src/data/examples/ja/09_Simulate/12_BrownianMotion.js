@@ -25,7 +25,7 @@ function draw() {
   // 背景を塗りつぶす
   background(51);
 
-  // 全要素を左に1つずつずらす
+  // 全要素を左にひとつずつずらす
   for (let i = 1; i < num; i++) {
     ax[i - 1] = ax[i];
     ay[i - 1] = ay[i];
@@ -35,7 +35,7 @@ function draw() {
   ax[num - 1] += random(-range, range);
   ay[num - 1] += random(-range, range);
 
-  // 全ての点が画面内に収まるように制限をかける
+  // すべての点が画面内に収まるように制限をかける
   ax[num - 1] = constrain(ax[num - 1], 0, width);
   ay[num - 1] = constrain(ay[num - 1], 0, height);
 
