@@ -77,6 +77,6 @@ function createBars() {
   for(let i = 0;i<width/len;i++){
     fill("white");
     if(i%2 === 0)
-    rect(i*len,height,len,-height);
+      rect(i*len,height,len,-height);
   }
 }
