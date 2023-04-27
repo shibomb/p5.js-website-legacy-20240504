@@ -1,7 +1,7 @@
 /*
  * @name たたみ込み
  * @arialabel 宇宙飛行士の画像を背景に表示し、ユーザーのマウスの動きに合わせて画像の鮮明度を上げる正方形の領域も動きます。
- * @description 画像の一部にたたみ行列を適用します。マウスを移動させると別の箇所にフィルターを適用できます。このサンプルは、Processingウェブサイトの<a href="https://processing.org/examples/convolution.html" target="blank">Dan ShiffmanによるConvolutionのサンプル</a>を移植したものです。特に指定のない限り、Danによるオリジナルのコメントを記載しています。
+ * @description 画像の一部にたたみ行列を適用します。マウスを移動させると別の箇所にフィルターを適用できます。このサンプルは、Processingウェブサイトの<a href="https://processing.org/examples/convolution.html" target="blank">Dan Shiffmanによるたたみ込みのサンプル</a>を移植したものです。特に指定のない限り、Danによるオリジナルのコメントを記載しています。
  * <p><em><span class="small"> このサンプルをローカルで実行するには画像ファイルと実行中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
  */
 

@@ -3,7 +3,7 @@
  * @arialabel からし色の背景
  * @description ステートメントは、プログラムを構成する要素です。";"（セミコロン）記号は、ステートメントを終了するために使用されます。
  * これは「ステートメント終端記号」と呼ばれています。コメントは、プログラムを理解しやすくするためにメモを残すために使用されます。コメントは2つのスラッシュ(" // ")で始まります。
- * <br><br><small><em>この例は、Processingのウェブサイトの<a href="https://processing.org/examples/statementscomments.html">ステートメントとコメントの例</a>から移植されています</em></small>
+ * <br><br><small><em>このサンプルは、Processingのウェブサイトの<a href="https://processing.org/examples/statementscomments.html">ステートメントとコメントのサンプル</a>から移植されています</em></small>
  */
 // createCanvas関数は、コンピュータにウィンドウの大きさを指示するステートメントです。
 // 各関数ステートメントには0個以上のパラメータがあります。
