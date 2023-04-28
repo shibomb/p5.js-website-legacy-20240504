@@ -1,10 +1,10 @@
 /*
  * @name パーティクル
- * @arialabel 細い線で接続された小さな灰色円が黒い背景を浮遊しています。
+ * @arialabel 細い線で接続された小さな灰色の円が黒い背景のあちこちを浮遊しています。
  * @description particle.jsという軽量なJavaScriptライブラリがあり、
  * とても美しいパーティクルシステムを作成します。
  * これは、p5.jsを使用してそのパーティクルシステムを再現しようとする試みです。
- * Particle.jsに触発されました。Sagar Aroraによる貢献です。
+ * Particle.jsに触発され、Sagar Aroraの貢献により作成されました。
  */
 
 

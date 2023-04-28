@@ -61,7 +61,7 @@ function drawVector(v, loc, scale){
 /**
  * 基本的なパーティクルシステムクラス
  * @param num パーティクルの数
- * @param v パーティクルシステムの始点
+ * @param v パーティクルシステムの原点
  * @param img_ システム内の各パーティクルに適用されるテクスチャ
  * @constructor
  */
@@ -159,8 +159,8 @@ Particle.prototype.applyForce = function(f) {
 }
 
 /**
- *  パーティクルが寿命の終わりに達したかどうかをチェックします。
- *  寿命の終わりに達していた場合はtrue、そうでなければfalseを返します。
+ *  パーティクルが寿命に達したかどうかをチェックします。
+ *  寿命に達していた場合はtrue、そうでなければfalseを返します。
  */
 Particle.prototype.isDead = function () {
   if (this.lifespan <= 0.0) {

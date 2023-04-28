@@ -17,7 +17,7 @@ function draw() {
   // 複素平面上の値の範囲を設定します。
   // 異なる範囲を設定すると、フラクタルの「ズームイン」または「ズームアウト」が可能になります。
 
-  // 全部は幅で始まります、高い値または低い値を試してみてください。
+  // すべては幅から始まります、高い値または低い値を試してみてください。
   const w = 4;
   const h = (w * height) / width;
 
@@ -32,9 +32,9 @@ function draw() {
   // 複素平面上の各点についての最大反復回数
   const maxiterations = 100;
 
-  // xはxminからxmaxまで行きます。
+  // xはxminからxmaxまで増加します。
   const xmax = xmin + w;
-  // yはyminからymaxまで行きます。
+  // yはyminからymaxまで増加します。
   const ymax = ymin + h;
 
   // 画素ごとに、xとyをどのように増やすかを計算します。
@@ -48,7 +48,7 @@ function draw() {
     let x = xmin;
     for (let i = 0; i < width; i++) {
 
-      // テストすることになるのは、z＝z^2+cmで、zが無限に近づくかどうかですか？
+      // テストすることになるのは、z＝z^2+cmを繰り返すうちに、zが無限に近づくかどうかです。
       let a = x;
       let b = y;
       let n = 0;
@@ -73,7 +73,7 @@ function draw() {
       if (n == maxiterations) {
         bright = 0;
       } else {
-        // もしファンシーな色が欲しい場合は、ここでを作ることができます。
+        // もしファンシーな色が欲しい場合は、ここで作ることができます。
         pixels[pix + 0] = bright;
         pixels[pix + 1] = bright;
         pixels[pix + 2] = bright;

@@ -1,10 +1,10 @@
 /*
  * @name 再帰的な木
- * @arialabel ユーザーが画面の左端にマウスを置くと、黒い背景に白い縦線が表示されます。ユーザーがマウスを右に移動すると、縦線の上部が木の枝に広がり、最終的には非常に幾何学的な形状の木にカーブします。
+ * @arialabel ユーザーが画面の左端にマウスを置くと、黒い背景に白い縦線が表示されます。ユーザーがマウスを右に移動すると、縦線の上部が木の枝状に広がってゆき、非常に幾何学的な形状の木になるまで枝がカーブします。
  * @description 再帰を使用して、シンプルな木状の構造をレンダリングします。
  * 枝分かれ角度は、水平マウスの位置の関数として計算されます。
  * マウスを左右に移動して角度を変更します。
- * ProcessingのDaniel Shiffman氏の<a href="https://processing.org/examples/tree.html">Recursive Tree Example</a>をもとにしています。
+ * ProcessingのDaniel Shiffmanの<a href="https://processing.org/examples/tree.html">Recursive Tree Example</a>をもとにしています。
  */
 let theta;
 
@@ -32,7 +32,7 @@ function draw() {
 }
 
 function branch(h) {
-  // 各枝は前の枝の2/3の大きさ
+  // 各枝は前の枝の2/3の大きさにします。
   h *= 0.66;
 
   // すべての再帰関数には終了条件が必要です！

@@ -98,7 +98,7 @@ PenroseLSystem.prototype.render = function () {
   for(let i=0; i<this.steps; ++i) {
     let step = this.production.charAt(i);
 
-    //'W', 'X', 'Y', 'Z' シンボルは、実際にはタートルアクションに対応しません。
+    // 'W', 'X', 'Y', 'Z' シンボルは、実際にはタートルアクションに対応しません。
     if( step == 'F') {
       stroke(255, 60);
       for(let j=0; j < this.repeats; j++) {

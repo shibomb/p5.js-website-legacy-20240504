@@ -1,8 +1,8 @@
 /*
  * @name コッホ曲線
- * @arialabel 一本の白い水平線が黒い背景上に描かれ、途中で三角形に変形し、三角形の各辺がまた二つの三角形になるようになり、これが5回繰り返されてできる雪の結晶を生成します。
+ * @arialabel 一本の白い水平線が黒い背景上に描かれ、途中で三角形に変形し、三角形の各辺がまた二つの三角形になり、これが5回繰り返されることで雪の結晶を生成します。
  * @description 簡単なフラクタル：コッホ曲線を描画します。再帰レベルが順番に描かれます。
- * Daniel Shiffmanによって作成されました。
+ * Daniel Shiffmanによるサンプルです。
  */
 
 let k;
@@ -17,9 +17,9 @@ function draw() {
   background(0);
   // 雪片を描く！
   k.render();
-  // 進行
+  // 反復
   k.nextLevel();
-  // 5回以上繰り返さないように ...
+  // 5回以上繰り返さないように...
   if (k.getCount() > 5) {
     k.restart();
   }
@@ -46,7 +46,7 @@ class KochLine {
     return this.start.copy();
   }
 
-  // 単純に3分の1の距離です
+  // 単純に3分の1の距離です。
   kochB() {
     let v = p5.Vector.sub(this.end, this.start);
     v.div(3);
@@ -54,7 +54,7 @@ class KochLine {
     return v;
   }
 
-  // もう少し複雑で、このp5.Vectorがどこにあるかを計算するために少し三角関数を使う必要があります！
+  // さらに複雑なことに、このp5.Vectorがどこにあるかを計算するために少し三角法を使う必要があります！
   kochC() {
     let a = this.start.copy(); // 最初から始めます。
     let v = p5.Vector.sub(this.end, this.start);
@@ -65,7 +65,7 @@ class KochLine {
     return a;
   }
 
-  // 単純に距離の2/3
+  // 単純に3分の2の距離です。
   kochD() {
     let v = p5.Vector.sub(this.end, this.start);
     v.mult(2/3.0);
@@ -97,9 +97,9 @@ class KochFractal {
   }
 
   restart() {
-    this.count = 0;      // カウントをリセット
-    this.lines = [];  // 配列リストを空にする
-    this.lines.push(new KochLine(this.start,this.end));  // 初期線（ひとつのエンドp5.Vectorからもうひとつのエンドp5.Vectorへ）を追加
+    this.count = 0;      // カウントをリセットします。
+    this.lines = [];  // 配列リストを空にします。
+    this.lines.push(new KochLine(this.start,this.end));  // 初期線（ひとつのエンドp5.Vectorからもうひとつのエンドp5.Vectorへの線）を追加
   }
 
   getCount() {
@@ -125,7 +125,7 @@ class KochFractal {
     let now = [];    // 空のリストを作成します
     for(let i = 0; i < this.lines.length; i++) {
       let l = this.lines[i];
-      // コッホ p5.Vectorを5つ計算します（線オブジェクトによって行われます）。
+      // コッホp5.Vectorを5つ計算します（線オブジェクトによって行われます）。
       let a = l.kochA();
       let b = l.kochB();
       let c = l.kochC();
