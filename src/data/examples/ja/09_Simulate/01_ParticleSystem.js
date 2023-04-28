@@ -1,6 +1,6 @@
 /*
  * @name パーティクルシステム
- * @arialabel 点火されたスパークラーのように点から軽い灰色の円が流れ出す
+ * @arialabel 点火されたスパークラーのように点から軽い灰色の円が流れ出します。
  * @description 基本的なパーティクルシステムです
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */

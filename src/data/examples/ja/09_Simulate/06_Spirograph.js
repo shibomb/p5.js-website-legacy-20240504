@@ -4,7 +4,7 @@
  * @description このスケッチは、シンプルな変換を使用して、
  * 互いに連動する円（サインと呼ばれる）をもつスパイログラフのような効果を作成します。
  * スペースキーを押してトレースと基本のジオメトリを切り替えます。<br>
- * 例作成者：<a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a>。<br>
+ * サンプル作成者：<a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a><br>
  * <a href='http://en.wikipedia.org/wiki/Spirograph'>http://en.wikipedia.org/wiki/Spirograph</a>
  */
 let NUMSINES = 20; // 一度に何個できるか？
