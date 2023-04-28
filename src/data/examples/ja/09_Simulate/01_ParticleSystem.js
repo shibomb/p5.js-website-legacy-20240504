@@ -1,7 +1,7 @@
 /*
  * @name パーティクルシステム
- * @arialabel 点火されたスパークラーのように点から軽い灰色の円が流れ出します。
- * @description 基本的なパーティクルシステムです
+ * @arialabel 点火されたスパークラーのように点から軽いグレーの円が流れ出します。
+ * @description 基本的なパーティクルシステム
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 let system;
@@ -45,7 +45,7 @@ Particle.prototype.display = function() {
   ellipse(this.position.x, this.position.y, 12, 12);
 };
 
-// パーティクルはまだ役立つか？
+// パーティクルはまだ役に立ちますか？
 Particle.prototype.isDead = function(){
   return this.lifespan < 0;
 };
