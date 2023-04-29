@@ -1,7 +1,7 @@
 /*
- * @name パーティクルシステム
+ * @name パーティクル システム
  * @arialabel 点火されたスパークラーのように点から軽いグレーの円が流れ出します。
- * @description 基本的なパーティクルシステム
+ * @description 基本的なパーティクル システム
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 let system;
@@ -17,7 +17,7 @@ function draw() {
   system.run();
 }
 
-// シンプルなパーティクルクラス
+// シンプルなParticleクラス
 let Particle = function(position) {
   this.acceleration = createVector(0, 0.05);
   this.velocity = createVector(random(-1, 1), random(-1, 0));
