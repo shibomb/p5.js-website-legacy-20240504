@@ -1,7 +1,7 @@
 /*
- * @name ライフゲーム
+ * @name ライフ ゲーム
  * @arialabel 黒い背景に白い正方形のグリッドで、いくつかの正方形が白と黒の間で点滅してランダムなパターンを生成します。
- * @description John Conwayのライフゲームの基本的な実装
+ * @description John Conwayのライフ ゲームの基本的な実装
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 
