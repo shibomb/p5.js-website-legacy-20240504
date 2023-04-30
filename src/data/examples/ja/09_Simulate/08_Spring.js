@@ -14,18 +14,18 @@ let springHeight = 32,
     move = false;
 
 // スプリング シミュレーション定数
-let M = 0.8, // 質量
-    K = 0.2, // スプリング定数
+let M = 0.8,  // 質量
+    K = 0.2,  // スプリング定数
     D = 0.92, // ダンピング
-    R = 150; // 安定位置
+    R = 150;  // 安定位置
 
 // スプリング シミュレーション変数
-    let ps = R, // 位置
+let ps = R,   // 位置
     vs = 0.0, // 速度
-    as = 0, // 加速度
-    f = 0; // 力
+    as = 0,   // 加速度
+    f = 0;    // 力
 
-    function setup() {
+function setup() {
   createCanvas(710, 400);
   rectMode(CORNERS);
   noStroke();
@@ -58,10 +58,10 @@ function drawSpring() {
 function updateSpring() {
   // スプリングの位置を更新します。
   if ( !move ) {
-    f = -K * ( ps - R );  // f=-ky
-    as = f / M;           // 加速度（f=ma == a=f/m）を設定します。
-    vs = D * (vs + as);   // 速度を設定します。
-    ps = ps + vs;         // 位置を更新します。
+    f = -K * ( ps - R ); // f=-ky
+    as = f / M;          // 加速度（f=ma == a=f/m）を設定します。
+    vs = D * (vs + as);  // 速度を設定します。
+    ps = ps + vs;        // 位置を更新します。
   }
 
   if (abs(vs) < 0.1) {
