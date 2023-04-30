@@ -3,14 +3,14 @@
  * @arialabel グレーの背景に黒い円のアウトラインが互いに連動して回転しているスパイログラフが作成されます。ユーザーがスペースキーを押すと、背景が白くなり、さまざまなサイズの円の軌跡がインディゴ色で表示されます。
  * @description このスケッチは、シンプルな変換を使用して、
  * 互いに連動する円（サインと呼ばれる）をもつスパイログラフのような効果を作成します。
- * スペースキーを押すと、トレースと仕組みのジオメトリ（サインの動き）の表示を切り替えられます。<br>
+ * スペースキーを押すと、トレースと仕組みのジオメトリー（サインの動き）の表示を切り替えられます。<br>
  * サンプル作成者：<a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a><br>
  * <a href='http://en.wikipedia.org/wiki/Spirograph'>http://en.wikipedia.org/wiki/Spirograph</a>
  */
 let NUMSINES = 20; // 一度に描画するサインの数
 let sines = new Array(NUMSINES); // 現在の角度を保持する配列
 let rad; // 中心のサインの初期半径値
-let i; // カウンタ変数
+let i; // カウンター変数
 
 // これらを操作して、何が起こっているかを理解しましょう：
 let fund = 0.005; // 中心のサインの速度
@@ -32,7 +32,7 @@ function setup() {
 
 function draw() {
   if (!trace) {
-    background(204); // ジオメトリを表示している場合は画面をクリアします。
+    background(204); // ジオメトリーを表示している場合は画面をクリアします。
     stroke(0, 255); // 黒のペン
     noFill(); // 塗りつぶし無し
   }
