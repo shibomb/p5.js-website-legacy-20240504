@@ -18,7 +18,7 @@ function setup() {
 function draw() {
   background(0);
 
-  a = a + 1; // aをinteger型の数値でインクリメント(1加算)します。
+  a = a + 1; // aをinteger型の数値で加算します。
   b = b + 0.2; // bをfloat型の数値で加算します。
   line(a, 0, a, height / 2);
   line(b, height / 2, b, height);
