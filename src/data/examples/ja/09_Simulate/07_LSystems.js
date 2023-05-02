@@ -1,7 +1,7 @@
 /*
  * @name Lシステム
  * @arialabel さまざまな色とパターンの円が、直角に曲がる黒い線でつながれてグリッド状に整列した形で画面に描かれます。
- * @description このスケッチは、Lindenmayer（L）システムに基づいた自動描画を作成します。
+ * @description このスケッチは、Lindenmayerシステム（Lシステムとも呼ばれます）に基づいた自動描画を作成します。
  * Lシステムは、手続き型グラフィックスで
  * 自然、幾何学的、または興味深い「フラクタル風」のパターンを作成するためによく使用されます。<br>
  * サンプル作成者：<a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a><br>
