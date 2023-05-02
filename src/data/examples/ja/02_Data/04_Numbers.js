@@ -1,14 +1,14 @@
 /*
- * @name Numbers
- * @arialabel A black background with one white vertical line on the top half and one on the bottom. Both lines move from the left to the right of the screen with the top vertical line moving faster than the bottom.
+ * @name 数字
+ * @arialabel 画面の上半分に1本の白い垂直線、下半分にも1本の白い垂直線がある黒い背景です。両方の線は、画面左から右に移動します。上の垂直線の方が下の垂直線よりも速く移動します。
  * @frame 720,400
- * @description Numbers can be written with or without decimals. An integer
- * (more commonly called an int) is a number without a decimal point. A float
- * is a floating-point number, which means it is a number that has a decimal
- * place.
+ * @description 数値は小数点を含めた形式と含めない形式のどちらでも書くことができます。
+ * 整数（一般に int と呼ばれる）は小数点のない数値です。
+ * float は浮動小数点数で、
+ * つまり小数点を持つ数値です。
  */
-let a = 0; // Create a global variable "a" of type Number
-let b = 0; // Create a global variable "b" of type Number
+let a = 0; // Number型のグローバル変数「a」を作成します。
+let b = 0; // Number型のグローバル変数「b」を作成します。
 
 function setup() {
   createCanvas(720, 400);
@@ -18,8 +18,8 @@ function setup() {
 function draw() {
   background(0);
 
-  a = a + 1; // Increment a with an integer
-  b = b + 0.2; //Increment b with a float
+  a = a + 1; // 整数でaをインクリメントします。
+  b = b + 0.2; // float型の数値をでbを増やします。
   line(a, 0, a, height / 2);
   line(b, height / 2, b, height);
 
