@@ -1,22 +1,22 @@
 /*
- * @name Shader Using Webcam
- * @arialabel Neon texture added to the scene displayed by the user’s built-in webcam
- * @description The webcam can be passed to shaders as a texture.
- * <br> To learn more about using shaders in p5.js: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.js Shaders</a>
+ * @name ウェブカメラを使用したシェーダー
+ * @arialabel ユーザーの内蔵ウェブカメラで表示されるシーンにネオンテクスチャが追加されます。
+ * @description ウェブカメラはテクスチャーとしてシェーダーに渡すことができます。
+ * <br>p5.jsでシェーダーを使用する方法について、詳しくはこちらを参照してください: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.jsシェーダー</a>
  */
 
- // this variable will hold our shader object
+ // この変数にシェーダー オブジェクトを保持します。
  let theShader;
- // this variable will hold our webcam video
+ // この変数にウェブカメラ映像を保持します。
  let cam;
 
  function preload(){
-   // load the shader
+   // シェーダーを読み込みます。
    theShader = loadShader('assets/webcam.vert', 'assets/webcam.frag');
  }
 
  function setup() {
-   // shaders require WEBGL mode to work
+   // シェーダーを使うためにはWEBGLモードにする必要があります。
    createCanvas(710, 400, WEBGL);
    noStroke();
 
@@ -27,12 +27,12 @@
  }
 
  function draw() {
-   // shader() sets the active shader with our shader
-   shader(theShader);
+  // shader()関数でアクティブなシェーダーを設定します。
+  shader(theShader);
 
-   // passing cam as a texture
+   // ウェブカメラ映像をテクスチャーとして渡します。
    theShader.setUniform('tex0', cam);
 
-   // rect gives us some geometry on the screen
-   rect(0,0,width,height);
+  // rect関数は画面上に幾何学図形を描画します。
+  rect(0,0,width,height);
  }
