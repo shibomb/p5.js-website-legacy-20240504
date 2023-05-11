@@ -101,11 +101,11 @@
     },
     "textOutput": {
       "description": [
-        "<code class=\"language-javascript\">textOutput()</code>は、キャンバス上に存在する形状を説明するスクリーンリーダー対応の出力を作成します。キャンバスの一般的な説明には、キャンバスのサイズ、キャンバスの色、キャンバス内の要素の数（例:「あなたの出力は、400x400ピクセルのラベンダーブルーのキャンバスで、以下の4つの形状が含まれています:」）が含まれます。この説明の後に、各形状の色、位置、面積が説明された形状のリストが続きます（例:「キャンバスの1％を覆う左上のオレンジ色の楕円」）。各要素を選択すると、詳細が表示されます。要素のテーブルも提供されます。このテーブルでは、形状、色、位置、座標、面積が説明されています（例:「オレンジ色の楕円 位置=左上 面積=2」）。",
-        "<code class=\"language-javascript\">textOutput()</code>および<code class=\"language-javascript\">textOutput(FALLBACK)</code>は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブDOM</a>でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">textOutput(LABEL)</code>は、キャンバスに隣接する出力が含まれる追加のdivを作成し、これはコーディング時にキャンバスのサブDOM外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABELを使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみLABELを使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
+        "<code class=\"language-javascript\">textOutput()</code>は、キャンバス上に存在する形状を説明するスクリーン リーダー対応の出力を作成します。キャンバスの一般的な説明には、キャンバスのサイズ、キャンバスの色、キャンバス内の要素の数（例:「あなたの出力は、400x400ピクセルのラベンダー ブルーのキャンバスで、以下の4つの形状が含まれています:」）が含まれます。この説明の後に、各形状の色、位置、面積が説明された形状のリストが続きます（例:「キャンバスの1％を覆う左上のオレンジ色の楕円」）。各要素を選択すると詳細が表示され、要素のテーブルも提供されます。このテーブルでは、形状、色、位置、座標、面積が説明されています（例:「オレンジ色の楕円 位置=左上 面積=2」）。",
+        "<code class=\"language-javascript\">textOutput()</code>および<code class=\"language-javascript\">textOutput(FALLBACK)</code>は、出力をスクリーン リーダーがアクセス可能な<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブDOM</a>で利用可能にします。<code class=\"language-javascript\">textOutput(LABEL)</code>は、キャンバスに隣接する出力が含まれる追加のdivを作成しますが、これはコーディング時にキャンバスのサブDOM外に出力を表示したい非スクリーン リーダー ユーザーにとって便利です。ただし、LABELを使用すると、スクリーン リーダー ユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみLABELを使用し、公開またはスクリーン リーダー ユーザーと共有する前に削除することをお勧めします。"
       ],
       "params": {
-        "display": "Constant: (オプション)FALLBACK または LABEL のいずれか"
+        "display": "Constant:（オプション）FALLBACKまたはLABELのいずれか"
       }
     },
     "gridOutput": {
