@@ -79,8 +79,8 @@
     "describe": {
       "description": [
         "キャンバスにスクリーン リーダー対応の説明を作成します。最初のパラメーターは、キャンバスの説明を示す文字列である必要があります。2つ目のパラメーターはオプションです。指定された場合、説明の表示方法が決まります。",
-        "<code class=\"language-javascript\">describe(text, LABEL)</code>は、キャンバスに隣接するdiv内にある<a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">キャプションパネル</a>として、すべてのユーザーに説明を表示します。CSSで好みのスタイルに変更できます。",
-        "<code class=\"language-javascript\">describe(text, FALLBACK)</code>は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブDOM</a>で、スクリーンリーダー ユーザーのみが説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで説明はスクリーンリーダー ユーザーにのみ利用可能です。"
+        "<code class=\"language-javascript\">describe(text, LABEL)</code>は、キャンバスに隣接するdiv内にある<a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">キャプション パネル</a>として、すべてのユーザーに説明を表示します。CSSで好みのスタイルに変更できます。",
+        "<code class=\"language-javascript\">describe(text, FALLBACK)</code>は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブDOM</a>で、スクリーン リーダー ユーザーのみが説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで説明はスクリーン リーダー ユーザーにのみ利用可能です。"
       ],
       "params": {
         "text": "String: キャンバスの説明",
@@ -90,8 +90,8 @@
     "describeElement": {
       "description": [
         "この関数は、キャンバス内の要素（一緒に意味を作り出す形状または形状のグループ）に対してスクリーン リーダー対応の説明を作成します。最初のパラメーターは要素の名前である必要があります。2つ目のパラメーターは、要素の説明を示す文字列である必要があります。3つ目のパラメーターはオプションです。指定された場合、要素の説明の表示方法が決まります。",
-        "<code class=\"language-javascript\">describeElement(name, text, LABEL)</code>は、キャンバスに隣接するdiv内にある<a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">キャプションパネル</a>として、すべてのユーザーに要素の説明を表示します。CSSで好みのスタイルに変更できます。",
-        "<code class=\"language-javascript\">describeElement(name, text, FALLBACK)</code>は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブDOM</a>で、スクリーンリーダー ユーザーのみが要素の説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで要素の説明はスクリーンリーダー ユーザーにのみ利用可能です。"
+        "<code class=\"language-javascript\">describeElement(name, text, LABEL)</code>は、キャンバスに隣接するdiv内にある<a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">キャプション パネル</a>として、すべてのユーザーに要素の説明を表示します。CSSで好みのスタイルに変更できます。",
+        "<code class=\"language-javascript\">describeElement(name, text, FALLBACK)</code>は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブDOM</a>で、スクリーン リーダー ユーザーのみが要素の説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで要素の説明はスクリーン リーダー ユーザーにのみ利用可能です。"
       ],
       "params": {
         "name": "String: 要素の名前",
