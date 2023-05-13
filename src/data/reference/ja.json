@@ -189,14 +189,14 @@
       "description": ["色またはピクセル配列から HSL 輝度値を抽出します。"],
       "returns": "Number: 輝度",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラーコンポーネント、またはCSSカラー"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
       }
     },
     "red": {
       "description": ["色またはピクセル配列から赤の値を抽出します。"],
       "returns": "Number: 赤の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラーコンポーネント、またはCSSカラー"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
       }
     },
     "saturation": {
@@ -206,7 +206,7 @@
       ],
       "returns": "Number: 彩度の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラーコンポーネント、またはCSSカラー"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
       }
     },
     "background": {
