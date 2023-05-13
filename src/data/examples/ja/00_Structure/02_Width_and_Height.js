@@ -1,9 +1,8 @@
 /*
- * @name Width and Height
- * @arialabel Pattern of grey and green horizontal lines. The left half also has white vertical lines. The left half is broken up into two triangular shapes, one which is predominately green stripes, and one which is white with the white stripes
- * @description The 'width' and 'height' variables contain the
- * width and height of the display window as defined in the createCanvas()
- * function.
+ * @name width と Height
+ * @arialabel 灰色と緑色の水平線のパターン。左半分は白の垂直線も含む。左半分は２つの三角形に分けられ、片方は緑の縞模様、もう一方は白の縞模様が多い
+ * @description 変数 'width' と 'height' には、
+ * createCanvas()関数で定義された表示ウィンドウの幅と高さが格納されます。
  */
 function setup() {
   createCanvas(720, 400);
