@@ -1,28 +1,28 @@
 /*
  * @name No Loop
- * @arialabel Horizontal white line across the middle of a black background
- * @description The noLoop() function causes draw() to only execute once.
- * Without calling noLoop(), the code inside draw() is run continually.
+ * @arialabel 黒背景の中央を白の水平線が横切る
+ * @description noLoop()関数を用いるとdraw()関数を一度のみ実行することができます。
+ * noLoop()関数を呼ばなければ、draw()関数内のコードは繰り返し実行されます。
  */
 let y;
 
-// The statements in the setup() function
-// execute once when the program begins
+// setup() 関数内のステートメントは
+// プログラム開始時に一度だけ実行される
 function setup() {
-  // createCanvas should be the first statement
+  // createCanvas ステートメントはなるべく最初に記述
   createCanvas(720, 400);
-  stroke(255); // Set line drawing color to white
+  stroke(255); // 線の色を白に設定
   noLoop();
 
   y = height * 0.5;
 }
 
-// The statements in draw() are executed until the
-// program is stopped. Each statement is executed in
-// sequence and after the last line is read, the first
-// line is executed again.
+// draw()関数内のステートメントは
+// プログラムが停止するまで実行される。
+// プログラムの最後の行が読み込まれた後、各ステートメントが連続して実行され、
+// そして最初の行が再度実行される
 function draw() {
-  background(0); // Set the background to black
+  background(0); // 背景色を黒に設定
   y = y - 1;
   if (y < 0) {
     y = height;
