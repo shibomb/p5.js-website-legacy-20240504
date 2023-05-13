@@ -1,6 +1,6 @@
 /*
  * @name Loop
- * @arialabel
+ * @arialabel 黒背景の画面上を下から上に移動するx軸に平行な白い水平線
  * @description noLoop()関数がsetup()関数内で実行されていると、
  * draw()関数内のコードは一度しか実行されません。
  * このサンプルでは、マウスでクリックするとloop()関数が実行され、
