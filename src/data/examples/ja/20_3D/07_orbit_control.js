@@ -11,7 +11,7 @@ function draw() {
   background(250);
   let radius = width * 1.5;
 
-  // ワールドを移動するためにドラッグしてください。
+  // ドラッグしてワールドを移動します。
   orbitControl();
 
   normalMaterial();
