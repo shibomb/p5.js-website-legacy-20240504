@@ -1,7 +1,7 @@
 /*
  * @name 3Dでの正弦・余弦
  * @arialabel 3D空間で、幾何学的な球体が異なる螺旋形状を描きながら動きます。
- * @description 3D空間でも正弦（サイン、Sine）、余弦（コサイン、Cosine）、push / pop が使えます。
+ * @description 3D空間でも正弦（サイン、Sine）、余弦（コサイン、Cosine）、push / popが使えます。
  */
 function setup() {
   createCanvas(710, 400, WEBGL);
