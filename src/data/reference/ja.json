@@ -186,7 +186,7 @@
       }
     },
     "lightness": {
-      "description": ["色またはピクセル配列から HSL 輝度値を抽出します。"],
+      "description": ["色またはピクセル配列からHSL輝度値を抽出します。"],
       "returns": "Number: 輝度",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
