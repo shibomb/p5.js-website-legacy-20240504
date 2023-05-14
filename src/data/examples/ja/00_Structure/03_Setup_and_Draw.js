@@ -1,5 +1,5 @@
 /*
- * @name Setup と Draw
+ * @name SetupとDraw
  * @arialabel 黒背景上で白の水平線が画面の下から上へ移動するアニメーション
  * @description draw()関数内のコードは、プログラムが止まるまで
  * 上から下に連続して実行されます。
