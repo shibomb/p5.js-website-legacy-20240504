@@ -74,7 +74,7 @@
     "returns": "p5: p5インスタンス",
     "params": {
       "sketch": "Function: 与えられたp5インスタンスにオプションで<a href=\"#/p5/preload\">preload()</a>、<a href=\"#/p5/setup\">setup()</a>、および/または<a href=\"#/p5/draw\">draw()</a>プロパティを設定できるクロージャー",
-      "node": "HTMLElement:（オプション）aキャンバスをアタッチする要素"
+      "node": "HTMLElement:（オプション）キャンバスをアタッチする要素"
     },
     "describe": {
       "description": [
