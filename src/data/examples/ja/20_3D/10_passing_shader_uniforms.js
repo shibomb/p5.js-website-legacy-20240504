@@ -29,6 +29,6 @@
    theShader.setUniform('mouse', map(mouseX, 0, width, 0, 7));
    theShader.setUniform('time', frameCount * 0.01);
 
-  // rect関数は画面上に幾何学図形を描画します。
+  // rect関数は画面上にジオメトリを描画します。
   rect(0,0,width, height);
  }

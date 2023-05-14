@@ -1,5 +1,5 @@
 /*
- * @name テクスチャーのようなシェーダー
+ * @name テクスチャのようなシェーダー
  * @arialabel グラデーションが適用された正方形のグリッドに分割された球体です。
  * @description シェーダーは2D/3D形状にテクスチャとして適用できます。
  * <br>p5.jsでシェーダーを使用する方法について、詳しくはこちらを参照してください: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.jsシェーダー</a>
@@ -7,7 +7,7 @@
 
  // この変数にシェーダー オブジェクトを保持します。
  let theShader;
- // この変数にcreateGraphicsで作られるシェーダー テクスチャー レイヤーを保持します。
+ // この変数にcreateGraphicsで作られるシェーダーテクスチャレイヤーを保持します。
  let shaderTexture;
 
  let theta = 0;
@@ -27,10 +27,10 @@
    createCanvas(710, 400, WEBGL);
    noStroke();
 
-   // シェーダー テクスチャー レイヤーを初期化します。
+   // シェーダーテクスチャレイヤーを初期化します。
    shaderTexture = createGraphics(710, 400, WEBGL);
 
-   // シェーダー テクスチャー レイヤーのストローク(線)をオフにします。
+   // シェーダーテクスチャレイヤーのストローク(線)をオフにします。
    shaderTexture.noStroke();
 
     x = -50;
@@ -39,7 +39,7 @@
 
  function draw() {
 
-   // アクティブなシェーダーを設定するのではなく、それをシェーダー テクスチャー レイヤーに渡しています。
+   // アクティブなシェーダーを設定するのではなく、それをシェーダーテクスチャレイヤーに渡しています。
    shaderTexture.shader(theShader);
 
    // ここではsetUniform()メソッドを使って、シェーダーにユニフォーム値を送信しています。
@@ -47,12 +47,12 @@
    theShader.setUniform("time", millis() / 1000.0);
    theShader.setUniform("mouse", [mouseX, map(mouseY, 0, height, height, 0)]);
 
-   // シェーダー テクスチャー レイヤーの幾何学形状をレンダリングします。
+   // シェーダーテクスチャレイヤーのジオメトリをレンダリングします。
    shaderTexture.rect(0,0,width,height);
 
    background(255);
 
-   // シェーダー テクスチャー レイヤーをテクスチャーとして渡します。
+   // シェーダーテクスチャレイヤーをテクスチャとして渡します。
    texture(shaderTexture);
 
    translate(-150, 0, 0);

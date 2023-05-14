@@ -23,6 +23,6 @@ function draw() {
   // shader()関数でアクティブなシェーダーを設定します。
   shader(theShader);
 
-  // rect関数は画面上に幾何学図形を描画します。
+  // rect関数は画面上にジオメトリ図形を描画します。
   rect(0,0,width, height);
 }
