@@ -9,9 +9,9 @@ let y;
 // setup()関数内のステートメントは
 // プログラム開始時に一度だけ実行されます。
 function setup() {
-  // createCanvas ステートメントはなるべく最初に記述
+  // createCanvasステートメントは最初に記述する必要があります。
   createCanvas(720, 400);
-  stroke(255); // 線の色を白に設定
+  stroke(255); // 線の色を白に設定します。
   noLoop();
 
   y = height * 0.5;
@@ -22,7 +22,7 @@ function setup() {
 // 読み込まれた後連続して実行され、
 // その後最初の行が再度実行されます。
 function draw() {
-  background(0); // 背景色を黒に設定
+  background(0); // 背景色を黒に設定します。
   y = y - 1;
   if (y < 0) {
     y = height;
