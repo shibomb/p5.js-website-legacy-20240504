@@ -1,14 +1,14 @@
 /*
  * @name Redraw
- * @arialabel Horizontal white line across a black background that moves higher on the screen with each mouse click
- * @description The redraw() function makes draw() execute once. In this example,
- * draw() is executed once every time the mouse is clicked.
+ * @arialabel 黒背景の画面上をクリックするたびに上昇する白の水平線
+ * @description redraw()関数はdraw()関数を一度実行します。
+ * このサンプルではdraw()関数がマウスでクリックするたびに一度実行されます。
  */
 
 let y;
 
-// The statements in the setup() function
-// execute once when the program begins
+// setup()関数内のステートメントは
+// プログラム開始時に一度だけ実行されます。
 function setup() {
   createCanvas(720, 400);
   stroke(255);
@@ -16,10 +16,10 @@ function setup() {
   y = height * 0.5;
 }
 
-// The statements in draw() are executed until the
-// program is stopped. Each statement is executed in
-// sequence and after the last line is read, the first
-// line is executed again.
+// draw()関数内のステートメントはプログラムが停止するまで実行されます。
+// 各ステートメントはプログラムの最後の行が
+// 読み込まれた後連続して実行され、
+// その後最初の行が再度実行されます。
 function draw() {
   background(0);
   y = y - 4;
