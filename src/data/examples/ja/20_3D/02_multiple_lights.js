@@ -1,7 +1,7 @@
 /*
- * @name Multiple Lights
- * @arialabel Rotating iridescent cube on the left of the screen and an iridescent sphere on the right. The user’s mouse acts as a light illuminating the shapes and can control the direction of the light
- * @description All types of lights could be used in one sketch.
+ * @name 複数の光源
+ * @arialabel 画面の左側に回転する虹色の立方体、右側に虹色の球体が表示されます。ユーザーのマウスは、形状を照らす光源として機能し、光の方向を制御できます。
+ * @description ひとつのスケッチですべての種類の光源を使用することができます。
  */
 function setup() {
   createCanvas(710, 400, WEBGL);
