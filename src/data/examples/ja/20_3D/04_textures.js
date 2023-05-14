@@ -1,9 +1,9 @@
 /*
- * @name Textures
- * @arialabel One sphere and one cube rotating on a white background. The sphere is covered with a video display and the cube is covered with an image. 
- * @description Images and videos are supported for texture.
+ * @name テクスチャ
+ * @arialabel 白い背景の上で回転する球と立方体があります。球は動画で覆われ、立方体は画像で覆われています。
+ * @description テクスチャは、画像と動画をサポートしています。
  */
-// video source: https://vimeo.com/90312869
+// 動画のソース: https://vimeo.com/90312869
 let img;
 let vid;
 let theta = 0;

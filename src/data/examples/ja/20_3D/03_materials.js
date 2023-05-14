@@ -1,9 +1,9 @@
 /*
- * @name Materials
- * @arialabel Four rings and one cube of various materials rotate on a black background. As the user’s mouse moves across the window, the position of the light changes.
- * @description There are five types of materials supported.
- * They respond to light differently.
- * Move your mouse to change the light position.
+ * @name マテリアル（素材）
+ * @arialabel 黒い背景の上で、四つのリングとひとつの立方体がさまざまなマテリアルで回転しています。ユーザーのマウスがウィンドウ上を移動すると、光源の位置が変わります。
+ * @description 5種類のマテリアルがサポートされています。
+ * それぞれが光源に対して異なる反応を示します。
+ * マウスを動かして光源の位置を変えてみてください。
  */
 let img;
 function setup() {
