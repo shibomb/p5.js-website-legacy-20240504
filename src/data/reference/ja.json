@@ -118,21 +118,27 @@
       }
     },
     "alpha": {
-      "description": ["色またはピクセル配列からアルファ値を抽出します。"],
+      "description": [
+        "色またはピクセル配列からアルファ値を抽出します。"
+      ],
       "returns": "Number: アルファ値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
       }
     },
     "blue": {
-      "description": ["色またはピクセル配列から青の値を抽出します。"],
+      "description": [
+        "色またはピクセル配列から青の値を抽出します。"
+      ],
       "returns": "Number: 青の値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
       }
     },
     "brightness": {
-      "description": ["色またはピクセル配列からHSB明度値を抽出します。"],
+      "description": [
+        "色またはピクセル配列からHSB明度値を抽出します。"
+      ],
       "returns": "Number: 明度値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
@@ -157,7 +163,9 @@
       }
     },
     "green": {
-      "description": ["色またはピクセル配列から緑の値を抽出します。"],
+      "description": [
+        "色またはピクセル配列から緑の値を抽出します。"
+      ],
       "returns": "Number: 緑の値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
@@ -186,14 +194,18 @@
       }
     },
     "lightness": {
-      "description": ["色またはピクセル配列からHSL輝度値を抽出します。"],
+      "description": [
+        "色またはピクセル配列からHSL輝度値を抽出します。"
+      ],
       "returns": "Number: 輝度",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
       }
     },
     "red": {
-      "description": ["色またはピクセル配列から赤の値を抽出します。"],
+      "description": [
+        "色またはピクセル配列から赤の値を抽出します。"
+      ],
       "returns": "Number: 赤の値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
