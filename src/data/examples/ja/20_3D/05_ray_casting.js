@@ -1,7 +1,7 @@
 /*
  * @name レイキャスティング
  * @arialabel 画面の中央に白い正方形があり、薄ピンクと濃ピンクの2色で斜めに分割された空間が描かれています。白い正方形は奥壁であり、ピンク色は他の4つの壁を形作っています。ユーザーのマウス操作により、球体のオブジェクトが3D壁面の凹凸にしたがって移動します。
- * @description オリジナルサンプルは Jonathan Watson によって作られました。
+ * @description オリジナルサンプルはJonathan Watsonによって作られました。
  * <br><br>レイキャスティング（光源の追跡）を使用して、マウスの3D空間上の位置を検出します。
  */
 const objects = [];
@@ -62,11 +62,11 @@ function draw() {
   const x = mouseX - width / 2;
   const y = mouseY - height / 2;
 
-  const Q = createVector(0, 0, eyeZ); // 光線上の点とカメラの初期位置です。
-  const v = createVector(x, y, -eyeZ); // 光線の方向ベクトルです。
+  const Q = createVector(0, 0, eyeZ); // 光線上の点とカメラの初期位置
+  const v = createVector(x, y, -eyeZ); // 光線の方向ベクトル
 
-  let intersect; // 光線とオブジェクトの交点です。
-  let closestLambda = eyeZ * 10; // 描画距離です。
+  let intersect; // 光線とオブジェクトの交点
+  let closestLambda = eyeZ * 10; // 描画距離
 
   for (let x = 0; x < objects.length; x += 1) {
     let object = objects[x];
@@ -87,7 +87,7 @@ function draw() {
   pop();
 }
 
-// 無限に広がる平面のクラスです。
+// 無限に広がる平面のクラス
 class IntersectPlane {
   constructor(n1, n2, n3, p1, p2, p3) {
     this.normal = createVector(n1, n2, n3); // 平面の法線ベクトル
