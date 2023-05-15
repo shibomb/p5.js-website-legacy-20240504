@@ -1,7 +1,7 @@
 /*
- * @name width と Height
- * @arialabel 灰色と緑色の水平線のパターン。左半分は白の垂直線も含む。左半分は２つの三角形に分けられ、片方は緑の縞模様、もう一方は白の縞模様が多い
- * @description 変数 'width' と 'height' には、
+ * @name widthとHeight
+ * @arialabel 左半分には白の垂直線も含まれ、2つの三角形に分けられています。片方は緑の縞模様、もう一方は白の縞模様が目立つように描画されています。
+ * @description 変数「width」と「height」には、
  * createCanvas()関数で定義された表示ウィンドウの幅と高さが格納されます。
  */
 function setup() {
