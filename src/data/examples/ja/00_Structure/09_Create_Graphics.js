@@ -1,9 +1,9 @@
 /*
  * @name Create Graphics
- * @arialabel Black background with a very dark grey rectangle in the middle. The user’s mouse draws in white but not on the center rectangle.
- * @description Creates and returns a new p5.Renderer object. Use this
- * class if you need to draw into an off-screen graphics buffer. The two parameters
- * define the width and height in pixels.
+ * @arialabel 黒い背景上の真ん中に、非常に濃いグレーの長方形があります。ユーザーのマウスは白で描画されますが、中央の長方形には描画されません。
+ * @description 新しくp5.Rendererオブジェクトを生成して返します。
+ * オフスクリーンのグラフィック バッファを描画したいときはこのclassを利用します。
+ * 二つのパラメータはwidth（幅）とheight（高さ）をピクセル単位で定義しています。
  */
 
 let pg;
@@ -25,6 +25,6 @@ function draw() {
   pg.stroke(255);
   pg.ellipse(mouseX - 150, mouseY - 75, 60, 60);
 
-  //Draw the offscreen buffer to the screen with image()
+  // image()でオフスクリーン バッファを画面に描画します。
   image(pg, 150, 75);
 }
