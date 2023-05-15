@@ -112,7 +112,7 @@ get started:
   environment3: を使うことができます。
   environment4: でセットアップする手順を以下に示しますが、他の良いエディタオプションには
   environment5: また、
-  environment6: 'もあります。スクリーン・リーダー・ユーザーで p5 ウェブ・エディタを使用しない場合は、これらも良いでしょう:'
+  environment6: 'もあります。スクリーン リーダー ユーザーで p5 ウェブ エディタを使用しない場合は、これらも良いでしょう:'
   environment7: または
   environment8: >-
     Sublime を開き、ファイルメニューから開くを選択して、 html ファイルと js ファイルが含まれるフォルダを選択します。
@@ -249,7 +249,7 @@ download:
     Processing 財団のフェローである Digital Citizens Lab は、International Center of
     Photography で STEM 教育に関するパネルを主催しました（画像クレジット: International Center of
     Photography）。
-  support-27: アーロン・モントーヤ・モラガ氏が指導する p5.js ワークショップに参加する参加者たち（画像クレジット: Aarón Montoya-Moraga）。
+  support-27: Aarón Montoya-Moraga氏が指導する p5.js ワークショップに参加する参加者たち（画像クレジット: Aarón Montoya-Moraga）。
   support-28: >-
     Taeyoon Choi 氏が主催する手話を基にした p5.js ワークショップを支援する Claire Kearney-Volpe 氏（画像クレジット: Taeyoon
     Choi）。
@@ -748,7 +748,7 @@ learn:
   writing-a-tutorial-author: このチュートリアルは Tega Brain によって執筆されました。
   writing-a-tutorial-1: >-
     教育者、寄稿者、一般のエンスージアストに p5js チュートリアルの投稿をお願いしています。
-    p5js プロジェクトは、クリエイティブ・コーディングとオープンソース開発を多様なコミュニティによりアクセスしやすくし、開発プロセスのあらゆる側面に関するチュートリアルを公開することに興奮しています。
+    p5js プロジェクトは、クリエイティブ コーディングとオープンソース開発を多様なコミュニティによりアクセスしやすくし、開発プロセスのあらゆる側面に関するチュートリアルを公開することに興奮しています。
     これまでの教材には、p5 の学習ガイド、プログラミング技法、オープンソースプロジェクトへの貢献方法などが含まれています。
   writing-a-tutorial-2: 新しい書かれたチュートリアルの投稿を歓迎し、このガイドでは提案、準備、投稿の手順を説明します。
   writing-a-tutorial-how-start-title: '始め方:'
@@ -923,7 +923,7 @@ learn:
     もしエラーがあったりコメントがあれば、
   curves-description2: ' お知らせください。'
   curves-description3: この作品は、
-  curves-description4: ' クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際 ライセンスでライセンスされています。'
+  curves-description4: ' クリエイティブ コモンズ 表示 - 非営利 - 継承 4.0 国際 ライセンスでライセンスされています。'
   curves-p1x1: 'この短いチュートリアルでは、p5.js の 3 つのカーブタイプを紹介します: 円弧、スプライン曲線、およびベジェ曲線。'
   curves-arcs-title: ' 円弧 '
   curves-arcs-p1x1: '円弧は描画するのに最も簡単なカーブであり、楕円の一部として定義されています。次のパラメータで関数を呼び出します:'
@@ -1084,7 +1084,7 @@ libraries:
   p5.mapper: p5.mapper は、p5.js 用の投影マッピングライブラリで、インタラクティブでアルゴリズミックなスケッチを簡単にコーディングすることができます。
   p5.teach: 初心者向けの p5.js 用数学アニメーションライブラリです。Nick McIntyre と Jithin KS の指導のもとで作成されました。
   p5.fab: p5.fab は、p5.js からデジタルファブリケーションマシンを制御します。
-  p5.utils: クリエイティブ・コーディング・クラスの生徒たちを支援するための、便利なツールや追加機能のセットです。
+  p5.utils: クリエイティブ コーディング クラスの生徒たちを支援するための、便利なツールや追加機能のセットです。
   using-a-library-title: ライブラリの使用
   using-a-library1: >-
     p5.js ライブラリは、p5.js のコア機能を拡張または追加する任意の JavaScript コードです。ライブラリには 2 つのカテゴリがあります。コアライブラリ（
@@ -1124,7 +1124,7 @@ community:
   notes1: ぜひ私たちの
   notes2: p5.js の行動規範
   notes3: もご覧ください。p5.js コミュニティ声明は、
-  notes4: クリエイティブ・コモンズ・ライセンス
+  notes4: クリエイティブ コモンズ ライセンス
   notes5: の下でライセンスされています。帰属表示を含めれば自由に共有、改変できます。
   contribute-title: 貢献する
   contribute1: 私たちのコミュニティでは、さまざまな方法で熱心な人々の協力を求めています。
