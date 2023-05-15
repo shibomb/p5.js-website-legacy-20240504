@@ -74,7 +74,7 @@
     "returns": "p5: p5インスタンス",
     "params": {
       "sketch": "Function: 与えられたp5インスタンスにオプションで<a href=\"#/p5/preload\">preload()</a>、<a href=\"#/p5/setup\">setup()</a>、および/または<a href=\"#/p5/draw\">draw()</a>プロパティを設定できるクロージャー",
-      "node": "HTMLElement:（オプション）aキャンバスをアタッチする要素"
+      "node": "HTMLElement:（オプション）キャンバスをアタッチする要素"
     },
     "describe": {
       "description": [
@@ -118,21 +118,27 @@
       }
     },
     "alpha": {
-      "description": ["色またはピクセル配列からアルファ値を抽出します。"],
+      "description": [
+        "色またはピクセル配列からアルファ値を抽出します。"
+      ],
       "returns": "Number: アルファ値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
       }
     },
     "blue": {
-      "description": ["色またはピクセル配列から青の値を抽出します。"],
+      "description": [
+        "色またはピクセル配列から青の値を抽出します。"
+      ],
       "returns": "Number: 青の値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
       }
     },
     "brightness": {
-      "description": ["色またはピクセル配列からHSB明度値を抽出します。"],
+      "description": [
+        "色またはピクセル配列からHSB明度値を抽出します。"
+      ],
       "returns": "Number: 明度値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
@@ -157,7 +163,9 @@
       }
     },
     "green": {
-      "description": ["色またはピクセル配列から緑の値を抽出します。"],
+      "description": [
+        "色またはピクセル配列から緑の値を抽出します。"
+      ],
       "returns": "Number: 緑の値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
@@ -186,14 +194,18 @@
       }
     },
     "lightness": {
-      "description": ["色またはピクセル配列からHSL輝度値を抽出します。"],
+      "description": [
+        "色またはピクセル配列からHSL輝度値を抽出します。"
+      ],
       "returns": "Number: 輝度",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
       }
     },
     "red": {
-      "description": ["色またはピクセル配列から赤の値を抽出します。"],
+      "description": [
+        "色またはピクセル配列から赤の値を抽出します。"
+      ],
       "returns": "Number: 赤の値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>オブジェクト、カラー コンポーネント、またはCSSカラー"
@@ -202,7 +214,7 @@
     "saturation": {
       "description": [
         "色またはピクセル配列から彩度の値を抽出します。",
-        "彩度は、HSBとHSLで異なるスケールで表されます。この関数は、HSB カラーオブジェクトを指定した場合（またはカラーモードがHSBの場合にピクセル配列を指定した場合）には、HSB 彩度を返しますが、それ以外の場合は HSL 彩度がデフォルトになります。"
+        "彩度は、HSBとHSLで異なるスケールで表されます。この関数は、HSBカラー オブジェクトを指定した場合（またはカラー モードがHSBの場合にピクセル配列を指定した場合）には、HSB彩度を返しますが、それ以外の場合はHSL彩度がデフォルトになります。"
       ],
       "returns": "Number: 彩度の値",
       "params": {
@@ -211,22 +223,22 @@
     },
     "background": {
       "description": [
-        "<a href=\"#/p5/background\">background()</a>関数は、p5.jsキャンバスの背景に使用される色を設定します。デフォルトの背景は透明です。この関数は通常、<a href=\"#/p5/draw\">draw()</a> 内で各フレームの開始時にディスプレイウィンドウをクリアするために使用されますが、<a href=\"#/p5/setup\">setup()</a> 内で最初のフレームの背景を設定するために使用されることもありますし、背景を一度だけ設定する必要がある場合にも使用できます。",
-        "色は、現在の<a href=\"#/p5/colorMode\">colorMode</a>に応じて、RGB、HSB、HSLカラーで指定されます。(デフォルトのカラースペースはRGBで、各値の範囲は0から255です)。デフォルトでは、アルファの範囲も0から255です。",
+        "<a href=\"#/p5/background\">background()</a>関数は、p5.jsキャンバスの背景に使用される色を設定します。デフォルトの背景は透明です。この関数は通常、<a href=\"#/p5/draw\">draw()</a>内で各フレームの開始時にディスプレイ ウィンドウをクリアするために使用されますが、<a href=\"#/p5/setup\">setup()</a>内でアニメーションの最初のフレームの背景を設定するために使用されることもありますし、背景を一度だけ設定する必要がある場合にも使用できます。",
+        "色は、現在の<a href=\"#/p5/colorMode\">colorMode</a>に応じて、RGB、HSB、HSLカラーで指定されます。（デフォルトのカラー スペースはRGBで、各値の範囲は0から255です）。デフォルトでは、アルファの範囲も0から255です。",
         "単一の文字列引数が提供された場合、RGB、RGBA、および16進数のCSSカラー文字列およびすべての名前付きカラー文字列がサポートされます。この場合、2番目の引数としてのアルファ数値はサポートされず、RGBA形式を使用する必要があります。",
-        "背景色を設定するために、<a href=\"#/p5.Color\">p5.Color</a>オブジェクトも提供できます。",
-        "背景画像として設定するために、<a href=\"#/p5.Image\">p5.Image</a>も提供できます。"
+        "<a href=\"#/p5.Color\">p5.Color</a>オブジェクトを渡して背景色を設定することもできます。",
+        "また、<a href=\"#/p5.Image\">p5.Image</a>を渡して背景画像を設定することもできます。"
       ],
       "params": {
         "color": "p5.Color: <a href=\"#/p5/color\">color()</a>関数で作成された任意の値",
         "colorstring": "String: カラー文字列、対応する形式は次のとおりです: 整数rgb()またはrgba()、パーセンテージ、rgb()またはrgba()、3桁の16進数、6桁の16進数",
-        "a": "Number: (オプション) 現在のカラー範囲に対する背景の不透明度 (デフォルトは0-255)",
+        "a": "Number:（オプション）現在のカラー範囲に対する背景の不透明度（デフォルトは0-255）",
         "gray": "Number: 白と黒の間の値を指定",
-        "v1": "Number: 現在のカラーモードに応じた赤または色相の値",
-        "v2": "Number: 現在のカラーモードに応じた緑または彩度の値",
-        "v3": "Number: 現在のカラーモードに応じた青または明るさの値",
+        "v1": "Number: 現在のカラー モードに応じた赤または色相の値",
+        "v2": "Number: 現在のカラー モードに応じた緑または彩度の値",
+        "v3": "Number: 現在のカラー モードに応じた青または明るさの値",
         "values": "Number[]: 色の赤、緑、青、およびアルファ成分を含む配列",
-        "image": "p5.Image: 背景として設定する<a href=\"#/p5/loadImage\">loadImage()</a>または<a href=\"#/p5/createImage\">createImage()</a>で作成された画像（スケッチウィンドウと同じサイズである必要があります）"
+        "image": "p5.Image: 背景として設定する<a href=\"#/p5/loadImage\">loadImage()</a>または<a href=\"#/p5/createImage\">createImage()</a>で作成された画像（スケッチ ウィンドウと同じサイズである必要があります）"
       }
     },
     "clear": {
@@ -244,20 +256,20 @@
     "colorMode": {
       "description": [
         "<a href=\"#/p5/colorMode\">colorMode()</a>は、p5.jsが色データを解釈する方法を変更します。デフォルトでは、<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/stroke\">stroke()</a>、<a href=\"#/p5/background\">background()</a>、および<a href=\"#/p5/color\">color()</a>のパラメーターは、RGBカラーモデルを使用して0から255の間の値で定義されます。これは、colorMode(RGB, 255) を設定することと同等です。colorMode(HSB) を設定すると、代わりにHSBシステムを使用できます。デフォルトでは、これは colorMode(HSB, 360, 100, 100, 1) です。HSLも使用できます。",
-        "注: 既存のカラーオブジェクトは、それらが作成されたモードを記憶しているため、外観に影響を与えることなく、好きなようにモードを変更できます。"
+        "注: 既存のカラー オブジェクトは、それらが作成されたモードを記憶しているため、外観に影響を与えることなく、好きなようにモードを変更できます。"
       ],
       "params": {
         "mode": "Constant: RGB、HSB、またはHSLのいずれか。それぞれ、赤/緑/青と色相/彩度/明度（または輝度）に対応します。",
         "max": "Number: (オプション) すべての値の範囲",
-        "max1": "Number: 現在のカラーモードに応じて、赤または色相の範囲",
-        "max2": "Number: 現在のカラーモードに応じて、緑または彩度の範囲",
-        "max3": "Number: 現在のカラーモードに応じて、青または明度/輝度の範囲",
+        "max1": "Number: 現在のカラー モードに応じて、赤または色相の範囲",
+        "max2": "Number: 現在のカラー モードに応じて、緑または彩度の範囲",
+        "max3": "Number: 現在のカラー モードに応じて、青または明度/輝度の範囲",
         "maxA": "Number: (オプション) アルファの範囲"
       }
     },
     "fill": {
       "description": [
-        "図形に塗りつぶし色を設定します。たとえば、fill(204, 102, 0) を実行すると、その後に描画されるすべての図形はオレンジ色で塗りつぶされます。この色は、現在の<a href=\"#/p5/colorMode\">colorMode()</a>によってRGBまたはHSBのいずれかで指定されます。 (デフォルトのカラースペースはRGBで、各値の範囲は0から255です) アルファの範囲もデフォルトでは0から255です。",
+        "図形に塗りつぶし色を設定します。たとえば、fill(204, 102, 0) を実行すると、その後に描画されるすべての図形はオレンジ色で塗りつぶされます。この色は、現在の<a href=\"#/p5/colorMode\">colorMode()</a>によってRGBまたはHSBのいずれかで指定されます。 (デフォルトのカラー スペースはRGBで、各値の範囲は0から255です) アルファの範囲もデフォルトでは0から255です。",
         "単一の文字列引数が提供された場合、RGB、RGBA、16進数のCSSカラー文字列、および、すべての名前付きカラー文字列がサポートされます。この場合、2番目の引数としてのアルファ数値はサポートされず、RGBA形式を使用する必要があります。",
         "塗りつぶし色を設定するために、<a href=\"#/p5.Color\">p5.Color</a>オブジェクトも提供できます。"
       ],
@@ -1210,7 +1222,7 @@
     },
     "blendMode": {
       "description": [
-        "定義されたモードにしたがって、ディスプレイウィンドウ内のピクセルをブレンドします。ソースピクセル（A）をディスプレイウィンドウ内の既存のピクセル（B）とブレンドするために、次のモードを選択できます。: <ul> <li><code>BLEND</code> - 色の線形補間:C = A*factor + B。 <b>これがデフォルトのブレンドモードです。</b></li> <li><code>ADD</code> - AとBの和</li> <li><code>DARKEST</code> - 最も暗い色だけが成功:C = min(A*factor, B)。</li> <li><code>LIGHTEST</code> - 最も明るい色だけが成功:C = max(A*factor, B)。</li> <li><code>DIFFERENCE</code> - 背景画像から色を減算します。<em>(2D)</em></li> <li><code>EXCLUSION</code> - <code>DIFFERENCE</code>に似ていますが、それほど極端ではありません。</li> <li><code>MULTIPLY</code> - 色を乗算し、結果は常に暗くなります。</li> <li><code>SCREEN</code> - 乗算の反対で、色の逆数を使用します。</li> <li><code>REPLACE</code> - ピクセルは他のピクセルと完全に置き換えられ、アルファ（透明度）値を使用しません。</li> <li><code>REMOVE</code> - Aのアルファ強度でBからピクセルを削除します。</li> <li><code>OVERLAY</code> - <code>MULTIPLY</code>と<code>SCREEN </code>のミックス。暗い値を乗算し、明るい値をスクリーンにします。<em>(2D)</em></li> <li><code>HARD_LIGHT</code> - 50%以上の灰色の場合は<code>SCREEN</code>、それ以下の場合は<code>MULTIPLY</code>。<em>(2D)</em></li> <li><code>SOFT_LIGHT</code> - <code>DARKEST</code>と<code>LIGHTEST</code>のミックス。<code>OVERLAY</code>のように機能しますが、それほど厳しくありません。<em>(2D)</em></li> <li><code>DODGE</code> - 明るいトーンを明るくし、コントラストを高め、暗い部分を無視します。<em>(2D)</em></li> <li><code>BURN</code> - 暗い領域が適用され、コントラストが増加し、ライトを無視します。<em>(2D)</em></li> <li><code>SUBTRACT</code> - AとBの残差 <em>(3D)</em></li> </ul>",
+        "定義されたモードにしたがって、ディスプレイ ウィンドウ内のピクセルをブレンドします。ソースピクセル（A）をディスプレイ ウィンドウ内の既存のピクセル（B）とブレンドするために、次のモードを選択できます。: <ul> <li><code>BLEND</code> - 色の線形補間:C = A*factor + B。 <b>これがデフォルトのブレンドモードです。</b></li> <li><code>ADD</code> - AとBの和</li> <li><code>DARKEST</code> - 最も暗い色だけが成功:C = min(A*factor, B)。</li> <li><code>LIGHTEST</code> - 最も明るい色だけが成功:C = max(A*factor, B)。</li> <li><code>DIFFERENCE</code> - 背景画像から色を減算します。<em>(2D)</em></li> <li><code>EXCLUSION</code> - <code>DIFFERENCE</code>に似ていますが、それほど極端ではありません。</li> <li><code>MULTIPLY</code> - 色を乗算し、結果は常に暗くなります。</li> <li><code>SCREEN</code> - 乗算の反対で、色の逆数を使用します。</li> <li><code>REPLACE</code> - ピクセルは他のピクセルと完全に置き換えられ、アルファ（透明度）値を使用しません。</li> <li><code>REMOVE</code> - Aのアルファ強度でBからピクセルを削除します。</li> <li><code>OVERLAY</code> - <code>MULTIPLY</code>と<code>SCREEN </code>のミックス。暗い値を乗算し、明るい値をスクリーンにします。<em>(2D)</em></li> <li><code>HARD_LIGHT</code> - 50%以上の灰色の場合は<code>SCREEN</code>、それ以下の場合は<code>MULTIPLY</code>。<em>(2D)</em></li> <li><code>SOFT_LIGHT</code> - <code>DARKEST</code>と<code>LIGHTEST</code>のミックス。<code>OVERLAY</code>のように機能しますが、それほど厳しくありません。<em>(2D)</em></li> <li><code>DODGE</code> - 明るいトーンを明るくし、コントラストを高め、暗い部分を無視します。<em>(2D)</em></li> <li><code>BURN</code> - 暗い領域が適用され、コントラストが増加し、ライトを無視します。<em>(2D)</em></li> <li><code>SUBTRACT</code> - AとBの残差 <em>(3D)</em></li> </ul>",
         "<em>(2D)</em>は、このブレンドモードが<b>2Dレンダラーのみ</b>で動作することを示します。<em>(3D)</em>は、このブレンドモードが<b>WEBGLレンダラーのみ</b>で動作することを示します。"
       ],
       "params": {
@@ -2100,7 +2112,7 @@
     },
     "pixels": {
       "description": [
-        "ディスプレイウィンドウ内のすべてのピクセルの値を含む<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference /Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a>です。これらの値は数値です。この配列は、ディスプレイウィンドウのサイズ（<a href=\"#/p5/pixelDensity\">pixelDensity</a>の適切な係数を含む）x4で、各ピクセルのR、G、B、Aの値を左から右へ、各行から下へ移動しながら順番に表現しています。Retinaやその他の高密度ディスプレイは、ピクセル密度の二乗の係数であるピクセル[]を持っています。たとえば、画像が100×100ピクセルの場合、40,000になります。Retinaディスプレイでは160,000になります。",
+        "ディスプレイ ウィンドウ内のすべてのピクセルの値を含む<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference /Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a>です。これらの値は数値です。この配列は、ディスプレイ ウィンドウのサイズ（<a href=\"#/p5/pixelDensity\">pixelDensity</a>の適切な係数を含む）x4で、各ピクセルのR、G、B、Aの値を左から右へ、各行から下へ移動しながら順番に表現しています。Retinaやその他の高密度ディスプレイは、ピクセル密度の二乗の係数であるピクセル[]を持っています。たとえば、画像が100×100ピクセルの場合、40,000になります。Retinaディスプレイでは160,000になります。",
         "配列の最初の4つの値（インデックス0-3）は、ピクセル(0, 0)のR、G、B、Aの値です。次の4つの値（インデックス4-7）は、ピクセル(1, 0)のR、G、B、Aの値が含まれます。一般的には、(x, y)のピクセルの値を設定するには、次のようにします:<pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
         "上記の方法は複雑ですが、任意のpixelDensityで動作する柔軟性があります。<a href=\"#/p5/set\">set()</a>は、任意のpixelDensityで指定された(x, y)に対して<a href=\"#/p5/pixels\">pixels[]</a>内の適切な値を自動的に設定しますが、ピクセル配列に多くの変更が加えられるとパフォーマンスが低下することがあります。",
         "この配列にアクセスする前に、<a href=\"#/p5/loadPixels\">loadPixels()</a>関数でデータをロードする必要があります。配列データが変更された後、<a href=\"#/p5/updatePixels\">updatePixels()</a>関数を実行して変更を更新する必要があります。",
@@ -3763,7 +3775,7 @@
   },
   "p5.Color": {
     "description": [
-      "各色は、その構築時に適用されたカラーモードとレベル最大値を格納します。これらは、入力引数の解釈（構築時およびそのインスタンスの後で）および出力の書式設定（<a href=\"#/p5/saturation\">saturation()</a>の要求時など）に使用されます。",
+      "各色は、その構築時に適用されたカラー モードとレベル最大値を格納します。これらは、入力引数の解釈（構築時およびそのインスタンスの後で）および出力の書式設定（<a href=\"#/p5/saturation\">saturation()</a>の要求時など）に使用されます。",
       "内部的に、理想的なRGBA値を表す浮動小数点配列を、0から1に正規化して格納しています。これから、最も近いスクリーンカラー（0から255のRGBAレベル）を計算し、レンダラーに公開します。",
       "また、計算されたさまざまな表現の正規化された浮動小数点カラーのコンポーネントをキャッシュしています。これは、すでに実行された変換を繰り返さないようにするために行われます。"
     ],
@@ -3773,12 +3785,12 @@
       ],
       "returns": "String: フォーマットされた文字列",
       "params": {
-        "format": "String: (オプション)カラー文字列の書式設定方法。空白にすると、rgba(r、g、b、a)として文字列をフォーマットします。 '#rgb'、 '#rgba'、 '#rrggbb'、および'#rrggbbaa'は16進数のカラーコードとしてフォーマットされます。 'rgb'、 'hsb'、および'hsl'は、指定されたカラーモードでフォーマットされたカラーを返します。 'rgba'、 'hsba'、および'hsla'は、上記と同じですがアルファチャネルが含まれます。 'rgb%'、 'hsb%'、 'hsl%'、 'rgba%'、 'hsba%'、および'hsla%'はパーセントとしてフォーマットされます。"
+        "format": "String: (オプション)カラー文字列の書式設定方法。空白にすると、rgba(r、g、b、a)として文字列をフォーマットします。 '#rgb'、 '#rgba'、 '#rrggbb'、および'#rrggbbaa'は16進数のカラーコードとしてフォーマットされます。 'rgb'、 'hsb'、および'hsl'は、指定されたカラー モードでフォーマットされたカラーを返します。 'rgba'、 'hsba'、および'hsla'は、上記と同じですがアルファチャネルが含まれます。 'rgb%'、 'hsb%'、 'hsl%'、 'rgba%'、 'hsba%'、および'hsla%'はパーセントとしてフォーマットされます。"
       }
     },
     "setRed": {
       "description": [
-        "setRedメソッドは、カラーの赤の成分を設定します。範囲は、カラーモードによって異なります。デフォルトのRGBモードでは、0から255の範囲です。"
+        "setRedメソッドは、カラーの赤の成分を設定します。範囲は、カラー モードによって異なります。デフォルトのRGBモードでは、0から255の範囲です。"
       ],
       "params": {
         "red": "Number: 新しい赤の値"
@@ -3786,7 +3798,7 @@
     },
     "setGreen": {
       "description": [
-        "setGreenメソッドは、色の緑成分を設定します。範囲はカラーモードによって異なり、デフォルトのRGBモードでは0から255の間です。"
+        "setGreenメソッドは、色の緑成分を設定します。範囲はカラー モードによって異なり、デフォルトのRGBモードでは0から255の間です。"
       ],
       "params": {
         "green": "Number: 新しい緑の値"
@@ -3794,7 +3806,7 @@
     },
     "setBlue": {
       "description": [
-        "setBlueメソッドは、色の青成分を設定します。範囲はカラーモードによって異なり、デフォルトのRGBモードでは0から255の間です。"
+        "setBlueメソッドは、色の青成分を設定します。範囲はカラー モードによって異なり、デフォルトのRGBモードでは0から255の間です。"
       ],
       "params": {
         "blue": "Number: 新しい青の値"
@@ -3802,7 +3814,7 @@
     },
     "setAlpha": {
       "description": [
-        "setAlphaメソッドは、色の透明度（アルファ）値を設定します。範囲はカラーモードによって異なり、デフォルトのRGBモードでは0から255の間です。"
+        "setAlphaメソッドは、色の透明度（アルファ）値を設定します。範囲はカラー モードによって異なり、デフォルトのRGBモードでは0から255の間です。"
       ],
       "params": {
         "alpha": "Number: 新しいアルファ値"
@@ -4454,7 +4466,7 @@
     },
     "pixels": {
       "description": [
-        "ディスプレイウィンドウ内のすべてのピクセルの値を含む配列です。これらの値は数値です。この配列のサイズは、ピクセル密度の適切な係数を含めたディスプレイウィンドウのサイズ×4で、各ピクセルのR、G、B、A値が順番に表示されます。左から右に各行を移動し、各列を下に移動します。Retinaやその他の高密度ディスプレイでは、ピクセルがより多く存在します（pixelDensity^2倍）。「たとえば、画像が100×100ピクセルの場合、40000ピクセルがあります。pixelDensity = 2の場合、160000になります。配列内の最初の4つの値（インデックス0〜3）は、（0、0）のピクセルのR、G、B、A値です。次の4つの値（インデックス4〜7）には、（1、0）のピクセルのR、G、B、A値が含まれます。一般的に、（x、y）のピクセルの値を設定するには:<pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
+        "ディスプレイ ウィンドウ内のすべてのピクセルの値を含む配列です。これらの値は数値です。この配列のサイズは、ピクセル密度の適切な係数を含めたディスプレイ ウィンドウのサイズ×4で、各ピクセルのR、G、B、A値が順番に表示されます。左から右に各行を移動し、各列を下に移動します。Retinaやその他の高密度ディスプレイでは、ピクセルがより多く存在します（pixelDensity^2倍）。「たとえば、画像が100×100ピクセルの場合、40000ピクセルがあります。pixelDensity = 2の場合、160000になります。配列内の最初の4つの値（インデックス0〜3）は、（0、0）のピクセルのR、G、B、A値です。次の4つの値（インデックス4〜7）には、（1、0）のピクセルのR、G、B、A値が含まれます。一般的に、（x、y）のピクセルの値を設定するには:<pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
         "この配列にアクセスする前に、<a href=\"#/p5.Image/loadPixels\">loadPixels()</a>関数でデータを読み込む必要があります。配列データが変更された後、変更内容を反映させるには、<a href=\"#/p5.Image/updatePixels\">updatePixels()</a>関数を実行する必要があります。"
       ]
     },
