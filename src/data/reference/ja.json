@@ -260,11 +260,11 @@
       ],
       "params": {
         "mode": "Constant: RGB、HSB、またはHSLのいずれか。それぞれ、赤/緑/青と色相/彩度/明度（または輝度）に対応します。",
-        "max": "Number: (オプション) すべての値の範囲",
+        "max": "Number:（オプション) すべての値の範囲",
         "max1": "Number: 現在のカラー モードに応じて、赤または色相の範囲",
         "max2": "Number: 現在のカラー モードに応じて、緑または彩度の範囲",
         "max3": "Number: 現在のカラー モードに応じて、青または明度/輝度の範囲",
-        "maxA": "Number: (オプション) アルファの範囲"
+        "maxA": "Number:（オプション）アルファの範囲"
       }
     },
     "fill": {
@@ -277,7 +277,7 @@
         "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
         "v2": "Number: 現在のカラーレンジに対する緑または彩度の値",
         "v3": "Number: 現在のカラーレンジに対する青または明度の値",
-        "alpha": "Number (オプション)",
+        "alpha": "Number（オプション）",
         "value": "String: カラー文字列",
         "gray": "Number: グレーの値",
         "values": "Number[]: 赤、緑、青、およびアルファ成分を含む配列",
@@ -304,7 +304,7 @@
         "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
         "v2": "Number: 現在のカラーレンジに対する緑または彩度の値",
         "v3": "Number: 現在のカラーレンジに対する青または明度の値",
-        "alpha": "Number (オプション)",
+        "alpha": "Number（オプション）",
         "value": "String: カラー文字列",
         "gray": "Number: グレーの値",
         "values": "Number[]: 色の赤、緑、青、アルファ成分を含む配列",
@@ -317,8 +317,8 @@
         "<a href=\"#/p5/erase\">erase()</a>と<a href=\"#/p5/noErase\">noErase()</a>の間にある<a href=\"#/p5/image\">image()</a>と<a href=\"#/p5/background\">background()</a>での描画は、キャンバスを消去せず、通常どおりに動作します。"
       ],
       "params": {
-        "strengthFill": "Number: (オプション) 形状の塗りつぶしの消去強度の数値（0-255）。引数がない場合、デフォルトで255になり、最大強度になります。",
-        "strengthStroke": "Number: (オプション) 形状のストロークの消去強度の数値（0-255）。引数がない場合、デフォルトで255になり、最大強度になります。"
+        "strengthFill": "Number:（オプション）形状の塗りつぶしの消去強度の数値（0-255）。引数がない場合、デフォルトで255になり、最大強度になります。",
+        "strengthStroke": "Number:（オプション）形状のストロークの消去強度の数値（0-255）。引数がない場合、デフォルトで255になり、最大強度になります。"
       }
     },
     "noErase": {
@@ -338,8 +338,8 @@
         "h": "Number: デフォルトでの円弧の楕円の高さ",
         "start": "Number: 円弧を開始する角度（ラジアンで指定）",
         "stop": "Number: 円弧を終了する角度（ラジアンで指定）",
-        "mode": "Constant: (オプション) 円弧の描画方法を決定するオプションパラメーター。CHORD、PIE、OPENのいずれか",
-        "detail": "Integer: (オプション) WebGL モード専用のオプションパラメーター。これは、円弧の周囲を構成する頂点の数を指定するためのものです。デフォルト値は 25 です。50を超える詳細にはストロークを描画しません。"
+        "mode": "Constant:（オプション）円弧の描画方法を決定するオプションパラメーター。CHORD、PIE、OPENのいずれか",
+        "detail": "Integer:（オプション）WebGL モード専用のオプションパラメーター。これは、円弧の周囲を構成する頂点の数を指定するためのものです。デフォルト値は 25 です。50を超える詳細にはストロークを描画しません。"
       }
     },
     "ellipse": {
@@ -351,8 +351,8 @@
         "x": "Number: 楕円の中心のx座標。",
         "y": "Number: 楕円の中心のy座標。",
         "w": "Number: 楕円の幅。",
-        "h": "Number: (オプション) 楕円の高さ。",
-        "detail": "Integer: (オプション) WEBGL モード専用のオプションパラメーター。これは、楕円の周囲を構成する頂点の数を指定するためのものです。デフォルト値は 25 です。50を超える詳細にはストロークを描画しません。"
+        "h": "Number:（オプション）楕円の高さ。",
+        "detail": "Integer:（オプション）WEBGL モード専用のオプションパラメーター。これは、楕円の周囲を構成する頂点の数を指定するためのものです。デフォルト値は 25 です。50を超える詳細にはストロークを描画しません。"
       }
     },
     "circle": {
@@ -385,7 +385,7 @@
       "params": {
         "x": "Number: x座標",
         "y": "Number: y座標",
-        "z": "Number: (オプション) z座標（WebGLモード用）",
+        "z": "Number:（オプション）z座標（WebGLモード用）",
         "coordinate_vector": "p5.Vector: 座標ベクトル"
       }
     },
@@ -402,8 +402,8 @@
         "y3": "Number: 3番目の点のy座標",
         "x4": "Number: 4番目の点のx座標",
         "y4": "Number: 4番目の点のy座標",
-        "detailX": "Integer: (オプション) x方向のセグメントの数",
-        "detailY": "Integer: (オプション) y方向のセグメントの数",
+        "detailX": "Integer:（オプション）x方向のセグメントの数",
+        "detailY": "Integer:（オプション）y方向のセグメントの数",
         "z1": "Number: 最初の点のz座標",
         "z2": "Number: 2番目の点のz座標",
         "z3": "Number: 3番目の点のz座標",
@@ -419,13 +419,13 @@
         "x": "Number: 長方形のx座標。",
         "y": "Number: 長方形のy座標。",
         "w": "Number: 長方形の幅。",
-        "h": "Number: (オプション) 長方形の高さ。",
-        "tl": "Number: (オプション) 左上の角の半径。",
-        "tr": "Number: (オプション) 右上の角の半径。",
-        "br": "Number: (オプション) 右下の角の半径。",
-        "bl": "Number: (オプション) 左下の角の半径。",
-        "detailX": "Integer: (オプション) x方向のセグメント数（WebGLモード用）",
-        "detailY": "Integer: (オプション) y方向のセグメント数（WebGLモード用）"
+        "h": "Number:（オプション）長方形の高さ。",
+        "tl": "Number:（オプション）左上の角の半径。",
+        "tr": "Number:（オプション）右上の角の半径。",
+        "br": "Number:（オプション）右下の角の半径。",
+        "bl": "Number:（オプション）左下の角の半径。",
+        "detailX": "Integer:（オプション）x方向のセグメント数（WebGLモード用）",
+        "detailY": "Integer:（オプション）y方向のセグメント数（WebGLモード用）"
       }
     },
     "square": {
@@ -437,10 +437,10 @@
         "x": "Number: 正方形のx座標。",
         "y": "Number: 正方形のy座標。",
         "s": "Number: 正方形の辺の長さ。",
-        "tl": "Number: (オプション) 左上の角の半径。",
-        "tr": "Number: (オプション) 右上の角の半径。",
-        "br": "Number: (オプション) 右下の角の半径。",
-        "bl": "Number: (オプション) 左下の角の半径。"
+        "tl": "Number:（オプション）左上の角の半径。",
+        "tr": "Number:（オプション）右上の角の半径。",
+        "br": "Number:（オプション）右下の角の半径。",
+        "bl": "Number:（オプション）左下の角の半径。"
       }
     },
     "triangle": {
@@ -662,7 +662,7 @@
         "<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a>などの変換は<a href=\"#/p5/beginShape\">beginShape()</a>内では機能しません。<a href=\"#/p5/ellipse\">ellipse()</a>や<a href=\"#/p5/rect\">rect()</a>などの他の図形も、<a href=\"#/p5/beginShape\">beginShape()</a>内では使用できません。"
       ],
       "params": {
-        "kind": "Constant: (オプション) POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, QUAD_STRIP, TESSのいずれか"
+        "kind": "Constant:（オプション）POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, QUAD_STRIP, TESSのいずれか"
       }
     },
     "bezierVertex": {
@@ -690,7 +690,7 @@
       "params": {
         "x": "Number: 頂点のx座標",
         "y": "Number: 頂点のy座標",
-        "z": "Number: (オプション) 頂点のz座標 (WebGLモード用)"
+        "z": "Number:（オプション）頂点のz座標 (WebGLモード用)"
       }
     },
     "endContour": {
@@ -704,7 +704,7 @@
         "<a href=\"#/p5/endShape\">endShape()</a>関数は、<a href=\"#/p5/beginShape\">beginShape()</a>とペアで使用され、<a href=\"#/p5/beginShape\">beginShape()</a>の後でのみ呼び出すことができます。<a href=\"#/p5/endshape\">endShape()</a>が呼び出されると、前回の<a href=\"#/p5/beginShape\">beginShape()</a>の呼び出し以降に定義されたすべての画像データが画像バッファに書き込まれます。定数CLOSEを<code>mode</code>パラメーターの値として使用して、図形を閉じる（始点と終点を接続する）ことができます。"
       ],
       "params": {
-        "mode": "Constant: (オプション) 図形を閉じるためにCLOSEを使用"
+        "mode": "Constant:（オプション）図形を閉じるためにCLOSEを使用"
       }
     },
     "quadraticVertex": {
@@ -728,9 +728,9 @@
       "params": {
         "x": "Number: 頂点のx座標",
         "y": "Number: 頂点のy座標",
-        "z": "Number: (オプション)頂点のz座標。指定されていない場合はデフォルトで0になります。",
-        "u": "Number: (オプション)頂点のテクスチャu座標",
-        "v": "Number: (オプション)頂点のテクスチャv座標"
+        "z": "Number:（オプション）頂点のz座標。指定されていない場合はデフォルトで0になります。",
+        "u": "Number:（オプション）頂点のテクスチャu座標",
+        "v": "Number:（オプション）頂点のテクスチャv座標"
       }
     },
     "normal": {
@@ -932,8 +932,8 @@
       ],
       "params": {
         "type": "String|Constant: 組み込み: ARROW, CROSS, HAND, MOVE, TEXT, WAIT  ネイティブCSSプロパティ: 'grab', 'progress', 'cell'など  外部: カーソル画像のパス（許可されるファイル拡張子: .cur, .gif, .jpg, .jpeg, .png）  ネイティブCSSカーソルとurlの詳細については、次のリンクを参照してください: <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/cursor\">https://developer.mozilla.org/en-US/docs/Web/CSS/cursor</a>",
-        "x": "Number: (オプション) カーソルの水平方向のアクティブスポット（32未満である必要があります）",
-        "y": "Number: (オプション) カーソルの垂直方向のアクティブスポット（32未満である必要があります）"
+        "x": "Number:（オプション）カーソルの水平方向のアクティブスポット（32未満である必要があります）",
+        "y": "Number:（オプション）カーソルの垂直方向のアクティブスポット（32未満である必要があります）"
       }
     },
     "frameRate": {
@@ -980,7 +980,7 @@
         "<a href=\"#/p5/windowResized\">windowResized()</a>関数は、ブラウザーウィンドウがリサイズされるたびに一度呼び出されます。これは、キャンバスのサイズを変更したり、新しいウィンドウサイズに合わせて他の調整を行うのに適した場所です。"
       ],
       "params": {
-        "event": "Object: (オプション) オプションのイベントコールバック引数。"
+        "event": "Object:（オプション）オプションのイベントコールバック引数。"
       }
     },
     "width": {
@@ -999,7 +999,7 @@
       ],
       "returns": "Boolean: 現在のフルスクリーン状態",
       "params": {
-        "val": "Boolean: (オプション) スケッチがフルスクリーンモードであるべきかどうか"
+        "val": "Boolean:（オプション）スケッチがフルスクリーンモードであるべきかどうか"
       }
     },
     "pixelDensity": {
@@ -1201,7 +1201,7 @@
       "params": {
         "w": "Number: キャンバスの幅",
         "h": "Number: キャンバスの高さ",
-        "noRedraw": "Boolean: (オプション) キャンバスを直ちに再描画しない"
+        "noRedraw": "Boolean:（オプション）キャンバスを直ちに再描画しない"
       }
     },
     "noCanvas": {
@@ -1217,7 +1217,7 @@
       "params": {
         "w": "Number: オフスクリーングラフィックバッファの幅",
         "h": "Number: オフスクリーングラフィックバッファの高さ",
-        "renderer": "Constant: (オプション) P2DまたはWEBGL。未定義の場合はp2dがデフォルトです。"
+        "renderer": "Constant:（オプション）P2DまたはWEBGL。未定義の場合はp2dがデフォルトです。"
       }
     },
     "blendMode": {
@@ -1330,7 +1330,7 @@
       ],
       "params": {
         "angle": "Number: 現在のangleModeに応じて、ラジアンまたは度で指定された回転角",
-        "axis": "p5.Vector|Number[]: (オプション) (3Dの場合) 回転する軸"
+        "axis": "p5.Vector|Number[]:（オプション）(3Dの場合) 回転する軸"
       }
     },
     "rotateX": {
@@ -1369,8 +1369,8 @@
       ],
       "params": {
         "s": "Number|p5.Vector|Number[]: オブジェクトのスケール率、または複数の引数が与えられた場合はx軸でのオブジェクトのスケール率",
-        "y": "Number: (オプション) y軸でのオブジェクトのスケール率",
-        "z": "Number: (オプション) z軸でのオブジェクトのスケール率（webglのみ）",
+        "y": "Number:（オプション）y軸でのオブジェクトのスケール率",
+        "z": "Number:（オプション）z軸でのオブジェクトのスケール率（webglのみ）",
         "scales": "p5.Vector|Number[]: オブジェクトをスケーリングするための各軸のパーセント"
       }
     },
@@ -1402,7 +1402,7 @@
       "params": {
         "x": "Number: 左/右の移動",
         "y": "Number: 上/下の移動",
-        "z": "Number: (オプション) 前/後ろの移動 (WEBGLのみ)",
+        "z": "Number:（オプション）前/後ろの移動 (WEBGLのみ)",
         "vector": "p5.Vector: 移動するベクトル"
       }
     },
@@ -1464,7 +1464,7 @@
       "returns": "p5.Element|null: 見つかったノードを含む<a href=\"#/p5.Element\">p5.Element</a>",
       "params": {
         "selectors": "String: 検索対象の要素のCSSセレクタ文字列",
-        "container": "String|p5.Element|HTMLElement: (オプション) CSSセレクタ文字列、<a href=\"#/p5.Element\">p5.Element</a>、または検索対象のHTML要素"
+        "container": "String|p5.Element|HTMLElement:（オプション）CSSセレクタ文字列、<a href=\"#/p5.Element\">p5.Element</a>、または検索対象のHTML要素"
       }
     },
     "selectAll": {
@@ -1474,7 +1474,7 @@
       "returns": "p5.Element[]: 見つかったノードを含む<a href=\"#/p5.Element\">p5.Element</a>の配列",
       "params": {
         "selectors": "String: 検索対象の要素のCSSセレクタ文字列",
-        "container": "String|p5.Element|HTMLElement: (オプション) CSSセレクタ文字列、<a href=\"#/p5.Element\">p5.Element</a> 、または検索対象のHTML要素"
+        "container": "String|p5.Element|HTMLElement:（オプション）CSSセレクタ文字列、<a href=\"#/p5.Element\">p5.Element</a> 、または検索対象のHTML要素"
       }
     },
     "removeElements": {
@@ -1504,7 +1504,7 @@
       ],
       "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "html": "String: (オプション) 作成された要素の内部HTML"
+        "html": "String:（オプション）作成された要素の内部HTML"
       }
     },
     "createP": {
@@ -1513,7 +1513,7 @@
       ],
       "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "html": "String: (オプション) 作成された要素の内部HTML"
+        "html": "String:（オプション）作成された要素の内部HTML"
       }
     },
     "createSpan": {
@@ -1522,7 +1522,7 @@
       ],
       "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "html": "String: (オプション) 作成された要素の内部HTML"
+        "html": "String:（オプション）作成された要素の内部HTML"
       }
     },
     "createImg": {
@@ -1534,7 +1534,7 @@
         "src": "String: 画像のsrcパスまたはURL",
         "alt": "String: 画像が読み込まれない場合に使用される<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img#Attributes\">代替テキスト</a>。画像が意図的に表示されない場合は空の文字列（<code>\"\"</code>）を使用できます。",
         "crossOrigin": "String: <code>img</code>要素の<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes\">crossOriginプロパティ</a>。'anonymous'または'use-credentials'を使用して、クロスオリジンアクセスで画像を取得します（後で<code>canvas</code>として使用するため）。空の文字列（<code>\"\"</code>）が渡された場合、CORSは使用されません",
-        "successCallback": "Function: (オプション) 画像データが読み込まれると、引数として<a href=\"#/p5.Element\">p5.Element</a>を使用して呼び出されるコールバック"
+        "successCallback": "Function:（オプション）画像データが読み込まれると、引数として<a href=\"#/p5.Element\">p5.Element</a>を使用して呼び出されるコールバック"
       }
     },
     "createA": {
@@ -1545,7 +1545,7 @@
       "params": {
         "href": "String: リンク先のページのURL",
         "html": "String: リンク要素内に表示する内部HTML",
-        "target": "String: (オプション) 新しいリンクを開く対象。_blank、_self、_parent、_topのいずれか。"
+        "target": "String:（オプション）新しいリンクを開く対象。_blank、_self、_parent、_topのいずれか。"
       }
     },
     "createSlider": {
@@ -1556,8 +1556,8 @@
       "params": {
         "min": "Number:  スライダーの最小値",
         "max": "Number:  スライダーの最大値",
-        "value": "Number:  (オプション) スライダーのデフォルト値",
-        "step": "Number:  (オプション) スライダーの各目盛りのステップサイズ (ステップが0に設定されている場合、スライダーは最小値から最大値まで連続して移動します)"
+        "value": "Number: （オプション）スライダーのデフォルト値",
+        "step": "Number: （オプション）スライダーの各目盛りのステップサイズ (ステップが0に設定されている場合、スライダーは最小値から最大値まで連続して移動します)"
       }
     },
     "createButton": {
@@ -1567,7 +1567,7 @@
       "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
         "label": "String:  ボタンに表示されるラベル",
-        "value": "String:  (オプション) ボタンの値"
+        "value": "String: （オプション）ボタンの値"
       }
     },
     "createCheckbox": {
@@ -1576,8 +1576,8 @@
       ],
       "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
       "params": {
-        "label": "String: (オプション) チェックボックスの後に表示されるラベル",
-        "value": "Boolean: (オプション) チェックボックスの値; チェックされている場合は true、チェックされていない場合は false"
+        "label": "String:（オプション）チェックボックスの後に表示されるラベル",
+        "value": "Boolean:（オプション）チェックボックスの値; チェックされている場合は true、チェックされていない場合は false"
       }
     },
     "createSelect": {
@@ -1586,7 +1586,7 @@
       ],
       "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
-        "multiple": "Boolean: (オプション) ドロップダウンが複数の選択肢をサポートする場合はtrue",
+        "multiple": "Boolean:（オプション）ドロップダウンが複数の選択肢をサポートする場合はtrue",
         "existing": "Object: DOMのselect要素"
       }
     },
@@ -1597,7 +1597,7 @@
       "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
         "containerElement": "Object: すべての既存のラジオ入力がオプションと見なされるdivまたはspanのHTML要素コンテナ。",
-        "name": "String: (オプション) 各入力要素の名前パラメーター。"
+        "name": "String:（オプション）各入力要素の名前パラメーター。"
       }
     },
     "createColorPicker": {
@@ -1626,7 +1626,7 @@
       "returns": "p5.Element: 作成されたDOM要素を保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
         "callback": "Function: ファイルが読み込まれたときのコールバック関数",
-        "multiple": "Boolean: (オプション)複数のファイルを選択できるようにするオプション"
+        "multiple": "Boolean:（オプション）複数のファイルを選択できるようにするオプション"
       }
     },
     "createVideo": {
@@ -1636,7 +1636,7 @@
       "returns": "p5.MediaElement: ビデオ<a href=\"#/p5.MediaElement\">p5.MediaElement</a>へのポインタ",
       "params": {
         "src": "String|String[]: ビデオファイルへのパス、または異なるブラウザーをサポートするためのパスの配列",
-        "callback": "Function: (オプション) 'canplaythrough' イベントが発火したときに呼ばれるコールバック関数。つまり、ブラウザーがメディアを再生でき、コンテンツのさらなるバッファリングが不要な状態でメディアを最後まで再生できると推定されるデータがロードされたとき"
+        "callback": "Function:（オプション）'canplaythrough' イベントが発火したときに呼ばれるコールバック関数。つまり、ブラウザーがメディアを再生でき、コンテンツのさらなるバッファリングが不要な状態でメディアを最後まで再生できると推定されるデータがロードされたとき"
       }
     },
     "createAudio": {
@@ -1645,8 +1645,8 @@
       ],
       "returns": "p5.MediaElement: オーディオへのポインタ <a href=\"#/p5.MediaElement\">p5.MediaElement</a>",
       "params": {
-        "src": "String|String[]: (オプション)オーディオファイルへのパス、または異なるブラウザーをサポートするためのパスの配列",
-        "callback": "Function: (オプション)'canplaythrough' イベントが発火した際に呼び出されるコールバック関数。つまり、ブラウザーがメディアを再生でき、コンテンツのさらなるバッファリングなしにメディアを最後まで再生できると予測される十分なデータがロードされたとき"
+        "src": "String|String[]:（オプション）オーディオファイルへのパス、または異なるブラウザーをサポートするためのパスの配列",
+        "callback": "Function:（オプション）'canplaythrough' イベントが発火した際に呼び出されるコールバック関数。つまり、ブラウザーがメディアを再生でき、コンテンツのさらなるバッファリングなしにメディアを最後まで再生できると予測される十分なデータがロードされたとき"
       }
     },
     "createCapture": {
@@ -1658,7 +1658,7 @@
       "returns": "p5.Element: キャプチャビデオ <a href=\"#/p5.Element\">p5.Element</a>",
       "params": {
         "type": "String|Constant|Object: キャプチャのタイプで、VIDEO や AUDIO が指定されていない場合はデフォルトで両方、またはConstraintsオブジェクト",
-        "callback": "Function: (オプション) ストリームがロードされたら呼ばれる関数"
+        "callback": "Function:（オプション）ストリームがロードされたら呼ばれる関数"
       }
     },
     "createElement": {
@@ -1666,7 +1666,7 @@
       "returns": "p5.Element: 作成されたノードを保持する<a href=\"#/p5.Element\">p5.Element</a>へのポインタ",
       "params": {
         "tag": "String: 新しい要素のタグ",
-        "content": "String: (オプション) 要素に挿入されるHTMLコンテンツ"
+        "content": "String:（オプション）要素に挿入されるHTMLコンテンツ"
       }
     },
     "deviceOrientation": {
@@ -1801,7 +1801,7 @@
         "オペレーティングシステムがキーのリピートを処理する方法のため、キーを押し続けると、<a href=\"#/p5/keyTyped\">keyTyped()</a>（および<a href=\"#/p5/keyReleased\">keyReleased()</a>も）が複数回呼び出される場合があります。リピートの速度は、オペレーティングシステムと各コンピューターの設定によって決まります。ブラウザーは、さまざまなキーイベントに対してデフォルトの動作をもつ場合があります。このイベントのデフォルト動作を防ぐには、「return false」をメソッドの最後に追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意のKeyboardEventコールバック引数。"
+        "event": "Object:（オプション）任意のKeyboardEventコールバック引数。"
       }
     },
     "keyReleased": {
@@ -1809,7 +1809,7 @@
         "<a href=\"#/p5/keyReleased\">keyReleased()</a>関数は、キーが離されるたびに1回呼び出されます。<a href=\"#/p5/key\">key</a>および<a href=\"#/p5/keyCode\">keyCode</a>を参照してください。ブラウザーには、さまざまなキーイベントに対して異なるデフォルトの動作が関連付けられている場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に \"return false\" を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意のKeyboardEventコールバック引数。"
+        "event": "Object:（オプション）任意のKeyboardEventコールバック引数。"
       }
     },
     "keyTyped": {
@@ -1818,7 +1818,7 @@
         "オペレーティングシステムがキーリピートを処理する方法のため、キーを押し続けると、<a href=\"#/p5/keyTyped\">keyTyped()</a>（および<a href=\"#/p5/keyReleased\">keyReleased()</a>）が複数回呼び出されます。リピートの速度は、オペレーティングシステムと各コンピューターの設定によって決まります。ブラウザーには、さまざまなキーイベントに対して異なるデフォルトの動作が付与されている場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "オブジェクト: (オプション) オプションのKeyboardEventコールバック引数。"
+        "event": "オブジェクト:（オプション）オプションのKeyboardEventコールバック引数。"
       }
     },
     "keyIsDown": {
@@ -1903,7 +1903,7 @@
         "<a href=\"#/p5/mouseDragged\">mouseDragged()</a>関数は、マウスが移動し、マウスボタンが押されるたびに1回呼び出されます。 <a href=\"#/p5/mouseDragged\">mouseDragged()</a>関数が定義されていない場合、代わりに<a href=\"#/p5/touchMoved\">touchMoved()</a>関数が呼び出されます（定義されている場合）。ブラウザーには、さまざまなマウスイベントに対して異なるデフォルトの動作が付随している場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意のMouseEventコールバック引数。"
+        "event": "Object:（オプション）任意のMouseEventコールバック引数。"
       }
     },
     "mousePressed": {
@@ -1911,7 +1911,7 @@
         "<a href=\"#/p5/mousePressed\">mousePressed()</a>関数は、マウスボタンが押されるたびに1回呼び出されます。mouseButton変数（関連するリファレンスエントリを参照）を使用して、どのボタンが押されたかを判断できます。<a href=\"#/p5/mousePressed\">mousePressed()</a>関数が定義されていない場合、代わりに<a href=\"#/p5/touchStarted\">touchStarted()</a>関数が呼び出されます（定義されている場合）。ブラウザーには、さまざまなマウスイベントに対して異なるデフォルトの動作が付随している場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意のMouseEventコールバック引数。"
+        "event": "Object:（オプション）任意のMouseEventコールバック引数。"
       }
     },
     "mouseReleased": {
@@ -1919,7 +1919,7 @@
         "<a href=\"#/p5/mouseReleased\">mouseReleased()</a>関数は、マウスボタンが離されるたびに呼び出されます。 <a href=\"#/p5/mouseReleased\">mouseReleased()</a>関数が定義されていない場合、代わりに<a href=\"#/p5/touchEnded\">touchEnded()</a>関数が定義されている場合はそれが呼び出されます。ブラウザーには、さまざまなマウスイベントに関連するデフォルトの動作が異なる場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション)オプションのMouseEventコールバック引数。"
+        "event": "Object:（オプション）オプションのMouseEventコールバック引数。"
       }
     },
     "mouseClicked": {
@@ -1927,7 +1927,7 @@
         "<a href=\"#/p5/mouseClicked\">mouseClicked()</a>関数は、マウスボタンが押されてから離された後に1回だけ呼び出されます。ブラウザーはクリックを異なる方法で処理するため、この関数は左マウスボタンがクリックされたときに実行されることが保証されています。他のマウスボタンが押されたり離されたりするのを処理するには、<a href=\"#/p5/mousePressed\">mousePressed()</a>または<a href=\"#/p5/mouseReleased\">mouseReleased()</a>を参照してください。ブラウザーには、さまざまなマウスイベントに関連するデフォルトの動作が異なる場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション)オプションのMouseEventコールバック引数。"
+        "event": "Object:（オプション）オプションのMouseEventコールバック引数。"
       }
     },
     "doubleClicked": {
@@ -1935,7 +1935,7 @@
         "<a href=\"#/p5/doubleClicked\">doubleClicked()</a>関数は、DOM L3仕様の一部であるdblclickイベントを検出したイベントリスナーがあるたびに実行されます。doubleClickedイベントは、ポインティングデバイスのボタン（通常はマウスのプライマリボタン）がひとつの要素上で2回クリックされると発火します。dblclickイベントの詳細については、mozillaのドキュメントを参照してください: <a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/dblclick\">https://developer.mozilla.org/en-US/docs/Web/Events/dblclick</a>"
       ],
       "params": {
-        "event": "Object: (オプション) 任意のMouseEventコールバック引数。"
+        "event": "Object:（オプション）任意のMouseEventコールバック引数。"
       }
     },
     "mouseWheel": {
@@ -1943,7 +1943,7 @@
         "関数 <a href=\"#/p5/mouseWheel\">mouseWheel()</a>は、実際のマウスホイールまたはタッチパッドによってトリガーされるたびに、垂直方向のマウスホイールイベントが検出されるたびに実行されます。event.deltaプロパティは、マウスホイールがスクロールした量を返します。値は、スクロール方向によって正または負になることがあります（macOSで「ナチュラル」スクロールが有効になっている場合、符号が反転します）。ブラウザーによっては、さまざまなマウスイベントにデフォルトの動作が関連付けられていることがあります。このイベントのデフォルトの動作を防ぐには、メソッドの最後に「return false」を追加します。現在のSafariにおける「wheel」イベントのサポート状況のため、Safariを使用している場合には、期待通りの動作をするために「return false」を含める必要があります。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意のWheelEventコールバック引数。"
+        "event": "Object:（オプション）任意のWheelEventコールバック引数。"
       }
     },
     "requestPointerLock": {
@@ -1967,7 +1967,7 @@
         "touchStarted()関数は、タッチが登録されるたびに1回呼び出されます。もし <a href=\"#/p5/touchStarted\">touchStarted()</a>関数が定義されていない場合、代わりに定義されている <a href=\"#/p5/mousePressed\">mousePressed()</a>関数が呼び出されます。ブラウザーは、さまざまなタッチイベントに対して異なるデフォルトの動作を持っている場合があります。このイベントのデフォルトの動作を防ぐには、メソッドの最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意のTouchEventコールバック引数。"
+        "event": "Object:（オプション）任意のTouchEventコールバック引数。"
       }
     },
     "touchMoved": {
@@ -1975,7 +1975,7 @@
         "<a href=\"#/p5/touchMoved\">touchMoved()</a>関数は、タッチムーブが登録されるたびに呼び出されます。もし <a href=\"#/p5/touchMoved\">touchMoved()</a>関数が定義されていない場合、代わりに定義されている <a href=\"#/p5/mouseDragged\">mouseDragged()</a>関数が呼び出されます。ブラウザーは、さまざまなタッチイベントに対して異なるデフォルトの動作を持っている場合があります。このイベントのデフォルトの動作を防ぐには、メソッドの最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意のTouchEventコールバック引数。"
+        "event": "Object:（オプション）任意のTouchEventコールバック引数。"
       }
     },
     "touchEnded": {
@@ -1983,7 +1983,7 @@
         "<a href=\"#/p5/touchEnded\">touchEnded()</a>関数はタッチが終了するたびに呼び出されます。 <a href=\"#/p5/touchEnded\">touchEnded()</a>関数が定義されていない場合、代わりに定義されている <a href=\"#/p5/mouseReleased\">mouseReleased()</a>関数が呼び出されます。 ブラウザーは、さまざまなタッチイベントに添付された異なるデフォルトの動作をもつことがあります。 このイベントのデフォルトの動作を防ぐには、メソッドの最後に \"return false\" を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意のTouchEventコールバック引数。"
+        "event": "Object:（オプション）任意のTouchEventコールバック引数。"
       }
     },
     "createImage": {
@@ -2003,9 +2003,9 @@
         "現在のキャンバスを画像として保存します。ブラウザーは、ファイルをすぐに保存するか、ダイアログウィンドウでユーザーにプロンプトを表示します。"
       ],
       "params": {
-        "selectedCanvas": "p5.Element|HTMLCanvasElement: 特定のhtml5キャンバスを表す変数 (オプション)",
-        "filename": "String (オプション)",
-        "extension": "String: (オプション) 'jpg'または'png'"
+        "selectedCanvas": "p5.Element|HTMLCanvasElement: 特定のhtml5キャンバスを表す変数（オプション）",
+        "filename": "String（オプション）",
+        "extension": "String:（オプション）'jpg'または'png'"
       }
     },
     "saveFrames": {
@@ -2019,7 +2019,7 @@
         "extension": "String: 'jpg'または'png'",
         "duration": "Number: フレームを保存するための秒単位の期間。このパラメーターは 15 以下に制約されます。",
         "framerate": "Number: フレームを保存するフレームレート。このパラメーターは 22以下に制約されます。",
-        "callback": "Function(Array): (オプション) 画像データを処理するために実行されるコールバック関数。この関数は引数として配列を受け入れる必要があります。配列には、指定された数のフレームオブジェクトが含まれます。各オブジェクトには3つのプロパティがあります:imageData - image/octet-stream、filename、およびextension。"
+        "callback": "Function(Array):（オプション）画像データを処理するために実行されるコールバック関数。この関数は引数として配列を受け入れる必要があります。配列には、指定された数のフレームオブジェクトが含まれます。各オブジェクトには3つのプロパティがあります:imageData - image/octet-stream、filename、およびextension。"
       }
     },
     "loadImage": {
@@ -2032,8 +2032,8 @@
       "returns": "p5.Image: <a href=\"#/p5.Image\">p5.Image</a>オブジェクト",
       "params": {
         "path": "String: 読み込む画像のパス",
-        "successCallback": "function(p5.Image): (オプション) 画像が読み込まれたら呼び出される関数。<a href=\"#/p5.Image\">p5.Image</a> が渡されます。",
-        "failureCallback": "Function(Event): (オプション) 画像の読み込みに失敗した場合、イベントエラーとともに呼び出されます。"
+        "successCallback": "function(p5.Image):（オプション）画像が読み込まれたら呼び出される関数。<a href=\"#/p5.Image\">p5.Image</a> が渡されます。",
+        "failureCallback": "Function(Event):（オプション）画像の読み込みに失敗した場合、イベントエラーとともに呼び出されます。"
       }
     },
     "saveGif": {
@@ -2063,19 +2063,19 @@
         "img": "p5.Image|p5.Element|p5.Texture: 表示する画像",
         "x": "Number: 画像の左上隅のx座標",
         "y": "Number: 画像の左上隅のy座標",
-        "width": "Number: (オプション) 画像を描画する幅",
-        "height": "Number: (オプション) 画像を描画する高さ",
+        "width": "Number:（オプション）画像を描画する幅",
+        "height": "Number:（オプション）画像を描画する高さ",
         "dx": "Number: ソース画像を描画する宛先矩形のx座標",
         "dy": "Number: ソース画像を描画する宛先矩形のy座標",
         "dWidth": "Number: 宛先矩形の幅",
         "dHeight": "Number: 宛先矩形の高さ",
         "sx": "Number: ソース画像のサブセクションを宛先矩形に描画するx座標",
         "sy": "Number: ソース画像のサブセクションを宛先矩形に描画するy座標",
-        "sWidth": "Number: (オプション) ソース画像のサブセクションの幅で、目的の矩形に描画されます",
-        "sHeight": "Number: (オプション) ソース画像のサブセクションの高さで、目的の矩形に描画されます",
-        "fit": "Constant: (オプション) CONTAINまたはCOVERのいずれか",
-        "xAlign": "Constant: (オプション) LEFT, RIGHT, CENTERのいずれか。デフォルトはCENTER",
-        "yAlign": "Constant: (オプション) TOP, BOTTOM, CENTERのいずれか。デフォルトはCENTER"
+        "sWidth": "Number:（オプション）ソース画像のサブセクションの幅で、目的の矩形に描画されます",
+        "sHeight": "Number:（オプション）ソース画像のサブセクションの高さで、目的の矩形に描画されます",
+        "fit": "Constant:（オプション）CONTAINまたはCOVERのいずれか",
+        "xAlign": "Constant:（オプション）LEFT, RIGHT, CENTERのいずれか。デフォルトはCENTER",
+        "yAlign": "Constant:（オプション）TOP, BOTTOM, CENTERのいずれか。デフォルトはCENTER"
       }
     },
     "tint": {
@@ -2167,7 +2167,7 @@
       ],
       "params": {
         "filterType": "Constant: THRESHOLD, GRAY, OPAQUE, INVERT,  POSTERIZE, BLUR, ERODE, DILATE, BLURのいずれか。Filters.jsのドキュメントに各利用可能なフィルターについて記載されています。",
-        "filterParam": "Number: (オプション) 各フィルタに固有のオプションパラメーター。上記を参照"
+        "filterParam": "Number:（オプション）各フィルタに固有のオプションパラメーター。上記を参照"
       }
     },
     "get": {
@@ -2208,10 +2208,10 @@
         "画面に<a href=\"#/p5/pixels\">pixels[]</a>配列のデータを更新します。 <a href=\"#/p5/loadPixels\">loadPixels()</a>と併用して使用してください。 配列からピクセルを読み取るだけであれば、<a href=\"#/p5/updatePixels\">updatePixels()</a>を呼び出す必要はありません。 更新は変更を適用する場合にのみ必要です。 <a href=\"#/p5/updatePixels\">updatePixels()</a>は、pixels配列が操作されるたび、または<a href=\"#/p5/set\">set()</a>が呼び出されるたびに呼び出されるべきであり、<a href=\"#/p5/set\">set()</a>で行われた変更や<a href=\"#/p5/pixels\">pixels[]</a>への直接の変更のみが発生します。"
       ],
       "params": {
-        "x": "Number: (オプション) 更新する領域の左上のx座標",
-        "y": "Number: (オプション) 更新する領域の左上のy座標",
-        "w": "Number: (オプション) 更新する領域の幅",
-        "h": "Number: (オプション) 更新する領域の高さ"
+        "x": "Number:（オプション）更新する領域の左上のx座標",
+        "y": "Number:（オプション）更新する領域の左上のy座標",
+        "w": "Number:（オプション）更新する領域の幅",
+        "h": "Number:（オプション）更新する領域の高さ"
       }
     },
     "loadJSON": {
@@ -2223,10 +2223,10 @@
       "returns": "Object|Array: JSONデータ",
       "params": {
         "path": "String: ロードするファイル名またはURL",
-        "jsonpOptions": "Object: (オプション) jsonp関連設定のオプションオブジェクト",
-        "datatype": "String: (オプション) \"json\"または\"jsonp\"",
-        "callback": "Function: (オプション) <a href=\"#/p5/loadJSON\">loadJSON()</a> 完了後に実行される関数。データが最初の引数として渡されます。",
-        "errorCallback": "Function: (オプション) エラーがあった場合に実行される関数。レスポンスが最初の引数として渡されます。"
+        "jsonpOptions": "Object:（オプション）jsonp関連設定のオプションオブジェクト",
+        "datatype": "String:（オプション）\"json\"または\"jsonp\"",
+        "callback": "Function:（オプション）<a href=\"#/p5/loadJSON\">loadJSON()</a> 完了後に実行される関数。データが最初の引数として渡されます。",
+        "errorCallback": "Function:（オプション）エラーがあった場合に実行される関数。レスポンスが最初の引数として渡されます。"
       }
     },
     "loadStrings": {
@@ -2239,8 +2239,8 @@
       "returns": "String[]: 文字列の配列",
       "params": {
         "filename": "String: ロードするファイル名またはURL",
-        "callback": "Function: (オプション) <a href=\"#/p5/loadStrings\">loadStrings()</a> 完了後に実行される関数。配列が最初の引数として渡されます。",
-        "errorCallback": "Function: (オプション) エラーがあった場合に実行される関数。レスポンスが最初の引数として渡されます。"
+        "callback": "Function:（オプション）<a href=\"#/p5/loadStrings\">loadStrings()</a> 完了後に実行される関数。配列が最初の引数として渡されます。",
+        "errorCallback": "Function:（オプション）エラーがあった場合に実行される関数。レスポンスが最初の引数として渡されます。"
       }
     },
     "loadTable": {
@@ -2252,10 +2252,10 @@
       "returns": "Object: データを含む<a href=\"#/p5.Table\">Table</a>オブジェクト",
       "params": {
         "filename": "String: ロードするファイル名またはURL",
-        "extension": "String: (オプション) カンマ区切りの値「csv」、セミコロン区切りの値「ssv」、タブ区切りの値「tsv」でテーブルを解析する",
-        "header": "String: (オプション) テーブルにヘッダー行があることを示す「header」",
-        "callback": "Function: (オプション) <a href=\"#/p5/loadTable\">loadTable()</a> 完了後に実行される関数。成功時には、<a href=\"#/p5.Table\">Table</a>オブジェクトが最初の引数として渡されます。",
-        "errorCallback": "Function: (オプション) エラーがあった場合に実行される関数。レスポンスが最初の引数として渡されます。"
+        "extension": "String:（オプション）カンマ区切りの値「csv」、セミコロン区切りの値「ssv」、タブ区切りの値「tsv」でテーブルを解析する",
+        "header": "String:（オプション）テーブルにヘッダー行があることを示す「header」",
+        "callback": "Function:（オプション）<a href=\"#/p5/loadTable\">loadTable()</a> 完了後に実行される関数。成功時には、<a href=\"#/p5.Table\">Table</a>オブジェクトが最初の引数として渡されます。",
+        "errorCallback": "Function:（オプション）エラーがあった場合に実行される関数。レスポンスが最初の引数として渡されます。"
       }
     },
     "loadXML": {
@@ -2269,8 +2269,8 @@
       "returns": "Object: データを含むXMLオブジェクト",
       "params": {
         "filename": "String: ロードするファイル名またはURL",
-        "callback": "Function: (オプション) <a href=\"#/p5/loadXML\">loadXML()</a> 完了後に実行される関数。XMLオブジェクトが最初の引数として渡されます。",
-        "errorCallback": "Function: (オプション) エラーがあった場合に実行される関数。レスポンスが最初の引数として渡されます。"
+        "callback": "Function:（オプション）<a href=\"#/p5/loadXML\">loadXML()</a> 完了後に実行される関数。XMLオブジェクトが最初の引数として渡されます。",
+        "errorCallback": "Function:（オプション）エラーがあった場合に実行される関数。レスポンスが最初の引数として渡されます。"
       }
     },
     "loadBytes": {
@@ -2280,8 +2280,8 @@
       "returns": "Object: ロードされたバッファをもつ 'bytes' プロパティをもつオブジェクト",
       "params": {
         "file": "String: ロードするファイル名またはURL",
-        "callback": "Function: (オプション) <a href=\"#/p5/loadBytes\">loadBytes()</a> 完了後に実行される関数",
-        "errorCallback": "Function: (オプション) エラーがあった場合に実行される関数"
+        "callback": "Function:（オプション）<a href=\"#/p5/loadBytes\">loadBytes()</a> 完了後に実行される関数",
+        "errorCallback": "Function:（オプション）エラーがあった場合に実行される関数"
       }
     },
     "httpGet": {
@@ -2291,10 +2291,10 @@
       "returns": "Promise: 操作が正常に完了した場合はデータを含むPromise、エラーが発生した場合はエラーを含むPromiseを返します。",
       "params": {
         "path": "String: ロードするファイル名またはURL",
-        "datatype": "String: (オプション) \"json\", \"jsonp\", \"binary\", \"arrayBuffer\", \"xml\", \"text\"",
-        "data": "Object|Boolean: (オプション) リクエストとともに送信されるパラメーターデータ",
-        "callback": "Function: (オプション) <a href=\"#/p5/httpGet\">httpGet()</a> が完了した後に実行される関数、データは最初の引数として渡されます。",
-        "errorCallback": "Function: (オプション) エラーが発生した場合に実行される関数、レスポンスは最初の引数として渡されます。"
+        "datatype": "String:（オプション）\"json\", \"jsonp\", \"binary\", \"arrayBuffer\", \"xml\", \"text\"",
+        "data": "Object|Boolean:（オプション）リクエストとともに送信されるパラメーターデータ",
+        "callback": "Function:（オプション）<a href=\"#/p5/httpGet\">httpGet()</a> が完了した後に実行される関数、データは最初の引数として渡されます。",
+        "errorCallback": "Function:（オプション）エラーが発生した場合に実行される関数、レスポンスは最初の引数として渡されます。"
       }
     },
     "httpPost": {
@@ -2304,10 +2304,10 @@
       "returns": "Promise: 操作が正常に完了した場合はデータを含むPromise、エラーが発生した場合はエラーを含むPromiseを返します。",
       "params": {
         "path": "String: ロードするファイル名またはURL",
-        "datatype": "String: (オプション) \"json\", \"jsonp\", \"xml\", \"text\"。省略された場合、<a href=\"#/p5/httpPost\">httpPost()</a>が推測します。",
-        "data": "Object|Boolean: (オプション) リクエストとともに送信されるパラメーターデータ",
-        "callback": "Function: (オプション) <a href=\"#/p5/httpPost\">httpPost()</a>が完了した後に実行される関数で、データが最初の引数として渡されます。",
-        "errorCallback": "Function: (オプション) エラーが発生した場合に実行される関数で、レスポンスが最初の引数として渡されます。"
+        "datatype": "String:（オプション）\"json\", \"jsonp\", \"xml\", \"text\"。省略された場合、<a href=\"#/p5/httpPost\">httpPost()</a>が推測します。",
+        "data": "Object|Boolean:（オプション）リクエストとともに送信されるパラメーターデータ",
+        "callback": "Function:（オプション）<a href=\"#/p5/httpPost\">httpPost()</a>が完了した後に実行される関数で、データが最初の引数として渡されます。",
+        "errorCallback": "Function:（オプション）エラーが発生した場合に実行される関数で、レスポンスが最初の引数として渡されます。"
       }
     },
     "httpDo": {
@@ -2317,11 +2317,11 @@
       "returns": "Promise: 操作が正常に完了した場合にデータで解決されるプロミス、またはエラーが発生した後にエラーでリジェクトされるプロミス。",
       "params": {
         "path": "String: 読み込むファイル名またはURL",
-        "method": "String: (オプション) \"GET\"、\"POST\"、または\"PUT\"のいずれかで、デフォルトは\"GET\"",
-        "datatype": "String: (オプション) \"json\"、\"jsonp\"、\"xml\"、または\"text\"",
-        "data": "Object: (オプション) リクエストとともに送信されるパラメーターデータ",
-        "callback": "Function: (オプション) <a href=\"#/p5/httpGet\">httpGet()</a>が完了した後に実行される関数で、データが最初の引数として渡されます。",
-        "errorCallback": "Function: (オプション) エラーが発生した場合に実行される関数で、レスポンスが最初の引数として渡されます。",
+        "method": "String:（オプション）\"GET\"、\"POST\"、または\"PUT\"のいずれかで、デフォルトは\"GET\"",
+        "datatype": "String:（オプション）\"json\"、\"jsonp\"、\"xml\"、または\"text\"",
+        "data": "Object:（オプション）リクエストとともに送信されるパラメーターデータ",
+        "callback": "Function:（オプション）<a href=\"#/p5/httpGet\">httpGet()</a>が完了した後に実行される関数で、データが最初の引数として渡されます。",
+        "errorCallback": "Function:（オプション）エラーが発生した場合に実行される関数で、レスポンスが最初の引数として渡されます。",
         "options": "Object: リクエストオブジェクトのオプションで、\"fetch\" APIの<a href=\"https://developer.mozilla.org/en/docs/Web/API/Fetch_API\">リファレンス</a>に記載されています。"
       }
     },
@@ -2329,7 +2329,7 @@
       "returns": "p5.PrintWriter:",
       "params": {
         "name": "String: 作成するファイルの名前",
-        "extension": "String (オプション)"
+        "extension": "String（オプション）"
       }
     },
     "save": {
@@ -2337,9 +2337,9 @@
         "指定された要素（画像、テキスト、json、csv、wav、html）をクライアントのコンピューターに保存します。最初のパラメーターは、保存したい要素へのポインターが指定できます。要素は、<a href=\"#/p5.Element\">p5.Element</a>、文字列の配列、JSONの配列、JSONオブジェクト、<a href=\"#/p5.Table\">p5.Table </a>、<a href=\"#/p5.Image\">p5.Image</a>、またはp5.SoundFile（p5.soundが必要）のいずれかです。2番目のパラメーターはファイル名（拡張子を含む）。3番目のパラメーターは、このタイプのオブジェクトに特有のオプションです。このメソッドは、指定されたパラメーターに適合するファイルを保存します。要素を指定せずに呼び出された場合、デフォルトでは画像ファイルとしてキャンバス全体が保存されます。そのような場合、最初のパラメーターとしてファイル名をオプションで指定できます。 <strong>draw内でこのメソッドを呼び出すことはお勧めしません。なぜなら、レンダリングごとに新しい保存ダイアログが開くためです。</strong>"
       ],
       "params": {
-        "objectOrFilename": "Object|String: (オプション) ファイル名が指定された場合、ファイル名に応じてpngまたはjpg拡張子の画像としてキャンバスを保存します。 オブジェクトが指定された場合、オブジェクトとファイル名に応じて保存されます（上記の例を参照）。",
-        "filename": "String: (オプション) オブジェクトが最初のパラメーターとして提供された場合、2番目のパラメーターはファイル名を示し、適切なファイル拡張子を含める必要があります（上記の例を参照）。",
-        "options": "Boolean|String: (オプション) 追加のオプションはファイルタイプに依存します。 たとえば、JSONを保存する場合、<code>true</code>は出力がファイルサイズに最適化され、読みやすさではなくなります。"
+        "objectOrFilename": "Object|String:（オプション）ファイル名が指定された場合、ファイル名に応じてpngまたはjpg拡張子の画像としてキャンバスを保存します。 オブジェクトが指定された場合、オブジェクトとファイル名に応じて保存されます（上記の例を参照）。",
+        "filename": "String:（オプション）オブジェクトが最初のパラメーターとして提供された場合、2番目のパラメーターはファイル名を示し、適切なファイル拡張子を含める必要があります（上記の例を参照）。",
+        "options": "Boolean|String:（オプション）追加のオプションはファイルタイプに依存します。 たとえば、JSONを保存する場合、<code>true</code>は出力がファイルサイズに最適化され、読みやすさではなくなります。"
       }
     },
     "saveJSON": {
@@ -2349,7 +2349,7 @@
       "params": {
         "json": "Array|Object",
         "filename": "String",
-        "optimize": "Boolean: (オプション) trueの場合、ファイルサイズを最適化するために、出力ファイルから改行とスペースを削除します (読みやすさは向上しません)。"
+        "optimize": "Boolean:（オプション）trueの場合、ファイルサイズを最適化するために、出力ファイルから改行とスペースを削除します (読みやすさは向上しません)。"
       }
     },
     "saveStrings": {
@@ -2359,8 +2359,8 @@
       "params": {
         "list": "String[]: 書き込むための文字列配列",
         "filename": "String: 出力用のファイル名",
-        "extension": "String: (オプション) ファイル名の拡張子",
-        "isCRLF": "Boolean: (オプション) trueの場合、改行をCRLFに変更"
+        "extension": "String:（オプション）ファイル名の拡張子",
+        "isCRLF": "Boolean:（オプション）trueの場合、改行をCRLFに変更"
       }
     },
     "saveTable": {
@@ -2370,7 +2370,7 @@
       "params": {
         "Table": "p5.Table: ファイルに保存する <a href=\"#/p5.Table\">Table</a>オブジェクト",
         "filename": "String: Table が保存されるべきファイル名",
-        "options": "String: (オプション) \"tsv\"、\"csv\"、\"html\"のいずれか"
+        "options": "String:（オプション）\"tsv\"、\"csv\"、\"html\"のいずれか"
       }
     },
     "abs": {
@@ -2474,7 +2474,7 @@
         "stop1": "Number: 値の現在の範囲の上限",
         "start2": "Number: 値の目標範囲の下限",
         "stop2": "Number: 値の目標範囲の上限",
-        "withinBounds": "Boolean: (オプション) 値を新しくマップされた範囲に制約する"
+        "withinBounds": "Boolean:（オプション）値を新しくマップされた範囲に制約する"
       }
     },
     "max": {
@@ -2527,7 +2527,7 @@
       "returns": "Integer: 四捨五入された数値",
       "params": {
         "n": "Number: 四捨五入する数値",
-        "decimals": "Number: (オプション) 四捨五入する小数点以下の桁数。デフォルトは0"
+        "decimals": "Number:（オプション）四捨五入する小数点以下の桁数。デフォルトは0"
       }
     },
     "sq": {
@@ -2561,9 +2561,9 @@
       ],
       "returns": "p5.Vector:",
       "params": {
-        "x": "Number: (オプション) ベクトルのx成分",
-        "y": "Number: (オプション) ベクトルのy成分",
-        "z": "Number: (オプション) ベクトルのz成分"
+        "x": "Number:（オプション）ベクトルのx成分",
+        "y": "Number:（オプション）ベクトルのy成分",
+        "z": "Number:（オプション）ベクトルのz成分"
       }
     },
     "noise": {
@@ -2573,8 +2573,8 @@
       "returns": "Number: 指定された座標でのPerlinノイズ値（0から1の間）",
       "params": {
         "x": "Number: ノイズ空間のx座標",
-        "y": "Number: (オプション) ノイズ空間のy座標",
-        "z": "Number: (オプション) ノイズ空間のz座標"
+        "y": "Number:（オプション）ノイズ空間のy座標",
+        "z": "Number:（オプション）ノイズ空間のz座標"
       }
     },
     "noiseDetail": {
@@ -2614,8 +2614,8 @@
       ],
       "returns": "Number: ランダムな数",
       "params": {
-        "min": "Number: (オプション) 下限 (含む)",
-        "max": "Number: (オプション) 上限 (含まない)",
+        "min": "Number:（オプション）下限 (含む)",
+        "max": "Number:（オプション）上限 (含まない)",
         "choices": "Array: 選択肢となる配列"
       }
     },
@@ -2625,8 +2625,8 @@
       ],
       "returns": "Number: ランダムな数",
       "params": {
-        "mean": "Number: (オプション) 平均",
-        "sd": "Number: (オプション) 標準偏差"
+        "mean": "Number:（オプション）平均",
+        "sd": "Number:（オプション）標準偏差"
       }
     },
     "acos": {
@@ -2729,7 +2729,7 @@
       ],
       "params": {
         "horizAlign": "Constant: 水平方向のアライメント。LEFT、CENTER、RIGHT",
-        "vertAlign": "Constant:  (オプション)垂直方向のアライメント。TOP、BOTTOM、CENTER、BASELINE"
+        "vertAlign": "Constant: （オプション）垂直方向のアライメント。TOP、BOTTOM、CENTER、BASELINE"
       }
     },
     "textLeading": {
@@ -2795,8 +2795,8 @@
       "returns": "p5.Font: <a href=\"#/p5.Font\">p5.Font</a>オブジェクト",
       "params": {
         "path": "String:  ロードするファイルまたはURLの名前",
-        "callback": "関数: (オプション) <a href=\"#/p5/loadFont\">loadFont()</a>が完了した後に実行される関数",
-        "onError": "関数: (オプション) エラーが発生した場合に実行される関数"
+        "callback": "関数:（オプション）<a href=\"#/p5/loadFont\">loadFont()</a>が完了した後に実行される関数",
+        "onError": "関数:（オプション）エラーが発生した場合に実行される関数"
       }
     },
     "text": {
@@ -2810,8 +2810,8 @@
         "str": "String|Object|Array|Number|Boolean: 表示する英数字のシンボル",
         "x": "Number: テキストのx座標",
         "y": "Number: テキストのy座標",
-        "x2": "Number: (オプション) デフォルトでは、テキストボックスの幅で、<a href=\"#/p5/rectMode\">rectMode()</a>で詳細を確認できます",
-        "y2": "Number: (オプション) デフォルトでは、テキストボックスの高さで、<a href=\"#/p5/rectMode\">rectMode()</a>で詳細を確認できます"
+        "x2": "Number:（オプション）デフォルトでは、テキストボックスの幅で、<a href=\"#/p5/rectMode\">rectMode()</a>で詳細を確認できます",
+        "y2": "Number:（オプション）デフォルトでは、テキストボックスの高さで、<a href=\"#/p5/rectMode\">rectMode()</a>で詳細を確認できます"
       }
     },
     "textFont": {
@@ -2822,7 +2822,7 @@
       "returns": "Object: 現在のフォント / p5オブジェクト",
       "params": {
         "font": "Object|String: <a href=\"#/p5/loadFont\">loadFont()</a>で読み込まれたフォント、または<a href=\"https://mzl.la/2dOw8WD\">ウェブセーフフォント</a>（一般的にすべてのシステムで利用可能なフォント）を表す文字列",
-        "size": "Number:  (オプション)使用するフォントサイズ"
+        "size": "Number: （オプション）使用するフォントサイズ"
       }
     },
     "append": {
@@ -2882,7 +2882,7 @@
       "returns": "Array: シャッフルされた配列",
       "params": {
         "array": "Array: シャッフルする配列",
-        "bool": "Boolean: (オプション) 渡された配列を変更"
+        "bool": "Boolean:（オプション）渡された配列を変更"
       }
     },
     "sort": {
@@ -2892,7 +2892,7 @@
       "returns": "Array: ソートされたリスト",
       "params": {
         "list": "Array: 並べ替える配列",
-        "count": "Integer: (オプション) 0から始まる並べ替える要素の数"
+        "count": "Integer:（オプション）0から始まる並べ替える要素の数"
       }
     },
     "splice": {
@@ -2914,7 +2914,7 @@
       "params": {
         "list": "Array: 抽出元の配列",
         "start": "Integer: 開始位置",
-        "count": "Integer: (オプション) 抽出する値の数"
+        "count": "Integer:（オプション）抽出する値の数"
       }
     },
     "float": {
@@ -2934,7 +2934,7 @@
       "returns": "Number: 値の整数表現",
       "params": {
         "n": "String|Boolean|Number: 解析する値",
-        "radix": "Integer:  (オプション)変換する基数（デフォルト:10）",
+        "radix": "Integer: （オプション）変換する基数（デフォルト:10）",
         "ns": "Array: 解析する値"
       }
     },
@@ -3042,8 +3042,8 @@
       "returns": "String: フォーマットされた文字列",
       "params": {
         "num": "Number|String: フォーマットする数値",
-        "left": "Integer|String: (オプション) 小数点の左の桁数",
-        "right": "Integer|String: (オプション) 小数点の右の桁数",
+        "left": "Integer|String:（オプション）小数点の左の桁数",
+        "right": "Integer|String:（オプション）小数点の右の桁数",
         "nums": "Array: フォーマットする数値"
       }
     },
@@ -3054,7 +3054,7 @@
       "returns": "String: フォーマットされた文字列",
       "params": {
         "num": "Number|String: フォーマットする数値",
-        "right": "Integer|String: (オプション) 小数点の右の桁数",
+        "right": "Integer|String:（オプション）小数点の右の桁数",
         "nums": "Array: フォーマットする数値"
       }
     },
@@ -3065,8 +3065,8 @@
       "returns": "String: フォーマットされた文字列",
       "params": {
         "num": "Number: フォーマットする数値",
-        "left": "Integer: (オプション) 小数点の左の桁数",
-        "right": "Integer: (オプション) 小数点の右の桁数",
+        "left": "Integer:（オプション）小数点の左の桁数",
+        "right": "Integer:（オプション）小数点の右の桁数",
         "nums": "Number[]: フォーマットする数値"
       }
     },
@@ -3082,8 +3082,8 @@
       "returns": "String: フォーマットされた文字列",
       "params": {
         "num": "Number: フォーマットする数値",
-        "left": "Integer: (オプション) 小数点の左の桁数",
-        "right": "Integer: (オプション) 小数点の右の桁数",
+        "left": "Integer:（オプション）小数点の左の桁数",
+        "right": "Integer:（オプション）小数点の右の桁数",
         "nums": "Array: フォーマットする数値"
       }
     },
@@ -3106,7 +3106,7 @@
       "returns": "String[]: 文字列の配列",
       "params": {
         "value": "String: 分割される文字列",
-        "delim": "String: (オプション) セパレータとして使用される個々の文字列のリスト"
+        "delim": "String:（オプション）セパレータとして使用される個々の文字列のリスト"
       }
     },
     "trim": {
@@ -3164,20 +3164,20 @@
     "plane": {
       "description": ["指定された幅と高さで平面を描画する"],
       "params": {
-        "width": "Number: (オプション) 平面の幅",
-        "height": "Number: (オプション) 平面の高さ",
-        "detailX": "Integer: (オプション) x次元の三角形の細分割数",
-        "detailY": "Integer: (オプション) y次元の三角形の細分割数"
+        "width": "Number:（オプション）平面の幅",
+        "height": "Number:（オプション）平面の高さ",
+        "detailX": "Integer:（オプション）x次元の三角形の細分割数",
+        "detailY": "Integer:（オプション）y次元の三角形の細分割数"
       }
     },
     "box": {
       "description": ["指定された幅、高さ、奥行きで箱を描画する"],
       "params": {
-        "width": "Number: (オプション) 箱の幅",
-        "height": "Number: (オプション) 箱の高さ",
-        "depth": "Number: (オプション) 箱の奥行き",
-        "detailX": "Integer: (オプション) x次元の三角形の細分割数",
-        "detailY": "Integer: (オプション) y次元の三角形の細分割数"
+        "width": "Number:（オプション）箱の幅",
+        "height": "Number:（オプション）箱の高さ",
+        "depth": "Number:（オプション）箱の奥行き",
+        "detailX": "Integer:（オプション）x次元の三角形の細分割数",
+        "detailY": "Integer:（オプション）y次元の三角形の細分割数"
       }
     },
     "sphere": {
@@ -3186,9 +3186,9 @@
         "DetailXおよびdetailYは、球のx次元およびy次元の細分割数を決定します。細分割が多いほど、球は滑らかに見えます。推奨される最大値は24です。24より大きい値を使用すると、警告が表示されるか、ブラウザーが遅くなる可能性があります。"
       ],
       "params": {
-        "radius": "Number: (オプション) 円の半径",
-        "detailX": "Integer: (オプション) x次元の細分割数",
-        "detailY": "Integer: (オプション) y次元の細分割数"
+        "radius": "Number:（オプション）円の半径",
+        "detailX": "Integer:（オプション）x次元の細分割数",
+        "detailY": "Integer:（オプション）y次元の細分割数"
       }
     },
     "cylinder": {
@@ -3197,12 +3197,12 @@
         "DetailXおよびdetailYは、円柱のx次元およびy次元の細分割数を決定します。細分割が多いほど、円柱は滑らかに見えます。detailXの推奨される最大値は24です。24より大きい値を使用すると、警告が表示されるか、ブラウザーが遅くなる可能性があります。"
       ],
       "params": {
-        "radius": "Number: (オプション) 表面の半径",
-        "height": "Number: (オプション) 円柱の高さ",
-        "detailX": "Integer: (オプション) x次元の細分割数; デフォルトは24",
-        "detailY": "Integer: (オプション) y次元の細分割数; デフォルトは1",
-        "bottomCap": "Boolean: (オプション) 円柱の底面を描画するかどうか",
-        "topCap": "Boolean: (オプション) 円柱の上面を描画するかどうか"
+        "radius": "Number:（オプション）表面の半径",
+        "height": "Number:（オプション）円柱の高さ",
+        "detailX": "Integer:（オプション）x次元の細分割数; デフォルトは24",
+        "detailY": "Integer:（オプション）y次元の細分割数; デフォルトは1",
+        "bottomCap": "Boolean:（オプション）円柱の底面を描画するかどうか",
+        "topCap": "Boolean:（オプション）円柱の上面を描画するかどうか"
       }
     },
     "cone": {
@@ -3211,11 +3211,11 @@
         "DetailXおよびdetailYは、円錐のx次元およびy次元の細分割数を決定します。細分割が多いほど、円錐は滑らかに見えます。detailXの推奨される最大値は24です。24より大きい値を使用すると、警告が表示されるか、ブラウザーが遅くなる可能性があります。"
       ],
       "params": {
-        "radius": "Number: (オプション) 底面の半径",
-        "height": "Number: (オプション) 円錐の高さ",
-        "detailX": "Integer: (オプション) セグメント数, セグメントが多いほど、ジオメトリが滑らかになります。デフォルトは24",
-        "detailY": "Integer: (オプション) セグメント数, セグメントが多いほど、ジオメトリが滑らかになります。デフォルトは1",
-        "cap": "Boolean: (オプション) 円錐の底面を描画するかどうか"
+        "radius": "Number:（オプション）底面の半径",
+        "height": "Number:（オプション）円錐の高さ",
+        "detailX": "Integer:（オプション）セグメント数, セグメントが多いほど、ジオメトリが滑らかになります。デフォルトは24",
+        "detailY": "Integer:（オプション）セグメント数, セグメントが多いほど、ジオメトリが滑らかになります。デフォルトは1",
+        "cap": "Boolean:（オプション）円錐の底面を描画するかどうか"
       }
     },
     "ellipsoid": {
@@ -3224,11 +3224,11 @@
         "DetailXおよびdetailYは、楕円体のx次元およびy次元の細分割数を決定します。細分割が多いほど、楕円体は滑らかに見えます。細分割数が150以上にならないようにしてください。それはブラウザーがクラッシュする原因になるかもしれません。"
       ],
       "params": {
-        "radiusx": "Number: (オプション) 楕円体のx半径",
-        "radiusy": "Number: (オプション) 楕円体のy半径",
-        "radiusz": "Number: (オプション) 楕円体のz半径",
-        "detailX": "Integer: (オプション) セグメント数, セグメントが多いほど、ジオメトリが滑らかになります。デフォルトは24。細分割数が150以上にならないようにしてください。それはブラウザーがクラッシュする原因になるかもしれません。",
-        "detailY": "Integer: (オプション) セグメント数, セグメントが多いほど、ジオメトリが滑らかになります。デフォルトは16。細分割数が150以上にならないようにしてください。それはブラウザーがクラッシュする原因になるかもしれません。"
+        "radiusx": "Number:（オプション）楕円体のx半径",
+        "radiusy": "Number:（オプション）楕円体のy半径",
+        "radiusz": "Number:（オプション）楕円体のz半径",
+        "detailX": "Integer:（オプション）セグメント数, セグメントが多いほど、ジオメトリが滑らかになります。デフォルトは24。細分割数が150以上にならないようにしてください。それはブラウザーがクラッシュする原因になるかもしれません。",
+        "detailY": "Integer:（オプション）セグメント数, セグメントが多いほど、ジオメトリが滑らかになります。デフォルトは16。細分割数が150以上にならないようにしてください。それはブラウザーがクラッシュする原因になるかもしれません。"
       }
     },
     "torus": {
@@ -3237,10 +3237,10 @@
         "DetailXおよびdetailYは、トーラスのx次元およびy次元の細分割数を決定します。細分割が多いほど、トーラスは滑らかに見えます。detailXおよびdetailYのデフォルト値および最大値はそれぞれ24および16です。それらを比較的小さな値に設定することで、トーラス以外の新しい形状を作成できます。"
       ],
       "params": {
-        "radius": "Number: (オプション) リング全体の半径",
-        "tubeRadius": "Number: (オプション) チューブの半径",
-        "detailX": "Integer: (オプション) x次元のセグメント数, セグメントが多いほど、ジオメトリが滑らかになります。デフォルトは24",
-        "detailY": "Integer: (オプション) y次元のセグメント数, セグメントが多いほど、ジオメトリが滑らかになります。デフォルトは16"
+        "radius": "Number:（オプション）リング全体の半径",
+        "tubeRadius": "Number:（オプション）チューブの半径",
+        "detailX": "Integer:（オプション）x次元のセグメント数, セグメントが多いほど、ジオメトリが滑らかになります。デフォルトは24",
+        "detailY": "Integer:（オプション）y次元のセグメント数, セグメントが多いほど、ジオメトリが滑らかになります。デフォルトは16"
       }
     },
     "orbitControl": {
@@ -3248,9 +3248,9 @@
         "マウスやトラックパッドを使って3Dスケッチの周りを移動できます。左クリックしてドラッグすると、カメラ位置がスケッチの中心を中心に回転し、右クリックしてドラッグすると、カメラ位置が回転せずに移動します。マウスホイール（スクロール）を使うと、カメラがスケッチの中心に近づいたり遠ざかったりします。この関数は、X軸とY軸に沿ったマウス移動の感度を指定するパラメーターで呼び出すことができます。パラメーターなしでこの関数を呼び出すと、orbitControl(1,1)を呼び出すのと同じになります。いずれかの軸の移動方向を逆にするには、感度にマイナスの数値を入力してください。"
       ],
       "params": {
-        "sensitivityX": "Number: (オプション) X軸に沿ったマウス移動の感度",
-        "sensitivityY": "Number: (オプション) Y軸に沿ったマウス移動の感度",
-        "sensitivityZ": "Number: (オプション) Z軸に沿ったスクロール移動の感度"
+        "sensitivityX": "Number:（オプション）X軸に沿ったマウス移動の感度",
+        "sensitivityY": "Number:（オプション）Y軸に沿ったマウス移動の感度",
+        "sensitivityZ": "Number:（オプション）Z軸に沿ったスクロール移動の感度"
       }
     },
     "debugMode": {
@@ -3260,18 +3260,18 @@
       ],
       "params": {
         "mode": "Constant: GRIDまたはAXES",
-        "gridSize": "Number: (オプション) グリッドの一辺のサイズ",
-        "gridDivisions": "Number: (オプション) グリッドの分割数",
-        "xOff": "Number: (オプション) 原点 (0,0,0) からのX軸オフセット",
-        "yOff": "Number: (オプション) 原点 (0,0,0) からのY軸オフセット",
-        "zOff": "Number: (オプション) 原点 (0,0,0) からのZ軸オフセット",
-        "axesSize": "Number: (オプション) 軸アイコンのサイズ",
-        "gridXOff": "Number (オプション)",
-        "gridYOff": "Number (オプション)",
-        "gridZOff": "Number (オプション)",
-        "axesXOff": "Number (オプション)",
-        "axesYOff": "Number (オプション)",
-        "axesZOff": "Number (オプション)"
+        "gridSize": "Number:（オプション）グリッドの一辺のサイズ",
+        "gridDivisions": "Number:（オプション）グリッドの分割数",
+        "xOff": "Number:（オプション）原点 (0,0,0) からのX軸オフセット",
+        "yOff": "Number:（オプション）原点 (0,0,0) からのY軸オフセット",
+        "zOff": "Number:（オプション）原点 (0,0,0) からのZ軸オフセット",
+        "axesSize": "Number:（オプション）軸アイコンのサイズ",
+        "gridXOff": "Number（オプション）",
+        "gridYOff": "Number（オプション）",
+        "gridZOff": "Number（オプション）",
+        "axesXOff": "Number（オプション）",
+        "axesYOff": "Number（オプション）",
+        "axesZOff": "Number（オプション）"
       }
     },
     "noDebugMode": {
@@ -3287,7 +3287,7 @@
         "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
         "v2": "Number: 現在のカラーレンジに対する緑または彩度の値",
         "v3": "Number: 現在のカラーレンジに対する青または明るさの値",
-        "alpha": "Number: (オプション) 現在のカラーレンジに対するアルファ値 (デフォルトは0-255)",
+        "alpha": "Number:（オプション）現在のカラーレンジに対するアルファ値 (デフォルトは0-255)",
         "gray": "Number: 白と黒の間の値を指定する数値",
         "value": "String: 色を表す文字列",
         "values": "Number[]: 色の赤、緑、青、アルファ成分を含む配列",
@@ -3388,8 +3388,8 @@
         "rx": "Number: 光の方向のx成分（-1から1までの範囲を含む）",
         "ry": "Number: 光の方向のy成分（-1から1までの範囲を含む）",
         "rz": "Number: 光の方向のz成分（-1から1までの範囲を含む）",
-        "angle": "Number:  (オプション)円錐の角度。デフォルトはPI/3",
-        "concentration": "Number:  (オプション)円錐の集中度。デフォルトは100",
+        "angle": "Number: （オプション）円錐の角度。デフォルトはPI/3",
+        "concentration": "Number: （オプション）円錐の集中度。デフォルトは100",
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>としての色、配列として、またはCSS文字列として",
         "position": "p5.Vector: <a href=\"#/p5.Vector\">p5.Vector</a>としてのライトの位置",
         "direction": "p5.Vector: <a href=\"#/p5.Vector\">p5.Vector</a>としてのライトの方向"
@@ -3412,9 +3412,9 @@
       "params": {
         "path": "String: 読み込むモデルのパス",
         "normalize": "Boolean: trueの場合、読み込み時にモデルを標準化されたサイズにスケールします。",
-        "successCallback": "function(p5.Geometry): (オプション) モデルが読み込まれた後に呼び出される関数。3Dモデルオブジェクトが渡されます。",
-        "failureCallback": "Function(Event): (オプション) モデルの読み込みに失敗した場合にイベントエラーとともに呼び出される関数。",
-        "fileType": "String: (オプション) モデルのファイル拡張子（<code>.stl</code>, <code>.obj</code>）"
+        "successCallback": "function(p5.Geometry):（オプション）モデルが読み込まれた後に呼び出される関数。3Dモデルオブジェクトが渡されます。",
+        "failureCallback": "Function(Event):（オプション）モデルの読み込みに失敗した場合にイベントエラーとともに呼び出される関数。",
+        "fileType": "String:（オプション）モデルのファイル拡張子（<code>.stl</code>, <code>.obj</code>）"
       }
     },
     "model": {
@@ -3433,8 +3433,8 @@
       "params": {
         "vertFilename": "String: 頂点シェーダソースコードが含まれるファイルへのパス",
         "fragFilename": "String: フラグメントシェーダソースコードが含まれるファイルへのパス",
-        "callback": "Function: (オプション) loadShaderが完了した後に実行されるコールバック。成功時には、p5.Shaderオブジェクトが最初の引数として渡されます。",
-        "errorCallback": "Function: (オプション) loadShader内でエラーが発生した場合に実行されるコールバック。エラー発生時には、エラーが最初の引数として渡されます。"
+        "callback": "Function:（オプション）loadShaderが完了した後に実行されるコールバック。成功時には、p5.Shaderオブジェクトが最初の引数として渡されます。",
+        "errorCallback": "Function:（オプション）loadShader内でエラーが発生した場合に実行されるコールバック。エラー発生時には、エラーが最初の引数として渡されます。"
       }
     },
     "createShader": {
@@ -3495,7 +3495,7 @@
       ],
       "params": {
         "wrapX": "Constant: CLAMP、REPEAT、MIRRORのいずれか",
-        "wrapY": "Constant: (オプション) CLAMP、REPEAT、MIRRORのいずれか"
+        "wrapY": "Constant:（オプション）CLAMP、REPEAT、MIRRORのいずれか"
       }
     },
     "normalMaterial": {
@@ -3532,7 +3532,7 @@
         "v1": "Number: 現在のカラーレンジに対する赤または色相値",
         "v2": "Number: 現在のカラーレンジに対する緑または彩度値",
         "v3": "Number: 現在のカラーレンジに対する青または明度値",
-        "alpha": "Number: (オプション) 現在のカラーレンジに対するアルファ値 (デフォルトは0-255)",
+        "alpha": "Number:（オプション）現在のカラーレンジに対するアルファ値 (デフォルトは0-255)",
         "gray": "Number: 白と黒の間の値を指定する数値",
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>としての色、配列としての色、またはCSS文字列としての色"
       }
@@ -3546,7 +3546,7 @@
       ],
       "params": {
         "gray": "Number: 白と黒の間の値を指定する数値。",
-        "alpha": "Number: (オプション) 現在のカラーレンジに対するアルファ値 (デフォルトは0-255)",
+        "alpha": "Number:（オプション）現在のカラーレンジに対するアルファ値 (デフォルトは0-255)",
         "v1": "Number: 現在のカラーレンジに対する赤または色相値",
         "v2": "Number: 現在のカラーレンジに対する緑または彩度値",
         "v3": "Number: 現在のカラーレンジに対する青または明度値",
@@ -3570,15 +3570,15 @@
         "パラメーターが指定されていない場合、デフォルトで次のようになります: camera(0, 0, (height/2) / tan(PI/6), 0, 0, 0, 0, 1, 0)"
       ],
       "params": {
-        "x": "Number: (オプション) x軸上のカメラ位置の値",
-        "y": "Number: (オプション) y軸上のカメラ位置の値",
-        "z": "Number: (オプション) z軸上のカメラ位置の値",
-        "centerX": "Number: (オプション) スケッチの中心を表すx座標",
-        "centerY": "Number: (オプション) スケッチの中心を表すy座標",
-        "centerZ": "Number: (オプション) スケッチの中心を表すz座標",
-        "upX": "Number: (オプション) カメラからの'上'の方向のx成分",
-        "upY": "Number: (オプション) カメラからの'上'の方向のy成分",
-        "upZ": "Number: (オプション) カメラからの'上'の方向のz成分"
+        "x": "Number:（オプション）x軸上のカメラ位置の値",
+        "y": "Number:（オプション）y軸上のカメラ位置の値",
+        "z": "Number:（オプション）z軸上のカメラ位置の値",
+        "centerX": "Number:（オプション）スケッチの中心を表すx座標",
+        "centerY": "Number:（オプション）スケッチの中心を表すy座標",
+        "centerZ": "Number:（オプション）スケッチの中心を表すz座標",
+        "upX": "Number:（オプション）カメラからの'上'の方向のx成分",
+        "upY": "Number:（オプション）カメラからの'上'の方向のy成分",
+        "upZ": "Number:（オプション）カメラからの'上'の方向のz成分"
       }
     },
     "perspective": {
@@ -3588,10 +3588,10 @@
         "パラメーターが指定されていない場合、デフォルトで次のようになります: perspective(PI/3, width/height, eyeZ/10, eyeZ*10)。ここで、eyeZは((height/2) / tan(PI/6))と等しいです。"
       ],
       "params": {
-        "fovy": "Number: (オプション) カメラの視錐台の垂直視野角、ビューの下から上まで、<a href=\"#/p5/angleMode\">angleMode</a>の単位で",
-        "aspect": "Number: (オプション) カメラの視錐台のアスペクト比",
-        "near": "Number: (オプション) 視錐台の近距離平面の長さ",
-        "far": "Number: (オプション) 視錐台の遠距離平面の長さ"
+        "fovy": "Number:（オプション）カメラの視錐台の垂直視野角、ビューの下から上まで、<a href=\"#/p5/angleMode\">angleMode</a>の単位で",
+        "aspect": "Number:（オプション）カメラの視錐台のアスペクト比",
+        "near": "Number:（オプション）視錐台の近距離平面の長さ",
+        "far": "Number:（オプション）視錐台の遠距離平面の長さ"
       }
     },
     "ortho": {
@@ -3601,12 +3601,12 @@
         "パラメーターが指定されていない場合、デフォルトで次のようになります: ortho(-width/2, width/2, -height/2, height/2)。"
       ],
       "params": {
-        "left": "Number: (オプション) カメラの視錐台の左平面",
-        "right": "Number: (オプション) カメラの視錐台の右平面",
-        "bottom": "Number: (オプション) カメラの視錐台の下平面",
-        "top": "Number: (オプション) カメラの視錐台の上平面",
-        "near": "Number: (オプション) カメラの視錐台の近平面",
-        "far": "Number: (オプション) カメラの視錐台の遠平面"
+        "left": "Number:（オプション）カメラの視錐台の左平面",
+        "right": "Number:（オプション）カメラの視錐台の右平面",
+        "bottom": "Number:（オプション）カメラの視錐台の下平面",
+        "top": "Number:（オプション）カメラの視錐台の上平面",
+        "near": "Number:（オプション）カメラの視錐台の近平面",
+        "far": "Number:（オプション）カメラの視錐台の遠平面"
       }
     },
     "frustum": {
@@ -3617,12 +3617,12 @@
         "パラメーターが指定されなかった場合、次のデフォルトが使用されます: frustum(-width/2, width/2, -height/2, height/2, 0, max(width, height))。"
       ],
       "params": {
-        "left": "Number: (オプション) カメラの視錐台の左面",
-        "right": "Number: (オプション) カメラの視錐台の右面",
-        "bottom": "Number: (オプション) カメラの視錐台の底面",
-        "top": "Number: (オプション) カメラの視錐台の上面",
-        "near": "Number: (オプション) カメラの視錐台の近面",
-        "far": "Number: (オプション) カメラの視錐台の遠面"
+        "left": "Number:（オプション）カメラの視錐台の左面",
+        "right": "Number:（オプション）カメラの視錐台の右面",
+        "bottom": "Number:（オプション）カメラの視錐台の底面",
+        "top": "Number:（オプション）カメラの視錐台の上面",
+        "near": "Number:（オプション）カメラの視錐台の近面",
+        "far": "Number:（オプション）カメラの視錐台の遠面"
       }
     },
     "createCamera": {
@@ -3675,8 +3675,8 @@
       ],
       "returns": "Promise: AudioContextの状態が「実行中」になったときに解決されるPromiseを返します",
       "params": {
-        "elements": "Element|Array:  (オプション) この引数はElement、Selector String、NodeList、p5.Element、jQuery Element、またはそれらのいずれかの配列である必要があります。",
-        "callback": "Function:  (オプション) AudioContextが開始されたときに呼び出すコールバック関数"
+        "elements": "Element|Array: （オプション）この引数はElement、Selector String、NodeList、p5.Element、jQuery Element、またはそれらのいずれかの配列である必要があります。",
+        "callback": "Function: （オプション）AudioContextが開始されたときに呼び出すコールバック関数"
       }
     },
     "getOutputVolume": {
@@ -3692,8 +3692,8 @@
       ],
       "params": {
         "volume": "Number|Object: 0.0から1.0の間のボリューム（振幅）または変調信号/オシレータ",
-        "rampTime": "Number:  (オプション) t秒間フェードします。",
-        "timeFromNow": "Number:  (オプション) このイベントを、t秒後にスケジュールします。"
+        "rampTime": "Number: （オプション）t秒間フェードします。",
+        "timeFromNow": "Number: （オプション）このイベントを、t秒後にスケジュールします。"
       }
     },
     "soundOut": {
@@ -3728,7 +3728,7 @@
         "SoundFileフォーマットをリストアップし、クライアントのWebブラウザーに適合するフォーマットを探します。LoadSoundはこれらの拡張子を検索し、変換が必要な場合は<a href=\"http://media.io/\">こちら</a>の無料のオンラインファイルコンバーターを使用してください。"
       ],
       "params": {
-        "formats": "String: (オプション) 例: 'mp3', 'wav', 'ogg'"
+        "formats": "String:（オプション）例: 'mp3', 'wav', 'ogg'"
       }
     },
     "saveSound": {
@@ -3747,9 +3747,9 @@
       "returns": "SoundFile: p5.SoundFileを返します。",
       "params": {
         "path": "String|Array: 音声ファイルへのパス、または複数の形式の音声ファイルへのパスを含む配列、例: ['sound.ogg', 'sound.mp3']。また、HTML5 File APIまたはp5.Fileからのオブジェクトも受け入れます。",
-        "successCallback": "Function: (オプション) ファイルの読み込みが完了したときに呼び出す関数の名前",
-        "errorCallback": "Function: (オプション) ファイルの読み込み中にエラーが発生した場合に呼び出す関数の名前。",
-        "whileLoading": "Function: (オプション) ファイルの読み込み中に呼び出す関数の名前。現在読み込まれているパーセンテージ（0.0〜1.0）が渡されます。"
+        "successCallback": "Function:（オプション）ファイルの読み込みが完了したときに呼び出す関数の名前",
+        "errorCallback": "Function:（オプション）ファイルの読み込み中にエラーが発生した場合に呼び出す関数の名前。",
+        "whileLoading": "Function:（オプション）ファイルの読み込み中に呼び出す関数の名前。現在読み込まれているパーセンテージ（0.0〜1.0）が渡されます。"
       }
     },
     "createConvolver": {
@@ -3759,8 +3759,8 @@
       "returns": "p5.Convolver:",
       "params": {
         "path": "String: 音声ファイルへのパス",
-        "callback": "Function: (オプション) 読み込みが成功した場合に呼び出す関数。オブジェクトは、コールバック関数に引数として渡されます。",
-        "errorCallback": "Function: (オプション) 読み込みに失敗した場合に呼び出す関数。カスタムエラーがコールバック関数の引数として渡されます。"
+        "callback": "Function:（オプション）読み込みが成功した場合に呼び出す関数。オブジェクトは、コールバック関数に引数として渡されます。",
+        "errorCallback": "Function:（オプション）読み込みに失敗した場合に呼び出す関数。カスタムエラーがコールバック関数の引数として渡されます。"
       }
     },
     "setBPM": {
@@ -3785,7 +3785,7 @@
       ],
       "returns": "String: フォーマットされた文字列",
       "params": {
-        "format": "String: (オプション)カラー文字列の書式設定方法。空白にすると、rgba(r、g、b、a)として文字列をフォーマットします。 '#rgb'、 '#rgba'、 '#rrggbb'、および'#rrggbbaa'は16進数のカラーコードとしてフォーマットされます。 'rgb'、 'hsb'、および'hsl'は、指定されたカラー モードでフォーマットされたカラーを返します。 'rgba'、 'hsba'、および'hsla'は、上記と同じですがアルファチャネルが含まれます。 'rgb%'、 'hsb%'、 'hsl%'、 'rgba%'、 'hsba%'、および'hsla%'はパーセントとしてフォーマットされます。"
+        "format": "String:（オプション）カラー文字列の書式設定方法。空白にすると、rgba(r、g、b、a)として文字列をフォーマットします。 '#rgb'、 '#rgba'、 '#rrggbb'、および'#rrggbbaa'は16進数のカラーコードとしてフォーマットされます。 'rgb'、 'hsb'、および'hsl'は、指定されたカラー モードでフォーマットされたカラーを返します。 'rgba'、 'hsba'、および'hsla'は、上記と同じですがアルファチャネルが含まれます。 'rgb%'、 'hsb%'、 'hsl%'、 'rgba%'、 'hsba%'、および'hsla%'はパーセントとしてフォーマットされます。"
       }
     },
     "setRed": {
@@ -3827,7 +3827,7 @@
     ],
     "params": {
       "elt": "String: ラップされたDOMノード",
-      "pInst": "P5: (オプション) p5インスタンスへのポインタ"
+      "pInst": "P5:（オプション）p5インスタンスへのポインタ"
     },
     "elt": {
       "description": [
@@ -3998,7 +3998,7 @@
       ],
       "returns": "Node[]: 子ノードの配列",
       "params": {
-        "child": "String|p5.Element: (オプション) 現在の要素に追加するID、DOMノード、または<a href=\"#/p5.Element\">p5.Element</a>"
+        "child": "String|p5.Element:（オプション）現在の要素に追加するID、DOMノード、または<a href=\"#/p5.Element\">p5.Element</a>"
       }
     },
     "center": {
@@ -4006,7 +4006,7 @@
         "p5.Elementを親に対して垂直方向、水平方向、または両方で中央に配置します。親がない場合は、ボディに対して中央に配置されます。引数が渡されない場合、p5.Elementは垂直方向と水平方向の両方で整列されます。"
       ],
       "params": {
-        "align": "String: (オプション) 'vertical'、'horizontal'を渡すと、要素がそれに応じて整列されます"
+        "align": "String:（オプション）'vertical'、'horizontal'を渡すと、要素がそれに応じて整列されます"
       }
     },
     "html": {
@@ -4015,8 +4015,8 @@
       ],
       "returns": "String: 要素の内部HTML",
       "params": {
-        "html": "String: (オプション) 要素内に配置されるHTML",
-        "append": "Boolean: (オプション) HTMLを既存のものに追加するかどうか"
+        "html": "String:（オプション）要素内に配置されるHTML",
+        "append": "Boolean:（オプション）HTMLを既存のものに追加するかどうか"
       }
     },
     "position": {
@@ -4025,9 +4025,9 @@
       ],
       "returns": "Object: 要素の位置を含むオブジェクト { x: 0, y: 0 }形式のオブジェクト",
       "params": {
-        "x": "Number: (オプション) ウィンドウの左上を基準としたx位置(オプション)",
-        "y": "Number: (オプション) ウィンドウの左上を基準としたy位置(オプション)",
-        "positionType": "String: (オプション) static, fixed, relative, sticky, initial, inheritのいずれか(オプション)"
+        "x": "Number:（オプション）ウィンドウの左上を基準としたx位置(オプション)",
+        "y": "Number:（オプション）ウィンドウの左上を基準としたy位置(オプション)",
+        "positionType": "String:（オプション）static, fixed, relative, sticky, initial, inheritのいずれか(オプション)"
       }
     },
     "style": {
@@ -4082,7 +4082,7 @@
       "returns": "Object: オブジェクト内の要素の幅と高さ",
       "params": {
         "w": "Number|Constant: 要素の幅で、AUTOまたは数値",
-        "h": "Number|Constant: (オプション) 要素の高さで、AUTOまたは数値"
+        "h": "Number|Constant:（オプション）要素の高さで、AUTOまたは数値"
       }
     },
     "remove": {
@@ -4097,7 +4097,7 @@
       ],
       "params": {
         "callback": "Function: 読み込まれたファイルを受け取るコールバックで、ドロップされた各ファイルに対して呼び出されます。",
-        "fxn": "Function: (オプション) ファイルがドロップされたときに、ドロップイベントでトリガーされるコールバック。"
+        "fxn": "Function:（オプション）ファイルがドロップされたときに、ドロップイベントでトリガーされるコールバック。"
       }
     }
   },
@@ -4109,7 +4109,7 @@
       "w": "Number: 幅",
       "h": "Number: 高さ",
       "renderer": "Constant: 使用するレンダラーで、P2DまたはWEBGLのいずれか",
-      "pInst": "P5: (オプション) p5インスタンスへのポインタ"
+      "pInst": "P5:（オプション）p5インスタンスへのポインタ"
     },
     "reset": {
       "description": [
@@ -4128,8 +4128,8 @@
     ],
     "params": {
       "elt": "String: ラップされたDOMノード",
-      "pInst": "P5: (オプション) p5インスタンスへのポインタ",
-      "isMainCanvas": "Boolean: (オプション)メインキャンバスとして使用するかどうか"
+      "pInst": "P5:（オプション）p5インスタンスへのポインタ",
+      "isMainCanvas": "Boolean:（オプション）メインキャンバスとして使用するかどうか"
     }
   },
   "JSON": {
@@ -4395,7 +4395,7 @@
       "params": {
         "time": "Number: このメディア要素の再生に関連する秒単位の時間。たとえば、再生が2秒に達するたびにイベントをトリガーするには、数値2を渡します。これは、コールバック関数に最初のパラメーターとして渡されます。",
         "callback": "Function: 指定された時間に呼び出される関数の名前。コールバックは、時間と（オプションで）パラメーターを2つのパラメーターとして受け取ります。",
-        "value": "Object: (オプション)コールバック関数に2番目のパラメーターとして渡されるオブジェクト。"
+        "value": "Object:（オプション）コールバック関数に2番目のパラメーターとして渡されるオブジェクト。"
       }
     },
     "removeCue": {
@@ -4557,7 +4557,7 @@
       ],
       "params": {
         "filterType": "Constant: THRESHOLD、GRAY、OPAQUE、INVERT、POSTERIZE、ERODE、DILATE、BLURのいずれか。使用可能な各フィルターに関するドキュメントについては、Filters.jsを参照してください。",
-        "filterParam": "Number:  (オプション)各フィルターユニークなパラメーター。上記を参照してください。"
+        "filterParam": "Number: （オプション）各フィルターユニークなパラメーター。上記を参照してください。"
       }
     },
     "blend": {
@@ -4621,14 +4621,14 @@
       ],
       "params": {
         "d": "Number:  フレームを切り替える間の遅延時間（ミリ秒単位）",
-        "index": "Number:  (オプション) 新しい遅延時間が適用されるフレームのインデックス {オプション}"
+        "index": "Number: （オプション）新しい遅延時間が適用されるフレームのインデックス {オプション}"
       }
     }
   },
   "p5.PrintWriter": {
     "params": {
       "filename": "String",
-      "extension": "String (オプション)"
+      "extension": "String（オプション）"
     },
     "write": {
       "description": ["PrintWriter ストリームにデータを書き込みます"],
@@ -4658,7 +4658,7 @@
       "<a href=\"#/p5.Table\">Table</a>オブジェクトは、伝統的なスプレッドシートのように、複数の行と列でデータを格納します。テーブルは、ゼロから、動的に、または既存のファイルからデータを生成できます。"
     ],
     "params": {
-      "rows": "p5.TableRow[]: (オプション) p5.TableRowオブジェクトの配列"
+      "rows": "p5.TableRow[]:（オプション）p5.TableRowオブジェクトの配列"
     },
     "columns": {
       "description": [
@@ -4677,7 +4677,7 @@
       ],
       "returns": "p5.TableRow: 追加された行",
       "params": {
-        "row": "p5.TableRow: (オプション) テーブルに追加する行"
+        "row": "p5.TableRow:（オプション）テーブルに追加する行"
       }
     },
     "removeRow": {
@@ -4738,7 +4738,7 @@
       "returns": "p5.TableRow[]: <a href=\"#/p5.TableRow\">p5.TableRow</a>オブジェクトの配列",
       "params": {
         "regexp": "String: 一致する正規表現",
-        "column": "String|Integer:  (オプション) 列ID（数字）またはタイトル（文字列）"
+        "column": "String|Integer: （オプション）列ID（数字）またはタイトル（文字列）"
       }
     },
     "getColumn": {
@@ -4760,7 +4760,7 @@
         "<a href=\"#/p5.Table\">Table</a>オブジェクトに新しい列を追加するには、<a href=\"#/p5/addColumn\">addColumn()</a>を使用します。通常、列を名前で簡単に参照できるようにするために、タイトルを指定する必要があります。（タイトルが指定されていない場合、新しい列のタイトルはnullになります。）"
       ],
       "params": {
-        "title": "String: (オプション) 列のタイトル"
+        "title": "String:（オプション）列のタイトル"
       }
     },
     "getColumnCount": {
@@ -4778,7 +4778,7 @@
       ],
       "params": {
         "chars": "String: 削除する文字をリストアップした文字列",
-        "column": "String|Integer: (オプション) 列のID（数字）または名前（文字列）"
+        "column": "String|Integer:（オプション）列のID（数字）または名前（文字列）"
       }
     },
     "trim": {
@@ -4786,7 +4786,7 @@
         "Stringの表の値から、先頭および末尾の空白（スペースやタブなど）をトリムします。列が指定されていない場合、すべての列と行の値がトリムされます。特定の列は、IDまたはタイトルのいずれかで参照できます。"
       ],
       "params": {
-        "column": "String|Integer: (オプション) 列のID（数字）または名前（文字列）"
+        "column": "String|Integer:（オプション）列のID（数字）または名前（文字列）"
       }
     },
     "removeColumn": {
@@ -4863,7 +4863,7 @@
       ],
       "returns": "Object:",
       "params": {
-        "headerColumn": "String: (オプション) 各行オブジェクトのタイトルとして使用する列の名前 (オプション)"
+        "headerColumn": "String:（オプション）各行オブジェクトのタイトルとして使用する列の名前（オプション）"
       }
     },
     "getArray": {
@@ -4879,8 +4879,8 @@
       "Table Rowは、順序付けられた配列と、順不同のJSONオブジェクトの両方を含みます。"
     ],
     "params": {
-      "str": "String: (オプション) オプション:separatorで区切られた値の文字列を使用して行を入力します",
-      "separator": "String: (オプション) デフォルトではcsvのコンマ区切り値"
+      "str": "String:（オプション）オプション:separatorで区切られた値の文字列を使用して行を入力します",
+      "separator": "String:（オプション）デフォルトではcsvのコンマ区切り値"
     },
     "set": {
       "description": [
@@ -4975,7 +4975,7 @@
       ],
       "returns": "p5.XML[]:要素の子要素",
       "params": {
-        "name": "String: (オプション)要素名"
+        "name": "String:（オプション）要素名"
       }
     },
     "getChild": {
@@ -5027,7 +5027,7 @@
       "returns": "Number:",
       "params": {
         "name": "String: 属性のフルネーム（非null）",
-        "defaultValue": "Number: (オプション) 属性のデフォルト値"
+        "defaultValue": "Number:（オプション）属性のデフォルト値"
       }
     },
     "getString": {
@@ -5037,7 +5037,7 @@
       "returns": "String:",
       "params": {
         "name": "String: 属性のフルネーム（非null）",
-        "defaultValue": "Number: (オプション) 属性のデフォルト値"
+        "defaultValue": "Number:（オプション）属性のデフォルト値"
       }
     },
     "setAttribute": {
@@ -5055,7 +5055,7 @@
       ],
       "returns": "String:",
       "params": {
-        "defaultValue": "String: (オプション) 内容が見つからない場合に返される値"
+        "defaultValue": "String:（オプション）内容が見つからない場合に返される値"
       }
     },
     "setContent": {
@@ -5078,9 +5078,9 @@
       "ベクトルは値のグループを表すため、従来の加算/乗算などを単純に使用することはできません。代わりに、<a href=\"#/p5.Vector\">p5.Vector</a>クラス内のメソッドを使用する必要があります。"
     ],
     "params": {
-      "x": "Number:  (オプション) ベクトルのx成分",
-      "y": "Number:  (オプション) ベクトルのy成分",
-      "z": "Number:  (オプション) ベクトルのz成分"
+      "x": "Number: （オプション）ベクトルのx成分",
+      "y": "Number: （オプション）ベクトルのy成分",
+      "z": "Number: （オプション）ベクトルのz成分"
     },
     "x": {
       "description": ["ベクトルのx成分"]
@@ -5102,9 +5102,9 @@
         "2つまたは3つの別々の変数、<a href=\"#/p5.Vector\">p5.Vector</a>のデータ、またはfloat 配列の値を使用して、ベクトルの<code>x</code>、<code>y</code>、<code>z</code>成分を設定します。"
       ],
       "params": {
-        "x": "Number:  (オプション) ベクトルのx成分",
-        "y": "Number:  (オプション) ベクトルのy成分",
-        "z": "Number:  (オプション) ベクトルのz成分",
+        "x": "Number: （オプション）ベクトルのx成分",
+        "y": "Number: （オプション）ベクトルのy成分",
+        "z": "Number: （オプション）ベクトルのz成分",
         "value": "p5.Vector|Number[]: 設定するベクトル"
       }
     },
@@ -5123,12 +5123,12 @@
       ],
       "params": {
         "x": "Number: 加算するベクトルのx成分",
-        "y": "Number:  (オプション) 加算するベクトルのy成分",
-        "z": "Number:  (オプション) 加算するベクトルのz成分",
+        "y": "Number: （オプション）加算するベクトルのy成分",
+        "z": "Number: （オプション）加算するベクトルのz成分",
         "value": "p5.Vector|Number[]: 加算するベクトル",
         "v1": "p5.Vector: 加算する<a href=\"#/p5.Vector\">p5.Vector</a>",
         "v2": "p5.Vector: 加算する<a href=\"#/p5.Vector\">p5.Vector</a>",
-        "target": "p5.Vector:  (オプション)結果を受け取るベクトル"
+        "target": "p5.Vector: （オプション）結果を受け取るベクトル"
       }
     },
     "rem": {
@@ -5150,12 +5150,12 @@
       ],
       "params": {
         "x": "Number: 引かれるベクトルのx成分",
-        "y": "Number: (オプション) 引かれるベクトルのy成分",
-        "z": "Number: (オプション) 引かれるベクトルのz成分",
+        "y": "Number:（オプション）引かれるベクトルのy成分",
+        "z": "Number:（オプション）引かれるベクトルのz成分",
         "value": "p5.Vector|Number[]: 引かれるベクトル",
         "v1": "p5.Vector: 引かれる <a href=\"#/p5.Vector\">p5.Vector</a>",
         "v2": "p5.Vector: 引く <a href=\"#/p5.Vector\">p5.Vector</a>",
-        "target": "p5.Vector: (オプション) 結果を受け取るベクトル"
+        "target": "p5.Vector:（オプション）結果を受け取るベクトル"
       }
     },
     "mult": {
@@ -5166,10 +5166,10 @@
         "n": "Number: ベクトルと乗算する数値",
         "x": "Number: ベクトルのx成分と乗算する数値",
         "y": "Number: ベクトルのy成分と乗算する数値",
-        "z": "Number: (オプション) ベクトルのz成分と乗算する数値",
+        "z": "Number:（オプション）ベクトルのz成分と乗算する数値",
         "arr": "Number[]: ベクトルの成分に乗算する配列",
         "v": "p5.Vector: 元のベクトルの成分と乗算するベクトル",
-        "target": "p5.Vector: (オプション) 結果を受け取るベクトル",
+        "target": "p5.Vector:（オプション）結果を受け取るベクトル",
         "v0": "p5.Vector",
         "v1": "p5.Vector"
       }
@@ -5182,10 +5182,10 @@
         "n": "Number: ベクトルを除算する数値",
         "x": "Number: ベクトルのx成分を除算する数値",
         "y": "Number: ベクトルのy成分を除算する数値",
-        "z": "Number: (オプション) ベクトルのz成分を除算する数値",
+        "z": "Number:（オプション）ベクトルのz成分を除算する数値",
         "arr": "Number[]: ベクトルの各成分を除算する配列",
         "v": "p5.Vector: 元のベクトルの各成分を除算するベクトル",
-        "target": "p5.Vector: (オプション) 結果を受け取るベクトル",
+        "target": "p5.Vector:（オプション）結果を受け取るベクトル",
         "v0": "p5.Vector",
         "v1": "p5.Vector"
       }
@@ -5215,8 +5215,8 @@
       "returns": "Number: 内積",
       "params": {
         "x": "Number: ベクトルのx成分",
-        "y": "Number: (オプション) ベクトルのy成分",
-        "z": "Number: (オプション) ベクトルのz成分",
+        "y": "Number:（オプション）ベクトルのy成分",
+        "z": "Number:（オプション）ベクトルのz成分",
         "value": "p5.Vector: ベクトルのvalue成分または<a href=\"#/p5.Vector\">p5.Vector</a>",
         "v1": "p5.Vector: 最初の<a href=\"#/p5.Vector\">p5.Vector</a>",
         "v2": "p5.Vector: 2番目の<a href=\"#/p5.Vector\">p5.Vector</a>"
@@ -5249,7 +5249,7 @@
       "returns": "p5.Vector: 正規化された<a href=\"#/p5.Vector\">p5.Vector</a>",
       "params": {
         "v": "p5.Vector: 正規化するベクトル",
-        "target": "p5.Vector: (オプション) 結果を受け取るベクトル"
+        "target": "p5.Vector:（オプション）結果を受け取るベクトル"
       }
     },
     "limit": {
@@ -5259,7 +5259,7 @@
       "params": {
         "max": "Number: ベクトルの最大値",
         "v": "p5.Vector: 制限するベクトル",
-        "target": "p5.Vector: (オプション) 結果を受け取るベクトル"
+        "target": "p5.Vector:（オプション）結果を受け取るベクトル"
       }
     },
     "setMag": {
@@ -5269,7 +5269,7 @@
       "params": {
         "len": "Number: このベクトルの新しい長さ",
         "v": "p5.Vector: 大きさを設定するベクトル",
-        "target": "p5.Vector: (オプション) 結果を受け取るベクトル (オプション)"
+        "target": "p5.Vector:（オプション）結果を受け取るベクトル（オプション）"
       }
     },
     "heading": {
@@ -5296,7 +5296,7 @@
       "params": {
         "angle": "Number: 回転角度",
         "v": "p5.Vector",
-        "target": "p5.Vector: (オプション) 結果を受け取るベクトル"
+        "target": "p5.Vector:（オプション）結果を受け取るベクトル"
       }
     },
     "angleBetween": {
@@ -5320,7 +5320,7 @@
         "v": "p5.Vector: 移動先の<a href=\"#/p5.Vector\">p5.Vector</a>。",
         "v1": "p5.Vector",
         "v2": "p5.Vector",
-        "target": "p5.Vector: (オプション) 結果を受け取るベクトル。"
+        "target": "p5.Vector:（オプション）結果を受け取るベクトル。"
       }
     },
     "reflect": {
@@ -5330,7 +5330,7 @@
       "params": {
         "surfaceNormal": "p5.Vector: 反射の対象となる<a href=\"#/p5.Vector\">p5.Vector</a>。",
         "incidentVector": "p5.Vector: 反射させるベクトル。",
-        "target": "p5.Vector: (オプション) 結果を受け取るベクトル。"
+        "target": "p5.Vector:（オプション）結果を受け取るベクトル。"
       }
     },
     "array": {
@@ -5348,9 +5348,9 @@
       ],
       "returns": "Boolean: ベクトルが等しい場合にtrue、そうでない場合にfalseを返します。",
       "params": {
-        "x": "Number: (オプション) ベクトルのx成分",
-        "y": "Number: (オプション) ベクトルのy成分",
-        "z": "Number: (オプション) ベクトルのz成分",
+        "x": "Number:（オプション）ベクトルのx成分",
+        "y": "Number:（オプション）ベクトルのy成分",
+        "z": "Number:（オプション）ベクトルのz成分",
         "value": "p5.Vector|Array: 比較するベクトル",
         "v1": "p5.Vector|Array: 比較する最初のベクトル",
         "v2": "p5.Vector|Array: 比較する2番目のベクトル"
@@ -5361,7 +5361,7 @@
       "returns": "p5.Vector: 新しい<a href=\"#/p5.Vector\">p5.Vector</a>オブジェクト",
       "params": {
         "angle": "Number: 角度（単位は弧度法、<a href=\"#/p5/angleMode\">angleMode</a>に影響されません）",
-        "length": "Number: (オプション) 新しいベクトルの長さ（デフォルトは1）"
+        "length": "Number:（オプション）新しいベクトルの長さ（デフォルトは1）"
       }
     },
     "fromAngles": {
@@ -5370,7 +5370,7 @@
       "params": {
         "theta": "Number: 極角（単位は弧度法、上を0度とします）",
         "phi": "Number: 方位角（単位は弧度法、スクリーンから外側を0度とします）",
-        "length": "Number: (オプション) 新しいベクトルの長さ（デフォルトは1）"
+        "length": "Number:（オプション）新しいベクトルの長さ（デフォルトは1）"
       }
     },
     "random2D": {
@@ -5387,7 +5387,7 @@
   "p5.Font": {
     "description": ["フォントのベースクラス"],
     "params": {
-      "pInst": "P5: (オプション) p5インスタンスへのポインター"
+      "pInst": "P5:（オプション）p5インスタンスへのポインター"
     },
     "font": {
       "description": ["内部のオープンタイプフォント実装"]
@@ -5401,8 +5401,8 @@
         "line": "String: テキストの行",
         "x": "Number: x座標",
         "y": "Number: y座標",
-        "fontSize": "Number: (オプション) 使用するフォントサイズ (デフォルトは12)",
-        "options": "オブジェクト: (オプション) opentypeオプション (オプション) opentypeフォントにはalignmentとbaselineオプションが含まれています。デフォルトは'LEFT'と'alphabetic'"
+        "fontSize": "Number:（オプション）使用するフォントサイズ (デフォルトは12)",
+        "options": "オブジェクト:（オプション）opentypeオプション（オプション）opentypeフォントにはalignmentとbaselineオプションが含まれています。デフォルトは'LEFT'と'alphabetic'"
       }
     },
     "textToPoints": {
@@ -5414,8 +5414,8 @@
         "txt": "String: テキストの行",
         "x": "Number: x座標",
         "y": "Number: y座標",
-        "fontSize": "Number: 使用するフォントサイズ (オプション)",
-        "options": "オブジェクト: (オプション) サンプルファクター - パスの長さとサンプル数の比率（デフォルト=.1）; 大きい値はより多くの点を生成し、より正確です simplifyThreshold - 非ゼロの値に設定する場合、共線性のあるポイントはポリゴンから削除されます。2つのエッジが共線であるかどうかを判断するときに使用する閾値角度を表します"
+        "fontSize": "Number: 使用するフォントサイズ（オプション）",
+        "options": "オブジェクト:（オプション）サンプルファクター - パスの長さとサンプル数の比率（デフォルト=.1）; 大きい値はより多くの点を生成し、より正確です simplifyThreshold - 非ゼロの値に設定する場合、共線性のあるポイントはポリゴンから削除されます。2つのエッジが共線であるかどうかを判断するときに使用する閾値角度を表します"
       }
     }
   },
@@ -5522,9 +5522,9 @@
   "p5.Geometry": {
     "description": ["p5ジオメトリクラス"],
     "params": {
-      "detailX": "Integer: (オプション) x軸に沿った頂点数。",
-      "detailY": "Integer: (オプション) y軸に沿った頂点数。",
-      "callback": "Function: (オプション) オブジェクトのインスタンス化時に呼び出す関数。"
+      "detailX": "Integer:（オプション）x軸に沿った頂点数。",
+      "detailY": "Integer:（オプション）y軸に沿った頂点数。",
+      "callback": "Function:（オプション）オブジェクトのインスタンス化時に呼び出す関数。"
     },
     "computeFaces": {
       "description": [
@@ -5578,9 +5578,9 @@
     ],
     "params": {
       "path": "String|Array: サウンドファイルへのパス（String）。オプションで、複数のファイルフォーマットを配列で含めることもできます。また、HTML5 File APIからのオブジェクト、またはp5.Fileを受け取ることもできます。",
-      "successCallback": "Function: (オプション) ファイルがロードされたときに呼び出す関数の名前",
-      "errorCallback": "Function: (オプション) ファイルのロードに失敗した場合に呼び出す関数の名前。この関数は、エラーオブジェクトまたはXMLHttpRequestオブジェクトを受け取り、何が原因で失敗したかについての情報を提供します。",
-      "whileLoadingCallback": "Function: (オプション) ファイルがロードされている間に呼び出す関数の名前。この関数は、ファイルのロードリクエストの進捗状況（0〜1の間）を第1パラメーターとして受け取ります。この進捗状況には、オーディオデータのデコードに必要な追加時間は含まれません。"
+      "successCallback": "Function:（オプション）ファイルがロードされたときに呼び出す関数の名前",
+      "errorCallback": "Function:（オプション）ファイルのロードに失敗した場合に呼び出す関数の名前。この関数は、エラーオブジェクトまたはXMLHttpRequestオブジェクトを受け取り、何が原因で失敗したかについての情報を提供します。",
+      "whileLoadingCallback": "Function:（オプション）ファイルがロードされている間に呼び出す関数の名前。この関数は、ファイルのロードリクエストの進捗状況（0〜1の間）を第1パラメーターとして受け取ります。この進捗状況には、オーディオデータのデコードに必要な追加時間は含まれません。"
     },
     "isLoaded": {
       "description": [
@@ -5591,11 +5591,11 @@
     "play": {
       "description": ["p5.SoundFileを再生します。"],
       "params": {
-        "startTime": "Number: (オプション) 再生をスケジュールする時刻（現在時刻からの秒数）",
-        "rate": "Number: (オプション) 再生速度",
-        "amp": "Number: (オプション) 再生の音量",
-        "cueStart": "Number: (オプション) キューの開始時刻（秒）",
-        "duration": "Number: (オプション) 再生の長さ（秒）"
+        "startTime": "Number:（オプション）再生をスケジュールする時刻（現在時刻からの秒数）",
+        "rate": "Number:（オプション）再生速度",
+        "amp": "Number:（オプション）再生の音量",
+        "cueStart": "Number:（オプション）キューの開始時刻（秒）",
+        "duration": "Number:（オプション）再生の長さ（秒）"
       }
     },
     "playMode": {
@@ -5612,7 +5612,7 @@
         ".play()は、一時停止した位置から再開されます。p5.SoundFileがループに設定されていた場合、一時停止する前に、.play()による再生が継続され、.play()で再開された後もループが続行されます。"
       ],
       "params": {
-        "startTime": "Number: (オプション) イベントをスケジュールする時刻（現在時刻からの秒数）"
+        "startTime": "Number:（オプション）イベントをスケジュールする時刻（現在時刻からの秒数）"
       }
     },
     "loop": {
@@ -5620,11 +5620,11 @@
         "p5.SoundFileをループ再生します。再生レート、再生音量、ループ開始地点、ループ終了地点をオプションで設定できます。"
       ],
       "params": {
-        "startTime": "Number: (オプション) 何秒後にイベントを予約するか指定します。",
-        "rate": "Number: (オプション) 再生レートを指定します。",
-        "amp": "Number: (オプション) 再生音量を指定します。",
-        "cueLoopStart": "Number: (オプション) ループの開始地点を秒単位で指定します。",
-        "duration": "Number: (オプション) ループの長さを秒単位で指定します。"
+        "startTime": "Number:（オプション）何秒後にイベントを予約するか指定します。",
+        "rate": "Number:（オプション）再生レートを指定します。",
+        "amp": "Number:（オプション）再生音量を指定します。",
+        "cueLoopStart": "Number:（オプション）ループの開始地点を秒単位で指定します。",
+        "duration": "Number:（オプション）ループの長さを秒単位で指定します。"
       }
     },
     "setLoop": {
@@ -5656,7 +5656,7 @@
     "stop": {
       "description": ["p5.SoundFileの再生を停止します。"],
       "params": {
-        "startTime": "Number: (オプション) 何秒後にイベントを予約するか指定します。"
+        "startTime": "Number:（オプション）何秒後にイベントを予約するか指定します。"
       }
     },
     "pan": {
@@ -5664,8 +5664,8 @@
         "p5.soundオブジェクトのステレオパンニングを、-1.0（左）から1.0（右）までの浮動小数点数で設定します。デフォルトは0.0（中央）です。"
       ],
       "params": {
-        "panValue": "Number:  (オプション) ステレオパンニングを設定します。",
-        "timeFromNow": "Number:  (オプション) このイベントが発生するまでの秒数を指定します。"
+        "panValue": "Number: （オプション）ステレオパンニングを設定します。",
+        "timeFromNow": "Number: （オプション）このイベントが発生するまでの秒数を指定します。"
       }
     },
     "getPan": {
@@ -5677,7 +5677,7 @@
         "サウンドファイルの再生速度を設定します。速度とピッチが変化します。0未満の値はオーディオバッファを逆方向に再生します。"
       ],
       "params": {
-        "playbackRate": "Number:  (オプション) 再生速度を設定します。1.0は通常の速度、0.5は半分の速度、2.0は2倍の速度です。0未満の値は逆再生します。"
+        "playbackRate": "Number: （オプション）再生速度を設定します。1.0は通常の速度、0.5は半分の速度、2.0は2倍の速度です。0未満の値は逆再生します。"
       }
     },
     "setVolume": {
@@ -5687,8 +5687,8 @@
       ],
       "params": {
         "volume": "Number|Object: 振幅の値（0.0から1.0）またはモジュレーションシグナル/オシレーター",
-        "rampTime": "Number:  (オプション) t秒でフェードします。",
-        "timeFromNow": "Number:  (オプション) t秒後にこのイベントをスケジュールします。"
+        "rampTime": "Number: （オプション）t秒でフェードします。",
+        "timeFromNow": "Number: （オプション）t秒後にこのイベントをスケジュールします。"
       }
     },
     "duration": {
@@ -5733,7 +5733,7 @@
       ],
       "returns": "Float32Array: peaksの配列",
       "params": {
-        "length": "Number: (オプション) 配列のサイズを指定します。より大きなサイズは、より正確な波形可視化を提供します。デフォルトはブラウザーウィンドウの幅の5倍です。"
+        "length": "Number:（オプション）配列のサイズを指定します。より大きなサイズは、より正確な波形可視化を提供します。デフォルトはブラウザーウィンドウの幅の5倍です。"
       }
     },
     "reverseBuffer": {
@@ -5754,7 +5754,7 @@
         "p5soundオブジェクトの出力を他のp5.soundオブジェクトの入力に接続します。たとえば、p5.SoundFileをFFTやエフェクトに接続できます。パラメーターが指定されていない場合、メイン出力に接続されます。ほとんどのp5soundオブジェクトは、作成時にマスター出力に接続されます。"
       ],
       "params": {
-        "object": "Object: (オプション) 入力を受け入れるオーディオオブジェクト"
+        "object": "Object:（オプション）入力を受け入れるオーディオオブジェクト"
       }
     },
     "disconnect": {
@@ -5787,7 +5787,7 @@
       "params": {
         "time": "Number: メディアエレメントの再生に相対的な時間（秒単位）。たとえば、再生が2秒に到達するたびにイベントをトリガーするには、数値2を渡します。これは、コールバック関数に最初のパラメーターとして渡されます。",
         "callback": "Function: 指定された時間に呼び出される関数の名前。コールバックは、timeと（必要に応じて）paramを2つのパラメーターとして受け取ります。",
-        "value": "Object: (オプション) コールバック関数に渡される2番目のパラメーターとして使用されるオブジェクト。"
+        "value": "Object:（オプション）コールバック関数に渡される2番目のパラメーターとして使用されるオブジェクト。"
       }
     },
     "removeCue": {
@@ -5808,7 +5808,7 @@
         "p5.SoundFileを.wavファイルとして保存します。ブラウザーは、ユーザーにファイルをダウンロードするように促します。ファイルをサーバーにアップロードするには、<a href=\"/reference/#/p5.SoundFile/getBlob\">getBlob</a>を参照してください。"
       ],
       "params": {
-        "fileName": "String: (オプション) 生成される.wavファイルの名前"
+        "fileName": "String:（オプション）生成される.wavファイルの名前"
       }
     },
     "getBlob": {
@@ -5823,15 +5823,15 @@
       "Amplitudeは音量を0.0〜1.0の範囲で測定します。デフォルトではすべてのp5soundを監視しますが、setInput()を使用して特定の音源を監視することもできます。オプションのスムージング値を受け入れ、デフォルト値は0です。"
     ],
     "params": {
-      "smoothing": "Number: (オプション) 音量読み取りのスムージング値。0をデフォルトとします。範囲は0.0から.999までです。"
+      "smoothing": "Number:（オプション）音量読み取りのスムージング値。0をデフォルトとします。範囲は0.0から.999までです。"
     },
     "setInput": {
       "description": [
         "デフォルトでp5soundインスタンス（メイン出力）に接続します。オプションで、特定のソース（たとえば、サウンドファイル）を渡すこともできます。"
       ],
       "params": {
-        "snd": "SoundObject|undefined: (オプション) 音源を設定します。デフォルトはメイン出力です。",
-        "smoothing": "Number|undefined: (オプション) 音量読み取りのスムージングを 0.0から1.0の範囲で設定します。"
+        "snd": "SoundObject|undefined:（オプション）音源を設定します。デフォルトはメイン出力です。",
+        "smoothing": "Number|undefined:（オプション）音量読み取りのスムージングを 0.0から1.0の範囲で設定します。"
       }
     },
     "getLevel": {
@@ -5840,7 +5840,7 @@
       ],
       "returns": "Number: 0.0から1.0の範囲内のAmplitude",
       "params": {
-        "channel": "Number: (オプション)チャンネル0（左）または1（右）だけを返すようにオプションで指定できます。"
+        "channel": "Number:（オプション）チャンネル0（左）または1（右）だけを返すようにオプションで指定できます。"
       }
     },
     "toggleNormalize": {
@@ -5848,7 +5848,7 @@
         "Amplitude.process()の結果を正規化するかどうかを切り替えます。正規化を行う場合、Amplitudeは処理した中で最も大きな音量の読み取り値と1.0の最大振幅の差を見つけます。Amplitudeは、この差をすべての値に加算して、常に0.0〜1.0の範囲で信頼できる結果を生成します。ただし、より大きな音量の瞬間が発生すると、Normalizeがすべての値に追加する量が変化します。真偽値パラメーター (trueまたはfalse) を受け取ります。デフォルトでは、正規化はオフになっています。"
       ],
       "params": {
-        "boolean": "Boolean: (オプション) 正規化をtrue(1)またはfalse(0)に設定します。"
+        "boolean": "Boolean:（オプション）正規化をtrue(1)またはfalse(0)に設定します。"
       }
     },
     "smooth": {
@@ -5867,15 +5867,15 @@
       "FFTは、サンプルバッファと呼ばれる非常に短い音声スナップショットを解析します。配列はデフォルトで1024ビンの振幅測定値を返します。ビンの配列の長さを変更できますが、FFTアルゴリズムが正常に動作するためには、16から1024の間で2の累乗である必要があります。FFTバッファの実際のサイズは、ビンの数の2倍であり、標準的なサンプリングレートを考慮すると、バッファの長さは2048/44100秒です。"
     ],
     "params": {
-      "smoothing": "Number: (オプション) 周波数スペクトルの結果をスムージングします。 0.0 < smoothing < 1.0。デフォルトは0.8です。",
-      "bins": "Number: (オプション)結果の配列の長さ。 16から1024の間で2の累乗である必要があります。デフォルトは1024です。"
+      "smoothing": "Number:（オプション）周波数スペクトルの結果をスムージングします。 0.0 < smoothing < 1.0。デフォルトは0.8です。",
+      "bins": "Number:（オプション）結果の配列の長さ。 16から1024の間で2の累乗である必要があります。デフォルトは1024です。"
     },
     "setInput": {
       "description": [
         "FFT解析の入力ソースを設定します。ソースが提供されない場合、FFTはスケッチ内のすべての音声を解析します。"
       ],
       "params": {
-        "source": "Object: (オプション) p5.soundオブジェクト（またはWebオーディオAPIソースノード）"
+        "source": "Object:（オプション）p5.soundオブジェクト（またはWebオーディオAPIソースノード）"
       }
     },
     "waveform": {
@@ -5884,8 +5884,8 @@
       ],
       "returns": "Array: 時間にわたる振幅値の配列（-1から1）。配列の長さはbinsです。",
       "params": {
-        "bins": "Number: (オプション) 16から1024の間で2の累乗である必要があります。デフォルトは1024です。",
-        "precision": "String: (オプション)値が提供されている場合、通常の配列よりも正確なFloat32の配列で結果を返します。"
+        "bins": "Number:（オプション）16から1024の間で2の累乗である必要があります。デフォルトは1024です。",
+        "precision": "String:（オプション）値が提供されている場合、通常の配列よりも正確なFloat32の配列で結果を返します。"
       }
     },
     "analyze": {
@@ -5894,8 +5894,8 @@
       ],
       "returns": "Array: 周波数スペクトル全体にわたるエネルギー（振幅/音量）値の配列。最低エネルギー（無音）は0、最大エネルギーは255です。",
       "params": {
-        "bins": "Number: (オプション) 16から1024の間で2の累乗である必要があります。デフォルトは1024です。",
-        "scale": "Number: (オプション) \"dB\"の場合、-140から0（最大）のデシベル浮動小数点測定値が返されます。それ以外の場合は、0から255までの整数が返されます。"
+        "bins": "Number:（オプション）16から1024の間で2の累乗である必要があります。デフォルトは1024です。",
+        "scale": "Number:（オプション）\"dB\"の場合、-140から0（最大）のデシベル浮動小数点測定値が返されます。それ以外の場合は、0から255までの整数が返されます。"
       }
     },
     "getEnergy": {
@@ -5905,7 +5905,7 @@
       "returns": "Number: エネルギー。0から255までの値。",
       "params": {
         "frequency1": "Number|String: この周波数でのエネルギーを表す値が返されます。また、\"bass\"、\"lowMid\"、\"mid\"、\"highMid\"、\"treble\"の文字列を指定すると、事前に定義された周波数範囲が返されます。",
-        "frequency2": "Number: (オプション) 2番目の周波数が指定された場合、2つの周波数の間に存在するエネルギーの平均量が返されます。"
+        "frequency2": "Number:（オプション）2番目の周波数が指定された場合、2つの周波数の間に存在するエネルギーの平均量が返されます。"
       }
     },
     "getCentroid": {
@@ -5957,8 +5957,8 @@
       "setType()で振動のタイプを設定するか、特定の発振器をインスタンス化することで設定できます:<a href=\"/reference/#/p5.SinOsc\">p5.SinOsc</a>、<a href=\"/reference/#/p5.TriOsc\">p5.TriOsc</a>、<a href=\"/reference/#/p5.SqrOsc\">p5.SqrOsc</a>、または<a href=\"/reference/#/p5.SawOsc\">p5.SawOsc</a>。"
     ],
     "params": {
-      "freq": "Number: (オプション) 周波数。デフォルトは440Hz",
-      "type": "String: (オプション) 発振器の種類。オプション: 'sine'（デフォルト）、 'triangle'、 'sawtooth'、 'square'"
+      "freq": "Number:（オプション）周波数。デフォルトは440Hz",
+      "type": "String:（オプション）発振器の種類。オプション: 'sine'（デフォルト）、 'triangle'、 'sawtooth'、 'square'"
     },
     "start": {
       "description": [
@@ -5966,8 +5966,8 @@
         "ユーザージェスチャーで発振器を開始すると、Chromeや多くのモバイルデバイスを含む厳格な自動再生ポリシーをもつブラウザーでオーディオが有効になります。参照:<code>userStartAudio()</code>。"
       ],
       "params": {
-        "time": "Number: (オプション) 現在からの開始時間（秒単位）",
-        "frequency": "Number: (オプション) 周波数（Hz）"
+        "time": "Number:（オプション）現在からの開始時間（秒単位）",
+        "frequency": "Number:（オプション）周波数（Hz）"
       }
     },
     "stop": {
@@ -5985,8 +5985,8 @@
       "returns": "AudioParam: gain。値が指定されていない場合、このオシレーターのgain/amplitude/volumeを制御するWebオーディオAPIのAudioParamを返します。",
       "params": {
         "vol": "Number | Object:0から1.0の間またはモジュレーション信号/オシレーター",
-        "rampTime": "Number: (オプション) rampTimeに続くフェードを作成します",
-        "timeFromNow": "Number: (オプション) このイベントが発生する時間を現在から秒単位でスケジュールします"
+        "rampTime": "Number:（オプション）rampTimeに続くフェードを作成します",
+        "timeFromNow": "Number:（オプション）このイベントが発生する時間を現在から秒単位でスケジュールします"
       }
     },
     "getAmp": {
@@ -6000,8 +6000,8 @@
       "returns": "AudioParam:周波数。値が指定されていない場合、このオシレーターの周波数を制御するWebオーディオAPIのAudioParamを返します。",
       "params": {
         "Frequency": "Number | Object: Hzでの周波数またはモジュレーション信号/オシレーター",
-        "rampTime": "Number: (オプション) ramp time（秒単位）",
-        "timeFromNow": "Number: (オプション) x秒後にこのイベントが発生するようスケジュールします"
+        "rampTime": "Number:（オプション）ramp time（秒単位）",
+        "timeFromNow": "Number:（オプション）x秒後にこのイベントが発生するようスケジュールします"
       }
     },
     "getFreq": {
@@ -6096,7 +6096,7 @@
       "コンストラクター: <code>new p5.TriOsc()</code>。これは三角波オシレーターを作成し、<code>new p5.Oscillator('triangle')</code>またはp5.Oscillatorを作成してそのメソッド<code>setType('triangle')</code>を呼び出すことと同等です。メソッドについてはp5.Oscillatorを参照してください。"
     ],
     "params": {
-      "freq": "Number: (オプション) 周波数を設定します"
+      "freq": "Number:（オプション）周波数を設定します"
     }
   },
   "p5.SawOsc": {
@@ -6104,7 +6104,7 @@
       "コンストラクター: <code>new p5.SawOsc()</code>。これはSawTooth波オシレータを作成するものであり、<code>new p5.Oscillator('sawtooth')</code>と同等であり、また、p5.Oscillatorを作成してそのメソッド<code>setType('sawtooth')</code>を呼び出すこともできます。メソッドについては、p5.Oscillatorを参照してください。"
     ],
     "params": {
-      "freq": "Number: (オプション) 周波数を設定します"
+      "freq": "Number:（オプション）周波数を設定します"
     }
   },
   "p5.SqrOsc": {
@@ -6112,7 +6112,7 @@
       "コンストラクター: <code>new p5.SqrOsc()</code>。これはSquare波オシレータを作成するものであり、<code>new p5.Oscillator('square')</code>と同等であり、また、p5.Oscillatorを作成してそのメソッド<code>setType('square')</code>を呼び出すこともできます。メソッドについては、p5.Oscillatorを参照してください。"
     ],
     "params": {
-      "freq": "Number: (オプション) 周波数を設定します"
+      "freq": "Number:（オプション）周波数を設定します"
     }
   },
   "p5.Envelope": {
@@ -6158,9 +6158,9 @@
       ],
       "params": {
         "attackTime": "Number: 攻撃レベルに到達するまでの時間（秒単位）",
-        "decayTime": "Number: (オプション) ディケイ/サステインレベルに到達するまでの時間（秒単位）",
-        "susRatio": "Number: (オプション) 0から1のスケールでのattackLevelとreleaseLevelの比率で、1.0=attackLevel、0.0=releaseLevelです。susRatioはdecayLevelとエンベロープのsustain部分が維持されるレベルを決定します。たとえば、attackLevelが 0.4、releaseLevelが0で、susAmtが0.5の場合、decayLevelは 0.2になります。<code>setRange</code>を使用してattackLevelを 1.0に増やすと、decayLevelも比例して増加して0.5になります。",
-        "releaseTime": "Number: (オプション) 今から何秒後にリリースするか（デフォルトは0）"
+        "decayTime": "Number:（オプション）ディケイ/サステインレベルに到達するまでの時間（秒単位）",
+        "susRatio": "Number:（オプション）0から1のスケールでのattackLevelとreleaseLevelの比率で、1.0=attackLevel、0.0=releaseLevelです。susRatioはdecayLevelとエンベロープのsustain部分が維持されるレベルを決定します。たとえば、attackLevelが 0.4、releaseLevelが0で、susAmtが0.5の場合、decayLevelは 0.2になります。<code>setRange</code>を使用してattackLevelを 1.0に増やすと、decayLevelも比例して増加して0.5になります。",
+        "releaseTime": "Number:（オプション）今から何秒後にリリースするか（デフォルトは0）"
       }
     },
     "setRange": {
@@ -6177,7 +6177,7 @@
         "このエンベロープによって制御されるパラメーターを割り当てます。p5.Soundオブジェクトが指定された場合、p5.Envelopeはその出力ゲインを制御します。複数の入力が指定された場合、envはそれらすべてを制御します。"
       ],
       "params": {
-        "inputs": "Object: (オプション) p5.soundオブジェクトまたはWeb Audio Param。"
+        "inputs": "Object:（オプション）p5.soundオブジェクトまたはWeb Audio Param。"
       }
     },
     "setExp": {
@@ -6194,8 +6194,8 @@
       ],
       "params": {
         "unit": "Object: p5.soundオブジェクトまたはWeb Audio Param",
-        "startTime": "Number: (オプション) 再生する時間（秒単位）",
-        "sustainTime": "Number: (オプション) エンベロープを解除する前に保持する時間"
+        "startTime": "Number:（オプション）再生する時間（秒単位）",
+        "sustainTime": "Number:（オプション）エンベロープを解除する前に保持する時間"
       }
     },
     "triggerAttack": {
@@ -6224,7 +6224,7 @@
         "unit": "Object: p5.soundオブジェクトまたはWeb Audio Paramオブジェクト",
         "secondsFromNow": "Number: ランプを開始する時間（現在時刻からの経過秒数）",
         "v": "Number: 目標値",
-        "v2": "Number: (オプション) 2番目の目標値"
+        "v2": "Number:（オプション）2番目の目標値"
       }
     },
     "add": {
@@ -6268,7 +6268,7 @@
         "ノイズのタイプを 'white', 'pink', 'brown'のいずれかに設定します。デフォルトは'white' です。"
       ],
       "params": {
-        "type": "String: (オプション) 'white', 'pink', 'brown'のいずれか"
+        "type": "String:（オプション）'white', 'pink', 'brown'のいずれか"
       }
     }
   },
@@ -6295,7 +6295,7 @@
       "<em>注: これには<a href=\"http://caniuse.com/stream\">getUserMedia/ Stream</a> API が使用されており、一部のブラウザーでサポートされていません。 Chromeブラウザーでのアクセスは、localhostとhttpsに限定されていますが、http 経由でのアクセスも制限される場合があります。</em>"
     ],
     "params": {
-      "errorCallback": "Function: (オプション) AudioIn にアクセスできなかった場合に呼び出す関数。たとえば、Safari や iOS デバイスでは、現在のところマイクのアクセスが許可されていません。"
+      "errorCallback": "Function:（オプション）AudioIn にアクセスできなかった場合に呼び出す関数。たとえば、Safari や iOS デバイスでは、現在のところマイクのアクセスが許可されていません。"
     },
     "input": {},
     "output": {},
@@ -6318,8 +6318,8 @@
         "一部のブラウザーは、ユーザーのマイクへのアクセスを制限しています。たとえば、Chromeブラウザではlocalhostとhttpsからのアクセスのみ許可されています。このため、micアクセスが提供されない場合に呼び出される errorCallback（関数）を含めた方がよい場合があります。"
       ],
       "params": {
-        "successCallback": "Function: (オプション) 成功時に呼び出す関数の名前",
-        "errorCallback": "Function: (オプション) エラーが発生した場合に呼び出す関数の名前。たとえば、一部のブラウザーは getUserMedia をサポートしていないため、この関数が呼び出される場合があります。"
+        "successCallback": "Function:（オプション）成功時に呼び出す関数の名前",
+        "errorCallback": "Function:（オプション）エラーが発生した場合に呼び出す関数の名前。たとえば、一部のブラウザーは getUserMedia をサポートしていないため、この関数が呼び出される場合があります。"
       }
     },
     "stop": {
@@ -6332,7 +6332,7 @@
         "オーディオユニットに接続します。パラメーターが提供されない場合は、メイン出力（スピーカー）に接続します。<br/>"
       ],
       "params": {
-        "unit": "Object: (オプション) FFT など、オーディオ入力を受け入れるオブジェクト"
+        "unit": "Object:（オプション）FFT など、オーディオ入力を受け入れるオブジェクト"
       }
     },
     "disconnect": {
@@ -6346,7 +6346,7 @@
       ],
       "returns": "Number: 音量レベル（0.0から1.0の間）",
       "params": {
-        "smoothing": "Number: (オプション) スムージングはデフォルトで0.0です。以前の値にもとづいて値を平滑化します。"
+        "smoothing": "Number:（オプション）スムージングはデフォルトで0.0です。以前の値にもとづいて値を平滑化します。"
       }
     },
     "amp": {
@@ -6355,7 +6355,7 @@
       ],
       "params": {
         "vol": "Number:0から1.0の間の値",
-        "time": "Number: (オプション) ランプ時間(オプション)"
+        "time": "Number:（オプション）ランプ時間(オプション)"
       }
     },
     "getSources": {
@@ -6364,8 +6364,8 @@
       ],
       "returns": "Promise: コールバックの代わりに使用できる Promiseが返されます。enumerateDevices()メソッドと同様です",
       "params": {
-        "successCallback": "Function: (オプション) デバイスリスト配列を唯一の引数として受け取るコールバック関数。",
-        "errorCallback": "Function: (オプション) エラーメッセージを受け取るオプションのコールバック関数。"
+        "successCallback": "Function:（オプション）デバイスリスト配列を唯一の引数として受け取るコールバック関数。",
+        "errorCallback": "Function:（オプション）エラーメッセージを受け取るオプションのコールバック関数。"
       }
     },
     "setSource": {
@@ -6383,18 +6383,18 @@
       "このクラスは、<a href=\"/reference/#/p5.Distortion\">p5.Distortion</a>、<a href=\"/reference/#/p5.Compressor\">p5.Compressor</a>、<a href=\"/reference/#/p5.Delay\">p5.Delay</a>、<a href=\"/reference/#/p5.Filter\">p5.Filter</a>、<a href=\"/reference/#/p5.Reverb\">p5.Reverb</a>によって拡張されます。"
     ],
     "params": {
-      "ac": "Object: (オプション) p5オブジェクトのオーディオコンテキストへの参照",
-      "input": "AudioNode: (オプション) Gain Nodeエフェクトのラッパー",
-      "output": "AudioNode: (オプション) Gain Nodeエフェクトのラッパー",
-      "_drywet": "Object: (オプション) Tone.JS CrossFadeノード (デフォルト値: 1)",
-      "wet": "AudioNode: (オプション) このクラスを拡張するエフェクトは、ドライ信号とウェット信号を適切にミックスするために、このゲインノードにウェット信号を接続する必要があります。"
+      "ac": "Object:（オプション）p5オブジェクトのオーディオコンテキストへの参照",
+      "input": "AudioNode:（オプション）Gain Nodeエフェクトのラッパー",
+      "output": "AudioNode:（オプション）Gain Nodeエフェクトのラッパー",
+      "_drywet": "Object:（オプション）Tone.JS CrossFadeノード (デフォルト値: 1)",
+      "wet": "AudioNode:（オプション）このクラスを拡張するエフェクトは、ドライ信号とウェット信号を適切にミックスするために、このゲインノードにウェット信号を接続する必要があります。"
     },
     "amp": {
       "description": ["フィルターの出力音量を設定します。"],
       "params": {
-        "vol": "Number: (オプション) 0から1.0の振幅",
-        "rampTime": "Number: (オプション) rampTimeまで続くフェードを作成します",
-        "tFromNow": "Number: (オプション) このイベントがtFromNow秒後に発生するようにスケジュールします"
+        "vol": "Number:（オプション）0から1.0の振幅",
+        "rampTime": "Number:（オプション）rampTimeまで続くフェードを作成します",
+        "tFromNow": "Number:（オプション）このイベントがtFromNow秒後に発生するようにスケジュールします"
       }
     },
     "chain": {
@@ -6402,13 +6402,13 @@
         "エフェクトをチェーンで接続します。使用例: filter.chain(reverb, delay, panner); 任意の数の引数で使用できます"
       ],
       "params": {
-        "arguments": "Object: (オプション) 複数の音声オブジェクトをチェーンで接続します"
+        "arguments": "Object:（オプション）複数の音声オブジェクトをチェーンで接続します"
       }
     },
     "drywet": {
       "description": ["ドライ/ウェット値を調整します。"],
       "params": {
-        "fade": "Number: (オプション) 指定されたドライ/ウェット値（0〜1.0）"
+        "fade": "Number:（オプション）指定されたドライ/ウェット値（0〜1.0）"
       }
     },
     "connect": {
@@ -6430,7 +6430,7 @@
       "このクラスは<a href=\"/reference/#/p5.Effect\">p5.Effect</a>を拡張しています。メソッド<a href=\"/reference/#/p5.Effect/amp\">amp()</a>、<a href=\"/reference/#/p5.Effect/chain\">chain()</a>、<a href=\"/reference/#/p5.Effect/drywet\">drywet()</a>、<a href=\"/reference/#/p5.Effect/connect\">connect()</a>、<a href=\"/reference/#/p5.Effect/disconnect\">disconnect()</a>が利用可能です。"
     ],
     "params": {
-      "type": "String: (オプション) 'lowpass' (デフォルト)、'highpass'、'bandpass'"
+      "type": "String:（オプション）'lowpass' (デフォルト)、'highpass'、'bandpass'"
     },
     "biquadFilter": {
       "description": [
@@ -6443,16 +6443,16 @@
       ],
       "params": {
         "Signal": "Object: オーディオを出力するオブジェクト",
-        "freq": "Number: (オプション) 10から22050Hzまでの周波数",
-        "res": "Number: (オプション) 0.001から1000までのフィルタ周波数の共鳴/幅"
+        "freq": "Number:（オプション）10から22050Hzまでの周波数",
+        "res": "Number:（オプション）0.001から1000までのフィルタ周波数の共鳴/幅"
       }
     },
     "set": {
       "description": ["フィルタの周波数と共鳴を設定します。"],
       "params": {
-        "freq": "Number: (オプション) 10から22050Hzまでの周波数",
-        "res": "Number: (オプション) 0.001から1000までの共鳴率（Q）",
-        "timeFromNow": "Number: (オプション) このイベントを何秒後に予定するか"
+        "freq": "Number:（オプション）10から22050Hzまでの周波数",
+        "res": "Number:（オプション）0.001から1000までの共鳴率（Q）",
+        "timeFromNow": "Number:（オプション）このイベントを何秒後に予定するか"
       }
     },
     "freq": {
@@ -6462,7 +6462,7 @@
       "returns": "Number: 現在の周波数値を返します",
       "params": {
         "freq": "Number: フィルタ周波数",
-        "timeFromNow": "Number: (オプション) このイベントを何秒後に予定するか"
+        "timeFromNow": "Number:（オプション）このイベントを何秒後に予定するか"
       }
     },
     "res": {
@@ -6472,7 +6472,7 @@
       "returns": "Number: 現在のres値を返します",
       "params": {
         "res": "Number: フィルタ周波数の共鳴/幅、0.001から1000まで",
-        "timeFromNow": "Number: (オプション) このイベントを何秒後に予定するか"
+        "timeFromNow": "Number:（オプション）このイベントを何秒後に予定するか"
       }
     },
     "gain": {
@@ -6521,7 +6521,7 @@
     ],
     "returns": "Object: p5.EQオブジェクト",
     "params": {
-      "_eqsize": "Number: (オプション) 3または8を受け付けるコンストラクター。デフォルトは3です。"
+      "_eqsize": "Number:（オプション）3または8を受け付けるコンストラクター。デフォルトは3です。"
     },
     "bands": {
       "description": [
@@ -6599,8 +6599,8 @@
     "setFalloff": {
       "description": ["減衰率と最大距離を設定します。"],
       "params": {
-        "maxDistance": "Number (オプション)",
-        "rolloffFactor": "Number (オプション)"
+        "maxDistance": "Number（オプション）",
+        "rolloffFactor": "Number（オプション）"
       }
     },
     "maxDist": {
@@ -6641,9 +6641,9 @@
       ],
       "params": {
         "Signal": "Object: オーディオを出力するオブジェクト",
-        "delayTime": "Number: (オプション) 遅延/エコーの時間（秒）。一部のブラウザーはdelayTimeを1秒に制限しています。",
-        "feedback": "Number: (オプション) ループ内で遅延を自己に送信し、各繰り返しで音量が低下します。",
-        "lowPass": "Number: (オプション) カットオフ周波数。lowPass以下の周波数のみが遅延の一部になります。"
+        "delayTime": "Number:（オプション）遅延/エコーの時間（秒）。一部のブラウザーはdelayTimeを1秒に制限しています。",
+        "feedback": "Number:（オプション）ループ内で遅延を自己に送信し、各繰り返しで音量が低下します。",
+        "lowPass": "Number:（オプション）カットオフ周波数。lowPass以下の周波数のみが遅延の一部になります。"
       }
     },
     "delayTime": {
@@ -6684,8 +6684,8 @@
       "description": ["遅延効果の出力レベルを設定します。"],
       "params": {
         "volume": "Number: 0から1.0の振幅",
-        "rampTime": "Number: (オプション) rampTimeが持続するフェードを作成します",
-        "timeFromNow": "Number: (オプション) このイベントが何秒後に発生するようにスケジュールするか"
+        "rampTime": "Number:（オプション）rampTimeが持続するフェードを作成します",
+        "timeFromNow": "Number:（オプション）このイベントが何秒後に発生するようにスケジュールするか"
       }
     },
     "connect": {
@@ -6711,9 +6711,9 @@
       ],
       "params": {
         "src": "Object: p5.sound / Web Audioオブジェクト（サウンド出力）。",
-        "seconds": "Number: (オプション) リバーブの持続時間（秒単位）。最小値: 0、最大値: 10。デフォルトは3",
-        "decayRate": "Number: (オプション) 各エコーでの減衰の割合。最小値: 0、最大値: 100。デフォルトは2",
-        "reverse": "Boolean: (オプション) リバーブを逆再生または順再生するかどうか。"
+        "seconds": "Number:（オプション）リバーブの持続時間（秒単位）。最小値: 0、最大値: 10。デフォルトは3",
+        "decayRate": "Number:（オプション）各エコーでの減衰の割合。最小値: 0、最大値: 100。デフォルトは2",
+        "reverse": "Boolean:（オプション）リバーブを逆再生または順再生するかどうか。"
       }
     },
     "set": {
@@ -6721,8 +6721,8 @@
         "リバーブの設定を設定します。.process()と似ていますが、新しい入力を割り当てません。"
       ],
       "params": {
-        "seconds": "Number: (オプション) リバーブの持続時間（秒単位）。最小値: 0、最大値: 10。デフォルトは3",
-        "decayRate": "Number: (オプション) 各エコーでの減衰の割合。最小値: 0、最大値: 100。デフォルトは2",
+        "seconds": "Number:（オプション）リバーブの持続時間（秒単位）。最小値: 0、最大値: 10。デフォルトは3",
+        "decayRate": "Number:（オプション）各エコーでの減衰の割合。最小値: 0、最大値: 100。デフォルトは2",
         "reverse": "Boolean:(オプション) リバーブを逆再生または順再生するかどうか。"
       }
     },
@@ -6730,8 +6730,8 @@
       "description": ["リバーブ効果の出力レベルを設定します。"],
       "params": {
         "volume": "Number: 0から1.0の振幅",
-        "rampTime": "Number: (オプション) rampTime秒続くフェードを作成します。",
-        "timeFromNow": "Number: (オプション) このイベントを、timeFromNow秒後にスケジュールします。"
+        "rampTime": "Number:（オプション）rampTime秒続くフェードを作成します。",
+        "timeFromNow": "Number:（オプション）このイベントを、timeFromNow秒後にスケジュールします。"
       }
     },
     "connect": {
@@ -6825,14 +6825,14 @@
       "音楽のタイミングについては、p5.Phraseを参照してください。"
     ],
     "params": {
-      "steps": "Number: (オプション) パート内のステップ数",
-      "tatums": "Number: (オプション) 1拍子の分割数。たとえば、四分音符の場合は1/4または0.25を使用します（デフォルトは1/16、16分音符）"
+      "steps": "Number:（オプション）パート内のステップ数",
+      "tatums": "Number:（オプション）1拍子の分割数。たとえば、四分音符の場合は1/4または0.25を使用します（デフォルトは1/16、16分音符）"
     },
     "setBPM": {
       "description": ["このパートのテンポを、BPM（分速）で設定します。"],
       "params": {
         "BPM": "Number: Beats Per Minute",
-        "rampTime": "Number: (オプション) 現在からの秒数"
+        "rampTime": "Number:（オプション）現在からの秒数"
       }
     },
     "getBPM": {
@@ -6844,7 +6844,7 @@
         "このパートの再生を開始します。setBPMで決定された速度で、すべてのフレーズを再生します。"
       ],
       "params": {
-        "time": "Number: (オプション) 現在からの秒数"
+        "time": "Number:（オプション）現在からの秒数"
       }
     },
     "loop": {
@@ -6852,7 +6852,7 @@
         "このパートの再生をループさせます。setBPMで決定された速度で、すべてのフレーズをループ再生します。"
       ],
       "params": {
-        "time": "Number: (オプション) 現在からの秒数"
+        "time": "Number:（オプション）現在からの秒数"
       }
     },
     "noLoop": {
@@ -6863,7 +6863,7 @@
         "このパートを停止し、ステップ0に戻します。再生は、パートが再度再生されたときに最初から再開されます。"
       ],
       "params": {
-        "time": "Number: (オプション) 現在からの秒数"
+        "time": "Number:（オプション）現在からの秒数"
       }
     },
     "pause": {
@@ -6917,7 +6917,7 @@
       "スコアは複数のパートから構成されます。パートは順番に再生されます。たとえば、Aパート、Bパート、Cパートがあったとして、それらをこの順番で再生できます：<code>new p5.Score(a, a, b, a, c)</code>"
     ],
     "params": {
-      "parts": "p5.Part: (オプション) ひとつまたは複数のパート。順番に再生されます。"
+      "parts": "p5.Part:（オプション）ひとつまたは複数のパート。順番に再生されます。"
     },
     "start": {
       "description": ["スコアの再生を開始します。"]
@@ -6948,7 +6948,7 @@
     "description": ["SoundLoop"],
     "params": {
       "callback": "Function: ループの各反復で呼び出されるコールバック関数",
-      "interval": "Number|String: (オプション) ループの各反復の時間 (数値の場合) または拍子 (文字列の場合は、<a href = \"https://github.com/Tonejs/Tone.js/wiki/Time\">Tone.Time</a>の規則に従う)。デフォルトは1秒"
+      "interval": "Number|String:（オプション）ループの各反復の時間 (数値の場合) または拍子 (文字列の場合は、<a href = \"https://github.com/Tonejs/Tone.js/wiki/Time\">Tone.Time</a>の規則に従う)。デフォルトは1秒"
     },
     "bpm": {
       "description": [
@@ -6977,19 +6977,19 @@
     "start": {
       "description": ["ループを開始します"],
       "params": {
-        "timeFromNow": "Number: (オプション) 開始時間をスケジュールします"
+        "timeFromNow": "Number:（オプション）開始時間をスケジュールします"
       }
     },
     "stop": {
       "description": ["ループを停止します"],
       "params": {
-        "timeFromNow": "Number: (オプション) 停止時間をスケジュールします"
+        "timeFromNow": "Number:（オプション）停止時間をスケジュールします"
       }
     },
     "pause": {
       "description": ["ループを一時停止します"],
       "params": {
-        "timeFromNow": "Number: (オプション) 一時停止時間をスケジュールします"
+        "timeFromNow": "Number:（オプション）一時停止時間をスケジュールします"
       }
     },
     "syncedStart": {
@@ -6998,7 +6998,7 @@
       ],
       "params": {
         "otherLoop": "Object: 同期させる p5.SoundLoopオブジェクト",
-        "timeFromNow": "Number: (オプション) timeFromNow 秒後にループを同期して開始します"
+        "timeFromNow": "Number:（オプション）timeFromNow 秒後にループを同期して開始します"
       }
     }
   },
@@ -7018,11 +7018,11 @@
       ],
       "params": {
         "src": "Object: 接続するサウンドソース",
-        "attack": "Number: (オプション) ゲインを10dB減少させる時間（秒単位）、デフォルトは.003、範囲は0-1",
-        "knee": "Number: (オプション) しきい値よりも上の範囲を表すデシベル値で、カーブが「ratio」部分に滑らかに移行する範囲を表します。デフォルトは30、範囲は0-40",
-        "ratio": "Number: (オプション) 出力の1dBの変化に対して入力が変化するdBの量を表します デフォルトは12、範囲は1-20",
-        "threshold": "Number: (オプション) コンプレッションが効果を発揮し始めるしきい値以上のデシベル値。デフォルトは-24、範囲は-100〜0",
-        "release": "Number: (オプション) ゲインを10dB増加させる時間（秒単位）。デフォルトは.25、範囲は0-1"
+        "attack": "Number:（オプション）ゲインを10dB減少させる時間（秒単位）、デフォルトは.003、範囲は0-1",
+        "knee": "Number:（オプション）しきい値よりも上の範囲を表すデシベル値で、カーブが「ratio」部分に滑らかに移行する範囲を表します。デフォルトは30、範囲は0-40",
+        "ratio": "Number:（オプション）出力の1dBの変化に対して入力が変化するdBの量を表します デフォルトは12、範囲は1-20",
+        "threshold": "Number:（オプション）コンプレッションが効果を発揮し始めるしきい値以上のデシベル値。デフォルトは-24、範囲は-100〜0",
+        "release": "Number:（オプション）ゲインを10dB増加させる時間（秒単位）。デフォルトは.25、範囲は0-1"
       }
     },
     "set": {
@@ -7040,8 +7040,8 @@
         "現在のattackを取得するか、時間ランプを使用して値を設定します。"
       ],
       "params": {
-        "attack": "Number: (オプション) ゲインを10dB減少させる時間（秒単位）、デフォルトは.003、範囲は0-1",
-        "time": "Number: (オプション) 値の変更をスケジュールするための時間値を指定します。"
+        "attack": "Number:（オプション）ゲインを10dB減少させる時間（秒単位）、デフォルトは.003、範囲は0-1",
+        "time": "Number:（オプション）値の変更をスケジュールするための時間値を指定します。"
       }
     },
     "knee": {
@@ -7049,8 +7049,8 @@
         "現在のkneeを取得するか、時間ランプを使用して値を設定します。"
       ],
       "params": {
-        "knee": "Number: (オプション) しきい値よりも上の範囲を表すデシベル値で、カーブが「ratio」部分に滑らかに移行する範囲を表します。デフォルトは30、範囲は0-40",
-        "time": "Number: (オプション) 値の変更をスケジュールするための時間値を指定します。"
+        "knee": "Number:（オプション）しきい値よりも上の範囲を表すデシベル値で、カーブが「ratio」部分に滑らかに移行する範囲を表します。デフォルトは30、範囲は0-40",
+        "time": "Number:（オプション）値の変更をスケジュールするための時間値を指定します。"
       }
     },
     "ratio": {
@@ -7058,8 +7058,8 @@
         "現在のratioを取得するか、時間ランプを使用して値を設定します。"
       ],
       "params": {
-        "ratio": "Number: (オプション) 出力の1dBの変化に対して入力が変化するdBの量を表します。デフォルトは12、範囲は1-20",
-        "time": "Number: (オプション) 値の変更をスケジュールするための時間値を指定します。"
+        "ratio": "Number:（オプション）出力の1dBの変化に対して入力が変化するdBの量を表します。デフォルトは12、範囲は1-20",
+        "time": "Number:（オプション）値の変更をスケジュールするための時間値を指定します。"
       }
     },
     "threshold": {
@@ -7068,7 +7068,7 @@
       ],
       "params": {
         "threshold": "Number: コンプレッションが効果を発揮し始めるしきい値以上のデシベル値。デフォルトは-24、範囲は-100-0",
-        "time": "Number: (オプション) 値の変更をスケジュールするための時間値を指定します。"
+        "time": "Number:（オプション）値の変更をスケジュールするための時間値を指定します。"
       }
     },
     "release": {
@@ -7077,7 +7077,7 @@
       ],
       "params": {
         "release": "Number: ゲインを10dB増加させる時間（秒単位）。デフォルトは.25、範囲は0-1",
-        "time": "Number: (オプション) 値の変更をスケジュールするための時間値を指定します。"
+        "time": "Number:（オプション）値の変更をスケジュールするための時間値を指定します。"
       }
     },
     "reduction": {
@@ -7095,10 +7095,10 @@
       "@b2rengerによるサンプルコードと、<a href=\"http://www.airtightinteractive.com/2013/10/making-audio-reactive-visuals/\" target=\"_blank\">Felix Turner</a>によるシンプルなビート検出の説明をもとにしています。"
     ],
     "params": {
-      "freq1": "Number: (オプション) 低周波数 - デフォルトは20Hz",
-      "freq2": "Number: (オプション) 高周波数 - デフォルトは20000Hz",
-      "threshold": "Number: (オプション) ログスケールで0から1の範囲で表されるビートを検出するための閾値。0.1は1.0の半分の大きさに相当します。デフォルトは0.35",
-      "framesPerPeak": "Number: (オプション) デフォルトは20"
+      "freq1": "Number:（オプション）低周波数 - デフォルトは20Hz",
+      "freq2": "Number:（オプション）高周波数 - デフォルトは20000Hz",
+      "threshold": "Number:（オプション）ログスケールで0から1の範囲で表されるビートを検出するための閾値。0.1は1.0の半分の大きさに相当します。デフォルトは0.35",
+      "framesPerPeak": "Number:（オプション）デフォルトは20"
     },
     "isDetected": {
       "description": [
@@ -7120,7 +7120,7 @@
       ],
       "params": {
         "callback": "Function: ピークが検出されたときに呼び出される関数の名前",
-        "val": "Object: (オプション) ピークが検出されたときに関数に渡されるオプションの値"
+        "val": "Object:（オプション）ピークが検出されたときに関数に渡されるオプションの値"
       }
     }
   },
@@ -7134,7 +7134,7 @@
         "p5.SoundRecorder に特定のデバイスを接続します。パラメーターが与えられない場合、p5.SoundRecorderはスケッチから出力されるすべての音を記録します。"
       ],
       "params": {
-        "unit": "Object: (オプション) p5.soundオブジェクトまたは音を出力する Web Audio ユニット"
+        "unit": "Object:（オプション）p5.soundオブジェクトまたは音を出力する Web Audio ユニット"
       }
     },
     "record": {
@@ -7143,8 +7143,8 @@
       ],
       "params": {
         "soundFile": "p5.SoundFile: p5.SoundFile",
-        "duration": "Number: (オプション) 時間（秒単位）",
-        "callback": "Function: (オプション) 録音が完了した時に呼び出される関数の名前"
+        "duration": "Number:（オプション）時間（秒単位）",
+        "callback": "Function:（オプション）録音が完了した時に呼び出される関数の名前"
       }
     },
     "stop": {
@@ -7159,8 +7159,8 @@
       "このクラスは<a href = \"/reference/#/p5.Effect\">p5.Effect</a>を拡張します。メソッド<a href = \"/reference/#/p5.Effect/amp\">amp()</a>、<a href = \"/reference/#/p5.Effect/chain\">chain()</a>、<a href = \"/reference/#/p5.Effect/drywet\">drywet()</a>、<a href = \"/reference/#/p5.Effect/connect\">connect()</a>、および<a href = \"/reference/#/p5.Effect/disconnect\">disconnect()</a>が使用できます。"
     ],
     "params": {
-      "amount": "Number: (オプション) 歪みの量。通常、値は0-1の範囲内です。",
-      "oversample": "String: (オプション) 'none'、'2x'、または'4x'。"
+      "amount": "Number:（オプション）歪みの量。通常、値は0-1の範囲内です。",
+      "oversample": "String:（オプション）'none'、'2x'、または'4x'。"
     },
     "WaveShaperNode": {
       "description": [
@@ -7172,15 +7172,15 @@
         "音源を処理し、オプションで量とoversample値を指定します。"
       ],
       "params": {
-        "amount": "Number: (オプション) 歪みの量。通常、値は0-1の範囲内です。",
-        "oversample": "String: (オプション) 'none'、'2x'、'4x'のいずれか"
+        "amount": "Number:（オプション）歪みの量。通常、値は0-1の範囲内です。",
+        "oversample": "String:（オプション）'none'、'2x'、'4x'のいずれか"
       }
     },
     "set": {
       "description": ["waveshaper歪みの量とoversampleを設定します。"],
       "params": {
-        "amount": "Number: (オプション) 歪みの量。通常、値は0-1の範囲内です。",
-        "oversample": "String: (オプション) 'none'、'2x'、'4x'のいずれか"
+        "amount": "Number:（オプション）歪みの量。通常、値は0-1の範囲内です。",
+        "oversample": "String:（オプション）'none'、'2x'、'4x'のいずれか"
       }
     },
     "getAmount": {
@@ -7217,8 +7217,8 @@
       "description": ["ゲインノードの出力レベルを設定します。"],
       "params": {
         "volume": "Number: 0から1.0の振幅値",
-        "rampTime": "Number: (オプション) rampTime 秒間のフェードを作成します。",
-        "timeFromNow": "Number: (オプション) このイベントを、現在から timeFromNow 秒後に予約します。"
+        "rampTime": "Number:（オプション）rampTime 秒間のフェードを作成します。",
+        "timeFromNow": "Number:（オプション）このイベントを、現在から timeFromNow 秒後に予約します。"
       }
     }
   },
@@ -7252,9 +7252,9 @@
       ],
       "params": {
         "note": "String | Number: 演奏する音符を指定します。周波数をヘルツ数で指定する場合は数値、またはNote/Octave形式でMIDI値を指定する場合は(\"C4\", \"Eb3\"...など)。デフォルト値は440Hzです。",
-        "velocity": "Number: (オプション) 演奏する音符のベロシティ (0～1の範囲)",
-        "secondsFromNow": "Number: (オプション) 何秒後に演奏を開始するかを指定します。",
-        "sustainTime": "Number: (オプション) エンベロープのリリースをトリガーする前に継続する時間を指定します。デフォルト値は0.15秒です。"
+        "velocity": "Number:（オプション）演奏する音符のベロシティ (0～1の範囲)",
+        "secondsFromNow": "Number:（オプション）何秒後に演奏を開始するかを指定します。",
+        "sustainTime": "Number:（オプション）エンベロープのリリースをトリガーする前に継続する時間を指定します。デフォルト値は0.15秒です。"
       }
     },
     "triggerAttack": {
@@ -7263,8 +7263,8 @@
       ],
       "params": {
         "note": "String | Number: 演奏する音符を指定します。周波数をヘルツ数で指定する場合は数値、またはNote/Octave形式でMIDI値を指定する場合は(\"C4\", \"Eb3\"...など)。デフォルト値は440Hzです。",
-        "velocity": "Number: (オプション) 演奏する音符のベロシティ (0～1の範囲)",
-        "secondsFromNow": "Number: (オプション) 何秒後に演奏を開始するかを指定します。"
+        "velocity": "Number:（オプション）演奏する音符のベロシティ (0～1の範囲)",
+        "secondsFromNow": "Number:（オプション）何秒後に演奏を開始するかを指定します。"
       }
     },
     "triggerRelease": {
@@ -7281,9 +7281,9 @@
       ],
       "params": {
         "attackTime": "Number: エンベロープがアタックレベルに到達するまでの時間（単位は秒）",
-        "decayTime": "Number: (オプション) エンベロープがディケイ/サステインレベルに到達するまでの時間（単位は秒）",
-        "susRatio": "Number: (オプション) アタックレベルとリリースレベルの比率を、0から1までのスケールで指定します。1.0=アタックレベル、0.0=リリースレベルです。susRatioはディケイレベルと、エンベロープのサステイン部分が継続するレベルを決定します。たとえば、attackLevelが0.4で、releaseLevelが0で、susRatioが0.5の場合、decayLevelは0.2になります。attackLevelをsetRangeを使用して 1.0に増やすと、decayLevelは比例して増加し、0.5 になります。",
-        "releaseTime": "Number: (オプション) 指定された秒数後にリリースする時間 (デフォルト値は0秒)"
+        "decayTime": "Number:（オプション）エンベロープがディケイ/サステインレベルに到達するまでの時間（単位は秒）",
+        "susRatio": "Number:（オプション）アタックレベルとリリースレベルの比率を、0から1までのスケールで指定します。1.0=アタックレベル、0.0=リリースレベルです。susRatioはディケイレベルと、エンベロープのサステイン部分が継続するレベルを決定します。たとえば、attackLevelが0.4で、releaseLevelが0で、susRatioが0.5の場合、decayLevelは0.2になります。attackLevelをsetRangeを使用して 1.0に増やすと、decayLevelは比例して増加し、0.5 になります。",
+        "releaseTime": "Number:（オプション）指定された秒数後にリリースする時間 (デフォルト値は0秒)"
       }
     },
     "amp": {
@@ -7291,7 +7291,7 @@
       "returns": "Number: 新しいボリューム値",
       "params": {
         "vol": "Number: 設定する音量",
-        "rampTime": "Number: (オプション) 新しい音量に到達するまでの時間"
+        "rampTime": "Number:（オプション）新しい音量に到達するまでの時間"
       }
     },
     "connect": {
@@ -7323,8 +7323,8 @@
       "AudioVoiceは、音響合成において単一の音声として使用されます。PolySynthクラスは、AudioVoiceの配列を保持し、音声の割り当て、再生される音符の設定、パラメーターの設定を行います。"
     ],
     "params": {
-      "synthVoice": "Number: (オプション) AudioVoiceクラスを継承したモノフォニックシンセサイザーの数値。デフォルトはp5.MonoSynth",
-      "maxVoices": "Number: (オプション) 音声の数。デフォルトは8"
+      "synthVoice": "Number:（オプション）AudioVoiceクラスを継承したモノフォニックシンセサイザーの数値。デフォルトはp5.MonoSynth",
+      "maxVoices": "Number:（オプション）音声の数。デフォルトは8"
     },
     "notes": {
       "description": [
@@ -7344,10 +7344,10 @@
         "音符を再生し、サステイン時間をもつnoteAttackとnoteReleaseをトリガーします。"
       ],
       "params": {
-        "note": "Number: (オプション) 再生するMIDIノート（0から127の範囲、60は中央のC音です）。",
-        "velocity": "Number: (オプション) 再生する音符のベロシティ（0から1の範囲）。",
-        "secondsFromNow": "Number: (オプション) 再生する時間（秒単位）。",
-        "sustainTime": "Number: (オプション) エンベロープを解除する前にサステインする時間（秒単位）。"
+        "note": "Number:（オプション）再生するMIDIノート（0から127の範囲、60は中央のC音です）。",
+        "velocity": "Number:（オプション）再生する音符のベロシティ（0から1の範囲）。",
+        "secondsFromNow": "Number:（オプション）再生する時間（秒単位）。",
+        "sustainTime": "Number:（オプション）エンベロープを解除する前にサステインする時間（秒単位）。"
       }
     },
     "noteADSR": {
@@ -7355,11 +7355,11 @@
         "トリガーされた特定の音符に対してエンベロープを設定します。このメソッドを使用すると、希望する音を再生するのに使用されるAudioVoiceのエンベロープが変更されます。変更されたエンベロープが他の音符に使用されることとなるのを防ぐために、noteReleaseが呼び出される前にエンベロープをリセットする必要があります。"
       ],
       "params": {
-        "note": "Number: (オプション) ADSRを設定するMIDIノート。",
-        "attackTime": "Number: (オプション) エンベロープがAttack Levelに到達するまでの時間（秒単位）。",
-        "decayTime": "Number: (オプション) エンベロープがDecay / Sustain Levelに到達するまでの時間（秒単位）。",
-        "susRatio": "Number: (オプション) 0から1のスケールで、attackLevelとreleaseLevelの比率。1.0はattackLevelを、0.0はreleaseLevelを表します。susRatioは、decayLevelとエンベロープのサステイン部分が維持されるレベルを決定します。たとえば、attackLevelが0.4でreleaseLevelが0で、susRatioが0.5の場合、decayLevelは0.2になります。attackLevelがsetRangeを使用して 1.0に増加すると、decayLevelは比例的に増加して0.5 になります。",
-        "releaseTime": "Number: (オプション) 今から数秒後の時間（デフォルトは0秒）"
+        "note": "Number:（オプション）ADSRを設定するMIDIノート。",
+        "attackTime": "Number:（オプション）エンベロープがAttack Levelに到達するまでの時間（秒単位）。",
+        "decayTime": "Number:（オプション）エンベロープがDecay / Sustain Levelに到達するまでの時間（秒単位）。",
+        "susRatio": "Number:（オプション）0から1のスケールで、attackLevelとreleaseLevelの比率。1.0はattackLevelを、0.0はreleaseLevelを表します。susRatioは、decayLevelとエンベロープのサステイン部分が維持されるレベルを決定します。たとえば、attackLevelが0.4でreleaseLevelが0で、susRatioが0.5の場合、decayLevelは0.2になります。attackLevelがsetRangeを使用して 1.0に増加すると、decayLevelは比例的に増加して0.5 になります。",
+        "releaseTime": "Number:（オプション）今から数秒後の時間（デフォルトは0秒）"
       }
     },
     "setADSR": {
@@ -7367,10 +7367,10 @@
         "PolySynthのグローバルエンベロープを設定します。このメソッドを使用すると、各モノシンセサイザーのエンベロープが変更され、すべての音がこのエンベロープで再生されます。"
       ],
       "params": {
-        "attackTime": "Number: (オプション) エンベロープがAttack Levelに到達するまでの時間（秒単位）。",
-        "decayTime": "Number: (オプション) エンベロープがDecay / Sustain Levelに到達するまでの時間（秒単位）。",
-        "susRatio": "Number: (オプション) 0から1のスケールで、attackLevelとreleaseLevelの比率。1.0はattackLevelを、0.0はreleaseLevelを表します。susRatioは、decayLevelとエンベロープのサステイン部分が維持されるレベルを決定します。たとえば、attackLevelが0.4でreleaseLevelが0で、susRatioが0.5の場合、decayLevelは0.2になります。attackLevelがsetRangeを使用して 1.0に増加すると、decayLevelは比例的に増加して0.5 になります。",
-        "releaseTime": "Number: (オプション) 今から数秒後の時間（デフォルトは0秒）"
+        "attackTime": "Number:（オプション）エンベロープがAttack Levelに到達するまでの時間（秒単位）。",
+        "decayTime": "Number:（オプション）エンベロープがDecay / Sustain Levelに到達するまでの時間（秒単位）。",
+        "susRatio": "Number:（オプション）0から1のスケールで、attackLevelとreleaseLevelの比率。1.0はattackLevelを、0.0はreleaseLevelを表します。susRatioは、decayLevelとエンベロープのサステイン部分が維持されるレベルを決定します。たとえば、attackLevelが0.4でreleaseLevelが0で、susRatioが0.5の場合、decayLevelは0.2になります。attackLevelがsetRangeを使用して 1.0に増加すると、decayLevelは比例的に増加して0.5 になります。",
+        "releaseTime": "Number:（オプション）今から数秒後の時間（デフォルトは0秒）"
       }
     },
     "noteAttack": {
@@ -7378,9 +7378,9 @@
         "モノシンセのAttackとDecay部分をトリガーします。ピアノのキーを押し続けるのに似ていますが、リリースするまでサステインレベルを保持します。"
       ],
       "params": {
-        "note": "Number: (オプション) AttackをトリガーするMIDIノート。",
-        "velocity": "Number: (オプション) 再生する音符のベロシティ（0から1の範囲）。",
-        "secondsFromNow": "Number: (オプション) 今から数秒後の時間（秒単位）"
+        "note": "Number:（オプション）AttackをトリガーするMIDIノート。",
+        "velocity": "Number:（オプション）再生する音符のベロシティ（0から1の範囲）。",
+        "secondsFromNow": "Number:（オプション）今から数秒後の時間（秒単位）"
       }
     },
     "noteRelease": {
@@ -7388,8 +7388,8 @@
         "AudioVoiceの音符のリリースをトリガーします。これは、ピアノのキーを離して、リリースレベルとリリース時間に応じて音がフェードアウトするのに似ています。"
       ],
       "params": {
-        "note": "Number: (オプション) リリースをトリガーするMIDIノート。値が提供されない場合、すべての音符がリリースされます。",
-        "secondsFromNow": "Number: (オプション) リリースをトリガーするまでの時間（秒単位）"
+        "note": "Number:（オプション）リリースをトリガーするMIDIノート。値が提供されない場合、すべての音符がリリースされます。",
+        "secondsFromNow": "Number:（オプション）リリースをトリガーするまでの時間（秒単位）"
       }
     },
     "connect": {
