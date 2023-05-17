@@ -26,9 +26,9 @@ function setup() {
 
 function draw() {
   background(0);
-  // この二重のループは「spacer」変数をベースに配列内の値を
-  // 走査しています。これにより描画された配列内の値より多くの値が存在します。
-  // 「spacer」変数の値を変えると
+  // この二重のループは「spacer」変数に基づいて配列内の値を
+  // スキップします。これにより描画されているものより多くの値が配列に存在します。
+  // 「spacer」変数の値を変更することで
   // 点の密度を変えられます。
   for (let x = 0; x < width; x += spacer) {
     for (let y = 0; y < height; y += spacer) {
