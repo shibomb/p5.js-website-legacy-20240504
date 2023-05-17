@@ -68,7 +68,7 @@
   "p5": {
     "description": [
       "これは p5 インスタンスのコンストラクターです。",
-      "p5 インスタンスには、p5 スケッチに関連するすべてのプロパティとメソッドが含まれています。入力されたスケッチ クロージャーを受け取り、生成された p5 キャンバスをノードにアタッチするためのオプションのノード パラメーターを取ることもできます。スケッチ クロージャーは、新しく作成された p5 インスタンスを唯一の引数として受け取り、スケッチの実行に必要な <a href=\"#/p5/preload\">preload()</a>、<a href=\"#/p5/setup\">setup()</a>、および/または <a href=\"#/p5/draw\">draw()</a> プロパティを設定することもできます。",
+      "p5 インスタンスには、p5 スケッチに関連するすべてのプロパティとメソッドが含まれています。入力されたスケッチクロージャーを受け取り、生成された p5 キャンバスをノードにアタッチするためのオプションのノードパラメーターを取ることもできます。スケッチクロージャーは、新しく作成された p5 インスタンスを唯一の引数として受け取り、スケッチの実行に必要な <a href=\"#/p5/preload\">preload()</a>、<a href=\"#/p5/setup\">setup()</a>、および/または <a href=\"#/p5/draw\">draw()</a> プロパティを設定することもできます。",
       "p5 スケッチは、「グローバル」モードまたは「インスタンス」モードで実行できます。「グローバル」 - すべてのプロパティとメソッドがウィンドウにアタッチされます「インスタンス」 - すべてのプロパティとメソッドがこの p5 オブジェクトにバインドされます。"
     ],
     "returns": "p5: p5 インスタンス",
@@ -78,9 +78,9 @@
     },
     "describe": {
       "description": [
-        "キャンバスにスクリーン リーダー対応の説明を作成します。最初のパラメーターは、キャンバスの説明を示す文字列である必要があります。2つ目のパラメーターはオプションです。指定された場合、説明の表示方法が決まります。",
-        "<code class=\"language-javascript\">describe(text, LABEL)</code> は、キャンバスに隣接する div 内にある<a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">キャプション パネル</a>として、すべてのユーザーに説明を表示します。CSS で好みのスタイルに変更できます。",
-        "<code class=\"language-javascript\">describe(text, FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> で、スクリーン リーダー ユーザーのみが説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで説明はスクリーン リーダー ユーザーにのみ利用可能です。"
+        "キャンバスにスクリーンリーダー対応の説明を作成します。最初のパラメーターは、キャンバスの説明を示す文字列である必要があります。2つ目のパラメーターはオプションです。指定された場合、説明の表示方法が決まります。",
+        "<code class=\"language-javascript\">describe(text, LABEL)</code> は、キャンバスに隣接する div 内にある<a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">キャプションパネル</a>として、すべてのユーザーに説明を表示します。CSS で好みのスタイルに変更できます。",
+        "<code class=\"language-javascript\">describe(text, FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> で、スクリーンリーダーユーザーのみが説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで説明はスクリーンリーダーユーザーにのみ利用可能です。"
       ],
       "params": {
         "text": "String: キャンバスの説明",
@@ -89,9 +89,9 @@
     },
     "describeElement": {
       "description": [
-        "この関数は、キャンバス内の要素（一緒に意味を作り出す形状または形状のグループ）に対してスクリーン リーダー対応の説明を作成します。最初のパラメーターは要素の名前である必要があります。2つ目のパラメーターは、要素の説明を示す文字列である必要があります。3つ目のパラメーターはオプションです。指定された場合、要素の説明の表示方法が決まります。",
-        "<code class=\"language-javascript\">describeElement(name, text, LABEL)</code> は、キャンバスに隣接する div 内にある<a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">キャプション パネル</a>として、すべてのユーザーに要素の説明を表示します。CSS で好みのスタイルに変更できます。",
-        "<code class=\"language-javascript\">describeElement(name, text, FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> で、スクリーン リーダー ユーザーのみが要素の説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで要素の説明はスクリーン リーダー ユーザーにのみ利用可能です。"
+        "この関数は、キャンバス内の要素（一緒に意味を作り出す形状または形状のグループ）に対してスクリーンリーダー対応の説明を作成します。最初のパラメーターは要素の名前である必要があります。2つ目のパラメーターは、要素の説明を示す文字列である必要があります。3つ目のパラメーターはオプションです。指定された場合、要素の説明の表示方法が決まります。",
+        "<code class=\"language-javascript\">describeElement(name, text, LABEL)</code> は、キャンバスに隣接する div 内にある<a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">キャプションパネル</a>として、すべてのユーザーに要素の説明を表示します。CSS で好みのスタイルに変更できます。",
+        "<code class=\"language-javascript\">describeElement(name, text, FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> で、スクリーンリーダーユーザーのみが要素の説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで要素の説明はスクリーンリーダーユーザーにのみ利用可能です。"
       ],
       "params": {
         "name": "String: 要素の名前",
@@ -101,8 +101,8 @@
     },
     "textOutput": {
       "description": [
-        "<code class=\"language-javascript\">textOutput()</code> は、キャンバス上に存在する形状を説明するスクリーン リーダー対応の出力を作成します。キャンバスの一般的な説明には、キャンバスのサイズ、キャンバスの色、キャンバス内の要素の数（例:「あなたの出力は、400 x 400ピクセルのラベンダー ブルーのキャンバスで、以下の4つの形状が含まれています:」）が含まれます。この説明の後に、各形状の色、位置、面積が説明された形状のリストが続きます（例:「キャンバスの1%を覆う左上のオレンジ色の楕円」）。各要素を選択すると詳細が表示され、要素のテーブルも提供されます。このテーブルでは、形状、色、位置、座標、面積が説明されています（例:「オレンジ色の楕円 位置 = 左上 面積 = 2」）。",
-        "<code class=\"language-javascript\">textOutput()</code> および <code class=\"language-javascript\">textOutput(FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> でスクリーン リーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">textOutput(LABEL)</code> は、キャンバスに隣接する出力が含まれる追加の div を作成しますが、これはコーディング時にキャンバスのサブ DOM 外に出力を表示したい非スクリーン リーダー ユーザーにとって便利です。ただし、LABEL を使用すると、スクリーン リーダー ユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみ LABEL を使用し、公開またはスクリーン リーダー ユーザーと共有する前に削除することをお勧めします。"
+        "<code class=\"language-javascript\">textOutput()</code> は、キャンバス上に存在する形状を説明するスクリーンリーダー対応の出力を作成します。キャンバスの一般的な説明には、キャンバスのサイズ、キャンバスの色、キャンバス内の要素の数（例:「あなたの出力は、400 x 400ピクセルのラベンダーブルーのキャンバスで、以下の4つの形状が含まれています:」）が含まれます。この説明の後に、各形状の色、位置、面積が説明された形状のリストが続きます（例:「キャンバスの1%を覆う左上のオレンジ色の楕円」）。各要素を選択すると詳細が表示され、要素のテーブルも提供されます。このテーブルでは、形状、色、位置、座標、面積が説明されています（例:「オレンジ色の楕円 位置 = 左上 面積 = 2」）。",
+        "<code class=\"language-javascript\">textOutput()</code> および <code class=\"language-javascript\">textOutput(FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">textOutput(LABEL)</code> は、キャンバスに隣接する出力が含まれる追加の div を作成しますが、これはコーディング時にキャンバスのサブ DOM 外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABEL を使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみ LABEL を使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
       ],
       "params": {
         "display": "Constant: (オプション) FALLBACK または LABEL のいずれか"
@@ -110,8 +110,8 @@
     },
     "gridOutput": {
       "description": [
-        "<code class=\"language-javascript\">gridOutput()</code> は、キャンバスの内容を、各形状の空間的な位置にもとづいたグリッド（html テーブル）の形でレイアウトします。テーブル出力の前に、キャンバスの簡単な説明が利用可能です。この説明には、背景の色、キャンバスのサイズ、オブジェクトの数、オブジェクトの種類（例:「ラベンダー ブルーのキャンバスは200 x 200で、3つの楕円とひとつの長方形が含まれています」）が含まれます。グリッドは空間的にコンテンツを記述し、各要素はその位置に応じてテーブルのセルに配置されます。各セル内の要素には、その要素の色と形状の種類が利用可能です（例:「オレンジ色の楕円」）。これらの説明は個別に選択して詳細を取得できます。形状、色、位置、面積が説明された要素のリスト（例:「オレンジ色の楕円 位置 = 左上 面積 = 1%」）も利用可能です。",
-        "<code class=\"language-javascript\">gridOutput()</code> および <code class=\"language-javascript\">gridOutput(FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> でスクリーン リーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">gridOutput(LABEL)</code> は、キャンバスに隣接する出力が含まれる追加の div を作成しますが、これはコーディング時にキャンバスのサブ DOM 外に出力を表示したい非スクリーン リーダー ユーザーにとって便利です。ただし、LABEL を使用すると、スクリーン リーダー ユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみ LABEL を使用し、公開またはスクリーン リーダー ユーザーと共有する前に削除することをお勧めします。"
+        "<code class=\"language-javascript\">gridOutput()</code> は、キャンバスの内容を、各形状の空間的な位置にもとづいたグリッド（html テーブル）の形でレイアウトします。テーブル出力の前に、キャンバスの簡単な説明が利用可能です。この説明には、背景の色、キャンバスのサイズ、オブジェクトの数、オブジェクトの種類（例:「ラベンダーブルーのキャンバスは200 x 200で、3つの楕円とひとつの長方形が含まれています」）が含まれます。グリッドは空間的にコンテンツを記述し、各要素はその位置に応じてテーブルのセルに配置されます。各セル内の要素には、その要素の色と形状の種類が利用可能です（例:「オレンジ色の楕円」）。これらの説明は個別に選択して詳細を取得できます。形状、色、位置、面積が説明された要素のリスト（例:「オレンジ色の楕円 位置 = 左上 面積 = 1%」）も利用可能です。",
+        "<code class=\"language-javascript\">gridOutput()</code> および <code class=\"language-javascript\">gridOutput(FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">gridOutput(LABEL)</code> は、キャンバスに隣接する出力が含まれる追加の div を作成しますが、これはコーディング時にキャンバスのサブ DOM 外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABEL を使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみ LABEL を使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
       ],
       "params": {
         "display": "Constant: (オプション) FALLBACK または LABEL のいずれか"
@@ -121,36 +121,36 @@
       "description": ["色またはピクセル配列からアルファ値を抽出します。"],
       "returns": "Number: アルファ値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "blue": {
       "description": ["色またはピクセル配列から青の値を抽出します。"],
       "returns": "Number: 青の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "brightness": {
       "description": ["色またはピクセル配列から HSB 明度値を抽出します。"],
       "returns": "Number: 明度値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "color": {
       "description": [
-        "色データ型の変数に格納するための色を作成します。パラメーターは、現在の <a href=\"#/p5/colorMode\">colorMode()</a> に応じて RGB または HSB の値として解釈されます。デフォルト モードは0から255の RGB 値であり、したがって、関数コール color(255, 204, 0) は鮮やかな黄色を返します。",
+        "色データ型の変数に格納するための色を作成します。パラメーターは、現在の <a href=\"#/p5/colorMode\">colorMode()</a> に応じて RGB または HSB の値として解釈されます。デフォルトモードは0から255の RGB 値であり、したがって、関数コール color(255, 204, 0) は鮮やかな黄色を返します。",
         "<a href=\"#/p5/color\">color()</a> にひとつの値のみが提供される場合、グレースケールの値として解釈されることに注意してください。2つ目の値を追加すると、それがアルファ透明度に使用されます。3つの値が指定されると、それらは RGB または HSB の値として解釈されます。4つ目の値を追加すると、アルファ透明度が適用されます。",
         "単一の文字列引数が提供される場合、RGB、RGBA、16進数の CSS カラー文字列、および、すべての名前付きカラー文字列がサポートされます。この場合、2番目の引数としてのアルファ数値はサポートされないため、RGBA 形式を使用する必要があります。"
       ],
       "returns": "p5.Color: 結果の色",
       "params": {
         "gray": "Number: 白と黒の間の値を指定する数値。",
-        "alpha": "Number: (オプション) 現在のカラー レンジに対するアルファ値（デフォルトは0〜255）",
-        "v1": "Number: 現在のカラー レンジに対する赤または色相値",
-        "v2": "Number: 現在のカラー レンジに対する緑または彩度値",
-        "v3": "Number: 現在のカラー レンジに対する青または明度値",
+        "alpha": "Number: (オプション) 現在のカラーレンジに対するアルファ値（デフォルトは0〜255）",
+        "v1": "Number: 現在のカラーレンジに対する赤または色相値",
+        "v2": "Number: 現在のカラーレンジに対する緑または彩度値",
+        "v3": "Number: 現在のカラーレンジに対する青または明度値",
         "value": "String: カラー文字列",
         "values": "Number[]: 色の赤、緑、青、およびアルファ成分を含む配列",
         "color": "p5.Color"
@@ -160,23 +160,23 @@
       "description": ["色またはピクセル配列から緑の値を抽出します。"],
       "returns": "Number: 緑の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "hue": {
       "description": [
         "色またはピクセル配列から色相値を抽出します。",
-        "色相は HSB と HSL の両方に存在します。この関数は、HSB カラーオブジェクトが与えられた場合（またはカラー モードが HSB の場合にピクセル配列が与えられた場合）、HSB 正規化された色相を返しますが、それ以外の場合は HSL 正規化された色相をデフォルトで返します。（最大色相設定がそれぞれのシステムで異なる場合のみ、値が異なります。）"
+        "色相は HSB と HSL の両方に存在します。この関数は、HSB カラーオブジェクトが与えられた場合（またはカラーモードが HSB の場合にピクセル配列が与えられた場合）、HSB 正規化された色相を返しますが、それ以外の場合は HSL 正規化された色相をデフォルトで返します。（最大色相設定がそれぞれのシステムで異なる場合のみ、値が異なります。）"
       ],
       "returns": "Number: 色相",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "lerpColor": {
       "description": [
         "2つの色をブレンドして、それらの間にある第3の色を見つけます。amt パラメーターは、2つの値の間で補間する量で、0.0は1番目の色に等しく、0.1は1番目の色に非常に近く、0.5はちょうど中間です。0未満の量は0として扱われます。同様に、1を超える量は1として扱われます。<a href=\"#/p5/lerp\">lerp()</a> の動作とは異なりますが、範囲外の数値が奇妙で予期しない色を生成しないようにするために必要です。",
-        "色の補間方法は、現在のカラー モードに依存します。"
+        "色の補間方法は、現在のカラーモードに依存します。"
       ],
       "returns": "p5.Color: 補間された色",
       "params": {
@@ -189,30 +189,30 @@
       "description": ["色またはピクセル配列から HSL 輝度値を抽出します。"],
       "returns": "Number: 輝度",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "red": {
       "description": ["色またはピクセル配列から赤の値を抽出します。"],
       "returns": "Number: 赤の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "saturation": {
       "description": [
         "色またはピクセル配列から彩度の値を抽出します。",
-        "彩度は、HSB と HSL で異なるスケールで表されます。この関数は、HSB カラー オブジェクトを指定した場合（またはカラー モードが HSB の場合にピクセル配列を指定した場合）には、HSB 彩度を返しますが、それ以外の場合は HSL 彩度がデフォルトになります。"
+        "彩度は、HSB と HSL で異なるスケールで表されます。この関数は、HSB カラーオブジェクトを指定した場合（またはカラーモードが HSB の場合にピクセル配列を指定した場合）には、HSB 彩度を返しますが、それ以外の場合は HSL 彩度がデフォルトになります。"
       ],
       "returns": "Number: 彩度の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー"
       }
     },
     "background": {
       "description": [
-        "<a href=\"#/p5/background\">background()</a> 関数は、p5.js キャンバスの背景に使用される色を設定します。デフォルトの背景は透明です。この関数は通常、<a href=\"#/p5/draw\">draw()</a> 内で各フレームの開始時にディスプレイ ウィンドウをクリアするために使用されますが、<a href=\"#/p5/setup\">setup()</a> 内でアニメーションの最初のフレームの背景を設定するために使用されることもありますし、背景を一度だけ設定する必要がある場合にも使用できます。",
-        "色は、現在の <a href=\"#/p5/colorMode\">colorMode</a> に応じて、RGB、HSB、HSL カラーで指定されます。（デフォルトのカラー スペースは RGB で、各値の範囲は0から255です）。デフォルトでは、アルファの範囲も0から255です。",
+        "<a href=\"#/p5/background\">background()</a> 関数は、p5.js キャンバスの背景に使用される色を設定します。デフォルトの背景は透明です。この関数は通常、<a href=\"#/p5/draw\">draw()</a> 内で各フレームの開始時にディスプレイウィンドウをクリアするために使用されますが、<a href=\"#/p5/setup\">setup()</a> 内でアニメーションの最初のフレームの背景を設定するために使用されることもありますし、背景を一度だけ設定する必要がある場合にも使用できます。",
+        "色は、現在の <a href=\"#/p5/colorMode\">colorMode</a> に応じて、RGB、HSB、HSL カラーで指定されます。（デフォルトのカラースペースは RGB で、各値の範囲は0から255です）。デフォルトでは、アルファの範囲も0から255です。",
         "単一の文字列引数が提供された場合、RGB、RGBA、および16進数の CSS カラー文字列およびすべての名前付きカラー文字列がサポートされます。この場合、2番目の引数としてのアルファ数値はサポートされず、RGBA 形式を使用する必要があります。",
         "<a href=\"#/p5.Color\">p5.Color</a> オブジェクトを渡して背景色を設定することもできます。",
         "また、<a href=\"#/p5.Image\">p5.Image</a> を渡して背景画像を設定することもできます。"
@@ -222,17 +222,17 @@
         "colorstring": "String: カラー文字列、対応する形式は次のとおりです: 整数 rgb() または rgba()、パーセンテージ、rgb() または rgba()、3桁の16進数、6桁の16進数",
         "a": "Number: (オプション) 現在のカラー範囲に対する背景の不透明度（デフォルトは0-255）",
         "gray": "Number: 白と黒の間の値を指定",
-        "v1": "Number: 現在のカラー モードに応じた赤または色相の値",
-        "v2": "Number: 現在のカラー モードに応じた緑または彩度の値",
-        "v3": "Number: 現在のカラー モードに応じた青または明るさの値",
+        "v1": "Number: 現在のカラーモードに応じた赤または色相の値",
+        "v2": "Number: 現在のカラーモードに応じた緑または彩度の値",
+        "v3": "Number: 現在のカラーモードに応じた青または明るさの値",
         "values": "Number[]: 色の赤、緑、青、およびアルファ成分を含む配列",
-        "image": "p5.Image: 背景として設定する <a href=\"#/p5/loadImage\">loadImage()</a> または <a href=\"#/p5/createImage\">createImage()</a> で作成された画像（スケッチ ウィンドウと同じサイズである必要があります）"
+        "image": "p5.Image: 背景として設定する <a href=\"#/p5/loadImage\">loadImage()</a> または <a href=\"#/p5/createImage\">createImage()</a> で作成された画像（スケッチウィンドウと同じサイズである必要があります）"
       }
     },
     "clear": {
       "description": [
-        "バッファ内のピクセルをクリアします。この関数はキャンバスのみをクリアします。<a href=\"#/p5/createVideo\">createVideo()</a> や <a href=\"#/p5/createDiv\">createDiv()</a> などの createX() メソッドで作成されたオブジェクトはクリアされません。メインのグラフィックス コンテキストとは異なり、<a href=\"#/p5/createGraphics\">createGraphics()</a> で作成された追加のグラフィックス領域のピクセルは完全または部分的に透明にできます。この関数はすべてをクリアして、すべてのピクセルを100%透明にします。",
-        "注: WebGL モードでは、この関数に正規化された RGBA カラー値を渡して、画面を特定の色にクリアできます。色に加えて、デプス バッファもクリアされます。WebGL レンダラーを使用していない場合、これらのカラー値は効果がありません。"
+        "バッファ内のピクセルをクリアします。この関数はキャンバスのみをクリアします。<a href=\"#/p5/createVideo\">createVideo()</a> や <a href=\"#/p5/createDiv\">createDiv()</a> などの createX() メソッドで作成されたオブジェクトはクリアされません。メインのグラフィックスコンテキストとは異なり、<a href=\"#/p5/createGraphics\">createGraphics()</a> で作成された追加のグラフィックス領域のピクセルは完全または部分的に透明にできます。この関数はすべてをクリアして、すべてのピクセルを100%透明にします。",
+        "注: WebGL モードでは、この関数に正規化された RGBA カラー値を渡して、画面を特定の色にクリアできます。色に加えて、デプスバッファもクリアされます。WebGL レンダラーを使用していない場合、これらのカラー値は効果がありません。"
       ],
       "params": {
         "r": "Number: 正規化された赤の値。",
@@ -244,27 +244,27 @@
     "colorMode": {
       "description": [
         "<a href=\"#/p5/colorMode\">colorMode()</a> は、p5.js が色データを解釈する方法を変更します。デフォルトでは、<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/stroke\">stroke()</a>、<a href=\"#/p5/background\">background()</a>、および <a href=\"#/p5/color\">color()</a> のパラメーターは、RGB カラーモデルを使用して0から255の間の値で定義されます。これは、colorMode(RGB, 255) を設定することと同等です。colorMode(HSB) を設定すると、代わりに HSB システムを使用できます。デフォルトでは、これは colorMode(HSB, 360, 100, 100, 1) です。HSL も使用できます。",
-        "注: 既存のカラー オブジェクトは、それらが作成されたモードを記憶しているため、外観に影響を与えることなく、好きなようにモードを変更できます。"
+        "注: 既存のカラーオブジェクトは、それらが作成されたモードを記憶しているため、外観に影響を与えることなく、好きなようにモードを変更できます。"
       ],
       "params": {
         "mode": "Constant: RGB、HSB、または HSL のいずれか。それぞれ、赤/緑/青と色相/彩度/明度（または輝度）に対応します。",
         "max": "Number: (オプション) すべての値の範囲",
-        "max1": "Number: 現在のカラー モードに応じて、赤または色相の範囲",
-        "max2": "Number: 現在のカラー モードに応じて、緑または彩度の範囲",
-        "max3": "Number: 現在のカラー モードに応じて、青または明度/輝度の範囲",
+        "max1": "Number: 現在のカラーモードに応じて、赤または色相の範囲",
+        "max2": "Number: 現在のカラーモードに応じて、緑または彩度の範囲",
+        "max3": "Number: 現在のカラーモードに応じて、青または明度/輝度の範囲",
         "maxA": "Number: (オプション) アルファの範囲"
       }
     },
     "fill": {
       "description": [
-        "図形に塗りつぶし色を設定します。たとえば、fill(204, 102, 0) を実行すると、その後に描画されるすべての図形はオレンジ色で塗りつぶされます。この色は、現在の <a href=\"#/p5/colorMode\">colorMode()</a> によって RGB または HSB のいずれかで指定します。（デフォルトのカラー スペースは RGB で、各値の範囲は0から255です）アルファの範囲もデフォルトでは0から255です。",
+        "図形に塗りつぶし色を設定します。たとえば、fill(204, 102, 0) を実行すると、その後に描画されるすべての図形はオレンジ色で塗りつぶされます。この色は、現在の <a href=\"#/p5/colorMode\">colorMode()</a> によって RGB または HSB のいずれかで指定します。（デフォルトのカラースペースは RGB で、各値の範囲は0から255です）アルファの範囲もデフォルトでは0から255です。",
         "単一の文字列引数が提供された場合、RGB、RGBA、16進数の CSS カラー文字列、および、すべての名前付きカラー文字列がサポートされます。この場合、2番目の引数としてのアルファ数値はサポートされず、RGBA 形式を使用する必要があります。",
         "<a href=\"#/p5.Color\">p5.Color</a> オブジェクトを渡して塗りつぶし色を設定することもできます。"
       ],
       "params": {
-        "v1": "Number: 現在のカラー レンジに対する赤または色相の値",
-        "v2": "Number: 現在のカラー レンジに対する緑または彩度の値",
-        "v3": "Number: 現在のカラー レンジに対する青または明度の値",
+        "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
+        "v2": "Number: 現在のカラーレンジに対する緑または彩度の値",
+        "v3": "Number: 現在のカラーレンジに対する青または明度の値",
         "alpha": "Number (オプション)",
         "value": "String: カラー文字列",
         "gray": "Number: グレーの値",
@@ -636,7 +636,7 @@
     },
     "beginShape": {
       "description": [
-        "<a href=\"#/p5/beginShape\">beginShape()</a>関数と<a href=\"#/p5/endShape\">endShape()</a>関数を使用することで、より複雑な形状を作成できます。<a href=\"#/p5/beginShape\">beginShape()</a>は、形状の頂点を記録するために使用され、<a href=\"#/p5/endShape\">endShape()</a>は記録を停止します。 kindパラメーターの値によって、提供された頂点からどのタイプの形状を作成するかを指定できます。 モードが指定されていない場合、形状は任意の不規則なポリゴンである可能性があります。",
+        "<a href=\"#/p5/beginShape\">beginShape()</a>関数と<a href=\"#/p5/endShape\">endShape()</a>関数を使用することで、より複雑な形状を作成できます。<a href=\"#/p5/beginShape\">beginShape()</a>は、形状の頂点を記録するために使用され、<a href=\"#/p5/endShape\">endShape()</a>は記録を停止します。 kindパラメーターの値によって、提供された頂点からどのタイプの形状を作成するかを指定できます。モードが指定されていない場合、形状は任意の不規則なポリゴンである可能性があります。",
         "<a href=\"#/p5/beginShape\">beginShape()</a>関数で利用可能なパラメーターは次のとおりです:",
         "POINTS: 点のシリーズを描画します。",
         "LINES: つながっていない線分のシリーズを描画します。",
@@ -1210,7 +1210,7 @@
     },
     "blendMode": {
       "description": [
-        "定義されたモードにしたがって、ディスプレイ ウィンドウ内のピクセルをブレンドします。ソースピクセル（A）をディスプレイ ウィンドウ内の既存のピクセル（B）とブレンドするために、次のモードを選択できます。: <ul> <li><code>BLEND</code> - 色の線形補間:C = A*factor + B。 <b>これがデフォルトのブレンドモードです。</b></li> <li><code>ADD</code> - AとBの和</li> <li><code>DARKEST</code> - 最も暗い色だけが成功:C = min(A*factor, B)。</li> <li><code>LIGHTEST</code> - 最も明るい色だけが成功:C = max(A*factor, B)。</li> <li><code>DIFFERENCE</code> - 背景画像から色を減算します。<em>(2D)</em></li> <li><code>EXCLUSION</code> - <code>DIFFERENCE</code>に似ていますが、それほど極端ではありません。</li> <li><code>MULTIPLY</code> - 色を乗算し、結果は常に暗くなります。</li> <li><code>SCREEN</code> - 乗算の反対で、色の逆数を使用します。</li> <li><code>REPLACE</code> - ピクセルは他のピクセルと完全に置き換えられ、アルファ（透明度）値を使用しません。</li> <li><code>REMOVE</code> - Aのアルファ強度でBからピクセルを削除します。</li> <li><code>OVERLAY</code> - <code>MULTIPLY</code>と<code>SCREEN </code>のミックス。暗い値を乗算し、明るい値をスクリーンにします。<em>(2D)</em></li> <li><code>HARD_LIGHT</code> - 50%以上の灰色の場合は<code>SCREEN</code>、それ以下の場合は<code>MULTIPLY</code>。<em>(2D)</em></li> <li><code>SOFT_LIGHT</code> - <code>DARKEST</code>と<code>LIGHTEST</code>のミックス。<code>OVERLAY</code>のように機能しますが、それほど厳しくありません。<em>(2D)</em></li> <li><code>DODGE</code> - 明るいトーンを明るくし、コントラストを高め、暗い部分を無視します。<em>(2D)</em></li> <li><code>BURN</code> - 暗い領域が適用され、コントラストが増加し、ライトを無視します。<em>(2D)</em></li> <li><code>SUBTRACT</code> - AとBの残差 <em>(3D)</em></li> </ul>",
+        "定義されたモードにしたがって、ディスプレイウィンドウ内のピクセルをブレンドします。ソースピクセル（A）をディスプレイウィンドウ内の既存のピクセル（B）とブレンドするために、次のモードを選択できます。: <ul> <li><code>BLEND</code> - 色の線形補間:C = A*factor + B。 <b>これがデフォルトのブレンドモードです。</b></li> <li><code>ADD</code> - AとBの和</li> <li><code>DARKEST</code> - 最も暗い色だけが成功:C = min(A*factor, B)。</li> <li><code>LIGHTEST</code> - 最も明るい色だけが成功:C = max(A*factor, B)。</li> <li><code>DIFFERENCE</code> - 背景画像から色を減算します。<em>(2D)</em></li> <li><code>EXCLUSION</code> - <code>DIFFERENCE</code>に似ていますが、それほど極端ではありません。</li> <li><code>MULTIPLY</code> - 色を乗算し、結果は常に暗くなります。</li> <li><code>SCREEN</code> - 乗算の反対で、色の逆数を使用します。</li> <li><code>REPLACE</code> - ピクセルは他のピクセルと完全に置き換えられ、アルファ（透明度）値を使用しません。</li> <li><code>REMOVE</code> - Aのアルファ強度でBからピクセルを削除します。</li> <li><code>OVERLAY</code> - <code>MULTIPLY</code>と<code>SCREEN </code>のミックス。暗い値を乗算し、明るい値をスクリーンにします。<em>(2D)</em></li> <li><code>HARD_LIGHT</code> - 50%以上の灰色の場合は<code>SCREEN</code>、それ以下の場合は<code>MULTIPLY</code>。<em>(2D)</em></li> <li><code>SOFT_LIGHT</code> - <code>DARKEST</code>と<code>LIGHTEST</code>のミックス。<code>OVERLAY</code>のように機能しますが、それほど厳しくありません。<em>(2D)</em></li> <li><code>DODGE</code> - 明るいトーンを明るくし、コントラストを高め、暗い部分を無視します。<em>(2D)</em></li> <li><code>BURN</code> - 暗い領域が適用され、コントラストが増加し、ライトを無視します。<em>(2D)</em></li> <li><code>SUBTRACT</code> - AとBの残差 <em>(3D)</em></li> </ul>",
         "<em>(2D)</em>は、このブレンドモードが<b>2Dレンダラーのみ</b>で動作することを示します。<em>(3D)</em>は、このブレンドモードが<b>WEBGLレンダラーのみ</b>で動作することを示します。"
       ],
       "params": {
@@ -1225,7 +1225,7 @@
     "noLoop": {
       "description": [
         "<a href=\"#/p5/draw\">draw()</a>内のコードを継続的に実行することを停止します。 <a href=\"#/p5/loop\">loop()</a>が呼び出された場合、<a href=\"#/p5/draw\">draw()</a>内のコードが再び継続的に実行されます。 <a href=\"#/p5/setup\">setup()</a>内の<a href=\"#/p5/noLoop\">noLoop()</a>を使用する場合は、ブロック内の最後の行にする必要があります。",
-        "<a href=\"#/p5/noLoop\">noLoop()</a>を使用すると、<a href=\"#/p5/mousePressed\">mousePressed()</a>や<a href=\"#/p5/keyPressed\">keyPressed()</a>などのイベント処理関数内で画面を操作またはアクセスすることができません。 代わりに、これらの関数を使用して<a href=\"#/p5/redraw\">redraw()</a>または<a href=\"#/p5/loop\">loop()</a>を呼び出し、<a href=\"#/p5/draw\">draw()</a>を実行して、画面を適切に更新します。つまり、<a href=\"#/p5/noLoop\">noLoop()</a>が呼び出された場合、描画は行われず、<a href=\"#/p5/saveFrames\">saveFrames()</a>や<a href=\"#/p5/loadPixels\">loadPixels()</a>などの関数を使用できない可能性があることに注意してください。",
+        "<a href=\"#/p5/noLoop\">noLoop()</a>を使用すると、<a href=\"#/p5/mousePressed\">mousePressed()</a>や<a href=\"#/p5/keyPressed\">keyPressed()</a>などのイベント処理関数内で画面を操作またはアクセスすることができません。代わりに、これらの関数を使用して<a href=\"#/p5/redraw\">redraw()</a>または<a href=\"#/p5/loop\">loop()</a>を呼び出し、<a href=\"#/p5/draw\">draw()</a>を実行して、画面を適切に更新します。つまり、<a href=\"#/p5/noLoop\">noLoop()</a>が呼び出された場合、描画は行われず、<a href=\"#/p5/saveFrames\">saveFrames()</a>や<a href=\"#/p5/loadPixels\">loadPixels()</a>などの関数を使用できない可能性があることに注意してください。",
         "スケッチがサイズ変更された場合、<a href=\"#/p5/noLoop\">noLoop()</a>が指定された後でも、<a href=\"#/p5/redraw\">redraw()</a>が呼び出されてスケッチが更新されることに注意してください。そうしないと、スケッチが奇妙な状態になり、<a href=\"#/p5/loop\">loop()</a>が呼び出されるまで戻らなくなります。",
         "<a href=\"#/p5/isLooping\">isLooping()</a>を使用して、<a href=\"#/p5/loop\">loop()</a>の現在の状態を確認してください。"
       ]
@@ -1968,7 +1968,7 @@
     },
     "touchEnded": {
       "description": [
-        "<a href=\"#/p5/touchEnded\">touchEnded()</a>関数はタッチが終了するたびに呼び出されます。 <a href=\"#/p5/touchEnded\">touchEnded()</a>関数が定義されていない場合、代わりに定義されている <a href=\"#/p5/mouseReleased\">mouseReleased()</a>関数が呼び出されます。 ブラウザーは、さまざまなタッチイベントに添付された異なるデフォルトの動作をもつことがあります。 このイベントのデフォルトの動作を防ぐには、メソッドの最後に \"return false\" を追加してください。"
+        "<a href=\"#/p5/touchEnded\">touchEnded()</a>関数はタッチが終了するたびに呼び出されます。 <a href=\"#/p5/touchEnded\">touchEnded()</a>関数が定義されていない場合、代わりに定義されている <a href=\"#/p5/mouseReleased\">mouseReleased()</a>関数が呼び出されます。ブラウザーは、さまざまなタッチイベントに添付された異なるデフォルトの動作をもつことがあります。このイベントのデフォルトの動作を防ぐには、メソッドの最後に \"return false\" を追加してください。"
       ],
       "params": {
         "event": "Object: (オプション) 任意のTouchEventコールバック引数。"
@@ -2100,7 +2100,7 @@
     },
     "pixels": {
       "description": [
-        "ディスプレイ ウィンドウ内のすべてのピクセルの値を含む<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference /Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a>です。これらの値は数値です。この配列は、ディスプレイ ウィンドウのサイズ（<a href=\"#/p5/pixelDensity\">pixelDensity</a>の適切な係数を含む）x4で、各ピクセルのR、G、B、Aの値を左から右へ、各行から下へ移動しながら順番に表現しています。Retinaやその他の高密度ディスプレイは、ピクセル密度の二乗の係数であるピクセル[]を持っています。たとえば、画像が100×100ピクセルの場合、40,000になります。Retinaディスプレイでは160,000になります。",
+        "ディスプレイウィンドウ内のすべてのピクセルの値を含む<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference /Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a>です。これらの値は数値です。この配列は、ディスプレイウィンドウのサイズ（<a href=\"#/p5/pixelDensity\">pixelDensity</a>の適切な係数を含む）x4で、各ピクセルのR、G、B、Aの値を左から右へ、各行から下へ移動しながら順番に表現しています。Retinaやその他の高密度ディスプレイは、ピクセル密度の二乗の係数であるピクセル[]を持っています。たとえば、画像が100×100ピクセルの場合、40,000になります。Retinaディスプレイでは160,000になります。",
         "配列の最初の4つの値（インデックス0-3）は、ピクセル(0, 0)のR、G、B、Aの値です。次の4つの値（インデックス4-7）は、ピクセル(1, 0)のR、G、B、Aの値が含まれます。一般的には、(x, y)のピクセルの値を設定するには、次のようにします:<pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
         "上記の方法は複雑ですが、任意のpixelDensityで動作する柔軟性があります。<a href=\"#/p5/set\">set()</a>は、任意のpixelDensityで指定された(x, y)に対して<a href=\"#/p5/pixels\">pixels[]</a>内の適切な値を自動的に設定しますが、ピクセル配列に多くの変更が加えられるとパフォーマンスが低下することがあります。",
         "この配列にアクセスする前に、<a href=\"#/p5/loadPixels\">loadPixels()</a>関数でデータをロードする必要があります。配列データが変更された後、<a href=\"#/p5/updatePixels\">updatePixels()</a>関数を実行して変更を更新する必要があります。",
@@ -2193,7 +2193,7 @@
     },
     "updatePixels": {
       "description": [
-        "画面に<a href=\"#/p5/pixels\">pixels[]</a>配列のデータを更新します。 <a href=\"#/p5/loadPixels\">loadPixels()</a>と併用して使用してください。 配列からピクセルを読み取るだけであれば、<a href=\"#/p5/updatePixels\">updatePixels()</a>を呼び出す必要はありません。 更新は変更を適用する場合にのみ必要です。 <a href=\"#/p5/updatePixels\">updatePixels()</a>は、pixels配列が操作されるたび、または<a href=\"#/p5/set\">set()</a>が呼び出されるたびに呼び出されるべきであり、<a href=\"#/p5/set\">set()</a>で行われた変更や<a href=\"#/p5/pixels\">pixels[]</a>への直接の変更のみが発生します。"
+        "画面に<a href=\"#/p5/pixels\">pixels[]</a>配列のデータを更新します。<a href=\"#/p5/loadPixels\">loadPixels()</a>と併用して使用してください。配列からピクセルを読み取るだけであれば、<a href=\"#/p5/updatePixels\">updatePixels()</a>を呼び出す必要はありません。更新は変更を適用する場合にのみ必要です。 <a href=\"#/p5/updatePixels\">updatePixels()</a>は、pixels配列が操作されるたび、または<a href=\"#/p5/set\">set()</a>が呼び出されるたびに呼び出されるべきであり、<a href=\"#/p5/set\">set()</a>で行われた変更や<a href=\"#/p5/pixels\">pixels[]</a>への直接の変更のみが発生します。"
       ],
       "params": {
         "x": "Number: (オプション) 更新する領域の左上のx座標",
@@ -2325,9 +2325,9 @@
         "指定された要素（画像、テキスト、json、csv、wav、html）をクライアントのコンピューターに保存します。最初のパラメーターは、保存したい要素へのポインターが指定できます。要素は、<a href=\"#/p5.Element\">p5.Element</a>、文字列の配列、JSONの配列、JSONオブジェクト、<a href=\"#/p5.Table\">p5.Table </a>、<a href=\"#/p5.Image\">p5.Image</a>、またはp5.SoundFile（p5.soundが必要）のいずれかです。2番目のパラメーターはファイル名（拡張子を含む）。3番目のパラメーターは、このタイプのオブジェクトに特有のオプションです。このメソッドは、指定されたパラメーターに適合するファイルを保存します。要素を指定せずに呼び出された場合、デフォルトでは画像ファイルとしてキャンバス全体が保存されます。そのような場合、最初のパラメーターとしてファイル名をオプションで指定できます。 <strong>draw内でこのメソッドを呼び出すことはお勧めしません。なぜなら、レンダリングごとに新しい保存ダイアログが開くためです。</strong>"
       ],
       "params": {
-        "objectOrFilename": "Object|String: (オプション) ファイル名が指定された場合、ファイル名に応じてpngまたはjpg拡張子の画像としてキャンバスを保存します。 オブジェクトが指定された場合、オブジェクトとファイル名に応じて保存されます（上記の例を参照）。",
+        "objectOrFilename": "Object|String: (オプション) ファイル名が指定された場合、ファイル名に応じてpngまたはjpg拡張子の画像としてキャンバスを保存します。オブジェクトが指定された場合、オブジェクトとファイル名に応じて保存されます（上記の例を参照）。",
         "filename": "String: (オプション) オブジェクトが最初のパラメーターとして提供された場合、2番目のパラメーターはファイル名を示し、適切なファイル拡張子を含める必要があります（上記の例を参照）。",
-        "options": "Boolean|String: (オプション) 追加のオプションはファイルタイプに依存します。 たとえば、JSONを保存する場合、<code>true</code>は出力がファイルサイズに最適化され、読みやすさではなくなります。"
+        "options": "Boolean|String: (オプション) 追加のオプションはファイルタイプに依存します。たとえば、JSONを保存する場合、<code>true</code>は出力がファイルサイズに最適化され、読みやすさではなくなります。"
       }
     },
     "saveJSON": {
@@ -2865,7 +2865,7 @@
     },
     "shuffle": {
       "description": [
-        "配列の要素の順序をランダム化します。<a href='http://Bost.Ocks.org/mike/shuffle/' target=_blank>フィッシャー・イェーツ シャッフル アルゴリズム</a>を実装します。"
+        "配列の要素の順序をランダム化します。<a href='http://Bost.Ocks.org/mike/shuffle/' target=_blank>フィッシャーイェーツシャッフルアルゴリズム</a>を実装します。"
       ],
       "returns": "Array: シャッフルされた配列",
       "params": {
@@ -3763,7 +3763,7 @@
   },
   "p5.Color": {
     "description": [
-      "各色は、その構築時に適用されたカラー モードとレベル最大値を格納します。これらは、入力引数の解釈（構築時およびそのインスタンスの後で）および出力の書式設定（<a href=\"#/p5/saturation\">saturation()</a>の要求時など）に使用されます。",
+      "各色は、その構築時に適用されたカラーモードとレベル最大値を格納します。これらは、入力引数の解釈（構築時およびそのインスタンスの後で）および出力の書式設定（<a href=\"#/p5/saturation\">saturation()</a>の要求時など）に使用されます。",
       "内部的に、理想的なRGBA値を表す浮動小数点配列を、0から1に正規化して格納しています。これから、最も近いスクリーンカラー（0から255のRGBAレベル）を計算し、レンダラーに公開します。",
       "また、計算されたさまざまな表現の正規化された浮動小数点カラーのコンポーネントをキャッシュしています。これは、すでに実行された変換を繰り返さないようにするために行われます。"
     ],
@@ -3773,12 +3773,12 @@
       ],
       "returns": "String: フォーマットされた文字列",
       "params": {
-        "format": "String: (オプション) カラー文字列の書式設定方法。空白にすると、rgba(r、g、b、a)として文字列をフォーマットします。 '#rgb'、 '#rgba'、 '#rrggbb'、および'#rrggbbaa'は16進数のカラーコードとしてフォーマットされます。 'rgb'、 'hsb'、および'hsl'は、指定されたカラー モードでフォーマットされたカラーを返します。 'rgba'、 'hsba'、および'hsla'は、上記と同じですがアルファチャネルが含まれます。 'rgb%'、 'hsb%'、 'hsl%'、 'rgba%'、 'hsba%'、および'hsla%'はパーセントとしてフォーマットされます。"
+        "format": "String: (オプション) カラー文字列の書式設定方法。空白にすると、rgba(r、g、b、a)として文字列をフォーマットします。 '#rgb'、 '#rgba'、 '#rrggbb'、および'#rrggbbaa'は16進数のカラーコードとしてフォーマットされます。 'rgb'、 'hsb'、および'hsl'は、指定されたカラーモードでフォーマットされたカラーを返します。 'rgba'、 'hsba'、および'hsla'は、上記と同じですがアルファチャネルが含まれます。 'rgb%'、 'hsb%'、 'hsl%'、 'rgba%'、 'hsba%'、および'hsla%'はパーセントとしてフォーマットされます。"
       }
     },
     "setRed": {
       "description": [
-        "setRedメソッドは、カラーの赤の成分を設定します。範囲は、カラー モードによって異なります。デフォルトのRGBモードでは、0から255の範囲です。"
+        "setRedメソッドは、カラーの赤の成分を設定します。範囲は、カラーモードによって異なります。デフォルトのRGBモードでは、0から255の範囲です。"
       ],
       "params": {
         "red": "Number: 新しい赤の値"
@@ -3786,7 +3786,7 @@
     },
     "setGreen": {
       "description": [
-        "setGreenメソッドは、色の緑成分を設定します。範囲はカラー モードによって異なり、デフォルトのRGBモードでは0から255の間です。"
+        "setGreenメソッドは、色の緑成分を設定します。範囲はカラーモードによって異なり、デフォルトのRGBモードでは0から255の間です。"
       ],
       "params": {
         "green": "Number: 新しい緑の値"
@@ -3794,7 +3794,7 @@
     },
     "setBlue": {
       "description": [
-        "setBlueメソッドは、色の青成分を設定します。範囲はカラー モードによって異なり、デフォルトのRGBモードでは0から255の間です。"
+        "setBlueメソッドは、色の青成分を設定します。範囲はカラーモードによって異なり、デフォルトのRGBモードでは0から255の間です。"
       ],
       "params": {
         "blue": "Number: 新しい青の値"
@@ -3802,7 +3802,7 @@
     },
     "setAlpha": {
       "description": [
-        "setAlphaメソッドは、色の透明度（アルファ）値を設定します。範囲はカラー モードによって異なり、デフォルトのRGBモードでは0から255の間です。"
+        "setAlphaメソッドは、色の透明度（アルファ）値を設定します。範囲はカラーモードによって異なり、デフォルトのRGBモードでは0から255の間です。"
       ],
       "params": {
         "alpha": "Number: 新しいアルファ値"
@@ -4454,7 +4454,7 @@
     },
     "pixels": {
       "description": [
-        "ディスプレイ ウィンドウ内のすべてのピクセルの値を含む配列です。これらの値は数値です。この配列のサイズは、ピクセル密度の適切な係数を含めたディスプレイ ウィンドウのサイズ×4で、各ピクセルのR、G、B、A値が順番に表示されます。左から右に各行を移動し、各列を下に移動します。Retinaやその他の高密度ディスプレイでは、ピクセルがより多く存在します（pixelDensity^2倍）。「たとえば、画像が100×100ピクセルの場合、40000ピクセルがあります。pixelDensity = 2の場合、160000になります。配列内の最初の4つの値（インデックス0〜3）は、（0、0）のピクセルのR、G、B、A値です。次の4つの値（インデックス4〜7）には、（1、0）のピクセルのR、G、B、A値が含まれます。一般的に、（x、y）のピクセルの値を設定するには:<pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
+        "ディスプレイウィンドウ内のすべてのピクセルの値を含む配列です。これらの値は数値です。この配列のサイズは、ピクセル密度の適切な係数を含めたディスプレイウィンドウのサイズ×4で、各ピクセルのR、G、B、A値が順番に表示されます。左から右に各行を移動し、各列を下に移動します。Retinaやその他の高密度ディスプレイでは、ピクセルがより多く存在します（pixelDensity^2倍）。「たとえば、画像が100×100ピクセルの場合、40000ピクセルがあります。pixelDensity = 2の場合、160000になります。配列内の最初の4つの値（インデックス0〜3）は、（0、0）のピクセルのR、G、B、A値です。次の4つの値（インデックス4〜7）には、（1、0）のピクセルのR、G、B、A値が含まれます。一般的に、（x、y）のピクセルの値を設定するには:<pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
         "この配列にアクセスする前に、<a href=\"#/p5.Image/loadPixels\">loadPixels()</a>関数でデータを読み込む必要があります。配列データが変更された後、変更内容を反映させるには、<a href=\"#/p5.Image/updatePixels\">updatePixels()</a>関数を実行する必要があります。"
       ]
     },
@@ -4533,12 +4533,12 @@
     "filter": {
       "description": [
         "<a href=\"#/p5.Image\">p5.Image</a>に画像フィルターを適用します。",
-        "THRESHOLDは、レベルパラメーターで定義された閾値を基準に、画像を白黒のピクセルに変換します。パラメーターは0.0（黒）から1.0（白）の間でなければなりません。 レベルが指定されていない場合、0.5 が使用されます。",
+        "THRESHOLDは、レベルパラメーターで定義された閾値を基準に、画像を白黒のピクセルに変換します。パラメーターは0.0（黒）から1.0（白）の間でなければなりません。レベルが指定されていない場合、0.5 が使用されます。",
         "GRAYは、画像内の任意の色をグレースケールに変換します。パラメーターは使用されません。",
         "OPAQUEは、アルファチャンネルを完全に不透明に設定します。パラメーターは使用されません。",
         "INVERTは、各ピクセルをその反対値に設定します。パラメーターは使用されません。",
         "POSTERIZEは、画像の各チャンネルをパラメーターで指定された色数に制限します。パラメーターは2から255の値を設定できますが、下限の範囲で効果が最も顕著に現れます。",
-        "BLURは、レベルパラメーターを使用してガウシアンブラーを実行し、ぼかしの程度を指定します。パラメーターが使用されていない場合、ぼかしは半径1のガウシアンブラーと同等です。 値が大きくなると、ぼかしが増加します。",
+        "BLURは、レベルパラメーターを使用してガウシアンブラーを実行し、ぼかしの程度を指定します。パラメーターが使用されていない場合、ぼかしは半径1のガウシアンブラーと同等です。値が大きくなると、ぼかしが増加します。",
         "ERODEは、明るい領域を減らします。パラメーターは使用されません。",
         "DILATEは、明るい領域を増やします。パラメーターは使用されません。",
         "filter()はWEBGLモードでは機能しません。 WEBGLモードでは、カスタムシェーダーを使用して類似の効果を実現できます。 Adam Ferrissは、フィルターの例に含まれる多くの効果を含む<a href=\"https://github.com/aferriss/p5jsShaderExamples\" target='_blank'>シェーダー例の選択</a>を作成しました。"
@@ -4605,7 +4605,7 @@
     },
     "delay": {
       "description": [
-        "アニメーションGIFのフレーム間の遅延時間を変更します。2番目のオプションパラメーターを指定することで、特定のフレームの遅延時間を変更できます。 インデックスが指定されていない場合、すべてのフレームに新しい遅延時間が適用されます。"
+        "アニメーションGIFのフレーム間の遅延時間を変更します。2番目のオプションパラメーターを指定することで、特定のフレームの遅延時間を変更できます。インデックスが指定されていない場合、すべてのフレームに新しい遅延時間が適用されます。"
       ],
       "params": {
         "d": "Number:  フレームを切り替える間の遅延時間（ミリ秒単位）",
@@ -5868,7 +5868,7 @@
     },
     "waveform": {
       "description": [
-        "単一のバッファ内の振幅読み取りのスナップショットを表す、-1.0から+1.0の振幅値の配列を返します。 長さはbinsに等しく（デフォルトは1024）。音響信号の波形を描画するために使用することができます。"
+        "単一のバッファ内の振幅読み取りのスナップショットを表す、-1.0から+1.0の振幅値の配列を返します。長さはbinsに等しく（デフォルトは1024）。音響信号の波形を描画するために使用することができます。"
       ],
       "returns": "Array: 時間にわたる振幅値の配列（-1から1）。配列の長さはbinsです。",
       "params": {
