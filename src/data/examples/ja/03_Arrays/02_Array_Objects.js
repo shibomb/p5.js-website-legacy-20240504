@@ -57,7 +57,7 @@ function setup() {
         unit / 2,
         unit / 2,
         random(0.05, 0.8),
-        unit,
+        unit
       );
     }
   }
