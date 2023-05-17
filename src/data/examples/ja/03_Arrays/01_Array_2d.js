@@ -1,10 +1,10 @@
 /*
- * @name Array 2D
- * @arialabel A grid of dots drawn on a black background. Dots closer to the center are darker in color and dots further away from the center are whiter in color
- * @description Demonstrates the syntax for creating a two-dimensional (2D)
- * array. Values in a 2D array are accessed through two index values.
- * 2D arrays are useful for storing images. In this example, each dot
- * is colored in relation to its distance from the center of the image.
+ * @name 二次元配列
+ * @arialabel 黒背景の上にグリッド状に描画された点です。点は中央に近いほどより暗い色になり、中央から遠ざかるほど白い色になります。
+ * @description この構文は二次元(2D)配列の生成の
+ * デモンストレーションになります。二次元配列の値は二つのインデックスの値を通してアクセスされます。
+ * また、二次元配列は画像の保管によく使われます。このサンプルでは、各点に
+ * 画像の中央からの距離と紐付けて色が付けられます。
  */
 let distances = [];
 let maxDistance;
@@ -14,22 +14,22 @@ function setup() {
   createCanvas(720, 360);
   maxDistance = dist(width / 2, height / 2, width, height);
   for (let x = 0; x < width; x++) {
-    distances[x] = []; // create nested array
+    distances[x] = []; // 入れ子の配列を生成します。
     for (let y = 0; y < height; y++) {
       let distance = dist(width / 2, height / 2, x, y);
       distances[x][y] = (distance / maxDistance) * 255;
     }
   }
   spacer = 10;
-  noLoop(); // Run once and stop
+  noLoop(); // 一度実行した後停止します。
 }
 
 function draw() {
   background(0);
-  // This embedded loop skips over values in the arrays based on
-  // the spacer variable, so there are more values in the array
-  // than are drawn here. Change the value of the spacer variable
-  // to change the density of the points
+  // この二重のループは「spacer」変数をベースに配列内の値を
+  // 走査しています。これにより描画された配列内の値より多くの値が存在します。
+  // 「spacer」変数の値を変えると
+  // 点の密度を変えられます。
   for (let x = 0; x < width; x += spacer) {
     for (let y = 0; y < height; y += spacer) {
       stroke(distances[x][y]);
