@@ -36,11 +36,11 @@ home:
   start-creating: p5 Editor で作成を開始しましょう！
   p1xh1: こんにちは！
   p1x1: >-
-    p5.js は、アーティスト、デザイナー、教育者、入門者、その他すべての人々が コーディングに触れられるようにすることを目的とした JavaScript
+    p5.js は、アーティスト、デザイナー、教育者、入門者、その他すべての人々がコーディングに触れられるようにすることを目的とした JavaScript
     ライブラリです！ p5.js
     は、ソフトウェアやその学習ツールにはすべての人々がアクセス可能であるべきという信念に基づき、無料かつオープンソースで提供されています。
   p1x2: >-
-    スケッチの比喩を用いて、p5.js は完全な描画機能を備えています。しかし、描画キャンバスに限定されることはありません。 テキスト、入力、ビデオ、Web
+    スケッチの比喩を用いて、p5.js は完全な描画機能を備えています。しかし、描画キャンバスに限定されることはありません。テキスト、入力、ビデオ、Web
     カメラ、サウンドなどの HTML5オブジェクトを含め、ブラウザのページ全体をスケッチと考えることができます。
   p2xh2: コミュニティ
   p2x1: >-
@@ -84,7 +84,7 @@ get started:
   get-started3: p5.js editor
   get-started4: を使用するのが最も簡単です。Web エディターを開き、
   get-started5: 最初のスケッチ
-  get-started6: 'を作成できます。 p5.js のデスクトップ版で作業したい場合は、こちらを参照してください:'
+  get-started6: 'を作成できます。p5.js のデスクトップ版で作業したい場合は、こちらを参照してください:'
   get-started7: ダウンロード手順
   get-started-button: コピー
   settingUp-title: 自分のコンピューターにエディターを使って p5.js をセットアップする
@@ -101,7 +101,7 @@ get started:
     index.html を見ると、p5.js とリンクされていることがわかります。minified
     version（ページの読み込みを高速化するために圧縮されたもの）を使用する場合は、リンクを p5.min.js に変更してください。
   download5: >-
-    代わりに、オンラインでホストされている p5.js ファイルにリンクすることもできます。 p5.js のすべてのバージョンは
+    代わりに、オンラインでホストされている p5.js ファイルにリンクすることもできます。p5.js のすべてのバージョンは
     CDN（コンテンツ配信ネットワーク）に保存されています。これらのバージョンの履歴は
   download6: で確認できます。この場合、リンクを以下のように変更できます。
   download7: サンプル HTML ページは以下のようになります。
@@ -136,13 +136,13 @@ get started:
   your-first-sketch4: 今追加した行は「中心が左から50ピクセル、上から50ピクセルの位置にある、幅と高さが80ピクセルの楕円」を描画します。
   your-first-sketch5: エディターで再生ボタンを押して、コードが実行されるのを確認しましょう！
   your-first-sketch6: >-
-    もしスクリーンリーダーを使用している場合は、p5オンラインエディターでアクセシブル出力をオンにする必要があります。 エディターの外部では、HTML
+    もしスクリーンリーダーを使用している場合は、p5オンラインエディターでアクセシブル出力をオンにする必要があります。エディターの外部では、HTML
     にアクセシビリティ ライブラリを追加する必要があります。詳細については、これを参照してください:
   your-first-sketch7: 「スクリーンリーダーを使用した p5チュートリアル」
   your-first-sketch8: すべて正しく入力した場合、以下がディスプレイウィンドウに表示されます。
   your-first-sketch9: キャンバスには、幅と高さが50で位置が80 x、80 y の円が描かれています。
   your-first-sketch10: >-
-    何も表示されない場合、エディターが入力内容を理解できていない可能性があります。 この場合、サンプルのコードを正確にコピーしていることを確認してください。
+    何も表示されない場合、エディターが入力内容を理解できていない可能性があります。この場合、サンプルのコードを正確にコピーしていることを確認してください。
     数値は括弧内に含まれ、それらの間にはカンマが必要であり、行末にはセミコロンが必要です。また、ellipse は正しい綴りで記述されている必要があります。
   your-first-sketch11: >-
     プログラミングを始める上で最も難しいことの一つは、構文を非常に具体的に指定する必要があることです。
@@ -188,11 +188,11 @@ download:
     初心者が最初に欲しいと思うリソースから、より経験豊富なプログラマーが探しているリソースまで、順序を考慮して紹介しています。
   editor-title: エディタ
   p5.js-editor: p5.js エディタ
-  p5.js-editor-intro: このリンクは、p5.js エディタに直接アクセスできるようになっており、 p5.js をすぐに使用できます。
+  p5.js-editor-intro: このリンクは、p5.js エディタに直接アクセスできるようになっており、p5.js をすぐに使用できます。
   editor-includes: p5.js エディタを使用して、コーディングを始めましょう！セットアップは不要です！
   complete-library-title: ライブラリ全体
   complete-library-intro1: >-
-    p5.js ライブラリファイル、p5.sound アドオン、サンプルプロジェクトを含むダウンロードです。 エディタは含まれていません。p5.js
+    p5.js ライブラリファイル、p5.sound アドオン、サンプルプロジェクトを含むダウンロードです。エディタは含まれていません。p5.js
     プロジェクトの設定方法については、
   complete-library-intro2: はじめに
   complete-library-intro3: をご覧ください。
@@ -264,7 +264,7 @@ download:
   support-32: Processing 財団
   support-33: >-
     は、元々のソフトウェア Processing
-    に10年以上取り組んだ後、2012年に設立されました。同財団の使命は、視覚芸術におけるソフトウェアリテラシーと技術関連分野における視覚リテラシーを促進し、これらの分野を多様なコミュニティにとって利用しやすいものにすることです。私たちの目標は、あらゆる興味やバックグラウンドを持つ人々がプログラミングの方法を学び、コードを介してクリエイティブな作品を作成する力を与えることであり、特にこれらのツールやリソースにアクセスできないかもしれない人々をサポートすることです。 
+    に10年以上取り組んだ後、2012年に設立されました。同財団の使命は、視覚芸術におけるソフトウェアリテラシーと技術関連分野における視覚リテラシーを促進し、これらの分野を多様なコミュニティにとって利用しやすいものにすることです。私たちの目標は、あらゆる興味やバックグラウンドを持つ人々がプログラミングの方法を学び、コードを介してクリエイティブな作品を作成する力を与えることであり、特にこれらのツールやリソースにアクセスできないかもしれない人々をサポートすることです。
   support-17-alt: ''
   support-18-alt: ''
   support-19-alt: ''
@@ -288,7 +288,7 @@ learn:
   learn3: をチェックして、さまざまな p5.js トピックの短いデモを探索してください。
   introduction-to-p5js-title: p5.js の紹介
   hello-p5js-title: Hello p5.js
-  hello-p5js: この短いビデオでは、 p5.js ライブラリとそれができることを紹介します。
+  hello-p5js: この短いビデオでは、p5.js ライブラリとそれができることを紹介します。
   getting-started-title: 初めに
   getting-started: p5.js へようこそ！<br> このイントロダクションでは、p5.js プロジェクトの基本的な設定について説明します。
   p5js-overview-title: p5.js 概要
@@ -321,13 +321,13 @@ learn:
   getting-started-in-webgl-coords-and-transform-title: 座標と変換
   getting-started-in-webgl-coords-and-transform: 3D セットアップ、座標、変換の基礎
   getting-started-in-webgl-coords-and-transform-p1x1: >-
-    p5.js は 2D グラフィックを作成する強力なツールですが、3D グラフィックも作成できます。 このチュートリアルでは、p5.js を使用して 3D
+    p5.js は 2D グラフィックを作成する強力なツールですが、3D グラフィックも作成できます。このチュートリアルでは、p5.js を使用して 3D
     スケッチを作成するための新しいコンセプトを紹介します。
   getting-started-in-webgl-coords-and-transform-toc-title: 目次
   getting-started-in-webgl-coords-and-transform-heading1: WebGL とは？
   getting-started-in-webgl-coords-and-transform-p2x1: >-
-    WebGL は、Web ブラウザ内で 3D グラフィックを作成するために必要なツールを提供するライブラリです。 簡単に言うと、それは我々に 3D
-    の物体を配置して表示するためのあらゆる種類の数学的な操作を許可します。 p5.js は、特別な WebGL モードを介して WebGL
+    WebGL は、Web ブラウザ内で 3D グラフィックを作成するために必要なツールを提供するライブラリです。簡単に言うと、それは我々に 3D
+    の物体を配置して表示するためのあらゆる種類の数学的な操作を許可します。p5.js は、特別な WebGL モードを介して WebGL
     との作業を容易にします。
   getting-started-in-webgl-coords-and-transform-p3x1: >-
     3D で作業することは、スケッチに動き、テクスチャ、ライティングなどが含まれる場合には特に多くの複雑さを導入します。幸いなことに、コンピューターには、
@@ -343,7 +343,7 @@ learn:
     2D で作業する場合との最も基本的な違いは、もっとも明らかなものです。それは、作業するための1つの追加次元があることです。
     描画の要素の水平方向と垂直方向の位置（x 軸と y 軸）に加えて、3D では深度、z 軸が追加されます。
   getting-started-in-webgl-coords-and-transform-p6x1: >-
-    2D で描画する場合、点（0,0）は画面の左上隅にあります。 WebGL モードでは、スケッチの原点（0,0,0）は画面の中央にあります。
+    2D で描画する場合、点（0,0）は画面の左上隅にあります。WebGL モードでは、スケッチの原点（0,0,0）は画面の中央にあります。
     デフォルトでは、x 軸は左から右、y 軸は上から下、z 軸は遠くから近づく方向を指します。
   getting-started-in-webgl-coords-and-transform-heading3: '変形: 3D 図形の位置とサイズ'
   getting-started-in-webgl-coords-and-transform-p7x1: 'p5.js にはいくつかのメソッドがあります:'
@@ -396,7 +396,7 @@ learn:
     class="code">push()</a> と <a class="code">pop()</a>
     を使用しない場合、すでに行われた変形を追跡する必要がありますが、これは複雑になり、追跡が難しくなります。
     次の例を考えてみてください。この例では、スケッチに2つの箱を配置します。2番目のボックスを <a class="code">push()</a> と
-    <a class="code">pop()</a> を使用せずに位置に配置するには、最初の変形を考慮する必要があります。 これは、より複雑な 3D
+    <a class="code">pop()</a> を使用せずに位置に配置するには、最初の変形を考慮する必要があります。これは、より複雑な 3D
     シーンでは追跡が困難な場合があります。
   getting-started-in-webgl-coords-and-transform-p17x1: >-
     これで、<a class="code">push()</a> と <a class="code">pop()</a>
@@ -448,15 +448,15 @@ learn:
   getting-started-in-webgl-custom-geometry-toc-title: 目次
   getting-started-in-webgl-custom-geometry-heading1: ファイルから 3D モデルを読み込む
   getting-started-in-webgl-custom-geometry-p2x1: >-
-    カスタムジオメトリは、OBJ ファイルまたは STL ファイルを使用して p5.js にインポートできます。 これらのファイルは通常、Blender
-    などの 3D モデリングツールで生成され、3D シーンを構築するときにより多くの制御が可能です。 これを読み込むためには <a
+    カスタムジオメトリは、OBJ ファイルまたは STL ファイルを使用して p5.js にインポートできます。これらのファイルは通常、Blender
+    などの 3D モデリングツールで生成され、3D シーンを構築するときにより多くの制御が可能です。これを読み込むためには <a
     class="code">preload()</a> 内で使用する必要がある
   getting-started-in-webgl-custom-geometry-p2x2: を使用します。そうすると、
   getting-started-in-webgl-custom-geometry-p2x3: 関数を使って、下記の例のように使用できます。
   getting-started-in-webgl-custom-geometry-p3x1: >-
-    カスタムモデルで発生することがよくある問題は、スケーリングです。 モデルがどのように構築されているかに応じて、p5.js
+    カスタムモデルで発生することがよくある問題は、スケーリングです。モデルがどのように構築されているかに応じて、p5.js
     で描画するとはるかに異なるサイズになる場合があり、描画できない場合もあります。<a class="code">loadModel()</a>
-    メソッドには、 p5.js でうまく機能するサイズにモデルをリサイズする normalize パラメータが含まれています。
+    メソッドには、p5.js でうまく機能するサイズにモデルをリサイズする normalize パラメータが含まれています。
   getting-started-in-webgl-custom-geometry-info2x1: 'Note: 現時点では、カラーがついた STL ファイルはサポートされていませんが、'
   getting-started-in-webgl-custom-geometry-info2x2: スタイリングと外観
   getting-started-in-webgl-custom-geometry-info2x3: チュートリアルでマテリアルやテクスチャを使って色を付ける方法について学べます。
@@ -464,7 +464,7 @@ learn:
   getting-started-in-webgl-custom-geometry-p4x1: >-
     コードを使って、プロシージャルにジオメトリを定義することもできます。自分自身のルールに従ってジオメトリを作成する方法です。<a
     class="code">quad()</a>、<a class="code">triangle()</a>、<a
-    class="code">rect()</a>、<a class="code">circle()</a> など、 各メソッドには 3D
+    class="code">rect()</a>、<a class="code">circle()</a> など、各メソッドには 3D
     で使用できるようにするための追加パラメータがあります。
   getting-started-in-webgl-custom-geometry-p5x1: ジオメトリを制御するための別の方法があります。
   getting-started-in-webgl-custom-geometry-p5x2: と
@@ -472,12 +472,12 @@ learn:
   getting-started-in-webgl-custom-geometry-p6x1: また、p5.js は内部的に <a class="code">loadModel()</a> で使用されている
   getting-started-in-webgl-custom-geometry-p6x1_: クラスがあり、カスタムジオメトリの定義にも使用できます。これは、面や法線を計算するための便利なツールを提供します。
   getting-started-in-webgl-custom-geometry-p6x2: >-
-    3D では、面は表面を形成する3つまたは4つのポイントのコレクションを指します。 法線は、面に垂直な方向であり、p5.js
+    3D では、面は表面を形成する3つまたは4つのポイントのコレクションを指します。法線は、面に垂直な方向であり、p5.js
     が表面全体にわたって照明を計算するのに役立ちます。
   getting-started-in-webgl-custom-geometry-p6x3: 次の例では、<a class="code">p5.Geometry</a> を使用してジオメトリのグリッドをプロットしています。
   getting-started-in-webgl-custom-geometry-heading3: 結論
   getting-started-in-webgl-custom-geometry-p7x1: >-
-    これでカスタムジオメトリを作成できるようになりました。他のツールやコードからユニークな形状を作成できるようになりました。 さまざまな 3D
+    これでカスタムジオメトリを作成できるようになりました。他のツールやコードからユニークな形状を作成できるようになりました。さまざまな 3D
     モデリングツールで作業を行い、あなたに最適なツールを見つけるための時間を費やしてください。
   getting-started-in-webgl-custom-geometry-glossary-term1-title: プロシージャル
   getting-started-in-webgl-custom-geometry-glossary-term1-definition: 数学的に定義されたもので、ファイルなどの保存されたデータではないことを意味します。
@@ -487,7 +487,7 @@ learn:
   getting-started-in-webgl-custom-geometry-glossary-term3-definition: STL（"standard tesselation language"の略）3D モデルのファイル形式。ジオメトリに関する情報のみを保存します。
   getting-started-in-webgl-custom-geometry-glossary-term4-title: OBJ
   getting-started-in-webgl-custom-geometry-glossary-term4-definition: >-
-    ジオメトリデータだけでなく、一部のマテリアルやテクスチャデータも保存するオープンなファイル形式。 p5.js
+    ジオメトリデータだけでなく、一部のマテリアルやテクスチャデータも保存するオープンなファイル形式。p5.js
     ではジオメトリに限定されていますが、テクスチャを使用して表面に画像をマッピングすることができます。
   getting-started-in-webgl-custom-geometry-glossary-term5-title: 面
   getting-started-in-webgl-custom-geometry-glossary-term5-definition: 3つの点間で生成される固体の表面。
@@ -503,7 +503,7 @@ learn:
   getting-started-in-webgl-appearance-toc-title: 目次
   getting-started-in-webgl-appearance-heading1: カメラとビュー
   getting-started-in-webgl-appearance-p1x1: >-
-    カメラは、3D シーンの本質的な部分であり、私たちに 3D で探求したい空間や次元感を与えます。 p5.js では、WebGL
+    カメラは、3D シーンの本質的な部分であり、私たちに 3D で探求したい空間や次元感を与えます。p5.js では、WebGL
     モードはデフォルトで遠近法カメラを提供していますが、
   getting-started-in-webgl-appearance-p1x2: または
   getting-started-in-webgl-appearance-p2x1: >-
@@ -521,18 +521,18 @@ learn:
     この選択的にジオメトリを含めるプロセスは、時々「クリッピング」と呼ばれます。
   getting-started-in-webgl-appearance-p5x1: >-
     カメラは <a class="code">camera()</a>
-    に引数を渡すことで移動できますが、コードでカメラを常に移動させたり調整したりするのは面倒です。特にアイデアを試しているときには。 p5.js
+    に引数を渡すことで移動できますが、コードでカメラを常に移動させたり調整したりするのは面倒です。特にアイデアを試しているときには。p5.js
     には特別なカメラメソッドがあります、
   getting-started-in-webgl-appearance-p5x2: それを使って、マウスを使ってカメラをズーム、パン、および位置決めすることができます。
   getting-started-in-webgl-appearance-p6x1: >-
     シーンには複数のカメラがあることができますが、一度にアクティブにできるカメラは1台だけです。p5.js
-    のスケッチはデフォルトで1台の透視投影カメラがありますが、 <a
+    のスケッチはデフォルトで1台の透視投影カメラがありますが、<a
     class="code">perspective()</a>（新しいパラメーターで）または <a class="code">ortho()</a>
     を呼び出すことで変更できます。<a class="code">camera()</a>
-    は、アクティブなカメラの位置とカメラが見ている位置を変更するために使用できます。 以下のスケッチで試してみてください。
+    は、アクティブなカメラの位置とカメラが見ている位置を変更するために使用できます。以下のスケッチで試してみてください。
   getting-started-in-webgl-appearance-heading2: ライティング
   getting-started-in-webgl-appearance-p7x1: >-
-    ライティングは 3D シーンのもう1つの重要な部分です。 3D で形状や深さを伝えるためには、光源が必要です。p5.js
+    ライティングは 3D シーンのもう1つの重要な部分です。3D で形状や深さを伝えるためには、光源が必要です。p5.js
     には、スケッチで使用できるいくつかの異なるタイプの光があります。
   getting-started-in-webgl-appearance-lighting-list1: アンビエントライトは、光の位置や方向を考慮せずに、すべてのものを少しだけ明るく表示します。
   getting-started-in-webgl-appearance-lighting-list2: >-
@@ -570,8 +570,8 @@ learn:
   getting-started-in-webgl-appearance-info1x3: のページを確認してください。
   getting-started-in-webgl-appearance-heading4: 結論
   getting-started-in-webgl-appearance-p14x1: >-
-    カメラ、ライティング、マテリアルをコントロールできるようになることで、 スケッチの見た目をより柔軟に決定できるようになり、3D
-    スケッチに独自のスタイルを導入する可能性が広がります。 WebGL
+    カメラ、ライティング、マテリアルをコントロールできるようになることで、スケッチの見た目をより柔軟に決定できるようになり、3D
+    スケッチに独自のスタイルを導入する可能性が広がります。WebGL
     入門シリーズの次のチュートリアルでは、シェーダーが紹介され、スケッチの見た目をさらに面白い方法で変更することができるようになります。
   getting-started-in-webgl-appearance-glossary-term1-title: カメラ
   getting-started-in-webgl-appearance-glossary-term1-definition: 3D シーンの視点
@@ -590,10 +590,10 @@ learn:
   getting-started-in-webgl-shaders-title: シェーダー入門
   getting-started-in-webgl-shaders: WebGL を使用して p5js 内でシェーダーを作成する基本
   getting-started-in-webgl-shaders-p0x1: >-
-    シェーダーは、グラフィックス処理ユニット（GPU）上で実行される特別なプログラムで、驚くべきことができます。 GPU
+    シェーダーは、グラフィックス処理ユニット（GPU）上で実行される特別なプログラムで、驚くべきことができます。GPU
     を利用して多くのピクセルを一度に処理し、ノイズ生成、ぼかしのようなフィルターの適用、
-    ポリゴンのシェーディングなどの特定のタスクに特に適していて高速です。 シェーダープログラミングは最初はやりがいがありますが、p5.js の 2D
-    描画とは異なるアプローチが必要です。 このドキュメントでは、シェーダープログラミングの基本を説明し、他のリソースについて紹介します。
+    ポリゴンのシェーディングなどの特定のタスクに特に適していて高速です。シェーダープログラミングは最初はやりがいがありますが、p5.js の 2D
+    描画とは異なるアプローチが必要です。このドキュメントでは、シェーダープログラミングの基本を説明し、他のリソースについて紹介します。
   getting-started-in-webgl-shaders-toc-title: 目次
   getting-started-in-webgl-shaders-heading1: セットアップ
   getting-started-in-webgl-shaders-p1x1: >-
@@ -601,16 +601,16 @@ learn:
     シェーダーを始める前に、キャンバスを p5.js の WebGL モデルを使ってセットアップする必要があります。
   getting-started-in-webgl-shaders-p2x1: >-
     シェーダープログラムは、<strong>頂点シェーダー</strong>と
-    <strong>フラグメントシェーダー</strong>の2つの部分で構成されています。 頂点シェーダーは画面上に描画される 3D
-    ジオメトリの位置を影響させ、フラグメントシェーダーはカラー出力を影響させる役割を担っています。 これらは別々のファイルに格納され、<a
-    class="code">loadShader()</a> を使って p5.js にロードされます。 シェーダーがロードされると、<a
-    class="code">draw()</a> の中で使うことができます。 以下の例は、p5.js
+    <strong>フラグメントシェーダー</strong>の2つの部分で構成されています。頂点シェーダーは画面上に描画される 3D
+    ジオメトリの位置を影響させ、フラグメントシェーダーはカラー出力を影響させる役割を担っています。これらは別々のファイルに格納され、<a
+    class="code">loadShader()</a> を使って p5.js にロードされます。シェーダーがロードされると、<a
+    class="code">draw()</a> の中で使うことができます。以下の例は、p5.js
     で基本的なシェーダーをセットアップする方法を示しています。
   getting-started-in-webgl-shaders-heading2: シェーディング言語（GLSL）
   getting-started-in-webgl-shaders-p3x1: >-
     ここで、シェーダーファイルに実際に何を書くのか疑問に思うかもしれません！
     シェーダーファイルは、グラフィックスライブラリシェーディング言語（GLSL）で書かれており、
-    慣れ親しんでいるものとはかなり異なる構文や構造を持っています。 GLSL は C 言語に似た構文を持っており、JavaScript
+    慣れ親しんでいるものとはかなり異なる構文や構造を持っています。GLSL は C 言語に似た構文を持っており、JavaScript
     には存在しないいくつかの概念が含まれています。
   getting-started-in-webgl-shaders-p4x1: >-
     まず、シェーディング言語は型について非常に厳格です。
@@ -627,9 +627,9 @@ learn:
     また、浮動小数点数や整数など、異なるタイプの数値を相互に使用することはできません。
   getting-started-in-webgl-shaders-p6x1: 'まず、基本的な頂点シェーダーを見てみましょう:'
   getting-started-in-webgl-shaders-p7x1: >-
-    この頂点シェーダーは、<em>属性（attribute）</em>で始まります。 これは、p5.js
+    この頂点シェーダーは、<em>属性（attribute）</em>で始まります。これは、p5.js
     がシェーダーと頂点位置情報を共有するために使用します。この属性は、<a class="code">vec3</a> であり、x、y、および z
-    の値を含んでいます。 属性は、頂点シェーダーでのみ使用される特別な変数タイプであり、通常は p5.js によって提供されます。<a
+    の値を含んでいます。属性は、頂点シェーダーでのみ使用される特別な変数タイプであり、通常は p5.js によって提供されます。<a
     class="code">rect()</a> や <a class="code">vertex()</a> などの p5.js
     メソッドを使用すると、p5.js は自動的に頂点情報をシェーダーに渡します。
   getting-started-in-webgl-shaders-p8x1: >-
@@ -678,11 +678,11 @@ learn:
   getting-started-in-webgl-shaders-info1x1: >-
     p5.js は多くの属性とユニフォームを処理してくれます。<a
     href="https://github.com/processing/p5.js/blob/374acfb44588bfd565c54d61264df197d798d121/contributor_docs/webgl_mode_architecture.md">p5.js
-    が シェーダーに送信するすべての属性のリストをこちらで確認できます</a>。
+    がシェーダーに送信するすべての属性のリストをこちらで確認できます</a>。
   getting-started-in-webgl-shaders-heading4: 結論
   getting-started-in-webgl-shaders-p18x1: >-
     これらのスキルを持っていれば、基本的なシェーダーを作成することができますが、シェーダープログラミングは非常に深いものであり、
-    このチュートリアルを超える多くのシェーダートピックがあります。 p5.js のシェーダーは、視覚的な効果やエフェクト、さらには 3D
+    このチュートリアルを超える多くのシェーダートピックがあります。p5.js のシェーダーは、視覚的な効果やエフェクト、さらには 3D
     ジオメトリにマップされるテクスチャを作成するための強力なツールになり得ます。
   getting-started-in-webgl-shaders-p19x1: シェーダーについてもっと学びたいですか？これらのウェブサイトをチェックしてみてください！
   getting-started-in-webgl-shaders-resources: >-
@@ -748,7 +748,7 @@ learn:
   writing-a-tutorial-title: p5.js チュートリアル投稿ガイド
   writing-a-tutorial-author: このチュートリアルは Tega Brain によって執筆されました。
   writing-a-tutorial-1: >-
-    教育者、寄稿者、一般のエンスージアストに p5js チュートリアルの投稿をお願いしています。 p5js プロジェクトは、クリエイティブ
+    教育者、寄稿者、一般のエンスージアストに p5js チュートリアルの投稿をお願いしています。p5js プロジェクトは、クリエイティブ
     コーディングとオープンソース開発を多様なコミュニティによりアクセスしやすくし、開発プロセスのあらゆる側面に関するチュートリアルを公開することに興奮しています。
     これまでの教材には、p5 の学習ガイド、プログラミング技法、オープンソースプロジェクトへの貢献方法などが含まれています。
   writing-a-tutorial-2: 新しい書かれたチュートリアルの投稿を歓迎し、このガイドでは提案、準備、投稿の手順を説明します。
@@ -792,7 +792,7 @@ learn:
     として埋め込む必要があります。
   writing-a-tutorial-iframe-title: iframe を使って p5 スケッチを埋め込む
   writing-a-tutorial-iframe-1: >-
-    iframe は、他のページを探索できるウィンドウのようなもので、ページの残りの部分からサンドボックス化されています。 この場合、p5.js
+    iframe は、他のページを探索できるウィンドウのようなもので、ページの残りの部分からサンドボックス化されています。この場合、p5.js
     スケッチが含まれる index.html へのウィンドウになります。
   writing-a-tutorial-iframe-2: >-
     p5 スケッチをサイトの /src/assets/learn フォルダに、スケッチの名前でラベル付けされたフォルダに入れます。
@@ -815,7 +815,7 @@ learn:
   writing-a-tutorial-embed-iframe-12: こちらから。
   writing-a-tutorial-finishing-title: 仕上げ
   writing-a-tutorial-finishing-1: >-
-    チュートリアルの執筆が終わり、コンテンツが承認されたら、p5.js ウェブサイトのリポジトリをフォークし、 上記のようにコンテンツを準備して、p5.js
+    チュートリアルの執筆が終わり、コンテンツが承認されたら、p5.js ウェブサイトのリポジトリをフォークし、上記のようにコンテンツを準備して、p5.js
     ウェブサイトのリポジトリにプルリクエストを出して、あなたの貢献を公開できるようにしましょう！
   writing-a-tutorial-finishing-2: ありがとうございます！
   color-description1: >-
@@ -907,7 +907,7 @@ learn:
     「y」（垂直）の2つの数字で構成される座標です。そして、私たちの仕事は、これらのピクセル座標でどのような形状や色が表示されるかを指定することです。
   coordinate-system-description-p5x1: >-
     それでも、ここには落とし穴があります。8年生のときのグラフ用紙（「直交座標系」と呼ばれます）は、y 軸が上を向いていて、x
-    軸が右を向いていました（正の方向は下向きで左です）。しかし、コンピュータのウィンドウ内のピクセルの座標系は、y 軸に沿って反転しています。 (0,0)
+    軸が右を向いていました（正の方向は下向きで左です）。しかし、コンピュータのウィンドウ内のピクセルの座標系は、y 軸に沿って反転しています。(0,0)
     は左上にあり、正の方向は水平方向に右側、垂直方向に下側です。
   coordinate-system-simple-shapes-title: 単純な形状
   coordinate-system-simple-shapes-p1x1: >-
@@ -953,20 +953,20 @@ learn:
     円弧は良いですが、単純です。次の関数 curve() では、必ずしも円弧の一部であるとは限らない曲線を描画できます。
     この関数は、技術的にはロム-カトマルスプラインと呼ばれるものを描画します。曲線を描画するには、曲線が始まる点と終わる点の (x, y)
     座標を指定する必要があります。また、曲線の方向と湾曲量を決定する2つの制御点も指定する必要があります。
-    最初の2つと最後の2つのパラメータが曲線の制御点です。 curve() への呼び出しでは、これらのパラメータが使われます:
+    最初の2つと最後の2つのパラメータが曲線の制御点です。curve() への呼び出しでは、これらのパラメータが使われます:
   curves-spline-curves-p2x1: 'curve (cpx1, cpy1, x1, y1, x2, y2, cpx2, cpy2);'
   curves-spline-curves-p3x1: 制御点は曲線の見た目にどのように影響しますか？
   curves-spline-curves-p4x1: 曲線の始点における接線は、制御点1と曲線の終点との間の直線に平行です。曲線の終点における接線は、始点と制御点2との間の直線に平行です。
   curves-spline-curves-p5x1: '次の図は、曲線とその制御点がどのように曲線に影響するかを示すためにドラッグできる点を示しています:'
   curves-continuous-spline-curves-title: 連続スプライン曲線
   curves-continuous-spline-curves-p1x1: >-
-    単独での curve() はあまり魅力的ではありません。 複数の点を通る連続した曲線を描画するには、curveVertex()
-    関数を使用した方が良いでしょう。 この関数は、beginShape() 関数と endShape() 関数で図形を作成しているときにのみ使用できます。
+    単独での curve() はあまり魅力的ではありません。複数の点を通る連続した曲線を描画するには、curveVertex()
+    関数を使用した方が良いでしょう。この関数は、beginShape() 関数と endShape() 関数で図形を作成しているときにのみ使用できます。
     一般的な使い方では、曲線の最初の点を最初の制御点とし、曲線の最後の点を最後の制御点として使用します。
   curves-bezier-curves-title: ベジェ曲線
   curves-bezier-curves-p1x1: >-
-    スプライン曲線は円弧よりも優れていますが、芸術的な印象を与える流麗で滑らかな曲線はありません。 そういった曲線を描画するには、bezier()
-    関数を使ってベジェ曲線を描画する必要があります。 スプライン曲線と同様に、bezier() 関数には8つのパラメータがありますが、順序が異なります。
+    スプライン曲線は円弧よりも優れていますが、芸術的な印象を与える流麗で滑らかな曲線はありません。そういった曲線を描画するには、bezier()
+    関数を使ってベジェ曲線を描画する必要があります。スプライン曲線と同様に、bezier() 関数には8つのパラメータがありますが、順序が異なります。
     最初の2つと最後の2つのパラメータは開始点と終了点であり、中間の4つの点が制御点です。
   curves-bezier-curves-p2x1: ' bezier(x1, y1, cpx1, cpy1, cpx2, cpy2, x2, y2); '
   curves-bezier-curves-p3x1: >-
@@ -981,12 +981,12 @@ learn:
     を使って曲線の開始アンカーポイントを指定する必要があります。次のポイントは、次のような呼び出しで指定されます:
   curves-continuous-bezier-curves-p2x1: 'bezierVertex(cpx1, cpy1, cpx2, cpy2, x, y);'
   curves-continuous-bezier-curves-p3x1: >-
-    これは連続ベジェ曲線ですが、滑らかにはつながっていません。 曲線 A と B を滑らかに連続させるためには、A の最後の制御点、A の最後の点、および
-    B の最初の制御点が直線上になければなりません。
+    これは連続ベジェ曲線ですが、滑らかにはつながっていません。曲線 A と B を滑らかに連続させるためには、A の最後の制御点、A の最後の点、および B
+    の最初の制御点が直線上になければなりません。
   curves-summary-title: まとめ
   curves-summary-li1: 円や楕円の一部が必要な場合は、arc() を使用します。連続した円弧を作成したり、図形の一部として使用することはできません。
   curves-summary-li2: >-
-    2点間の小さな曲線が必要な場合は、curve() を使用します。 図形の一部として連続した曲線のシリーズを作成するには、curveVertex()
+    2点間の小さな曲線が必要な場合は、curve() を使用します。図形の一部として連続した曲線のシリーズを作成するには、curveVertex()
     を使用します。
   curves-summary-li3: >-
     長くて滑らかな曲線が必要な場合は、bezier() を使用します。
