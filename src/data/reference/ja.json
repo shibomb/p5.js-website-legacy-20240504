@@ -118,27 +118,21 @@
       }
     },
     "alpha": {
-      "description": [
-        "色またはピクセル配列からアルファ値を抽出します。"
-      ],
+      "description": ["色またはピクセル配列からアルファ値を抽出します。"],
       "returns": "Number: アルファ値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
       }
     },
     "blue": {
-      "description": [
-        "色またはピクセル配列から青の値を抽出します。"
-      ],
+      "description": ["色またはピクセル配列から青の値を抽出します。"],
       "returns": "Number: 青の値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
       }
     },
     "brightness": {
-      "description": [
-        "色またはピクセル配列から HSB 明度値を抽出します。"
-      ],
+      "description": ["色またはピクセル配列から HSB 明度値を抽出します。"],
       "returns": "Number: 明度値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
@@ -163,9 +157,7 @@
       }
     },
     "green": {
-      "description": [
-        "色またはピクセル配列から緑の値を抽出します。"
-      ],
+      "description": ["色またはピクセル配列から緑の値を抽出します。"],
       "returns": "Number: 緑の値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
@@ -194,18 +186,14 @@
       }
     },
     "lightness": {
-      "description": [
-        "色またはピクセル配列から HSL 輝度値を抽出します。"
-      ],
+      "description": ["色またはピクセル配列から HSL 輝度値を抽出します。"],
       "returns": "Number: 輝度",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
       }
     },
     "red": {
-      "description": [
-        "色またはピクセル配列から赤の値を抽出します。"
-      ],
+      "description": ["色またはピクセル配列から赤の値を抽出します。"],
       "returns": "Number: 赤の値",
       "params": {
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラー コンポーネント、または CSS カラー"
@@ -269,15 +257,15 @@
     },
     "fill": {
       "description": [
-        "図形に塗りつぶし色を設定します。たとえば、fill(204, 102, 0) を実行すると、その後に描画されるすべての図形はオレンジ色で塗りつぶされます。この色は、現在の <a href=\"#/p5/colorMode\">colorMode()</a> によってRGBまたはHSBのいずれかで指定されます。 (デフォルトのカラー スペースはRGBで、各値の範囲は0から255です) アルファの範囲もデフォルトでは0から255です。",
-        "単一の文字列引数が提供された場合、RGB、RGBA、16進数のCSSカラー文字列、および、すべての名前付きカラー文字列がサポートされます。この場合、2番目の引数としてのアルファ数値はサポートされず、RGBA形式を使用する必要があります。",
-        "塗りつぶし色を設定するために、<a href=\"#/p5.Color\">p5.Color</a> オブジェクトも提供できます。"
+        "図形に塗りつぶし色を設定します。たとえば、fill(204, 102, 0) を実行すると、その後に描画されるすべての図形はオレンジ色で塗りつぶされます。この色は、現在の <a href=\"#/p5/colorMode\">colorMode()</a> によって RGB または HSB のいずれかで指定します。（デフォルトのカラー スペースは RGB で、各値の範囲は0から255です）アルファの範囲もデフォルトでは0から255です。",
+        "単一の文字列引数が提供された場合、RGB、RGBA、16進数の CSS カラー文字列、および、すべての名前付きカラー文字列がサポートされます。この場合、2番目の引数としてのアルファ数値はサポートされず、RGBA 形式を使用する必要があります。",
+        "<a href=\"#/p5.Color\">p5.Color</a> オブジェクトを渡して塗りつぶし色を設定することもできます。"
       ],
       "params": {
-        "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
-        "v2": "Number: 現在のカラーレンジに対する緑または彩度の値",
-        "v3": "Number: 現在のカラーレンジに対する青または明度の値",
-        "alpha": "Number (オプション) ",
+        "v1": "Number: 現在のカラー レンジに対する赤または色相の値",
+        "v2": "Number: 現在のカラー レンジに対する緑または彩度の値",
+        "v3": "Number: 現在のカラー レンジに対する青または明度の値",
+        "alpha": "Number (オプション)",
         "value": "String: カラー文字列",
         "gray": "Number: グレーの値",
         "values": "Number[]: 赤、緑、青、およびアルファ成分を含む配列",
