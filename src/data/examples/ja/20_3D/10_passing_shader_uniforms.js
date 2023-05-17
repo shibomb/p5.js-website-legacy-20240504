@@ -1,34 +1,34 @@
 /*
- * @name Passing Shader Uniforms
- * @arialabel Sage green shape in the middle of a dark purple background. As the user’s mouse moves left, the shape has less sides and as the user’s mouse moves right, the shape has more sides
- * @description Uniforms are the way in which information is passed from p5 to the shader.
- * <br> To learn more about using shaders in p5.js: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.js Shaders</a>
+ * @name シェーダーのユニフォームを渡す
+ * @arialabel 暗い紫色の背景の中央にセージ グリーンの形状があります。ユーザーのマウスが左に移動すると形状の辺が少なくなり、右に移動すると辺が増えます。
+ * @description ユニフォームは、p5からシェーダーに情報を渡す手段です。
+ * <br>p5.jsでシェーダーを使用する方法について、詳しくはこちらを参照してください: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.jsシェーダー</a>
  */
 
- // this variable will hold our shader object
+ // この変数にシェーダー オブジェクトを保持します。
  let theShader;
 
  function preload(){
-   // load the shader
+   // シェーダーを読み込みます。
    theShader = loadShader('assets/uniforms.vert', 'assets/uniforms.frag');
  }
 
  function setup() {
-   // shaders require WEBGL mode to work
+   // シェーダーを使うためにはWEBGLモードにする必要があります。
    createCanvas(710, 400, WEBGL);
    noStroke();
  }
 
  function draw() {
-   // shader() sets the active shader with our shader
-   shader(theShader);
+  // shader()関数でアクティブなシェーダーを設定します。
+  shader(theShader);
 
-   // lets send the resolution, mouse, and time to our shader
-   // before sending mouse + time we modify the data so it's more easily usable by the shader
+   // 解像度、マウス、時間をシェーダーに送信しましょう。
+   // マウスと時間を送信する前に、シェーダーで扱いやすくなるようにデータ加工しています。
    theShader.setUniform('resolution', [width, height]);
    theShader.setUniform('mouse', map(mouseX, 0, width, 0, 7));
    theShader.setUniform('time', frameCount * 0.01);
 
-   // rect gives us some geometry on the screen
-   rect(0,0,width, height);
+  // rect関数は画面上にジオメトリを描画します。
+  rect(0,0,width, height);
  }
