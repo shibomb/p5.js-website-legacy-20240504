@@ -26,14 +26,14 @@
 
 // 各バーの幅は8で設定します。
 let values = [];
-// 配列'states'は、各段階でのピボットインデックスと、
+// 配列「states」は、各段階でのピボットインデックスと、
 // 現在並べ替えられているサブ配列を
 // 識別するのに役立てます。
 let states = [];
 
 // setup() 関数は、プログラムが開始されたときに1回呼び出されます。
-// ここでは、配列'values'にランダムな値をセットし、
-// 配列'states'に状態の初期値（-1）をセットしておきます。
+// ここでは、配列「values」にランダムな値をセットし、
+// 配列「states」に状態の初期値（-1）をセットしておきます。
 function setup() {
   createCanvas(710, 400);
   for(let i = 0; i < width/8; i++) {
@@ -112,7 +112,7 @@ async function partition(start, end) {
   return pivotIndex;
 }
 
-// 'values'の要素をインデックス'i'と'j'で交換します。
+// 「values」の要素をインデックス「i」と「j」で交換します。
 async function swap(i, j) {
   // 値を変更してシミュレーションのペースを
   // 調整します。
