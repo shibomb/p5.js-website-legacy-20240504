@@ -5,7 +5,7 @@
  * <br>p5.js でシェーダーを使用する方法について、詳しくはこちらを参照してください: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.js シェーダー</a>
  */
 
-// この変数にシェーダー オブジェクトを保持します。
+// この変数にシェーダーオブジェクトを保持します。
 let theShader;
 
 function preload(){
