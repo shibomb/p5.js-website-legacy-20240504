@@ -1,6 +1,6 @@
 /*
  * @name エッジ検出
- * @arialabel 左側に白黒でレンダリングされた宇宙飛行士、右側には画像を強くシャープ化したバージョンが表示されています
+ * @arialabel 左側に白黒でレンダリングされた宇宙飛行士、右側には画像を強くシャープ化したバージョンが表示されています。
  * @description ハイパスフィルターにより画像をシャープ化します。このプログラムは、隣接するピクセルとの関係で画像内のすべてのピクセルを分析して、画像をシャープ化します。
  * <br><br><span class="small"><em>このサンプルは、Processingウェブサイトの<a href="https://processing.org/examples/edgedetection.html">エッジ検出のサンプル</a>を移植したものです。</em></span>
  */
@@ -20,13 +20,13 @@ let kernel = [
 // 画像が表示されません（1回の draw() では画像を読み込むための十分な時間がありません）。
 // preload() は、他の処理が実行される前に画像が読み込まれることを保証します。
 function preload() {
-  // オリジナルの画像を読み込む
+  // オリジナルの画像を読み込みます。
   img = loadImage('assets/rover.png');
 }
 
 // setup() は preload() の後に1回実行されます。
 function setup() {
-  // キャンバスを作成する
+  // キャンバスを作成します。
   createCanvas(710, 400);
   // noLoop() は draw() を1回のみ実行し、ループしないようにします。
   noLoop();
@@ -35,13 +35,13 @@ function setup() {
 // draw() は通常、setup() の後にループ実行されます。
 // 今回は noLoop() のため1回だけ実行されます。
 function draw() {
-  // オリジナルの画像を左上隅に配置する
+  // オリジナルの画像を左上隅に配置します。
   image(img, 0, 0);
 
-  // img と同じ寸法の新しい画像を作成する
+  // img と同じ寸法の新しい画像を作成します。
   edgeImg = createImage(img.width, img.height);
 
-  // 画像のピクセルを読み込む
+  // 画像のピクセルを読み込みます。
   edgeImg.loadPixels();
 
   // x 軸と y 軸を反復処理するための2つの for() ループ
@@ -55,7 +55,7 @@ function draw() {
       let sum = 0;
 
       // kernel を反復処理するための kx、ky 変数
-      // kx、ky には3つの異なる値があります：-1、0、1
+      // kx、ky には3つの異なる値、-1、0、1があります。
       for (kx = -1; kx <= 1; kx++) {
         for (ky = -1; ky <= 1; ky++) {
           let xpos = x + kx;
@@ -65,7 +65,7 @@ function draw() {
           // RGB 値は同一です。
           // このサンプルでは赤の値を取得します。
           let val = red(img.get(xpos, ypos));
-          // kernel の合計を蓄積する
+          // kernel の合計を蓄積します。
           // kernel は3x3の行列です。
           // kx と ky には-1、0、1の値があります。
           // kx と ky に1を加えると、0、1、2が得られます。
@@ -75,14 +75,14 @@ function draw() {
         }
       }
 
-      // edgeImg のピクセル値を設定する
+      // edgeImg のピクセル値を設定します。
       edgeImg.set(x, y, color(sum, sum, sum));
     }
   }
 
-  // updatePixels() で edgeImg の変更を書き込む
+  // updatePixels() で edgeImg の変更を書き込みます。
   edgeImg.updatePixels();
 
-  // 元の画像の右側に edgeImg（エッジ検出した画像）を描画する
+  // 元の画像の右側に edgeImg（エッジ検出した画像）を描画します。
   image(edgeImg, img.width, 0);
 }
