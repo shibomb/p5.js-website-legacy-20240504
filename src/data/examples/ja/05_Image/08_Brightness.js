@@ -11,7 +11,7 @@ let img;
 // loadImage() は setup() で呼び出すのではなく、ここで実行する必要があります。
 // preload() は、他の処理が実行される前に画像が読み込まれることを保証します。
 function preload() {
-  // オリジナルの画像を読み込む
+  // オリジナルの画像を読み込見ます。
   img = loadImage('assets/rover_wide.jpg');
 }
 // setup() は preload() の後に1回実行されます。
@@ -30,31 +30,31 @@ function draw() {
   img.loadPixels();
   for (let x = 0; x < img.width; x++) {
     for (let y = 0; y < img.height; y++) {
-      // 2D グリッドから 1D の位置を計算する
+      // 2D グリッドから 1D の位置を計算します。
       let loc = (x + y * img.width) * 4;
-      // 画像から R、G、B の値を取得する（今回は R のみ）
+      // 画像から R、G、B の値を取得します（今回は R のみ）。
       let r, g, b;
       r = img.pixels[loc];
       // g = img.pixels[loc+1];
       // b = img.pixels[loc+2];
-      // マウスに近い距離に基づいて明るさを変更する量を計算する
+      // マウスに近い距離に基づいて明るさを変更する量を計算します。
       // ピクセルがマウスに近いほど、「distance」の値が低くなります。
-      let maxdist = 50; //dist(0,0,width,height);
+      let maxdist = 50; // dist(0, 0, width, height);
       let d = dist(x, y, mouseX, mouseY);
       let adjustbrightness = (255 * (maxdist - d)) / maxdist;
       r += adjustbrightness;
       // g += adjustbrightness;
       // b += adjustbrightness;
-      // R が0-255のカラー範囲内に収まるように設定する
+      // R が0-255のカラー範囲内に収まるように設定します。
       r = constrain(r, 0, 255);
       // g = constrain(g, 0, 255);
       // b = constrain(b, 0, 255);
-      // 新しい色を作成して、ウィンドウ内のピクセルを設定する
+      // 新しい色を作成して、ウィンドウ内のピクセルを設定します。
       let pixloc = (y * width + x) * 4;
       pixels[pixloc] = r;
       pixels[pixloc + 1] = r;
       pixels[pixloc + 2] = r;
-      pixels[pixloc + 3] = 255; // アルファ値は255固定
+      pixels[pixloc + 3] = 255; // アルファ値は255固定です。
     }
   }
   updatePixels();
