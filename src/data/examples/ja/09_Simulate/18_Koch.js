@@ -1,7 +1,7 @@
 /*
  * @name コッホ曲線
  * @arialabel 一本の白い水平線が黒い背景上に描かれ、途中で三角形に変形し、三角形の各辺がまた二つの三角形になり、これが5回繰り返されることで雪の結晶を生成します。
- * @description 簡単なフラクタル：コッホ曲線を描画します。再帰レベルが順番に描かれます。
+ * @description 簡単なフラクタル: コッホ曲線を描画します。再帰レベルが順番に描かれます。
  * Daniel Shiffman によるサンプルです。
  */
 
@@ -15,7 +15,7 @@ function setup() {
 
 function draw() {
   background(0);
-  // 雪片を描く！
+  // 雪片を描きます！
   k.render();
   // 反復
   k.nextLevel();
@@ -59,9 +59,9 @@ class KochLine {
     let a = this.start.copy(); // 最初から始めます。
     let v = p5.Vector.sub(this.end, this.start);
     v.div(3);
-    a.add(v);  // ポイント B に移動
-    v.rotate(-PI/3); // 60度回転
-    a.add(v);  // ポイント C に移動
+    a.add(v);  // ポイント B に移動します。
+    v.rotate(-PI/3); // 60度回転します。
+    a.add(v);  // ポイント C に移動します。
     return a;
   }
 
@@ -99,7 +99,7 @@ class KochFractal {
   restart() {
     this.count = 0;      // カウントをリセットします。
     this.lines = [];  // 配列リストを空にします。
-    this.lines.push(new KochLine(this.start,this.end));  // 初期線（ひとつのエンド p5.Vector からもうひとつのエンド p5.Vector への線）を追加
+    this.lines.push(new KochLine(this.start,this.end));  // 初期線（ひとつのエンド p5.Vector からもうひとつのエンド p5.Vector への線）を追加します。
   }
 
   getCount() {
@@ -114,15 +114,15 @@ class KochFractal {
   }
 
   // ここが **MAGIC**が起こる場所です。
-  // ステップ1：空の配列リストを作成
-  // ステップ2：現在の配列リストにあるすべての線について
-  //   - コッホアルゴリズムに基づいて4つの線分を計算
-  //   - すべての4つの線分を新しい配列リストに追加
-  // ステップ3：新しい配列リストを返し、それが構造の線分リストになります。
+  // ステップ1: 空の配列リストを作成します。
+  // ステップ2: 現在の配列リストにあるすべての線について
+  //   - コッホアルゴリズムに基づいて4つの線分を計算します。
+  //   - すべての4つの線分を新しい配列リストに追加します。
+  // ステップ3: 新しい配列リストを返し、それが構造の線分リストになります。
 
   // これを何度も繰り返すと、各線が4つの線に分かれ、4つの線に分かれ、、、と繰り返すようになります。
   iterate(before) {
-    let now = [];    // 空のリストを作成します
+    let now = [];    // 空のリストを作成します。
     for(let i = 0; i < this.lines.length; i++) {
       let l = this.lines[i];
       // コッホ p5.Vector を5つ計算します（線オブジェクトによって行われます）。
