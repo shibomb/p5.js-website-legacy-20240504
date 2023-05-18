@@ -16,7 +16,7 @@ function draw() {
   noFill();
 
   // point() メソッドの2つのパラメータはそれぞれ座標を指定します。
-  // 最初のパラメータはx座標で、2番目はY座標です
+  // 最初のパラメータは x 座標で、2番目は Y 座標です
   stroke(255);
   point(width * 0.5, height * 0.5);
   point(width * 0.5, height * 0.25);
@@ -27,7 +27,7 @@ function draw() {
   stroke(0, 153, 255);
   line(0, height * 0.33, width, height * 0.33);
 
-  // デフォルトでは、rect()の最初の2つのパラメータは左上隅の座標で、
+  // デフォルトでは、rect() の最初の2つのパラメータは左上隅の座標で、
   // 2番目のペアは幅と高さです
   stroke(255, 153, 0);
   rect(width * 0.25, height * 0.1, width * 0.5, height * 0.8);
