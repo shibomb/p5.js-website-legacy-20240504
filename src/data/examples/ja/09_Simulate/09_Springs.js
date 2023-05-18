@@ -55,7 +55,7 @@ function Spring (_x, _y, _s, _d, _m, _k_in, _others, _id) {
   this.over = false;
   this.move = false;
 
-  // スプリング シミュレーション定数
+  // スプリングシミュレーション定数
   this.mass = _m;       // 質量
   this.k = 0.2;         // スプリング定数
   this.k = _k_in;
@@ -63,7 +63,7 @@ function Spring (_x, _y, _s, _d, _m, _k_in, _others, _id) {
   this.rest_posx = _x;  // 安定位置 X
   this.rest_posy = _y;  // 安定位置 Y
 
-  // スプリング シミュレーション変数
+  // スプリングシミュレーション変数
   //float pos = 20.0;   // 位置
   this.velx = 0.0;      // X 方向の速度
   this.vely = 0.0;      // Y 方向の速度
