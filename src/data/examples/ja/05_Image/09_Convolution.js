@@ -71,13 +71,13 @@ function convolution(x, y, matrix, matrixsize, img) {
       loc = constrain(loc, 0, img.pixels.length - 1);
 
       // たたみ込みの計算
-      // RGB 値を取得
+      // RGB 値を取得します。
       rtotal += img.pixels[loc] * matrix[i][j];
       gtotal += img.pixels[loc + 1] * matrix[i][j];
       btotal += img.pixels[loc + 2] * matrix[i][j];
     }
   }
-  // RGB 値を0~255に制限します。
+  // RGB 値を0〜255に制限します。
   rtotal = constrain(rtotal, 0, 255);
   gtotal = constrain(gtotal, 0, 255);
   btotal = constrain(btotal, 0, 255);
