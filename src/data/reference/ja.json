@@ -274,12 +274,12 @@
     },
     "noFill": {
       "description": [
-        "ジオメトリの塗りつぶしを無効にします。 <a href=\"#/p5/noStroke\">noStroke()</a>と<a href=\"#/p5/noFill\">noFill()</a>の両方が呼び出されると、画面には何も描画されません。"
+        "ジオメトリの塗りつぶしを無効にします。<a href=\"#/p5/noStroke\">noStroke()</a> と <a href=\"#/p5/noFill\">noFill()</a> の両方が呼び出されると、画面には何も描画されません。"
       ]
     },
     "noStroke": {
       "description": [
-        "ストローク（輪郭）の描画を無効にします。<a href=\"#/p5/noStroke\">noStroke()</a>と<a href=\"#/p5/noFill\">noFill()</a>の両方が呼び出されると、画面には何も描画されません。"
+        "ストローク（輪郭）の描画を無効にします。<a href=\"#/p5/noStroke\">noStroke()</a> と <a href=\"#/p5/noFill\">noFill()</a> の両方が呼び出されると、画面には何も描画されません。"
       ]
     },
     "stroke": {
