@@ -55,7 +55,7 @@ function draw() {
     push(); // ひとつ上のレベルへ移動します。
     translate(0, radius); // サインの端まで移動します。
     if (!trace) ellipse(0, 0, 5, 5); // 小さな円を描画します。
-    if (trace) ellipse(0, 0, erad, erad); // トレース時にはeradで描画します。
+    if (trace) ellipse(0, 0, erad, erad); // トレース時には erad で描画します。
     pop(); // ひとつ下のレベルへ戻ります。
     translate(0, radius); // 次のサインの位置に移動します。
     sines[i] = (sines[i] + (fund + (fund * i * ratio))) % TWO_PI; // 基本周波数に基づいて角度を更新します。
