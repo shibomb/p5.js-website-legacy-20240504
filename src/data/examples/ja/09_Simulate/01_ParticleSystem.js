@@ -1,7 +1,7 @@
 /*
- * @name パーティクル システム
+ * @name パーティクルシステム
  * @arialabel 点火されたスパークラーのように点から軽いグレーの円が流れ出します。
- * @description 基本的なパーティクル システム
+ * @description 基本的なパーティクルシステム
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 let system;
