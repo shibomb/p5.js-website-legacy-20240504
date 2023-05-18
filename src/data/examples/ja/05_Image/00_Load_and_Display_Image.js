@@ -2,8 +2,8 @@
  * @name 画像の読み込みと表示
  * @arialabel 画面左下に宇宙飛行士の画像が半分の大きさで表示されます。
  * @description 画像は実際の大きさ、もしくは任意の大きさで表示することができます。
- * <p><em><span class="small"> このサンプルをローカル環境で実行するには画像ファイルと実行中の
- * <a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
+ * <p><em><span class="small"> このサンプルをローカル環境で実行するには画像ファイルと実行中の 
+ * <a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a> が必要です。</span></em></p>
  */
 let img; // 変数「img」を宣言します。
 
