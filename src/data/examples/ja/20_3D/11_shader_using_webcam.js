@@ -2,7 +2,7 @@
  * @name ウェブカメラを使用したシェーダー
  * @arialabel ユーザーの内蔵ウェブカメラで表示されるシーンにネオンテクスチャが追加されます。
  * @description ウェブカメラはテクスチャとしてシェーダーに渡すことができます。
- * <br>p5.jsでシェーダーを使用する方法について、詳しくはこちらを参照してください: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.jsシェーダー</a>
+ * <br>p5.js でシェーダーを使用する方法について、詳しくはこちらを参照してください: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.js シェーダー</a>
  */
 
  // この変数にシェーダー オブジェクトを保持します。
@@ -16,7 +16,7 @@
  }
 
  function setup() {
-   // シェーダーを使うためにはWEBGLモードにする必要があります。
+   // シェーダーを使うためには WEBGL モードにする必要があります。
    createCanvas(710, 400, WEBGL);
    noStroke();
 
@@ -27,12 +27,12 @@
  }
 
  function draw() {
-  // shader()関数でアクティブなシェーダーを設定します。
+  // shader() 関数でアクティブなシェーダーを設定します。
   shader(theShader);
 
    // ウェブカメラ映像をテクスチャとして渡します。
    theShader.setUniform('tex0', cam);
 
-  // rect関数は画面上にジオメトリを描画します。
+  // rect 関数は画面上にジオメトリを描画します。
   rect(0,0,width,height);
  }
