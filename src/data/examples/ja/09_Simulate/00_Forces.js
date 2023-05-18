@@ -5,7 +5,7 @@
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 // 複数の力が物体に作用するデモンストレーション
-// （Moverクラス）
+// （Mover クラス）
 // 物体は常に重力を受けます。
 // 物体は「水」の中にあるとき、流体抵抗を受けます。
 
@@ -30,11 +30,11 @@ function draw() {
 
   for (let i = 0; i < movers.length; i++) {
 
-    // Moverは液体の中ですか？
+    // Mover は液体の中ですか？
     if (liquid.contains(movers[i])) {
       // 抵抗力を計算します。
       let dragForce = liquid.calculateDrag(movers[i]);
-      // Moverに抵抗力を適用します。
+      // Mover に抵抗力を適用します。
       movers[i].applyForce(dragForce);
     }
 
@@ -56,7 +56,7 @@ function mousePressed() {
   reset();
 }
 
-// すべてのMoverオブジェクトをランダムに再開します。
+// すべての Mover オブジェクトをランダムに再開します。
 function reset() {
   for (let i = 0; i < 9; i++) {
     movers[i] = new Mover(random(0.5, 3), 40 + i * 70, 0);
@@ -71,7 +71,7 @@ let Liquid = function(x, y, w, h, c) {
   this.c = c;
 };
 
-// MoverはLiquidの中ですか？
+// Mover は Liquid の中ですか？
 Liquid.prototype.contains = function(m) {
   let l = m.position;
   return l.x > this.x && l.x < this.x + this.w &&
@@ -109,7 +109,7 @@ function Mover(m, x, y) {
 }
 
 // ニュートンの第二法則: F = M * A
-// またはA = F / M
+// または A = F / M
 Mover.prototype.applyForce = function(force) {
   let f = p5.Vector.div(force, this.mass);
   this.acceleration.add(f);
