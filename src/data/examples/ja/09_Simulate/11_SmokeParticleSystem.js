@@ -17,10 +17,10 @@ function preload() {
 
 function setup() {
 
-  // キャンバスのサイズを設定
+  // キャンバスのサイズを設定します。
   createCanvas(640, 360);
 
-  // パーティクルシステムを初期化
+  // パーティクルシステムを初期化します。
   ps = new ParticleSystem(0, createVector(width / 2, height - 60), particle_texture);
 }
 
@@ -36,7 +36,7 @@ function draw() {
     ps.addParticle();
   }
 
-  // 風力を表す矢印を描く
+  // 風力を表す矢印を描きます。
   drawVector(wind, createVector(width / 2, 50, 0), 500);
 }
 
@@ -80,12 +80,12 @@ let ParticleSystem = function(num, v, img_) {
  */
 ParticleSystem.prototype.run = function() {
 
-  // ループ内で使用する配列の長さを一時変数に記憶
+  // ループ内で使用する配列の長さを一時変数に記憶します。
   // たまに for ループで <variable>.length を見ることがありますが、
   // ここでは、配列をループするたびに再計算されないようにキャッシュしています。
   let len = this.particles.length;
 
-  // パーティクルをループさせる
+  // パーティクルをループさせます。
   for (let i = len - 1; i >= 0; i--) {
     let particle = this.particles[i];
     particle.run();
