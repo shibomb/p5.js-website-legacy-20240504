@@ -2,7 +2,7 @@
  * @name チェーン
  * @arialabel 白いやや不透明な2つの円が白い線で繋がれています。ユーザーのマウスに合わせて弦の上部が動き、円もマウスに合わせて動きますが重力の影響も受けます。
  * @description ひとつめの円はマウスの位置に、ふたつめの円はひとつめの円の位置に結び付けられます。環境の重力は両方に対して下向きに働きます。
- * <br><br><small><em>このサンプルは<a href="https://processing.org/examples/">Processingのウェブサイト</a>から移植されました。</em></small>
+ * <br><br><small><em>このサンプルは <a href="https://processing.org/examples/">Processing のウェブサイト</a> から移植されました。</em></small>
  */
 let s1, s2;
 let gravity = 9.0;
@@ -11,7 +11,7 @@ let mass = 2.0;
 function setup() {
   createCanvas(720, 400);
   fill(255, 126);
-  // 入力：x、y、mass、gravity
+  // 入力: x、y、mass、gravity
   s1 = new Spring2D(0.0, width / 2, mass, gravity);
   s2 = new Spring2D(0.0, width / 2, mass, gravity);
 }
@@ -25,9 +25,9 @@ function draw() {
 }
 
 function Spring2D(xpos, ypos, m, g) {
-  this.x = xpos; // x座標とy座標
+  this.x = xpos; // x 座標と y 座標
   this.y = ypos;
-  this.vx = 0; // x軸とy軸の速度
+  this.vx = 0; // x 軸と y 軸の速度
   this.vy = 0;
   this.mass = m;
   this.gravity = g;
