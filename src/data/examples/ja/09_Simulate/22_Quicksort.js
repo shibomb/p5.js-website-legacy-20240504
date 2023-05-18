@@ -31,7 +31,7 @@ let values = [];
 // 識別するのに役立てます。
 let states = [];
 
-// setup()関数は、プログラムが開始されたときに1回呼び出されます。
+// setup() 関数は、プログラムが開始されたときに1回呼び出されます。
 // ここでは、配列'values'にランダムな値をセットし、
 // 配列'states'に状態の初期値（-1）をセットしておきます。
 function setup() {
@@ -43,7 +43,7 @@ function setup() {
   quickSort(0, values.length - 1);
 }
 
-// draw()関数の文は、プログラムが停止するまで連続して実行されます。
+// draw() 関数の文は、プログラムが停止するまで連続して実行されます。
 // 各文は順次実行され、
 // 最後の文が読み込まれると、
 // 最初の文が再度実行されます。
@@ -68,8 +68,8 @@ async function quickSort(start, end) {
   if (start > end) {  // 並べ替えるものがない！
     return;
   }
-  // partition()は、ピボット要素のインデックスを返します。
-  // partition()が実行されたら、
+  // partition() は、ピボット要素のインデックスを返します。
+  // partition() が実行されたら、
   // ピボット要素の左側のすべての要素はそれより小さく、
   // 右側のすべての要素はそれより大きくなります。
   let index = await partition(start, end);
