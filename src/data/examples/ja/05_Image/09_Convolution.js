@@ -1,7 +1,7 @@
 /*
  * @name たたみ込み
  * @arialabel 宇宙飛行士の画像を背景に表示し、ユーザーのマウスの動きに合わせて画像の鮮明度を上げる正方形の領域も動きます。
- * @description 画像の一部にたたみ行列を適用します。マウスを移動させると別の箇所にフィルターを適用できます。このサンプルは、Processingウェブサイトの<a href="https://processing.org/examples/convolution.html" target="blank">Dan Shiffmanによるたたみ込みのサンプル</a>を移植したものです。特に指定のない限り、Danによるオリジナルのコメントを記載しています。
+ * @description 画像の一部にたたみ行列を適用します。マウスを移動させると別の箇所にフィルターを適用できます。このサンプルは、Processing ウェブサイトの <a href="https://processing.org/examples/convolution.html" target="blank">Dan Shiffman によるたたみ込みのサンプル</a>を移植したものです。特に指定のない限り、Dan によるオリジナルのコメントを記載しています。
  * <p><em><span class="small"> このサンプルをローカルで実行するには画像ファイルと実行中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
  */
 
@@ -12,7 +12,7 @@ let w = 80;
 // これはハイパスフィルターであり、エッジを強調します。
 const matrix = [
   [-1, -1, -1],
-  [-1, 9, -1],
+  [-1,  9, -1],
   [-1, -1, -1]
 ];
 
@@ -24,8 +24,8 @@ function setup() {
   createCanvas(720, 400);
   img.loadPixels();
 
-  // pixelDensity(1)はピクセル密度を表示密度にスケーリングしないためのものです。
-  // 詳細についてはpixelDensity()のリファレンスを参照してください。
+  // pixelDensity(1) はピクセル密度を表示密度にスケーリングしないためのものです。
+  // 詳細については pixelDensity() のリファレンスを参照してください。
   pixelDensity(1);
 }
 
@@ -46,7 +46,7 @@ function draw() {
     for (let y = ystart; y < yend; y++) {
       let c = convolution(x, y, matrix, matrixsize, img);
 
-      // 変数「c」からRGBAの値を取得してピクセルを更新します。
+      // 変数「c」から RGBA の値を取得してピクセルを更新します。
       let loc = (x + y * img.width) * 4;
       pixels[loc] = red(c);
       pixels[loc + 1] = green(c);
@@ -69,17 +69,17 @@ function convolution(x, y, matrix, matrixsize, img) {
       const yloc = y + j - offset;
       let loc = (xloc + img.width * yloc) * 4;
 
-      // 画像の範囲内かどうかを確認します。ここでlocの値をさらに上手く制限できるかもしれません。
+      // 画像の範囲内かどうかを確認します。ここで loc の値をさらに上手く制限できるかもしれません。
       loc = constrain(loc, 0, img.pixels.length - 1);
 
       // たたみ込みの計算
-      // RGB値を取得
+      // RGB 値を取得
       rtotal += img.pixels[loc] * matrix[i][j];
       gtotal += img.pixels[loc + 1] * matrix[i][j];
       btotal += img.pixels[loc + 2] * matrix[i][j];
     }
   }
-  // RGB値を0~255に制限します。
+  // RGB 値を0~255に制限します。
   rtotal = constrain(rtotal, 0, 255);
   gtotal = constrain(gtotal, 0, 255);
   btotal = constrain(btotal, 0, 255);
