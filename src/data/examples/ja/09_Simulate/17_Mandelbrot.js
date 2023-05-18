@@ -2,7 +2,7 @@
  * @name マンデルブロ集合
  * @arialabel ハート型の円盤が連なったようなフラクタル。円盤に小さな円盤がくっつき、連結した集合からなります。
  * @description マンデルブロ集合のシンプルなレンダリングを行います。
- * ProcessingのDaniel Shiffmanの<a href="https://processing.org/examples/mandelbrot.html">マンデルブロサンプル</a>をもとにしています。
+ * Processing の Daniel Shiffman の <a href="https://processing.org/examples/mandelbrot.html">マンデルブロサンプル</a> をもとにしています。
  */
 
 function setup() {
@@ -25,30 +25,30 @@ function draw() {
   const xmin = -w/2;
   const ymin = -h/2;
 
-  // pixels[]配列に書き込めるようになっていることを確認してください。
+  // pixels[] 配列に書き込めるようになっていることを確認してください。
   // 他に描画することがないため、一度だけ必要です。
   loadPixels();
 
   // 複素平面上の各点についての最大反復回数
   const maxiterations = 100;
 
-  // xはxminからxmaxまで増加します。
+  // x は xmin から xmax まで増加します。
   const xmax = xmin + w;
-  // yはyminからymaxまで増加します。
+  // y は ymin から ymax まで増加します。
   const ymax = ymin + h;
 
-  // 画素ごとに、xとyをどのように増やすかを計算します。
+  // 画素ごとに、x と y をどのように増やすかを計算します。
   const dx = (xmax - xmin) / (width);
   const dy = (ymax - ymin) / (height);
 
-  // yを開始します。
+  // y を開始します。
   let y = ymin;
   for (let j = 0; j < height; j++) {
-    // xを開始します。
+    // x を開始します。
     let x = xmin;
     for (let i = 0; i < width; i++) {
 
-      // テストすることになるのは、z＝z^2+cmを繰り返すうちに、zが無限に近づくかどうかです。
+      // テストすることになるのは、z＝z^2+cm を繰り返すうちに、z が無限に近づくかどうかです。
       let a = x;
       let b = y;
       let n = 0;
