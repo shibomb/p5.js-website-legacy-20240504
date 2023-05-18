@@ -1,13 +1,13 @@
 /*
  * @name テクスチャのようなシェーダー
  * @arialabel グラデーションが適用された正方形のグリッドに分割された球体です。
- * @description シェーダーは2D/3D形状にテクスチャとして適用できます。
- * <br>p5.jsでシェーダーを使用する方法について、詳しくはこちらを参照してください: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.jsシェーダー</a>
+ * @description シェーダーは 2D/3D 形状にテクスチャとして適用できます。
+ * <br>p5.js でシェーダーを使用する方法について、詳しくはこちらを参照してください: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.js シェーダー</a>
  */
 
  // この変数にシェーダー オブジェクトを保持します。
  let theShader;
- // この変数にcreateGraphicsで作られるシェーダーテクスチャレイヤーを保持します。
+ // この変数に createGraphics で作られるシェーダーテクスチャレイヤーを保持します。
  let shaderTexture;
 
  let theta = 0;
@@ -23,7 +23,7 @@
  }
 
  function setup() {
-   // シェーダーを使うためにはWEBGLモードにする必要があります。
+   // シェーダーを使うためには WEBGL モードにする必要があります。
    createCanvas(710, 400, WEBGL);
    noStroke();
 
@@ -42,7 +42,7 @@
    // アクティブなシェーダーを設定するのではなく、それをシェーダーテクスチャレイヤーに渡しています。
    shaderTexture.shader(theShader);
 
-   // ここではsetUniform()メソッドを使って、シェーダーにユニフォーム値を送信しています。
+   // ここでは setUniform() メソッドを使って、シェーダーにユニフォーム値を送信しています。
    theShader.setUniform("resolution", [width, height]);
    theShader.setUniform("time", millis() / 1000.0);
    theShader.setUniform("mouse", [mouseX, map(mouseY, 0, height, height, 0)]);
@@ -64,6 +64,6 @@
    sphere(125);
    pop();
 
-   // 滑らかなエッジをもつ楕円を3Dで描くために、第5引数を設定しています。
+   // 滑らかなエッジをもつ楕円を 3D で描くために、第5引数を設定しています。
    ellipse(260,0,200,200,100);
  }
