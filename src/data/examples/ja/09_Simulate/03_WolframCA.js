@@ -1,7 +1,7 @@
 /*
- * @name Wolframのセル オートマトン
- * @arialabel 1次元セル オートマトンは、白い正方形から構成されたデザインで、ピクセル化された外観をもつピラミッド形状が描かれています。
- * @description Wolframの1次元セル オートマトンのシンプルなデモンストレーション
+ * @name Wolframのセルオートマトン
+ * @arialabel 1次元セルオートマトンは、白い正方形から構成されたデザインで、ピクセル化された外観をもつピラミッド形状が描かれています。
+ * @description Wolframの1次元セルオートマトンのシンプルなデモンストレーション
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 
