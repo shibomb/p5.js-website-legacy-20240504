@@ -11,7 +11,7 @@ let img;
 // loadImage() は setup() で呼び出すのではなく、ここで実行する必要があります。
 // preload() は、他の処理が実行される前に画像が読み込まれることを保証します。
 function preload() {
-  // オリジナルの画像を読み込見ます。
+  // オリジナルの画像を読み込みます。
   img = loadImage('assets/rover_wide.jpg');
 }
 // setup() は preload() の後に1回実行されます。
