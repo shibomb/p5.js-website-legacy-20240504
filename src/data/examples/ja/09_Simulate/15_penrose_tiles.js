@@ -58,7 +58,7 @@ PenroseLSystem.prototype.iterate = function() {
 
   for(let i=0; i < this.production.length; ++i) {
     let step = this.production.charAt(i);
-    // 現在の文字が 'W' である場合、
+    // 現在の文字が「W」である場合、
     // 現在の文字を対応する規則で置き換えます。
     if (step == 'W') {
       newProduction = newProduction + this.ruleW;
@@ -73,8 +73,8 @@ PenroseLSystem.prototype.iterate = function() {
       newProduction = newProduction + this.ruleZ;
     }
     else {
-      // 'F' 文字をすべてドロップし、
-      // 他の文字（ '+', '-', '['、']' ）を変更しないでください。
+      // 「F」文字をすべてドロップし、
+      // 他の文字（「+」、「-」、「[」、「]」）を変更しないでください。
       if (step != 'F') {
         newProduction = newProduction + step;
       }
@@ -98,7 +98,7 @@ PenroseLSystem.prototype.render = function () {
   for(let i=0; i<this.steps; ++i) {
     let step = this.production.charAt(i);
 
-    // 'W', 'X', 'Y', 'Z' シンボルは、実際にはタートルアクションに対応しません。
+    // 「W」、「X」、「Y」、「Z」シンボルは、実際にはタートルアクションに対応しません。
     if( step == 'F') {
       stroke(255, 60);
       for(let j=0; j < this.repeats; j++) {
