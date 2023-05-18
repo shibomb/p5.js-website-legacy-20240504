@@ -2,7 +2,7 @@
  * @name ペンローズタイル
  * @arialabel 白い菱形が黒い背景に描かれたペンローズタイルの柄が作成されます。
  * @frame 710,400
- * @description これはprocessing.org/examplesの「Penrose Tile」を、David Blitzが移植したものです。
+ * @description これは processing.org/examples の「Penrose Tile」を、David Blitz が移植したものです。
  */
 
 let ds;
@@ -22,7 +22,7 @@ function draw() {
 function PenroseLSystem() {
   this.steps = 0;
 
-  // ペンローズ菱形のL-システムの公理と規則
+  // ペンローズ菱形の L システムの公理と規則
   // リファレンスがあればいいのですが、私は見つけられませんでした。
   this.axiom = "[X]++[X]++[X]++[X]++[X]";
   this.ruleW = "YF++ZF----XF[-YF----WF]++";
