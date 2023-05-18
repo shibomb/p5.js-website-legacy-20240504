@@ -2,7 +2,7 @@
  * @name エッジ検出
  * @arialabel 左側に白黒でレンダリングされた宇宙飛行士、右側には画像を強くシャープ化したバージョンが表示されています。
  * @description ハイパスフィルターにより画像をシャープ化します。このプログラムは、隣接するピクセルとの関係で画像内のすべてのピクセルを分析して、画像をシャープ化します。
- * <br><br><span class="small"><em>このサンプルは、Processingウェブサイトの<a href="https://processing.org/examples/edgedetection.html">エッジ検出のサンプル</a>を移植したものです。</em></span>
+ * <br><br><span class="small"><em>このサンプルは、Processing ウェブサイトの <a href="https://processing.org/examples/edgedetection.html">エッジ検出のサンプル</a> を移植したものです。</em></span>
  */
 // このプログラムは、隣接するピクセルとの関係で画像内のすべてのピクセルを分析して、画像をシャープ化します。
 
