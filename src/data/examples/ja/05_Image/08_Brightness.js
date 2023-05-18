@@ -2,19 +2,19 @@
  * @name 明度
  * @arialabel 白黒で描かれた宇宙飛行士のイメージが黒いスクリーンで覆われています。ユーザーのマウスが懐中電灯のように機能し、マウスを動かすことで画像の一部分が照らされます。
  * @description このプログラムは、各ピクセルとマウスとの距離を計算して、画像の一部の明るさを調整します。
- * <br><br><span class="small"><em>このサンプルは、Processingウェブサイトの<a href="https://processing.org/examples/brightness.html">明度のサンプル</a>を移植したものです。</em></span>
+ * <br><br><span class="small"><em>このサンプルは、Processing ウェブサイトの<a href="https://processing.org/examples/brightness.html">明度のサンプル</a>を移植したものです。</em></span>
  */
 // このプログラムは、各ピクセルとマウスとの距離を計算して、
 // 画像の一部の明るさを調整します。
 let img;
-// preload()はsetup()の前に1回だけ実行されます。
-// loadImage()はsetup()で呼び出すのではなく、ここで実行する必要があります。
-// preload()は、他の処理が実行される前に画像が読み込まれることを保証します。
+// preload() は setup() の前に1回だけ実行されます。
+// loadImage() は setup() で呼び出すのではなく、ここで実行する必要があります。
+// preload() は、他の処理が実行される前に画像が読み込まれることを保証します。
 function preload() {
   // オリジナルの画像を読み込む
   img = loadImage('assets/rover_wide.jpg');
 }
-// setup()はpreload()の後に1回実行されます。
+// setup() は preload() の後に1回実行されます。
 function setup() {
   createCanvas(710, 400);
   pixelDensity(1);
@@ -23,16 +23,16 @@ function setup() {
 
 function draw() {
   image(img, 0, 0);
-  // pixels[]配列を読み込む必要があるのは1回だけです。
-  // 形状を描くのではなく、draw()内でpixels[]を操作するためです。
+  // pixels[] 配列を読み込む必要があるのは1回だけです。
+  // 形状を描くのではなく、draw() 内で pixels[] を操作するためです。
   loadPixels();
-  // この画像のピクセルを読み取るためにloadPixels()を呼び出す必要があります。
+  // この画像のピクセルを読み取るために loadPixels() を呼び出す必要があります。
   img.loadPixels();
   for (let x = 0; x < img.width; x++) {
     for (let y = 0; y < img.height; y++) {
-      // 2Dグリッドから1Dの位置を計算する
+      // 2D グリッドから 1D の位置を計算する
       let loc = (x + y * img.width) * 4;
-      // 画像からR、G、Bの値を取得する（今回はRのみ）
+      // 画像から R、G、B の値を取得する（今回は R のみ）
       let r, g, b;
       r = img.pixels[loc];
       // g = img.pixels[loc+1];
@@ -45,7 +45,7 @@ function draw() {
       r += adjustbrightness;
       // g += adjustbrightness;
       // b += adjustbrightness;
-      // Rが0-255のカラー範囲内に収まるように設定する
+      // R が0-255のカラー範囲内に収まるように設定する
       r = constrain(r, 0, 255);
       // g = constrain(g, 0, 255);
       // b = constrain(b, 0, 255);
