@@ -4,7 +4,7 @@
  * @description Craig Reynoldsの「フロッキング」動作のデモンストレーション。
  * 参照：http://www.red3d.com/cwr/
  * ルール：Cohesion（結束）、Separation（分離）、Alignment（整列）
- * (from <a href="http://natureofcode.com">natureofcode.com</a>).
+ * （<a href="http://natureofcode.com">natureofcode.com</a> より）。
  * マウスをドラッグしてボイド（グレーの小さな三角形）を追加します。
  */
 
