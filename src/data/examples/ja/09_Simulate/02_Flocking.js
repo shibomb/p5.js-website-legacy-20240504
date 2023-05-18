@@ -1,7 +1,7 @@
 /*
  * @name フロッキング
  * @arialabel グレーの小さな三角形のグループが、濃いグレーの背景をバックにして移動します。
- * @description Craig Reynoldsの「フロッキング」動作のデモンストレーション。
+ * @description Craig Reynolds の「フロッキング」動作のデモンストレーション。
  * 参照：http://www.red3d.com/cwr/
  * ルール：Cohesion（結束）、Separation（分離）、Alignment（整列）
  * （<a href="http://natureofcode.com">natureofcode.com</a> より）。
@@ -37,7 +37,7 @@ function mouseDragged() {
 // Daniel Shiffman
 // http://natureofcode.com
 
-// Flockオブジェクト
+// Flock オブジェクト
 // 単純にすべてのボイドの配列を管理するだけで、ほとんど何もしません。
 
 function Flock() {
@@ -59,7 +59,7 @@ Flock.prototype.addBoid = function(b) {
 // Daniel Shiffman
 // http://natureofcode.com
 
-// Boidクラス
+// Boid クラス
 // 分離、結束、整列のメソッドが追加されています。
 
 function Boid(x, y) {
@@ -79,7 +79,7 @@ Boid.prototype.run = function(boids) {
 }
 
 Boid.prototype.applyForce = function(force) {
-  // A = F / Mを求める場合は、ここで質量を追加できます。
+  // A = F / M を求める場合は、ここで質量を追加できます。
   this.acceleration.add(force);
 }
 
@@ -113,7 +113,7 @@ Boid.prototype.update = function() {
 // STEER = DESIRED - VELOCITY
 Boid.prototype.seek = function(target) {
   let desired = p5.Vector.sub(target,this.position);  // 現在の位置からターゲットへのベクトル
-  // desiredを正規化し、最大速度でスケーリングします。
+  // desired を正規化し、最大速度でスケーリングします。
   desired.normalize();
   desired.mult(this.maxspeed);
   // ステアリングのベクトル = 希望ベクトル - 現在のベクトル
