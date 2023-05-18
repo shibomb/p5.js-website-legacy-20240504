@@ -22,7 +22,7 @@ function draw() {
     fill(255);
     textAlign(CENTER);
     textSize(32);
-    text("マウスをクリックしてパーティクルシステムを追加する", width / 2, height / 2);
+    text("マウスをクリックしてパーティクルシステムを追加します", width / 2, height / 2);
   }
 }
 
@@ -98,7 +98,7 @@ ParticleSystem.prototype.run = function () {
 
 function CrazyParticle(origin) {
   // 親コンストラクタを呼び出し、Function#call を使用して
-  // "this"が呼び出し中に正しく設定されることを確認します。
+  // 「this」が呼び出し中に正しく設定されることを確認します。
   Particle.call(this, origin);
 
   // 追加されたプロパティを初期化します。
@@ -107,12 +107,12 @@ function CrazyParticle(origin) {
 
 // Particle.prototype から継承した CrazyParticle.prototype オブジェクトを作成します。
 // 注意: ここでよくある間違いは、CrazyParticle.prototype を作成するために
-// "new Particle()"を使用することです。これはいくつかの理由で間違いです。
-// 最大の理由は、"origin"引数に何も与えるものがないことです。
+// 「new Particle()」を使用することです。これはいくつかの理由で間違いです。
+// 最大の理由は、「origin」引数に何も与えるものがないことです。
 // Particle を呼び出す正しい場所は上記で、CrazyParticle から呼び出すところです。
 CrazyParticle.prototype = Object.create(Particle.prototype); // 下記の注意を参照してください。
 
-// "constructor"プロパティを CrazyParticle を指すように設定します。
+// 「constructor」プロパティを CrazyParticle を指すように設定します。
 CrazyParticle.prototype.constructor = CrazyParticle;
 
 // ここではメソッド run() が存在しないことに注意してください。これは Particle から継承されます。
