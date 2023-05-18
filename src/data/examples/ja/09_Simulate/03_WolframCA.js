@@ -1,7 +1,7 @@
 /*
- * @name Wolframのセルオートマトン
+ * @name Wolfram のセルオートマトン
  * @arialabel 1次元セルオートマトンは、白い正方形から構成されたデザインで、ピクセル化された外観をもつピラミッド形状が描かれています。
- * @description Wolframの1次元セルオートマトンのシンプルなデモンストレーション
+ * @description Wolfram の1次元セルオートマトンのシンプルなデモンストレーション
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 
@@ -58,7 +58,7 @@ function generate() {
 }
 
 
-// Wolframのルールの実装
+// Wolfram のルールの実装
 // もっと簡潔に改善できますが、ここではそれぞれのケースごとに起こっていることが、はっきりわかるように実装しています。
 function rules(a, b, c) {
   if (a == 1 && b == 1 && c == 1) return ruleset[0];
