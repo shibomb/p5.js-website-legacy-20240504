@@ -81,13 +81,13 @@ function Spring (_x, _y, _s, _d, _m, _k_in, _others, _id) {
     }
 
     this.force = -this.k * (this.y_pos - this.rest_posy); // f=-ky
-    this.accel = this.force / this.mass;                  // 加速度を設定します：f=ma == a=f/m
+    this.accel = this.force / this.mass;                  // 加速度を設定します: f=ma == a=f/m
     this.vely = this.damp * (this.vely + this.accel);     // 速度を設定します。
     this.y_pos = this.y_pos + this.vely;                  // 更新された位置
 
 
     this.force = -this.k * (this.x_pos - this.rest_posx); // f=-ky
-    this.accel = this.force / this.mass;                  // 加速度を設定します：f=ma == a=f/m
+    this.accel = this.force / this.mass;                  // 加速度を設定します: f=ma == a=f/m
     this.velx = this.damp * (this.velx + this.accel);     // 速度を設定します。
     this.x_pos = this.x_pos + this.velx;                  // 更新された位置
 
