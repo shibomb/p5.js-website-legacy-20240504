@@ -3,8 +3,8 @@
  * @arialabel 宇宙飛行士の画像の上に黄色い横線を描画し、上から下に向かって線を移動させます。
  * @description このサンプルでは、背景画像を最速で読み込む方法を示します。
  * 背景として画像を読み込むには、プログラムと同じ幅と高さである必要があります。
- * <p><em><span class="small"> このサンプルをローカル環境で実行するには画像ファイルと実行中の
- * <a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
+ * <p><em><span class="small"> このサンプルをローカル環境で実行するには画像ファイルと実行中の 
+ * <a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a> が必要です。</span></em></p>
  */
 let bg;
 let y = 0;
