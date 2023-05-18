@@ -26,7 +26,7 @@
 
 // 各バーの幅は8で設定します。
 let values = [];
-// 配列'states'は、各段階でのピボット インデックスと、
+// 配列'states'は、各段階でのピボットインデックスと、
 // 現在並べ替えられているサブ配列を
 // 識別するのに役立てます。
 let states = [];
@@ -52,7 +52,7 @@ function draw() {
   for(let i = 0; i < values.length; i++) {
     // 色分け
     if (states[i] == 0) {
-      // ピボット インデックスのバーの色
+      // ピボットインデックスのバーの色
       fill('#E0777D');
     } else if (states[i] == 1) {
       // 現在並べ替えられているバーの色
@@ -89,9 +89,9 @@ async function partition(start, end) {
     // 現在考慮されている要素を識別します。
     states[i] = 1;
   }
-  // クイックソート アルゴリズム
+  // クイックソートアルゴリズム
   let pivotIndex = start;
-  // ピボット インデックスを識別します。
+  // ピボットインデックスを識別します。
   states[pivotIndex] = 0;
   let pivotElement = values[end];
   for (let i = start; i < end; i++) {
@@ -122,8 +122,8 @@ async function swap(i, j) {
   values[j] = temp;
 }
 
-// ソート プロセスの速度を遅くして、
-// 可視化を容易にするためのカスタム ヘルパー関数です。
+// ソートプロセスの速度を遅くして、
+// 可視化を容易にするためのカスタムヘルパー関数です。
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
