@@ -22,24 +22,24 @@ function setup() {
 }
 
 function draw() {
-  // 背景を塗りつぶす
+  // 背景を塗りつぶします。
   background(51);
 
-  // 全要素を左にひとつずつずらす
+  // 全要素を左にひとつずつずらします。
   for (let i = 1; i < num; i++) {
     ax[i - 1] = ax[i];
     ay[i - 1] = ay[i];
   }
 
-  // 新しい値を配列の末尾に追加する
+  // 新しい値を配列の末尾に追加します。
   ax[num - 1] += random(-range, range);
   ay[num - 1] += random(-range, range);
 
-  // すべての点が画面内に収まるように制限をかける
+  // すべての点が画面内に収まるように制限をかけます。
   ax[num - 1] = constrain(ax[num - 1], 0, width);
   ay[num - 1] = constrain(ay[num - 1], 0, height);
 
-  // 点をつないで線を描く
+  // 点をつないで線を描きます。
   for (let j = 1; j < num; j++) {
     let val = j / num * 204.0 + 51;
     stroke(val);
