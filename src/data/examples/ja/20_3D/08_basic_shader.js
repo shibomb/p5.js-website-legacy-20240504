@@ -1,11 +1,11 @@
 /*
  * @name 基本的なシェーダー
  * @arialabel シアンから紫へのグラデーションの背景です。
- * @description これはp5.jsでシェーダーを読み込む方法の基本的なサンプルです。
- * <br>p5.jsでシェーダーを使用する方法について、詳しくはこちらを参照してください: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.jsシェーダー</a>
+ * @description これは p5.js でシェーダーを読み込む方法の基本的なサンプルです。
+ * <br>p5.js でシェーダーを使用する方法について、詳しくはこちらを参照してください: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.js シェーダー</a>
  */
 
-// この変数にシェーダー オブジェクトを保持します。
+// この変数にシェーダーオブジェクトを保持します。
 let theShader;
 
 function preload(){
@@ -14,15 +14,15 @@ function preload(){
 }
 
 function setup() {
-  // シェーダーを使うためにはWEBGLモードにする必要があります。
+  // シェーダーを使うためには WEBGL モードにする必要があります。
   createCanvas(710, 400, WEBGL);
   noStroke();
 }
 
 function draw() {
-  // shader()関数でアクティブなシェーダーを設定します。
+  // shader() 関数でアクティブなシェーダーを設定します。
   shader(theShader);
 
-  // rect関数は画面上にジオメトリ図形を描画します。
+  // rect 関数は画面上にジオメトリ図形を描画します。
   rect(0,0,width, height);
 }
