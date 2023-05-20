@@ -5,7 +5,7 @@
  * @description マウスを円の上に移動させてクリックし、位置を動かします。
  * マウスを離すと、元の位置に戻ります。
  * 各円は少し異なるふるまいをします。
- * <br><br><small><em>このサンプルは<a href="https://processing.org/examples/">Processingウェブサイト</a>から移植されています。</em></small>
+ * <br><br><small><em>このサンプルは <a href="https://processing.org/examples/">Processing ウェブサイト</a> から移植されています。</em></small>
  */
 let num = 3;
 let springs = [];
@@ -40,7 +40,7 @@ function mouseReleased() {
   }
 }
 
-// Springクラス
+// Spring クラス
 function Spring (_x, _y, _s, _d, _m, _k_in, _others, _id) {
   // 画面上の値
   // this.xpos = _x;
@@ -55,18 +55,18 @@ function Spring (_x, _y, _s, _d, _m, _k_in, _others, _id) {
   this.over = false;
   this.move = false;
 
-  // スプリング シミュレーション定数
+  // スプリングシミュレーション定数
   this.mass = _m;       // 質量
   this.k = 0.2;         // スプリング定数
   this.k = _k_in;
   this.damp = _d;       // ダンピング
-  this.rest_posx = _x;  // 安定位置X
-  this.rest_posy = _y;  // 安定位置Y
+  this.rest_posx = _x;  // 安定位置 X
+  this.rest_posy = _y;  // 安定位置 Y
 
-  // スプリング シミュレーション変数
+  // スプリングシミュレーション変数
   //float pos = 20.0;   // 位置
-  this.velx = 0.0;      // X方向の速度
-  this.vely = 0.0;      // Y方向の速度
+  this.velx = 0.0;      // X 方向の速度
+  this.vely = 0.0;      // Y 方向の速度
   this.accel = 0;       // 加速度
   this.force = 0;       // 力
 
@@ -81,13 +81,13 @@ function Spring (_x, _y, _s, _d, _m, _k_in, _others, _id) {
     }
 
     this.force = -this.k * (this.y_pos - this.rest_posy); // f=-ky
-    this.accel = this.force / this.mass;                  // 加速度を設定します：f=ma == a=f/m
+    this.accel = this.force / this.mass;                  // 加速度を設定します: f=ma == a=f/m
     this.vely = this.damp * (this.vely + this.accel);     // 速度を設定します。
     this.y_pos = this.y_pos + this.vely;                  // 更新された位置
 
 
     this.force = -this.k * (this.x_pos - this.rest_posx); // f=-ky
-    this.accel = this.force / this.mass;                  // 加速度を設定します：f=ma == a=f/m
+    this.accel = this.force / this.mass;                  // 加速度を設定します: f=ma == a=f/m
     this.velx = this.damp * (this.velx + this.accel);     // 速度を設定します。
     this.x_pos = this.x_pos + this.velx;                  // 更新された位置
 
