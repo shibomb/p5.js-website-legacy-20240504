@@ -301,8 +301,8 @@
     },
     "erase": {
       "description": [
-        "<a href=\"#/p5/erase\">erase()</a>に続くすべての描画は、キャンバスから減算されます。消去された領域は、キャンバスの下にあるウェブページが表示されます。<a href=\"#/p5/noErase\">noErase()</a>で消去をキャンセルできます。",
-        "<a href=\"#/p5/erase\">erase()</a>と<a href=\"#/p5/noErase\">noErase()</a>の間にある<a href=\"#/p5/image\">image()</a>と<a href=\"#/p5/background\">background()</a>での描画は、キャンバスを消去せず、通常どおりに動作します。"
+        "<a href=\"#/p5/erase\">erase()</a> に続くすべての描画は、キャンバスから減算されます。消去された領域には、キャンバスの下にあるウェブページが表示されます。<a href=\"#/p5/noErase\">noErase()</a> で消去をキャンセルできます。",
+        "<a href=\"#/p5/erase\">erase()</a> と <a href=\"#/p5/noErase\">noErase()</a> の間にある <a href=\"#/p5/image\">image()</a> と <a href=\"#/p5/background\">background()</a> での描画は、キャンバスを消去せず、通常どおりに動作します。"
       ],
       "params": {
         "strengthFill": "Number: (オプション) 形状の塗りつぶしの消去強度の数値（0-255）。引数がない場合、デフォルトで255になり、最大強度になります。",
@@ -311,23 +311,23 @@
     },
     "noErase": {
       "description": [
-        "<a href=\"#/p5/erase\">erase()</a>で開始された消去を終了します。<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/stroke\">stroke()</a>、および<a href=\"#/p5/blendMode\">blendMode()</a>の設定は、<a href=\"#/p5/erase\">erase()</a>を呼び出す前の状態に戻ります。"
+        "<a href=\"#/p5/erase\">erase()</a> で開始された消去を終了します。<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/stroke\">stroke()</a>、および <a href=\"#/p5/blendMode\">blendMode()</a> の設定は、<a href=\"#/p5/erase\">erase()</a> を呼び出す前の状態に戻ります。"
       ]
     },
     "arc": {
       "description": [
-        "画面に円弧を描画します。x、y、w、h、start、stopのみで呼び出されると、円弧は開いた扇形として描画され、塗りつぶされます。modeパラメーターが提供された場合、円弧は開いた半円（OPEN）、閉じた半円（CHORD）、または閉じた扇形（PIE）として塗りつぶされます。原点は <a href=\"#/p5/ellipseMode\">ellipseMode()</a>関数で変更できます。",
-        "円弧は、start が楕円上でどこにあるかから、stop が楕円上でどこにあるかまで、常に時計回りに描画されます。startまたはstopにTWO_PIを加算または減算しても、それらが楕円上でどこにあるかは変わりません。startとstopが同じ場所にある場合、完全な楕円が描画されます。y軸が下向きに増加するため、角度は正のx方向（\"3 時\"）から時計回りに測定されることに注意してください。"
+        "画面に円弧を描画します。x、y、w、h、start、stop のみで呼び出されると、円弧は開いた扇形として描画され、塗りつぶされます。mode パラメーターが提供された場合、円弧は開いた半円（OPEN）、閉じた半円（CHORD）、または閉じた扇形（PIE）として塗りつぶされます。原点は <a href=\"#/p5/ellipseMode\">ellipseMode()</a> 関数で変更できます。",
+        "円弧は、楕円上の start の位置から stop の位置まで、常に時計回りに描画されます。start または stop に TWO_PI を加算または減算しても、それらの楕円上の位置は変わりません。start と stop が同じ場所にある場合、完全な楕円が描画されます。y 軸が下向きに増加するため、角度は正の x 方向（「3時」）から時計回りに測定されることに注意してください。"
       ],
       "params": {
-        "x": "Number: 円弧の楕円のx座標",
-        "y": "Number: 円弧の楕円のy座標",
+        "x": "Number: 円弧の楕円の x 座標",
+        "y": "Number: 円弧の楕円の y 座標",
         "w": "Number: デフォルトでの円弧の楕円の幅",
         "h": "Number: デフォルトでの円弧の楕円の高さ",
         "start": "Number: 円弧を開始する角度（ラジアンで指定）",
         "stop": "Number: 円弧を終了する角度（ラジアンで指定）",
-        "mode": "Constant: (オプション) 円弧の描画方法を決定するオプションパラメーター。CHORD、PIE、OPENのいずれか",
-        "detail": "Integer: (オプション) WebGL モード専用のオプションパラメーター。これは、円弧の周囲を構成する頂点の数を指定するためのものです。デフォルト値は 25 です。50を超える詳細にはストロークを描画しません。"
+        "mode": "Constant: (オプション) 円弧の描画方法を決定するオプションパラメーター。CHORD、PIE、OPEN のいずれか。",
+        "detail": "Integer: (オプション) WebGL モード専用のオプションパラメーター。これは、円弧の周囲を構成する頂点の数を指定するためのものです。デフォルト値は25です。細かさが50を超える場合にはストロークを描画しません。"
       }
     },
     "ellipse": {
