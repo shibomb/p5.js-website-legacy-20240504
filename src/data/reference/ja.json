@@ -301,8 +301,8 @@
     },
     "erase": {
       "description": [
-        "<a href=\"#/p5/erase\">erase()</a>に続くすべての描画は、キャンバスから減算されます。消去された領域は、キャンバスの下にあるウェブページが表示されます。<a href=\"#/p5/noErase\">noErase()</a>で消去をキャンセルできます。",
-        "<a href=\"#/p5/erase\">erase()</a>と<a href=\"#/p5/noErase\">noErase()</a>の間にある<a href=\"#/p5/image\">image()</a>と<a href=\"#/p5/background\">background()</a>での描画は、キャンバスを消去せず、通常どおりに動作します。"
+        "<a href=\"#/p5/erase\">erase()</a> に続くすべての描画は、キャンバスから減算されます。消去された領域には、キャンバスの下にあるウェブページが表示されます。<a href=\"#/p5/noErase\">noErase()</a> で消去をキャンセルできます。",
+        "<a href=\"#/p5/erase\">erase()</a> と <a href=\"#/p5/noErase\">noErase()</a> の間にある <a href=\"#/p5/image\">image()</a> と <a href=\"#/p5/background\">background()</a> での描画は、キャンバスを消去せず、通常どおりに動作します。"
       ],
       "params": {
         "strengthFill": "Number: (オプション) 形状の塗りつぶしの消去強度の数値（0-255）。引数がない場合、デフォルトで255になり、最大強度になります。",
