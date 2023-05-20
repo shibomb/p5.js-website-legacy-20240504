@@ -311,7 +311,7 @@
     },
     "noErase": {
       "description": [
-        "<a href=\"#/p5/erase\">erase()</a>で開始された消去を終了します。<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/stroke\">stroke()</a>、および<a href=\"#/p5/blendMode\">blendMode()</a>の設定は、<a href=\"#/p5/erase\">erase()</a>を呼び出す前の状態に戻ります。"
+        "<a href=\"#/p5/erase\">erase()</a> で開始された消去を終了します。<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/stroke\">stroke()</a>、および <a href=\"#/p5/blendMode\">blendMode()</a> の設定は、<a href=\"#/p5/erase\">erase()</a> を呼び出す前の状態に戻ります。"
       ]
     },
     "arc": {
