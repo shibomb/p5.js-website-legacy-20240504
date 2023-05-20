@@ -1,7 +1,7 @@
 /*
- * @name ライフ ゲーム
+ * @name ライフゲーム
  * @arialabel 黒い背景に白い正方形のグリッドで、いくつかの正方形が白と黒の間で点滅してランダムなパターンを生成します。
- * @description John Conwayのライフ ゲームの基本的な実装
+ * @description John Conway のライフゲームの基本的な実装
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 
@@ -19,7 +19,7 @@ function setup() {
   // 列と行を計算します。
   columns = floor(width / w);
   rows = floor(height / w);
-  // JSで2次元配列を作成する奇妙な方法
+  // JS で2次元配列を作成する奇妙な方法
   board = new Array(columns);
   for (let i = 0; i < columns; i++) {
     board[i] = new Array(rows);
