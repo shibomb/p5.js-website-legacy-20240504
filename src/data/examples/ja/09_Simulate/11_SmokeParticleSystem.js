@@ -1,7 +1,7 @@
 /*
  * @name 煙のパーティクル
  * @arialabel 画面の下部の中央に白い円があります。円から煙が出て、ユーザーのマウスの動きに合わせて左右に移動します。また、上部に白い矢印があり、ユーザーのマウスの位置を指示しています。
- * @description Dan ShiffmanによってProcessing用に書かれたオリジナルのSmokeParticleSystemサンプルを移植したものです。
+ * @description Dan Shiffman によって Processing 用に書かれたオリジナルの SmokeParticleSystem サンプルを移植したものです。
  * 煙のようなパーティクルを作成します :p
  */
 
@@ -17,10 +17,10 @@ function preload() {
 
 function setup() {
 
-  // キャンバスのサイズを設定
+  // キャンバスのサイズを設定します。
   createCanvas(640, 360);
 
-  // パーティクルシステムを初期化
+  // パーティクルシステムを初期化します。
   ps = new ParticleSystem(0, createVector(width / 2, height - 60), particle_texture);
 }
 
@@ -36,7 +36,7 @@ function draw() {
     ps.addParticle();
   }
 
-  // 風力を表す矢印を描く
+  // 風力を表す矢印を描きます。
   drawVector(wind, createVector(width / 2, 50, 0), 500);
 }
 
@@ -80,18 +80,18 @@ let ParticleSystem = function(num, v, img_) {
  */
 ParticleSystem.prototype.run = function() {
 
-  // ループ内で使用する配列の長さを一時変数に記憶
-  // たまにforループで<variable>.lengthを見ることがありますが、
+  // ループ内で使用する配列の長さを一時変数に記憶します。
+  // たまに for ループで <variable>.length を見ることがありますが、
   // ここでは、配列をループするたびに再計算されないようにキャッシュしています。
   let len = this.particles.length;
 
-  // パーティクルをループさせる
+  // パーティクルをループさせます。
   for (let i = len - 1; i >= 0; i--) {
     let particle = this.particles[i];
     particle.run();
 
     // パーティクルが死んだ場合は削除します。
-    // JavaScriptの配列には「remove」関数がありませんが、「splice」を使って同じような処理ができます。
+    // JavaScript の配列には「remove」関数がありませんが、「splice」を使って同じような処理ができます。
     // 削除を始める位置のインデックス、そしてそのポイントから何個削除するかを指定します。
     if (particle.isDead()) {
       this.particles.splice(i, 1);
@@ -100,8 +100,8 @@ ParticleSystem.prototype.run = function() {
 }
 
 /**
- * 向きを表すp5.Vectorでパーティクルシステム内のすべてのパーティクルに力を加えるメソッド
- * @param dir 力の方向を示すp5.Vector
+ * 向きを表す p5.Vector でパーティクルシステム内のすべてのパーティクルに力を加えるメソッド
+ * @param dir 力の方向を示す p5.Vector
  */
 ParticleSystem.prototype.applyForce = function(dir) {
   let len = this.particles.length;
@@ -160,7 +160,7 @@ Particle.prototype.applyForce = function(f) {
 
 /**
  *  パーティクルが寿命に達したかどうかをチェックします。
- *  寿命に達していた場合はtrue、そうでなければfalseを返します。
+ *  寿命に達していた場合は true、そうでなければ false を返します。
  */
 Particle.prototype.isDead = function () {
   if (this.lifespan <= 0.0) {
