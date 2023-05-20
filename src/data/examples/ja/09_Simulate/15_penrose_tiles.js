@@ -1,8 +1,8 @@
 /*
- * @name ペンローズ タイル
- * @arialabel 白い菱形が黒い背景に描かれたペンローズ タイルの柄が作成されます。
+ * @name ペンローズタイル
+ * @arialabel 白い菱形が黒い背景に描かれたペンローズタイルの柄が作成されます。
  * @frame 710,400
- * @description これはprocessing.org/examplesの「Penrose Tile」を、David Blitzが移植したものです。
+ * @description これは processing.org/examples の「Penrose Tile」を、David Blitz が移植したものです。
  */
 
 let ds;
@@ -22,7 +22,7 @@ function draw() {
 function PenroseLSystem() {
   this.steps = 0;
 
-  // ペンローズ菱形のL-システムの公理と規則
+  // ペンローズ菱形の L システムの公理と規則
   // リファレンスがあればいいのですが、私は見つけられませんでした。
   this.axiom = "[X]++[X]++[X]++[X]++[X]";
   this.ruleW = "YF++ZF----XF[-YF----WF]++";
@@ -58,7 +58,7 @@ PenroseLSystem.prototype.iterate = function() {
 
   for(let i=0; i < this.production.length; ++i) {
     let step = this.production.charAt(i);
-    // 現在の文字が 'W' である場合、
+    // 現在の文字が「W」である場合、
     // 現在の文字を対応する規則で置き換えます。
     if (step == 'W') {
       newProduction = newProduction + this.ruleW;
@@ -73,8 +73,8 @@ PenroseLSystem.prototype.iterate = function() {
       newProduction = newProduction + this.ruleZ;
     }
     else {
-      // 'F' 文字をすべてドロップし、
-      // 他の文字（ '+', '-', '['、']' ）を変更しないでください。
+      // 「F」文字をすべてドロップし、
+      // 他の文字（「+」、「-」、「[」、「]」）を変更しないでください。
       if (step != 'F') {
         newProduction = newProduction + step;
       }
@@ -98,7 +98,7 @@ PenroseLSystem.prototype.render = function () {
   for(let i=0; i<this.steps; ++i) {
     let step = this.production.charAt(i);
 
-    // 'W', 'X', 'Y', 'Z' シンボルは、実際にはタートルアクションに対応しません。
+    // 「W」、「X」、「Y」、「Z」シンボルは、実際にはタートルアクションに対応しません。
     if( step == 'F') {
       stroke(255, 60);
       for(let j=0; j < this.repeats; j++) {
