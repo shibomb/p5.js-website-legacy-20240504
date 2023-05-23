@@ -333,23 +333,23 @@
     "ellipse": {
       "description": [
         "画面に楕円（オーバル）を描画します。デフォルトでは、最初の2つのパラメーターは楕円の中心の位置を設定し、3番目と4番目のパラメーターは形状の幅と高さを設定します。高さが指定されていない場合、幅の値が幅と高さの両方に使用されます。負の高さまたは幅が指定された場合、絶対値が使用されます。",
-        "幅と高さが等しい楕円は円です。原点は <a href=\"#/p5/ellipseMode\">ellipseMode()</a>関数で変更できます。"
+        "幅と高さが等しい楕円は円です。原点は <a href=\"#/p5/ellipseMode\">ellipseMode()</a> 関数で変更できます。"
       ],
       "params": {
-        "x": "Number: 楕円の中心のx座標。",
-        "y": "Number: 楕円の中心のy座標。",
+        "x": "Number: 楕円の中心の x 座標。",
+        "y": "Number: 楕円の中心の y 座標。",
         "w": "Number: 楕円の幅。",
         "h": "Number: (オプション) 楕円の高さ。",
-        "detail": "Integer: (オプション) WEBGL モード専用のオプションパラメーター。これは、楕円の周囲を構成する頂点の数を指定するためのものです。デフォルト値は 25 です。50を超える詳細にはストロークを描画しません。"
+        "detail": "Integer: (オプション) WebGL モード専用のオプションパラメーター。これは、楕円の周囲を構成する頂点の数を指定するためのものです。デフォルト値は25です。細かさが50を超える場合にはストロークを描画しません。"
       }
     },
     "circle": {
       "description": [
-        "画面に円を描画します。円は単純な閉じた図形です。中心と呼ばれる特定の点から与えられた距離にある平面上のすべての点の集合です。この関数は、楕円の幅と高さが同じ場合の<a href=\"#/p5/ellipse\">ellipse()</a>関数の特殊なケースです。楕円の高さと幅は、円の直径に対応します。デフォルトでは、最初の2つのパラメーターは円の中心の位置を設定し、3番目のパラメーターは円の直径を設定します。"
+        "画面に円を描画します。円は単純な閉じた図形です。中心と呼ばれる特定の点から与えられた距離にある平面上のすべての点の集合です。この関数は、楕円の幅と高さが同じ場合の <a href=\"#/p5/ellipse\">ellipse()</a> 関数の特殊なケースです。楕円の高さと幅は、円の直径に対応します。デフォルトでは、最初の2つのパラメーターは円の中心の位置を設定し、3番目のパラメーターは円の直径を設定します。"
       ],
       "params": {
-        "x": "Number: 円の中心のx座標。",
-        "y": "Number: 円の中心のy座標。",
+        "x": "Number: 円の中心の x 座標。",
+        "y": "Number: 円の中心の y 座標。",
         "d": "Number: 円の直径。"
       }
     },
@@ -379,7 +379,7 @@
     },
     "quad": {
       "description": [
-        "キャンバスに四角形を描画します。四角形は、四辺多角形です。長方形に似ていますが、その辺の間の角度は90度に制約されていません。最初のパラメーターのペア（x1、y1）が最初の頂点を設定し、その後のペアは定義された形状を時計回りまたは反時計回りに進むべきです。z引数は、quad()がWEBGLモードで使用されている場合にのみ機能します。"
+        "キャンバスに四角形を描画します。四角形は、四辺多角形です。長方形に似ていますが、その辺の間の角度は90度に制約されていません。最初のパラメーターのペア（x1、y1）が最初の頂点を設定し、その後のペアは定義された形状を時計回りまたは反時計回りに進むべきです。z引数は、quad()がWebGLモードで使用されている場合にのみ機能します。"
       ],
       "params": {
         "x1": "Number: 最初の点のx座標",
@@ -534,7 +534,7 @@
     "bezierDetail": {
       "description": [
         "ベジェ曲線の表示に使用される解像度を設定します。デフォルト値は20です。",
-        "なお、この関数はWEBGLレンダラーを使用する場合にのみ有用であり、デフォルトのキャンバスレンダラーはこの情報を使用しません。"
+        "なお、この関数はWebGLレンダラーを使用する場合にのみ有用であり、デフォルトのキャンバスレンダラーはこの情報を使用しません。"
       ],
       "params": {
         "detail": "Number: 曲線の解像度"
@@ -588,7 +588,7 @@
     "curveDetail": {
       "description": [
         "曲線の表示解像度を設定します。デフォルト値は20で、最小値は3です。",
-        "この関数は、WEBGLレンダラーを使用している場合にのみ有用であり、デフォルトのキャンバスレンダラーはこの情報を使用しません。"
+        "この関数は、WebGLレンダラーを使用している場合にのみ有用であり、デフォルトのキャンバスレンダラーはこの情報を使用しません。"
       ],
       "params": {
         "resolution": "Number: 曲線の解像度"
@@ -645,7 +645,7 @@
         "TRIANGLE_STRIP: ストリップ状に接続された三角形のシリーズを描画します。",
         "QUADS: 別々の四角形のシリーズを描画します。",
         "QUAD_STRIP: 隣接する辺を使用して次の四角形を形成する四角形ストリップを描画します。",
-        "TESS(WEBGLのみ):明示的なテッセレーションによる曲線の塗りつぶしに対応します。",
+        "TESS(WebGLのみ):明示的なテッセレーションによる曲線の塗りつぶしに対応します。",
         "<a href=\"#/p5/beginShape\">beginShape()</a>関数を呼び出した後、一連の<a href=\"#/p5/vertex\">vertex()</a>コマンドが続きます。<a href=\"#/p5/endShape\">endShape()</a>を呼び出して図形の描画を停止します。各図形は現在のストロークカラーで輪郭が描かれ、塗りつぶしカラーで塗りつぶされます。",
         "<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a>などの変換は<a href=\"#/p5/beginShape\">beginShape()</a>内では機能しません。<a href=\"#/p5/ellipse\">ellipse()</a>や<a href=\"#/p5/rect\">rect()</a>などの他の図形も、<a href=\"#/p5/beginShape\">beginShape()</a>内では使用できません。"
       ],
@@ -1211,7 +1211,7 @@
     "blendMode": {
       "description": [
         "定義されたモードにしたがって、ディスプレイウィンドウ内のピクセルをブレンドします。ソースピクセル（A）をディスプレイウィンドウ内の既存のピクセル（B）とブレンドするために、次のモードを選択できます。: <ul> <li><code>BLEND</code> - 色の線形補間:C = A*factor + B。 <b>これがデフォルトのブレンドモードです。</b></li> <li><code>ADD</code> - AとBの和</li> <li><code>DARKEST</code> - 最も暗い色だけが成功:C = min(A*factor, B)。</li> <li><code>LIGHTEST</code> - 最も明るい色だけが成功:C = max(A*factor, B)。</li> <li><code>DIFFERENCE</code> - 背景画像から色を減算します。<em>(2D)</em></li> <li><code>EXCLUSION</code> - <code>DIFFERENCE</code>に似ていますが、それほど極端ではありません。</li> <li><code>MULTIPLY</code> - 色を乗算し、結果は常に暗くなります。</li> <li><code>SCREEN</code> - 乗算の反対で、色の逆数を使用します。</li> <li><code>REPLACE</code> - ピクセルは他のピクセルと完全に置き換えられ、アルファ（透明度）値を使用しません。</li> <li><code>REMOVE</code> - Aのアルファ強度でBからピクセルを削除します。</li> <li><code>OVERLAY</code> - <code>MULTIPLY</code>と<code>SCREEN </code>のミックス。暗い値を乗算し、明るい値をスクリーンにします。<em>(2D)</em></li> <li><code>HARD_LIGHT</code> - 50%以上の灰色の場合は<code>SCREEN</code>、それ以下の場合は<code>MULTIPLY</code>。<em>(2D)</em></li> <li><code>SOFT_LIGHT</code> - <code>DARKEST</code>と<code>LIGHTEST</code>のミックス。<code>OVERLAY</code>のように機能しますが、それほど厳しくありません。<em>(2D)</em></li> <li><code>DODGE</code> - 明るいトーンを明るくし、コントラストを高め、暗い部分を無視します。<em>(2D)</em></li> <li><code>BURN</code> - 暗い領域が適用され、コントラストが増加し、ライトを無視します。<em>(2D)</em></li> <li><code>SUBTRACT</code> - AとBの残差 <em>(3D)</em></li> </ul>",
-        "<em>(2D)</em>は、このブレンドモードが<b>2Dレンダラーのみ</b>で動作することを示します。<em>(3D)</em>は、このブレンドモードが<b>WEBGLレンダラーのみ</b>で動作することを示します。"
+        "<em>(2D)</em>は、このブレンドモードが<b>2Dレンダラーのみ</b>で動作することを示します。<em>(3D)</em>は、このブレンドモードが<b>WebGLレンダラーのみ</b>で動作することを示します。"
       ],
       "params": {
         "mode": "キャンバスに設定するブレンドモードの定数。BLEND、DARKEST、LIGHTEST、DIFFERENCE、MULTIPLY、EXCLUSION、SCREEN、REPLACE、OVERLAY、HARD_LIGHT、SOFT_LIGHT、DODGE、BURN、ADD、REMOVE、SUBTRACTのいずれか。"
@@ -1247,14 +1247,14 @@
       "description": [
         "<a href=\"#/p5/push\">push()</a>関数は、現在の描画スタイルの設定と変換を保存し、<a href=\"#/p5/pop\">pop()</a>関数はこれらの設定を復元します。これらの関数は常に一緒に使用されることに注意してください。これにより、スタイルと変換の設定を変更し、後でもとに戻すことができます。<a href=\"#/p5/push\">push()</a>で新しい状態が開始されると、現在のスタイルと変換情報が利用されます。<a href=\"#/p5/push\">push()</a>と<a href=\"#/p5/pop\">pop()</a>関数は、より多くの制御を提供するために組み込むことができます（2つ目の例を参照してください）。",
         "<a href=\"#/p5/push\">push()</a>は、次の関数によって制御される現在の変換状態とスタイル設定に関連する情報を保存します:<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/noFill\">noFill()</a>、<a href=\"#/p5/noStroke\">noStroke()</a>、<a href=\"#/p5/stroke\">stroke()</a>、<a href=\"#/p5/tint\">tint()</a>、<a href=\"#/p5/noTint\">noTint()</a>、<a href=\"#/p5/strokeWeight\">strokeWeight()</a>、<a href=\"#/p5/strokeCap\">strokeCap()</a>、<a href=\"#/p5/strokeJoin\">strokeJoin()</a>、<a href=\"#/p5/imageMode\">imageMode()</a>、<a href=\"#/p5/rectMode\">rectMode()</a>、<a href=\"#/p5/ellipseMode\">ellipseMode()</a>、<a href=\"#/p5/colorMode\">colorMode()</a>、<a href=\"#/p5/textAlign\">textAlign()</a>、<a href=\"#/p5/textFont\">textFont()</a>、<a href=\"#/p5/textSize\">textSize()</a>、<a href=\"#/p5/textLeading\">textLeading()</a>、<a href=\"#/p5/applyMatrix\">applyMatrix()</a>、<a href=\"#/p5/resetMatrix\">resetMatrix()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a>、<a href=\"#/p5/shearX\">shearX()</a>、<a href=\"#/p5/shearY\">shearY()</a>、<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/noiseSeed\">noiseSeed()</a>。",
-        "WEBGLモードでは、追加のスタイル設定が保存されます。これらは、次の関数によって制御されます:<a href=\"#/p5/setCamera\">setCamera()</a>、<a href=\"#/p5/ambientLight\">ambientLight()</a>、<a href=\"#/p5/directionalLight\">directionalLight()</a>、<a href=\"#/p5/pointLight\">pointLight()</a>、<a href=\"#/p5/texture\">texture()</a>、<a href=\"#/p5/specularMaterial\">specularMaterial()</a>、<a href=\"#/p5/shininess\">shininess()</a>、<a href=\"#/p5/normalMaterial\">normalMaterial()</a>、および<a href=\"#/p5/shader\">shader()</a>。"
+        "WebGLモードでは、追加のスタイル設定が保存されます。これらは、次の関数によって制御されます:<a href=\"#/p5/setCamera\">setCamera()</a>、<a href=\"#/p5/ambientLight\">ambientLight()</a>、<a href=\"#/p5/directionalLight\">directionalLight()</a>、<a href=\"#/p5/pointLight\">pointLight()</a>、<a href=\"#/p5/texture\">texture()</a>、<a href=\"#/p5/specularMaterial\">specularMaterial()</a>、<a href=\"#/p5/shininess\">shininess()</a>、<a href=\"#/p5/normalMaterial\">normalMaterial()</a>、および<a href=\"#/p5/shader\">shader()</a>。"
       ]
     },
     "pop": {
       "description": [
         "<a href=\"#/p5/push\">push()</a>関数は現在の描画スタイル設定と変換を保存し、<a href=\"#/p5/pop\">pop()</a>関数でこれらの設定を復元します。これらの関数は常に一緒に使用されることに注意してください。これにより、スタイルと変換の設定を変更し、後で元の設定に戻ることができます。<a href=\"#/p5/push\">push()</a>で新しい状態が開始されると、現在のスタイルと変換情報にもとづいて構築されます。<a href=\"#/p5/push\">push()</a>と<a href=\"#/p5/pop\">pop()</a>関数は、より多くの制御を提供するために埋め込むことができます（デモンストレーションには第2の例を参照してください）。",
         "<a href=\"#/p5/push\">push()</a>は、次の関数によって制御される現在の変換状態とスタイル設定に関連する情報を保存します:<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/noFill\">noFill()</a>、<a href=\"#/p5/noStroke\">noStroke()</a>、<a href=\"#/p5/stroke\">stroke()</a>、<a href=\"#/p5/tint\">tint()</a>、<a href=\"#/p5/noTint\">noTint()</a>、<a href=\"#/p5/strokeWeight\">strokeWeight()</a>、<a href=\"#/p5/strokeCap\">strokeCap()</a>、<a href=\"#/p5/strokeJoin\">strokeJoin()</a>、<a href=\"#/p5/imageMode\">imageMode()</a>、<a href=\"#/p5/rectMode\">rectMode()</a>、<a href=\"#/p5/ellipseMode\">ellipseMode()</a>、<a href=\"#/p5/colorMode\">colorMode()</a>、<a href=\"#/p5/textAlign\">textAlign()</a>、<a href=\"#/p5/textFont\">textFont()</a>、<a href=\"#/p5/textSize\">textSize()</a>、<a href=\"#/p5/textLeading\">textLeading()</a>、<a href=\"#/p5/applyMatrix\">applyMatrix()</a>、<a href=\"#/p5/resetMatrix\">resetMatrix()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a>、<a href=\"#/p5/shearX\">shearX()</a>、<a href=\"#/p5/shearY\">shearY()</a>、<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/noiseSeed\">noiseSeed()</a>。",
-        "WEBGLモードでは、追加のスタイル設定が保存されます。これらは、次の関数によって制御されます:<a href=\"#/p5/setCamera\">setCamera()</a>、<a href=\"#/p5/ambientLight\">ambientLight()</a>、<a href=\"#/p5/directionalLight\">directionalLight()</a>、<a href=\"#/p5/pointLight\">pointLight()</a>、<a href=\"#/p5/texture\">texture()</a>、<a href=\"#/p5/specularMaterial\">specularMaterial()</a>、<a href=\"#/p5/shininess\">shininess()</a>、<a href=\"#/p5/normalMaterial\">normalMaterial()</a>、および<a href=\"#/p5/shader\">shader()</a>。"
+        "WebGLモードでは、追加のスタイル設定が保存されます。これらは、次の関数によって制御されます:<a href=\"#/p5/setCamera\">setCamera()</a>、<a href=\"#/p5/ambientLight\">ambientLight()</a>、<a href=\"#/p5/directionalLight\">directionalLight()</a>、<a href=\"#/p5/pointLight\">pointLight()</a>、<a href=\"#/p5/texture\">texture()</a>、<a href=\"#/p5/specularMaterial\">specularMaterial()</a>、<a href=\"#/p5/shininess\">shininess()</a>、<a href=\"#/p5/normalMaterial\">normalMaterial()</a>、および<a href=\"#/p5/shader\">shader()</a>。"
       ]
     },
     "redraw": {
@@ -1342,7 +1342,7 @@
     "rotateZ": {
       "description": [
         "指定された角度パラメーターでZ軸を中心に図形を回転させます。角度はRADIANSまたはDEGREESで入力できます。",
-        "このメソッドは、WEBGLモードでのみ動作します。",
+        "このメソッドは、WebGLモードでのみ動作します。",
         "オブジェクトは常に原点に対する相対位置を中心に回転し、正の数値はオブジェクトを時計回りに回転させます。すべての変換は、<a href=\"#/p5/draw\">draw()</a>が再度始まるとリセットされます。"
       ],
       "params": {
@@ -1353,7 +1353,7 @@
       "description": [
         "図形のサイズを拡大または縮小して、頂点を拡大または縮小します。オブジェクトは常に座標系に対する相対原点からスケーリングします。スケール値は10進数のパーセンテージで指定されます。たとえば、関数呼び出しscale(2.0)は、図形の寸法を200%増加させます。",
         "変換は、それ以降に発生するすべてのことに適用され、関数への後続の呼び出しは効果を乗算します。たとえば、scale(2.0)を呼び出してからscale(1.5)を呼び出すことは、scale(3.0)と同じです。 <a href=\"#/p5/scale\">scale()</a>が<a href=\"#/p5/draw\">draw()</a>内で呼び出される場合、ループが再開すると変換がリセットされます。",
-        "この関数は、zパラメーターを使用してWEBGLモードでのみ利用できます。この関数は、<a href=\"#/p5/push\">push()</a>および<a href=\"#/p5/pop\">pop()</a>でさらに制御できます。"
+        "この関数は、zパラメーターを使用してWebGLモードでのみ利用できます。この関数は、<a href=\"#/p5/push\">push()</a>および<a href=\"#/p5/pop\">pop()</a>でさらに制御できます。"
       ],
       "params": {
         "s": "Number|p5.Vector|Number[]: オブジェクトのスケール率、または複数の引数が与えられた場合はx軸でのオブジェクトのスケール率",
@@ -1390,7 +1390,7 @@
       "params": {
         "x": "Number: 左/右の移動",
         "y": "Number: 上/下の移動",
-        "z": "Number: (オプション) 前/後ろの移動 (WEBGLのみ)",
+        "z": "Number: (オプション) 前/後ろの移動 (WebGLのみ)",
         "vector": "p5.Vector: 移動するベクトル"
       }
     },
@@ -2151,7 +2151,7 @@
         "BLUR レベルパラメーターでぼかしの範囲を指定したガウシアンブラーを実行します。パラメーターが使用されていない場合、ブラーは半径1のガウシアンブラーに相当します。値が大きいほど、ぼかしが増えます。",
         "ERODE 明るい領域を減少させます。パラメーターは使用されません。",
         "DILATE 明るい領域を増加させます。パラメーターは使用されません。",
-        "filter()は WEBGL モードでは動作しません。WEBGL モードではカスタムシェーダを使用して類似の効果を実現できます。Adam Ferrissは、フィルターの例にある多くの効果を含む <a href=\"https://github.com/aferriss/p5jsShaderExamples\" target='_blank'>シェーダーの例の選択</a> を書いています。"
+        "filter()は WebGL モードでは動作しません。WebGL モードではカスタムシェーダを使用して類似の効果を実現できます。Adam Ferrissは、フィルターの例にある多くの効果を含む <a href=\"https://github.com/aferriss/p5jsShaderExamples\" target='_blank'>シェーダーの例の選択</a> を書いています。"
       ],
       "params": {
         "filterType": "Constant: THRESHOLD, GRAY, OPAQUE, INVERT,  POSTERIZE, BLUR, ERODE, DILATE, BLURのいずれか。Filters.jsのドキュメントに各利用可能なフィルターについて記載されています。",
@@ -2792,7 +2792,7 @@
         "画面上にテキストを描画します。追加のパラメーターで指定された位置に、最初のパラメーターで指定された情報を画面上に表示します。<a href=\"#/p5/textFont\">textFont()</a>関数でフォントが設定されていない場合はデフォルトのフォントが使用され、<a href=\"#/p5/textSize\">textSize()</a>でフォントサイズが設定されていない場合はデフォルトのサイズが使用されます。テキストの色を<a href=\"#/p5/fill\">fill()</a>関数で変更します。テキストのアウトラインを<a href=\"#/p5/stroke\">stroke()</a>関数と<a href=\"#/p5/strokeWeight\">strokeWeight()</a>関数で変更します。",
         "テキストは<a href=\"#/p5/textAlign\">textAlign()</a>関数に関連して表示され、座標の左、右、および中央に描画するオプションがあります。",
         "x2およびy2パラメーターは、文字列データのみで使用できる表示範囲を定義し、現在の<a href=\"#/p5/rectMode\">rectMode()</a>設定にもとづいて解釈されます。指定された矩形内に完全に収まらないテキストは画面に描画されません。x2とy2が指定されていない場合、デフォルトのベースライン揃えが適用され、テキストはxおよびyから上向きに描画されます。",
-        "<b>WEBGL</b>: Opentype/Truetypeフォントのみがサポートされています。上記の例のように、<a href=\"#/p5/loadFont\">loadFont()</a>メソッドを使ってフォントを読み込む必要があります。<a href=\"#/p5/stroke\">stroke()</a>は、現在webglモードでは効果がありません。WebGLモードでテキストを操作する方法については、<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#text\">wiki</a>を参照してください。"
+        "<b>WebGL</b>: Opentype/Truetypeフォントのみがサポートされています。上記の例のように、<a href=\"#/p5/loadFont\">loadFont()</a>メソッドを使ってフォントを読み込む必要があります。<a href=\"#/p5/stroke\">stroke()</a>は、現在webglモードでは効果がありません。WebGLモードでテキストを操作する方法については、<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#text\">wiki</a>を参照してください。"
       ],
       "params": {
         "str": "String|Object|Array|Number|Boolean: 表示する英数字のシンボル",
@@ -2805,7 +2805,7 @@
     "textFont": {
       "description": [
         "<a href=\"#/p5/text\">text()</a>関数で描画される現在のフォントを設定します。textFont()が引数なしで呼び出されると、すでに設定されているフォントがあれば現在のフォントを返します。そうでなければ、デフォルトフォントの名前を文字列として返します。textFont()が使用するフォントで呼び出されると、p5オブジェクトを返します。",
-        "<b>WEBGL</b>: <a href=\"#/p5/loadFont\">loadFont()</a>で読み込まれたフォントのみがサポートされています。"
+        "<b>WebGL</b>: <a href=\"#/p5/loadFont\">loadFont()</a>で読み込まれたフォントのみがサポートされています。"
       ],
       "returns": "Object: 現在のフォント / p5オブジェクト",
       "params": {
@@ -3415,7 +3415,7 @@
       "description": [
         "提供された頂点シェーダとフラグメントシェーダファイルから新しい<a href=\"#/p5.Shader\">p5.Shader</a>オブジェクトを作成します。",
         "シェーダファイルはバックグラウンドで非同期にロードされるため、このメソッドは<a href=\"#/p5/preload\">preload()</a>で使用する必要があります。",
-        "注意:シェーダはWEBGLモードでのみ使用できます。"
+        "注意:シェーダはWebGLモードでのみ使用できます。"
       ],
       "returns": "p5.Shader: 提供された頂点シェーダとフラグメントシェーダファイルから作成されたシェーダオブジェクト。",
       "params": {
@@ -3428,7 +3428,7 @@
     "createShader": {
       "description": [
         "提供された頂点シェーダとフラグメントシェーダのコードから新しい<a href=\"#/p5.Shader\">p5.Shader</a>オブジェクトを作成します。",
-        "注意:シェーダはWEBGLモードでのみ使用できます。"
+        "注意:シェーダはWebGLモードでのみ使用できます。"
       ],
       "returns": "p5.Shader: 提供された頂点シェーダとフラグメントシェーダから作成されたシェーダオブジェクト。",
       "params": {
@@ -3441,7 +3441,7 @@
         "次に描画される図形に使用される<a href=\"#/p5.Shader\">p5.Shader</a>オブジェクトを設定します。",
         "カスタムシェーダは、<a href=\"#/p5/createShader\">createShader()</a>および<a href=\"#/p5/loadShader\">loadShader()</a>関数を使用して作成できます。",
         "デフォルトのシェーダを復元するには、<a href=\"#/p5/resetShader\">resetShader()</a>を使用してください。",
-        "注意:シェーダはWEBGLモードでのみ使用できます。"
+        "注意:シェーダはWebGLモードでのみ使用できます。"
       ],
       "params": {
         "s": "p5.Shader: 図形の描画に使用する<a href=\"#/p5.Shader\">p5.Shader</a>オブジェクト。"
@@ -3457,7 +3457,7 @@
         "これ以降に描画される図形に使用されるテクスチャを設定します。",
         "テクスチャは、3Dジオメトリを覆う「皮膚」のようなものです。現在サポートされているテクスチャは画像、ビデオ、オフスクリーンレンダリングです。",
         "<a href=\"#/p5/beginShape\">beginShape()</a>で作成されたジオメトリにテクスチャを適用するには、<a href=\"#/p5/vertex\">vertex()</a>でuv座標を指定する必要があります。",
-        "なお、texture()はWEBGLモードでのみ使用できます。",
+        "なお、texture()はWebGLモードでのみ使用できます。",
         "この<a href=\"https://p5js.org/examples/3d-materials.html\">例</a>でさらに多くの素材を見ることができます。"
       ],
       "params": {
@@ -4541,7 +4541,7 @@
         "BLURは、レベルパラメーターを使用してガウシアンブラーを実行し、ぼかしの程度を指定します。パラメーターが使用されていない場合、ぼかしは半径1のガウシアンブラーと同等です。値が大きくなると、ぼかしが増加します。",
         "ERODEは、明るい領域を減らします。パラメーターは使用されません。",
         "DILATEは、明るい領域を増やします。パラメーターは使用されません。",
-        "filter()はWEBGLモードでは機能しません。 WEBGLモードでは、カスタムシェーダーを使用して類似の効果を実現できます。 Adam Ferrissは、フィルターの例に含まれる多くの効果を含む<a href=\"https://github.com/aferriss/p5jsShaderExamples\" target='_blank'>シェーダー例の選択</a>を作成しました。"
+        "filter()はWebGLモードでは機能しません。 WebGLモードでは、カスタムシェーダーを使用して類似の効果を実現できます。 Adam Ferrissは、フィルターの例に含まれる多くの効果を含む<a href=\"https://github.com/aferriss/p5jsShaderExamples\" target='_blank'>シェーダー例の選択</a>を作成しました。"
       ],
       "params": {
         "filterType": "Constant: THRESHOLD、GRAY、OPAQUE、INVERT、POSTERIZE、ERODE、DILATE、BLURのいずれか。使用可能な各フィルターに関するドキュメントについては、Filters.jsを参照してください。",
@@ -5539,7 +5539,7 @@
     }
   },
   "p5.Shader": {
-    "description": ["WEBGLモード用のShaderクラスです。"],
+    "description": ["WebGLモード用のShaderクラスです。"],
     "params": {
       "renderer": "p5.RendererGL: この新しいp5.ShaderにGLコンテキストを提供するp5.RendererGLのインスタンス",
       "vertSrc": "String: 頂点シェーダのソースコード（文字列形式）",
