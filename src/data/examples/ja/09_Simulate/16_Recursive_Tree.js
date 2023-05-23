@@ -4,7 +4,7 @@
  * @description 再帰を使用して、シンプルな木状の構造をレンダリングします。
  * 枝分かれ角度は、水平マウスの位置の関数として計算されます。
  * マウスを左右に移動して角度を変更します。
- * ProcessingのDaniel Shiffmanの<a href="https://processing.org/examples/tree.html">Recursive Tree Example</a>をもとにしています。
+ * Processing の Daniel Shiffman の <a href="https://processing.org/examples/tree.html">再帰的な木のサンプル</a> をもとにしています。
  */
 let theta;
 
@@ -39,8 +39,8 @@ function branch(h) {
   // ここでは、枝の長さが2ピクセル以下の場合に終了します。
   if (h > 2) {
     push();    // 変換の現在の状態を保存します（現在どこにいるか）。
-    rotate(theta);   // thetaで回転します。
-    line(0, 0, 0, -h);  // 枝を描きます
+    rotate(theta);   // theta で回転します。
+    line(0, 0, 0, -h);  // 枝を描きます。
     translate(0, -h); // 枝の終点に移動します。
     branch(h);       // 2本の新しい枝を描くために自分自身を呼び出します！
     pop();     // ここに戻ってくるたびに、以前の行列状態を復元するために「pop」する必要があります。

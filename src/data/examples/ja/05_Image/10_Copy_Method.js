@@ -1,8 +1,8 @@
 /*
- * @name Copy()メソッド
+ * @name Copy() メソッド
  * @arialabel 白黒で描かれたオウムを表示します。マウスカーソルがペイントブラシとなり、画像の上でマウスを押し続けるとその領域に色が付きます。
  * @frame 600,400
- * @description copy()メソッドを使用して画像の着色をシミュレートする方法のサンプルです。
+ * @description copy() メソッドを使用して画像の着色をシミュレートする方法のサンプルです。
  */
 let draft, ready;
 function preload() {

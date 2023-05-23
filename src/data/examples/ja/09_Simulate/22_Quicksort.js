@@ -26,14 +26,14 @@
 
 // 各バーの幅は8で設定します。
 let values = [];
-// 配列'states'は、各段階でのピボット インデックスと、
+// 配列「states」は、各段階でのピボットインデックスと、
 // 現在並べ替えられているサブ配列を
 // 識別するのに役立てます。
 let states = [];
 
-// setup()関数は、プログラムが開始されたときに1回呼び出されます。
-// ここでは、配列'values'にランダムな値をセットし、
-// 配列'states'に状態の初期値（-1）をセットしておきます。
+// setup() 関数は、プログラムが開始されたときに1回呼び出されます。
+// ここでは、配列「values」にランダムな値をセットし、
+// 配列「states」に状態の初期値（-1）をセットしておきます。
 function setup() {
   createCanvas(710, 400);
   for(let i = 0; i < width/8; i++) {
@@ -43,7 +43,7 @@ function setup() {
   quickSort(0, values.length - 1);
 }
 
-// draw()関数の文は、プログラムが停止するまで連続して実行されます。
+// draw() 関数の文は、プログラムが停止するまで連続して実行されます。
 // 各文は順次実行され、
 // 最後の文が読み込まれると、
 // 最初の文が再度実行されます。
@@ -52,7 +52,7 @@ function draw() {
   for(let i = 0; i < values.length; i++) {
     // 色分け
     if (states[i] == 0) {
-      // ピボット インデックスのバーの色
+      // ピボットインデックスのバーの色
       fill('#E0777D');
     } else if (states[i] == 1) {
       // 現在並べ替えられているバーの色
@@ -68,8 +68,8 @@ async function quickSort(start, end) {
   if (start > end) {  // 並べ替えるものがない！
     return;
   }
-  // partition()は、ピボット要素のインデックスを返します。
-  // partition()が実行されたら、
+  // partition() は、ピボット要素のインデックスを返します。
+  // partition() が実行されたら、
   // ピボット要素の左側のすべての要素はそれより小さく、
   // 右側のすべての要素はそれより大きくなります。
   let index = await partition(start, end);
@@ -89,9 +89,9 @@ async function partition(start, end) {
     // 現在考慮されている要素を識別します。
     states[i] = 1;
   }
-  // クイックソート アルゴリズム
+  // クイックソートアルゴリズム
   let pivotIndex = start;
-  // ピボット インデックスを識別します。
+  // ピボットインデックスを識別します。
   states[pivotIndex] = 0;
   let pivotElement = values[end];
   for (let i = start; i < end; i++) {
@@ -112,7 +112,7 @@ async function partition(start, end) {
   return pivotIndex;
 }
 
-// 'values'の要素をインデックス'i'と'j'で交換します。
+// 「values」の要素をインデックス「i」と「j」で交換します。
 async function swap(i, j) {
   // 値を変更してシミュレーションのペースを
   // 調整します。
@@ -122,8 +122,8 @@ async function swap(i, j) {
   values[j] = temp;
 }
 
-// ソート プロセスの速度を遅くして、
-// 可視化を容易にするためのカスタム ヘルパー関数です。
+// ソートプロセスの速度を遅くして、
+// 可視化を容易にするためのカスタムヘルパー関数です。
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
