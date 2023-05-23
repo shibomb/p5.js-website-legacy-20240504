@@ -740,7 +740,7 @@
     },
     "WEBGL": {
       "description": [
-        "p5.jsの2つのレンダリングモードのうちのひとつ:P2D（デフォルトのレンダラー）とWebGL。3次元:Zを導入して3Dレンダリングを可能にします。"
+        "p5.jsの2つのレンダリングモードのうちのひとつ:P2D（デフォルトのレンダラー）とWEBGL。3次元:Zを導入して3Dレンダリングを可能にします。"
       ]
     },
     "ARROW": {},
@@ -1179,7 +1179,7 @@
       "params": {
         "w": "Number: キャンバスの幅",
         "h": "Number: キャンバスの高さ",
-        "renderer": "Constant: (Optional) P2DまたはWebGL"
+        "renderer": "Constant: (Optional) P2DまたはWEBGL"
       }
     },
     "resizeCanvas": {
@@ -1205,7 +1205,7 @@
       "params": {
         "w": "Number: オフスクリーングラフィックバッファの幅",
         "h": "Number: オフスクリーングラフィックバッファの高さ",
-        "renderer": "Constant: (オプション) P2DまたはWebGL。未定義の場合はp2dがデフォルトです。"
+        "renderer": "Constant: (オプション) P2DまたはWEBGL。未定義の場合はp2dがデフォルトです。"
       }
     },
     "blendMode": {
@@ -4096,7 +4096,7 @@
     "params": {
       "w": "Number: 幅",
       "h": "Number: 高さ",
-      "renderer": "Constant: 使用するレンダラーで、P2DまたはWebGLのいずれか",
+      "renderer": "Constant: 使用するレンダラーで、P2DまたはWEBGLのいずれか",
       "pInst": "P5: (オプション) p5インスタンスへのポインタ"
     },
     "reset": {
