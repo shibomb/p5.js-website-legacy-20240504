@@ -1,6 +1,6 @@
 /*
  * @name 配列オブジェクト
- * @arialabel 黒背景上に小さな白い円が左右に動き、ときにはぶつかり合い跳ね返ります。
+ * @arialabel 黒い背景の上で小さな白い円が左右に動き、ときにはぶつかり合い跳ね返ります。
  * @description この構文はカスタムオブジェクトの配列を生成するデモンストレーションです。
  */
 
@@ -16,7 +16,7 @@ class Module {
     this.yDir = 1;
   }
 
-  // 変数を更新するためのカスタムメソッドです。
+  // 変数を更新するためのカスタムメソッド
   update() {
     this.x = this.x + this.speed * this.xDir;
     if (this.x >= this.unit || this.x <= 0) {
@@ -30,7 +30,7 @@ class Module {
     }
   }
 
-  // オブジェクトを描画するためのカスタムメソッドです。
+  // オブジェクトを描画するためのカスタムメソッド
   draw() {
     fill(255);
     ellipse(this.xOff + this.x, this.yOff + this.y, 6, 6);
