@@ -2,7 +2,7 @@
  * @name 円の衝突
  * @arialabel 大きな薄灰色の円と小さな灰色の円が、暗灰色の背景の端やお互いにぶつかると跳ね返ります。
  * @frame 710,400 (オプション)
- * @description processing.org/examples の「Circle Collision」の例を移植したものです。<br> この例では物理量の視覚化のためにベクトルを使用しています。
+ * @description processing.org/examples の「Circle Collision」のサンプルを移植したものです。<br> このサンプルでは物理量の視覚化のためにベクトルを使用しています。
  */
 class Ball {
   constructor(x, y, r) {
@@ -39,7 +39,7 @@ class Ball {
     // 球体を分離するベクトルの大きさを計算します。
     let distanceVectMag = distanceVect.mag();
 
-    // 球体が接触する最小の距離です。
+    // 球体が接触するまでの最小の距離です。
     let minDistance = this.r + other.r;
 
     if (distanceVectMag < minDistance) {
@@ -51,7 +51,7 @@ class Ball {
 
       // distanceVect のアングルを取得します。
       let theta = distanceVect.heading();
-      // 三角関数の値を予め計算しておきます。
+      // 三角関数の値をあらかじめ計算しておきます。
       let sine = sin(theta);
       let cosine = cos(theta);
 
@@ -59,8 +59,8 @@ class Ball {
        あなたが着目すべきは、bTemp[1] の this.position だけです。*/
       let bTemp = [new p5.Vector(), new p5.Vector()];
 
-      /* このボールの位置(this.position)は他のボールに対して相対的です。
-        従って、それらの間のベクトル(bVect)を回転式の基準点として
+      /* このボールの位置 (this.position) は他のボールに対して相対的です。
+        したがって、それらの間のベクトル (bVect) を回転式の基準点として
         使用することができます。
         bTemp[0].this.position.x と bTemp[0].this.position.y は
         自動的に0.0に初期化されます。
@@ -68,7 +68,7 @@ class Ball {
       bTemp[1].x = cosine * distanceVect.x + sine * distanceVect.y;
       bTemp[1].y = cosine * distanceVect.y - sine * distanceVect.x;
 
-      // 一時的なベロシティ(vTemp)を回転させます
+      // 一時的なベロシティ (vTemp) を回転させます。
       let vTemp = [new p5.Vector(), new p5.Vector()];
 
       vTemp[0].x = cosine * this.velocity.x + sine * this.velocity.y;
@@ -76,18 +76,18 @@ class Ball {
       vTemp[1].x = cosine * other.velocity.x + sine * other.velocity.y;
       vTemp[1].y = cosine * other.velocity.y - sine * other.velocity.x;
 
-      /* 速度が回転したので、1次元運動量保存則を使って、
-       x軸方向に沿った最終的な速度(vFinal)を
+      /* ベロシティが回転したので、1次元運動量保存則を使って、
+       x 軸方向に沿った最終的なベロシティ（vFinal）を
        計算できます。 */
       let vFinal = [new p5.Vector(), new p5.Vector()];
 
-      // b[0] の最終的な速度をを回転します。
+      // b[0] の最終的なベロシティを回転します。
       vFinal[0].x =
         ((this.m - other.m) * vTemp[0].x + 2 * other.m * vTemp[1].x) /
         (this.m + other.m);
       vFinal[0].y = vTemp[0].y;
 
-      // b[0] の最終的な速度をを回転します。
+      // b[0] の最終的なベロシティを回転します。
       vFinal[1].x =
         ((other.m - this.m) * vTemp[1].x + 2 * this.m * vTemp[0].x) /
         (this.m + other.m);
@@ -97,7 +97,7 @@ class Ball {
       bTemp[0].x += vFinal[0].x;
       bTemp[1].x += vFinal[1].x;
 
-      /* ボールの位置と速度を逆回転します。
+      /* ボールの位置とベロシティを逆回転します。
        三角形の式の符号を逆にして
        反対方向に回転します。 */
       // ボールを回転します。
