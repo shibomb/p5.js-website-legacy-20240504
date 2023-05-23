@@ -6,15 +6,15 @@
  * マウスをクリックすると、新しい位置に移動します。
  */
 
-let beginX = 20.0; // 初期x座標
-let beginY = 10.0; // 初期y座標
-let endX = 570.0; // 終了x座標
-let endY = 320.0; // 終了y座標
-let distX; // x軸方向の移動距離
-let distY; // y軸方向の移動距離
+let beginX = 20.0; // 初期 x 座標
+let beginY = 10.0; // 初期 y 座標
+let endX = 570.0; // 終了 x 座標
+let endY = 320.0; // 終了 y 座標
+let distX; // x 軸方向の移動距離
+let distY; // y 軸方向の移動距離
 let exponent = 4; // 曲線を決定する指数
-let x = 0.0; // 現在のx座標
-let y = 0.0; // 現在のy座標
+let x = 0.0; // 現在の x 座標
+let y = 0.0; // 現在の y 座標
 let step = 0.01; // パス上の各ステップのサイズ
 let pct = 0.0; // 移動した割合（0.0から1.0まで）
 

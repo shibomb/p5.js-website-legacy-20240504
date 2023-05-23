@@ -1,8 +1,8 @@
 /*
  * @name モーフィング
- * @arialabel 暗い灰色の背景に、白い正方形の輪郭線が円に変わり、正方形の辺が円形に曲がるようになっています。
+ * @arialabel 暗い灰色の背景の前で、正方形の辺が円形にカーブするにつれて、白い正方形の輪郭線が円に変わります。
  * @frame 720,400
- * @description ひとつの形状を別の形状に変形し、頂点をひとつから別の形状へ補間することによって行います。
+ * @description ある頂点から別の頂点に補間することで、ある形状を別の形状に変化させます。
  */
 
 // 2つの ArrayList を用意して、それぞれの形状の頂点を保存します。
@@ -11,7 +11,7 @@
 let circle = [];
 let square = [];
 
-// ウィンドウに描画する第三の頂点セットのための ArrayList です。
+// ウィンドウに描画する第3の頂点セットのための ArrayList
 let morph = [];
 
 // このブール変数は、円形に変形するか四角形に変形するかを制御します。
@@ -27,7 +27,7 @@ function setup() {
     let v = p5.Vector.fromAngle(radians(angle - 135));
     v.mult(100);
     circle.push(v);
-    // この機会に、morph ArrayList を空の PVectors で埋めましょう。
+    // この機会に、morph ArrayList を空の p5.Vector で埋めましょう。
     morph.push(createVector());
   }
 
@@ -59,7 +59,7 @@ function draw() {
   // 各頂点を処理します。
   for (let i = 0; i < circle.length; i++) {
     let v1;
-    // 円形 か 正方形 のどちらに補完していくのかを決定します。
+    // 円形か正方形のどちらに補完していくのかを決定します。
     if (state) {
       v1 = circle[i];
     } else {
