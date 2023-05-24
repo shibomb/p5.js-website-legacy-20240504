@@ -1,12 +1,12 @@
 /*
- * @name Snowflakes
- * @arialabel White snowflakes fall in a random pattern from the top of a red background 
- * @description Particle system simulating the motion of falling snowflakes.
- * Uses an array of objects to hold the snowflake particles.
- * Contributed by Aatish Bhatia.
+ * @name スノーフレーク
+ * @arialabel 赤い背景の上部からランダムなパターンで白い雪片が降り注ぎます。
+ * @description 落ちる雪片の動きをシミュレートするパーティクルシステム。
+ * 雪片のパーティクルを保持するためのオブジェクト配列を使用しています。
+ * Aatish Bhatia の貢献により作成されました。
  */
 
-let snowflakes = []; // array to hold snowflake objects
+let snowflakes = []; // 雪片のオブジェクトを保持する配列
 
 function setup() {
   createCanvas(400, 600);
@@ -16,42 +16,42 @@ function setup() {
 
 function draw() {
   background('brown');
-  let t = frameCount / 60; // update time
+  let t = frameCount / 60; // 時間の更新
 
-  // create a random number of snowflakes each frame
+  // ランダムな数の雪片を毎フレーム生成します。
   for (let i = 0; i < random(5); i++) {
-    snowflakes.push(new snowflake()); // append snowflake object
+    snowflakes.push(new snowflake()); // 雪片のオブジェクトを追加
   }
 
-  // loop through snowflakes with a for..of loop
+  // for..of ループで雪片をループします。
   for (let flake of snowflakes) {
-    flake.update(t); // update snowflake position
-    flake.display(); // draw snowflake
+    flake.update(t); // 雪片の位置を更新
+    flake.display(); // 雪片を描画
   }
 }
 
-// snowflake class
+// snowflake クラス
 function snowflake() {
-  // initialize coordinates
+  // 座標の初期化
   this.posX = 0;
   this.posY = random(-50, 0);
   this.initialangle = random(0, 2 * PI);
   this.size = random(2, 5);
 
-  // radius of snowflake spiral
-  // chosen so the snowflakes are uniformly spread out in area
+  // 雪片のらせんの半径
+  // 雪片が領域内で均等に広がるように選ばれています。
   this.radius = sqrt(random(pow(width / 2, 2)));
 
   this.update = function(time) {
-    // x position follows a circle
-    let w = 0.6; // angular speed
+    // x 位置は円に合わせて動きます。
+    let w = 0.6; // 角速度
     let angle = w * time + this.initialangle;
     this.posX = width / 2 + this.radius * sin(angle);
 
-    // different size snowflakes fall at slightly different y speeds
+    // サイズの異なる雪片はわずかに異なる y 速度で落ちます。
     this.posY += pow(this.size, 0.5);
 
-    // delete snowflake if past end of screen
+    // 画面の端を超えた雪片を削除します。
     if (this.posY > height) {
       let index = snowflakes.indexOf(this);
       snowflakes.splice(index, 1);

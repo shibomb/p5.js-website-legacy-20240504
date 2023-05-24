@@ -1,7 +1,7 @@
 /*
- * @name Geometries
- * @arialabel Six 3D shapes in neon gradient rotating on a white background. Shapes include cube, cylinder, ring, pyramid, sphere, and a plane.
- * @description There are six 3D primitives in p5 now.
+ * @name ジオメトリ（幾何学）
+ * @arialabel 白い背景の上で、6つのネオングラデーションの 3D 形状が回転しています。形状には立方体、円柱、リング、ピラミッド、球体、および平面が含まれます。
+ * @description p5では、現在6つの 3D プリミティブが利用可能です。
  */
 function setup() {
   createCanvas(710, 400, WEBGL);

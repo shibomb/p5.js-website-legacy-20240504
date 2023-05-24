@@ -1,13 +1,13 @@
 /*
- * @name Shader as a Texture
- * @arialabel Sphere broken up into a square grid with a gradient in each grid.
- * @description Shaders can be applied to 2D/3D shapes as textures.
- * <br> To learn more about using shaders in p5.js: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.js Shaders</a>
+ * @name テクスチャのようなシェーダー
+ * @arialabel グラデーションが適用された正方形のグリッドに分割された球体です。
+ * @description シェーダーは 2D/3D 形状にテクスチャとして適用できます。
+ * <br>p5.js でシェーダーを使用する方法について、詳しくはこちらを参照してください: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.js シェーダー</a>
  */
 
- // this variable will hold our shader object
+ // この変数にシェーダーオブジェクトを保持します。
  let theShader;
- // this variable will hold our createGraphics layer
+ // この変数に createGraphics で作られるシェーダーテクスチャレイヤーを保持します。
  let shaderTexture;
 
  let theta = 0;
@@ -18,19 +18,19 @@
  let insideRadius = 100;
 
  function preload(){
-   // load the shader
+   // シェーダーを読み込みます。
    theShader = loadShader('assets/texture.vert','assets/texture.frag');
  }
 
  function setup() {
-   // shaders require WEBGL mode to work
+   // シェーダーを使うためには WEBGL モードにする必要があります。
    createCanvas(710, 400, WEBGL);
    noStroke();
 
-   // initialize the createGraphics layers
+   // シェーダーテクスチャレイヤーを初期化します。
    shaderTexture = createGraphics(710, 400, WEBGL);
 
-   // turn off the createGraphics layers stroke
+   // シェーダーテクスチャレイヤーのストローク（線）をオフにします。
    shaderTexture.noStroke();
 
     x = -50;
@@ -39,20 +39,20 @@
 
  function draw() {
 
-   // instead of just setting the active shader we are passing it to the createGraphics layer
+   // アクティブなシェーダーを設定するのではなく、それをシェーダーテクスチャレイヤーに渡しています。
    shaderTexture.shader(theShader);
 
-   // here we're using setUniform() to send our uniform values to the shader
+   // ここでは setUniform() メソッドを使って、シェーダーにユニフォーム値を送信しています。
    theShader.setUniform("resolution", [width, height]);
    theShader.setUniform("time", millis() / 1000.0);
    theShader.setUniform("mouse", [mouseX, map(mouseY, 0, height, height, 0)]);
 
-   // passing the shaderTexture layer geometry to render on
+   // シェーダーテクスチャレイヤーのジオメトリをレンダリングします。
    shaderTexture.rect(0,0,width,height);
 
    background(255);
 
-   // pass the shader as a texture
+   // シェーダーテクスチャレイヤーをテクスチャとして渡します。
    texture(shaderTexture);
 
    translate(-150, 0, 0);
@@ -64,6 +64,6 @@
    sphere(125);
    pop();
 
-   // passing a fifth parameter to ellipse for smooth edges in 3D
+   // 滑らかなエッジをもつ楕円を 3D で描くために、第5引数を設定しています。
    ellipse(260,0,200,200,100);
  }

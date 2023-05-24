@@ -1,9 +1,9 @@
 /*
- *@name Functions
- *@arialabel Three targets are created in the shape of black circles. There is a gradient from white to black from the center of the circle to the outer edge.
- *@description The drawTarget() function makes it easy to draw many distinct
- *targets. Each call to drawTarget() specifies the position, size, and number of
- *rings for each target.
+ *@name 関数
+ *@arialabel 黒い円の形をしたターゲットが3つ作成されています。円の中心から外縁にかけて、白から黒へのグラデーションがかかっています。
+ *@description drawTarget() 関数を使用すると、
+ *多くの異なるターゲットを簡単に描画することができます。drawTarget() を呼び出すたびに、
+ *各ターゲットの位置、サイズ、リングの数が指定されます。
  */
 
 function setup() {

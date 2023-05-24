@@ -1,10 +1,10 @@
 /*
- * @name Recursive Tree
- * @arialabel If the user’s mouse is on the far left side of the screen, there is a white vertical line on a black background. As the user’s mouse moves right, the top of the vertical line begins to expand into branches of a tree until it curves down into a very geometric tree
- * @description Renders a simple tree-like structure via recursion.
- * The branching angle is calculated as a function of the horizontal mouse
- * location. Move the mouse left and right to change the angle.
- * Based on Daniel Shiffman's <a href="https://processing.org/examples/tree.html">Recursive Tree Example</a> for Processing.
+ * @name 再帰的な木
+ * @arialabel ユーザーが画面の左端にマウスを置くと、黒い背景に白い縦線が表示されます。ユーザーがマウスを右に移動すると、縦線の上部が木の枝状に広がってゆき、非常に幾何学的な形状の木になるまで枝がカーブします。
+ * @description 再帰を使用して、シンプルな木状の構造をレンダリングします。
+ * 枝分かれ角度は、水平マウスの位置の関数として計算されます。
+ * マウスを左右に移動して角度を変更します。
+ * Processing の Daniel Shiffman の <a href="https://processing.org/examples/tree.html">再帰的な木のサンプル</a> をもとにしています。
  */
 let theta;
 
@@ -16,36 +16,36 @@ function draw() {
   background(0);
   frameRate(30);
   stroke(255);
-  // Let's pick an angle 0 to 90 degrees based on the mouse position
+  // マウス位置に基づいて0から90度の角度を選択します。
   let a = (mouseX / width) * 90;
-  // Convert it to radians
+  // ラジアンに変換します。
   theta = radians(a);
-  // Start the tree from the bottom of the screen
+  // 画面の下部から木を描き始めます。
   translate(width/2,height);
-  // Draw a line 120 pixels
+  // 線を120ピクセル描きます。
   line(0,0,0,-120);
-  // Move to the end of that line
+  // その線の終点に移動します。
   translate(0,-120);
-  // Start the recursive branching!
+  // 再帰的な枝分かれを開始します！
   branch(120);
 
 }
 
 function branch(h) {
-  // Each branch will be 2/3rds the size of the previous one
+  // 各枝は前の枝の2/3の大きさにします。
   h *= 0.66;
 
-  // All recursive functions must have an exit condition!!!!
-  // Here, ours is when the length of the branch is 2 pixels or less
+  // すべての再帰関数には終了条件が必要です！
+  // ここでは、枝の長さが2ピクセル以下の場合に終了します。
   if (h > 2) {
-    push();    // Save the current state of transformation (i.e. where are we now)
-    rotate(theta);   // Rotate by theta
-    line(0, 0, 0, -h);  // Draw the branch
-    translate(0, -h); // Move to the end of the branch
-    branch(h);       // Ok, now call myself to draw two new branches!!
-    pop();     // Whenever we get back here, we "pop" in order to restore the previous matrix state
+    push();    // 変換の現在の状態を保存します（現在どこにいるか）。
+    rotate(theta);   // theta で回転します。
+    line(0, 0, 0, -h);  // 枝を描きます。
+    translate(0, -h); // 枝の終点に移動します。
+    branch(h);       // 2本の新しい枝を描くために自分自身を呼び出します！
+    pop();     // ここに戻ってくるたびに、以前の行列状態を復元するために「pop」する必要があります。
 
-    // Repeat the same thing, only branch off to the "left" this time!
+    // 同じことを繰り返し、今度は「左」に枝分かれします！
     push();
     rotate(-theta);
     line(0, 0, 0, -h);

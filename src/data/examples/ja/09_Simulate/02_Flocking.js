@@ -1,11 +1,11 @@
 /*
- * @name Flocking
- * @arialabel グレーの小さな三角形のグループが、より濃いグレーの背景を移動する
- * @description Craig Reynoldsの「Flocking」動作のデモンストレーション。
+ * @name フロッキング
+ * @arialabel グレーの小さな三角形のグループが、濃いグレーの背景をバックにして移動します。
+ * @description Craig Reynolds の「フロッキング」動作のデモンストレーション。
  * 参照：http://www.red3d.com/cwr/
  * ルール：Cohesion（結束）、Separation（分離）、Alignment（整列）
- * (from <a href="http://natureofcode.com">natureofcode.com</a>).
- * マウスをドラッグしてboidsを追加します。
+ * （<a href="http://natureofcode.com">natureofcode.com</a> より）。
+ * マウスをドラッグしてボイド（グレーの小さな三角形）を追加します。
  */
 
 
@@ -13,10 +13,10 @@ let flock;
 
 function setup() {
   createCanvas(640, 360);
-  createP("マウスをドラッグして新しいboidsを生成します。");
+  createP("マウスをドラッグして新しいボイドを生成します。");
 
   flock = new Flock();
-  // システムに最初の一連のboidsを追加
+  // システムに最初のボイドのセットを追加します。
   for (let i = 0; i < 100; i++) {
     let b = new Boid(width / 2,height / 2);
     flock.addBoid(b);
@@ -28,7 +28,7 @@ function draw() {
   flock.run();
 }
 
-// システムに新しいboidを追加
+// システムに新しいボイドを追加します。
 function mouseDragged() {
   flock.addBoid(new Boid(mouseX, mouseY));
 }
@@ -37,17 +37,17 @@ function mouseDragged() {
 // Daniel Shiffman
 // http://natureofcode.com
 
-// Flockオブジェクト
-// ほとんど何もしない、単純にすべてのboidsの配列を管理する
+// Flock オブジェクト
+// 単純にすべてのボイドの配列を管理するだけで、ほとんど何もしません。
 
 function Flock() {
-  // すべてのboidsのための配列
-  this.boids = []; // 配列を初期化
+  // すべてのボイドのための配列
+  this.boids = []; // 配列を初期化します。
 }
 
 Flock.prototype.run = function() {
   for (let i = 0; i < this.boids.length; i++) {
-    this.boids[i].run(this.boids);  // 各boidに個別にboidsのリスト全体を渡す
+    this.boids[i].run(this.boids);  // 各ボイドに個別にボイドのリスト全体を渡します。
   }
 }
 
@@ -59,8 +59,8 @@ Flock.prototype.addBoid = function(b) {
 // Daniel Shiffman
 // http://natureofcode.com
 
-// Boidクラス
-// 分離、結束、整列のメソッドが追加された
+// Boid クラス
+// 分離、結束、整列のメソッドが追加されています。
 
 function Boid(x, y) {
   this.acceleration = createVector(0, 0);
@@ -79,20 +79,20 @@ Boid.prototype.run = function(boids) {
 }
 
 Boid.prototype.applyForce = function(force) {
-  // A = F / M のようにここに質量を追加したい場合
+  // A = F / M を求める場合は、ここで質量を追加できます。
   this.acceleration.add(force);
 }
 
-// 三つのルールに基づいて、新しい加速度を蓄積する
+// 三つのルールに基づいて、新しい加速度を蓄積します。
 Boid.prototype.flock = function(boids) {
   let sep = this.separate(boids);   // 分離
   let ali = this.align(boids);      // 整列
   let coh = this.cohesion(boids);   // 結束
-  // これらの力に任意の重みをかける
+  // これらの力に任意の重みをかけます。
   sep.mult(1.5);
   ali.mult(1.0);
   coh.mult(1.0);
-  // 力ベクトルを加速度に加える
+  // 力ベクトルを加速度に加えます。
   this.applyForce(sep);
   this.applyForce(ali);
   this.applyForce(coh);
@@ -100,30 +100,30 @@ Boid.prototype.flock = function(boids) {
 
 // 位置を更新するメソッド
 Boid.prototype.update = function() {
-  // 速度を更新
+  // 速度を更新します。
   this.velocity.add(this.acceleration);
-  // 速度を制限
+  // 速度を制限します。
   this.velocity.limit(this.maxspeed);
   this.position.add(this.velocity);
-  // 各サイクルで加速度を0にリセット
+  // 各サイクルで加速度を0にリセットします。
   this.acceleration.mult(0);
 }
 
 // ターゲットに向かう操舵力を計算して適用するメソッド
-// STEER = DESIRED MINUS VELOCITY
+// STEER = DESIRED - VELOCITY
 Boid.prototype.seek = function(target) {
-  let desired = p5.Vector.sub(target,this.position);  // 位置からターゲットへのベクトル
-  // desiredを正規化し、最大速度でスケーリング
+  let desired = p5.Vector.sub(target,this.position);  // 現在の位置からターゲットへのベクトル
+  // desired を正規化し、最大速度でスケーリングします。
   desired.normalize();
   desired.mult(this.maxspeed);
-  // 操舵 = 望ましい - 速度
+  // ステアリングのベクトル = 希望ベクトル - 現在のベクトル
   let steer = p5.Vector.sub(desired,this.velocity);
-  steer.limit(this.maxforce);  // 最大操舵力に制限
+  steer.limit(this.maxforce);  // 最大操舵力に制限します。
   return steer;
 }
 
 Boid.prototype.render = function() {
-  // 速度の方向に回転した三角形を描画
+  // 速度の方向に回転した三角形を描画します。
   let theta = this.velocity.heading() + radians(90);
   fill(127);
   stroke(200);
@@ -147,32 +147,32 @@ Boid.prototype.borders = function() {
 }
 
 // 分離
-// 近くのボイドをチェックして、それらから離れる方向に操舵するメソッド
+// 近くのボイドをチェックして、それらから離れる方向に舵を切るメソッド
 Boid.prototype.separate = function(boids) {
   let desiredseparation = 25.0;
   let steer = createVector(0, 0);
   let count = 0;
-  // システム内のすべてのボイドについて、それが近すぎるかどうかをチェックする
+  // システム内のすべてのボイドについて、近すぎるかどうかをチェックします。
   for (let i = 0; i < boids.length; i++) {
     let d = p5.Vector.dist(this.position,boids[i].position);
     // 距離が0より大きく、任意の量より小さい場合（自分自身の場合は0）
     if ((d > 0) && (d < desiredseparation)) {
-      // 隣人から遠ざかるベクトルを計算する
+      // 隣のボイドから離れるベクトルを計算します。
       let diff = p5.Vector.sub(this.position, boids[i].position);
       diff.normalize();
       diff.div(d);        // 距離による重み付け
       steer.add(diff);
-      count++;            // いくつかあるかを追跡する
+      count++;            // いくつあるかを追跡します。
     }
   }
-  // 平均 -- いくつあるかで割る
+  // 平均 -- いくつあるかで割ります。
   if (count > 0) {
     steer.div(count);
   }
 
   // ベクトルが0より大きい限り
   if (steer.mag() > 0) {
-    // レイノルズの実装: 操舵 = 目的 - 速度
+    // レイノルズの実装: ステアリングのベクトル = 希望ベクトル - 現在のベクトル
     steer.normalize();
     steer.mult(this.maxspeed);
     steer.sub(this.velocity);
@@ -182,7 +182,7 @@ Boid.prototype.separate = function(boids) {
 }
 
 // 整列
-// システム内のすべての近くのボイドについて、平均速度を計算する
+// システム内のすべての隣り合うボイドについて、平均速度を計算します。
 Boid.prototype.align = function(boids) {
   let neighbordist = 50;
   let sum = createVector(0,0);
@@ -207,21 +207,21 @@ Boid.prototype.align = function(boids) {
 }
 
 // 凝集
-// すべての近くのボイドの平均位置（つまり、中心）に対して、その位置に向かう操舵ベクトルを計算する
+// すべての隣り合うボイドの平均位置（つまり、中心）に対して、その位置に向かうステアリングのベクトルを計算します。
 Boid.prototype.cohesion = function(boids) {
   let neighbordist = 50;
-  let sum = createVector(0, 0);   // すべての位置を蓄積する空のベクトルから始める
+  let sum = createVector(0, 0);   // 空のベクトルから始めて、すべての位置を蓄積します。
   let count = 0;
   for (let i = 0; i < boids.length; i++) {
     let d = p5.Vector.dist(this.position,boids[i].position);
     if ((d > 0) && (d < neighbordist)) {
-      sum.add(boids[i].position); // 位置を追加
+      sum.add(boids[i].position); // 位置を追加します。
       count++;
     }
   }
   if (count > 0) {
     sum.div(count);
-    return this.seek(sum);  // その位置に向かって操舵する
+    return this.seek(sum);  // その位置に向かって舵を切ります。
   } else {
     return createVector(0, 0);
   }

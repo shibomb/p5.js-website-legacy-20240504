@@ -1,7 +1,7 @@
 /*
- * @name Orbit Control
- * @arialabel Users can click on the screen and drag to move themselves around a 3D space. It consists of a white background with columns of purple cubes and green pyramids arched in curves. 
- * @description Orbit control allows you to drag and move around the world.
+ * @name 軌道操作
+ * @arialabel ユーザーは画面をドラッグすることで 3D 空間を移動できます。この空間は白い背景に、紫の立方体の列と緑のピラミッドがカーブを描いて並んでいます。
+ * @description 軌道操作を使うと、ワールドをドラッグして移動できます。
  */
 function setup() {
   createCanvas(710, 400, WEBGL);
@@ -11,7 +11,7 @@ function draw() {
   background(250);
   let radius = width * 1.5;
 
-  //drag to move the world.
+  // ドラッグしてワールドを移動します。
   orbitControl();
 
   normalMaterial();
