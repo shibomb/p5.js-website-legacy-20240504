@@ -1,13 +1,11 @@
 /*
- * @name Shape Primitives
- * @arialabel From left to right: a grey triangle, a darker grey square, a light grey trapezoid, a white circle, a light grey triangle, and a white half circle, on a black background
- * @description The basic shape primitive functions are triangle(),
- * rect(), quad(), ellipse(), and arc(). Squares are made with rect()
- * and circles are made with ellipse(). Each of these functions requires
- * a number of parameters to determine the shape's position and size.
+ * @name 形状のプリミティブ関数
+ * @arialabel 左から右へ: 灰色の三角形、より濃い灰色の正方形、薄い灰色の台形、白い円、薄い灰色の三角形、そして白い半円が、黒い背景上に配置されています。
+ * @description 基本的な形状のプリミティブ関数は、triangle()、rect()、quad()、ellipse()、arc()です。四角形はrect()を使って作成され、円はellipse()を使って作成されます。
+ * これらの関数は、形状の位置やサイズを決定するために複数のパラメータが必要です。
  */
 function setup() {
-  // Sets the screen to be 720 pixels wide and 400 pixels high
+  // 画面の幅を720ピクセル、高さを400ピクセルに設定します。
   createCanvas(720, 400);
   background(0);
   noStroke();
