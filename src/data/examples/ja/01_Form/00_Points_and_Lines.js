@@ -1,5 +1,5 @@
 /*
- * @name Points and Lines
+ * @name 点と線
  * @arialabel 黒い背景に白い正方形の輪郭線の描画
  * @description 点や線を使って基本的な形を描くことができます。
  * 変数「d」の値を変えることで形のスケールを調整できます。
