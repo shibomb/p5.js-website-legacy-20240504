@@ -2151,7 +2151,7 @@
         "BLUR レベルパラメーターでぼかしの範囲を指定したガウシアンブラーを実行します。パラメーターが使用されていない場合、ブラーは半径1のガウシアンブラーに相当します。値が大きいほど、ぼかしが増えます。",
         "ERODE 明るい領域を減少させます。パラメーターは使用されません。",
         "DILATE 明るい領域を増加させます。パラメーターは使用されません。",
-        "filter() は WebGL モードでは動作しません。WebGL モードではカスタムシェーダを使用して類似の効果を実現できます。Adam Ferriss は、フィルターの例にある多くの効果を含む <a href=\"https://github.com/aferriss/p5jsShaderExamples\" target='_blank'>シェーダーの例の選択</a> を書いています。"
+        "filter() は WebGL モードでは動作しません。WebGL モードではカスタムシェーダーを使用して類似の効果を実現できます。Adam Ferriss は、フィルターの例にある多くの効果を含む <a href=\"https://github.com/aferriss/p5jsShaderExamples\" target='_blank'>シェーダーの例の選択</a> を書いています。"
       ],
       "params": {
         "filterType": "Constant: THRESHOLD, GRAY, OPAQUE, INVERT,  POSTERIZE, BLUR, ERODE, DILATE, BLUR のいずれか。Filters.js のドキュメントに各利用可能なフィルターについて記載されています。",
@@ -3413,35 +3413,35 @@
     },
     "loadShader": {
       "description": [
-        "提供された頂点シェーダとフラグメントシェーダファイルから新しい <a href=\"#/p5.Shader\">p5.Shader</a> オブジェクトを作成します。",
-        "シェーダファイルはバックグラウンドで非同期にロードされるため、このメソッドは <a href=\"#/p5/preload\">preload()</a> で使用する必要があります。",
-        "注意:シェーダは WebGL モードでのみ使用できます。"
+        "提供された頂点シェーダーとフラグメントシェーダーファイルから新しい <a href=\"#/p5.Shader\">p5.Shader</a> オブジェクトを作成します。",
+        "シェーダーファイルはバックグラウンドで非同期にロードされるため、このメソッドは <a href=\"#/p5/preload\">preload()</a> で使用する必要があります。",
+        "注意:シェーダーは WebGL モードでのみ使用できます。"
       ],
-      "returns": "p5.Shader: 提供された頂点シェーダとフラグメントシェーダファイルから作成されたシェーダオブジェクト。",
+      "returns": "p5.Shader: 提供された頂点シェーダーとフラグメントシェーダーファイルから作成されたシェーダーオブジェクト。",
       "params": {
-        "vertFilename": "String: 頂点シェーダソースコードが含まれるファイルへのパス",
-        "fragFilename": "String: フラグメントシェーダソースコードが含まれるファイルへのパス",
+        "vertFilename": "String: 頂点シェーダーソースコードが含まれるファイルへのパス",
+        "fragFilename": "String: フラグメントシェーダーソースコードが含まれるファイルへのパス",
         "callback": "Function: (オプション) loadShader が完了した後に実行されるコールバック。成功時には、p5.Shader オブジェクトが最初の引数として渡されます。",
         "errorCallback": "Function: (オプション) loadShader 内でエラーが発生した場合に実行されるコールバック。エラー発生時には、エラーが最初の引数として渡されます。"
       }
     },
     "createShader": {
       "description": [
-        "提供された頂点シェーダとフラグメントシェーダのコードから新しい <a href=\"#/p5.Shader\">p5.Shader</a> オブジェクトを作成します。",
-        "注意:シェーダは WebGL モードでのみ使用できます。"
+        "提供された頂点シェーダーとフラグメントシェーダーのコードから新しい <a href=\"#/p5.Shader\">p5.Shader</a> オブジェクトを作成します。",
+        "注意:シェーダーは WebGL モードでのみ使用できます。"
       ],
-      "returns": "p5.Shader: 提供された頂点シェーダとフラグメントシェーダから作成されたシェーダオブジェクト。",
+      "returns": "p5.Shader: 提供された頂点シェーダーとフラグメントシェーダーから作成されたシェーダーオブジェクト。",
       "params": {
-        "vertSrc": "String: 頂点シェーダのソースコード",
-        "fragSrc": "String: フラグメントシェーダのソースコード"
+        "vertSrc": "String: 頂点シェーダーのソースコード",
+        "fragSrc": "String: フラグメントシェーダーのソースコード"
       }
     },
     "shader": {
       "description": [
         "次に描画される図形に使用される <a href=\"#/p5.Shader\">p5.Shader</a> オブジェクトを設定します。",
-        "カスタムシェーダは、<a href=\"#/p5/createShader\">createShader()</a> および <a href=\"#/p5/loadShader\">loadShader()</a> 関数を使用して作成できます。",
-        "デフォルトのシェーダを復元するには、<a href=\"#/p5/resetShader\">resetShader()</a> を使用してください。",
-        "注意:シェーダは WebGL モードでのみ使用できます。"
+        "カスタムシェーダーは、<a href=\"#/p5/createShader\">createShader()</a> および <a href=\"#/p5/loadShader\">loadShader()</a> 関数を使用して作成できます。",
+        "デフォルトのシェーダーを復元するには、<a href=\"#/p5/resetShader\">resetShader()</a> を使用してください。",
+        "注意:シェーダーは WebGL モードでのみ使用できます。"
       ],
       "params": {
         "s": "p5.Shader: 図形の描画に使用する <a href=\"#/p5.Shader\">p5.Shader</a> オブジェクト。"
@@ -3449,7 +3449,7 @@
     },
     "resetShader": {
       "description": [
-        "デフォルトのシェーダを復元します。resetShader() の後に実行されるコードは、<a href=\"#/p5/shader\">shader()</a> で設定されたシェーダには影響されません。"
+        "デフォルトのシェーダーを復元します。resetShader() の後に実行されるコードは、<a href=\"#/p5/shader\">shader()</a> で設定されたシェーダーには影響されません。"
       ]
     },
     "texture": {
@@ -5542,16 +5542,16 @@
     "description": ["WebGL モード用の Shader クラスです。"],
     "params": {
       "renderer": "p5.RendererGL: この新しい p5.Shader に GL コンテキストを提供する p5.RendererGL のインスタンス",
-      "vertSrc": "String: 頂点シェーダのソースコード（文字列形式）",
-      "fragSrc": "String: フラグメントシェーダのソースコード（文字列形式）"
+      "vertSrc": "String: 頂点シェーダーのソースコード（文字列形式）",
+      "fragSrc": "String: フラグメントシェーダーのソースコード（文字列形式）"
     },
     "setUniform": {
       "description": [
         "<a href=\"#/p5.Shader\">p5.Shader</a> オブジェクトの uniform を設定するために使用します。",
-        "uniform は、GPU で実行されるシェーダプログラムにスケッチ（CPU 上で実行される）から値を提供する方法として使用されます。"
+        "uniform は、GPU で実行されるシェーダープログラムにスケッチ（CPU 上で実行される）から値を提供する方法として使用されます。"
       ],
       "params": {
-        "uniformName": "String: uniform の名前。頂点シェーダおよびフラグメントシェーダで使用される名前と対応する必要があります。",
+        "uniformName": "String: uniform の名前。頂点シェーダーおよびフラグメントシェーダーで使用される名前と対応する必要があります。",
         "data": "Boolean|Number|Number[]|p5.Image|p5.Graphics|p5.MediaElement|p5.Texture: uniform に関連付けるデータ。データ型は、真偽値（true/false）、数値、数値の配列、または画像（p5.Image、p5.Graphics、p5.MediaElement、p5.Texture）のいずれかです。"
       }
     }
