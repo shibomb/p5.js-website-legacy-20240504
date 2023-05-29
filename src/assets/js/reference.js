@@ -2407,6 +2407,7 @@ define('listView',[
         this.$el.html(listHtml);
       }
 
+      console.log("i18n-ja:debug-reference: listView.js 103");
       var renderEvent = new Event('reference-rendered');
       window.dispatchEvent(renderEvent);
 
@@ -4261,6 +4262,7 @@ define('itemView',[
         Prism.highlightAll();
       }
 
+      console.log("i18n-ja:debug-reference: itemView.js 151");
       var renderEvent = new Event('reference-rendered');
       window.dispatchEvent(renderEvent);
 

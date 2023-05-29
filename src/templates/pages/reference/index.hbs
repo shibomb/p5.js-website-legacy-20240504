@@ -39,10 +39,14 @@ slug: reference/
     var translations;
 
     $(document).ready(function() {
+      console.log("i18n-ja:debug-reference: $(document).ready");
       var routes = window.location.pathname.split('/');
       var lang = routes[1];
+        console.log("i18n-ja:debug-reference: lang", lang);
       if (langs.indexOf(lang) != -1) {
+        console.log("i18n-ja:debug-reference: if (langs.indexOf(lang)");
         $.getJSON('/assets/reference/'+lang+'.json', function(data) {
+          console.log("i18n-ja:debug-reference: $.getJSON('/assets/reference/'+lang+'.json'");
           translations = data;
 
           window.addEventListener('reference-rendered', function() {

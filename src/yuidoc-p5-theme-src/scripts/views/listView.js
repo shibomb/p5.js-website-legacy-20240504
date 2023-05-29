@@ -100,6 +100,7 @@ define([
         this.$el.html(listHtml);
       }
 
+      console.log("i18n-ja:debug-reference: listView.js 103");
       var renderEvent = new Event('reference-rendered');
       window.dispatchEvent(renderEvent);
 
