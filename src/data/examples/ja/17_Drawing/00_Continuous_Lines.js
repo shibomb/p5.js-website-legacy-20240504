@@ -1,7 +1,7 @@
 /*
- * @name Continuous Lines
- * @arialabel Thin white line draws on a dark grey background as the user clicks and drags their mouse
- * @description Click and drag the mouse to draw a line.
+ * @name 連続線
+ * @arialabel ユーザーがマウスをドラッグすると、暗い灰色の背景に薄い白色の線が描かれます。
+ * @description マウスをドラッグすると、線を描くことができます。
  */
 function setup() {
   createCanvas(710, 400);
