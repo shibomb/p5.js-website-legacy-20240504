@@ -12,7 +12,7 @@ function setup() {
 function draw() {
   // variableEllipse() メソッドを呼び出し、
   // 現在のマウス位置と
-  // 前回のマウス位置をパラメーターとして送信します。
+  // 前回のマウス位置をパラメーターとして渡します。
   variableEllipse(mouseX, mouseY, pmouseX, pmouseY);
 }
 
