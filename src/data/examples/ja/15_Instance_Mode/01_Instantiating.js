@@ -1,8 +1,8 @@
 /*
- * @name Instantiation
- * @arialabel White square in the upper left quadrant on black background 
- * @description Create a p5 instance, which keeps all variables
- * out of the global scope of your page.
+ * @name インスタンス化
+ * @arialabel 黒い背景に左上に白い四角形があります。
+ * @description p5 インスタンスを作成し、すべての変数を
+ * ページのグローバルスコープから分離します。
  */
 let sketch = function(p) {
   let x = 100;
@@ -21,7 +21,7 @@ let sketch = function(p) {
 
 let myp5 = new p5(sketch);
 
-// Compare to "global mode"
+// 「グローバルモード」との比較
 // let x = 100;
 // let y = 100;
 
