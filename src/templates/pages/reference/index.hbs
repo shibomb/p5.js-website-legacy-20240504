@@ -45,14 +45,25 @@ slug: reference/
         console.log("i18n-ja:debug-reference: lang", lang);
       if (langs.indexOf(lang) != -1) {
         console.log("i18n-ja:debug-reference: if (langs.indexOf(lang)");
+
+        var didReferenceRendered = false
+        window.addEventListener('reference-rendered', function() {
+          console.log("rendered");
+          didReferenceRendered = true
+          if (translations) {
+            console.log("call updateLanguage() on rendered");
+            updateLanguage();
+          }
+        }, false);
+
         $.getJSON('/assets/reference/'+lang+'.json', function(data) {
           console.log("i18n-ja:debug-reference: $.getJSON('/assets/reference/'+lang+'.json'");
+          console.log(lang + ".json loaded");
           translations = data;
-
-          window.addEventListener('reference-rendered', function() {
-            console.log("rendered");
+          if (didReferenceRendered) {
+            console.log("call updateLanguage() on loaded");
             updateLanguage();
-          }, false);
+          }
         });
       }
     });
