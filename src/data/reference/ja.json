@@ -617,7 +617,7 @@
     },
     "curveTangent": {
       "description": [
-        "パラメーター t が0から1の間で変化し、a と d は曲線上の点であり、b と c はコントロールポイントです。"
+        "点 a、b、c、d の位置 t における曲線の接線を評価します。パラメーター t が0から1の間で変化し、a と d は曲線上の点、b と c はコントロールポイントです。"
       ],
       "returns": "Number: 位置 t における曲線の接線",
       "params": {
@@ -630,8 +630,8 @@
     },
     "beginContour": {
       "description": [
-        "<a href=\"#/p5/beginContour\">beginContour()</a> 関数と <a href=\"#/p5/endContour\">endContour()</a> 関数を使用して、文字の中心などの形状内の負の形状を作成します。 <a href=\"#/p5/beginContour\">beginContour()</a> 関数は、形状の頂点を記録し始め、<a href=\"#/p5/endContour\">endContour()</a> 関数は記録を停止します。負の形状を定義する頂点は、外部形状とは逆方向に「巻き」ます。最初に、外部の頂点を時計回りの順序で描き、内部の形状に対しては反時計回りの順序で描きます。",
-        "これらの関数は、<a href=\"#/p5/beginShape\">beginShape()</a>/<a href=\"#/p5/endShape\">endShape()</a> のペア内でのみ使用でき、<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a> などの変換は、<a href=\"#/p5/beginContour\">beginContour()</a>/<a href=\"#/p5/endContour\">endContour()</a> のペア内では機能しません。また、<a href=\"#/p5/ellipse\">ellipse()</a> や <a href=\"#/p5/rect\">rect()</a> などの他の形状を使用することもできません。"
+        "<a href=\"#/p5/beginContour\">beginContour()</a> 関数と <a href=\"#/p5/endContour\">endContour()</a> 関数を使用して、文字「0」の中心などのような形状内の負の形状を作成します。<a href=\"#/p5/beginContour\">beginContour()</a> 関数は形状の頂点の記録を開始し、<a href=\"#/p5/endContour\">endContour()</a> 関数は記録を停止します。負の形状を定義する頂点は、外部形状とは逆方向に「巻かれる」必要があります。まず外部の頂点を時計回りの順序で描き、内部の形状では反時計回りに頂点を描画します。",
+        "これらの関数は、<a href=\"#/p5/beginShape\">beginShape()</a>/<a href=\"#/p5/endShape\">endShape()</a> のペア内でのみ使用できます。また、<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、および <a href=\"#/p5/scale\">scale()</a> などの変換は、<a href=\"#/p5/beginContour\">beginContour()</a>/<a href=\"#/p5/endContour\">endContour()</a> のペア内では機能しません。<a href=\"#/p5/ellipse\">ellipse()</a> や <a href=\"#/p5/rect\">rect()</a> などの他の図形を使用することもできません。"
       ]
     },
     "beginShape": {
@@ -683,8 +683,8 @@
     },
     "endContour": {
       "description": [
-        "<a href=\"#/p5/beginContour\">beginContour()</a> と <a href=\"#/p5/endContour\">endContour()</a> 関数を使用して、文字'O'の中心など、図形内に負の図形を作成します。<a href=\"#/p5/beginContour\">beginContour()</a> は図形の頂点の記録を開始し、<a href=\"#/p5/endContour\">endContour()</a> は記録を停止します。負の形状を定義する頂点は、外部形状とは逆方向に\"巻かれる\"必要があります。まず、外部の時計回りの順序で頂点を描画し、内部の形状では、反時計回りに頂点を描画します。",
-        "これらの関数は、<a href=\"#/p5/beginShape\">beginShape()</a>/<a href=\"#/p5/endShape\">endShape()</a> のペア内でのみ使用でき、<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、および <a href=\"#/p5/scale\">scale()</a> などの変換は、<a href=\"#/p5/beginContour\">beginContour()</a>/<a href=\"#/p5/endContour\">endContour()</a> ペア内では動作しません。また、<a href=\"#/p5/ellipse\">ellipse()</a> や <a href=\"#/p5/rect\">rect()</a> などの他の図形を内部で使用することもできません。"
+        "<a href=\"#/p5/beginContour\">beginContour()</a> 関数と <a href=\"#/p5/endContour\">endContour()</a> 関数を使用して、文字「0」の中心などのような形状内の負の形状を作成します。<a href=\"#/p5/beginContour\">beginContour()</a> 関数は形状の頂点の記録を開始し、<a href=\"#/p5/endContour\">endContour()</a> 関数は記録を停止します。負の形状を定義する頂点は、外部形状とは逆方向に「巻かれる」必要があります。まず外部の頂点を時計回りの順序で描き、内部の形状では反時計回りに頂点を描画します。",
+        "これらの関数は、<a href=\"#/p5/beginShape\">beginShape()</a>/<a href=\"#/p5/endShape\">endShape()</a> のペア内でのみ使用できます。また、<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、および <a href=\"#/p5/scale\">scale()</a> などの変換は、<a href=\"#/p5/beginContour\">beginContour()</a>/<a href=\"#/p5/endContour\">endContour()</a> のペア内では機能しません。<a href=\"#/p5/ellipse\">ellipse()</a> や <a href=\"#/p5/rect\">rect()</a> などの他の図形を使用することもできません。"
       ]
     },
     "endShape": {
