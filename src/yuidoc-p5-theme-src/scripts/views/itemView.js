@@ -148,7 +148,6 @@ define([
         Prism.highlightAll();
       }
 
-      console.log("i18n-ja:debug-reference: itemView.js 151");
       var renderEvent = new Event('reference-rendered');
       window.dispatchEvent(renderEvent);
 
