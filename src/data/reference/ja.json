@@ -650,7 +650,7 @@
         "<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a> などの変換は <a href=\"#/p5/beginShape\">beginShape()</a> 内では機能しません。<a href=\"#/p5/ellipse\">ellipse()</a> や <a href=\"#/p5/rect\">rect()</a> などの他の図形も、<a href=\"#/p5/beginShape\">beginShape()</a> 内では使用できません。"
       ],
       "params": {
-        "kind": "Constant: (オプション) POINTS, LINES, TRIANGLES, TRIANGLE_FAN  TRIANGLE_STRIP, QUADS, QUAD_STRIP, TESS のいずれか"
+        "kind": "Constant: (オプション) POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, QUAD_STRIP, TESS のいずれか"
       }
     },
     "bezierVertex": {
