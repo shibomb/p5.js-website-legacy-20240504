@@ -645,7 +645,7 @@
         "TRIANGLE_STRIP: ストリップ状に接続された三角形のシリーズを描画します。",
         "QUADS: 別々の四角形のシリーズを描画します。",
         "QUAD_STRIP: 隣接する辺を使用して次の四角形を形成する四角形ストリップを描画します。",
-        "TESS（WebGL のみ）: 明示的なテッセレーションによる曲線を埋めるための不規則な多角形を扱います。",
+        "TESS (WebGL のみ): 曲線を埋めるための不規則なポリゴンを、明示的なテッセレーションで制御します。",
         "<a href=\"#/p5/beginShape\">beginShape()</a> 関数を呼び出した後、一連の <a href=\"#/p5/vertex\">vertex()</a> コマンドが続きます。図形の描画を停止するには、<a href=\"#/p5/endShape\">endShape()</a> を呼び出します。各図形は現在のストロークカラーで輪郭が描かれ、塗りつぶしカラーで塗りつぶされます。",
         "<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a> などの変換は <a href=\"#/p5/beginShape\">beginShape()</a> 内では機能しません。<a href=\"#/p5/ellipse\">ellipse()</a> や <a href=\"#/p5/rect\">rect()</a> などの他の図形も、<a href=\"#/p5/beginShape\">beginShape()</a> 内では使用できません。"
       ],
