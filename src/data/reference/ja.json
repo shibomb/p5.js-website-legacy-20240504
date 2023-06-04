@@ -636,7 +636,7 @@
     },
     "beginShape": {
       "description": [
-        "<a href=\"#/p5/beginShape\">beginShape()</a> 関数と <a href=\"#/p5/endShape\">endShape()</a> 関数を使用することで、より複雑な形状を作成できます。<a href=\"#/p5/beginShape\">beginShape()</a> は、形状の頂点を記録するために使用され、<a href=\"#/p5/endShape\">endShape()</a> は記録を停止します。 kind パラメーターの値によって、提供された頂点からどのタイプの形状を作成するかを指定できます。モードが指定されていない場合、形状は任意の不規則なポリゴンである可能性があります。",
+        "<a href=\"#/p5/beginShape\">beginShape()</a> 関数と <a href=\"#/p5/endShape\">endShape()</a> 関数を使用することで、より複雑な形状を作成できます。<a href=\"#/p5/beginShape\">beginShape()</a> は、形状の頂点を記録するために使用され、<a href=\"#/p5/endShape\">endShape()</a> は記録を停止します。kind パラメーターの値によって、提供された頂点からどのタイプの形状を作成するかを指定できます。モードが指定されていない場合、形状は任意の不規則なポリゴンである可能性があります。",
         "<a href=\"#/p5/beginShape\">beginShape()</a> 関数で利用可能なパラメーターは次のとおりです:",
         "POINTS: 点のシリーズを描画します。",
         "LINES: つながっていない線分のシリーズを描画します。",
@@ -645,8 +645,8 @@
         "TRIANGLE_STRIP: ストリップ状に接続された三角形のシリーズを描画します。",
         "QUADS: 別々の四角形のシリーズを描画します。",
         "QUAD_STRIP: 隣接する辺を使用して次の四角形を形成する四角形ストリップを描画します。",
-        "TESS(WebGL のみ):明示的なテッセレーションによる曲線の塗りつぶしに対応します。",
-        "<a href=\"#/p5/beginShape\">beginShape()</a> 関数を呼び出した後、一連の <a href=\"#/p5/vertex\">vertex()</a> コマンドが続きます。<a href=\"#/p5/endShape\">endShape()</a> を呼び出して図形の描画を停止します。各図形は現在のストロークカラーで輪郭が描かれ、塗りつぶしカラーで塗りつぶされます。",
+        "TESS (WebGL のみ): 曲線を埋めるための不規則なポリゴンを、明示的なテッセレーションで制御します。",
+        "<a href=\"#/p5/beginShape\">beginShape()</a> 関数を呼び出した後、一連の <a href=\"#/p5/vertex\">vertex()</a> コマンドが続きます。図形の描画を停止するには、<a href=\"#/p5/endShape\">endShape()</a> を呼び出します。各図形は現在のストロークカラーで輪郭が描かれ、塗りつぶしカラーで塗りつぶされます。",
         "<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a> などの変換は <a href=\"#/p5/beginShape\">beginShape()</a> 内では機能しません。<a href=\"#/p5/ellipse\">ellipse()</a> や <a href=\"#/p5/rect\">rect()</a> などの他の図形も、<a href=\"#/p5/beginShape\">beginShape()</a> 内では使用できません。"
       ],
       "params": {
@@ -4371,7 +4371,9 @@
       ]
     },
     "hideControls": {
-      "description": ["デフォルトの mediaElement コントロールを非表示にします。"]
+      "description": [
+        "デフォルトの mediaElement コントロールを非表示にします。"
+      ]
     },
     "addCue": {
       "description": [
