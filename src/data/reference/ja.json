@@ -3170,7 +3170,7 @@
     },
     "sphere": {
       "description": [
-        "指定された半径の球を描画する。",
+        "指定された半径の球を描画します。",
         "DetailX および detailY は、球の x 次元および y 次元の細分割数を決定します。細分割が多いほど、球は滑らかに見えます。推奨される最大値は24です。24より大きい値を使用すると、警告が表示されるか、ブラウザーが遅くなる可能性があります。"
       ],
       "params": {
@@ -6208,7 +6208,7 @@
     },
     "ramp": {
       "description": [
-        "最初の2つの値を使用して指数関数的に値を増加または減少させる。<code><a href=\"#/p5.Envelope/setADSR\">setADSR(attackTime, decayTime)</a></code> から時間定数を取得する。現在の値よりも高い場合は attackTime を、低い場合は decayTime を使用する。簡単な指数関数的なランプに対して <a href=\"https://en.wikipedia.org/wiki/RC_time_constant\">RC 時間定数</a> が使用される。"
+        "最初の2つの値を使用して指数関数的に値を増加または減少させる。<code><a href=\"#/p5.Envelope/setADSR\">setADSR(attackTime, decayTime)</a></code> から時間定数を取得します。現在の値よりも高い場合は attackTime を、低い場合は decayTime を使用します。簡単な指数関数的なランプに対して <a href=\"https://en.wikipedia.org/wiki/RC_time_constant\">RC 時間定数</a> が使用されます。"
       ],
       "params": {
         "unit": "Object: p5.sound オブジェクトまたは Web Audio Param オブジェクト",
