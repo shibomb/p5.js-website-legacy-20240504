@@ -3458,7 +3458,7 @@
         "テクスチャは、3D ジオメトリを覆う「皮膚」のようなものです。現在サポートされているテクスチャは画像、ビデオ、オフスクリーンレンダリングです。",
         "<a href=\"#/p5/beginShape\">beginShape()</a> で作成されたジオメトリにテクスチャを適用するには、<a href=\"#/p5/vertex\">vertex()</a> で uv 座標を指定する必要があります。",
         "なお、texture() は WebGL モードでのみ使用できます。",
-        "この <a href=\"https://p5js.org/examples/3d-materials.html\">例</a> でさらに多くの素材を見ることができます。"
+        "この <a href=\"/examples/3d-materials.html\">サンプル</a> でさらに多くのマテリアルを見ることができます。"
       ],
       "params": {
         "tex": "p5.Image|p5.MediaElement|p5.Graphics|p5.Texture: テクスチャとして使用する画像"
@@ -3488,18 +3488,18 @@
     },
     "normalMaterial": {
       "description": [
-        "現在の素材を通常の素材として設定します。",
-        "通常の素材は光の影響を受けません。デバッグ時にプレースホルダー素材としてよく使われます。",
+        "現在のマテリアルを通常のマテリアルとして設定します。",
+        "通常のマテリアルは光の影響を受けません。デバッグ時にプレースホルダーマテリアルとしてよく使われます。",
         "X 軸に面した面は赤くなり、Y 軸に面した面は緑になり、Z 軸に面した面は青になります。",
-        "他の素材は、この <a href=\"https://p5js.org/examples/3d-materials.html\">例</a> で見ることができます。"
+        "他のマテリアルは、この <a href=\"/examples/3d-materials.html\">サンプル</a> で見ることができます。"
       ]
     },
     "ambientMaterial": {
       "description": [
-        "素材のアンビエントカラーを設定します。",
+        "マテリアルのアンビエントカラーを設定します。",
         "ambientMaterial() カラーは、物体が <strong>どのような</strong> 照明もとでも反射する色です。",
         "色が黄色(255, 255, 0)の ambientMaterial() を考えてみましょう。光が白色(255, 255, 255)を放つ場合、物体は赤と緑の成分を反射するので、黄色に見えます。光が赤色(255, 0, 0)を放つ場合、物体は光の赤色成分を反射するので、赤色に見えます。光が青色(0, 0, 255)を放つ場合、物体は光の成分を反射できないので、黒色に見えます。",
-        "他の素材は、この <a href=\"https://p5js.org/examples/3d-materials.html\">例</a> で見ることができます。"
+        "他のマテリアルは、この <a href=\"/examples/3d-materials.html\">サンプル</a> で見ることができます。"
       ],
       "params": {
         "v1": "Number: 現在のカラーレンジに対する赤または色相値",
@@ -3511,10 +3511,10 @@
     },
     "emissiveMaterial": {
       "description": [
-        "素材のエミッシブカラーを設定します。",
-        "エミッシブ素材は、照明に関係なくエミッシブカラーを最大強度で表示します。これにより、オブジェクトが光っているように見える効果が得られます。",
-        "ただし、「エミッシブ」という言葉は、素材が周囲のオブジェクトに影響を与える光を実際に放射しないという意味では誤解を招くものです。",
-        "他の素材は、この <a href=\"https://p5js.org/examples/3d-materials.html\">例</a> で見ることができます。"
+        "マテリアルのエミッシブカラーを設定します。",
+        "エミッシブマテリアルは、照明に関係なくエミッシブカラーを最大強度で表示します。これにより、オブジェクトが光っているように見える効果が得られます。",
+        "ただし、「エミッシブ」という言葉は、マテリアルが周囲のオブジェクトに影響を与える光を実際に放射しないという意味では誤解を招くものです。",
+        "他のマテリアルは、この <a href=\"/examples/3d-materials.html\">サンプル</a> で見ることができます。"
       ],
       "params": {
         "v1": "Number: 現在のカラーレンジに対する赤または色相値",
@@ -3527,10 +3527,10 @@
     },
     "specularMaterial": {
       "description": [
-        "素材のスペキュラーカラーを設定します。",
-        "スペキュラー素材は反射性（光沢）があります。<a href=\"#/p5/shininess\">shininess()</a> 関数で光沢度を調整できます。",
-        "<a href=\"#/p5/ambientMaterial\">ambientMaterial()</a> と同様に、specularMaterial() カラーは、物体が <a href=\"#/p5/ambientLight\">ambientLight()</a> もとで反射する色です。ただし、ambientMaterial() とは異なり、他のすべてのタイプの光源（<a href=\"#/p5/directionalLight\">directionalLight()</a>、<a href=\"#/p5/pointLight\">pointLight()</a>、<a href=\"#/p5/spotLight\">spotLight()</a>）に対して、スペキュラー素材は <strong>光源の色</strong> を反射します。これが「光沢」のある外観を与える理由です。",
-        "他の素材は、この <a href=\"https://p5js.org/examples/3d-materials.html\">例</a> で見ることができます。"
+        "マテリアルのスペキュラーカラーを設定します。",
+        "スペキュラーマテリアルは反射性（光沢）があります。<a href=\"#/p5/shininess\">shininess()</a> 関数で光沢度を調整できます。",
+        "<a href=\"#/p5/ambientMaterial\">ambientMaterial()</a> と同様に、specularMaterial() カラーは、物体が <a href=\"#/p5/ambientLight\">ambientLight()</a> もとで反射する色です。ただし、ambientMaterial() とは異なり、他のすべてのタイプの光源（<a href=\"#/p5/directionalLight\">directionalLight()</a>、<a href=\"#/p5/pointLight\">pointLight()</a>、<a href=\"#/p5/spotLight\">spotLight()</a>）に対して、スペキュラーマテリアルは <strong>光源の色</strong> を反射します。これが「光沢」のある外観を与える理由です。",
+        "他のマテリアルは、この <a href=\"/examples/3d-materials.html\">サンプル</a> で見ることができます。"
       ],
       "params": {
         "gray": "Number: 白と黒の間の値を指定する数値。",
@@ -3554,7 +3554,7 @@
       "description": [
         "3D スケッチ内の現在のカメラの位置を設定します。この関数のパラメーターは、カメラの位置、スケッチの中心（カメラが指している場所）、および上方向（カメラの向き）を定義します。",
         "この関数はカメラの動きをシミュレートし、オブジェクトをさまざまな角度から見ることができます。覚えておいてください、オブジェクト自体を移動させるのではなく、カメラを移動させます。たとえば、centerX の値が正であり、カメラがスケッチの右側に回転する場合、オブジェクトは左に移動しているように見えます。",
-        "この <a href = \"https://www.openprocessing.org/sketch/740258\">例</a> を参照して、カメラの位置を確認してください。",
+        "この <a href = \"https://www.openprocessing.org/sketch/740258\">サンプル</a> を参照して、カメラの位置を確認してください。",
         "パラメーターが指定されていない場合、デフォルトで次のようになります: camera(0, 0, (height/2) / tan(PI/6), 0, 0, 0, 0, 1, 0)"
       ],
       "params": {
