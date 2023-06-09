@@ -1,10 +1,10 @@
 /*
- * @name Translate
- * @arialabel Two squares one white one black travel horizontally across a grey background. The black square moves faster than the white
- * @description The translate() function allows objects to be
- * moved to any location within the window. The first parameter
- * sets the x-axis offset and the second parameter sets the
- * y-axis offset. This example shows how transforms accumulate.
+ * @name 変換
+ * @arialabel 灰色の背景に、白い正方形と黒い正方形が横に移動しています。黒い正方形は白い正方形より速く移動しています。
+ * @description translate() 関数は、オブジェクトをウィンドウ内の任意の位置に移動させることができます。
+ * 1番目のパラメーターは x 軸のオフセットを設定し、
+ * 2番目のパラメーターは y 軸のオフセットを設定します。
+ * このサンプルでは、変換を累積していく方法を示しています。
  */
 
 let x = 0;
@@ -18,23 +18,23 @@ function setup() {
 
 function draw() {
   background(102);
-  // Animate by increasing our x value
+  // x の値を増やすことでアニメーションします。
   x = x + 0.8;
-  // If the shape goes off the canvas, reset the position
+  // 形状がキャンバス外に出た場合は位置をリセットします。
   if (x > width + dim) {
     x = -dim;
   }
 
-  // Even though our rect command draws the shape with its
-  // center at the origin, translate moves it to the new
-  // x and y position
+  // rect 関数が、原点を中心とした形状を描画していますが、
+  // translate で
+  // 新しい x 座標と y 座標に移動しています。
   translate(x, height / 2 - dim / 2);
-  fill(255);
+  fill(255); 
   rect(-dim / 2, -dim / 2, dim, dim);
 
-  // Transforms accumulate. Notice how this rect moves
-  // twice as fast as the other, but it has the same
-  // parameter for the x-axis value
+  // 変換を累積してます。
+  // この四角形が移動する速度は、他の四角形の2倍です。
+  // ですが、x 軸のパラメーターは同じであることに着目してください。
   translate(x, dim);
   fill(0);
   rect(-dim / 2, -dim / 2, dim, dim);
