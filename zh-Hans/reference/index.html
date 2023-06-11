@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="p5.js a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing.">
     <title tabindex="1">reference | p5.js</title>
-    <link rel="stylesheet" href="/assets/css/all.css?v=8dd5ca">
+    <link rel="stylesheet" href="/assets/css/all.css?v=e79f41">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 
@@ -119,7 +119,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
   <script src="/assets/js/vendor/require.min.js"></script>
   <script src="/assets/js/render.js?v=b98ef7"></script>
-  <script src="/assets/js/reference.js?v=bfccb9"></script>
+  <script src="/assets/js/reference.js?v=5a9e09"></script>
 
   <script>
 
@@ -129,13 +129,21 @@
       var routes = window.location.pathname.split('/');
       var lang = routes[1];
       if (langs.indexOf(lang) != -1) {
+
+        var didReferenceRendered = false
+        window.addEventListener('reference-rendered', function() {
+          console.log("rendered");
+          didReferenceRendered = true
+          if (translations) {
+            updateLanguage();
+          }
+        }, false);
+
         $.getJSON('/assets/reference/'+lang+'.json', function(data) {
           translations = data;
-
-          window.addEventListener('reference-rendered', function() {
-            console.log("rendered");
+          if (didReferenceRendered) {
             updateLanguage();
-          }, false);
+          }
         });
       }
     });
@@ -169,6 +177,9 @@
         $('#reference-error4').html(translations['reference-error4']);
         $('#reference-error5').html(translations['reference-error5']);
         // reference texts
+        $('#reference-deprecated1').html(translations['reference-deprecated1']);
+        $('#reference-deprecated2').html(translations['reference-deprecated2']);
+        $('#reference-p5sound-requires').html(translations['reference-p5sound-requires']);
         $('#reference-example').html(translations['reference-example']);
         $('#reference-description').html(translations['reference-description'])
         $('#reference-extends').html(translations['reference-extends']);
