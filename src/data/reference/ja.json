@@ -672,8 +672,8 @@
     },
     "curveVertex": {
       "description": [
-        "曲線の頂点座標を指定します。この関数は、<a href=\"#/p5/beginShape\">beginShape()</a> と <a href=\"#/p5/endShape\">endShape()</a> の間でのみ使用でき、<a href=\"#/p5/beginShape\">beginShape()</a> に MODE パラメーターが指定されていない場合に限ります。WebGL モードでは、curveVertex() は 2D および 3D モードで使用できます。2D モードは2つのパラメーターを期待し、3D モードは3つのパラメーターを期待します。",
-        "curveVertex() ラインの一連の最初と最後の点は、曲線の始点と終点をガイドするために使用されます。2番目と3番目の点の間に小さな曲線を描画するには、最低4つの点が必要です。curveVertex() で5番目の点を追加すると、2番目、3番目、4番目の点の間に曲線が描かれます。curveVertex() 関数は、Catmull-Rom スプラインの実装です。"
+        "曲線の頂点座標を指定します。この関数は、<a href=\"#/p5/beginShape\">beginShape()</a> と <a href=\"#/p5/endShape\">endShape()</a> の間でのみ使用できますが、<a href=\"#/p5/beginShape\">beginShape()</a> に MODE パラメーターが指定されている場合は使用できません。WebGL モードでは、curveVertex() は 2D および 3D モードで使用できます。2D モードでは2つのパラメーターが必要ですが、3D モードでは3つのパラメーターが必要です。",
+        "一連の curveVertex() ラインの最初と最後の点は、曲線の始点と終点をガイドするために使用されます。2番目と3番目の点の間に小さな曲線を描画するには、最低4つの点が必要です。curveVertex() で5番目の点を追加すると、2番目、3番目、4番目の点の間に曲線が描かれます。curveVertex() 関数は、Catmull-Rom スプラインの実装です。"
       ],
       "params": {
         "x": "Number: 頂点の x 座標",
