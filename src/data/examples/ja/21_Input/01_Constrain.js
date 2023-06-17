@@ -1,8 +1,8 @@
 /*
- * @name Constrain
- * @arialabel Pink rectangle on a grey background. A user uses their mouse to move a white circle within the pink rectangle 
- * @description Move the mouse across the screen to move
- * the circle. The program constrains the circle to its box.
+ * @name 制約
+ * @arialabel 灰色の背景にピンクの長方形があります。ユーザーはマウスを使って、ピンクの長方形の中にある白い円を動かせます。
+ * @description マウスを画面全体に動かして円を移動させます。
+ * 円が箱から出ないようにプログラムで制約しています。
  */
 let mx = 1;
 let my = 1;
