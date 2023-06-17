@@ -655,8 +655,8 @@
     },
     "bezierVertex": {
       "description": [
-        "Bezier 曲線の頂点座標を指定します。bezierVertex() を呼び出すごとに、Bezier 曲線の2つのコントロールポイントとひとつのアンカーポイントの位置が定義され、線または図形に新しいセグメントが追加されます。WebGL モードでは、bezierVertex() は 2D および 3D モードで使用できます。2D モードでは6つのパラメーターが必要ですが、3D モードでは9つのパラメーター（z 座標を含む）が必要です。",
-        "<a href=\"#/p5/beginShape\">beginShape()</a> 呼び出しで初めて bezierVertex() を使用する際は、最初のアンカーポイントを設定するために <a href=\"#/p5/vertex\">vertex()</a> 呼び出しを先頭に置く必要があります。この関数は <a href=\"#/p5/beginShape\">beginShape()</a> と <a href=\"#/p5/endShape\">endShape()</a> の間でのみ使用できますが、<a href=\"#/p5/beginShape\">beginShape()</a> に MODE または POINTS パラメーターが指定されている場合は使用できません。"
+        "Bezier 曲線の頂点座標を指定します。bezierVertex() を呼び出すごとに、Bezier 曲線の2つのコントロールポイントとひとつのアンカーポイントの位置が定義され、線または図形に新しいセグメントが追加されます。WebGL モードでは、bezierVertex() は 2D および 3D モードの両方で使用できます。2D モードでは6つのパラメーターが必要ですが、3D モードでは9つのパラメーター（z 座標を含む）が必要です。",
+        "<a href=\"#/p5/beginShape\">beginShape()</a> 呼び出し内で初めて bezierVertex() を使用する際は、最初のアンカーポイントを設定するために <a href=\"#/p5/vertex\">vertex()</a> 呼び出しを先頭に置く必要があります。この関数は <a href=\"#/p5/beginShape\">beginShape()</a> と <a href=\"#/p5/endShape\">endShape()</a> の間でのみ使用できますが、<a href=\"#/p5/beginShape\">beginShape()</a> に MODE または POINTS パラメーターが指定されている場合は使用できません。"
       ],
       "params": {
         "x2": "Number: 第1コントロールポイントの x 座標",
@@ -697,8 +697,8 @@
     },
     "quadraticVertex": {
       "description": [
-        "quadraticVertex() は、二次ベジェ曲線の頂点座標を指定します。quadraticVertex() の各呼び出しで、ベジェ曲線のひとつのコントロールポイントとひとつのアンカーポイントの位置が定義され、線や図形に新しいセグメントが追加されます。<a href=\"#/p5/beginShape\">beginShape()</a> の呼び出しで quadraticVertex() を初めて使用する場合、最初のアンカーポイントを設定するために <a href=\"#/p5/vertex\">vertex()</a> の呼び出しで前置しなければなりません。WebGL モードでは、quadraticVertex() は 2D モードと 3D モードの両方で使用できます。2D モードでは4つのパラメーターが必要で、3D モードでは6つのパラメーターが必要です（z 座標を含む）。",
-        "この関数は、<a href=\"#/p5/beginShape\">beginShape()</a> と <a href=\"#/p5/endShape\">endShape()</a> の間でのみ使用し、<a href=\"#/p5/beginShape\">beginShape()</a> に MODE や POINTS パラメーターが指定されていない場合にのみ使用できます。"
+        "quadraticVertex() は、二次ベジェ曲線の頂点座標を指定します。quadraticVertex() の各呼び出しで、ベジェ曲線のひとつのコントロールポイントとひとつのアンカーポイントの位置が定義され、線や図形に新しいセグメントが追加されます。<a href=\"#/p5/beginShape\">beginShape()</a> 内の呼び出しで初めて quadraticVertex() を使用する際は、最初のアンカーポイントを設定するために <a href=\"#/p5/vertex\">vertex()</a> 呼び出しを先頭に置く必要があります。WebGL モードでは、quadraticVertex() は 2D モードと 3D モードの両方で使用できます。2D モードでは4つのパラメーターが必要ですが、3D モードでは6つのパラメーター（z 座標を含む）が必要です。",
+        "この関数は <a href=\"#/p5/beginShape\">beginShape()</a> と <a href=\"#/p5/endShape\">endShape()</a> の間でのみ使用できますが、<a href=\"#/p5/beginShape\">beginShape()</a> に MODE または POINTS パラメーターが指定されている場合は使用できません。"
       ],
       "params": {
         "cx": "Number: コントロールポイントの x 座標",
