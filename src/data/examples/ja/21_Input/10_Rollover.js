@@ -1,9 +1,9 @@
 /*
- * @name Rollover
- * @arialabel Black square and white circle on grey background. The background turns black as the user’s mouth hovers over the black square and the background turns white as the user’s mouth hovers over the white square.
- * @description Roll over the colored squares in the center of the image to change the color of the outside rectangle.
- * <br><br><span class="small"><em>This example is ported from the <a href="https://processing.org/examples/rollover.html"> Rollover example</a>
- * on the Processing website</em></span>
+ * @name ロールオーバー
+ * @arialabel 灰色の背景に黒い四角形と白い円があります。
+ * マウスカーソルが黒い四角形にかかると背景は黒くなり、マウスカーソルが白い円にかかると背景は白くなります。
+ * @description 画像中央の色のついた図形の上にかかると、外側の四角の色が変化します。
+ * <br><br><span class="small"><em> このサンプルは、Processing ウェブサイトの <a href="https://processing.org/examples/rollover.html"> ロールオーバー サンプル</a> から移植されています</em></span>。
  */
 let squareX, squareY;  // Position of square button
 let circleX, circleY;  // Position of circle button
