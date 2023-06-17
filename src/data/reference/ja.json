@@ -655,8 +655,8 @@
     },
     "bezierVertex": {
       "description": [
-        "Bezier 曲線の頂点座標を指定します。bezierVertex() を呼び出すごとに、Bezier 曲線の2つのコントロールポイントとひとつのアンカーポイントの位置が定義され、線または図形に新しいセグメントが追加されます。WebGL モードでは、bezierVertex() は 2D および 3D モードで使用できます。2D モードでは6つのパラメーターが期待され、3D モードでは9つのパラメーター（z 座標を含む）が期待されます。",
-        "<a href=\"#/p5/beginShape\">beginShape()</a> 呼び出しで初めて bezierVertex() が使用される場合、最初のアンカーポイントを設定するために <a href=\"#/p5/vertex\">vertex()</a> の呼び出しで前置する必要があります。この関数は <a href=\"#/p5/beginShape\">beginShape()</a> と <a href=\"#/p5/endShape\">endShape()</a> の間で使用され、<a href=\"#/p5/beginShape\">beginShape()</a> に MODE または POINTS パラメーターが指定されていない場合に限ります。"
+        "Bezier 曲線の頂点座標を指定します。bezierVertex() を呼び出すごとに、Bezier 曲線の2つのコントロールポイントとひとつのアンカーポイントの位置が定義され、線または図形に新しいセグメントが追加されます。WebGL モードでは、bezierVertex() は 2D および 3D モードで使用できます。2D モードでは6つのパラメーターが必要ですが、3D モードでは9つのパラメーター（z 座標を含む）が必要です。",
+        "<a href=\"#/p5/beginShape\">beginShape()</a> 呼び出しで初めて bezierVertex() を使用する際は、最初のアンカーポイントを設定するために <a href=\"#/p5/vertex\">vertex()</a> 呼び出しを先頭に置く必要があります。この関数は <a href=\"#/p5/beginShape\">beginShape()</a> と <a href=\"#/p5/endShape\">endShape()</a> の間でのみ使用できますが、<a href=\"#/p5/beginShape\">beginShape()</a> に MODE または POINTS パラメーターが指定されている場合は使用できません。"
       ],
       "params": {
         "x2": "Number: 第1コントロールポイントの x 座標",
