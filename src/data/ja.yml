@@ -190,19 +190,19 @@ download:
   p5.js-editor: p5.js エディタ
   p5.js-editor-intro: このリンクは、p5.js エディタに直接アクセスできるようになっており、p5.js をすぐに使用できます。
   editor-includes: p5.js エディタを使用して、コーディングを始めましょう！セットアップは不要です！
-  complete-library-title: ライブラリ全体
+  complete-library-title: ライブラリ一式
   complete-library-intro1: >-
     p5.js ライブラリファイル、p5.sound アドオン、サンプルプロジェクトを含むダウンロードです。エディタは含まれていません。p5.js
     プロジェクトの設定方法については、
   complete-library-intro2: はじめに
   complete-library-intro3: をご覧ください。
-  p5.js-complete: p5.js 全体
+  p5.js-complete: p5.js 一式
   includes-1: '以下を含みます:'
   includes-2: p5.js、p5.sound.js、サンプルプロジェクト
   includes-3: 'バージョン '
-  single-files-title: シングルファイル
+  single-files-title: 単一ファイル
   single-files-intro: これらは p5.js ライブラリファイルへのダウンロードまたはリンクです。追加のコンテンツは含まれていません。
-  single-file: シングルファイル：
+  single-file: 単一ファイル：
   p5.js-uncompressed: フル非圧縮版
   compressed: 圧縮版
   link: リンク：
