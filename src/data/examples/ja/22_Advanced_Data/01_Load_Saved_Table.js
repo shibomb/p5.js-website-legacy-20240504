@@ -1,14 +1,14 @@
 /*
- * @name Load Saved Table
- * @arialabel Four white circles with labels 
- * @description Create a Bubble class, instantiate multiple bubbles using data from
- * a csv file, and display results on the screen.
- *  Because the web browsers differ in where they save files, we do not make use of
- * 
- * Based on Daniel Shiffman's <a href="https://processing.org/examples/loadsavetable.html">LoadSaveTable Example</a> for Processing.
+ * @name 保存されたテーブルの読み込み
+ * @arialabel ４つのラベル付きの白い丸があります。
+ * @description Bubble クラスを作成し、csv ファイルのデータを使って複数のバブルをインスタンス化し、
+ * 結果を画面上に表示します。
+ * Web ブラウザによってファイルの保存場所が異なるため、
+ * Processing の例とは異なり、saveTable は利用していません。<br><br>
+ * Processing 向けの Daniel Shiffman の<a href="https://processing.org/examples/loadsavetable.html">LoadSaveTable サンプル</a>をベースにしています。
  */
 
-// Bubble class
+// Bubble クラス
 class Bubble {
   constructor(x, y, diameter, name) {
     this.x = x;
@@ -20,13 +20,13 @@ class Bubble {
     this.over = false;
   }
 
-  // Check if mouse is over the bubble
+  // マウスがバブルの上にあるかどうかを確認します。
   rollover(px, py) {
     let d = dist(px, py, this.x, this.y);
     this.over = d < this.radius;
   }
 
-  // Display the Bubble
+  // バブルを表示します。
   display() {
     stroke(0);
     strokeWeight(0.8);
@@ -40,41 +40,41 @@ class Bubble {
   }
 }
 
-let table; // Global object to hold results from the loadTable call
-let bubbles = []; // Global array to hold all bubble objects
+let table; // loadTable 呼び出しの結果を保持するグローバルオブジェクト
+let bubbles = []; // すべてのバブルオブジェクトを保持するグローバル配列
 
-// Put any asynchronous data loading in preload to complete before "setup" is run
+// 非同期データロードを preload に置き、 "setup " 実行前に完了させます。
 function preload() {
   table = loadTable("assets/bubbles.csv", "header");
 }
 
-// Convert saved Bubble data into Bubble Objects
+// 保存したバブルデータをバブルオブジェクトに変換します。
 function loadData() {
   const bubbleData = table.getRows();
-  // The size of the array of Bubble objects is determined by the total number of rows in the CSV
+  // Bubbleオブジェクトの配列の大きさは、CSV の総行数によって決定されます。
   const length = table.getRowCount();
 
   for (let i = 0; i < length; i++) {
-    // Get position, diameter, name,
+    // 位置、直径、名称を取得します。
     const x = bubbleData[i].getNum("x");
     const y = bubbleData[i].getNum("y");
     const diameter = bubbleData[i].getNum("diameter");
     const name = bubbleData[i].getString("name");
 
-    // Put object in array
+    // オブジェクトを配列に追加します。
     bubbles.push(new Bubble(x, y, diameter, name));
   }
 }
 
-// Create a new Bubble each time the mouse is clicked.
+// マウスをクリックするたびに新しい Bubble を作成します。
 function mousePressed() {
-  // Create a new row
+  // 新しい行を作成します。
   let row = table.addRow();
 
   let name = "New Bubble";
   let diameter = random(40, 80);
 
-  // Set the values of that row
+  // その行に値を設定します。
   row.setNum("x", mouseX);
   row.setNum("y", mouseY);
   row.setNum("diameter", diameter);
@@ -82,9 +82,9 @@ function mousePressed() {
 
   bubbles.push(new Bubble(mouseX, mouseY, diameter, name));
 
-  // If the table has more than 10 rows
+  // テーブルが 10 行以上ある場合は、
   if (table.getRowCount() > 10) {
-    // Delete the oldest row
+    // 最も古い行を削除します。
     table.removeRow(0);
     bubbles.shift();
   }
@@ -98,13 +98,13 @@ function setup() {
 function draw() {
   background(255);
 
-  // Display all bubbles
+  // すべてのバブルを表示します。
   for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].display();
     bubbles[i].rollover(mouseX, mouseY);
   }
 
-  // Label directions at bottom
+  // 底面のラベルの位置を設定します。
   textAlign(LEFT);
   fill(0);
   text("Click to add bubbles.", 10, height - 10);
