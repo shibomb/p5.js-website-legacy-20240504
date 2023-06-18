@@ -1,15 +1,15 @@
 /*
- * @name Variable Scope
- * @arialabel Black background with vertical white lines condensed on the left side
- * @description Variables have a global or function "scope". For example,
- * variables declared within either the setup() or draw() functions may be
- * only used in these functions. Global variables, variables declared outside
- * of setup() and draw(), may be used anywhere within the program. If a function
- * variable is declared with the same name as a global variable, the program
- * will use the function variable to make its calculations within the current
- * scope.
+ * @name 変数のスコープ
+ * @arialabel 黒い背景に、左側に白の縦線が凝縮されたデザインが表示されています。
+ * @description 変数には、グローバルまたは関数の "スコープ "があります。
+ * 例えば、setup() 関数と draw() 関数のどちらかの中で宣言された変数は、
+ * これらの関数内でのみ使用できます。
+ * グローバル変数は、setup() と draw() の外で宣言された変数で、
+ * プログラム内のどこでも使用できます。
+ * 関数内の変数がグローバル変数と同じ名前で宣言されている場合、
+ * プログラムは現在のスコープ内で関数内の変数を使用して計算を行うことになります。
  */
-let a = 80; // Create a global variable "a"
+let a = 80; // グローバル変数 "a "の作成
 
 function setup() {
   createCanvas(720, 400);
@@ -19,31 +19,31 @@ function setup() {
 }
 
 function draw() {
-  // Draw a line using the global variable "a"
+  // グローバル変数 "a"を使って線を引きます。
   line(a, 0, a, height);
 
-  // Use a local variable a in for loop
+  // forループでローカル変数 "a" を使用します。
   for (let a = 120; a < 200; a += 3) {
     line(a, 0, a, height);
   }
 
-  // Make a call to the custom function drawAnotherLine()
+  // カスタム関数 drawAnotherLine() を呼び出します。
   drawAnotherLine();
 
-  // Make a call to the custom function drawYetAnotherLine()
+  // カスタム関数 drawYetAnotherLine() を呼び出します。
   drawYetAnotherLine();
 }
 
 function drawAnotherLine() {
-  // Create a new variable "a" local to this function
+  // この関数のローカル変数 "a" を新規に作成する。
   let a = 320;
-  // Draw a line using the local variable "a"
+  // ローカル変数 "a" を使って線を引く
   line(a, 0, a, height);
 }
 
 function drawYetAnotherLine() {
-  // Because no new local variable "a" is set,
-  // this line draws using the original global
-  // variable "a" which is set to the value 20.
+  // 新しいローカル変数 "a" が設定されていないため、
+  // この線は、値が 20 に設定された元のグローバル変数 "a" を使用して
+  // 描画されます。
   line(a + 3, 0, a + 3, height);
 }

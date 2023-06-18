@@ -1,8 +1,8 @@
 /*
- * @name Variables
- * @arialabel Black background with three sets of grey lines that form rectangles.
- * @description Variables are used for storing values. In this example, change
- * the values of variables to affect the composition.
+ * @name 変数
+ * @arialabel 黒い背景に、グレーの線で形成された3組の長方形があります。
+ * @description 変数は、値を格納するために使用されます。
+ * このサンプルでは、変数の値を変更することで構成に影響を与えます。
  */
 function setup() {
   createCanvas(720, 400);
