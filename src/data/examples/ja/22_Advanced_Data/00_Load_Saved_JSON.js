@@ -1,14 +1,14 @@
 /*
- * @name Load Saved JSON
- * @arialabel When the user clicks on the screen, a small white circle appears with a label
- * @description Create a Bubble class, instantiate multiple bubbles using data from
- * a JSON file, and display results on the screen.
- *  Because the web browsers differ in where they save files, we do not make use of
- * saveJSON, unlike the Processing example.<br><br>
- * Based on Daniel Shiffman's <a href="https://processing.org/examples/loadsavejson.html">LoadSaveJSON Example</a> for Processing.
+ * @name 保存されたJSONの読み込み
+ * @arialabel ユーザーが画面をクリックすると、小さな白い円が表示され、ラベルが表示されます。
+ * @description Bubble クラスを作成し、JSON ファイルのデータを使って
+ * 複数のバブルをインスタンス化し、結果を画面に表示します。
+ * Web ブラウザによってファイルの保存場所が異なるため、
+ * Processing の例とは異なり、saveJSON は利用していません。<br><br>
+ * Processing 向けの Daniel Shiffman の<a href="https://processing.org/examples/loadsavejson.html">LoadSaveJSON サンプル</a>をベースにしています。
  */
 
-// Bubble class
+// Bubble クラス
 class Bubble {
   constructor(x, y, diameter, name) {
     this.x = x;
@@ -20,13 +20,13 @@ class Bubble {
     this.over = false;
   }
 
-  // Check if mouse is over the bubble
+  // マウスがバブルの上にあるかどうかを確認します。
   rollover(px, py) {
     let d = dist(px, py, this.x, this.y);
     this.over = d < this.radius;
   }
 
-  // Display the Bubble
+  // バブルを表示します。
   display() {
     stroke(0);
     strokeWeight(0.8);
@@ -40,47 +40,47 @@ class Bubble {
   }
 }
 
-let data = {}; // Global object to hold results from the loadJSON call
-let bubbles = []; // Global array to hold all bubble objects
+let data = {}; // loadJSON 呼び出しの結果を保持するグローバルオブジェクト
+let bubbles = []; // すべてのバブルオブジェクトを保持するグローバル配列
 
-// Put any asynchronous data loading in preload to complete before "setup" is run
+// 非同期データロードを preload に置き、 "setup " 実行前に完了させます。
 function preload() {
   data = loadJSON('assets/bubbles.json');
 }
 
-// Convert saved Bubble data into Bubble Objects
+// 保存したバブルデータをバブルオブジェクトに変換します。
 function loadData() {
   let bubbleData = data['bubbles'];
   for (let i = 0; i < bubbleData.length; i++) {
-    // Get each object in the array
+    // 配列内の各オブジェクトを取得します。
     let bubble = bubbleData[i];
-    // Get a position object
+    // 位置オブジェクトを取得します。
     let position = bubble['position'];
-    // Get x,y from position
+    // 位置から x, y を取得します。
     let x = position['x'];
     let y = position['y'];
 
-    // Get diameter and label
+    // 直径とラベルを取得します。
     let diameter = bubble['diameter'];
     let label = bubble['label'];
 
-    // Put object in array
+    // オブジェクトを配列に追加します。
     bubbles.push(new Bubble(x, y, diameter, label));
   }
 }
 
-// Create a new Bubble each time the mouse is clicked.
+// マウスをクリックするたびに新しい Bubble を作成します。
 function mousePressed() {
-  // Add diameter and label to bubble
+  // バブルに直径とラベルを追加します。
   let diameter = random(40, 80);
   let label = 'New Label';
 
-  // Append the new JSON bubble object to the array
+  // 新しい JSON バブルオブジェクトを配列に追加します。
   bubbles.push(new Bubble(mouseX, mouseY, diameter, label));
 
-  // Prune Bubble Count if there are too many
+  // バブルの数が多すぎる場合は削除します。
   if (bubbles.length > 10) {
-    bubbles.shift(); // remove first item from array
+    bubbles.shift(); // 配列から最初の項目を削除します。
   }
 }
 
@@ -92,13 +92,13 @@ function setup() {
 function draw() {
   background(255);
 
-  // Display all bubbles
+  // すべてのバブルを表示します。
   for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].display();
     bubbles[i].rollover(mouseX, mouseY);
   }
 
-  // Label directions at bottom
+  // 底面のラベルの位置を設定します。
   textAlign(LEFT);
   fill(0);
   text('Click to add bubbles.', 10, height - 10);
