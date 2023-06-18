@@ -1,11 +1,9 @@
 /*
- * @name True and False
- * @arialabel Black background with vertical white lines on the left half and horizontal white lines on the right half
- * @description A Boolean variable has only two possible values: true or false.
- * It is common to use Booleans with control statements to determine the flow
- * of a program. In this example, when the boolean value "b" is true, vertical
- * lines are drawn and when the boolean value "b" is false, horizontal
- * lines are drawn.
+ * @name 真と偽
+ * @arialabel 黒い背景に左半分に複数の縦の白線、右半分に複数に横の白線があります。
+ * @description ブール変数は、 true か false の2つの値のみが使用できます。
+ * プログラムの流れを決定する制御文にブール値を使うのが一般的です。
+ * このサンプルでは、ブール値 "b" が真のときは縦線が、偽のときは横線が引かれます。
  */
 function setup() {
   createCanvas(720, 400);
@@ -20,12 +18,12 @@ function setup() {
     b = i < middle;
 
     if (b === true) {
-      // Vertical line
+      // 縦線
       line(i, d, i, height - d);
     }
 
     if (b === false) {
-      // Horizontal line
+      // 横線
       line(middle, i - middle + d, width - d, i - middle + d);
     }
   }
