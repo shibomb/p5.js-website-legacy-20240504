@@ -51,7 +51,7 @@ function preload() {
 // 保存したバブルデータをバブルオブジェクトに変換します。
 function loadData() {
   const bubbleData = table.getRows();
-  // Bubbleオブジェクトの配列の大きさは、CSVの総行数によって決定されます。
+  // Bubbleオブジェクトの配列の大きさは、CSV の総行数によって決定されます。
   const length = table.getRowCount();
 
   for (let i = 0; i < length; i++) {
@@ -82,7 +82,7 @@ function mousePressed() {
 
   bubbles.push(new Bubble(mouseX, mouseY, diameter, name));
 
-  // テーブルが10行以上ある場合は、
+  // テーブルが 10 行以上ある場合は、
   if (table.getRowCount() > 10) {
     // 最も古い行を削除します。
     table.removeRow(0);
