@@ -5,7 +5,6 @@
  * 結果を画面上に表示します。
  * Web ブラウザによってファイルの保存場所が異なるため、
  * Processing の例とは異なり、saveTable は利用していません。<br><br>
- * Daniel Shiffman の<a href="https://processing.org/examples/loadsavejson.html">LoadSaveJSON サンプル</a> for Processingをベースにしています。
  * Processing 向けの Daniel Shiffman の<a href="https://processing.org/examples/loadsavetable.html">LoadSaveTable サンプル</a>をベースにしています。
  */
 
