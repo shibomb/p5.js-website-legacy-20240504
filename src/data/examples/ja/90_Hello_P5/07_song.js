@@ -1,16 +1,16 @@
 /*
- * @name Song
- * @arialabel Grey background divided into 7 vertical rectangles. When the user hovers, the rectangle turns dark grey. When the user clicks, each rectangle turns cyan and plays a different note.
+ * @name 歌
+ * @arialabel 灰色の背景を7つの縦長の長方形に分割しています。ユーザーがホバーすると、長方形は濃い灰色に変わります。ユーザーがクリックすると、それぞれの矩形がシアン色に変わり、異なる音を奏でます。
  * @frame 720, 430
- * @description Play a song.
- * You will need to include the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound
- * library</a> for this example to work in your own project.
+ * @description 曲を再生する。
+ * このサンプルを自分のプロジェクトで動作させるためには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>
+ * を含める必要があります。
  */
-// The midi notes of a scale
+// 音階のmidiノート
 let notes = [ 60, 62, 64, 65, 67, 69, 71];
 
-// For automatically playing the song
+// 楽曲を自動再生する場合
 let index = 0;
 let song = [
   { note: 4, duration: 400, display: "D" },
@@ -32,7 +32,7 @@ function setup() {
   div.id("instructions");
   let button = createButton("play song automatically.");
   button.parent("instructions");
-  // Trigger automatically playing
+  // 自動再生のトリガーです。
   button.mousePressed(function() {
     if (!autoplay) {
       index = 0;
@@ -40,20 +40,20 @@ function setup() {
     }
   });
 
-  // A triangle oscillator
+  // 三角波発振器（オシレーター）
   osc = new p5.TriOsc();
-  // Start silent
+  // 静寂をスタート
   osc.start();
   osc.amp(0);
 }
 
-// A function to play a note
+// 音を鳴らすための関数
 function playNote(note, duration) {
   osc.freq(midiToFreq(note));
-  // Fade it in
+  // フェードインさせます。
   osc.fade(0.5,0.2);
 
-  // If we sest a duration, fade it out
+  // duration が設定されている場合は、フェードアウトします。
   if (duration) {
     setTimeout(function() {
       osc.fade(0,0.2);
@@ -63,30 +63,30 @@ function playNote(note, duration) {
 
 function draw() {
 
-  // If we are autoplaying and it's time for the next note
+  // 自動再生していて、次の音符の時間になった場合
   if (autoplay && millis() > trigger){
     playNote(notes[song[index].note], song[index].duration);
     trigger = millis() + song[index].duration;
-    // Move to the next note
+    // 次の音に移動します。
     index ++;
-  // We're at the end, stop autoplaying.
+  // 終わりまできたら、自動再生を停止します。
   } else if (index >= song.length) {
     autoplay = false;
   }
 
 
-  // Draw a keyboard
+  // キーボードを描きます。
 
-  // The width for each key
+  // 各キーに対応する幅
   let w = width / notes.length;
   for (let i = 0; i < notes.length; i++) {
     let x = i * w;
-    // If the mouse is over the key
+    // マウスがキーの上にある場合
     if (mouseX > x && mouseX < x + w && mouseY < height) {
-      // If we're clicking
+      // クリックしている場合
       if (mouseIsPressed) {
         fill(100,255,200);
-      // Or just rolling over
+      // あるいは、ただ載せているだけの場合、
       } else {
         fill(127);
       }
@@ -94,27 +94,27 @@ function draw() {
       fill(200);
     }
 
-    // Or if we're playing the song, let's highlight it too
+    // あるいは、曲を再生しているのであれば、その音も強調します。
     if (autoplay && i === song[index-1].note) {
       fill(100,255,200);
     }
 
-    // Draw the key
+    // キーを描きます。
     rect(x, 0, w-1, height-1);
   }
 
 }
 
-// When we click
+// マウスをクリックしたとき
 function mousePressed(event) {
   if(event.button == 0 && event.clientX < width && event.clientY < height) {
-    // Map mouse to the key index
+    // マウスをキーインデックスに対応させます。
     let key = floor(map(mouseX, 0, width, 0, notes.length));
     playNote(notes[key]);
   }
 }
 
-// Fade it out when we release
+// マウスリリース時にフェードアウトさせます。
 function mouseReleased() {
   osc.fade(0,0.5);
 }
