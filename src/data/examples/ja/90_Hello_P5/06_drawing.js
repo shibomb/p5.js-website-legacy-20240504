@@ -1,16 +1,16 @@
 /*
-* @name Drawing
-* @arialabel When the user clicks and drags on the light grey background, the user draws a pattern of dark grey circles connected by dark grey lines which also disappears after a bit.
-* @description Generative painting program.
+* @name ドローイング
+* @arialabel 薄い灰色の背景をクリック＆ドラッグすると、濃いグレーの円を濃いグレーの線でつないだパターンが描かれますが、少しすると消えてしまいます。
+* @description ジェネレーティブ・ペインティング・プログラム。
 */
 
-// All the paths
+// すべてのパス
 let paths = [];
-// Are we painting?
+// 描いているかどうか
 let painting = false;
-// How long until the next circle
+// 次の円までどのくらいかかるか
 let next = 0;
-// Where are we now and where were we?
+// 現在地と過去の位置
 let current;
 let previous;
 
@@ -23,36 +23,36 @@ function setup() {
 function draw() {
   background(200);
   
-  // If it's time for a new point
+  // 新しいポイントを処理するタイミングならば
   if (millis() > next && painting) {
 
-    // Grab mouse position      
+    // マウスの位置を把握します。      
     current.x = mouseX;
     current.y = mouseY;
 
-    // New particle's force is based on mouse movement
+    // 新しいパーティクルの力は、マウスの動きに基づいています。
     let force = p5.Vector.sub(current, previous);
     force.mult(0.05);
 
-    // Add new particle
+    // 新しいパーティクルを追加します。
     paths[paths.length - 1].add(current, force);
     
-    // Schedule next circle
+    // 次の円を処理するタイミングを決定します。
     next = millis() + random(100);
 
-    // Store mouse values
+    // マウスの値を保存します。
     previous.x = current.x;
     previous.y = current.y;
   }
 
-  // Draw all paths
+  // すべてのパスを描画します。
   for( let i = 0; i < paths.length; i++) {
     paths[i].update();
     paths[i].display();
   }
 }
 
-// Start it up
+// スタートします。
 function mousePressed() {
   next = 0;
   painting = true;
@@ -61,12 +61,12 @@ function mousePressed() {
   paths.push(new Path());
 }
 
-// Stop
+// ストップします。
 function mouseReleased() {
   painting = false;
 }
 
-// A Path is a list of particles
+// Path はパーティクルのリストです。
 class Path {
   constructor() {
     this.particles = [];
@@ -74,18 +74,18 @@ class Path {
   }
 
   add(position, force) {
-    // Add a new particle with a position, force, and hue
+    // 位置、力、色相を持つ新しいパーティクルを追加します。
     this.particles.push(new Particle(position, force, this.hue));
   }
   
-  // Display plath
+  // パスを更新します。
   update() {  
     for (let i = 0; i < this.particles.length; i++) {
       this.particles[i].update();
     }
   }  
   
-  // Display plath
+  // パスを表示します。
   display() {    
     // Loop through backwards
     for (let i = this.particles.length - 1; i >= 0; i--) {
@@ -101,7 +101,7 @@ class Path {
   }  
 }
 
-// Particles along the path
+// パス上のパーティクル（粒子）
 class Particle {
   constructor(position, force, hue) {
     this.position = createVector(position.x, position.y);
@@ -111,21 +111,21 @@ class Particle {
   }
 
   update() {
-    // Move it
+    // 移動します。
     this.position.add(this.velocity);
-    // Slow it down
+    // 減速します・
     this.velocity.mult(this.drag);
-    // Fade it out
+    // フェードアウトします。
     this.lifespan--;
   }
 
-  // Draw particle and connect it with a line
-  // Draw a line to another
+  // パーティクルを描き、それを線で結びます。
+  // 別のパーティクルに線を引きます。
   display(other) {
     stroke(0, this.lifespan);
     fill(0, this.lifespan/2);    
     ellipse(this.position.x,this.position.y, 8, 8);    
-    // If we need to draw a line
+    // もし、線を引く必要があるのならば
     if (other) {
       line(this.position.x, this.position.y, other.position.x, other.position.y);
     }
