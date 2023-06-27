@@ -900,7 +900,7 @@
     },
     "frameCount": {
       "description": [
-        "システム変数 <a href=\"#/p5/frameCount\">frameCount</a> は、プログラムが開始されてから表示されたフレームの数を格納します。<a href=\"#/p5/setup\">setup()</a> 内では値は0で、<a href=\"#/p5/draw\">draw()</a> の最初の反復後に1になります。"
+        "システム変数 <a href=\"#/p5/frameCount\">frameCount</a> は、プログラムが開始されてから表示されたフレームの数を格納します。この変数の値は <a href=\"#/p5/setup\">setup()</a> 内では0で、<a href=\"#/p5/draw\">draw()</a> の最初の反復後に1以上になります。"
       ]
     },
     "deltaTime": {
