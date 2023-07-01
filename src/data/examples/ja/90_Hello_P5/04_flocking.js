@@ -18,14 +18,14 @@ function setup() {
 
 function draw() {
   background(51);
-  // すべてのボイドを走らせます。
+  // すべてのボイドを実行します。
   for (let i = 0; i < boids.length; i++) {
     boids[i].run(boids);
   }
 }
 
 // Boid クラス
-// 分離、凝集、整列のためのメソッドを追加しました。
+// 分離、凝集、整列のためのメソッド持ちます。
 class Boid {
   constructor(x, y) {
     this.acceleration = createVector(0, 0);
@@ -78,10 +78,10 @@ class Boid {
   // STEER = DESIRED MINUS VELOCITY
   seek(target) {
     let desired = p5.Vector.sub(target, this.position); // 位置からターゲットを指すベクトル
-    // 望ましい速度(desired)を正規化し、最高速へスケールします。
+    // 目標のベロシティ(desired)を正規化し、最高速へスケールします。
     desired.normalize();
     desired.mult(this.maxspeed);
-    // ステアリング ＝ 望ましい速度 ー 速度
+    // ステアリング ＝ 目標のベロシティ ー ベロシティ
     let steer = p5.Vector.sub(desired, this.velocity);
     steer.limit(this.maxforce); // ステアリングの力を最大値に制限します。
     return steer;
@@ -128,7 +128,7 @@ class Boid {
   
     // ベクトルが0より大きければよい
     if (steer.mag() > 0) {
-      // Reynolds を実装します ： ステアリング = 望ましい - 速度
+      // Reynolds を実装します ： ステアリング = 目標のベロシティ - ベロシティ
       steer.normalize();
       steer.mult(this.maxspeed);
       steer.sub(this.velocity);
