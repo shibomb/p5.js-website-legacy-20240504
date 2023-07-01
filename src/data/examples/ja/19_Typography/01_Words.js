@@ -1,23 +1,22 @@
 /*
- * @name Words
- * @arialabel Three columns of the words “ichi,” “ni,” “san,” and “shi” gradienting from black to white on a gray background. The first column is right aligned, the middle column is center aligned, and the left column is left aligned
- * @description The text() function is used for writing words to the screen.
- * The words can be aligned left, center, or right with the textAlign()
- * function, and like with shapes, words can be colored with fill().
+ * @name 単語
+ * @arialabel 灰色の背景に黒から白へのグラデーションで “ichi”、“ni”、“san”、"shi” の文字が3列で表示されています。最初の列は右揃え、真ん中の列は中央揃え、左の列は左揃えになっています。
+ * @description text()関数は、画面に文字を書き込むために使用します。
+ * 単語は、textAlign() 関数で左揃え、中央揃え、右揃えにすることができ、図形と同様に、fill() で色を付けることができます。
  */
 let font,
   fontsize = 40;
 
 function preload() {
-  // Ensure the .ttf or .otf font stored in the assets directory
-  // is loaded before setup() and draw() are called
+  // assets ディレクトリに保存されている .ttf や .otf フォントは、
+  // setup() と draw() が呼ばれる前に確実に読み込みます。
   font = loadFont('assets/SourceSansPro-Regular.otf');
 }
 
 function setup() {
   createCanvas(710, 400);
 
-  // Set text characteristics
+  // テキストの特徴を設定します。
   textFont(font);
   textSize(fontsize);
   textAlign(CENTER, CENTER);
@@ -26,26 +25,26 @@ function setup() {
 function draw() {
   background(160);
 
-  // Align the text to the right
-  // and run drawWords() in the left third of the canvas
+  // テキストを右に揃えます。
+  // そして、キャンバスの左3分の1で drawWords() を実行します。
   textAlign(RIGHT);
   drawWords(width * 0.25);
 
-  // Align the text in the center
-  // and run drawWords() in the middle of the canvas
+  // テキストを中央に揃えます。
+  // そして、キャンバスの中央で drawWords() を実行します。
   textAlign(CENTER);
   drawWords(width * 0.5);
 
-  // Align the text to the left
-  // and run drawWords() in the right third of the canvas
+  // テキストを左に揃えます。
+  // そして、キャンバスの右3分の1で drawWords() を実行します。
   textAlign(LEFT);
   drawWords(width * 0.75);
 }
 
 function drawWords(x) {
-  // The text() function needs three parameters:
-  // the text to draw, the horizontal position,
-  // and the vertical position
+  // text()関数は3つのパラメータを必要とします。
+  // 描画するテキスト、水平位置、
+  // そして、垂直位置です。
   fill(0);
   text('ichi', x, 80);
 
