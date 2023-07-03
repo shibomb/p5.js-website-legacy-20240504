@@ -1,9 +1,9 @@
 /*
- * @name Modifying the DOM
- * @arialabel Words in black font jittering on a white background
+ * @name DOMの変更
+ * @arialabel 黒いフォントの言葉が白い背景上で揺れています。
  * @frame 710,300
- * @description Create DOM elements and modify their properties every time
- * draw() is called.
+ * @description draw() が呼び出されるたびにDOM要素を作成し、
+ * そのプロパティを修正します。
  */
 let dancingWords = [];
 
@@ -23,18 +23,18 @@ class DanceSpan {
 }
 
 function setup() {
-  // This paragraph is created aside of the main block of code.
-  // It's to differentiate the creation of an element from its
-  // selection. Selected elements don't need to be created by
-  // p5js, they can be just plain HTML.
+  // この段落は、コードの main ブロックとは別に作成されています。
+  // これは要素の作成と選択を区別するためです。
+  // 選択された要素は p5js によって作成する必要はなく、
+  // プレーンなHTMLで十分です。
   createP(
     'I learn in this Letter, that Don Peter of Aragon, ' +
       ' comes this night to Messina'
   ).addClass('text').hide();
 
-  // This line grabs the paragraph just created, but it would
-  // also grab any other elements with class 'text' in the HTML
-  // page.
+  // この行は作成したばかりの段落を取得しますが、
+  // HTMLページ内のクラス 'text' をもつ他の要素も
+  // 取得します。
   const texts = selectAll('.text');
 
   for (let i = 0; i < texts.length; i++) {

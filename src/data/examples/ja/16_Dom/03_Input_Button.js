@@ -1,12 +1,12 @@
 /*
- * @name Input and Button
- * @arialabel “What is your name?” is written in the top left of the window with a text input box and a submit button under. After inputting text and submitting, the text submitted is generated multiple times to cover the background in a random formation in various shades of cyan.
- * @description Input text and click the button to see it affect the the canvas.
+ * @name インプットとボタン
+ * @arialabel 「What is your name?」というテキストがウィンドウの左上に書かれ、その下にテキスト入力ボックスと送信ボタンがあります。テキストを入力して送信すると、送信されたテキストがさまざまなシアン色の陰影でランダムな形成で背景を覆うように何度も生成されます。
+ * @description テキストを入力してボタンをクリックして、キャンバスにどのように影響するかを確認してください。
  */
 let input, button, greeting;
 
 function setup() {
-  // create canvas
+  // キャンバスを作成します。
   createCanvas(710, 400);
 
   input = createInput();

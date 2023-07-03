@@ -1,9 +1,9 @@
 /*
- * @name Video
- * @arialabel Video of fingers walking 
+ * @name ビデオ
+ * @arialabel 指で歩く映像です。
  * @frame 710,250
- * @description Load a video with multiple formats and toggle between playing
- * and paused with a button press.
+ * @description 複数のフォーマットでビデオをロードし、ボタンを押すことで
+ * 再生と一時停止を切り替えます。
  */
 let playing = false;
 let fingers;
@@ -11,13 +11,13 @@ let button;
 
 function setup() {
   noCanvas();
-  // specify multiple formats for different browsers
+  // 異なるブラウザ用に複数のフォーマットを指定します。
   fingers = createVideo(['assets/fingers.mov', 'assets/fingers.webm']);
   button = createButton('play');
-  button.mousePressed(toggleVid); // attach button listener
+  button.mousePressed(toggleVid); // ボタンリスナーをアタッチします。
 }
 
-// plays or pauses the video depending on current state
+// 現在の状態に応じてビデオを再生または一時停止します。
 function toggleVid() {
   if (playing) {
     fingers.pause();

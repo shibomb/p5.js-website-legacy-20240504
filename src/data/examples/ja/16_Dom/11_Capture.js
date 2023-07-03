@@ -1,12 +1,12 @@
 /*
- * @name Video Capture
- * @arialabel Takes feed from the user’s computer camera and displays it in the window
+ * @name ビデオキャプチャー
+ * @arialabel ユーザーのコンピュータのカメラからフィードを取得し、ウィンドウに表示します。
  * @frame 710,240
- * @description Capture video from the webcam and display
- * on the canvas as well with invert filter. Note that by
- * default the capture feed shows up, too. You can hide the
- * feed by uncommenting the capture.hide() line.
- */
+ * @description ウェブカメラからビデオをキャプチャし、反転フィルターを使ってキャンバスにも表示します。
+ * デフォルトではキャプチャフィードも表示されます。
+ * capture.hide() 行のコメントを解除することで、
+ * フィードを非表示にすることができます。
+ * */
 let capture;
 
 function setup() {

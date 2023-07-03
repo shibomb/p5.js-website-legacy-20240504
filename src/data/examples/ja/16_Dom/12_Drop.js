@@ -1,14 +1,14 @@
 /*
- * @name Drop
- * @arialabel Empty grey canvas that displays an image if it is dragged from the user’s computer to the grey canvas
- * @description Drag an image file onto the canvas to see it displayed.
+ * @name ドロップ
+ * @arialabel 空の灰色のキャンバスが表示されており、ユーザーのコンピュータから灰色のキャンバスにドラッグされた場合に画像が表示されます。
+ * @description キャンバス上に画像ファイルをドラッグして表示されるようにします。
  */
 
 function setup() {
-  // create canvas
+  // キャンバスを作成します。
   const c = createCanvas(710, 400);
   background(100);
-  // Add an event for when a file is dropped onto the canvas
+  // ファイルがキャンバスにドロップされたときのイベントを追加します。
   c.drop(gotFile);
 }
 
@@ -22,11 +22,11 @@ function draw() {
 }
 
 function gotFile(file) {
-  // If it's an image file
+  // 画像ファイルの場合
   if (file.type === 'image') {
-    // Create an image DOM element but don't show it
+    // 画像 DOM 要素を作成しますが、それは表示しません。
     const img = createImg(file.data).hide();
-    // Draw the image onto the canvas
+    // キャンバスに画像を描きます。
     image(img, 0, 0, width, height);
   } else {
     console.log('Not an image file!');
