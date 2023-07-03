@@ -1,7 +1,7 @@
 /*
- * @name Shake Ball Bounce
- * @description Create a Ball class, instantiate multiple objects, move it around the screen, and bounce when touch the edge of the canvas.
- * Detect shake event based on total change in accelerationX and accelerationY and speed up or slow down objects based on detection.
+ * @name シェイクとボールのはねかえり
+ * @description Ballクラスを作成し、複数のオブジェクトをインスタンス化し、画面上を移動させ、キャンバスの端に触れるとはねかえります。
+ * 加速度Xと加速度Yの総変化量に基づいて揺れを検出し、それに基づいてオブジェクトを加減速します。
  */
 
 let balls = [];
@@ -31,18 +31,18 @@ function draw() {
 }
 
 function checkForShake() {
-  // Calculate total change in accelerationX and accelerationY
+  // 加速度Xと加速度Yの変化の合計を計算します。
   accChangeX = abs(accelerationX - pAccelerationX);
   accChangeY = abs(accelerationY - pAccelerationY);
   accChangeT = accChangeX + accChangeY;
-  // If shake
+  // もしシェイクされたら
   if (accChangeT >= threshold) {
     for (let i = 0; i < balls.length; i++) {
       balls[i].shake();
       balls[i].turn();
     }
   }
-  // If not shake
+  // シェイクされていなければ
   else {
     for (let i = 0; i < balls.length; i++) {
       balls[i].stopShake();
@@ -52,7 +52,7 @@ function checkForShake() {
   }
 }
 
-// Ball class
+// Ballクラス
 class Ball {
   constructor() {
     this.x = random(width);
@@ -70,7 +70,7 @@ class Ball {
     this.y += this.yspeed * this.direction;
   }
 
-  // Bounce when touch the edge of the canvas
+  // キャンバスの端に触れるとはねかえります。
   turn() {
     if (this.x < 0) {
       this.x = 0;
@@ -87,14 +87,14 @@ class Ball {
     }
   }
 
-  // Add to xspeed and yspeed based on
-  // the change in accelerationX value
+  // 加速度Xの値の変化に基づいて
+  // xspeedとyspeedに加算します。
   shake() {
     this.xspeed += random(5, accChangeX / 3);
     this.yspeed += random(5, accChangeX / 3);
   }
 
-  // Gradually slows down
+  // 徐々に減速します。
   stopShake() {
     if (this.xspeed > this.oxspeed) {
       this.xspeed -= 0.6;

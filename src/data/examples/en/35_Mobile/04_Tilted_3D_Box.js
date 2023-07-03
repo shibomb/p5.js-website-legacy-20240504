@@ -1,6 +1,6 @@
 /*
- * @name 傾いた3Dボックス
- * @description モバイル端末を使って、ボックスを傾けます。
+ * @name Tilted 3D Box
+ * @description Use mobile to tilt a box
  */
 function setup() {
   createCanvas(displayWidth, displayHeight, WEBGL);
