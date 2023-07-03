@@ -1,17 +1,17 @@
 /*
- * @name 加速度とボールのはねかえり
- * @description 加速度Xと加速度Yの値に基づいて楕円を移動させ、キャンバスの端に触れるとはねかえります。
+ * @name Acceleration Ball Bounce
+ * @description Move an ellipse around based on accelerationX and accelerationY values, and bounces when touch the edge of the canvas.
  */
 
-// 位置変数
+// Position Variables
 let x = 0;
 let y = 0;
 
-// スピード - ベロシティ
+// Speed - Velocity
 let vx = 0;
 let vy = 0;
 
-// 加速
+// Acceleration
 let ax = 0;
 let ay = 0;
 
@@ -38,7 +38,7 @@ function ballMove() {
   y = y + vy * vMultiplier;
   x = x + vx * vMultiplier;
 
-  // キャンバスの端に触れるとはねかえります。
+  // Bounce when touch the edge of the canvas
   if (x < 0) {
     x = 0;
     vx = -vx * bMultiplier;

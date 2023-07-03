@@ -1,6 +1,6 @@
 /*
- * @name シンプルな描画
- * @description mouseX、mouseY、pmouseX、pmouseYの値を使ってタッチで画面に描画します。
+ * @name Simple Draw
+ * @description Touch to draw on the screen using mouseX, mouseY, pmouseX, and pmouseY values.
  */
 
 function setup() {

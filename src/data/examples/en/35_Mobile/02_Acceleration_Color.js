@@ -1,6 +1,6 @@
 /*
- * @name 加速度と色
- * @description デバイスが回転したことを検出するには deviceMoved() を使用します。背景のRGBカラー値は、加速度X、加速度Y、加速度Zの値にマッピングされます。
+ * @name Acceleration Color
+ * @description Use deviceMoved() to detect when the device is rotated. The background RGB color values are mapped to accelerationX, accelerationY, and accelerationZ values.
  */
 
 let r, g, b;
