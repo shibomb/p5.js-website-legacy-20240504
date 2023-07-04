@@ -1,8 +1,8 @@
-/* @name Composite Objects
- * @arialabel Two white egg shapes that totter side to side. There is a grey circle within each egg that expands larger until it is off the screen
- * @description An object can include several other objects.
- * Creating such composite objects is a good way to use the principles
- * of modularity and build higher levels of abstraction within a program.
+/* @name 複合オブジェクト
+ * @arialabel 両側に揺れる2つの白い卵形の形状があります。それぞれの卵の中には、画面から消えるまで大きく広がる灰色の円があります。
+ * @description オブジェクトは、複数の他のオブジェクトを含むことができます。
+ * このような複合オブジェクトを作成することは、モジュラリティの原則を使用して、
+ * プログラム内でより高いレベルの抽象化を構築するための良い方法です。
  */
 let er1, er2;
 

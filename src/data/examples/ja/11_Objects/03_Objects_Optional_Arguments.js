@@ -1,9 +1,9 @@
 /*
- * @name Objects 2
- * @arialabel  4 sets of vertical white lines that form rectangles of different sizes on a black background. They move around as the user’s mouse moves 
- * @description Ported from example by hbarragan. Move the cursor across the
- * image to change the speed and positions of the geometry. The class MRect
- * defines a group of lines.
+ * @name オブジェクト 2
+ * @arialabel 黒い背景上で、異なるサイズの四角形を形成する4セットの垂直な白い線が、ユーザーのマウスの動きに応じて動きます。
+ * @description hbarragan の サンプルからの移植です。
+ * 画像全体にカーソルを移動させて、ジオメトリの速度と位置を変更します。
+ * MRect クラスでは、一連の線を定義しています。
  */
 
 let r1, r2, r3, r4;
@@ -34,12 +34,12 @@ r4.move(mouseX - width / 2, height - mouseY, 50);
 
 class MRect {
     constructor(iw, ixp, ih, iyp, id, it) {
-    this.w = iw; // single bar width
-    this.xpos = ixp; // rect xposition
-    this.h = ih; // rect height
-    this.ypos = iyp; // rect yposition
-    this.d = id; // single bar distance
-    this.t = it; // number of bars
+    this.w = iw; // 1つの棒の幅
+    this.xpos = ixp; // 矩形の x 座標
+    this.h = ih; // 矩形の高さ
+    this.ypos = iyp; // 矩形の y 座標
+    this.d = id; // 1つの棒の間隔
+    this.t = it; // 棒の数
     }
 
     move(posX, posY, damping) {
