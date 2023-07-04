@@ -1,10 +1,10 @@
-/* @name Inheritance
- * @arialabel Two white circles connected and spinning around each other anti-clockwise with a black line behind that is spinning clockwise
- * @description A class can be defined using another class as a
- * foundation. In object-oriented programming terminology, one class can
- * inherit fields and methods from another. An object that inherits from
- * another is called a subclass, and the object it inherits from is called
- * a superclass. A subclass extends the superclass.
+/* @name 継承
+ * @arialabel 2つの白い円がつながって反時計回りに回転し、その後ろで黒い線が時計回りに回転しています。
+ * @description クラスは、別のクラスを基盤として定義できます。
+ * オブジェクト指向プログラミングの用語では、
+ * あるクラスは別のクラスからフィールドとメソッドを継承できます。
+ * 別のオブジェクトから継承するオブジェクトは、サブクラスと呼ばれ、それが継承するオブジェクトは
+ * スーパークラスと呼ばれます。サブクラスはスーパークラスを拡張します。
  */
 let spots, arm;
 
