@@ -1,10 +1,10 @@
 /*
- * @name Load and Play Sound
- * @arialabel Red screen turns green when the user clicks on it and plays music
- * @description Load sound during preload(). Play a sound when canvas is clicked.
- * <br><br><em><span class="small"> To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em>
+ * @name 音声のロードと再生
+ * @arialabel ユーザーがクリックすると赤いスクリーンが緑色に変わり、音楽が再生されます。
+ * @description preload() 内で音声をロードしてください。キャンバスがクリックされたときに音声を再生します。
+ * <br><br><em><span class="small"> このサンプルをローカルで実行するためには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>
+ * 音声ファイル、および、稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em>
  */
 let song;
 
@@ -16,7 +16,7 @@ function setup() {
 
 function mousePressed() {
   if (song.isPlaying()) {
-    // .isPlaying() returns a boolean
+    // .isPlaying() はブール値を返します。
     song.stop();
     background(255, 0, 0);
   } else {

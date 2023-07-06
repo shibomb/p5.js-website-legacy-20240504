@@ -1,14 +1,14 @@
 /*
- * @name Preload SoundFile
- * @arialabel On page load, a green screen plays music. When the user clicks on it, the screen turns red and stops playing music 
- * @description Call loadSound() during preload() to ensure that the
- * sound is completely loaded before setup() is called. It's best to always
- * call loadSound() in preload(), otherwise sounds won't necessarily be loaded
- * by the time you want to play them in your sketch.
+ * @name 音声ファイルのプリロード
+ * @arialabel ページがロードされると、緑色のスクリーンで音楽が再生されます。ユーザーがクリックすると、画面が赤くなり、音楽の再生が止まります。
+ * @description setup()が呼び出される前に音声のロードを完了するために、preload() 内で loadSound() を呼び出してください。
+ * 常に preload() 内で loadSound() を呼び出すことが最善です。
+ * そうしないと、スケッチで再生したい時点で、
+ * 音声のロードが完了していない可能性があります。
  *
- * <br><br><em><span class="small"> To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em>
+ * <br><br><em><span class="small"> このサンプルをローカルで実行するには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリー</a>、
+ * 音声ファイル、および、稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em>
  */
 
 let song;
@@ -19,14 +19,14 @@ function preload() {
 
 function setup() {
   createCanvas(710, 200);
-  song.loop(); // song is ready to play during setup() because it was loaded during preload
+  song.loop(); // 曲は preload 内でロードされたので、setup() で再生する準備ができています。
   background(0, 255, 0);
 }
 
 function mousePressed() {
   if (song.isPlaying()) {
-    // .isPlaying() returns a boolean
-    song.pause(); // .play() will resume from .pause() position
+    // .isPlaying() はブール値を返します。
+    song.pause(); // .play() は .pause() の位置から再開します。
     background(255, 0, 0);
   } else {
     song.play();

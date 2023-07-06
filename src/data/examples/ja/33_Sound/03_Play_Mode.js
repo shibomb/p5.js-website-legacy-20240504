@@ -1,14 +1,14 @@
 /*
- * @name Play Mode
- * @arialabel Yellow screen plays music when user clicks on it
+ * @name プレイモード
+ * @arialabel 黄色い画面をクリックすると音楽が流れます。
  * @description
- * <p>In 'sustain' mode, the sound will overlap with itself.
- * In 'restart' mode it will stop and then start again.
- * Click mouse to play a sound file.
- * Trigger lots of sounds at once! Press any key to change playmode.</p>
- * <p><em><span class="small"> To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
+ * <p>'sustain' モードでは、サウンドが自分自身と重なって鳴ります。
+ * 'restart' モードでは、一度停止してから再びスタートします。
+ * マウスをクリックして音声ファイルを再生します。
+ * たくさんのサウンドを一挙に再生します！任意のキーを押すと再生モードが切り替わります。</p>
+ * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>、
+ * 音声ファイル、および、稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em>
  */
 let playMode = 'sustain';
 let sample;
