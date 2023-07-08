@@ -1,12 +1,12 @@
 /**
- *  @name Reverb
- *  @arialabel When the user clicks on the black screen, sound with reverb is played
- *  @description Reverb gives depth and perceived space to a sound. Here,
- *  noise is processed with reverb.
+ *  @name リバーブ
+ *  @arialabel ユーザーが黒い画面をクリックすると、リバーブ付きの音声が再生されます。
+ *  @description リバーブは音に深みと知覚される空間を与えます。 ここでは、
+ *  ノイズがリバーブで処理されます。
  *
- * <p><em><span class="small"> To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
+ * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>、
+ * 音声ファイル、および稼働中の <a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
  */
 let sound, reverb;
 
@@ -14,8 +14,8 @@ function preload() {
   soundFormats('mp3', 'ogg');
   soundFile = loadSound('assets/Damscray_DancingTiger');
 
-  // disconnect the default connection
-  // so that we only hear the sound via the reverb.process
+  // デフォルトの接続を切断します。
+  // そうすることで、リバーブ経由の音声だけを聴くことができます。
   soundFile.disconnect();
 }
 
@@ -25,11 +25,11 @@ function setup() {
 
   reverb = new p5.Reverb();
 
-  // sonnects soundFile to reverb with a
-  // reverbTime of 6 seconds, decayRate of 0.2%
+  // reverbTime を 6秒、decayRate を 0.2%として、
+  // 音声ファイルにリバーブに接続します。
   reverb.process(soundFile, 6, 0.2);
 
-  reverb.amp(4); // turn it up!
+  reverb.amp(4); // 音量を上げましょう！
 }
 
 function mousePressed() {

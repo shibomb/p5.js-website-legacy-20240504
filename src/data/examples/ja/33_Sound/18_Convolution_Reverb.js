@@ -1,17 +1,17 @@
 /**
- * @name Convolution Reverb
- * @arialabel Sound with reverb plays when the user clicks the screen and lime green bars appear based on the amplitude of the sound
- * @description <p>The p5.Convolver can recreate the sound of actual
- * spaces using convolution. Convolution takes an Impulse Response,
- * (the sound of a room reverberating), and uses that to
- * recreate the sound of that space.</p><p>Click to play a sound through
- * convolution. Every time you click, the sound is convolved with
- * a different Impulse Response. To hear the Impulse Response itself,
- * press any key.</p>
+ * @name コンボリューションリバーブ
+ * @arialabel ユーザーが画面をクリックするとリバーブ付きの音声が再生され、音声の振幅に応じてライムグリーンのバーが表示されます。
+ * @description <p>p5.Convolverは、コンボリューションを使用して実際の
+ * 空間の音を再現することができます。コンボリューションは、インパルス応答（部屋の反響音）を取り、
+ * それを使用してその空間の音を再現します。</p>
+ * <p>コンボリューションを通じて音を再生するにはクリックしてください。
+ * クリックするごとに、音は異なるインパルス応答と積分されます。
+ * インパルス応答自体を聴くには、
+ * 任意のキーを押してください。</p>
  *
- * <p><em><span class="small">To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.
+ * <p><em><span class="small">このサンプルをローカルで実行するには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>、
+ * 音声ファイル、および稼働中の <a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバ</a>が必要です。
  * These convolution samples are Creative Commons BY
  * <a href="https://www.freesound.org/people/recordinghopkins/">
  * recordinghopkins</a></em></span></p>
@@ -21,19 +21,19 @@ let currentIR = 0;
 let rawImpulse;
 
 function preload() {
-  // we have included both MP3 and OGG versions of all the impulses/sounds
+  // すべてのインパルス／サウンドのMP3とOGGバージョンを収録しています。
   soundFormats('ogg', 'mp3');
 
-  // create a p5.Convolver
+  // p5.Convolverを作成します。
   cVerb = createConvolver('assets/bx-spring');
 
-  // add Impulse Responses to cVerb.impulses array, in addition to bx-spring
+  // bx-spring に加えて、 cVerb.impulses 配列にインパルス応答を追加します。
   cVerb.addImpulse('assets/small-plate');
   cVerb.addImpulse('assets/drum');
   cVerb.addImpulse('assets/beatbox');
   cVerb.addImpulse('assets/concrete-tunnel');
 
-  // load a sound that will be processed by the p5.ConvultionReverb
+  // p5.ConvultionReverb で処理される音声をロードします。
   sound = loadSound('assets/Damscray_DancingTiger');
 }
 
@@ -41,10 +41,10 @@ function setup() {
   createCanvas(710, 400);
   rawImpulse = loadSound('assets/' + cVerb.impulses[currentIR].name);
 
-  // disconnect from master output...
+  // マスター出力から切り離します。
   sound.disconnect();
-  // ... and process with cVerb
-  // so that we only hear the reverb
+  // ...そして、リバーブだけが聞こえるように
+  // cVerbで処理します。
   cVerb.process(sound);
 
   fft = new p5.FFT();
@@ -56,7 +56,7 @@ function draw() {
 
   let spectrum = fft.analyze();
 
-  // Draw every value in the frequencySpectrum array as a rectangle
+  // frequencySpectrum配列のすべての値を矩形として描画します。
   noStroke();
   for (let i = 0; i < spectrum.length; i++) {
     let x = map(i, 0, spectrum.length, 0, width);
@@ -66,23 +66,23 @@ function draw() {
 }
 
 function mousePressed() {
-  // cycle through the array of cVerb.impulses
+  // cVerb.impulsesの配列を循環させます。
   currentIR++;
   if (currentIR >= cVerb.impulses.length) {
     currentIR = 0;
   }
   cVerb.toggleImpulse(currentIR);
 
-  // play the sound through the impulse
+  // インパルスを通して音を再生します。
   sound.play();
 
-  // display the current Impulse Response name (the filepath)
+  // 現在のインパルス応答の名前（ファイルパス）を表示します。
   println('Convolution Impulse Response: ' + cVerb.impulses[currentIR].name);
 
   rawImpulse.setPath('assets/' + cVerb.impulses[currentIR].name);
 }
 
-// play the impulse (without convolution)
+// インパルスを再生します（コンボリューションなし）
 function keyPressed() {
   rawImpulse.play();
 }
