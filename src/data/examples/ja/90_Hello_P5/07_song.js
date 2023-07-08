@@ -40,7 +40,7 @@ function setup() {
     }
   });
 
-  // 三角波発振器（オシレーター）
+  // 三角波オシレーター
   osc = new p5.TriOsc();
   // 静寂をスタート
   osc.start();

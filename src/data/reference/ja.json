@@ -5944,16 +5944,16 @@
   "p5.Oscillator": {
     "description": [
       "p5.Oscillator は、-1.0から1.0の間を振動するシグナルを生成します。デフォルトでは、振動は正弦波の形（ 'sine' ）をとります。追加のタイプには、 'triangle' 、'sawtooth'および'square'があります。周波数は、秒間440回の振動（440Hz、 'A'音のピッチと同じ）がデフォルトです。",
-      "setType() で振動のタイプを設定するか、特定の発振器をインスタンス化することで設定できます:<a href=\"/reference/#/p5.SinOsc\">p5.SinOsc</a>、<a href=\"/reference/#/p5.TriOsc\">p5.TriOsc</a>、<a href=\"/reference/#/p5.SqrOsc\">p5.SqrOsc</a>、または <a href=\"/reference/#/p5.SawOsc\">p5.SawOsc</a>。"
+      "setType() で振動のタイプを設定するか、特定のオシレーターをインスタンス化することで設定できます:<a href=\"/reference/#/p5.SinOsc\">p5.SinOsc</a>、<a href=\"/reference/#/p5.TriOsc\">p5.TriOsc</a>、<a href=\"/reference/#/p5.SqrOsc\">p5.SqrOsc</a>、または <a href=\"/reference/#/p5.SawOsc\">p5.SawOsc</a>。"
     ],
     "params": {
       "freq": "Number: (オプション) 周波数。デフォルトは440Hz",
-      "type": "String: (オプション) 発振器の種類。オプション: 'sine'（デフォルト）、 'triangle'、 'sawtooth'、 'square'"
+      "type": "String: (オプション) オシレーターの種類。オプション: 'sine'（デフォルト）、 'triangle'、 'sawtooth'、 'square'"
     },
     "start": {
       "description": [
-        "発振器を開始します。",
-        "ユーザージェスチャーで発振器を開始すると、Chrome や多くのモバイルデバイスを含む厳格な自動再生ポリシーをもつブラウザーでオーディオが有効になります。参照:<code>userStartAudio()</code>。"
+        "オシレーターを開始します。",
+        "ユーザージェスチャーでオシレーターを開始すると、Chrome や多くのモバイルデバイスを含む厳格な自動再生ポリシーをもつブラウザーでオーディオが有効になります。参照:<code>userStartAudio()</code>。"
       ],
       "params": {
         "time": "Number: (オプション) 現在からの開始時間（秒単位）",
@@ -5962,7 +5962,7 @@
     },
     "stop": {
       "description": [
-        "発振器を停止します。発振器が停止するまでの時間（秒単位）を決定するためのオプションパラメーターを受け付けます。"
+        "オシレーターを停止します。オシレーターが停止するまでの時間（秒単位）を決定するためのオプションパラメーターを受け付けます。"
       ],
       "params": {
         "secondsFromNow": "Number: 現在からの秒数"
@@ -6075,7 +6075,7 @@
   },
   "p5.SinOsc": {
     "description": [
-      "コンストラクター: <code>new p5.SinOsc()</code>。これは正弦波発振器を作成します。これは <code> new p5.Oscillator('sine') </code> と同等であり、p5.Oscillator を作成し、そのメソッド <code>setType('sine')</code> を呼び出すこともできます。詳細は p5.Oscillator を参照してください。"
+      "コンストラクター: <code>new p5.SinOsc()</code>。これは正弦波オシレーターを作成します。これは <code> new p5.Oscillator('sine') </code> と同等であり、p5.Oscillator を作成し、そのメソッド <code>setType('sine')</code> を呼び出すこともできます。詳細は p5.Oscillator を参照してください。"
     ],
     "params": {
       "freq": "Number: (オプション) 周波数を設定します"
@@ -6249,7 +6249,7 @@
     }
   },
   "p5.Noise": {
-    "description": ["Noise はランダムな値を生成するタイプの発振器です。"],
+    "description": ["Noise はランダムな値を生成するタイプのオシレーターです。"],
     "params": {
       "type": "String: ノイズのタイプを指定します。'white' (デフォルト値), 'brown' もしくは 'pink' が指定できます。"
     },
