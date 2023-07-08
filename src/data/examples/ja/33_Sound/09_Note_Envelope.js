@@ -1,19 +1,18 @@
 /**
- *  @name Note Envelope
- *  @arialabel Red bars rise on the screen based on the amplitude and the note played 
- *  @description  <p>An Envelope is a series of fades, defined
- *  as time / value pairs. In this example, the envelope
- *  will be used to "play" a note by controlling the output
- *  amplitude of an oscillator.<br/><br/>
- *  The p5.Oscillator sends its output through
- *  an internal Web Audio GainNode (p5.Oscillator.output).
- *  By default, that node has a constant value of 0.5. It can
- *  be reset with the osc.amp() method. Or, in this example, an
- *  Envelope takes control of that node, turning the amplitude
- *  up and down like a volume knob.</p>
- * <p><em><span class="small"> To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a> and a
- * sound file.</span></em></p>
+ *  @name 音符エンベローブ
+ *  @arialabel 振幅と演奏された音符に基づき、スクリーンに赤いバーが浮かび上がります。
+ *  @description <p>エンベロープとは、時間/値のペアとして定義される一連のフェードのことです。
+ *  このサンプルでは、エンベロープはオシレーターの出力
+ *  振幅を制御することで音符を"演奏"するために使用されます。<br/><br/>
+ *  p5.Oscillator はその出力を
+ *  内部の Web Audio GainNode (p5.Oscillator.output) に送ります。
+ *  デフォルトでは、そのノードは 0.5 の定数値を持ちます。それは
+ *  osc.amp() メソッドでリセットできます。また、このサンプルでは、
+ *  エンベロープがそのノードを制御し、音量ノブのように振幅を
+ *  上下します。</p>
+ * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a> と
+ * 音声ファイルが必要です。</span></em></p>
  */
 let osc, envelope, fft;
 
@@ -24,13 +23,13 @@ function setup() {
   createCanvas(710, 200);
   osc = new p5.SinOsc();
 
-  // Instantiate the envelope
+  // エンベロープのインスタンス化
   envelope = new p5.Env();
 
-  // set attackTime, decayTime, sustainRatio, releaseTime
+  // attackTime, decayTime, sustainRatio, releaseTime を設定します。
   envelope.setADSR(0.001, 0.5, 0.1, 0.5);
 
-  // set attackLevel, releaseLevel
+  // attackLevel、releaseLevelを設定します。
   envelope.setRange(1, 0);
 
   osc.start();
@@ -51,7 +50,7 @@ function draw() {
     note = (note + 1) % scaleArray.length;
   }
 
-  // plot FFT.analyze() frequency analysis on the canvas
+  // FFT.analyze() による周波数分析をキャンバス上にプロットします。
   let spectrum = fft.analyze();
   for (let i = 0; i < spectrum.length / 20; i++) {
     fill(spectrum[i], spectrum[i] / 10, 0);
