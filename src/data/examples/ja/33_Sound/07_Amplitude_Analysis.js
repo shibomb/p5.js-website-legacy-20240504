@@ -1,25 +1,25 @@
 /**
- * @name Measuring Amplitude
- * @arialabel Grey circle that increases and decreases in size based on the amplitude of the music playing
- * @description <p>Analyze the amplitude of sound with
- * p5.Amplitude.</p>
+ * @name 振幅の測定
+ * @arialabel 演奏している音楽の振幅に応じて、灰色の円が大きさが増減します。
+ * @description <p>p5.Amplitude
+ * で音の振幅を分析します。</p>
  *
- *  <p><b>Amplitude</b> is the magnitude of vibration. Sound is vibration,
- *  so its amplitude is is closely related to volume / loudness.</p>
+ *  <p><b>振幅</b>は振動の大きさです。音は振動なので、
+ *  その振幅は音量/大きさと密接に関係しています。</p>
  *
- * <p>The <code>getLevel()</code> method takes an array
- * of amplitude values collected over a small period of time (1024 samples).
- * Then it returns the <b>Root Mean Square (RMS)</b> of these values.</p>
+ * <p><code>getLevel()</code>メソッドは、
+ * 小さな期間（1024サンプル）にわたって収集された振幅値の配列を取り、
+ * それらの値の<b>二乗平均平方根(RMS)</b>を返します。</p>
  *
- * <p>The original amplitude values for digital audio are between -1.0 and 1.0.
- * But the RMS will always be positive, because it is squared.
- * And, rather than use instantanous amplitude readings that are sampled at a rate
- * of 44,100 times per second, the RMS is an average over time (1024 samples, in this case),
- * which better represents how we hear amplitude.
+ * <p>デジタルオーディオの元の振幅値は -1.0 から 1.0 の範囲です。
+ * しかし、RMSは平方(２乗)されているので常に正の値になります。
+ * そして、1秒間に44,100回の割合でサンプリングされる瞬間的な振幅測定値ではなく、
+ * RMSは時間（この場合は1024サンプル）の平均値であり、
+ * 振幅の聞こえ方をよりよく表しています。
  * </p>
- * <p><em><span class="small"> To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
+ * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>、
+ * 音声ファイル、および、稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em>
  */
 let song, analyzer;
 
@@ -31,21 +31,21 @@ function setup() {
   createCanvas(710, 200);
   song.loop();
 
-  // create a new Amplitude analyzer
+  // 新しい振幅アナライザを作成します。
   analyzer = new p5.Amplitude();
 
-  // Patch the input to an volume analyzer
+  // 入力をボリュームアナライザーに割り当てます。
   analyzer.setInput(song);
 }
 
 function draw() {
   background(255);
 
-  // Get the average (root mean square) amplitude
+  // 平均振幅（二乗平均平方根）を取得します。
   let rms = analyzer.getLevel();
   fill(127);
   stroke(0);
 
-  // Draw an ellipse with size based on volume
+  // 体積に応じた大きさの楕円を描きます。
   ellipse(width / 2, height / 2, 10 + rms * 200, 10 + rms * 200);
 }

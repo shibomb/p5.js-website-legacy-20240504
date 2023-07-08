@@ -1,11 +1,11 @@
 /*
- * @name Pan Sound
- * @arialabel User moves a white ball on black screen, sound effect plays when the user clicks the screen and the sound comes out more of the speaker closer to the side the ball is on
- * @description <p>Click mouse to play the sound.
- * Ball position follows mouse and correlates to panning of sound.</p>
- * <p><em><span class="small"> To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
+ * @name 音声のパン
+ * @arialabel 黒い画面上で白いボールを動かし、クリックすると効果音が流れます。ボールがある側に近いスピーカーから音が出ます。
+ * @description <p>マウスをクリックして音声を再生します。
+ * ボールの位置はマウスに追従し、それに合わせて音声もパンニングされます。</p>
+ * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>、
+ * 音声ファイル、および、稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em>
  *
  */
 let ball = {};
@@ -27,8 +27,8 @@ function draw() {
 }
 
 function mousePressed() {
-  // map the ball's x location to a panning degree
-  // between -1.0 (left) and 1.0 (right)
+  // ボールの x 位置を
+  // パン度数 -1.0 (左) から 1.0 (右) の範囲にマッピングします。
   let panning = map(ball.x, 0, width, -1.0, 1.0);
   soundFile.pan(panning);
   soundFile.play();

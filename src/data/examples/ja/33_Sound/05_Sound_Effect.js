@@ -1,30 +1,30 @@
 /*
- * @name Sound Effect
- * @arialabel Grey circle on a white screen that plays a doorbell sound when pressed on
- * @description <p>Play a sound effect when the mouse is clicked inside the circle.</p>
- * <p><em><span class="small"> To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
+ * @name サウンドエフェクト
+ * @arialabel 押すとドアベルの音が鳴ります。
+ * @description <p>円の内部でクリックされたときにサウンドエフェクトを再生します。</p>
+ * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>、
+ * 音声ファイル、および、稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em>
  */
 // Adapted from Learning Processing by Daniel Shiffman
 // http://www.learningprocessing.com
 // Doorbell sample by Corsica_S via freesound.org,
 // Creative Commons BY 3.0
 
-// A Class to describe a "doorbell" (really a button)
+// ドアベル（実際はボタン）を表すクラス
 class Doorbell {
   constructor(x_, y_, r_) {
-    // Location and size
+    // ロケーションとサイズ
     this.x = x_;
     this.y = y_;
     this.r = r_;
   }
-  // Is a point inside the doorbell? (used for mouse rollover, etc.)
+  // ドアベルの中にポイントがあるか？(マウスのロールオーバーなどに使用します。)
   contains(mx, my) {
     return dist(mx, my, this.x, this.y) < this.r;
   }
 
-  // Show the doorbell (hardcoded colors, could be improved)
+  // ドアベルを表示します。（ハードコードされた色。）
   display(mx, my) {
     if (this.contains(mx, my)) {
       fill(100);
@@ -38,32 +38,32 @@ class Doorbell {
   }
 }
 
-// A sound file object
+// 音声ファイルオブジェクト
 let dingdong;
 
-// A doorbell object (that will trigger the sound)
+// ドアベルオブジェクト（サウンドのトリガーとなるもの）
 let doorbell;
 
 function setup() {
   createCanvas(200, 200);
 
-  // Load the sound file.
-  // We have included both an MP3 and an OGG version.
+  // 音声ファイルをロードします。
+  // MP3版とOGG版の両方を用意しました。
   soundFormats('mp3', 'ogg');
   dingdong = loadSound('assets/doorbell.mp3');
 
-  // Create a new doorbell
+  // 新しいドアベルを作ります。
   doorbell = new Doorbell(width / 2, height / 2, 32);
 }
 
 function draw() {
   background(255);
-  // Show the doorbell
+  // ドアベルを表示します。
   doorbell.display(mouseX, mouseY);
 }
 
 function mousePressed() {
-  // If the user clicks on the doorbell, play the sound!
+  // ユーザーがドアベルをクリックしたら、サウンドを再生します！
   if (doorbell.contains(mouseX, mouseY)) {
     dingdong.play();
   }
