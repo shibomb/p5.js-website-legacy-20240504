@@ -1,14 +1,14 @@
 /**
- *  @name Filter LowPass
- *  @arialabel The lowpass filter changes intensity as the user’s mouse moves left and right on the screen
- *  @description Apply a p5.LowPass filter to a p5.SoundFile.
- *  Visualize the sound with FFT.
- *  Map mouseX to the the filter's cutoff frequency
- *  and mouseY to resonance/width of the a BandPass filter
+ *  @name ローパスフィルター
+ *  @arialabel ローパスフィルターは、ユーザーのマウスが画面上で左右に動くと強度が変化します。
+ *  @description p5.SoundFile に p5.LowPass フィルタを適用します。
+ *  FFT を用いて音を視覚化します。
+ *  mouseX をフィルターのカットオフ周波数に、
+ *  mouseY を BandPass フィルターの共振/幅にマップします。
  *
- * <p><em><span class="small"> To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
+ * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>、
+ * 音声ファイル、および稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバ</a>が必要です。</span></em></p>
  */
 let soundFile;
 let fft;
@@ -24,13 +24,13 @@ function setup() {
   createCanvas(710, 256);
   fill(255, 40, 255);
 
-  // loop the sound file
+  // 音声ファイルをループさせます。
   soundFile.loop();
 
   filter = new p5.LowPass();
 
-  // Disconnect soundfile from master output.
-  // Then, connect it to the filter, so that we only hear the filtered sound
+  // マスター出力から音声ファイルを切り離します。
+  // そして、フィルターに接続し、フィルターにかけられた音だけが聞こえるようにします。
   soundFile.disconnect();
   soundFile.connect(filter);
 
@@ -40,19 +40,19 @@ function setup() {
 function draw() {
   background(30);
 
-  // Map mouseX to a the cutoff frequency from the lowest
-  // frequency (10Hz) to the highest (22050Hz) that humans can hear
+  // mouseX を、人間が聞き取れる最低周波数（10Hz）から最高周波数（22050Hz）までの
+  // カットオフ周波数に対応させます。
   filterFreq = map(mouseX, 0, width, 10, 22050);
 
-  // Map mouseY to resonance (volume boost) at the cutoff frequency
+  // mouseY をカットオフ周波数のレゾナンス（ボリューム・ブースト）にマッピングします。
   filterRes = map(mouseY, 0, height, 15, 5);
 
-  // set filter parameters
+  // フィルター・パラメーターを設定します。
   filter.set(filterFreq, filterRes);
 
-  // Draw every value in the FFT spectrum analysis where
-  // x = lowest (10Hz) to highest (22050Hz) frequencies,
-  // h = energy (amplitude / volume) at that frequency
+  // FFTスペクトル分析で、次の各値を描画します。
+  // x = 最低周波数（10Hz）から 最高周波数（22050Hz）まで
+  // h = その周波数における エネルギー（振幅 / ボリューム）
   let spectrum = fft.analyze();
   noStroke();
   for (let i = 0; i < spectrum.length; i++) {

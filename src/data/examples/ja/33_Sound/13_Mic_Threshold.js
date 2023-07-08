@@ -1,11 +1,11 @@
 /**
- * @name Mic Threshold
- * @arialabel Black rectangle is drawn on the bottom of a bar based on the amplitude of the user’s audio input. At a certain minimum amplitude, grey squares are randomly drawn on the right side of the screen
- * @description <p>Trigger an event (draw a rectangle) when the Audio Input
- * volume surpasses a threshold.</p>
- * <p><em><span class="small"> To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
+ * @name マイクのしきい値
+ * @arialabel ユーザーの音声入力の振幅に応じて、バーの下部に黒い四角形が描かれます。ある最小振幅になると、画面右側に灰色の四角がランダムに描かれます。
+ * @description <p>オーディオ入力のボリュームがしきい値を超えると
+ * イベント（矩形を描く）がトリガーされます。</p>
+ * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>
+ * および稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
  */
 // Adapted from Learning Processing, Daniel Shiffman
 // learningprocessing.com
@@ -16,18 +16,18 @@ function setup() {
   createCanvas(710, 200);
   background(255);
 
-  // Create an Audio input
+  // オーディオ入力を作成します。
   input = new p5.AudioIn();
 
   input.start();
 }
 
 function draw() {
-  // Get the overall volume (between 0 and 1.0)
+  // 全体のボリュームを取得します（ 0 から 1.0 の範囲）
   let volume = input.getLevel();
 
-  // If the volume > 0.1,  a rect is drawn at a random location.
-  // The louder the volume, the larger the rectangle.
+  // ボリュームが 0.1 より大きい場合は、ランダムな位置に矩形が描かれます。
+  // 音量が大きいほど、長方形は大きくなります。
   let threshold = 0.1;
   if (volume > threshold) {
     stroke(0);
@@ -35,14 +35,14 @@ function draw() {
     rect(random(40, width), random(height), volume * 50, volume * 50);
   }
 
-  // Graph the overall potential volume, w/ a line at the threshold
+  // 全体の潜在的なボリュームをグラフにし、しきい値に線を引きます。
   let y = map(volume, 0, 1, height, 0);
   let ythreshold = map(threshold, 0, 1, height, 0);
 
   noStroke();
   fill(175);
   rect(0, 0, 20, height);
-  // Then draw a rectangle on the graph, sized according to volume
+  // 次に、グラフ上にボリュームに応じた大きさの長方形を描きます。
   fill(0);
   rect(0, y, 20, y);
   stroke(0);

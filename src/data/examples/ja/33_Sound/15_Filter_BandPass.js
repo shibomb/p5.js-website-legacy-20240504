@@ -1,14 +1,14 @@
 /**
- *  @name Filter BandPass
- *  @arialabel The bandpass filter changes intensity as the user’s mouse moves left and right on the screen
- *  @description Apply a p5.BandPass filter to white noise.
- *  Visualize the sound with FFT.
- *  Map mouseX to the bandpass frequency
- *  and mouseY to resonance/width of the a BandPass filter
+ *  @name バンドパスフィルター
+ *  @arialabel マウスが画面上を左右に動くと、バンドパスフィルターの強度が変化します。
+ *  @description ホワイトノイズに p5.BandPass フィルタを適用します。
+ *  FFTで音を視覚化します。
+ *  mouseX をバンドパス周波数に、
+ *  mouseY をバンドパスフィルタのレゾナンス/幅にマッピングします。
  *
- * <p><em><span class="small"> To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
+ * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>、
+ * 音声ファイル、そして稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバ</a>が必要です。</span></em></p>
  */
 let noise;
 let fft;
@@ -22,8 +22,8 @@ function setup() {
 
   noise = new p5.Noise();
 
-  noise.disconnect(); // Disconnect soundfile from master output...
-  filter.process(noise); // ...and connect to filter so we'll only hear BandPass.
+  noise.disconnect(); // マスター出力から音声ファイルを切り離す...
+  filter.process(noise); // ...そしてフィルターに接続し、バンドパスだけを聴けるようにします。
   noise.start();
 
   fft = new p5.FFT();
@@ -32,16 +32,16 @@ function setup() {
 function draw() {
   background(30);
 
-  // Map mouseX to a bandpass freq from the FFT spectrum range: 10Hz - 22050Hz
+  // FFTスペクトル範囲から mouseX をバンドパス周波数にマッピングします： 10Hz - 22050Hz
   filterFreq = map(mouseX, 0, width, 10, 22050);
-  // Map mouseY to resonance/width
+  // mouseY を 共鳴 / 幅 にマッピングします。
   filterWidth = map(mouseY, 0, height, 0, 90);
-  // set filter parameters
+  // フィルター・パラメーターを設定します。
   filter.set(filterFreq, filterWidth);
 
-  // Draw every value in the FFT spectrum analysis where
-  // x = lowest (10Hz) to highest (22050Hz) frequencies,
-  // h = energy / amplitude at that frequency
+  // FFTスペクトル分析で、次の各値を描画します。
+  // x = 最低周波数（10Hz）から 最高周波数（22050Hz）まで
+  // h = その周波数における エネルギー / 振幅
   let spectrum = fft.analyze();
   noStroke();
   for (let i = 0; i < spectrum.length; i++) {
