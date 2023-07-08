@@ -46,6 +46,6 @@ function draw() {
   fill(127);
   stroke(0);
 
-  // 体積に応じた大きさの楕円を描きます。
+  // ボリュームに応じた大きさの楕円を描きます。
   ellipse(width / 2, height / 2, 10 + rms * 200, 10 + rms * 200);
 }
