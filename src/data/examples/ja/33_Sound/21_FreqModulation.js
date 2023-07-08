@@ -1,69 +1,69 @@
 /**
- * @name Frequency Modulation
- * @arialabel White sound waves on black background change as the user moves their mouse. Labels of modulator frequency and amplitude change as the user moves their mouse too. There is also a label of carrier frequency at 220 Hz 
- * @description <p>Frequency Modulation is a powerful form of synthesis.
- * In its simplest form, FM involves two oscillators, referred
- * to as the carrier and the modulator. As the modulator's waveform oscillates
- * between some minimum and maximum amplitude value, that momentary value
- * is added to ("modulates") the frequency of the carrier.</p>
- * <p>The <b>carrier</b> is typically set to oscillate at an audible frequency
- * that we perceive as a pitch—in this case, it is a sine wave oscilaltor at 220Hz,
- * equivalent to an "A3" note. The carrier is connected to master output by default
- * (this is the case for all p5.Oscillators).</p>
- * <p>We will <code>disconnect</code> the <b>modulator</b> from master output,
- * and instead connect to the frequency of the carrier:
- * <code>carrier.freq(modulator)</code>. This adds the output amplitude of the
- * modulator to the frequency of the carrier.</p>
+ * @name 周波数変調
+ * @arialabel 黒い背景の上で、白い音波はユーザーがマウスを動かすと変化します。モジュレーターの周波数と振幅のラベルも、ユーザーがマウスを動かすと変化します。220Hzのキャリア周波数のラベルも表示されています。
+ * @description <p>周波数変調は、強力な合成の一形態です。
+ * 最も単純な形式では、 FM はキャリアとモジュレーターと呼ばれる
+ * 2つのオシレーターを含みます。モジュレーターの波形が最小振幅と最大振幅の
+ * 間で振動すると、その一時的な値がキャリアの周波数に加えられ（「変調」され）ます。</p>
+ * <p>通常、<b>キャリア</b>は人間がピッチとして認識する聴覚周波数で
+ * 振動するように設定されています—この場合、それは 220 Hz での正弦波オシレーターであり、
+ * "A3" の音に相当します。キャリアはデフォルトでマスター出力に接続されています
+ * （すべての p5.Oscillator でそうなります）。</p>
+ * <p><b>モジュレーター</b>をマスター出力から<code>切断</code>し、
+ * 代わりにキャリアの周波数に接続します：
+ * <code>carrier.freq(modulator)</code>。
+ * これにより、モジュレーターの出力振幅が
+ * キャリアの周波数に加えられます。</p>
  * <p>
- * <b>Modulation Depth</b> describes how much the carrier frequency will modulate.
- * It is based on the amplitude of the modulator.
- * The modulator produces a continuous stream of amplitude values that we will add
- * to the carrier frequency. An amplitude of zero means silence, so the modulation will
- * have no effect. An amplitude of 1.0 scales the range of output values
- * between +1.0 and -1.0. That is the standard range for sound that gets sent to
- * your speakers, but in FM we are instead sending the modulator's output to the carrier frequency,
- * where we'd barely notice the +1Hz / -1Hz modulation.
- * So we will typically increase the amplitude ("depth") of the modulator to numbers much higher than what
- * we might send to our speakers.</p>
- * <p><b>Modulation Frequency</b> is the speed of modulation. When the modulation frequency is lower
- * than 20Hz, we stop hearing its frequency as pitch, and start to hear it as a beating rhythm.
- * For example, try 7.5Hz at a depth of 20 to mimic the "vibrato" effect of an operatic vocalist.
- * The term for this is Low Frequency Oscillator, or LFO. Modulators set to higher frequencies can
- * also produce interesting effects, especially when the frequency has a harmonic relationship
- * to the carrier signal. For example, listen to what happens when the modulator's frequency is
- * half or twice that of the carrier. This is the basis for FM Synthesis, developed by John Chowning
- * in the 1960s, which came to revolutionize synthesis in the 1980s and is often used to synthesize
- * brass and bell-like sounds.
+ * <b>変調深度</b>はキャリア周波数がどの程度変調するかを記述します。
+ * これはモジュレーターの振幅に基づいています。
+ * モジュレーターは連続した振幅値のストリームを生み出し、
+ * それをキャリア周波数に加えます。
+ * 振幅はゼロということは音がないということなので、変調は影響を及ぼしません。
+ * 振幅が 1.0 の場合、出力値の範囲は +1.0 から -1.0 までとなります。
+ * これはスピーカに送られる音の標準的な範囲ですが、
+ * FMでは代わりにモジュレーターの出力をキャリア周波数に送っています。
+ * そのため、+1Hz / -1Hz の変調はほとんど気づかないでしょう。
+ * したがって、通常はモジュレーターの振幅（「深さ」）をスピーカに送る数値よりもはるかに大きくします。</p>
+ * <p><b>変調周波数</b>は変調の速度です。
+ * 変調周波数が 20Hz 以下の場合、人間はその周波数をピッチとして聞くのを止め、
+ * リズムとして聞くようになります。
+ * 例えば、オペラ歌手の「ビブラート」効果を模倣するために、 7.5 Hz で深度 20 を試してみてください。
+ * これを低周波振動子、または LFO と呼びます。高周波数に設定されたモジュレーターも、
+ * キャリア信号との調和的な関係があるときには特に興味深い効果を生み出すことができます。
+ * 例えば、モジュレーターの周波数がキャリアの半分または2倍のときに何が起こるかを聴いてみてください。
+ * これは John Chowning が 1960 年代に開発し、 1980 年代に合成を革新するようになった周波数変調生成の基礎であり、
+ * ブラスやベルのような音を合成するためによく使われます。</p>
  *
- * <p>In this example,</p><p>
- * - MouseX controls the modulation depth (the amplitude of the modulator) from -150 to 150.
- * When the modulator's amplitude is set to 0 (in the middle), notice how the modulation
- * has no effect. The greater (the absolute value of) the number, the greater the effect.
- * If the modulator waveform is symetrical like a square <code>[]</code>, sine <code>~</code>
- * or triangle <code>/\</code>, the negative amplitude will be the same as positive amplitude.
- * But in this example, the modulator is an asymetrical sawtooth wave, shaped like this /.
- * When we multiply it by a negative number, it goes backwards like this \. To best
- * observe the difference, try lowering the frequency.
- * </p>
- * <p>- MouseY controls the frequency of the modulator from 0 to 112 Hz.
- * Try comparing modulation frequencies below the audible range (which starts around 20hz),
- * and above it, especially in a harmonic relationship to the carrier frequency (which is 220hz, so
- * try half that, 1/3, 1/4 etc...).
+ * <p>この例では、</p>
+ * <p>- MouseX は変調深度（モジュレーターの振幅）を -150 から 150 まで制御します。
+ * モジュレーターの振幅が 0 に設定されているとき（中央にあるとき）は、変調が影響を与えないことに注意してください。
+ * 数字の絶対値が大きければ大きいほど、効果が大きくなります。
+ * モジュレーターの波形が四角形の<code>[]</code>、サイン<code>~</code>
+ * または三角形<code>/\</code>の場合、負の振幅は正の振幅と同じになります。
+ * しかし、この例ではモジュレーターは非対称ののこぎり波で、このような形「/」で表現されます。
+ * 負の数と掛けると、逆方向「\」に進むようになります。この違いを一番よく観察するためには、
+ * 周波数を下げて試してみてください。</p>
+ * <p>- MouseY はモジュレーターの周波数を 0 から 112 Hz まで制御します。
+ * 可聴範囲（およそ 20 Hz から始まります）以下の変調周波数と、
+ * その上、特にキャリア周波数（これは220Hzですので、
+ * 半分、1/3、1/4など試してみてください）と
+ * 調和的な関係にあるものを比較してみてください。</p>
  *
- * <p><em><span class="small">You will need to include the
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.</em></span></p>
+ * <p><em><span class="small">このサンプルをあなたのプロジェクトで動作させるためには、
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>
+ * を含める必要があります。</em></span></p>
  */
 
-let carrier; // this is the oscillator we will hear
-let modulator; // this oscillator will modulate the frequency of the carrier
+let carrier; // これがこれから聴くオシレーターです。
+let modulator; // このオシレーターはキャリアの周波数を変調します。
 
-let analyzer; // we'll use this visualize the waveform
+let analyzer; // 波形を視覚化するために使います。
 
-// the carrier frequency pre-modulation
+// キャリア周波数の事前変調
 let carrierBaseFreq = 220;
 
-// min/max ranges for modulator
+// モジュレーターの最小/最大範囲
 let modMaxFreq = 112;
 let modMinFreq = 0;
 let modMaxDepth = 150;
@@ -74,42 +74,42 @@ function setup() {
   noFill();
 
   carrier = new p5.Oscillator('sine');
-  carrier.amp(0); // set amplitude
-  carrier.freq(carrierBaseFreq); // set frequency
-  carrier.start(); // start oscillating
+  carrier.amp(0); // 振幅の設定をします。
+  carrier.freq(carrierBaseFreq); // 周波数を設定します。
+  carrier.start(); // 振動し始めます。
 
-  // try changing the type to 'square', 'sine' or 'triangle'
+  // タイプを「正方形('square')」、「正弦('sine')」、「三角形('triangle')」に変更してみてください。
   modulator = new p5.Oscillator('sawtooth');
   modulator.start();
 
-  // add the modulator's output to modulate the carrier's frequency
+  // モジュレーターの出力を加えて、キャリアの周波数を変調します。
   modulator.disconnect();
   carrier.freq(modulator);
 
-  // create an FFT to analyze the audio
+  // オーディオを分析するためにFFTを作成します。
   analyzer = new p5.FFT();
 
-  // fade carrier in/out on mouseover / touch start
+  // マウスオーバー/タッチスタートでキャリアをフェードイン/フェードアウトします。
   toggleAudio(cnv);
 }
 
 function draw() {
   background(30);
 
-  // map mouseY to modulator freq between a maximum and minimum frequency
+  // mouseY をモジュレーターの周波数にマッピングします。
   let modFreq = map(mouseY, height, 0, modMinFreq, modMaxFreq);
   modulator.freq(modFreq);
 
-  // change the amplitude of the modulator
-  // negative amp reverses the sawtooth waveform, and sounds percussive
+  // モジュレーターの振幅を変えます。
+  // ネガティブ・アンプはノコギリ波形を反転させ、パーカッシブなサウンドを奏でます。
   //
   let modDepth = map(mouseX, 0, width, modMinDepth, modMaxDepth);
   modulator.amp(modDepth);
 
-  // analyze the waveform
+  // 波形を分析します。
   waveform = analyzer.waveform();
 
-  // draw the shape of the waveform
+  // 波形の形を描きます。
   stroke(255);
   strokeWeight(10);
   beginShape();
@@ -121,7 +121,7 @@ function draw() {
   endShape();
 
   strokeWeight(1);
-  // add a note about what's happening
+  // 状況を表示します。
   text('Modulator Frequency: ' + modFreq.toFixed(3) + ' Hz', 20, 20);
   text(
     'Modulator Amplitude (Modulation Depth): ' + modDepth.toFixed(3),
@@ -135,7 +135,7 @@ function draw() {
   );
 }
 
-// helper function to toggle sound
+// 音声を切り替えるヘルパー関数です。
 function toggleAudio(cnv) {
   cnv.mouseOver(function() {
     carrier.amp(1.0, 0.01);
