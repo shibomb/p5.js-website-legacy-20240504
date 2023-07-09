@@ -1,9 +1,9 @@
 /*
- * @name Follow 1
- * @arialabel Circle connected to a long oval. The user’s mouse is attached to the end of the oval. When the mouse moves, the oval and circle moves with it.
+ * @name フォロー 1
+ * @arialabel 長い丸線につながった円があります。ユーザーのマウスは楕円の端に取り付けられています。マウスが動くと、楕円と円も一緒に動きます。
  * @frame 710,400
- * @description A line segment is pushed and pulled by the cursor.
- * Based on code from Keith Peters.
+ * @description 丸線はカーソルによって押されたり引かれたりします。
+ * Keith Peters のコードを基にしています。
  */
 let x = 100,
   y = 100,

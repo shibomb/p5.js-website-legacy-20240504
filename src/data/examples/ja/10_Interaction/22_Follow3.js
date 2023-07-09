@@ -1,10 +1,10 @@
 /*
- * @name Follow 3
- * @arialabel Long segmented snake shape follows the user’s mouse as it moves 
+ * @name フォロー 3
+ * @arialabel 長く分割された蛇の形が、ユーザーのマウスの動きについてきます。
  * @frame 710,400
- * @description A segmented line follows the mouse. The relative angle from
- * each segment to the next is calculated with atan2() and the position of
- * the next is calculated with sin() and cos(). Based on code from Keith Peters.
+ * @description マウスについてくる分割された線があります。各分割部分とその次への相対的な角度は atan2()で計算され、
+ * 次の位置は sin() と cos() で計算されます。
+ * Keith Peters のコードに基づいています。
  */
 let x = [],
   y = [],

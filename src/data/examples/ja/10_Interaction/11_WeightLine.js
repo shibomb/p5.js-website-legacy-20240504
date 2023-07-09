@@ -1,20 +1,20 @@
 /* 
- * @name Weight Line
- * @arialabel Light yellow background and the user’s mouse draws lines of various shades and thicknesses as it hovers over the background
+ * @name 線の太さ
+ * @arialabel 薄黄色の背景の上でマウス移動すると、さまざまな色合いと太さの線が描かれます。
  * @frame 710,400
- * @description contributed by <a href="https://www.rit.edu/directory/wmhics-w-michelle-harris">
-   <b>Prof WM Harris,</b></a> using the random function with events to color/weight a line<br/>
-  <b>How</b> to use the random function with events to color/ weight a line
-	dependent on mouse location, left mouse button clicks, character key types, and
-	random key releases.<br/>
-  <b>Functions</b> are created for both the canvas set up as well as the creation of
-	the line. Depending on the action taken by the user the line can
-	vary in width and color. Left mouse button clicks result in a color
-	change to blue, while the typing of any character key will change
-	the color to turquoise, each resulting in a variable stroke weight;
-	the width of the former will be between 0 – 1 while the width of
-	the latter will be 0 – 5. The release of any key will result in a
-  random hue, saturation, and brightness change to the line.
+ * @description <a href="https://www.rit.edu/directory/wmhics-w-michelle-harris">
+   <b>Prof WM Harris</b></a>から寄稿された、各イベントでランダム関数を使用して線の色や太さを変更する方法です。<br/>
+  <b>どうやって</b> マウスの位置、左マウスボタンのクリック、文字キーを押したか、キーを離したかのイベントで、
+  ランダム関数を使用して色や太さを
+  変えるかをしめしています。<br/>
+  <b>関数として</b> キャンバスのセットアップだけでなく、線を描くのための関数が作成されます。
+  また、ユーザーが行うアクションによって、線の太さと色に変化をもたらします。
+  左マウスボタンのクリックをすると色が青に変わり、
+  太さは 0 〜 1 の範囲で変化します。
+  文字キーを押しっぱなしにすると色がターコイズ色に変わり、
+  太さは 0 〜 5 の範囲で変化します。
+	また、キーを離した時には、
+  色をランダムな色相、彩度、輝度に変化させます。
  */
 
 
@@ -25,32 +25,32 @@ function setup() {
   }
   
   function draw() {
-    //Line from prev pt to current pt
-    //of mouse position
+    // マウス位置の前のポイントから
+    // 現在のポイントまでの線
     line(mouseX, mouseY, pmouseX, pmouseY);
   }
   
-  //listen when we click the mouse
+  // マウスをクリックすると
   function mouseClicked() {
-    //weights 0 to 1
+    // ウェイト(太さ)を 0 ～ 1 で設定します。
     stroke("slateBlue");
     strokeWeight(random());
   
-    //what if want weights 0 to .4?
+    // もしウェイトを 0 〜 0.4 にしたい場合は？
     //strokeWeight( random(.4) );
   }
   
-  //listen when we release *any* key
+  // *どれか* のキーを離したとき
   function keyReleased() {
-    //color hue values between 20 and 145
-    //saturation 0 to 100
-    //brightness 80 to 100
+    // 色相 20 ～ 145
+    // 彩度 0 ～ 100
+    // 明るさ 80 ～ 100
     stroke(random(20, 145), random(100), random(80, 100));
   }
   
-  //listen for only character keys
+  // 文字キーが押されているとき
   function keyTyped() {
-    //weights 0 to 5
+    // ウェイト 0 〜 5
     stroke("turquoise");
     strokeWeight(random(5));
   }

@@ -1,10 +1,10 @@
 /*
- * @name Follow 2
- * @arialabel Two long ovals connected at the end. The user’s mouse is attached to the end of one of the ovals and when the mouse moves, the two ovals move as well
+ * @name フォロー 2
+ * @arialabel 2つの長い丸線が端でつながっています。ユーザーのマウスは丸線の一方の端に取り付けられており、マウスが動くと丸線が2つとも動きます。
  * @frame 710,400
- * @description A two-segmented arm follows the cursor position. The relative
- * angle between the segments is calculated with atan2() and the position
- * calculated with sin() and cos(). Based on code from Keith Peters.
+ * @description 2分割されたアームがカーソルの位置を追います。アーム同士の相対的な
+ * 角度は atan2() で計算し、位置は sin() および cos() で計算されます。
+ * Keith Peters のコードを基にしています。
  */
 let x = [0, 0],
   y = [0, 0],

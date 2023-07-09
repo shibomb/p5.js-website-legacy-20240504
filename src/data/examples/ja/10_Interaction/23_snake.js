@@ -1,18 +1,18 @@
 /*
- * @name Snake game
- * @arialabel Snake game where a snake represented by a long white oval on a black background is controlled by the i,j,k,l keys. Users use these keys to move the snake to not hit the sides of the window and to eat a small white circle which represents food and allows the snake to grow.
- * @description The famous snake game! Once you click run, click anywhere
- * inside the black area, and control the snake using i j k and l. Don't let
- * the snake hit itself or the wall!<br>
- * Example created by <a href='https://github.com/prashantgupta24' target='_blank'>Prashant Gupta
+ * @name スネークゲーム
+ * @arialabel 黒い背景に白く長い丸線で描かれたヘビを i,j,k,l キーで操作するスネークゲームです。ユーザーはこれらのキーで、画面端にぶつからないようにスネークを動かし、エサをあらわす小さな白い丸を食べてスネークを成長させます。
+ * @description 有名なスネークゲームです！ 実行をクリックしたら、黒いエリアの任意の場所をクリックし、
+ * i j k l を使ってスネークを操作します。
+ * スネークが自分自身または壁に当たらないようにしてください。<br>
+ * サンプルの作成者: <a href='https://github.com/prashantgupta24' target='_blank'>Prashant Gupta</a>
  */
 
-// the snake is divided into small segments, which are drawn and edited on each 'draw' call
+// スネークは小さなセグメントに分割され、それぞれの 'draw' 呼び出しで描画・編集されます。
 let numSegments = 10;
 let direction = 'right';
 
-const xStart = 0; //starting x coordinate for snake
-const yStart = 250; //starting y coordinate for snake
+const xStart = 0; // スネークの開始 x 座標
+const yStart = 250; // スネークの開始 y 座標
 const diff = 10;
 
 let xCor = [];
@@ -51,16 +51,16 @@ function draw() {
 }
 
 /*
- The segments are updated based on the direction of the snake.
- All segments from 0 to n-1 are just copied over to 1 till n, i.e. segment 0
- gets the value of segment 1, segment 1 gets the value of segment 2, and so on,
- and this results in the movement of the snake.
+ セグメントはスネークの進行方向にしたがって更新されます。
+ すべてのセグメント 0 から n-1 まで、つまり、セグメント0はその次のセグメント1の値を取得し、
+ セグメント1はセグメント2の値を取得、、、
+ というふうに次々に取得していくことで、スネークの移動が実現されます。
 
- The last segment is added based on the direction in which the snake is going,
- if it's going left or right, the last segment's x coordinate is increased by a
- predefined value 'diff' than its second to last segment. And if it's going up
- or down, the segment's y coordinate is affected.
-*/
+ 最後のセグメントはスネークの進行方向にしたがって追加されます。
+ スネークが左または右に進んでいる場合、最後のセグメントの x 座標は
+ 二つ目から最後のセグメントよりもあらかじめ定義された値 'diff' の分だけ増加します。
+ そして、スネークが上か下に動いている場合、最後のセグメントの y 座標が影響を受けます。
+ */
 function updateSnakeCoordinates() {
   for (let i = 0; i < numSegments - 1; i++) {
     xCor[i] = xCor[i + 1];
@@ -87,9 +87,9 @@ function updateSnakeCoordinates() {
 }
 
 /*
- I always check the snake's head position xCor[xCor.length - 1] and
- yCor[yCor.length - 1] to see if it touches the game's boundaries
- or if the snake hits itself.
+ 常にヘビの頭の位置 `xCor[xCor.length - 1]` と `yCor[yCor.length - 1]` をチェックして、
+ それが画面の境界に触れているか、
+ またはヘビが自身に衝突しているかどうかを判断します。
 */
 function checkGameStatus() {
   if (
@@ -106,8 +106,8 @@ function checkGameStatus() {
 }
 
 /*
- If the snake hits itself, that means the snake head's (x,y) coordinate
- has to be the same as one of its own segment's (x,y) coordinate.
+ もしスネークの頭の（x,y）座標が自身のセグメントのいずれかひとつの（x,y）座標と同じである場合、
+ スネークが自分自身にぶつかったということです。
 */
 function checkSnakeCollision() {
   const snakeHeadX = xCor[xCor.length - 1];
@@ -120,9 +120,9 @@ function checkSnakeCollision() {
 }
 
 /*
- Whenever the snake consumes a fruit, I increment the number of segments,
- and just insert the tail segment again at the start of the array (basically
- I add the last segment again at the tail, thereby extending the tail)
+ スネークがフルーツを食べるたびに、セグメントの数を増やし、
+ 配列の先頭に、最後尾と同じ内容のセグメントを挿入します
+（最後尾に再び最後のセグメントを追加するということです。そうすることで尾を延ばしています）
 */
 function checkForFruit() {
   point(xFruit, yFruit);
@@ -138,9 +138,9 @@ function checkForFruit() {
 
 function updateFruitCoordinates() {
   /*
-    The complex math logic is because I wanted the point to lie
-    in between 100 and width-100, and be rounded off to the nearest
-    number divisible by 10, since I move the snake in multiples of 10.
+    この複雑な計算は、100 と width - 100 の範囲内、かつ、
+    10 で割り切れる整数(ランダム値を四捨五入)を求めています。
+    なぜなら、スネークを10の倍数で動かすからです。
   */
 
   xFruit = floor(random(10, (width - 100) / 10)) * 10;
