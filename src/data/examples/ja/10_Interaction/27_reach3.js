@@ -1,9 +1,9 @@
 /*
- * @name Reach 3
- * @arialabel Grey triangle segmented and attached to the bottom of the black screen. The tip of the triangle follows the direction of a grey circular donut shape that is also bouncing around the screen
+ * @name リーチ 3
+ * @arialabel 灰色の三角形が分割され、黒いスクリーンの下部にくっついています。三角形の先端は、スクリーンの周りを跳ねている灰色の円形のドーナツの方に向いています。
  * @frame 710,400
- * @description The arm follows the position of the ball by calculating the
- * angles with atan2(). Based on code from Keith Peters.
+ * @description アームは atan2() を使って角度を計算することにより、ボールの方向についていきます。
+ * Keith Peters のコードに基づいています。
  */
 let numSegments = 8,
   x = [],
@@ -29,8 +29,8 @@ function setup() {
   stroke(255, 100);
   noFill();
 
-  x[x.length - 1] = width / 2; // Set base x-coordinate
-  y[x.length - 1] = height; // Set base y-coordinate
+  x[x.length - 1] = width / 2; // ベースの x 座標を設定します。
+  y[x.length - 1] = height; // ベースの y 座標を設定します。
 }
 
 function draw() {

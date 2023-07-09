@@ -1,9 +1,9 @@
 /*
- * @name Reach 1
- * @arialabel Two long ovals connected at the end. The user’s mouse is attached to the end of one of the ovals and when the mouse moves, the two ovals move as well. However, the end of the other oval is permanently attached to the middle of the background.
+ * @name リーチ 1
+ * @arialabel 2つの長い丸線が端でつながっています。ユーザーのマウスは一方の丸線の端に取り付けられており、マウスが動くと2つとも動きます。ですが、もう一方の丸線の端は背景の真ん中に固定されたままです。
  * @frame 710,400
- * @description The arm follows the position of the mouse by calculating the
- * angles with atan2(). Based on code from Keith Peters.
+ * @description アームは atan2() を使って角度を計算することにより、マウスについてきます。
+ * Keith Peters のコードに基づいています。
  */
 let segLength = 80,
   x,
