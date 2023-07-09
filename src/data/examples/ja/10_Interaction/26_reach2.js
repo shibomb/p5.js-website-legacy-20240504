@@ -1,9 +1,9 @@
 /*
- * @name Reach 2
- * @arialabel Grey triangle segmented and attached to the bottom of the black screen. The tip of the triangle follows the direction of the user’s mouse
+ * @name リーチ 2
+ * @arialabel 灰色の三角形が分割され、黒いスクリーンの下部に取り付けられています。三角形の先端は、ユーザーのマウスの動きについてきます。
  * @frame 710,400
- * @description The arm follows the position of the mouse by calculating the
- * angles with atan2(). Based on code from Keith Peters.
+ * @description アームは atan2() を使って角度を計算することにより、マウスについてきます。
+ * Keith Peters のコードを基にしています。
  */
 let numSegments = 10,
   x = [],
@@ -24,8 +24,8 @@ function setup() {
   strokeWeight(20);
   stroke(255, 100);
 
-  x[x.length - 1] = width / 2; // Set base x-coordinate
-  y[x.length - 1] = height; // Set base y-coordinate
+  x[x.length - 1] = width / 2; // ベースの x 座標を設定します。
+  y[x.length - 1] = height; // ベースの y 座標を設定します。
 }
 
 function draw() {

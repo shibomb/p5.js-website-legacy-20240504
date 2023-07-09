@@ -1,20 +1,20 @@
 /*
- * @name Arduino sensor data via WebJack
- * @description WebJack is a way to read data from an Arduino (and other sources)
- * using audio -- it basically turns your Arduino into an audio modem.
- * 
+ * @name WebJack経由のArduinoセンサーデータ
+ * @description WebJack は、 Arduino から（および他のソースから）オーディオを使用してデータを読み取る方法であり、
+ * 基本的に Arduino をオーディオモデムに変えます。
+ *
  * https://github.com/publiclab/webjack
- * 
- * Note: WebJack and p5-webjack libraries must be added to your index.html as follows:
+ *
+ * Note: WebJack と p5-webjack ライブラリは、 index.html に以下のように追加する必要があります：
  * <pre><code class="language-markup">&lt;script src="https://webjack.io/dist/webjack.js">&lt;/script></code></pre>
  * <pre><code class="language-markup">&lt;script src="https://jywarren.github.io/p5-webjack/lib.js">&lt;/script></code></pre>
- * 
- * Working example: https://editor.p5js.org/jywarren/sketches/rkztwSt8M
- * 
- * Testing audio: https://www.youtube.com/watch?v=GtJW1Dlt3cg
- * Load this sketch onto an Arduino: 
+ *
+ * 動作サンプル: https://editor.p5js.org/jywarren/sketches/rkztwSt8M
+ *
+ * オーディオのテスト: https://www.youtube.com/watch?v=GtJW1Dlt3cg
+ * このスケッチをArduinoにロードしてください：
  * https://create.arduino.cc/editor/jywarren/023158d8-be51-4c78-99ff-36c63126b554/preview
- * Arduino will output audio from pin 3 + ground. Use microphone or an audio cable.
+ * Arduino は ピン 3 ＋グラウンドから音声を出力します。マイクかオーディオケーブルを使ってください。
  */
 
 function setup() { 
@@ -26,10 +26,10 @@ function setup() {
 
 function handleData(data, connection) {
 
-  console.log(data); // output the values to log
-  // data[0] is the 1st value, data[1] 2nd, etc.
+  console.log(data); // 値をログに出力します。
+  // data[0] は 1 番目の値、data[1] は 2 番目の値、、、というふうになります。
 
-  // draw stuff! Browse http://p5js.org/reference/
+  // 描きます! http://p5js.org/reference/ を参照してください。
   background('#ddd');
   ellipse(100, 200, data[0]+10, data[0]+10);
 

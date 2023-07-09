@@ -1,9 +1,9 @@
 /*
- * @name Kaleidoscope
- * @arialabel User draws thick black lines on the grey background and it is mirrored 5 times in a circle like a kaleidoscope
- * @description A kaleidoscope is an optical instrument with two or more reflecting surfaces tilted to each other in an angle. This example tries to replicate the behavior of a kaleidoscope. Set the number of reflections at the symmetry variable and start drawing on the screen. Adjust the brush size with the help of the slider. The clear screen as it says clears the screen. The save button will download a .jpg file of the art that you have created.
+ * @name 万華鏡
+ * @arialabel 灰色の背景に、ユーザーが黒い太い線を描くと、万華鏡のように円形に 5 回鏡写しされます。
+ * @description 万華鏡は、2つ以上の反射面が互いに斜めに傾いている光学機器です。このサンプルでは、万華鏡の動作を再現しようとしています。シンメトリー変数で反射の数を設定し、スクリーンに描画を開始します。ブラシのサイズはスライダーで調整します。画面クリアは画面を消去します。保存ボタンは、作成したアートの .jpg ファイルをダウンロードします。
  */
-// Symmetry corresponding to the number of reflections. Change the number for different number of reflections 
+// シンメトリーに対応する反射回数です。反射回数を変える時は、数値を変更してください。
 let symmetry = 6;   
 
 let angle = 360 / symmetry;
@@ -15,34 +15,34 @@ function setup() {
   angleMode(DEGREES);
   background(127);
 
-  // Creating the save button for the file
+  // ファイルの保存ボタンを作成します。
   saveButton = createButton('save');
   saveButton.mousePressed(saveFile);
 
-  // Creating the clear screen button
+  // 画面クリアボタンの作成します。
   clearButton = createButton('clear');
   clearButton.mousePressed(clearScreen);
 
-  // Creating the button for Full Screen
+  // フルスクリーンボタンの作成します。
   fullscreenButton = createButton('Full Screen');
   fullscreenButton.mousePressed(screenFull);
 
-  // Setting up the slider for the thickness of the brush
+  // ブラシの太さのスライダーを設定します。
   brushSizeSlider = createButton('Brush Size Slider');
   sizeSlider = createSlider(1, 32, 4, 0.1);
 }
 
-// Save File Function
+// ファイル保存機能
 function saveFile() {
   save('design.jpg');
 }
 
-// Clear Screen function
+// 画面クリア機能
 function clearScreen() {
   background(127);
 }
 
-// Full Screen Function
+// フルスクリーン機能
 function screenFull() {
   let fs = fullscreen();
   fullscreen(!fs);
