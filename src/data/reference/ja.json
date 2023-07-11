@@ -124,8 +124,7 @@
       ],
       "returns": "Number: アルファ値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー",
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, array of  color components, or CSS color string."
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、色成分の配列、または CSS カラー文字列"
       }
     },
     "blue": {
@@ -135,8 +134,7 @@
       ],
       "returns": "Number: 青の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー",
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, array of  color components, or CSS color string."
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、色成分の配列、または CSS カラー文字列"
       }
     },
     "brightness": {
@@ -146,8 +144,7 @@
       ],
       "returns": "Number: 明度値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー",
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, array of  color components, or CSS color string."
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、色成分の配列、または CSS カラー文字列"
       }
     },
     "color": {
@@ -164,10 +161,10 @@
       "returns": "p5.Color: 結果の色",
       "params": {
         "gray": "Number: 白と黒の間の値を指定する数値。",
-        "alpha": "Number: (オプション) 現在のカラーレンジに対するアルファ値（デフォルトは0〜255）",
-        "v1": "Number: 現在のカラーレンジに対する赤または色相値",
-        "v2": "Number: 現在のカラーレンジに対する緑または彩度値",
-        "v3": "Number: 現在のカラーレンジに対する青または明度値",
+        "alpha": "Number: (オプション) 現在のカラーモードの色範囲に対するアルファ値（デフォルトは0〜255）",
+        "v1": "Number: 現在のカラーモードの色範囲に対する赤または色相値",
+        "v2": "Number: 現在のカラーモードの色範囲に対する緑または彩度値",
+        "v3": "Number: 現在のカラーモードの色範囲に対する青または明度値",
         "value": "String: カラー文字列",
         "values": "Number[]: 色の赤、緑、青、およびアルファ成分を含む配列",
         "color": "p5.Color"
@@ -180,8 +177,7 @@
       ],
       "returns": "Number: 緑の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー",
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, array of  color components, or CSS color string."
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、色成分の配列、または CSS カラー文字列"
       }
     },
     "hue": {
@@ -193,8 +189,7 @@
       ],
       "returns": "Number: 色相",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー",
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, array of  color components, or CSS color string."
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、色成分の配列、または CSS カラー文字列"
       }
     },
     "lerpColor": {
@@ -218,8 +213,7 @@
       ],
       "returns": "Number: 輝度",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー",
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, array of  color components, or CSS color string."
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、色成分の配列、または CSS カラー文字列"
       }
     },
     "red": {
@@ -229,8 +223,7 @@
       ],
       "returns": "Number: 赤の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー",
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, array of  color components, or CSS color string."
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、色成分の配列、または CSS カラー文字列"
       }
     },
     "saturation": {
@@ -242,8 +235,7 @@
       ],
       "returns": "Number: 彩度の値",
       "params": {
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、カラーコンポーネント、または CSS カラー",
-        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> object, array of  color components, or CSS color string."
+        "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、色成分の配列、または CSS カラー文字列"
       }
     },
     "background": {
@@ -263,12 +255,9 @@
         "colorstring": "String: カラー文字列、対応する形式は次のとおりです: 整数 rgb() または rgba()、パーセンテージ、rgb() または rgba()、3桁の16進数、6桁の16進数",
         "a": "Number: (オプション) 現在のカラー範囲に対する背景の不透明度（デフォルトは0-255）",
         "gray": "Number: 白と黒の間の値を指定",
-        "v1": "Number: 現在のカラーモードに応じた赤または色相の値",
-        "v2": "Number: 現在のカラーモードに応じた緑または彩度の値",
-        "v3": "Number: 現在のカラーモードに応じた青または明るさの値",
-        "v1": "Number: red value if color mode is RGB, or hue value if color mode is HSB.",
-        "v2": "Number: green value if color mode is RGB, or saturation value if color mode is HSB.",
-        "v3": "Number: blue value if color mode is RGB, or brightness value if color mode is HSB.",
+        "v1": "Number: カラーモードが RGB の場合:赤の値、カラーモードが HSB の場合:色相の値",
+        "v2": "Number: カラーモードが RGB の場合:緑の値、カラーモードが HSB の場合:彩度の値",
+        "v3": "Number: カラーモードが RGB の場合:青の値、カラーモードが HSB の場合:明るさの値",
         "values": "Number[]: 色の赤、緑、青、およびアルファ成分を含む配列",
         "image": "p5.Image: 背景として設定する <a href=\"#/p5/loadImage\">loadImage()</a> または <a href=\"#/p5/createImage\">createImage()</a> で作成された画像（スケッチウィンドウと同じサイズである必要があります）"
       }
@@ -299,9 +288,9 @@
       "params": {
         "mode": "Constant: RGB、HSB、または HSL のいずれか。それぞれ、赤/緑/青と色相/彩度/明度（または輝度）に対応します。",
         "max": "Number: (オプション) すべての値の範囲",
-        "max1": "Number: 現在のカラーモードに応じて、赤または色相の範囲",
-        "max2": "Number: 現在のカラーモードに応じて、緑または彩度の範囲",
-        "max3": "Number: 現在のカラーモードに応じて、青または明度/輝度の範囲",
+        "max1": "Number: 現在のカラーモードに対応する、赤または色相の範囲",
+        "max2": "Number: 現在のカラーモードに対応する、緑または彩度の範囲",
+        "max3": "Number: 現在のカラーモードに対応する、青または明度/輝度の範囲",
         "maxA": "Number: (オプション) アルファの範囲"
       }
     },
@@ -315,16 +304,12 @@
         "The version of <code>fill()</code> with three parameters interprets them as RGB, HSB, or HSL colors, depending on the current <a href=\"#/p5/colorMode\">colorMode()</a>. The default color space is RGB, with each value in the range from 0 to 255."
       ],
       "params": {
-        "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
-        "v2": "Number: 現在のカラーレンジに対する緑または彩度の値",
-        "v3": "Number: 現在のカラーレンジに対する青または明度の値",
-        "v1": "Number: red value if color mode is RGB or hue value if color mode is HSB.",
-        "v2": "Number: green value if color mode is RGB or saturation value if color mode is HSB.",
-        "v3": "Number: blue value if color mode is RGB or brightness value if color mode is HSB.",
+        "v1": "Number: カラーモードが RGB の場合:赤の値、カラーモードが HSB の場合:色相の値",
+        "v2": "Number: カラーモードが RGB の場合:緑の値、カラーモードが HSB の場合:彩度の値",
+        "v3": "Number: カラーモードが RGB の場合:青の値、カラーモードが HSB の場合:明るさの値",
         "alpha": "Number (オプション)",
         "value": "String: カラー文字列",
-        "gray": "Number: グレーの値",
-        "gray": "Number: a grayscale value.",
+        "gray": "Number: グレースケールの値",
         "values": "Number[]: 赤、緑、青、およびアルファ成分を含む配列",
         "color": "p5.Color: 塗りつぶし色"
       }
@@ -352,16 +337,12 @@
         "The version of <code>stroke()</code> with four parameters interprets them as RGBA, HSBA, or HSLA colors, depending on the current <code>colorMode()</code>. The last parameter sets the alpha (transparency) value."
       ],
       "params": {
-        "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
-        "v2": "Number: 現在のカラーレンジに対する緑または彩度の値",
-        "v3": "Number: 現在のカラーレンジに対する青または明度の値",
-        "v1": "Number: red value if color mode is RGB or hue value if color mode is HSB.",
-        "v2": "Number: green value if color mode is RGB or saturation value if color mode is HSB.",
-        "v3": "Number: blue value if color mode is RGB or brightness value if color mode is HSB.",
+        "v1": "Number: カラーモードが RGB の場合:赤の値、カラーモードが HSB の場合:色相の値",
+        "v2": "Number: カラーモードが RGB の場合:緑の値、カラーモードが HSB の場合:彩度の値",
+        "v3": "Number: カラーモードが RGB の場合:青の値、カラーモードが HSB の場合:明るさの値",
         "alpha": "Number (オプション)",
         "value": "String: カラー文字列",
-        "gray": "Number: グレーの値",
-        "gray": "Number: a grayscale value.",
+        "gray": "Number: グレースケールの値",
         "values": "Number[]: 色の赤、緑、青、アルファ成分を含む配列",
         "color": "p5.Color: ストロークカラー"
       }
@@ -377,10 +358,8 @@
         "<code>erase()</code> has no effect on drawing done with the <a href=\"#/p5/image\">image()</a> and <a href=\"#/p5/background\">background()</a> functions."
       ],
       "params": {
-        "strengthFill": "Number: (Optional) a number (0-255) for the strength of erasing under a shape's interior.  Defaults to 255, which is full strength.",
-        "strengthStroke": "Number: (Optional) a number (0-255) for the strength of erasing under a shape's edge.  Defaults to 255, which is full strength.",
-        "strengthFill": "Number: (オプション) 形状の塗りつぶしの消去強度の数値（0-255）。引数がない場合、デフォルトで255になり、最大強度になります。",
-        "strengthStroke": "Number: (オプション) 形状のストロークの消去強度の数値（0-255）。引数がない場合、デフォルトで255になり、最大強度になります。"
+        "strengthFill": "Number: (オプション) シェイプ内部の消去の強さを数値（0-255）で指定します。デフォルトは255で、完全に消去されます。",
+        "strengthStroke": "Number: (オプション) シェイプのエッジ消去の強さを数値（0-255）で指定します。デフォルは255で、完全に消去されます。"
       }
     },
     "noErase": {
@@ -1149,7 +1128,7 @@
       "description": [
         "現在の URL パスを配列として取得します。注意:p5 エディターを使用している場合、スケッチが iframe に埋め込まれているため、これは空のオブジェクトを返します。エディターのプレゼント URL やシェア URL でスケッチを表示すると、正しく機能します。"
       ],
-      "returns": "String[]: パスコンポーネント"
+      "returns": "String[]: パス要素"
     },
     "getURLParams": {
       "description": [
@@ -1444,8 +1423,7 @@
         "<img style=\"max-width: 300px\" src=\"assets/transformation-matrix-4-4.png\" alt=\"applyMatrix が4 x 4行列で呼び出されたときに使用される変換行列\"/>"
       ],
       "params": {
-        "arr": "Array: 数値の配列 - 6または16の長さである必要があります（2<em>3または4</em>4行列値）",
-        "arr": "Array: an array of numbers - should be 6 or 16 length (2×3 or 4×4 matrix values)",
+        "arr": "Array: 数値の配列 - 6または16の長さである必要があります（2 x 3または4 x 4行列値）",
         "a": "Number: 乗算される2 x 3または4 x 4行列を定義する数値",
         "b": "Number: 乗算される2 x 3または4 x 4行列を定義する数値",
         "c": "Number: 乗算される2 x 3または4 x 4行列を定義する数値",
@@ -2195,8 +2173,7 @@
       "params": {
         "filename": "String: gif ファイルのファイル名",
         "duration": "Number: スケッチからキャプチャしたい秒数の長さ",
-        "options": "Object: delay（録画を開始する前に待つ時間を指定する）および units（'seconds'または'frames'のいずれかの文字列。デフォルトでは'seconds'）を含むオプションのオブジェクト。",
-        "options": "Object: An optional object that can contain five more arguments: delay, specifying how much time we should wait before recording; units, a string that can be either 'seconds' or 'frames'. By default it's 'seconds’; silent, a boolean that defines presence of progress notifications. By default it’s false; notificationDuration, a number that defines how long in seconds the final notification will live. 0, the default value, means that the notification will never be removed; notificationID, a string that specifies the notification DOM element id. By default it’s 'progressBar’."
+        "options": "Object: 5つの引数を含むことができるオプションのオブジェクトです: delay, 録画するまでの待ち時間を指定します。; units, 'seconds' または 'frames' の文字列です。デフォルトは 'seconds' です。; silent, 進捗通知の有無を定義するブール値です。デフォルトは false です。; notificationDuration, 最終通知が表示される時間を秒単位で定義する数値です。デフォルト値の 0 は、通知が削除されないことを意味します。; notificationID, 通知先の DOM 要素 ID を指定する文字列です。デフォルトでは 'progressBar' です。"
       }
     },
     "image": {
@@ -2207,8 +2184,7 @@
         "この関数は、9番目のパラメーターである fit を追加することで、元のアスペクト比を歪めずに画像を描画するためにも使用できます。fit は、COVER または CONTAIN のいずれかになります。CONTAIN は、名前が示すように、指定された宛先ボックス内に画像全体を含め、画像の比率を歪めません。COVER は、宛先ボックス全体を覆います。"
       ],
       "params": {
-        "img": "p5.Image|p5.Element|p5.Texture: 表示する画像",
-        "img": "p5.Image|p5.Element|p5.Texture|p5.Framebuffer|p5.FramebufferTexture: the image to display",
+        "img": "p5.Image|p5.Element|p5.Texture|p5.Framebuffer|p5.FramebufferTexture: 表示する画像",
         "x": "Number: 画像の左上隅の x 座標",
         "y": "Number: 画像の左上隅の y 座標",
         "width": "Number: (オプション) 画像を描画する幅",
@@ -2330,10 +2306,8 @@
       "params": {
         "x": "Number: ピクセルの x 座標",
         "y": "Number: ピクセルの y 座標",
-        "w": "Number: 幅",
-        "h": "Number: 高さ",
-        "w": "Number: width of the section to be returned",
-        "h": "Number: height of the section to be returned"
+        "w": "Number: 返却されるセクションの幅",
+        "h": "Number: 返却されるセクションの高さ"
       }
     },
     "loadPixels": {
@@ -3629,8 +3603,7 @@
         "この <a href=\"/examples/3d-materials.html\">サンプル</a> でさらに多くのマテリアルを見ることができます。"
       ],
       "params": {
-        "tex": "p5.Image|p5.MediaElement|p5.Graphics|p5.Texture: テクスチャとして使用する画像",
-        "tex": "p5.Image|p5.MediaElement|p5.Graphics|p5.Texture|p5.Framebuffer|p5.FramebufferTexture: image to use as texture"
+        "tex": "p5.Image|p5.MediaElement|p5.Graphics|p5.Texture|p5.Framebuffer|p5.FramebufferTexture: テクスチャとして使用する画像"
       }
     },
     "textureMode": {
@@ -3954,7 +3927,7 @@
     "description": [
       "各色は、その構築時に適用されたカラーモードとレベル最大値を格納します。これらは、入力引数の解釈（構築時およびそのインスタンスの後で）および出力の書式設定（<a href=\"#/p5/saturation\">saturation()</a> の要求時など）に使用されます。",
       "内部的に、理想的な RGBA 値を表す浮動小数点配列を、0から1に正規化して格納しています。これから、最も近いスクリーンカラー（0から255の RGBA レベル）を計算し、レンダラーに公開します。",
-      "また、計算されたさまざまな表現の正規化された浮動小数点カラーのコンポーネントをキャッシュしています。これは、すでに実行された変換を繰り返さないようにするために行われます。",
+      "また、計算されたさまざまな表現の正規化された浮動小数点カラーの成分をキャッシュしています。これは、すでに実行された変換を繰り返さないようにするために行われます。",
       "A class to describe a color. Each <code>p5.Color</code> object stores the color mode and level maxes that were active during its construction. These values are used to interpret the arguments passed to the object's constructor. They also determine output formatting such as when <a href=\"#/p5/saturation\">saturation()</a> is called.",
       "Color is stored internally as an array of ideal RGBA values in floating point form, normalized from 0 to 1. These values are used to calculate the closest screen colors, which are RGBA levels from 0 to 255. Screen colors are sent to the renderer.",
       "When different color representations are calculated, the results are cached for performance. These values are normalized, floating-point numbers.",
@@ -4016,8 +3989,7 @@
       "スケッチに追加されるすべての要素の基底クラスで、キャンバス、グラフィックスバッファ、およびその他の HTML 要素が含まれます。直接呼び出されることはありませんが、<a href=\"#/p5.Element\">p5.Element</a> オブジェクトは、<a href=\"#/p5/createCanvas\">createCanvas()</a>、<a href=\"#/p5/createGraphics\">createGraphics()</a>、<a href=\"#/p5/createDiv\">createDiv()</a>、<a href=\"#/p5/createImg\">createImg()</a>、<a href=\"#/p5/createInput\">createInput()</a> などを呼び出すことで作成されます。"
     ],
     "params": {
-      "elt": "String: ラップされた DOM ノード",
-      "elt": "HTMLElement: DOM node that is wrapped",
+      "elt": "HTMLElement: ラップされた DOM ノード",
       "pInst": "P5: (オプション) p5 インスタンスへのポインタ"
     },
     "elt": {
@@ -4326,8 +4298,7 @@
       "p5.js「コア」の主要なグラフィックスとレンダリングコンテキスト、および基本 API 実装です。Renderer2D および Renderer3D クラスのそれぞれのスーパークラスとして使用されます。"
     ],
     "params": {
-      "elt": "String: ラップされた DOM ノード",
-      "elt": "HTMLElement: DOM node that is wrapped",
+      "elt": "HTMLElement: ラップされた DOM ノード",
       "pInst": "P5: (オプション) p5 インスタンスへのポインタ",
       "isMainCanvas": "Boolean: (オプション) メインキャンバスとして使用するかどうか"
     }
