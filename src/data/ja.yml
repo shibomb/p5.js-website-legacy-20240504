@@ -1099,7 +1099,8 @@ libraries:
   p5.jacdac: p5js 用のプラグアンドプレイマイクロコントローラ。
   p5.PatGrad: p5.PatGrad を使用すると、スケッチにパターンやグラデーションを追加できます。
   p5.projection: スケッチを現実世界の表面に簡単に投影マッピングすることができます。
-  p5.Framebuffer: WebGL の高速オフスクリーンキャンバスで、フォグやぼかし効果のための深度データにアクセスできます。
+  p5.filterRenderer: >-
+    A library for p5.js WebGL mode to draw with depth blur and shadows.
   p5.capture: >-
     p5.capture は、簡単な GUI を提供し、p5.js
     アニメーションを簡単に記録して、さまざまな形式（webm、gif、mp4、png、jpg、webp）の動画ファイルを出力することができます。
