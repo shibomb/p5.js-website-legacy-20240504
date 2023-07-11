@@ -202,7 +202,7 @@
         "2つの色をブレンドして、それらの間にある第3の色を見つけます。amt パラメーターは、2つの値の間で補間する量で、0.0は1番目の色に等しく、0.1は1番目の色に非常に近く、0.5はちょうど中間です。0未満の量は0として扱われます。同様に、1を超える量は1として扱われます。<a href=\"#/p5/lerp\">lerp()</a> の動作とは異なりますが、範囲外の数値が奇妙で予期しない色を生成しないようにするために必要です。",
         "色の補間方法は、現在のカラーモードに依存します。",
         "Blends two colors to find a third color between them. The <code>amt</code> parameter specifies the amount to interpolate between the two values. 0 is equal to the first color, 0.1 is very near the first color, 0.5 is halfway between the two colors, and so on. Negative numbers are set to 0. Numbers greater than 1 are set to 1. This differs from the behavior of <a href=\"#/lerp\">lerp</a>. It's necessary because numbers outside of the interval [0, 1] will produce strange and unexpected colors.",
-        "The way that colors are interpolated depends on the current <a href=\"#/colorMode\">colorMode()</a>.",
+        "The way that colors are interpolated depends on the current <a href=\"#/colorMode\">colorMode()</a>."
       ],
       "returns": "p5.Color: 補間された色",
       "params": {
@@ -256,7 +256,7 @@
         "Sets the color used for the background of the canvas. By default, the background is transparent. This function is typically used within <a href=\"#/p5/draw\">draw()</a> to clear the display window at the beginning of each frame. It can also be used inside <a href=\"#/p5/setup\">setup()</a> to set the background on the first frame of animation.",
         "The version of <code>background()</code> with one parameter interprets the value one of four ways. If the parameter is a number, it's interpreted as a grayscale value. If the parameter is a string, it's interpreted as a CSS color string. RGB, RGBA, HSL, HSLA, hex, and named color strings are supported. If the parameter is a <a href=\"#/p5.Color\">p5.Color</a> object, it will be used as the background color. If the parameter is a <a href=\"#/p5.Image\">p5.Image</a> object, it will be used as the background image.",
         "The version of <code>background()</code> with two parameters interprets the first one as a grayscale value. The second parameter sets the alpha (transparency) value.",
-        "The version of <code>background()</code> with three parameters interprets them as RGB, HSB, or HSL colors, depending on the current <a href=\"#/p5/colorMode\">colorMode()</a>. By default, colors are specified in RGB values. Calling background(255, 204, 0) sets the background a bright yellow color.",
+        "The version of <code>background()</code> with three parameters interprets them as RGB, HSB, or HSL colors, depending on the current <a href=\"#/p5/colorMode\">colorMode()</a>. By default, colors are specified in RGB values. Calling background(255, 204, 0) sets the background a bright yellow color."
       ],
       "params": {
         "color": "p5.Color: <a href=\"#/p5/color\">color()</a> 関数で作成された任意の値",
@@ -278,7 +278,7 @@
         "バッファ内のピクセルをクリアします。この関数はキャンバスのみをクリアします。<a href=\"#/p5/createVideo\">createVideo()</a> や <a href=\"#/p5/createDiv\">createDiv()</a> などの createX() メソッドで作成されたオブジェクトはクリアされません。メインのグラフィックスコンテキストとは異なり、<a href=\"#/p5/createGraphics\">createGraphics()</a> で作成された追加のグラフィックス領域のピクセルは完全または部分的に透明にできます。この関数はすべてをクリアして、すべてのピクセルを100%透明にします。",
         "注: WebGL モードでは、この関数に正規化された RGBA カラー値を渡して、画面を特定の色にクリアできます。色に加えて、デプスバッファもクリアされます。WebGL レンダラーを使用していない場合、これらのカラー値は効果がありません。",
         "Clears the pixels on the canvas. This function makes every pixel 100% transparent. Calling <code>clear()</code> doesn't clear objects created by <code>createX()</code> functions such as <a href=\"#/p5/createGraphics\">createGraphics()</a>, <a href=\"#/p5/createVideo\">createVideo()</a>, and <a href=\"#/p5/createImg\">createImg()</a>. These objects will remain unchanged after calling clear() and can be redrawn.",
-        "In WebGL mode, this function can clear the screen to a specific color. It interprets four numeric parameters as normalized RGBA color values. It also clears the depth buffer. If you are not using the WebGL renderer, these parameters will have no effect.",
+        "In WebGL mode, this function can clear the screen to a specific color. It interprets four numeric parameters as normalized RGBA color values. It also clears the depth buffer. If you are not using the WebGL renderer, these parameters will have no effect."
       ],
       "params": {
         "r": "Number: 正規化された赤の値。",
@@ -294,7 +294,7 @@
         "Changes the way p5.js interprets color data. By default, the numeric parameters for <a href=\"#/p5/fill\">fill()</a>, <a href=\"#/p5/stroke\">stroke()</a>, <a href=\"#/p5/background\">background()</a>, and <a href=\"#/p5/color\">color()</a> are defined by values between 0 and 255 using the RGB color model. This is equivalent to calling <code>colorMode(RGB, 255)</code>. Pure red is <code>color(255, 0, 0)</code> in this model.",
         "Calling <code>colorMode(RGB, 100)</code> sets colors to be interpreted as RGB color values between 0 and 100. Pure red is <code>color(100, 0, 0)</code> in this model.",
         "Calling <code>colorMode(HSB)</code> or <code>colorMode(HSL)</code> changes to HSB or HSL system instead of RGB.",
-        "<a href=\"#/p5.Color\">p5.Color</a> objects remember the mode that they were created in. Changing modes doesn't affect their appearance.",
+        "<a href=\"#/p5.Color\">p5.Color</a> objects remember the mode that they were created in. Changing modes doesn't affect their appearance."
       ],
       "params": {
         "mode": "Constant: RGB、HSB、または HSL のいずれか。それぞれ、赤/緑/青と色相/彩度/明度（または輝度）に対応します。",
@@ -312,7 +312,7 @@
         "<a href=\"#/p5.Color\">p5.Color</a> オブジェクトを渡して塗りつぶし色を設定することもできます。",
         "Sets the color used to fill shapes. Calling <code>fill(255, 165, 0)</code> or <code>fill('orange')</code> means all shapes drawn after the fill command will be filled with the color orange.",
         "The version of <code>fill()</code> with one parameter interprets the value one of three ways. If the parameter is a number, it's interpreted as a grayscale value. If the parameter is a string, it's interpreted as a CSS color string. A <a href=\"#/p5.Color\">p5.Color</a> object can also be provided to set the fill color.",
-        "The version of <code>fill()</code> with three parameters interprets them as RGB, HSB, or HSL colors, depending on the current <a href=\"#/p5/colorMode\">colorMode()</a>. The default color space is RGB, with each value in the range from 0 to 255.",
+        "The version of <code>fill()</code> with three parameters interprets them as RGB, HSB, or HSL colors, depending on the current <a href=\"#/p5/colorMode\">colorMode()</a>. The default color space is RGB, with each value in the range from 0 to 255."
       ],
       "params": {
         "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
@@ -349,7 +349,7 @@
         "The version of <code>stroke()</code> with one parameter interprets the value one of three ways. If the parameter is a number, it's interpreted as a grayscale value. If the parameter is a string, it's interpreted as a CSS color string. A <a href=\"#/p5.Color\">p5.Color</a> object can also be provided to set the stroke color.",
         "The version of <code>stroke()</code> with two parameters interprets the first one as a grayscale value. The second parameter sets the alpha (transparency) value.",
         "The version of <code>stroke()</code> with three parameters interprets them as RGB, HSB, or HSL colors, depending on the current <code>colorMode()</code>.",
-        "The version of <code>stroke()</code> with four parameters interprets them as RGBA, HSBA, or HSLA colors, depending on the current <code>colorMode()</code>. The last parameter sets the alpha (transparency) value.",
+        "The version of <code>stroke()</code> with four parameters interprets them as RGBA, HSBA, or HSLA colors, depending on the current <code>colorMode()</code>. The last parameter sets the alpha (transparency) value."
       ],
       "params": {
         "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
@@ -374,7 +374,7 @@
         "The <code>erase()</code> function has two optional parameters. The first parameter sets the strength of erasing by the shape's interior. A value of 0 means that no erasing will occur. A value of 255 means that the shape's interior will fully erase the content underneath. The default value is 255 (full strength).",
         "The second parameter sets the strength of erasing by the shape's edge. A value of 0 means that no erasing will occur. A value of 255 means that the shape's edge will fully erase the content underneath. The default value is 255 (full strength).",
         "To cancel the erasing effect, use the <a href=\"#/p5/noErase\">noErase()</a> function.",
-        "<code>erase()</code> has no effect on drawing done with the <a href=\"#/p5/image\">image()</a> and <a href=\"#/p5/background\">background()</a> functions.",
+        "<code>erase()</code> has no effect on drawing done with the <a href=\"#/p5/image\">image()</a> and <a href=\"#/p5/background\">background()</a> functions."
       ],
       "params": {
         "strengthFill": "Number: (Optional) a number (0-255) for the strength of erasing under a shape's interior.  Defaults to 255, which is full strength.",
@@ -393,7 +393,7 @@
         "画面に円弧を描画します。x、y、w、h、start、stop のみで呼び出されると、円弧は開いた扇形として描画され、塗りつぶされます。mode パラメーターが提供された場合、円弧は開いた半円（OPEN）、閉じた半円（CHORD）、または閉じた扇形（PIE）として塗りつぶされます。原点は <a href=\"#/p5/ellipseMode\">ellipseMode()</a> 関数で変更できます。",
         "円弧は、楕円上の start の位置から stop の位置まで、常に時計回りに描画されます。start または stop に TWO_PI を加算または減算しても、それらの楕円上の位置は変わりません。start と stop が同じ場所にある場合、完全な楕円が描画されます。y 軸が下向きに増加するため、角度は正の x 方向（「3時」）から時計回りに測定されることに注意してください。",
         "Draws an arc to the canvas. Arcs are drawn along the outer edge of an ellipse (oval) defined by the <code>x</code>, <code>y</code>, <code>w</code>, and <code>h</code> parameters. Use the <code>start</code> and <code>stop</code> parameters to specify the angles (in radians) at which to draw the arc. Arcs are always drawn clockwise from <code>start</code> to <code>stop</code>. The origin of the arc's ellipse may be changed with the <a href=\"#/p5/ellipseMode\">ellipseMode()</a> function.",
-        "The optional <code>mode</code> parameter determines the arc's fill style. The fill modes are a semi-circle (<code>OPEN</code>), a closed semi-circle (<code>CHORD</code>), or a closed pie segment (<code>PIE</code>).",
+        "The optional <code>mode</code> parameter determines the arc's fill style. The fill modes are a semi-circle (<code>OPEN</code>), a closed semi-circle (<code>CHORD</code>), or a closed pie segment (<code>PIE</code>)."
       ],
       "params": {
         "x": "Number: 円弧の楕円の x 座標",
@@ -436,7 +436,7 @@
       "description": [
         "画面に線（2点間の直接の経路）を描画します。4つのパラメーターで呼び出されると、デフォルトの幅1ピクセルの 2D の線を描画します。この幅は、<a href=\"#/p5/strokeWeight\">strokeWeight()</a> 関数を使用して変更できます。線は塗りつぶしができないため、<a href=\"#/p5/fill\">fill()</a> 関数は線の色に影響しません。線の色を変更するには、<a href=\"#/p5/stroke\">stroke()</a> 関数を使用してください。",
         "Draws a line, a straight path between two points. Its default width is one pixel. The version of <code>line()</code> with four parameters draws the line in 2D. To color a line, use the <a href=\"#/p5/stroke\">stroke()</a> function. To change its width, use the <a href=\"#/p5/strokeWeight\">strokeWeight()</a> function. A line can't be filled, so the <a href=\"#/p5/fill\">fill()</a> function won't affect the color of a line.",
-        "The version of <code>line()</code> with six parameters allows the line to be drawn in 3D space. Doing so requires adding the <code>WEBGL</code> argument to <a href=\"#/p5/createCanvas\">createCanvas()</a>.",
+        "The version of <code>line()</code> with six parameters allows the line to be drawn in 3D space. Doing so requires adding the <code>WEBGL</code> argument to <a href=\"#/p5/createCanvas\">createCanvas()</a>."
       ],
       "params": {
         "x1": "Number: 最初の点の x 座標",
@@ -452,7 +452,7 @@
         "点を描画します。点とは1ピクセルの次元での空間内の座標です。最初のパラメーターは点の水平方向の値であり、2番目のパラメーターは点の垂直方向の値です。点の色は <a href=\"#/p5/stroke\">stroke()</a> 関数で変更されます。点のサイズは <a href=\"#/p5/strokeWeight\">strokeWeight()</a> 関数で変更できます。",
         "Draws a point, a single coordinate in space. Its default size is one pixel. The first two parameters are the point's x- and y-coordinates, respectively. To color a point, use the <a href=\"#/p5/stroke\">stroke()</a> function. To change its size, use the <a href=\"#/p5/strokeWeight\">strokeWeight()</a> function.",
         "The version of <code>point()</code> with three parameters allows the point to be drawn in 3D space. Doing so requires adding the <code>WEBGL</code> argument to <a href=\"#/p5/createCanvas\">createCanvas()</a>.",
-        "The version of point() with one parameter allows the point's location to be set with a <a href=\"#/p5/p5.Vector\">p5.Vector</a> object.",
+        "The version of point() with one parameter allows the point's location to be set with a <a href=\"#/p5/p5.Vector\">p5.Vector</a> object."
       ],
       "params": {
         "x": "Number: x 座標",
@@ -465,7 +465,7 @@
       "description": [
         "キャンバスに四角形を描画します。四角形は、四辺で構成されるポリゴンです。長方形に似ていますが、その辺の間の角度は90度に制約されていません。最初のパラメーターのペア（x1、y1）が最初の頂点を設定し、その後のペアは定義された形状の周りを時計回りまたは反時計回りに進む必要があります。z 引数は、quad() が WebGL モードで使用されている場合にのみ機能します。",
         "Draws a quad to the canvas. A quad is a quadrilateral, a four-sided polygon. Some examples of quads include rectangles, squares, rhombuses, and trapezoids. The first pair of parameters (<code>x1</code>,<code>y1</code>) sets the quad's first point. The following pairs of parameters set the coordinates for its next three points. Parameters should proceed clockwise or counter-clockwise around the shape.",
-        "The version of <code>quad()</code> with twelve parameters allows the quad to be drawn in 3D space. Doing so requires adding the <code>WEBGL</code> argument to <a href=\"#/p5/createCanvas\">createCanvas()</a>.",
+        "The version of <code>quad()</code> with twelve parameters allows the quad to be drawn in 3D space. Doing so requires adding the <code>WEBGL</code> argument to <a href=\"#/p5/createCanvas\">createCanvas()</a>."
       ],
       "params": {
         "x1": "Number: 最初の点の x 座標",
@@ -490,7 +490,7 @@
         "指定された場合、5番目、6番目、7番目、8番目のパラメーターは、それぞれ左上、右上、右下、左下の角の半径を決定します。省略された角の半径パラメーターは、パラメーターリスト内の前に指定された半径値に設定されます。",
         "Draws a rectangle to the canvas. A rectangle is a four-sided polygon with every angle at ninety degrees. By default, the first two parameters set the location of the rectangle's upper-left corner. The third and fourth set the shape's the width and height, respectively. The way these parameters are interpreted may be changed with the <a href=\"#/p5/rectMode\">rectMode()</a> function.",
         "The version of <code>rect()</code> with five parameters creates a rounded rectangle. The fifth parameter is used as the radius value for all four corners.",
-        "The version of <code>rect()</code> with eight parameters also creates a rounded rectangle. When using eight parameters, the latter four set the radius of the arc at each corner separately. The radii start with the top-left corner and move clockwise around the rectangle. If any of these parameters are omitted, they are set to the value of the last specified corner radius.",
+        "The version of <code>rect()</code> with eight parameters also creates a rounded rectangle. When using eight parameters, the latter four set the radius of the arc at each corner separately. The radii start with the top-left corner and move clockwise around the rectangle. If any of these parameters are omitted, they are set to the value of the last specified corner radius."
       ],
       "params": {
         "x": "Number: 長方形の x 座標",
