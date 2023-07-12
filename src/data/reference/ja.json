@@ -10,7 +10,7 @@
   "reference-deprecated1": "推奨されません:",
   "reference-deprecated2": "は推奨されません。将来のバージョンの p5 にて削除されます。",
   "reference-p5sound-requires": "この関数を使うためには p5.sound ライブラリのインクルードが必要です。あなたの index.html ファイルの head 内に下記を追加してください:",
-  "reference-example": "サンプル",
+  "reference-example": "例",
   "reference-description": "説明",
   "reference-extends": "継承",
   "reference-parameters": "パラメーター",
@@ -1097,7 +1097,7 @@
     },
     "fullscreen": {
       "description": [
-        "引数が与えられた場合、引数の値にもとづいてスケッチをフルスクリーンにするかどうかを設定します。引数が与えられなかった場合、現在のフルスクリーン状態を返します。ただし、ブラウザーの制限により、これはユーザー入力時にのみ呼び出すことができます。たとえば、下記のサンプルのようにマウスプレス時です。"
+        "引数が与えられた場合、引数の値にもとづいてスケッチをフルスクリーンにするかどうかを設定します。引数が与えられなかった場合、現在のフルスクリーン状態を返します。ただし、ブラウザーの制限により、これはユーザー入力時にのみ呼び出すことができます。たとえば、下記の例のようにマウスプレス時です。"
       ],
       "returns": "Boolean: 現在のフルスクリーン状態",
       "params": {
@@ -1153,7 +1153,7 @@
         "<a href=\"#/p5/setup\">setup()</a> の直後に呼び出される <a href=\"#/p5/draw\">draw()</a> 関数は、プログラムが停止するか <a href=\"#/p5/noLoop\">noLoop()</a> が呼び出されるまで、そのブロック内に含まれるコードを連続して実行します。ただし、<a href=\"#/p5/setup\">setup()</a> で <a href=\"#/p5/noLoop\">noLoop()</a> が呼び出された場合でも、<a href=\"#/p5/draw\">draw()</a> は停止する前に一度だけ実行されます。<a href=\"#/p5/draw\">draw()</a> は自動的に呼び出されるため、明示的に呼び出すことはありません。",
         "<a href=\"#/p5/noLoop\">noLoop()</a>、<a href=\"#/p5/redraw\">redraw()</a>、<a href=\"#/p5/loop\">loop()</a> を使って制御する必要があります。<a href=\"#/p5/noLoop\">noLoop()</a> が <a href=\"#/p5/draw\">draw()</a> 内のコードの実行を停止した後、<a href=\"#/p5/redraw\">redraw()</a> は <a href=\"#/p5/draw\">draw()</a> 内のコードを1回だけ実行し、<a href=\"#/p5/loop\">loop()</a> は <a href=\"#/p5/draw\">draw()</a> 内のコードを連続して実行し続けるようになります。",
         "<a href=\"#/p5/draw\">draw()</a> が1秒間に何回実行されるかは、<a href=\"#/p5/frameRate\">frameRate()</a> 関数で制御できます。",
-        "各スケッチにはひとつの <a href=\"#/p5/draw\">draw()</a> 関数があり、コードを連続して実行する場合や、<a href=\"#/p5/mousePressed\">mousePressed()</a> などのイベントを処理する場合には、<a href=\"#/p5/draw\">draw()</a> が必要です。場合によっては、サンプルのようにプログラム内で <a href=\"#/p5/draw\">draw()</a> を空呼び出しすることがあります。",
+        "各スケッチにはひとつの <a href=\"#/p5/draw\">draw()</a> 関数があり、コードを連続して実行する場合や、<a href=\"#/p5/mousePressed\">mousePressed()</a> などのイベントを処理する場合には、<a href=\"#/p5/draw\">draw()</a> が必要です。場合によっては、例のようにプログラム内で <a href=\"#/p5/draw\">draw()</a> を空呼び出しすることがあります。",
         "描画座標系は、各 <a href=\"#/p5/draw\">draw()</a> 呼び出しの最初にリセットされることに注意が必要です。<a href=\"#/p5/draw\">draw()</a> 内で変換が実行された場合（例:スケール、回転、移動）、その効果は <a href=\"#/p5/draw\">draw()</a> の最初にもとに戻されるため、変換は時間とともに蓄積されません。一方で、適用されたスタイリング（例:塗りつぶし、ストロークなど）は継続して効果があります。"
       ]
     },
@@ -1380,14 +1380,14 @@
     },
     "push": {
       "description": [
-        "<a href=\"#/p5/push\">push()</a> 関数は、現在の描画スタイルの設定と変換を保存し、<a href=\"#/p5/pop\">pop()</a> 関数はこれらの設定を復元します。これらの関数は常に一緒に使用されることに注意してください。これにより、スタイルと変換の設定を変更し、後でもとに戻すことができます。<a href=\"#/p5/push\">push()</a> で新しい状態が開始されると、現在のスタイルと変換情報が利用されます。<a href=\"#/p5/push\">push()</a> と <a href=\"#/p5/pop\">pop()</a> 関数は、より多くの制御を提供するために組み込むことができます（2つ目のサンプルを参照してください）。",
+        "<a href=\"#/p5/push\">push()</a> 関数は、現在の描画スタイルの設定と変換を保存し、<a href=\"#/p5/pop\">pop()</a> 関数はこれらの設定を復元します。これらの関数は常に一緒に使用されることに注意してください。これにより、スタイルと変換の設定を変更し、後でもとに戻すことができます。<a href=\"#/p5/push\">push()</a> で新しい状態が開始されると、現在のスタイルと変換情報が利用されます。<a href=\"#/p5/push\">push()</a> と <a href=\"#/p5/pop\">pop()</a> 関数は、より多くの制御を提供するために組み込むことができます（2つ目の例を参照してください）。",
         "<a href=\"#/p5/push\">push()</a> は、次の関数によって制御される現在の変換状態とスタイル設定に関連する情報を保存します:<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/noFill\">noFill()</a>、<a href=\"#/p5/noStroke\">noStroke()</a>、<a href=\"#/p5/stroke\">stroke()</a>、<a href=\"#/p5/tint\">tint()</a>、<a href=\"#/p5/noTint\">noTint()</a>、<a href=\"#/p5/strokeWeight\">strokeWeight()</a>、<a href=\"#/p5/strokeCap\">strokeCap()</a>、<a href=\"#/p5/strokeJoin\">strokeJoin()</a>、<a href=\"#/p5/imageMode\">imageMode()</a>、<a href=\"#/p5/rectMode\">rectMode()</a>、<a href=\"#/p5/ellipseMode\">ellipseMode()</a>、<a href=\"#/p5/colorMode\">colorMode()</a>、<a href=\"#/p5/textAlign\">textAlign()</a>、<a href=\"#/p5/textFont\">textFont()</a>、<a href=\"#/p5/textSize\">textSize()</a>、<a href=\"#/p5/textLeading\">textLeading()</a>、<a href=\"#/p5/applyMatrix\">applyMatrix()</a>、<a href=\"#/p5/resetMatrix\">resetMatrix()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a>、<a href=\"#/p5/shearX\">shearX()</a>、<a href=\"#/p5/shearY\">shearY()</a>、<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/noiseSeed\">noiseSeed()</a>。",
         "WebGL モードでは、追加のスタイル設定が保存されます。これらは、次の関数によって制御されます:<a href=\"#/p5/setCamera\">setCamera()</a>、<a href=\"#/p5/ambientLight\">ambientLight()</a>、<a href=\"#/p5/directionalLight\">directionalLight()</a>、<a href=\"#/p5/pointLight\">pointLight()</a>、<a href=\"#/p5/texture\">texture()</a>、<a href=\"#/p5/specularMaterial\">specularMaterial()</a>、<a href=\"#/p5/shininess\">shininess()</a>、<a href=\"#/p5/normalMaterial\">normalMaterial()</a>、および <a href=\"#/p5/shader\">shader()</a>。"
       ]
     },
     "pop": {
       "description": [
-        "<a href=\"#/p5/push\">push()</a> 関数は、現在の描画スタイルの設定と変換を保存し、<a href=\"#/p5/pop\">pop()</a> 関数はこれらの設定を復元します。これらの関数は常に一緒に使用されることに注意してください。これにより、スタイルと変換の設定を変更し、後でもとに戻すことができます。<a href=\"#/p5/push\">push()</a> で新しい状態が開始されると、現在のスタイルと変換情報が利用されます。<a href=\"#/p5/push\">push()</a> と <a href=\"#/p5/pop\">pop()</a> 関数は、より多くの制御を提供するために組み込むことができます（2つ目のサンプルを参照してください）。",
+        "<a href=\"#/p5/push\">push()</a> 関数は、現在の描画スタイルの設定と変換を保存し、<a href=\"#/p5/pop\">pop()</a> 関数はこれらの設定を復元します。これらの関数は常に一緒に使用されることに注意してください。これにより、スタイルと変換の設定を変更し、後でもとに戻すことができます。<a href=\"#/p5/push\">push()</a> で新しい状態が開始されると、現在のスタイルと変換情報が利用されます。<a href=\"#/p5/push\">push()</a> と <a href=\"#/p5/pop\">pop()</a> 関数は、より多くの制御を提供するために組み込むことができます（2つ目の例を参照してください）。",
         "<a href=\"#/p5/push\">push()</a> は、次の関数によって制御される現在の変換状態とスタイル設定に関連する情報を保存します:<a href=\"#/p5/fill\">fill()</a>、<a href=\"#/p5/noFill\">noFill()</a>、<a href=\"#/p5/noStroke\">noStroke()</a>、<a href=\"#/p5/stroke\">stroke()</a>、<a href=\"#/p5/tint\">tint()</a>、<a href=\"#/p5/noTint\">noTint()</a>、<a href=\"#/p5/strokeWeight\">strokeWeight()</a>、<a href=\"#/p5/strokeCap\">strokeCap()</a>、<a href=\"#/p5/strokeJoin\">strokeJoin()</a>、<a href=\"#/p5/imageMode\">imageMode()</a>、<a href=\"#/p5/rectMode\">rectMode()</a>、<a href=\"#/p5/ellipseMode\">ellipseMode()</a>、<a href=\"#/p5/colorMode\">colorMode()</a>、<a href=\"#/p5/textAlign\">textAlign()</a>、<a href=\"#/p5/textFont\">textFont()</a>、<a href=\"#/p5/textSize\">textSize()</a>、<a href=\"#/p5/textLeading\">textLeading()</a>、<a href=\"#/p5/applyMatrix\">applyMatrix()</a>、<a href=\"#/p5/resetMatrix\">resetMatrix()</a>、<a href=\"#/p5/rotate\">rotate()</a>、<a href=\"#/p5/scale\">scale()</a>、<a href=\"#/p5/shearX\">shearX()</a>、<a href=\"#/p5/shearY\">shearY()</a>、<a href=\"#/p5/translate\">translate()</a>、<a href=\"#/p5/noiseSeed\">noiseSeed()</a>。",
         "WebGL モードでは、追加のスタイル設定が保存されます。これらは、次の関数によって制御されます:<a href=\"#/p5/setCamera\">setCamera()</a>、<a href=\"#/p5/ambientLight\">ambientLight()</a>、<a href=\"#/p5/directionalLight\">directionalLight()</a>、<a href=\"#/p5/pointLight\">pointLight()</a>、<a href=\"#/p5/texture\">texture()</a>、<a href=\"#/p5/specularMaterial\">specularMaterial()</a>、<a href=\"#/p5/shininess\">shininess()</a>、<a href=\"#/p5/normalMaterial\">normalMaterial()</a>、および <a href=\"#/p5/shader\">shader()</a>。"
       ]
@@ -1775,7 +1775,7 @@
     },
     "createCapture": {
       "description": [
-        "ウェブカメラの音声/ビデオフィードを含む新しい HTML5 の <code>&lt;video&gt;</code> 要素を作成します。この要素はキャンバスとは別で、デフォルトで表示されます。要素は、.<a href=\"#/p5.Element/hide\">hide()</a> を使って非表示にすることができます。フィードは <a href=\"#/p5/image\">image()</a> を使ってキャンバスに描画することができます。loadedmetadata プロパティは要素が完全にロードされたことを検出するために使用できます(第二のサンプルを参照)。",
+        "ウェブカメラの音声/ビデオフィードを含む新しい HTML5 の <code>&lt;video&gt;</code> 要素を作成します。この要素はキャンバスとは別で、デフォルトで表示されます。要素は、.<a href=\"#/p5.Element/hide\">hide()</a> を使って非表示にすることができます。フィードは <a href=\"#/p5/image\">image()</a> を使ってキャンバスに描画することができます。loadedmetadata プロパティは要素が完全にロードされたことを検出するために使用できます(二つ目の例を参照)。",
         "フィードのより具体的なプロパティは、Constraints オブジェクトを渡すことで指定できます。<a href='http://w3c.github.io/mediacapture-main/getusermedia.html#media-track-constraints'>W3C の仕様</a> に可能なプロパティが記載されています。ただし、すべてのブラウザーでこれらがサポートされているわけではありません。",
         "<em>セキュリティに関する注意</em>:新しいブラウザーのセキュリティ仕様では、<a href=\"#/p5/createCapture\">createCapture()</a> の背後にある getUserMedia は、コードをローカルで実行している場合、または HTTPS でのみ動作するようになっています。詳細は <a href='http://stackoverflow.com/questions/34197653/getusermedia-in-chrome-47-without-using-https'>こちら</a> と <a href='https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia'>こちら</a> を参照してください。"
       ],
@@ -2168,7 +2168,7 @@
         "<code>delay</code> は、録画を開始する前に待つ時間を指定します。",
         "<code>units</code> は、'seconds'または'frames'のいずれかの文字列です。デフォルトでは'seconds'です。",
         "<code>units</code> は、duration と delay 引数の動作方法を指定します。'seconds'の場合、これらの引数は秒に対応し、3秒間のアニメーションが作成されることを意味します。'frames'の場合、引数はアニメーションのフレーム数に対応し、この数値が非常に確実な場合に限ります。",
-        "これは、setup で呼び出すことも、以下のサンプルのように、keyPressed や mousePressed などのイベント関数内で呼び出すこともできます。"
+        "これは、setup で呼び出すことも、以下の例のように、keyPressed や mousePressed などのイベント関数内で呼び出すこともできます。"
       ],
       "params": {
         "filename": "String: gif ファイルのファイル名",
@@ -2355,7 +2355,7 @@
     },
     "loadStrings": {
       "description": [
-        "ファイルの内容を読み込み、個々の行からなる文字列配列を作成します。ファイル名がパラメーターとして使用される場合、サンプルのように、ファイルはスケッチディレクトリ/フォルダ内に配置する必要があります。",
+        "ファイルの内容を読み込み、個々の行からなる文字列配列を作成します。ファイル名がパラメーターとして使用される場合、例のように、ファイルはスケッチディレクトリ/フォルダ内に配置する必要があります。",
         "また、ファイルはローカルコンピューターのどこからでも絶対パスを使ってロードすることができます（Unix および Linux では/で始まるもの、Windows ではドライブレターで始まるもの）、またはファイル名パラメーターはネットワーク上にあるファイルの URL になることがあります。",
         "このメソッドは非同期であり、スケッチの次の行が実行される前に終了しない場合があります。",
         "このメソッドは、最大64MB のファイルをフェッチするのに適しています。",
@@ -2388,7 +2388,7 @@
     },
     "loadXML": {
       "description": [
-        "ファイルの内容を読み込み、その値をもつ XML オブジェクトを作成します。ファイル名がパラメーターとして使用される場合、サンプルのように、ファイルはスケッチディレクトリ/フォルダ内に配置する必要があります。",
+        "ファイルの内容を読み込み、その値をもつ XML オブジェクトを作成します。ファイル名がパラメーターとして使用される場合、例のように、ファイルはスケッチディレクトリ/フォルダ内に配置する必要があります。",
         "また、ファイルはローカルコンピューターのどこからでも絶対パスを使ってロードすることができます（Unix および Linux では/で始まるもの、Windows ではドライブレターで始まるもの）、またはファイル名パラメーターはネットワーク上にあるファイルの URL になることがあります。",
         "このメソッドは非同期であり、スケッチの次の行が実行される前に終了しない場合があります。<a href=\"#/p5/loadXML\">loadXML()</a> を <a href=\"#/p5/preload\">preload()</a> 内で呼び出すと、<a href=\"#/p5/setup\">setup()</a> および <a href=\"#/p5/draw\">draw()</a> が呼び出される前に操作が完了することが保証されます。",
         "<a href=\"#/p5/preload\">preload()</a> の外では、オブジェクトを処理するコールバック関数を提供することができます。",
@@ -2465,8 +2465,8 @@
         "指定された要素（画像、テキスト、json、csv、wav、html）をクライアントのコンピューターに保存します。最初のパラメーターは、保存したい要素へのポインターが指定できます。要素は、<a href=\"#/p5.Element\">p5.Element</a>、文字列の配列、JSON の配列、JSON オブジェクト、<a href=\"#/p5.Table\">p5.Table </a>、<a href=\"#/p5.Image\">p5.Image</a>、または p5.SoundFile（p5.sound が必要）のいずれかです。2番目のパラメーターはファイル名（拡張子を含む）。3番目のパラメーターは、このタイプのオブジェクトに特有のオプションです。このメソッドは、指定されたパラメーターに適合するファイルを保存します。要素を指定せずに呼び出された場合、デフォルトでは画像ファイルとしてキャンバス全体が保存されます。そのような場合、最初のパラメーターとしてファイル名をオプションで指定できます。 <strong>draw 内でこのメソッドを呼び出すことはお勧めしません。なぜなら、レンダリングごとに新しい保存ダイアログが開くためです。</strong>"
       ],
       "params": {
-        "objectOrFilename": "Object|String: (オプション) ファイル名が指定された場合、ファイル名に応じて png または jpg 拡張子の画像としてキャンバスを保存します。オブジェクトが指定された場合、オブジェクトとファイル名に応じて保存されます（上記のサンプルを参照）。",
-        "filename": "String: (オプション) オブジェクトが最初のパラメーターとして提供された場合、2番目のパラメーターはファイル名を示し、適切なファイル拡張子を含める必要があります（上記のサンプルを参照）。",
+        "objectOrFilename": "Object|String: (オプション) ファイル名が指定された場合、ファイル名に応じて png または jpg 拡張子の画像としてキャンバスを保存します。オブジェクトが指定された場合、オブジェクトとファイル名に応じて保存されます（上記の例を参照）。",
+        "filename": "String: (オプション) オブジェクトが最初のパラメーターとして提供された場合、2番目のパラメーターはファイル名を示し、適切なファイル拡張子を含める必要があります（上記の例を参照）。",
         "options": "Boolean|String: (オプション) 追加のオプションはファイルタイプに依存します。たとえば、JSON を保存する場合、<code>true</code> は出力がファイルサイズに最適化され、読みやすさではなくなります。"
       }
     },
@@ -2593,7 +2593,7 @@
     "map": {
       "description": [
         "ある範囲の数値を別の範囲に再マップします。",
-        "最初のサンプルでは、数値25が、0から100の範囲の値から、ウィンドウの左端(0)から右端(width)までの範囲の値に変換されます。"
+        "最初の例では、数値25が、0から100の範囲の値から、ウィンドウの左端(0)から右端(width)までの範囲の値に変換されます。"
       ],
       "returns": "Number: 再マップされた数値",
       "params": {
@@ -2629,7 +2629,7 @@
     },
     "norm": {
       "description": [
-        "別の範囲の数値を0から1の範囲に正規化します。map(value, low, high, 0, 1)と同一です。範囲外の数値は、範囲外の値が意図的で有用であることがよくあるため、0および1にクランプされません。(サンプルを参照してください。)"
+        "別の範囲の数値を0から1の範囲に正規化します。map(value, low, high, 0, 1)と同一です。範囲外の数値は、範囲外の値が意図的で有用であることがよくあるため、0および1にクランプされません。(例を参照してください。)"
       ],
       "returns": "Number: 正規化された数値",
       "params": {
@@ -2696,7 +2696,7 @@
     },
     "noise": {
       "description": [
-        "指定された座標での Perlin ノイズ値を返します。Perlin ノイズは、標準の <a href=\"#/p5/random\">random()</a> 関数と比較して、より自然に順序付けられた調和のある数列を生成するランダムシーケンスジェネレータです。1980年代に Ken Perlin によって発明され、以降、グラフィカルアプリケーションで手続き的テクスチャ、自然な動き、形状、地形などを生成するために使用されています。<br /><br /><a href=\"#/p5/random\">random()</a> 関数との主な違いは、Perlin ノイズは無限の n 次元空間で定義されており、座標のペアごとに固定の半乱数値（プログラムの寿命に対してのみ固定; <a href=\"#/p5/noiseSeed\">noiseSeed()</a> 関数を参照）が対応していることです。p5.js は、与えられた座標の数に応じて 1D、2D、3D のノイズを計算することができます。結果として得られる値は常に0.0から1.0の間になります。ノイズ値は、サンプルで示されているように、ノイズ空間を移動することでアニメーション化することができます。第2および第3の次元は、時間としても解釈できます。<br /><br />実際のノイズは、周波数の利用に関してオーディオ信号に似た構造を持っています。物理学の調和の概念に似て、Perlin ノイズはいくつかのオクターブで計算され、最終結果に加算されます。<br /><br />結果として得られるシーケンスの性格を調整するもうひとつの方法は、入力座標のスケールです。関数が無限の空間で動作するため、座標の値自体は重要ではなく、連続する座標間の距離だけが重要です(たとえば、ループ内で <a href=\"#/p5/noise\">noise()</a> を使用する場合)。一般的には、座標間の差が小さいほど、得られるノイズシーケンスは滑らかになります。ほとんどのアプリケーションでは0.005-0.03のステップが最適ですが、用途によっては異なります。"
+        "指定された座標での Perlin ノイズ値を返します。Perlin ノイズは、標準の <a href=\"#/p5/random\">random()</a> 関数と比較して、より自然に順序付けられた調和のある数列を生成するランダムシーケンスジェネレータです。1980年代に Ken Perlin によって発明され、以降、グラフィカルアプリケーションで手続き的テクスチャ、自然な動き、形状、地形などを生成するために使用されています。<br /><br /><a href=\"#/p5/random\">random()</a> 関数との主な違いは、Perlin ノイズは無限の n 次元空間で定義されており、座標のペアごとに固定の半乱数値（プログラムの寿命に対してのみ固定; <a href=\"#/p5/noiseSeed\">noiseSeed()</a> 関数を参照）が対応していることです。p5.js は、与えられた座標の数に応じて 1D、2D、3D のノイズを計算することができます。結果として得られる値は常に0.0から1.0の間になります。ノイズ値は、例で示されているように、ノイズ空間を移動することでアニメーション化することができます。第2および第3の次元は、時間としても解釈できます。<br /><br />実際のノイズは、周波数の利用に関してオーディオ信号に似た構造を持っています。物理学の調和の概念に似て、Perlin ノイズはいくつかのオクターブで計算され、最終結果に加算されます。<br /><br />結果として得られるシーケンスの性格を調整するもうひとつの方法は、入力座標のスケールです。関数が無限の空間で動作するため、座標の値自体は重要ではなく、連続する座標間の距離だけが重要です(たとえば、ループ内で <a href=\"#/p5/noise\">noise()</a> を使用する場合)。一般的には、座標間の差が小さいほど、得られるノイズシーケンスは滑らかになります。ほとんどのアプリケーションでは0.005-0.03のステップが最適ですが、用途によっては異なります。"
       ],
       "returns": "Number: 指定された座標での Perlin ノイズ値（0から1の間）",
       "params": {
@@ -2932,7 +2932,7 @@
         "画面上にテキストを描画します。追加のパラメーターで指定された位置に、最初のパラメーターで指定された情報を画面上に表示します。<a href=\"#/p5/textFont\">textFont()</a> 関数でフォントが設定されていない場合はデフォルトのフォントが使用され、<a href=\"#/p5/textSize\">textSize()</a> でフォントサイズが設定されていない場合はデフォルトのサイズが使用されます。テキストの色を <a href=\"#/p5/fill\">fill()</a> 関数で変更します。テキストのアウトラインを <a href=\"#/p5/stroke\">stroke()</a> 関数と <a href=\"#/p5/strokeWeight\">strokeWeight()</a> 関数で変更します。",
         "テキストは <a href=\"#/p5/textAlign\">textAlign()</a> 関数に関連して表示され、座標の左、右、および中央に描画するオプションがあります。",
         "x2 および y2 パラメーターは、文字列データのみで使用できる表示範囲を定義し、現在の <a href=\"#/p5/rectMode\">rectMode()</a> 設定にもとづいて解釈されます。指定された矩形内に完全に収まらないテキストは画面に描画されません。x2 と y2 が指定されていない場合、デフォルトのベースライン揃えが適用され、テキストは x および y から上向きに描画されます。",
-        "<b>WebGL</b>: Opentype/Truetype フォントのみがサポートされています。サンプルのように、<a href=\"#/p5/loadFont\">loadFont()</a> メソッドを使ってフォントを読み込む必要があります。<a href=\"#/p5/stroke\">stroke()</a> は、現在 webgl モードでは効果がありません。WebGL モードでテキストを操作する方法については、<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#text\">wiki</a> を参照してください。"
+        "<b>WebGL</b>: Opentype/Truetype フォントのみがサポートされています。例のように、<a href=\"#/p5/loadFont\">loadFont()</a> メソッドを使ってフォントを読み込む必要があります。<a href=\"#/p5/stroke\">stroke()</a> は、現在 webgl モードでは効果がありません。WebGL モードでテキストを操作する方法については、<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#text\">wiki</a> を参照してください。"
       ],
       "params": {
         "str": "String|Object|Array|Number|Boolean: 表示する英数字のシンボル",
@@ -3385,7 +3385,7 @@
     },
     "debugMode": {
       "description": [
-        "debugMode() は、3D 空間を視覚化するのに役立ちます。グリッドを追加してスケッチ内の「地面」の位置を示し、+X、+Y、+Z 方向を示す軸アイコンを表示します。この関数は、デフォルトのグリッドと軸アイコンを作成するために引数なしで呼び出すことができますし、サンプルにしたがってグリッドおよび/または軸アイコンのサイズと位置をカスタマイズするために呼び出すことができます。グリッドは、最も最近設定されたストロークの色と太さで描画されます。これらのパラメーターを指定するには、draw() ループの直前に stroke() および strokeWeight() を追加してください。",
+        "debugMode() は、3D 空間を視覚化するのに役立ちます。グリッドを追加してスケッチ内の「地面」の位置を示し、+X、+Y、+Z 方向を示す軸アイコンを表示します。この関数は、デフォルトのグリッドと軸アイコンを作成するために引数なしで呼び出すことができますし、例にしたがってグリッドおよび/または軸アイコンのサイズと位置をカスタマイズするために呼び出すことができます。グリッドは、最も最近設定されたストロークの色と太さで描画されます。これらのパラメーターを指定するには、draw() ループの直前に stroke() および strokeWeight() を追加してください。",
         "デフォルトでは、グリッドはスケッチの原点(0,0,0)を中心に XZ 平面に沿って走り、軸アイコンは原点からオフセットされます。グリッドと軸アイコンの両方が、現在のキャンバスサイズに応じてサイズが調整されます。グリッドがデフォルトのカメラビューに平行して走るため、グリッドを完全に表示できるように debugMode と orbitControl を一緒に使用することがよく役立ちます。"
       ],
       "params": {
@@ -3600,7 +3600,7 @@
         "テクスチャは、3D ジオメトリを覆う「皮膚」のようなものです。現在サポートされているテクスチャは画像、ビデオ、オフスクリーンレンダリングです。",
         "<a href=\"#/p5/beginShape\">beginShape()</a> で作成されたジオメトリにテクスチャを適用するには、<a href=\"#/p5/vertex\">vertex()</a> で uv 座標を指定する必要があります。",
         "なお、texture() は WebGL モードでのみ使用できます。",
-        "この <a href=\"/examples/3d-materials.html\">サンプル</a> でさらに多くのマテリアルを見ることができます。"
+        "この <a href=\"/examples/3d-materials.html\">例</a> でさらに多くのマテリアルを見ることができます。"
       ],
       "params": {
         "tex": "p5.Image|p5.MediaElement|p5.Graphics|p5.Texture|p5.Framebuffer|p5.FramebufferTexture: テクスチャとして使用する画像"
@@ -3633,7 +3633,7 @@
         "現在のマテリアルを通常のマテリアルとして設定します。",
         "通常のマテリアルは光の影響を受けません。デバッグ時にプレースホルダーマテリアルとしてよく使われます。",
         "X 軸に面した面は赤くなり、Y 軸に面した面は緑になり、Z 軸に面した面は青になります。",
-        "他のマテリアルは、この <a href=\"/examples/3d-materials.html\">サンプル</a> で見ることができます。"
+        "他のマテリアルは、この <a href=\"/examples/3d-materials.html\">例</a> で見ることができます。"
       ]
     },
     "ambientMaterial": {
@@ -3641,7 +3641,7 @@
         "マテリアルのアンビエントカラーを設定します。",
         "ambientMaterial() カラーは、物体が <strong>どのような</strong> 照明もとでも反射する色です。",
         "色が黄色(255, 255, 0)の ambientMaterial() を考えてみましょう。光が白色(255, 255, 255)を放つ場合、物体は赤と緑の成分を反射するので、黄色に見えます。光が赤色(255, 0, 0)を放つ場合、物体は光の赤色成分を反射するので、赤色に見えます。光が青色(0, 0, 255)を放つ場合、物体は光の成分を反射できないので、黒色に見えます。",
-        "他のマテリアルは、この <a href=\"/examples/3d-materials.html\">サンプル</a> で見ることができます。",
+        "他のマテリアルは、この <a href=\"/examples/3d-materials.html\">例</a> で見ることができます。",
         "Sets the ambient color of the material.",
         "The ambientMaterial() color represents the components of the <strong>ambientLight()</strong> color that the object reflects.",
         "Consider an ambientMaterial() with the color yellow (255, 255, 0). If the ambientLight() emits the color white (255, 255, 255), then the object will appear yellow as it will reflect the red and green components of the light. If the ambientLight() emits the color red (255, 0, 0), then the object will appear red as it will reflect the red component of the light. If the ambientLight() emits the color blue (0, 0, 255), then the object will appear black, as there is no component of the light that it can reflect.",
@@ -3660,7 +3660,7 @@
         "マテリアルのエミッシブカラーを設定します。",
         "エミッシブマテリアルは、照明に関係なくエミッシブカラーを最大強度で表示します。これにより、オブジェクトが光っているように見える効果が得られます。",
         "ただし、「エミッシブ」という言葉は、マテリアルが周囲のオブジェクトに影響を与える光を実際に放射しないという意味では誤解を招くものです。",
-        "他のマテリアルは、この <a href=\"/examples/3d-materials.html\">サンプル</a> で見ることができます。"
+        "他のマテリアルは、この <a href=\"/examples/3d-materials.html\">例</a> で見ることができます。"
       ],
       "params": {
         "v1": "Number: 現在のカラーレンジに対する赤または色相値",
@@ -3676,7 +3676,7 @@
         "マテリアルのスペキュラーカラーを設定します。",
         "スペキュラーマテリアルは反射性（光沢）があります。<a href=\"#/p5/shininess\">shininess()</a> 関数で光沢度を調整できます。",
         "<a href=\"#/p5/ambientMaterial\">ambientMaterial()</a> と同様に、specularMaterial() カラーは、物体が <a href=\"#/p5/ambientLight\">ambientLight()</a> もとで反射する色です。ただし、ambientMaterial() とは異なり、他のすべてのタイプの光源（<a href=\"#/p5/directionalLight\">directionalLight()</a>、<a href=\"#/p5/pointLight\">pointLight()</a>、<a href=\"#/p5/spotLight\">spotLight()</a>）に対して、スペキュラーマテリアルは <strong>光源の色</strong> を反射します。これが「光沢」のある外観を与える理由です。",
-        "他のマテリアルは、この <a href=\"/examples/3d-materials.html\">サンプル</a> で見ることができます。"
+        "他のマテリアルは、この <a href=\"/examples/3d-materials.html\">例</a> で見ることができます。"
       ],
       "params": {
         "gray": "Number: 白と黒の間の値を指定する数値。",
@@ -3700,7 +3700,7 @@
       "description": [
         "3D スケッチ内の現在のカメラの位置を設定します。この関数のパラメーターは、カメラの位置、スケッチの中心（カメラが指している場所）、および上方向（カメラの向き）を定義します。",
         "この関数はカメラの動きをシミュレートし、オブジェクトをさまざまな角度から見ることができます。覚えておいてください、オブジェクト自体を移動させるのではなく、カメラを移動させます。たとえば、centerX の値が正であり、カメラがスケッチの右側に回転する場合、オブジェクトは左に移動しているように見えます。",
-        "この <a href = \"https://www.openprocessing.org/sketch/740258\">サンプル</a> を参照して、カメラの位置を確認してください。",
+        "この <a href = \"https://www.openprocessing.org/sketch/740258\">例</a> を参照して、カメラの位置を確認してください。",
         "パラメーターが指定されていない場合、デフォルトで次のようになります: camera(0, 0, (height/2) / tan(PI/6), 0, 0, 0, 0, 1, 0)"
       ],
       "params": {
@@ -3813,7 +3813,7 @@
     "getAudioContext": {
       "description": [
         "このスケッチのための AudioContext を返します。 <a target='_blank' href= 'http://webaudio.github.io/web-audio-api/'>Web Audio API</a> について深く掘り下げたいユーザーにとって役立ちます。",
-        "一部のブラウザーは、touchStarted（以下のサンプル）などのユーザージェスチャーで startAudioContext を実行する必要があります。"
+        "一部のブラウザーは、touchStarted（以下の例）などのユーザージェスチャーで startAudioContext を実行する必要があります。"
       ],
       "returns": "Object: このスケッチのための AudioContext"
     },
@@ -3821,7 +3821,7 @@
       "description": [
         "ユーザーにオーディオの開始制御を与えることはよい慣習だけでなく、iOS や <a href=\"https://goo.gl/7K7WLu\" title=\"Google Chrome's autoplay policy\">Google Chrome</a> などの多くの Web ブラウザーによって強制されるポリシーです。これらのブラウザー固有のポリシーでは、Web Audio API の <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/AudioContext\" title=\"Audio Context @ MDN\">Audio Context</a> は一時停止状態で作成されます。",
         "これらの場合、ユーザーが操作イベント（例: <code>mousePressed()</code>）を明示的に再開するか、オーディオノードを開始するまで、サウンドは再生されません。これは、<code>p5.Oscillator</code> の <code>start()</code>、<code>p5.SoundFile</code> の <code>play()</code>、または <code>userStartAudio()</code> を呼び出すことで達成できます。",
-        "<code>userStartAudio()</code> は、ユーザージェスチャーで AudioContext を開始します。デフォルトの動作では、どの mouseUp または touchEnd イベントでもオーディオが有効になります。下のサンプルのように、<code>mousePressed()</code> などの特定のインタラクション関数に配置することもできます。この方法では、Yotam Mann による <a href=\"https://github.com/tambien/StartAudioContext\">StartAudioContext </a> ライブラリ（MIT ライセンス、2016年）を使用します。"
+        "<code>userStartAudio()</code> は、ユーザージェスチャーで AudioContext を開始します。デフォルトの動作では、どの mouseUp または touchEnd イベントでもオーディオが有効になります。下の例のように、<code>mousePressed()</code> などの特定のインタラクション関数に配置することもできます。この方法では、Yotam Mann による <a href=\"https://github.com/tambien/StartAudioContext\">StartAudioContext </a> ライブラリ（MIT ライセンス、2016年）を使用します。"
       ],
       "returns": "Promise: AudioContext の状態が「実行中」になったときに解決される Promise を返します",
       "params": {
@@ -4886,7 +4886,7 @@
     },
     "findRows": {
       "description": [
-        "提供された値を含む行をテーブルから検索し、これらの行への参照を返します。配列が返されるため、サンプルのように for ループを使用してすべての行を反復処理する必要があります。検索する列は、ID またはタイトルで指定できます。"
+        "提供された値を含む行をテーブルから検索し、これらの行への参照を返します。配列が返されるため、例のように for ループを使用してすべての行を反復処理する必要があります。検索する列は、ID またはタイトルで指定できます。"
       ],
       "returns": "p5.TableRow[]: <a href=\"#/p5.TableRow\">p5.TableRow</a> オブジェクトの配列",
       "params": {
@@ -4906,7 +4906,7 @@
     },
     "matchRows": {
       "description": [
-        "提供された正規表現に一致する行をテーブルから検索し、これらの行への参照を返します。配列が返されるため、サンプルのように for ループを使用してすべての行を反復処理する必要があります。検索する列は、ID またはタイトルで指定できます。"
+        "提供された正規表現に一致する行をテーブルから検索し、これらの行への参照を返します。配列が返されるため、例のように for ループを使用してすべての行を反復処理する必要があります。検索する列は、ID またはタイトルで指定できます。"
       ],
       "returns": "p5.TableRow[]: <a href=\"#/p5.TableRow\">p5.TableRow</a> オブジェクトの配列",
       "params": {
@@ -6923,7 +6923,7 @@
   },
   "p5.Delay": {
     "description": [
-      "Delay はエコー効果をもつエフェクトです。既存の音源を処理し、その音源の遅延バージョンを出力します。p5.Delay は delayTime、feedback、filter、type によって異なる効果を生み出すことができます。以下のサンプルでは、フィードバック0.5（デフォルト値）でループする遅延が作成され、各繰り返しで音量が50％ずつ減少します。フィルターは高周波をカットするため、遅延が元の音源と同様に刺すような音になりません。",
+      "Delay はエコー効果をもつエフェクトです。既存の音源を処理し、その音源の遅延バージョンを出力します。p5.Delay は delayTime、feedback、filter、type によって異なる効果を生み出すことができます。以下の例では、フィードバック0.5（デフォルト値）でループする遅延が作成され、各繰り返しで音量が50％ずつ減少します。フィルターは高周波をカットするため、遅延が元の音源と同様に刺すような音になりません。",
       "このクラスは <a href = \"/reference/#/p5.Effect\">p5.Effect</a> を拡張しています。メソッド <a href = \"/reference/#/p5.Effect/amp\">amp()</a>、<a href = \"/reference/#/p5.Effect/chain\">chain()</a>、<a href = \"/reference/#/p5.Effect/drywet\">drywet()</a>、<a href = \"/reference/#/p5.Effect/connect\">connect()</a>、<a href = \"/reference/#/p5.Effect/disconnect\">disconnect()</a> が使用可能です。"
     ],
     "leftDelay": {
@@ -7393,7 +7393,7 @@
       "<code>freq1</code> と <code>freq2</code> の範囲を設定することで、周波数スペクトルの特定の部分を聴取できます。",
       "<code>threshold</code> はピークを検出するための閾値で、0から1までの範囲でスケールされます。対数的であり、0.1は1.0の半分の音量に相当します。",
       "<code>update</code> メソッドは、描画ループで実行されることを想定しており、<b>frames</b> は別のピークを検出する前に経過する必要のあるループ数を決定します。たとえば、frameRate() = 60の場合、次の式で120ビート/分の曲のビートを検出できます： <code> framesPerPeak = 60 / (estimatedBPM / 60);</code>",
-      "@b2renger によるサンプルコードと、<a href=\"http://www.airtightinteractive.com/2013/10/making-audio-reactive-visuals/\" target=\"_blank\">Felix Turner</a> によるシンプルなビート検出の説明をもとにしています。"
+      "@b2renger によるコード例と、<a href=\"http://www.airtightinteractive.com/2013/10/making-audio-reactive-visuals/\" target=\"_blank\">Felix Turner</a> によるシンプルなビート検出の説明をもとにしています。"
     ],
     "params": {
       "freq1": "Number: (オプション) 低周波数 - デフォルトは20 Hz",
