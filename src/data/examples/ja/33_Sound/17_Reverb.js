@@ -29,7 +29,7 @@ function setup() {
   // 音声ファイルにリバーブに接続します。
   reverb.process(soundFile, 6, 0.2);
 
-  reverb.amp(4); // 音量を上げましょう！
+  reverb.amp(4); // ボリュームを上げましょう！
 }
 
 function mousePressed() {

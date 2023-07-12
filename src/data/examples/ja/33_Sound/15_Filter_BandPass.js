@@ -34,7 +34,7 @@ function draw() {
 
   // FFTスペクトル範囲から mouseX をバンドパス周波数にマッピングします： 10Hz - 22050Hz
   filterFreq = map(mouseX, 0, width, 10, 22050);
-  // mouseY を 共鳴 / 幅 にマッピングします。
+  // mouseY を レゾナンス / 幅 にマッピングします。
   filterWidth = map(mouseY, 0, height, 0, 90);
   // フィルター・パラメーターを設定します。
   filter.set(filterFreq, filterWidth);

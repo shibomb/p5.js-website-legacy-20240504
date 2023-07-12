@@ -27,7 +27,7 @@ function draw() {
   let volume = input.getLevel();
 
   // ボリュームが 0.1 より大きい場合は、ランダムな位置に矩形が描かれます。
-  // 音量が大きいほど、長方形は大きくなります。
+  // ボリュームが大きいほど、長方形は大きくなります。
   let threshold = 0.1;
   if (volume > threshold) {
     stroke(0);

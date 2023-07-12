@@ -4,8 +4,8 @@
  *  @description
  *  マウスをクリックすると、p5.Delay が音声ファイルを処理するのが聞こえます。
  *  MouseX は p5.Delayフィルター周波数を制御します。
- *  MouseY は p5.Delay時間と共鳴を共に制御します。
- *  音量オブジェクトで結果として得られる音の音量を視覚化します。
+ *  MouseY は p5.Delay時間とレゾナンスを共に制御します。
+ *  振幅オブジェクトで結果として得られる音のボリュームを視覚化します。
  *
  * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>、
@@ -34,7 +34,7 @@ function setup() {
 function draw() {
   background(0);
 
-  // p5.振幅アナライザーから音量を読み取ります。
+  // p5.Amplitudeアナライザーからボリュームを読み取ります。
   let level = analyzer.getLevel();
 
   // レベルを使用して緑色の四角形を描きます。

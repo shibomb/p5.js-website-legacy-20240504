@@ -4,7 +4,7 @@
  *  @description p5.SoundFile に p5.LowPass フィルタを適用します。
  *  FFT を用いて音を視覚化します。
  *  mouseX をフィルターのカットオフ周波数に、
- *  mouseY を BandPass フィルターの共振/幅にマップします。
+ *  mouseY を BandPass フィルターのレゾナンス/幅にマップします。
  *
  * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>、
