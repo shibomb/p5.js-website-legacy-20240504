@@ -16,7 +16,7 @@ function draw() {
   noFill();
 
   // point() メソッドの2つのパラメータはそれぞれ座標を指定します。
-  // 最初のパラメータは x 座標で、2番目は Y 座標です。
+  // 最初のパラメータは x 座標で、2番目は y 座標です。
   stroke(255);
   point(width * 0.5, height * 0.5);
   point(width * 0.5, height * 0.25);
