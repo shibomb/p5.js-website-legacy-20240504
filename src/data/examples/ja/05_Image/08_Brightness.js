@@ -2,7 +2,7 @@
  * @name 明度
  * @arialabel 白黒で描かれた宇宙飛行士のイメージが黒いスクリーンで覆われています。ユーザーのマウスが懐中電灯のように機能し、マウスを動かすことで画像の一部分が照らされます。
  * @description このプログラムは、各ピクセルとマウスとの距離を計算して、画像の一部の明るさを調整します。
- * <br><br><span class="small"><em>このサンプルは、Processing ウェブサイトの <a href="https://processing.org/examples/brightness.html">明度のサンプル</a> を移植したものです。</em></span>
+ * <br><br><span class="small"><em>この例は、Processing ウェブサイトの <a href="https://processing.org/examples/brightness.html">明度の例</a> を移植したものです。</em></span>
  */
 // このプログラムは、各ピクセルとマウスとの距離を計算して、
 // 画像の一部の明るさを調整します。

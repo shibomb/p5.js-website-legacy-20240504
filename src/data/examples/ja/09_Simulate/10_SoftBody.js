@@ -1,7 +1,7 @@
 /*
  * @name 柔らかい物体
  * @arialabel 黒い画面上の白い五角形が、ユーザーのマウスの動きに合わせて何らかの形に変化していきます。
- * @description Ira Greenberg によるオリジナルのサンプルです。
+ * @description オリジナルの例は Ira Greenberg により作成されました。
  * <br><br>curveVertex() および curveTightness() を使用した柔らかい物体の動的シミュレーションです。
  */
 // 中心点

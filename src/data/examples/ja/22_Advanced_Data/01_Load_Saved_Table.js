@@ -5,7 +5,7 @@
  * 結果を画面上に表示します。
  * Web ブラウザによってファイルの保存場所が異なるため、
  * Processing の例とは異なり、saveTable は利用していません。<br><br>
- * Processing 向けの Daniel Shiffman の<a href="https://processing.org/examples/loadsavetable.html">LoadSaveTable サンプル</a>をベースにしています。
+ * Processing 向けの Daniel Shiffman の<a href="https://processing.org/examples/loadsavetable.html">LoadSaveTable の例</a>をベースにしています。
  */
 
 // Bubble クラス

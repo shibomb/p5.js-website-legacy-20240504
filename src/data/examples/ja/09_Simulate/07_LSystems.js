@@ -4,7 +4,7 @@
  * @description このスケッチは、Lindenmayer システム（L システムとも呼ばれます）に基づいた自動描画を作成します。
  * L システムは、手続き型グラフィックスで
  * 自然、幾何学的、または興味深い「フラクタル風」のパターンを作成するためによく使用されます。<br>
- * サンプル作成者: <a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a><br>
+ * 例の作成者: <a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a><br>
  * <a href='https://en.wikipedia.org/wiki/L-system'>https://en.wikipedia.org/wiki/L-system</a>
  */
 // タートル関連の変数:

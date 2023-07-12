@@ -24,7 +24,7 @@
  * リング変調は振幅変調の一種で、元のキャリア信号が存在せず、多くの場合、
  * より高速な周波数での変調が含まれます。 </p>
  *
- * <p><em><span class="small">このサンプルを自分のプロジェクトで動作させるには、
+ * <p><em><span class="small">この例を自分のプロジェクトで動作させるには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>
  * を含める必要があります。</em></span></p>
  */

@@ -5,7 +5,7 @@
  * 複数のバブルをインスタンス化し、結果を画面に表示します。
  * Web ブラウザによってファイルの保存場所が異なるため、
  * Processing の例とは異なり、saveJSON は利用していません。<br><br>
- * Processing 向けの Daniel Shiffman の<a href="https://processing.org/examples/loadsavejson.html">LoadSaveJSON サンプル</a>をベースにしています。
+ * Processing 向けの Daniel Shiffman の<a href="https://processing.org/examples/loadsavejson.html">LoadSaveJSON の例</a>をベースにしています。
  */
 
 // Bubble クラス

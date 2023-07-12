@@ -3,7 +3,7 @@
  * @arialabel ユーザーの音声入力の振幅に応じて、バーの下部に黒い四角形が描かれます。ある最小振幅になると、画面右側に灰色の四角がランダムに描かれます。
  * @description <p>オーディオ入力のボリュームがしきい値を超えると
  * イベント（矩形を描く）がトリガーされます。</p>
- * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>
  * および稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
  */

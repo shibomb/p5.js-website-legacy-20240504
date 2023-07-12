@@ -2,7 +2,7 @@
  * @name ブラー効果
  * @arialabel 左側に白黒でレンダリングされた宇宙飛行士、右側に画像のぼかしバージョンがあります。
  * @description 画像をぼかす低域通過フィルターです。このプログラムは、画像のすべてのピクセルを分析し、周囲のすべてのピクセルと混ぜ合わせて画像をぼかします。
- * <br><br><span class="small"><em>このサンプルは、Processing ウェブサイトの <a href="https://processing.org/examples/blur.html">ブラー効果のサンプル</a> を移植したものです。</em></span>
+ * <br><br><span class="small"><em>この例は、Processing ウェブサイトの <a href="https://processing.org/examples/blur.html">ブラー効果の例</a> を移植したものです。</em></span>
  */
 // 周囲のすべてのピクセルを考慮するために、3x3の配列を使用します。
 // そして、これらの値を正規化します。
@@ -64,7 +64,7 @@ function draw() {
 
           // 画像がグレースケールであるため、
           // RGB 値は同一です。
-          // このサンプルでは赤の値を取得します
+          // この例では赤の値を取得します
           // (緑と青も同様に機能します)。
           let val = red(img.get(xpos, ypos));
 

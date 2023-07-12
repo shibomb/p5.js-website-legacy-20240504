@@ -6,7 +6,7 @@
  *  mouseX をバンドパス周波数に、
  *  mouseY をバンドパスフィルタのレゾナンス/幅にマッピングします。
  *
- * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>、
  * 音声ファイル、そして稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバ</a>が必要です。</span></em></p>
  */

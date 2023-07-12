@@ -2,7 +2,7 @@
  * @name テキストの回転
  * @arialabel 黒い背景に3本の白い線があります。 45度、270度、そして時計回りに回転する線が1本あり、回転に伴って度数表示が変わります。
  * @description 画面に文字を描き、さまざまな角度で回転させます。
- * <br><br><small><em>このサンプルは、Processingウェウブサイトの <a href="https://processing.org/examples/textrotation.html">テキスト回転のサンプル</a>
+ * <br><br><small><em>この例は、Processingウェウブサイトの <a href="https://processing.org/examples/textrotation.html">テキスト回転の例</a>
  * を移植したものです。
  * </em></small>
  */

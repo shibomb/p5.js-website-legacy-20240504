@@ -6,7 +6,7 @@
  * そうしないと、スケッチで再生したい時点で、
  * 音声のロードが完了していない可能性があります。
  *
- * <br><br><em><span class="small"> このサンプルをローカルで実行するには、
+ * <br><br><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリー</a>、
  * 音声ファイル、および、稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em>
  */

@@ -2,7 +2,7 @@
  * @name マンデルブロ集合
  * @arialabel ハート型の円盤が連なったようなフラクタル。円盤に小さな円盤がくっつき、連結した集合からなります。
  * @description マンデルブロ集合のシンプルなレンダリングを行います。
- * Processing の Daniel Shiffman の <a href="https://processing.org/examples/mandelbrot.html">マンデルブロサンプル</a> をもとにしています。
+ * Processing の Daniel Shiffman の <a href="https://processing.org/examples/mandelbrot.html">マンデルブロの例</a> をもとにしています。
  */
 
 function setup() {

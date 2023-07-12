@@ -5,7 +5,7 @@
  * @description マウスを円の上に移動させてクリックし、位置を動かします。
  * マウスを離すと、元の位置に戻ります。
  * 各円は少し異なるふるまいをします。
- * <br><br><small><em>このサンプルは <a href="https://processing.org/examples/">Processing ウェブサイト</a> から移植されています。</em></small>
+ * <br><br><small><em>この例は <a href="https://processing.org/examples/">Processing ウェブサイト</a> から移植されています。</em></small>
  */
 let num = 3;
 let springs = [];

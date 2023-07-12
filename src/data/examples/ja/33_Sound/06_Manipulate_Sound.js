@@ -6,7 +6,7 @@
  * 再生速度は、ウェブオーディオコンテキストが音声ファイル情報を処理する速さです。
  * より遅い速度は、音の持続時間を増加させるだけでなく、ピッチも低下させます。
  * なぜなら、それはより遅い周波数で再生されているからです。</p>
- * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>、
  * 音声ファイル、および、稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em>
  */

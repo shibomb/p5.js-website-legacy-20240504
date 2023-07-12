@@ -1,7 +1,7 @@
 /*
  * @name 煙のパーティクル
  * @arialabel 画面の下部の中央に白い円があります。円から煙が出て、ユーザーのマウスの動きに合わせて左右に移動します。また、上部に白い矢印があり、ユーザーのマウスの位置を指示しています。
- * @description Dan Shiffman によって Processing 用に書かれたオリジナルの SmokeParticleSystem サンプルを移植したものです。
+ * @description Dan Shiffman によって Processing 用に書かれたオリジナルの SmokeParticleSystem の例を移植したものです。
  * 煙のようなパーティクルを作成します :p
  */
 
