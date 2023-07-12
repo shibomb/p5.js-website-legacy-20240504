@@ -2,7 +2,7 @@
  * @name 円の衝突
  * @arialabel 大きな薄灰色の円と小さな灰色の円が、暗灰色の背景の端やお互いにぶつかると跳ね返ります。
  * @frame 710,400 (オプション)
- * @description processing.org/examples の「Circle Collision」のサンプルを移植したものです。<br> このサンプルでは物理量の視覚化のためにベクトルを使用しています。
+ * @description processing.org/examples の「Circle Collision」の例を移植したものです。<br> この例では物理量の視覚化のためにベクトルを使用しています。
  */
 class Ball {
   constructor(x, y, r) {

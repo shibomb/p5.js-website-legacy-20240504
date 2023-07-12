@@ -3,7 +3,7 @@
  * @arialabel からし色の背景です。
  * @description 文（ステートメント）は、プログラムを構成する要素です。「;」（セミコロン）記号は、文を終了するために使用されます。
  * これは「ステートメント終端記号」と呼ばれています。コメントは、プログラムを理解しやすくするメモを残すために使用されます。コメントは2つのスラッシュ（「 // 」）で始まります。
- * <br><br><small><em>このサンプルは、Processing のウェブサイトの <a href="https://processing.org/examples/statementscomments.html">文とコメントのサンプル</a> から移植されています。</em></small>
+ * <br><br><small><em>この例は、Processing のウェブサイトの <a href="https://processing.org/examples/statementscomments.html">文とコメントの例</a> から移植されています。</em></small>
  */
 // createCanvas 関数は、コンピュータにウィンドウの大きさを指示する文です。
 // 各関数の文には0個以上のパラメータがあります。

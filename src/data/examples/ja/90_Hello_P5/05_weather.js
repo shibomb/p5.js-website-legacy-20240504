@@ -2,7 +2,7 @@
  * @name 天気予報
  * @arialabel Metaweatherサイトの天気を利用し、画面上の青い矢印と灰色の円を操作します。左下の白い円の中にある青い矢印は風向きを指します。灰色の背景にある小さな濃い灰色の円は、風の方向に動きます。
  * @frame 720,280
- * @description このサンプルは、www.metaweather.com から JSON の天気データを取得します。
+ * @description この例は、www.metaweather.com から JSON の天気データを取得します。
 */
 
 // 風向のベクトル

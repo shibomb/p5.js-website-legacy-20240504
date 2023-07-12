@@ -50,7 +50,7 @@
  * 半分、1/3、1/4など試してみてください）と
  * 調和的な関係にあるものを比較してみてください。</p>
  *
- * <p><em><span class="small">このサンプルをあなたのプロジェクトで動作させるためには、
+ * <p><em><span class="small">この例をあなたのプロジェクトで動作させるためには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>
  * を含める必要があります。</em></span></p>
  */

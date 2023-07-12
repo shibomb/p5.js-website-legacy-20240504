@@ -1,7 +1,7 @@
 /*
  * @name 基本的なシェーダー
  * @arialabel シアンから紫へのグラデーションの背景です。
- * @description これは p5.js でシェーダーを読み込む方法の基本的なサンプルです。
+ * @description これは p5.js でシェーダーを読み込む方法の基本的な例です。
  * <br>p5.js でシェーダーを使用する方法について、詳しくはこちらを参照してください: <a href="https://itp-xstory.github.io/p5js-shaders/">p5.js シェーダー</a>
  */
 

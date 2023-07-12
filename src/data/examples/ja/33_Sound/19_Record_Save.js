@@ -6,7 +6,7 @@
  * p5.AudioIn（マイク / 音源）、
  * p5.SoundRecorder（音声を記録）、
  * p5.SoundFile（再生 / 保存）。
- * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>、
  * 音声ファイル、および稼働中の <a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
  */

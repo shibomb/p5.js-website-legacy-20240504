@@ -6,7 +6,7 @@
  * <p>注：p5.AudioIn は独自の p5.Amplitude オブジェクトを含んでいるため、
  * p5.Amplitude を作成せずに p5.AudioIn で
  * getLevel を呼び出すことができます。</p>
- * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>
  * と稼働している<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
  */

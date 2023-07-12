@@ -3,7 +3,7 @@
  * @arialabel 灰色の背景に黒い四角形と白い円があります。
  * マウスカーソルが黒い四角形にかかると背景は黒くなり、マウスカーソルが白い円にかかると背景は白くなります。
  * @description 画像中央の色のついた図形の上にかかると、外側の四角の色が変化します。
- * <br><br><span class="small"><em> このサンプルは、Processing ウェブサイトの <a href="https://processing.org/examples/rollover.html"> ロールオーバー サンプル</a> から移植されています</em></span>。
+ * <br><br><span class="small"><em> この例は、Processing ウェブサイトの <a href="https://processing.org/examples/rollover.html"> ロールオーバーの例</a> から移植されています</em></span>。
  */
 let squareX, squareY;  // Position of square button
 let circleX, circleY;  // Position of circle button

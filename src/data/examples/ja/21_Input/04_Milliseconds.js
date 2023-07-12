@@ -4,7 +4,7 @@
  * @description ミリ秒は 1 秒の 1/1000 です。
  * p5jsは、プログラムが起動してから何ミリ秒経ったのかを記録しています。
  * この数値を余剰(%)演算子で加工することで、時間におけるさまざまなパターンを作成することができます。
- * <br><br><small><em> このサンプルは、Processingのウェブサイトにある<a href="https://processing.org/examples/milliseconds.html">ミリ秒のサンプル</a>から移植されています</em></small>。
+ * <br><br><small><em> この例は、Processingのウェブサイトにある<a href="https://processing.org/examples/milliseconds.html">ミリ秒の例</a>から移植されています</em></small>。
  */
 
 let scale;

@@ -6,7 +6,7 @@
  * 'restart' モードでは、一度停止してから再びスタートします。
  * マウスをクリックして音声ファイルを再生します。
  * たくさんのサウンドを一挙に再生します！任意のキーを押すと再生モードが切り替わります。</p>
- * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>、
  * 音声ファイル、および、稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em>
  */

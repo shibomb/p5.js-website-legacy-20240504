@@ -9,7 +9,7 @@
  * インパルス応答自体を聴くには、
  * 任意のキーを押してください。</p>
  *
- * <p><em><span class="small">このサンプルをローカルで実行するには、
+ * <p><em><span class="small">この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>、
  * 音声ファイル、および稼働中の <a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバ</a>が必要です。
  * These convolution samples are Creative Commons BY

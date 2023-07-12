@@ -4,7 +4,7 @@
  * @description 再帰を使用して、シンプルな木状の構造をレンダリングします。
  * 枝分かれ角度は、水平マウスの位置の関数として計算されます。
  * マウスを左右に移動して角度を変更します。
- * Processing の Daniel Shiffman の <a href="https://processing.org/examples/tree.html">再帰的な木のサンプル</a> をもとにしています。
+ * Processing の Daniel Shiffman の <a href="https://processing.org/examples/tree.html">再帰的な木の例</a> をもとにしています。
  */
 let theta;
 

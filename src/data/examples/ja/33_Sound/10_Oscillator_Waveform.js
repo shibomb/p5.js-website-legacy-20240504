@@ -3,7 +3,7 @@
  * @arialabel 波長はスクリーンを横切り、ユーザーのマウスが左に移動するにつれて波長は長く、周波数は遅くなり、マウスが右に移動するにつれて両方とも増加します。
  * @description <p>オシレーターを制御し、FFTを使用して波形を表示します。
  * MouseX は周波数に、MouseY は振幅にマッピングされています。</p>
- * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>と
  * サウンドファイルが必要です。</span></em></p>
  */

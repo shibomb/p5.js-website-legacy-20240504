@@ -3,7 +3,7 @@
  * @arialabel 黒い画面上で白いボールを動かし、クリックすると効果音が流れます。ボールがある側に近いスピーカーから音が出ます。
  * @description <p>マウスをクリックして音声を再生します。
  * ボールの位置はマウスに追従し、それに合わせて音声もパンニングされます。</p>
- * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>、
  * 音声ファイル、および、稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em>
  *

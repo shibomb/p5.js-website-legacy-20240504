@@ -7,7 +7,7 @@
  *  MouseY は p5.Delay時間と共鳴を共に制御します。
  *  音量オブジェクトで結果として得られる音の音量を視覚化します。
  *
- * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>、
  * 音声ファイル、および稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
  */

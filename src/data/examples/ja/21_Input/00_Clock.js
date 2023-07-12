@@ -3,7 +3,7 @@
  * @arialabel 灰色の背景に、ピンクの時計が動いています。
  * @description second(), minute(), hour()
  * 関数を使って現在時刻を読み取ることができます。
- * このサンプルでは、sin() と cos() の値を使用して針の位置を設定しています。
+ * この例では、sin() と cos() の値を使用して針の位置を設定しています。
  */
 let cx, cy;
 let secondsRadius;

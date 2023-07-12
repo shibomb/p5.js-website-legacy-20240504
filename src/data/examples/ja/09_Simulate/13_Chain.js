@@ -2,7 +2,7 @@
  * @name チェーン
  * @arialabel 白いやや不透明な2つの円が白い線で繋がれています。ユーザーのマウスに合わせて弦の上部が動き、円もマウスに合わせて動きますが重力の影響も受けます。
  * @description ひとつめの円はマウスの位置に、ふたつめの円はひとつめの円の位置に結び付けられます。環境の重力は両方に対して下向きに働きます。
- * <br><br><small><em>このサンプルは <a href="https://processing.org/examples/">Processing のウェブサイト</a> から移植されました。</em></small>
+ * <br><br><small><em>この例は <a href="https://processing.org/examples/">Processing のウェブサイト</a> から移植されました。</em></small>
  */
 let s1, s2;
 let gravity = 9.0;

@@ -9,7 +9,7 @@
  * <pre><code class="language-markup">&lt;script src="https://webjack.io/dist/webjack.js">&lt;/script></code></pre>
  * <pre><code class="language-markup">&lt;script src="https://jywarren.github.io/p5-webjack/lib.js">&lt;/script></code></pre>
  *
- * 動作サンプル: https://editor.p5js.org/jywarren/sketches/rkztwSt8M
+ * 動作例: https://editor.p5js.org/jywarren/sketches/rkztwSt8M
  *
  * オーディオのテスト: https://www.youtube.com/watch?v=GtJW1Dlt3cg
  * このスケッチをArduinoにロードしてください：

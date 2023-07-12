@@ -4,7 +4,7 @@
  *  @description リバーブは音に深みと知覚される空間を与えます。 ここでは、
  *  ノイズがリバーブで処理されます。
  *
- * <p><em><span class="small"> このサンプルをローカルで実行するには、
+ * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a>、
  * 音声ファイル、および稼働中の <a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
  */

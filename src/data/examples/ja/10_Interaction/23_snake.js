@@ -4,7 +4,7 @@
  * @description 有名なスネークゲームです！ 実行をクリックしたら、黒いエリアの任意の場所をクリックし、
  * i j k l を使ってスネークを操作します。
  * スネークが自分自身または壁に当たらないようにしてください。<br>
- * サンプルの作成者: <a href='https://github.com/prashantgupta24' target='_blank'>Prashant Gupta</a>
+ * 例の作成者: <a href='https://github.com/prashantgupta24' target='_blank'>Prashant Gupta</a>
  */
 
 // スネークは小さなセグメントに分割され、それぞれの 'draw' 呼び出しで描画・編集されます。
