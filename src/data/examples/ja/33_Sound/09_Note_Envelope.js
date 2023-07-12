@@ -8,7 +8,7 @@
  *  内部の Web Audio GainNode (p5.Oscillator.output) に送ります。
  *  デフォルトでは、そのノードは 0.5 の定数値を持ちます。それは
  *  osc.amp() メソッドでリセットできます。また、この例では、
- *  エンベロープがそのノードを制御し、音量ノブのように振幅を
+ *  エンベロープがそのノードを制御し、ボリュームノブのように振幅を
  *  上下します。</p>
  * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound ライブラリ</a> と

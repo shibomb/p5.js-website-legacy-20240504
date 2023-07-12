@@ -23,7 +23,7 @@ function setup() {
   noise = new p5.Noise(); // 他に 'brown', 'pink' があります。
   noise.start();
 
-  // ノイズ音量に 0 を掛けます。
+  // ノイズのボリュームに 0 を掛けます。
   // (ノイス生成の準備が整うまでは静かにしておきましょう！）。
   noise.amp(0);
 
@@ -41,7 +41,7 @@ function setup() {
 function draw() {
   background(0);
 
-  // p5.Amplitude アナライザーから音量を読み取ります。
+  // p5.Amplitude アナライザーからボリュームを読み取ります。
   let level = analyzer.getLevel();
 
   // レベルを使用して緑色の四角形を描きます。
