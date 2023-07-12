@@ -10,11 +10,11 @@ Reference: リファレンス
 Libraries: ライブラリ
 Learn: 学ぶ
 Teach: 教える
-Examples: サンプル
+Examples: 実例
 Books: 書籍
 Community: コミュニティ
 Contribute: 貢献する
-Forum: Forum
+Forum: フォーラム
 Showcase: ショーケース
 footerxh1: クレジット
 footer1: 'p5.js is currently led by '
@@ -91,8 +91,8 @@ get started:
   download-title: p5.js ライブラリのコピーをダウンロードする
   hosted-title: ホストされた p5.js ライブラリを使用する
   download1: 始めるための近道は
-  download2: p5.js complete
-  download3: をクリックしてダウンロードした空のサンプルを使用することです。
+  download2: p5.js 一式
+  download3: をクリックしてダウンロードした空のプロジェクト例を使用することです。
   download8: ダウンロード後、ローカルサーバーを設定する必要があります。手順は
   download9: こちら
   download10: 'を参照してください。ダウンロードしたフォルダ内でローカルサーバーを実行し、ブラウザでこれにアクセスしてください:'
@@ -104,7 +104,7 @@ get started:
     代わりに、オンラインでホストされている p5.js ファイルにリンクすることもできます。p5.js のすべてのバージョンは
     CDN（コンテンツ配信ネットワーク）に保存されています。これらのバージョンの履歴は
   download6: で確認できます。この場合、リンクを以下のように変更できます。
-  download7: サンプル HTML ページは以下のようになります。
+  download7: HTML ページは例としては以下のようになります。
   environment-title: 環境
   environment1: コンピュータで p5.js を実行するには、テキストエディタが必要です。あなたのお好みの
   environmentlink: 'http://en.wikipedia.org/wiki/Source_code_editor'
@@ -142,25 +142,25 @@ get started:
   your-first-sketch8: すべて正しく入力した場合、以下がディスプレイウィンドウに表示されます。
   your-first-sketch9: キャンバスには、x が 80、y が 80 の位置に幅と高さが50の円が描かれています。
   your-first-sketch10: >-
-    何も表示されない場合、エディターが入力内容を理解できていない可能性があります。この場合、サンプルのコードを正確にコピーしていることを確認してください。
+    何も表示されない場合、エディターが入力内容を理解できていない可能性があります。この場合、例のコードを正確にコピーしていることを確認してください。
     数値は括弧内に含まれ、それらの間にはカンマが必要であり、行末にはセミコロンが必要です。また、ellipse は正しい綴りで記述されている必要があります。
   your-first-sketch11: >-
     プログラミングを始める上で最も難しいことの一つは、構文を非常に具体的に指定する必要があることです。
     ブラウザはあなたが何を言いたいかを常に正確に把握するほど賢くはなく、句読点の配置に関してはかなり厳格です。少し練習すれば慣れていきます。
     エディタの左下にコンソールセクションがあります。ここでは、エディタからのエラーに関する詳細なメッセージを確認することができます。
-  your-first-sketch12: 次に、もう少しエキサイティングなスケッチに進んでみましょう。前のサンプルを修正して、次のようにしてみてください。
+  your-first-sketch12: 次に、もう少しエキサイティングなスケッチに進んでみましょう。前の例を修正して、次のようにしてみてください。
   your-first-sketch13: >-
     このプログラムは、「400ピクセルの幅と400ピクセルの高さのキャンバスを作成し、マウスの位置で白い円」を描き始めます。
     マウスボタンが押されると、円の色が黒に変わります。コードを実行し、マウスを動かしてクリックして、体験してみてください。
   your-first-sketch14: キャンバスには、マウスの軌跡に沿って複数の円が描かれています。
-  first-sketch-heading1: 円を描画するコードサンプル
+  first-sketch-heading1: 円を描画するコード例
   first-sketch-heading2: スクリーンリーダーユーザー向け注意事項
-  first-sketch-heading3: インタラクションを含むコードサンプル
+  first-sketch-heading3: インタラクションを含むコード例
   what-next-title: 次に何をすべきか？
   learn1: ' '
   learn2: 「学ぶ」ページ
   learn3: と
-  learn4: 「サンプル」ページ
+  learn4: 「実例」ページ
   learn5: をチェックしてください。
   learn6: ' '
   learn7: The Coding Train
@@ -192,13 +192,13 @@ download:
   editor-includes: p5.js エディタを使用して、コーディングを始めましょう！セットアップは不要です！
   complete-library-title: ライブラリ一式
   complete-library-intro1: >-
-    p5.js ライブラリファイル、p5.sound アドオン、サンプルプロジェクトを含むダウンロードです。エディタは含まれていません。p5.js
+    p5.js ライブラリファイル、p5.sound アドオン、プロジェクト例を含むダウンロードです。エディタは含まれていません。p5.js
     プロジェクトの設定方法については、
   complete-library-intro2: はじめに
   complete-library-intro3: をご覧ください。
   p5.js-complete: p5.js 一式
   includes-1: '以下を含みます:'
-  includes-2: p5.js、p5.sound.js、サンプルプロジェクト
+  includes-2: p5.js、p5.sound.js、プロジェクト例
   includes-3: 'バージョン '
   single-files-title: 単一ファイル
   single-files-intro: これらは p5.js ライブラリファイルへのダウンロードまたはリンクです。追加のコンテンツは含まれていません。
@@ -219,7 +219,7 @@ download:
     私たちは、私たちのコミュニティを可能な限りオープンで包括的なものにしたいと考えています。p5.js をサポートする組織である
   support-2: >-
     に寄付をすることで、この活動をサポートできます。 みなさまの貴重な寄付は、p5.js
-    のソフトウェア開発とともに、コードサンプルやチュートリアルを含む教育資料の制作に使われます。 また、次のようなコミュニティ活動にも活用されます：
+    のソフトウェア開発とともに、コード例やチュートリアルを含む教育資料の制作に使われます。 また、次のようなコミュニティ活動にも活用されます：
   support-3: フェローシップ
   support-4: 、
   support-5: コミュニティイベント。
@@ -284,7 +284,7 @@ learn:
   learn-title: 学ぶ
   teach-title2: 教える
   learn1: これらのチュートリアルは、特定のトピックのより詳細な説明やステップバイステップの概要を提供します。以下の
-  learn2: サンプルページ
+  learn2: 実例ページ
   learn3: をチェックして、さまざまな p5.js トピックの短いデモを探索してください。
   introduction-to-p5js-title: p5.js の紹介
   hello-p5js-title: Hello p5.js
@@ -1163,7 +1163,7 @@ community:
   develop5: あなたのライブラリを作成しましょう。
   document-title: ドキュメント。
   document1: 誰もがドキュメンテーションを求めています。
-  document2: サンプルの移植
+  document2: 実例の移植
   document3: や
   document4: ドキュメンテーションの追加
   document5: 、チュートリアルの作成など、支援が必要です。
@@ -1452,8 +1452,8 @@ books:
   book-6-order-a: Download the PDF (FREE)
   book-6-order-b: Order from Barnes & Noble
 examples:
-  Examples: サンプル
-  back-examples: サンプルに戻る
+  Examples: 実例
+  back-examples: 実例に戻る
   Structure: 構造
   Form: フォーム
   Data: データ
