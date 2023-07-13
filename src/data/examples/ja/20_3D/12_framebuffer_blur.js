@@ -1,8 +1,8 @@
 /*
- * @name フレームバッファの深さによるボケ
+ * @name フレームバッファの奥行きを使ったボケ
  * @frame 710,400
  * @arialabel カメラの前で回転する5つの球体が並び、近くや遠くがぼけて見えます。
- * @description p5.Framebufferからの深度情報を使用して、
+ * @description p5.Framebufferの深度情報を使用して、
  * フォーカルブラーでシーンを描画するシェーダーです。
  */
 let layer;
