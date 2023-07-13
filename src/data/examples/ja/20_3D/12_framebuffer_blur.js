@@ -1,9 +1,9 @@
 /*
- * @name Blur using Framebuffer Depth
+ * @name フレームバッファの深さによるボケ
  * @frame 710,400
- * @arialabel A line of five spheres rotating in front of the camera, with ones too close and too far to the camera appearing blurred
- * @description A shader that uses depth information from a p5.Framebuffer to
- * draw a scene with focal blur.
+ * @arialabel カメラの前で回転する5つの球体が並び、近くや遠くがぼけて見えます。
+ * @description p5.Framebufferからの深度情報を使用して、
+ * フォーカルブラーでシーンを描画するシェーダーです。
  */
 let layer;
 let blur;
@@ -16,7 +16,7 @@ function setup() {
 }
 
 function draw() {
-  // Draw a scene
+  // シーンを描きます。
   layer.begin();
   background(255);
   ambientLight(100);
@@ -35,11 +35,11 @@ function draw() {
   }
   layer.end();
   
-  // Render the scene with depth of field blur
+  // 被写界深度でぼかしたシーンをレンダリングします。
   shader(blur);
   blur.setUniform('img', layer.color);
   blur.setUniform('depth', layer.depth);
-  rect(width, height);
+  rect(0, 0, width, height);
 }
 
 function windowResized() {
@@ -54,7 +54,7 @@ varying vec2 vTexCoord;
 void main() {
   vec4 positionVec4 = vec4(aPosition, 1.0);
   positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
-  positionVec4.y *= -1;
+  positionVec4.y *= -1.0;
   gl_Position = positionVec4;
   vTexCoord = aTexCoord;
 }`;
@@ -65,8 +65,8 @@ varying vec2 vTexCoord;
 uniform sampler2D img;
 uniform sampler2D depth;
 float getBlurriness(float d) {
-  // Blur more the farther away we go from the
-  // focal point at depth=0.9
+  // depth=0.9 で焦点から
+  // 離れるほどぼけます。
   return abs(d - 0.9) * 40.;
 }
 float maxBlurDistance(float blurriness) {
@@ -78,22 +78,22 @@ void main() {
   float centerDepth = texture2D(depth, vTexCoord).r;
   float blurriness = getBlurriness(centerDepth);
   for (int sample = 0; sample < 20; sample++) {
-    // Sample nearby pixels in a spiral going out from the
-    // current pixel
+    // 現在のピクセルかららせん状に
+    // 近傍のピクセルをサンプリングします。
     float angle = float(sample);
     float distance = float(sample)/20.
       * maxBlurDistance(blurriness);
     vec2 offset = vec2(cos(angle), sin(angle)) * distance;
 
-    // How close is the object at the nearby pixel?
+    // 近くのピクセルの物体はどのくらい近いか？
     float sampleDepth = texture2D(depth, vTexCoord + offset).r;
 
-    // How far should its blur reach?
+    // そのボケはどこまで届くべきか？
     float sampleBlurDistance =
       maxBlurDistance(getBlurriness(sampleDepth));
 
-    // If it's in front of the current pixel, or its blur overlaps
-    // with the current pixel, add its color to the average
+    // そのピクセルが現在のピクセルの前にある場合、またはそのピクセルのボケが
+    // 現在のピクセルと重なる場合、そのピクセルの色を平均値に加えます。
     if (
       sampleDepth >= centerDepth ||
       sampleBlurDistance >= distance
