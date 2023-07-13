@@ -1,7 +1,7 @@
 /*
- * @name サウンドエフェクト
+ * @name 効果音
  * @arialabel 押すとドアベルの音が鳴ります。
- * @description <p>円の内部でクリックされたときにサウンドエフェクトを再生します。</p>
+ * @description <p>円の内部でクリックされたときに効果音を再生します。</p>
  * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>、
  * 音声ファイル、および、稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em>
@@ -24,7 +24,7 @@ class Doorbell {
     return dist(mx, my, this.x, this.y) < this.r;
   }
 
-  // ドアベルを表示します。（ハードコードされた色。）
+  // ドアベルを表示します。（ハードコーディングされた色、改善の余地あり)
   display(mx, my) {
     if (this.contains(mx, my)) {
       fill(100);
