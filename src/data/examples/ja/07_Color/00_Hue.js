@@ -1,9 +1,9 @@
 /*
- * @name Hue
- * @arialabel Vertical bars of color appear in a gradient pattern as the user drags their mouse across the screen
- * @description Hue is the color reflected from or transmitted through an
- * object and is typically referred to as the name of the color (red, blue,
- * yellow, etc.) Move the cursor vertically over each bar to alter its hue.
+ * @name 色相
+ * @arialabel 画面をマウスでドラッグすると、バーの色がグラデーションで表示されます。
+ * @description 色相は、物体から反射または透過する色であり、通常は色の名前（赤、青、
+ * 黄色など）で言及されます。
+ * 各バー上でカーソルを縦に移動させて、その色相を変更します。
  */
 const barWidth = 20;
 let lastBar = -1;
