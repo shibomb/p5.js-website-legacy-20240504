@@ -1,10 +1,10 @@
 /*
- * @name Brightness
- * @arialabel A black and white photograph of an astronaut on the moon covered by black. The mouse acts as a light and a circular area of the photograph is illuminated where the mouse hovers
- * @description By Dan Shiffman. This program adjusts the brightness of a part
- * of the image by calculating the distance of each pixel to the mouse.
- * <p><em><span class="small"> To run this example locally, you will need
- * at least an image file and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
+ * @name 明るさ
+ * @arialabel 月面にいる宇宙飛行士の白黒写真が黒で覆われています。マウスが照明の役割を果たし、写真上のマウス周辺が円形に照らされます。
+ * @description Dan Shiffman によって作成されました。
+ * このプログラムは、マウスから各ピクセルまでの距離を計算することで画像の一部の明るさを調整します。
+ * <p><em><span class="small"> この例をローカルで実行するには、
+ * 画像ファイルと稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em></p>
  */
 let img;
 
@@ -22,19 +22,19 @@ function setup() {
 function draw() {
   for (let x = 0; x < img.width; x++) {
     for (let y = 0; y < img.height; y++) {
-      // Calculate the 1D location from a 2D grid
+      // 2Dグリッドから1D位置を計算します。
       let loc = (x + y * img.width) * 4;
-      // Get the R,G,B values from image
+      // 画像からR,G,B値を取得します。
       let r, g, b;
       r = img.pixels[loc];
-      // Calculate an amount to change brightness based on proximity to the mouse
+      // マウスの近さによって明るさを変える量を計算します。
       let maxdist = 50;
       let d = dist(x, y, mouseX, mouseY);
       let adjustbrightness = (255 * (maxdist - d)) / maxdist;
       r += adjustbrightness;
-      // Constrain RGB to make sure they are within 0-255 color range
+      // RGB が0〜255色の範囲に収まるように制限します。
       r = constrain(r, 0, 255);
-      // Make a new color and set pixel in the window
+      // 新しい色を生成し、画面上のピクセルをセットします。
       //color c = color(r, g, b);
       let pixloc = (y * width + x) * 4;
       pixels[pixloc] = r;
