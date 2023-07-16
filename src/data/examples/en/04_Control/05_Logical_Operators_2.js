@@ -1,92 +1,92 @@
 /* 
- * @name 論理演算子 2
- * @arialabel 画面上の長方形を押すと、正方形が斜めに移動します。
+ * @name Logical Operators 2
+ * @arialabel Squares travel diagonally across the screen when a rectangle on the screen is pressed
  * @frame 400,400
- * @description <a href="https://www.rit.edu/directory/wmhics-w-michelle-harris">
-   <b>Prof WM Harris,</b></a> により作成されました。
-  どのようにして、ひとつのグローバル変数を用いて、ブール変数とブール表現で条件を作成し、
-	論理演算子 ||、&&、!を用いて境界チェックを行っていながら、
-  Xを描くボックスを作成するのかを示しています。<br/>
-	<b>関数は</b>
-	キャンバスの設定とボックスの作成の両方のために作成されます。
-  背景色はキャンバス空間内のボックスの位置に依存しています。
-  マウスボタンとキーが同時に押されると、
-  “where”テキストとボックスの色がシアンに変わりますが、
-  マウスボタンだけがクリックされるとアニメーションが開始されます。
-  qまたはQが押されると、“Did you type q or Q?”というテキストが青色に変わります。
-	それ以外の場合は紫色になります。
-  マウスがテキスト、“withinRect”を含むオレンジ色のボックス内に
-	配置されると、形状がピンク色になります。 
+ * @description contributed by <a href="https://www.rit.edu/directory/wmhics-w-michelle-harris">
+   <b>Prof WM Harris,</b></a> How
+	to create Xboxes with one global variable and create conditions with
+	boolean variables and boolean expressions by utilizing Boolean
+	operators ||, &&, and ! to do boundary checking.<br/>
+	<b>Functions</b>
+	are created for both the canvas set up as well as the creation of
+	the boxes. Background color is dependent on the location of the
+	boxes in the canvas space. When mouse button and key are pressed
+	simultaneously, the “where” text and box color changes to cyan,
+	but if the mouse button is clicked alone then the animation will
+	start. When q or Q are pressed the text “Did you type q or Q?”
+	will change to blue, else it will be purple. If the mouse is placed
+	within the orange box containing the text, “withinRect” then the
+	shape will turn pink.
  */
 
 
-// ひとつの座標で両ボックスの位置を管理しています :)
-let where = 0; // ボックスの位置を制御します。
+//1 coordinate for everything :)
+let where = 0; //control boxes' positions
 
 function setup() {
   createCanvas(400, 400);
 }
 
 function draw() {
-  // スライド4と同様に、OR(||) を使用して
-  // キャンバスの背景色を設定します。
+  //similar to slide 4 use of OR, ||
+  //to set bg color of canvas
   if ((where < 0) || (where > height)) {
     background("beige");
   } else {
     background("chocolate");
   }
 
-  // スライド4と同様に、AND(&&)を使用して
-  // ボックスとテキストの塗りつぶしの色を設定します。
+  //similar to slide 4 use of AND, &&
+  //to set fill color of box & text
   if (mouseIsPressed && keyIsPressed) {
     fill("cyan");
   } else {
     fill(255);
   }
 
-  // 左のボックス
+  //boxL
   rect(where, where, 40);
 
-  // 右のボックス。ボックスのサイズの分だけ x座標をずらしてします。
+  //boxR, pad x coordinate for size of box
   rect(width - where - 40, where, 40);
 
-  // ボックスを移動します。
+  //Move the boxes
   where = where + 1;
 
-  // ボックスの位置を表示します。
+  //Show the value of where the boxes are
   text("where is " + where, 150, 30);
 
-  // NOT(!) と OR(||)演算子による確認です。
+  //testing not, ! and or, || operators
   if (!(key === "q" || key === "Q")) {
     fill("purple");
   } else {
     fill("dodgerBlue");
   }
-  // 現在のキーの値を表示します。
+  //Show the current key value
   text("Did you type a q or Q? " + key, 150, 70);
 
-  //*** 境界チェック ***
-  // マウスが長方形の境界線内にあるか？
-  // 左、右、上、下
+  //*** Boundary checking ***
+  //Is the mouse within rect boundary?
+  //left, right, top, bottom
   let withinRect = (mouseX >= 150) &&
     (mouseX <= 150 + 100) &&
     (mouseY >= 300) &&
     (mouseY <= 300 + 40);
-  // withinRectの値に基づいて、塗りつぶしの色を変えます。
+  //fill color based on value of withinRect
   if (withinRect) {
     fill("pink");
   } else {
     fill("orange");
   }
-  // 矩形を描きます。
+  //draw the rect
   rect(150, 300, 100, 40);
-  // 長方形のラベルとして withinRect の値を表示します。
+  //show withinRect value as label on rect
   fill(0);
   text("withinRect " + withinRect, 160, 320);
 }
 
-// ボックス表示を再スタートします。
+//boxes restart
 function mousePressed() {
-  // ボックスをキャンバスの上に戻します。
+  //Reset boxes back up and above the canvas
   where = -50;
 }

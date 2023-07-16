@@ -1,10 +1,9 @@
 /*
- * @name 論理演算子
- * @arialabel 灰色の背景の半分に、水平の黒い線が敷き詰められています。これらの線の一部は左にずれており、この上下に垂直の点線が表示されています。
- * @description 論理演算子の AND(&& 論理積) および OR(|| 論理和) は、
- * 単純な関係文をより複雑な式として結合するために使用されます。
- * NOT(! 否定)演算子は、ブール(真偽)文を否定するために使用されます。
-```
+ * @name Logical Operators
+ * @arialabel Horizontal black lines across half of a grey background. Part of these lines are shifted left and there are vertical lines of dots above and below this
+ * @description The logical operators for AND (&&) and OR (||) are used to
+ * combine simple relational statements into more complex expressions.
+ * The NOT (!) operator is used to negate a boolean statement.
  */
 let test = false;
 
@@ -13,29 +12,29 @@ function setup() {
   background(126);
 
   for (let i = 5; i <= height; i += 5) {
-    // AND 論理積
+    // Logical AND
     stroke(0);
     if (i > 35 && i < 100) {
       line(width / 4, i, width / 2, i);
       test = false;
     }
 
-    // OR 論理和
+    // Logical OR
     stroke(76);
     if (i <= 35 || i >= 100) {
       line(width / 2, i, width, i);
       test = true;
     }
 
-    // ブール値が "true" かどうかのテストです。
-    // 「if(test)」という表現は、「if(test == true)」と等価です。
+    // Testing if a boolean value is "true"
+    // The expression "if(test)" is equivalent to "if(test == true)"
     if (test) {
       stroke(0);
       point(width / 3, i);
     }
 
-    // ブール値が "false" かどうかのテストです。
-    // 「if(!test)」という表現は、「if(test == false)」と等価です。
+    // Testing if a boolean value is "false"
+    // The expression "if(!test)" is equivalent to "if(test == false)"
     if (!test) {
       stroke(255);
       point(width / 4, i);
