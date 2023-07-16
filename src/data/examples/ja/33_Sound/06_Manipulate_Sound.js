@@ -1,11 +1,11 @@
 /*
- * @name 再生速度
+ * @name 再生レート
  * @arialabel 薄い灰色の背景に、2つの灰色の円が描かれ、ユーザーがマウスを動かすと動き、互いの距離に応じて異なるノイズを再生します。
- * @description <p>音声ファイルをロードし、その再生速度を mouseY に、
+ * @description <p>音声ファイルをロードし、その再生レートを mouseY に、
  * ボリュームを mouseX にマッピングします。
- * 再生速度は、ウェブオーディオコンテキストが音声ファイル情報を処理する速さです。
- * より遅い速度は、音の持続時間を増加させるだけでなく、ピッチも低下させます。
- * なぜなら、それはより遅い周波数で再生されているからです。</p>
+ * 再生レートは、ウェブオーディオコンテキストが音声ファイル情報を処理する速さです。
+ * より遅いレートは音の持続時間を増加させますが、
+ * それだけでなく、再生する周波数を低下させるのでピッチも低くなります。</p>
  * <p><em><span class="small"> この例をローカルで実行するには、
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.soundライブラリ</a>、
  * 音声ファイル、および、稼働中の<a href="https://github.com/processing/p5.js/wiki/Local-server">ローカルサーバー</a>が必要です。</span></em>
@@ -34,7 +34,7 @@ function draw() {
   volume = constrain(volume, 0, 1);
   song.amp(volume);
 
-  // 速度を 0.1　から 4 の範囲で設定します。
+  // 速度を 0.1 から 4 の範囲で設定します。
   // 速度を変えるとピッチが変わります。
   let speed = map(mouseY, 0.1, height, 0, 2);
   speed = constrain(speed, 0.01, 4);
