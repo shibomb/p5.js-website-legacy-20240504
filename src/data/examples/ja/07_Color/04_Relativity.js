@@ -1,9 +1,11 @@
 /*
- * @name Relativity
- * @arialabel 4 vertical stripes in grey, blue, green, and orange. They are displayed in a different order on the top half of the screen compared to the bottom half and this causes the colors to be perceived differently
- * @description Each color is perceived in relation to other colors. The top
- * and bottom bars each contain the same component colors, but a different
- * display order causes individual colors to appear differently.
+ * @name 相対性
+ * @arialabel グレー、ブルー、グリーン、オレンジの4本の縞模様があります。
+画面の上半分と下半分では表示順が異なるため、色の見え方が異なっています。
+ * @description 各色は他の色との関係で知覚されます。
+ * 上部および下部のバーは
+ * それぞれ同じ色の種類で構成されていますが、
+ * 表示順序が異なることにより、それぞれの色が違って見えます。
  */
 let a, b, c, d, e;
 
@@ -15,7 +17,7 @@ function setup() {
   c = color(42, 106, 105);
   d = color(165, 89, 20);
   e = color(146, 150, 127);
-  noLoop(); // Draw only one time
+  noLoop(); // 描画は1回のみです。
 }
 
 function draw() {

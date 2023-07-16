@@ -1,8 +1,8 @@
 /*
- * @name Lerp Color
- * @arialabel Four piles of triangles in random sizes: red, maroon, purple, and blue. The triangles move around within their pile to form different designs
- * @description Loop random shapes,
- * lerp color from red to blue.
+ * @name 色の線形補完
+ * @arialabel 赤、マルーン、紫、青の4つの三角形の山がランダムな大きさで並んでいます。三角形はその山の中で動き回り、さまざまなデザインを形成しています。
+ * @description ランダムなシェイプを繰り返して表示します。
+ * 色は赤から青に補完されたものです。
  */
 function setup() {
   createCanvas(720, 400);
