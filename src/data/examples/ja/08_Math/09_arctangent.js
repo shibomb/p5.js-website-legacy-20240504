@@ -1,7 +1,7 @@
 /*
- * @name Arctangent
- * @arialabel Three white circles have smaller green circles within them resembling eyes where the pupil, represented by the green circle, looks in the direction of where the user’s mouse is
- * @description Move the mouse to change the direction of the eyes.<br>The atan2() function computes the angle from each eye to the cursor.
+ * @name アークタンジェント
+ * @arialabel 3つの、目と瞳孔に似ている白い円とその中の小さな緑の円があります。緑の円で表される瞳孔は、ユーザーのマウスがある方向を見ています。
+ * @description マウスを動かして目の方向を変えます。<br>atan2() 関数は各目からカーソルへの角度を計算します。
  */
 let e1, e2, e3;
 

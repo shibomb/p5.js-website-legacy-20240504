@@ -1,8 +1,8 @@
 /*
- * @name Distance 1D
- * @arialabel One thin grey bar and wider grey bar travel on the top half of the screen, and another set of these two bars travel on the bottom half. The bars change speed and direction as the user’s mouse moves across the screen
- * @description Move the mouse left and right to control
- * the speed and direction of the moving shapes.
+ * @name 距離 1D
+ * @arialabel 細いグレーのバーと太いグレーのバーが画面の上半分を移動し、この2本のバーが下半分を移動します。ユーザーのマウスが画面上を移動すると、バーの速度と方向が変化します。
+ * @description マウスを左右に移動して
+ * 動く図形の速度と方向を制御してください。
  */
 let xpos1;
 let xpos2;

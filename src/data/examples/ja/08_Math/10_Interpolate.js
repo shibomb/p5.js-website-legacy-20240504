@@ -1,12 +1,12 @@
 /*
- * @name Linear Interpolation
- * @arialabel White circle follows the user’s mouse around the screen
+ * @name 線形補間
+ * @arialabel 白い円がマウスを追ってスクリーンを移動します。
  * @frame 720, 400
- * @description Move the mouse across the screen and the symbol will follow.
- * Between drawing each frame of the animation, the ellipse moves part
- * of the distance (0.05) from its current position toward the cursor using
- * the lerp() function.
- * This is the same as the Easing under input only with lerp() instead..
+ * @description 画面上をマウスを移動させると、そのシンボルが追従します。
+ * アニメーションの各フレームを描画する度に、楕円は lerp() 関数を使用して
+ * カーソル方向に現在の位置から (0.05) の距離を移動します。
+ * これは入力の実例「イージング」と同様の動きですが、
+ * lerp() が使用されていることに違いがあります。
  */
 
 let x = 0;
@@ -20,12 +20,12 @@ function setup() {
 function draw() {
   background(51);
 
-  // lerp() calculates a number between two numbers at a specific increment.
-  // The amt parameter is the amount to interpolate between the two values
-  // where 0.0 equal to the first point, 0.1 is very near the first point, 0.5
-  // is half-way in between, etc.
+  // lerp()は、特定の増分で2つの数値の間の数値を計算します。
+  // amt パラメーターは、2つの値の間で補間する量です。
+  // ここで、0.0は最初のポイントと等しく、0.1は最初のポイントのすぐ近く、
+  // 0.5は間の半分の位置を表します。
 
-  // Here we are moving 5% of the way to the mouse location each frame
+  // ここでは、各フレームでマウスの位置まで5％移動しています。
   x = lerp(x, mouseX, 0.05);
   y = lerp(y, mouseY, 0.05);
 
