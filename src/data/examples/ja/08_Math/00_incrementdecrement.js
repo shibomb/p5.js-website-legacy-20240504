@@ -1,8 +1,8 @@
 /*
- * @name Increment Decrement
+ * @name インクリメント・デクリメント
  * @arialabel Two black gradient rectangles on the bottom right and top left of the screen travel horizontally to the other side and leave a gradient grey path behind 
- * @description Writing "a++" is equivalent to "a = a + 1".
- * Writing "a--" is equivalent to "a = a - 1".
+ * @description 「a++」と書くと、「a = a + 1」と同じ意味になります。
+ * 「a--」と書くと、「a = a - 1」と同じ意味になります。
  */
 let a;
 let b;
