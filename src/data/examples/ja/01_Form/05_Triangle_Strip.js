@@ -1,5 +1,5 @@
 /*
- * @name トライアングル・ストリップ
+ * @name 細切れの三角形
  * @arialabel 灰色の背景に白い三角形のリングが七角形を形作っています。ユーザーがマウスを左から右にドラッグすると、三角形の数が増え、より滑らかな円形のリングができます。
  * @description  Ira Greenberg が作成した実例です。
  * vertex() 関数と beginShape(TRIANGLE_STRIP) モードを使用して閉じた環を生成します。
