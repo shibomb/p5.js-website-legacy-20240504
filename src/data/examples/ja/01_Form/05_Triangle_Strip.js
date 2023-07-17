@@ -1,9 +1,9 @@
 /*
- * @name Triangle Strip
- * @arialabel A ring of white triangles form a heptagon on the grey background. When a user drags their mouse from left to right, the number of triangles increase and create a smoother, circular ring 
- * @description Example by Ira Greenberg. Generate a closed ring using the
- * vertex() function and beginShape(TRIANGLE_STRIP) mode. The outsideRadius
- * and insideRadius variables control ring's radii respectively.
+ * @name トライアングル・ストリップ
+ * @arialabel 灰色の背景に白い三角形のリングが七角形を形作っています。ユーザーがマウスを左から右にドラッグすると、三角形の数が増え、より滑らかな円形のリングができます。
+ * @description  Ira Greenberg が作成した実例です。
+ * vertex() 関数と beginShape(TRIANGLE_STRIP) モードを使用して閉じた環を生成します。
+ * outsideRadius および insideRadius 変数は、それぞれリングの半径を制御しています。
  */
 let x;
 let y;
