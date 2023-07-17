@@ -1,11 +1,11 @@
 /*
- * @name Map
- * @arialabel Red circle grows larger and turns more yellow as the user’s mouse moves right on the screen and does the opposite as the user’s mouse moves left
- * @description Use the map() function to take any number and scale it to a
- * new number that is more useful for the project that you are working on.
- * For example, use the numbers from the mouse position to control the size or color of a shape.
- * In this example, the mouse’s x-coordinate (numbers between 0 and 360) are scaled to new numbers
- * to define the color and size of a circle.
+ * @name マッピング
+ * @arialabel 赤い円は、マウスが画面上で右に動くと大きくなり、黄色に変わります。
+ * @description map() 関数を使用して、どのような数値でも新たな有効な数値にスケーリングし、
+ * プロジェクトに必要な数値に変換します。
+ * 例えば、マウスの位置からの数値を使用して形状のサイズや色を制御します。
+ * この例では、マウスの x 座標（0 から 360 までの数値）が新たな数値にスケールされ、
+ * 円の色やサイズを定義します。
  */
 function setup() {
   createCanvas(720, 400);
@@ -14,9 +14,9 @@ function setup() {
 
 function draw() {
   background(0);
-  // Scale the mouseX value from 0 to 720 to a range between 0 and 175
+  // mouseX の値である 0 から 720 の範囲を、 0 から 175 の範囲にスケールします。
   let c = map(mouseX, 0, width, 0, 175);
-  // Scale the mouseX value from 0 to 720 to a range between 40 and 300
+  // mouseX の値である 0 から 720 の範囲を、 40 から 300 の範囲にスケールします。
   let d = map(mouseX, 0, width, 40, 300);
   fill(255, c, 0);
   ellipse(width/2, height/2, d, d);

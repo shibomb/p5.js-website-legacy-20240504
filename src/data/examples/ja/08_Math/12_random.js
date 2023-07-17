@@ -1,8 +1,8 @@
 /*
- * @name Random
- * @arialabel Various shades of grey bars change patterns randomly every half a second 
- * @description Random numbers create the basis of this image.
- * Each time the program is loaded the result is different.
+ * @name ランダム
+ * @arialabel 濃淡のある灰色のバーが、0.5秒ごとにランダムに変化します。
+ * @description ランダムな数字がこの画像の基礎を作り出します。
+ * プログラムがロードされるたびに、結果は異なります。
  */
 function setup() {
   createCanvas(710, 400);
