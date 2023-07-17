@@ -147,10 +147,10 @@
     "color": {
       "description": [
         "<a href=\"#/p5/p5.Color\">p5.Color</a> オブジェクトを作成します。デフォルトでは、パラメータはRGB値として解釈されます。 <code>color(255, 204, 0)</code> を呼び出すと、明るい黄色の色が返されます。これらのパラメーターが解釈される方法は、<a href=\"#/p5/colorMode\">colorMode()</a> 関数で変更できます。",
-        "1つのパラメータを持つ<code>color()</code>のバージョンは、その値を2つの方法で解釈します。パラメータが数字の場合、グレースケールの値として解釈されます。パラメータが文字列の場合、CSS カラー文字列として解釈されます。",
-        "2つのパラメータを持つ<code>color()</code>のバージョンは、最初のものをグレースケールの値として解釈します。2つ目のパラメータは、アルファ（透明度）の値を設定します。",
-        "3つのパラメータを持つ<code>color()</code>のバージョンは、それらを RGB、HSB、HSL の色として解釈します。現在の<code>colorMode()</code>に依存します。",
-        "4つのパラメータを持つ<code>color()</code>のバージョンは、それらを RGBA、HSBA、HSLA の色として解釈します。現在の<code>colorMode()</code>に依存します。最後のパラメータは、アルファ（透明度）の値を設定します。"
+        "1つのパラメータをもつ<code>color()</code>のバージョンは、その値を2つの方法で解釈します。パラメータが数字の場合、グレースケールの値として解釈されます。パラメータが文字列の場合、CSS カラー文字列として解釈されます。",
+        "2つのパラメータをもつ<code>color()</code>のバージョンは、最初のものをグレースケールの値として解釈します。2つ目のパラメータは、アルファ（透明度）の値を設定します。",
+        "3つのパラメータをもつ<code>color()</code>のバージョンは、それらを RGB、HSB、HSL の色として解釈します。現在の<code>colorMode()</code>に依存します。",
+        "4つのパラメータをもつ<code>color()</code>のバージョンは、それらを RGBA、HSBA、HSLA の色として解釈します。現在の<code>colorMode()</code>に依存します。最後のパラメータは、アルファ（透明度）の値を設定します。"
       ],
       "returns": "p5.Color: 結果の色",
       "params": {
@@ -279,8 +279,8 @@
     "fill": {
       "description": [
         "図形の塗りつぶし色を設定します。<code>fill(255, 165, 0)</code>や<code>fill('orange')</code>を呼び出すと、fill コマンドの後に描かれるすべての形状は、オレンジ色で塗りつぶされます。",
-        "1つのパラメータを持つ<code>fill()</code>のバージョンは、値を3つの方法で解釈します。パラメータが数値の場合、その値はグレースケール値として解釈されます。もしパラメータが文字列なら、それは CSS カラー文字列として解釈されます。<a href=\"#/p5.Color\">p5.Color</a>オブジェクトも塗りつぶし色を設定するために提供できます。",
-        "3つのパラメータを持つ<code>fill()</code>のバージョンは、現在の<a href=\"#/p5/colorMode\">colorMode()</a>にもとづいて RGB、HSB、HSL の色としてそれらを解釈します。デフォルトのカラースペースは RGB で、各値の範囲は 0 から 255 までです。"
+        "1つのパラメータをもつ<code>fill()</code>のバージョンは、値を3つの方法で解釈します。パラメータが数値の場合、その値はグレースケール値として解釈されます。もしパラメータが文字列なら、それは CSS カラー文字列として解釈されます。<a href=\"#/p5.Color\">p5.Color</a>オブジェクトも塗りつぶし色を設定するために提供できます。",
+        "3つのパラメータをもつ<code>fill()</code>のバージョンは、現在の<a href=\"#/p5/colorMode\">colorMode()</a>にもとづいて RGB、HSB、HSL の色としてそれらを解釈します。デフォルトのカラースペースは RGB で、各値の範囲は 0 から 255 までです。"
       ],
       "params": {
         "v1": "Number: カラーモードが RGB の場合:赤の値、カラーモードが HSB の場合:色相の値",
@@ -381,8 +381,8 @@
     },
     "line": {
       "description": [
-        "二点間の直線、つまり一直線を描きます。デフォルトの幅は1ピクセルです。<code>line()</code>の四つのパラメータを持つバージョンは2Dで線を描きます。線に色をつけるには、<a href=\"#/p5/stroke\">stroke()</a>関数を使用します。その幅を変更するには、<a href=\"#/p5/strokeWeight\">strokeWeight()</a>関数を使用します。 線は塗りつぶすことができませんので、<a href=\"#/p5/fill\">fill()</a>関数は線の色に影響を与えません。",
-        "<code>line()</code>の6つのパラメータを持つバージョンは、線が3D空間に描かれることを可能にします。そのためには、<a href=\"#/p5/createCanvas\">createCanvas()</a>に<code>WEBGL</code>の引数を追加する必要があります。"  
+        "二点間の直線、つまり一直線を描きます。デフォルトの幅は1ピクセルです。<code>line()</code>の四つのパラメータをもつバージョンは2Dで線を描きます。線に色をつけるには、<a href=\"#/p5/stroke\">stroke()</a>関数を使用します。その幅を変更するには、<a href=\"#/p5/strokeWeight\">strokeWeight()</a>関数を使用します。 線は塗りつぶすことができませんので、<a href=\"#/p5/fill\">fill()</a>関数は線の色に影響を与えません。",
+        "<code>line()</code>の6つのパラメータをもつバージョンは、線が3D空間に描かれることを可能にします。そのためには、<a href=\"#/p5/createCanvas\">createCanvas()</a>に<code>WEBGL</code>の引数を追加する必要があります。"  
       ],
       "params": {
         "x1": "Number: 最初の点の x 座標",
@@ -396,8 +396,8 @@
     "point": {
       "description": [
         "点を描画します。これは空間内の単一の座標です。デフォルトのサイズは1ピクセルです。最初の2つのパラメータは、それぞれポイントのx座標とy座標です。ポイントに色を付けるには、<a href=\"#/p5/stroke\">stroke()</a>関数を使用します。そのサイズを変更するには、<a href=\"#/p5/strokeWeight\">strokeWeight()</a>関数を使用します。",
-        "3つのパラメータを持つ<code>point()</code>のバージョンでは、ポイントを3D空間に描画できます。これを行うには、<a href=\"#/p5/createCanvas\">createCanvas()</a>に<code>WEBGL</code>引数を追加する必要があります。",
-        "1つのパラメータを持つpoint()のバージョンでは、ポイントの位置を<a href=\"#/p5/p5.Vector\">p5.Vector</a>オブジェクトで設定できます。"
+        "3つのパラメータをもつ<code>point()</code>のバージョンでは、ポイントを3D空間に描画できます。これを行うには、<a href=\"#/p5/createCanvas\">createCanvas()</a>に<code>WEBGL</code>引数を追加する必要があります。",
+        "1つのパラメータをもつpoint()のバージョンでは、ポイントの位置を<a href=\"#/p5/p5.Vector\">p5.Vector</a>オブジェクトで設定できます。"
       ],
       "params": {
         "x": "Number: x 座標",
@@ -430,9 +430,9 @@
     },
     "rect": {
       "description": [
-        "キャンバスに長方形を描画します。長方形は、全ての角度が90度の四辺形です。デフォルトでは、最初の2つのパラメータは矩形の左上角の位置を設定します。3番目と4番目は形状の幅と高さをそれぞれ設定します。これらのパラメータの解釈方法は、<a href=\"#/p5/rectMode\">rectMode()</a>関数で変更可能です。",
-        "5つのパラメータを持つ<code>rect()</code>のバージョンは、角丸の矩形を作成します。5番目のパラメータは、すべての角の半径値として使用されます。",
-        "8つのパラメータを持つ<code>rect()</code>のバージョンも、角丸の矩形を作成します。8つのパラメータを使用する場合、後半4つは、それぞれの角での弧の半径を個別に設定します。半径は矩形の左上の角から始まり、時計回りに移動します。これらのパラメータが省略された場合、最後に指定した角の半径の値に設定されます。"
+        "キャンバスに長方形を描画します。長方形は、すべての角度が90度の四辺形です。デフォルトでは、最初の2つのパラメータは矩形の左上角の位置を設定します。3番目と4番目は形状の幅と高さをそれぞれ設定します。これらのパラメータの解釈方法は、<a href=\"#/p5/rectMode\">rectMode()</a>関数で変更可能です。",
+        "5つのパラメータをもつ<code>rect()</code>のバージョンは、角丸の矩形を作成します。5番目のパラメータは、すべての角の半径値として使用されます。",
+        "8つのパラメータをもつ<code>rect()</code>のバージョンも、角丸の矩形を作成します。8つのパラメータを使用する場合、後半4つは、それぞれの角での弧の半径を個別に設定します。半径は矩形の左上の角から始まり、時計回りに移動します。これらのパラメータが省略された場合、最後に指定した角の半径の値に設定されます。"
       ],
       "params": {
         "x": "Number: 長方形の x 座標",
@@ -450,8 +450,8 @@
     "square": {
       "description": [
         "キャンバスに四角形を描きます。四角形は、角度がすべて90度で、辺の長さが等しい四辺形です。デフォルトでは、最初の2つのパラメーターは四角形の左上の位置を設定します。3番目のパラメーターはその辺の大きさを設定します。これらのパラメータの解釈方法は、<a href=\"#/p5/rectMode\">rectMode()</a> 関数を使用して変更できます。",
-        "4つのパラメーターを持つ <code>square()</code> のバージョンでは、丸みを帯びた四角形が作成されます。4番目のパラメーターはすべての角の半径値として使用されます。",
-        "7つのパラメーターを持つ <code>square()</code> のバージョンでも、丸みを帯びた四角形が作成されます。7つのパラメーターを使うと、後ろの4つは各角の弧の半径を別々に設定します。半径は左上の角から始まり、四角形を時計回りに移動します。これらのパラメーターが省略された場合、最後に指定した角の半径の値に設定されます。"
+        "4つのパラメーターをもつ <code>square()</code> のバージョンでは、丸みを帯びた四角形が作成されます。4番目のパラメーターはすべての角の半径値として使用されます。",
+        "7つのパラメーターをもつ <code>square()</code> のバージョンでも、丸みを帯びた四角形が作成されます。7つのパラメーターを使うと、後ろの4つは各角の弧の半径を別々に設定します。半径は左上の角から始まり、四角形を時計回りに移動します。これらのパラメーターが省略された場合、最後に指定した角の半径の値に設定されます。"
       ],
       "params": {
         "x": "Number: 正方形の x 座標",
@@ -509,7 +509,7 @@
     },
     "smooth": {
       "description": [
-        "全てのジオメトリをスムーズ（アンチエイリアス）エッジで描画します。<a href=\"#/p5/smooth\">smooth()</a> は、サイズ変更された画像の画質も向上させます。",
+        "すべてのジオメトリをスムーズ（アンチエイリアス）エッジで描画します。<a href=\"#/p5/smooth\">smooth()</a> は、サイズ変更された画像の画質も向上させます。",
         "<a href=\"#/p5/smooth\">smooth()</a> は、2D モードではデフォルトで有効です。ジオメトリ、画像、およびフォントの平滑化を無効にするには、<a href=\"#/p5/noSmooth\">noSmooth()</a> を呼び出す必要があります。",
         "WebGL モードでは、<a href=\"#/p5/noSmooth\">noSmooth()</a> がデフォルトで有効です。滑らか（アンチエイリアス）エッジを描画するには、<a href=\"#/p5/smooth\">smooth()</a> を呼び出す必要があります。"
       ]
@@ -771,7 +771,7 @@
     "WEBGL": {
       "description": [
         "p5.jsの2つのレンダーモードの1つで、3Dレンダリングやシェーダーなどの計算処理が重い作業に使われます。",
-        "<code>WEBGL</code> は、デフォルトの <a href=\"/#/p5/P2D\"><code>P2D</code></a> レンダラと以下のように異なります: <ul> <li><strong>座標系</strong> - <code>WEBGL</code> モードで描画する場合、原点（0,0,0）は画面の左上ではなく、中央に位置します。<a href=\"https://p5js.org/learn/getting-started-in-webgl-coords-and-transform.html\">座標と変換についての学習ページ</a>をご覧ください。</li> <li><strong>3D形状</strong> - <code>WEBGL</code> モードは、<a href=\"/#/p5/box\">box()</a>, <a href=\"/#/p5/sphere\">sphere()</a>, <a href=\"/#/p5/cone\">cone()</a>, および<a href=\"/#Shape3D%20Primitives\">その他</a>など、3次元の形状の描画に利用できます。より複雑なオブジェクトを作成するためには、<a href=\"https://p5js.org/learn/getting-started-in-webgl-custom-geometry.html\">カスタムジオメトリについての学習ページ</a>をご覧ください。</li> <li><strong>形状の詳細</strong> - <code>WEBGL</code> モードで描画する際、<code>detail</code> パラメータを使用して曲線がどの程度滑らかに描かれるかを指定できます。<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#3d-primitives-shapes\">形状に関するwikiセクション</a>をご覧いただければ、より多くの情報と例を見つけられます。</li> <li><strong>テクスチャ</strong> - テクスチャは、形状に被せるスキンのようなものです。<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#textures\">テクスチャに関するwikiセクション</a>を参照して、テクスチャを使って面に画像をマッピングする例をご覧ください。</li> <li><strong>素材と照明</strong> - <code>WEBGL</code> は、シーンを配置するための、<a href=\"/#/p5/ambientLight\">ambientLight()</a>などの様々なタイプのライトを提供します。照明を反射し形状と深度を伝える素材として<a href=\"/#/p5/specularMaterial\">specularMaterial()</a>などがあります。異なる組み合わせで実験をするためには、<a href=\"https://p5js.org/learn/getting-started-in-webgl-appearance.html\">スタイリングと外観についての学習ページ</a>をご覧ください。</li> <li><strong>カメラ</strong> - <code>WEBGL</code>スケッチのビューポートは、カメラの属性を変更することで調整できます。<a href=\"https://p5js.org/learn/getting-started-in-webgl-appearance.html#camera\">カメラについての学習ページセクション</a>をご覧いただくと、カメラコントロールの説明があります。</li> <li><strong>テキスト</strong> - <code>WEBGL</code>では、opentype/truetypeフォントファイルを<a href=\"/#/p5/loadFont\">loadFont()</a>を使用して事前に読み込む必要があります。<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#text\">テキストについてのwikiセクション</a>をご覧いただくと、詳細と回避策があります。</li> <li><strong>シェーダー</strong> - シェーダーは、さまざまなエフェクトやグラフィックスに使用できるハードウェアアクセラレートプログラムです。p5.jsでシェーダーの使い方を始めるには、<a href=\"https://p5js.org/learn/getting-started-in-webgl-shaders.html\">シェーダーの導入</a>をご覧ください。</li> <li><strong>グラフィックスアクセラレーション</strong> - <code>WEBGL</code> モードでは、CPUではなくグラフィックカードを利用するため、スケッチのパフォーマンスを向上させる可能性があります（例：一度に画面上により多くの形状を描画する）。</li> </ul>",
+        "<code>WEBGL</code> は、デフォルトの <a href=\"/#/p5/P2D\"><code>P2D</code></a> レンダラと以下のように異なります: <ul> <li><strong>座標系</strong> - <code>WEBGL</code> モードで描画する場合、原点（0,0,0）は画面の左上ではなく、中央に位置します。<a href=\"https://p5js.org/learn/getting-started-in-webgl-coords-and-transform.html\">座標と変換についての学習ページ</a>をご覧ください。</li> <li><strong>3D形状</strong> - <code>WEBGL</code> モードは、<a href=\"/#/p5/box\">box()</a>, <a href=\"/#/p5/sphere\">sphere()</a>, <a href=\"/#/p5/cone\">cone()</a>, および<a href=\"/#Shape3D%20Primitives\">その他</a>など、3次元の形状の描画に利用できます。より複雑なオブジェクトを作成するためには、<a href=\"https://p5js.org/learn/getting-started-in-webgl-custom-geometry.html\">カスタムジオメトリについての学習ページ</a>をご覧ください。</li> <li><strong>形状の詳細</strong> - <code>WEBGL</code> モードで描画する際、<code>detail</code> パラメータを使用して曲線がどの程度滑らかに描かれるかを指定できます。<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#3d-primitives-shapes\">形状に関するwikiセクション</a>をご覧いただければ、より多くの情報と例を見つけられます。</li> <li><strong>テクスチャ</strong> - テクスチャは、形状に被せるスキンのようなものです。<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#textures\">テクスチャに関するwikiセクション</a>を参照して、テクスチャを使って面に画像をマッピングする例をご覧ください。</li> <li><strong>素材と照明</strong> - <code>WEBGL</code> は、シーンを配置するための、<a href=\"/#/p5/ambientLight\">ambientLight()</a>などのさまざまなタイプのライトを提供します。照明を反射し形状と深度を伝える素材として<a href=\"/#/p5/specularMaterial\">specularMaterial()</a>などがあります。異なる組み合わせで実験をするためには、<a href=\"https://p5js.org/learn/getting-started-in-webgl-appearance.html\">スタイリングと外観についての学習ページ</a>をご覧ください。</li> <li><strong>カメラ</strong> - <code>WEBGL</code>スケッチのビューポートは、カメラの属性を変更することで調整できます。<a href=\"https://p5js.org/learn/getting-started-in-webgl-appearance.html#camera\">カメラについての学習ページセクション</a>をご覧いただくと、カメラコントロールの説明があります。</li> <li><strong>テキスト</strong> - <code>WEBGL</code>では、opentype/truetypeフォントファイルを<a href=\"/#/p5/loadFont\">loadFont()</a>を使用して事前に読み込む必要があります。<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#text\">テキストについてのwikiセクション</a>をご覧いただくと、詳細と回避策があります。</li> <li><strong>シェーダー</strong> - シェーダーは、さまざまなエフェクトやグラフィックスに使用できるハードウェアアクセラレートプログラムです。p5.jsでシェーダーの使い方を始めるには、<a href=\"https://p5js.org/learn/getting-started-in-webgl-shaders.html\">シェーダーの導入</a>をご覧ください。</li> <li><strong>グラフィックスアクセラレーション</strong> - <code>WEBGL</code> モードでは、CPUではなくグラフィックカードを利用するため、スケッチのパフォーマンスを向上させる可能性があります（例：一度に画面上により多くの形状を描画する）。</li> </ul>",
         "WEBGL モードについて詳しく知りたい場合は、このウェブサイトの「学ぶ」セクションの<a href=\"https://p5js.org/learn/#:~:text=Getting%20Started%20in%20WebGL\">さまざまなインタラクティブなWEBGLチュートリアル</a>をチェックするか、wiki記事 <a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5\">「p5でWebGLを始める」</a>を読んでください。"
       ]
     },
@@ -1268,7 +1268,7 @@
     "createFramebuffer": {
       "description": [
         "新しい <a href=\"#/p5.Framebuffer\">p5.Framebuffer</a> を作成し返します。これは高性能な WebGL オブジェクトで、これに描画したり、テクスチャとして使用することができます。",
-        "オプションには以下のものがあります: <ul> <li><code>format</code>: テクスチャのデータフォーマット。 <code>UNSIGNED_BYTE</code>、<code>FLOAT</code>、<code>HALF_FLOAT</code> のいずれか。デフォルトは <code>UNSIGNED_BYTE</code> です。</li> <li><code>channels</code>: 保存する色チャンネル。 <code>RGB</code> または <code>RGBA</code>。デフォルトでは、メインキャンバスのチャンネルを一致させます（<code>setAttributes</code> で無効化しない限り、アルファが含まれます）。</li> <li><code>depth</code>: デプスバッファを含めるかどうかのブール値。デフォルトは true です。</li> <li><code>depthFormat</code>: デプス情報のデータフォーマット。<code>UNSIGNED_INT</code> または <code>FLOAT</code>。デフォルトは <code>FLOAT</code> が利用可能な場合、それ以外の場合は <code>UNSIGNED_INT</code> です。</li> <li><code>antialias</code>: ブール値または数値で、エッジが滑らかになるようにレンダリングするかどうか、またはその場合、使用するサンプルの数。メインキャンバスが滑らかに描画されるかどうかに基づきますが、デフォルトでは2つのサンプルを使用します。アンチエイリアシングは WebGL 2 が利用可能な場合のみサポートされます。</li> <li><code>width</code>: テクスチャの幅。デフォルトはメインキャンバスと一致します。</li> <li><code>height</code>: テクスチャの高さ。デフォルトはメインキャンバスと一致します。</li> <li><code>density</code>: テクスチャのピクセル密度。デフォルトはメインキャンバスのピクセル密度と一致します。</li> <li><code>textureFiltering</code>: <code>LINEAR</code>（色テクスチャから値を読み取る際に近くのピクセルが補間されます）か <code>NEAREST</code>（補間なし）。通常、テクスチャを画像として使用する場合は <code>LINEAR</code> を、テクスチャをデータとして読み取る場合は <code>NEAREST</code> を使用します。デフォルトは <code>LINEAR</code> です。</li> </ul>",
+        "オプションには以下のものがあります: <ul> <li><code>format</code>: テクスチャのデータフォーマット。 <code>UNSIGNED_BYTE</code>、<code>FLOAT</code>、<code>HALF_FLOAT</code> のいずれか。デフォルトは <code>UNSIGNED_BYTE</code> です。</li> <li><code>channels</code>: 保存する色チャンネル。 <code>RGB</code> または <code>RGBA</code>。デフォルトでは、メインキャンバスのチャンネルを一致させます（<code>setAttributes</code> で無効化しない限り、アルファが含まれます）。</li> <li><code>depth</code>: デプスバッファを含めるかどうかのブール値。デフォルトは true です。</li> <li><code>depthFormat</code>: デプス情報のデータフォーマット。<code>UNSIGNED_INT</code> または <code>FLOAT</code>。デフォルトは <code>FLOAT</code> が利用可能な場合、それ以外の場合は <code>UNSIGNED_INT</code> です。</li> <li><code>antialias</code>: ブール値または数値で、エッジが滑らかになるようにレンダリングするかどうか、またはその場合、使用するサンプルの数。メインキャンバスが滑らかに描画されるかどうかにもとづきますが、デフォルトでは2つのサンプルを使用します。アンチエイリアシングは WebGL 2 が利用可能な場合のみサポートされます。</li> <li><code>width</code>: テクスチャの幅。デフォルトはメインキャンバスと一致します。</li> <li><code>height</code>: テクスチャの高さ。デフォルトはメインキャンバスと一致します。</li> <li><code>density</code>: テクスチャのピクセル密度。デフォルトはメインキャンバスのピクセル密度と一致します。</li> <li><code>textureFiltering</code>: <code>LINEAR</code>（色テクスチャから値を読み取る際に近くのピクセルが補間されます）か <code>NEAREST</code>（補間なし）。通常、テクスチャを画像として使用する場合は <code>LINEAR</code> を、テクスチャをデータとして読み取る場合は <code>NEAREST</code> を使用します。デフォルトは <code>LINEAR</code> です。</li> </ul>",
         "<code>width</code>、<code>height</code>、<code>density</code>が指定されている場合、フレームバッファはそのサイズを手動で変更されるまで保持します。それ以外の場合は、自動サイズが設定され、メインキャンバスのサイズや密度が変更されたときにそれに合わせて更新されます。"
       ],
       "params": {
@@ -5624,7 +5624,7 @@
     },
     "slerp": {
       "description": [
-        "パラメータで指定されたカメラ cam0 と cam1 のビューが、パラメータ amt で指定した量で組み合わされ、得られたビューがこのカメラオブジェクトに適用されます。たとえば、cam0 がまっすぐ前を見ていて、cam1 がまっすぐ右を見ていて、amt が 0.5 の場合、適用されるカメラは前と右の中間を見ます。適用されるカメラがアクティブであれば、適用結果が画面に反映されます。この関数を適用するとき、関与するすべてのカメラは、まったく同じプロジェクション設定を持つ必要があります。たとえば、一方が perspective, ortho, frustum の場合、残りの2つも同じく perspective, ortho, frustum でなければなりません。ただし、すべてのカメラが ortho 設定を持っていれば、左、右、上、下の比率が互いに等しい場合には補間が可能です。たとえば、 orbitControl() で変更したときなどです。"
+        "パラメータで指定されたカメラ cam0 と cam1 のビューが、パラメータ amt で指定した量で組み合わされ、得られたビューがこのカメラオブジェクトに適用されます。たとえば、cam0 がまっすぐ前を見ていて、cam1 がまっすぐ右を見ていて、amt が 0.5 の場合、適用されるカメラは前と右の中間を見ます。適用されるカメラがアクティブであれば、適用結果が画面に反映されます。この関数を適用するとき、関与するすべてのカメラは、まったく同じプロジェクション設定をもつ必要があります。たとえば、一方が perspective, ortho, frustum の場合、残りの2つも同じく perspective, ortho, frustum でなければなりません。ただし、すべてのカメラが ortho 設定を持っていれば、左、右、上、下の比率が互いに等しい場合には補間が可能です。たとえば、 orbitControl() で変更したときなどです。"
       ],
       "params": {
         "cam0": "p5.Camera: 最初の p5.Camera",
@@ -5707,7 +5707,7 @@
     "get": {
       "description": [
         "<a href=\"#/p5.Image\">p5.Image</a> の形でキャンバスからピクセルの領域を取得するか、あるいは数値の配列として単一のピクセルを取得します。",
-        "任意のピクセルの [R,G,B,A] の値の配列を返すか、画像のセクションを返します。フレームバッファがアルファ値を保存しないように設定されている場合は、 [R,G,B] のみが返されます。パラメータが指定されていない場合、全ての画像が返されます。ピクセルの値を1つ取得するには、 x と y パラメータを使用します。追加の w と h パラメータを指定してディスプレイウィンドウのセクションを取得します。画像を取得する際、 x と y パラメータは、現在の<a href=\"#/p5/imageMode\">imageMode()</a>に関係なく、画像の左上角の座標を指定します。"
+        "任意のピクセルの [R,G,B,A] の値の配列を返すか、画像のセクションを返します。フレームバッファがアルファ値を保存しないように設定されている場合は、 [R,G,B] のみが返されます。パラメータが指定されていない場合、すべての画像が返されます。ピクセルの値を1つ取得するには、 x と y パラメータを使用します。追加の w と h パラメータを指定してディスプレイウィンドウのセクションを取得します。画像を取得する際、 x と y パラメータは、現在の<a href=\"#/p5/imageMode\">imageMode()</a>に関係なく、画像の左上角の座標を指定します。"
       ],
       "returns": "p5.Image: 矩形の <a href=\"#/p5.Image\">p5.Image</a>",
       "params": {
