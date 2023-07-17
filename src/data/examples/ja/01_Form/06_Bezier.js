@@ -1,10 +1,10 @@
 /*
- * @name Bezier
- * @arialabel 10 lines in a bezier curve formation. The bottom of the curve does not move but as the user’s mouse moves, the top of the curve follows the left and right movement 
- * @description The first two parameters for the bezier() function specify the
- * first point in the curve and the last two parameters specify the last point.
- * The middle parameters set the control points that define the shape of the
- * curve.
+ * @name ベジェ
+ * @arialabel 10本の線がベジェ曲線で形成されています。曲線の下部は動かないですが、ユーザーのマウスが動くと、曲線の上部は左右の動きに追従します。
+ * @description 最初の2つのパラメータは bezier() 関数に対して曲線の
+ * 最初の点を指定し、最後の2つのパラメータは最後の点を指定します。
+ * 中間のパラメータは、
+ * 曲線の形状を定義する制御点を設定します。
  */
 function setup() {
   createCanvas(720, 400);

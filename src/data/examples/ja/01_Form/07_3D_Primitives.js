@@ -1,10 +1,10 @@
 /*
- * @name 3D Primitives
- * @arialabel Grey background with a dark grey cube in the bottom left corner and a white outlined sphere in the bottom right corner
+ * @name 3D プリミティブ
+ * @arialabel 灰色の背景に、左下に濃い灰色の立方体、右下に白い輪郭の球体があります。
  * @frame 720,400 (optional)
- * @description Placing mathematically 3D objects in synthetic space.
- * The box() and sphere() functions take at least one parameter to specify their
- * size. These shapes are positioned using the translate() function.
+ * @description 人工的な空間に数学的 3D オブジェクトを配置します。
+ * box() および sphere() 関数は、それらのサイズを指定するために少なくとも1つのパラメーターを指定します。
+ * これらの形状は translate() 関数を使用して位置が指定されます。
  */
 function setup() {
   createCanvas(710, 400, WEBGL);
