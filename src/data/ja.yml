@@ -283,7 +283,9 @@ download:
 learn:
   learn-title: 学ぶ
   teach-title2: 教える
-  learn1: ここに掲載しているチュートリアルは特定のトピックについて、より詳細な説明やステップバイステップの概要を提供しています。他のさまざまな p5.js トピックについては 
+  learn1: >-
+    ここに掲載しているチュートリアルは特定のトピックについて、より詳細な説明やステップバイステップの概要を提供しています。他のさまざまな p5.js
+    トピックについては
   learn2: 実例ページ
   learn3: をチェックして、デモを探してみてください。
   introduction-to-p5js-title: p5.js の紹介
@@ -722,8 +724,7 @@ learn:
   getting-started-in-webgl-shaders-glossary-term12-title: フラグメントシェーダー
   getting-started-in-webgl-shaders-glossary-term12-definition: シェーダープログラムの一部で、シェーダーが出力する各ピクセルの色と外観を決定する役割を担っています。
   getting-started-in-webgl-framebuffers-title: フレームバッファによる階層レンダリング
-  getting-started-in-webgl-framebuffers: >-
-    複数の段階の描画や、3D深度情報にアクセスするスケッチをセットアップします。
+  getting-started-in-webgl-framebuffers: 複数の段階の描画や、3D深度情報にアクセスするスケッチをセットアップします。
   color-title: 色
   color: デジタルカラーの紹介。
   coordinate-system-and-shapes-title: 座標系と形状
