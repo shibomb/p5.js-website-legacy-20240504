@@ -18,18 +18,18 @@ function draw(){
   translate(width/2,height/2);
   stroke('#0f0f0f');
   strokeWeight(1.5);
-  // 100行を追加するためのループ
+  // 100個の線を追加するためのループ
   for(let i = 0;i<100;i++){
     line(x1(t+i),y1(t+i),x2(t+i)+20,y2(t+i)+20);
   }
   t+=0.15;
 }
-// 線の初期x座標を変更する関数
+// 線の初期のx座標を変更する関数
 function x1(t){
   return sin(t/10)*125+sin(t/20)*125+sin(t/30)*125;
 }
 
-// 線の初期y座標を変更する関数
+// 線の初期のy座標を変更する関数
 function y1(t){
   return cos(t/10)*125+cos(t/20)*125+cos(t/30)*125;
 }
