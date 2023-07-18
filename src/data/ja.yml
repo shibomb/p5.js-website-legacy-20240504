@@ -14,7 +14,7 @@ Examples: 実例
 Books: 書籍
 Community: コミュニティ
 Contribute: 貢献する
-Forum: フォーラム
+Forum: Forum
 Showcase: ショーケース
 footerxh1: クレジット
 footer1: 'p5.js is currently led by '
@@ -283,9 +283,9 @@ download:
 learn:
   learn-title: 学ぶ
   teach-title2: 教える
-  learn1: これらのチュートリアルは、特定のトピックのより詳細な説明やステップバイステップの概要を提供します。以下の
+  learn1: ここに掲載しているチュートリアルは特定のトピックについて、より詳細な説明やステップバイステップの概要を提供しています。他のさまざまな p5.js トピックについては 
   learn2: 実例ページ
-  learn3: をチェックして、さまざまな p5.js トピックの短いデモを探索してください。
+  learn3: をチェックして、デモを探してみてください。
   introduction-to-p5js-title: p5.js の紹介
   hello-p5js-title: Hello p5.js
   hello-p5js: この短いビデオでは、p5.js ライブラリとそれができることを紹介します。
@@ -294,7 +294,7 @@ learn:
   p5js-overview-title: p5.js 概要
   p5js-overview: p5.js の主要な機能の概要です。
   p5js-processing-title: p5.js と Processing
-  p5js-processing: 両者の主な違い、およびどのように変換するかについて説明します。
+  p5js-processing: 両者の主な違い、および、どのように変換するかについて説明します。
   p5-screen-reader-title: スクリーンリーダーと p5
   p5-screen-reader: スクリーンリーダーで簡単に使用できるように p5を設定する方法です。
   using-local-server-title: ローカルサーバーの使用
@@ -437,8 +437,8 @@ learn:
   getting-started-in-webgl-coords-and-transform-glossary-term6-definition: 3D 空間の位置 x、y、z を持つ点。
   getting-started-in-webgl-coords-and-transform-glossary-term7-title: 面
   getting-started-in-webgl-coords-and-transform-glossary-term7-definition: 3つの点からなる集合体で、固体の表面を作り出します。
-  getting-started-in-webgl-custom-geometry-title: WebGL でカスタムジオメトリを作成する
-  getting-started-in-webgl-custom-geometry: WebGL でカスタムジオメトリを作成する
+  getting-started-in-webgl-custom-geometry-title: WebGL でカスタムジオメトリを作成します。
+  getting-started-in-webgl-custom-geometry: WebGL でカスタムジオメトリを作成します。
   getting-started-in-webgl-custom-geometry-p1x1: >-
     p5.js には <a class="code">box()</a> や <a class="code">sphere()</a>
     などの基本的な形状がいくつかありますが、p5.js は3D モデルファイルやコードから複雑なカスタムジオメトリをレンダリングすることもできます。
@@ -721,10 +721,9 @@ learn:
   getting-started-in-webgl-shaders-glossary-term11-definition: シェーダープログラムの一部で、3D 空間でのジオメトリの位置を決定する役割を担っています。
   getting-started-in-webgl-shaders-glossary-term12-title: フラグメントシェーダー
   getting-started-in-webgl-shaders-glossary-term12-definition: シェーダープログラムの一部で、シェーダーが出力する各ピクセルの色と外観を決定する役割を担っています。
-  getting-started-in-webgl-framebuffers-title: Layered Rendering with Framebuffers
+  getting-started-in-webgl-framebuffers-title: フレームバッファによる階層レンダリング
   getting-started-in-webgl-framebuffers: >-
-    Setting up sketches that draw in multiple stages or access 3D depth
-    information.
+    複数の段階の描画や、3D深度情報にアクセスするスケッチをセットアップします。
   color-title: 色
   color: デジタルカラーの紹介。
   coordinate-system-and-shapes-title: 座標系と形状
