@@ -336,7 +336,7 @@ learn:
     特にピクセルや多くの空間内の多数の形状を扱う場合に重要なことが多数処理できる
     特別なハードウェア、グラフィックスプロセッシングユニット（GPU）があります。
   getting-started-in-webgl-coords-and-transform-p4x1: >-
-    まず、<a class="code">createCanvas()</a> に3番目のパラメータとして WEBGL を渡すことで、p5.js を
+    まず、<a class="code">createCanvas()</a> に3番目のパラメーターとして WEBGL を渡すことで、p5.js を
     WebGL を使用するように設定します。
   getting-started-in-webgl-coords-and-transform-heading2: '3D 座標空間: 3D での位置決め'
   getting-started-in-webgl-coords-and-transform-info1x1: 座標系が理解できない場合は、以下のチュートリアルを再度確認することをお勧めします。
@@ -458,7 +458,7 @@ learn:
   getting-started-in-webgl-custom-geometry-p3x1: >-
     カスタムモデルで発生することがよくある問題は、スケーリングです。モデルがどのように構築されているかに応じて、p5.js
     で描画するとはるかに異なるサイズになる場合があり、描画できない場合もあります。<a class="code">loadModel()</a>
-    メソッドには、p5.js でうまく機能するサイズにモデルをリサイズする normalize パラメータが含まれています。
+    メソッドには、p5.js でうまく機能するサイズにモデルをリサイズする normalize パラメーターが含まれています。
   getting-started-in-webgl-custom-geometry-info2x1: 'Note: 現時点では、カラーがついた STL ファイルはサポートされていませんが、'
   getting-started-in-webgl-custom-geometry-info2x2: スタイリングと外観
   getting-started-in-webgl-custom-geometry-info2x3: チュートリアルでマテリアルやテクスチャを使って色を付ける方法について学べます。
@@ -467,7 +467,7 @@ learn:
     コードを使って、プロシージャルにジオメトリを定義することもできます。自分自身のルールに従ってジオメトリを作成する方法です。<a
     class="code">quad()</a>、<a class="code">triangle()</a>、<a
     class="code">rect()</a>、<a class="code">circle()</a> など、各メソッドには 3D
-    で使用できるようにするための追加パラメータがあります。
+    で使用できるようにするための追加パラメーターがあります。
   getting-started-in-webgl-custom-geometry-p5x1: ジオメトリを制御するための別の方法があります。
   getting-started-in-webgl-custom-geometry-p5x2: と
   getting-started-in-webgl-custom-geometry-p5x3: というメソッドを使って、点ごとに形状を定義することができます。次の例では、これらのメソッドを使用して、数学的に 3D シェイプを構築する方法を示します。
@@ -947,17 +947,17 @@ learn:
   curves-description4: ' クリエイティブ コモンズ 表示 - 非営利 - 継承 4.0 国際 ライセンスでライセンスされています。'
   curves-p1x1: 'この短いチュートリアルでは、p5.js の3つのカーブタイプを紹介します: 円弧、スプライン曲線、およびベジェ曲線。'
   curves-arcs-title: ' 円弧 '
-  curves-arcs-p1x1: '円弧は描画するのに最も簡単なカーブであり、楕円の一部として定義されています。次のパラメータで関数を呼び出します:'
+  curves-arcs-p1x1: '円弧は描画するのに最も簡単なカーブであり、楕円の一部として定義されています。次のパラメーターで関数を呼び出します:'
   curves-arcs-p2x1: 'arc (x, y, w, h, start, stop, [mode])'
   curves-arcs-p3x1: >-
-    最初の4つのパラメータ（x,y,w,h）は、円弧の境界ボックスを定義し、次の2つ（start, stop）は、円弧の開始角度と終了角度です。
+    最初の4つのパラメーター（x,y,w,h）は、円弧の境界ボックスを定義し、次の2つ（start, stop）は、円弧の開始角度と終了角度です。
     これらの角度はラジアンで与えられ、0度が東を指し、PI ラジアンが180°に相当します。
   curves-spline-curves-title: スプライン曲線
   curves-spline-curves-p1x1: >-
     円弧は良いですが、単純です。次の関数 curve() では、必ずしも円弧の一部であるとは限らない曲線を描画できます。
     この関数は、技術的にはロム-カトマルスプラインと呼ばれるものを描画します。曲線を描画するには、曲線が始まる点と終わる点の (x, y)
     座標を指定する必要があります。また、曲線の方向と湾曲量を決定する2つの制御点も指定する必要があります。
-    最初の2つと最後の2つのパラメータが曲線の制御点です。curve() への呼び出しでは、これらのパラメータが使われます:
+    最初の2つと最後の2つのパラメーターが曲線の制御点です。curve() への呼び出しでは、これらのパラメーターが使われます:
   curves-spline-curves-p2x1: 'curve (cpx1, cpy1, x1, y1, x2, y2, cpx2, cpy2);'
   curves-spline-curves-p3x1: 制御点は曲線の見た目にどのように影響しますか？
   curves-spline-curves-p4x1: 曲線の始点における接線は、制御点1と曲線の終点との間の直線に平行です。曲線の終点における接線は、始点と制御点2との間の直線に平行です。
@@ -970,8 +970,8 @@ learn:
   curves-bezier-curves-title: ベジェ曲線
   curves-bezier-curves-p1x1: >-
     スプライン曲線は円弧よりも優れていますが、芸術的な印象を与える流麗で滑らかな曲線はありません。そういった曲線を描画するには、bezier()
-    関数を使ってベジェ曲線を描画する必要があります。スプライン曲線と同様に、bezier() 関数には8つのパラメータがありますが、順序が異なります。
-    最初の2つと最後の2つのパラメータは開始点と終了点であり、中間の4つの点が制御点です。
+    関数を使ってベジェ曲線を描画する必要があります。スプライン曲線と同様に、bezier() 関数には8つのパラメーターがありますが、順序が異なります。
+    最初の2つと最後の2つのパラメーターは開始点と終了点であり、中間の4つの点が制御点です。
   curves-bezier-curves-p2x1: ' bezier(x1, y1, cpx1, cpy1, cpx2, cpy2, x2, y2); '
   curves-bezier-curves-p3x1: >-
     制御点が curve() にどのように影響するかを視覚化することは難しいですが、制御点がベジェ曲線にどのように影響するかを見るのは少し容易です。

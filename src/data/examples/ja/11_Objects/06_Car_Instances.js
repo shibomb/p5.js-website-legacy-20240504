@@ -14,7 +14,7 @@
 class Car {
   /* コンストラクタは、
   クラスのプロパティを初期化に使用する
-  塗りつぶしの色、x および y 座標のパラメータを期待します。
+  塗りつぶしの色、x および y 座標のパラメーターを期待します。
   */
   constructor(cColor, x, y) {
     this.color = cColor;
@@ -25,7 +25,7 @@ class Car {
     this.speed = 0;
   }
 
-  start(speed) { // メソッドはパラメータを期待します！
+  start(speed) { // メソッドはパラメーターを期待します！
     this.speed = speed;
   }
 
