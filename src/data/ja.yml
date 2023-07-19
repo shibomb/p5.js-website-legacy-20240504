@@ -104,7 +104,7 @@ get started:
     代わりに、オンラインでホストされている p5.js ファイルにリンクすることもできます。p5.js のすべてのバージョンは
     CDN（コンテンツ配信ネットワーク）に保存されています。これらのバージョンの履歴は
   download6: で確認できます。この場合、リンクを以下のように変更できます。
-  download7: HTML ページは例としては以下のようになります。
+  download7: HTML ページの例としては以下のようになります。
   environment-title: 環境
   environment1: コンピュータで p5.js を実行するには、テキストエディタが必要です。あなたのお好みの
   environmentlink: 'http://en.wikipedia.org/wiki/Source_code_editor'
@@ -172,8 +172,8 @@ get started:
   reference3: を表示して、完全なドキュメントを確認してください。
   learn11: スクリーンリーダーで p5を使用したい場合は、
   learn12: p5 with a screenreader tutorial
-  processing-transition1: Processing を過去に使用したことがある場合は、
-  processing-transition2: Processing から p5.js に変換する方法と、それらの間の主な違いを学ぶために、
+  processing-transition1: Processing を過去に使用したことがある場合は、Processing から p5.js に変換する方法と、それらの間の主な違いを学ぶために、
+  processing-transition2: 'https://github.com/processing/p5.js/wiki/Processing-transition'
   processing-transition3: Processing transition tutorial
   processing-transition4: を読んでください。
   book1: >-
