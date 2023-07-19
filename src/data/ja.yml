@@ -5,7 +5,7 @@ Home: ホーム
 Editor: エディター
 Download: ダウンロード
 Donate: 寄付する
-Start: はじめに
+Start: スタート
 Reference: リファレンス
 Libraries: ライブラリ
 Learn: 学ぶ
@@ -194,7 +194,7 @@ download:
   complete-library-intro1: >-
     p5.js ライブラリファイル、p5.sound アドオン、プロジェクト例を含むダウンロードです。エディタは含まれていません。p5.js
     プロジェクトの設定方法については、
-  complete-library-intro2: はじめに
+  complete-library-intro2: スタート
   complete-library-intro3: をご覧ください。
   p5.js-complete: p5.js 一式
   includes-1: '以下を含みます:'
@@ -292,7 +292,7 @@ learn:
   hello-p5js-title: Hello p5.js
   hello-p5js: この短いビデオでは、p5.js ライブラリとそれができることを紹介します。
   getting-started-title: 初めに
-  getting-started: p5.js へようこそ！<br> このイントロダクションでは、p5.js プロジェクトの基本的な設定について説明します。
+  getting-started: p5.js へようこそ！<br> このイントロダクションでは、p5.js プロジェクトの基本的な設定について説明します。 (日本語ページ)
   p5js-overview-title: p5.js 概要
   p5js-overview: p5.js の主要な機能の概要です。
   p5js-processing-title: p5.js と Processing
@@ -321,7 +321,7 @@ learn:
   getting-started-in-webgl-title: WebGL 入門
   getting-started-in-webgl-glossary-title: 用語集
   getting-started-in-webgl-coords-and-transform-title: 座標と変換
-  getting-started-in-webgl-coords-and-transform: 3D セットアップ、座標、変換の基礎
+  getting-started-in-webgl-coords-and-transform: 3D セットアップ、座標、変換の基礎 (日本語ページ)
   getting-started-in-webgl-coords-and-transform-p1x1: >-
     p5.js は 2D グラフィックを作成する強力なツールですが、3D グラフィックも作成できます。このチュートリアルでは、p5.js を使用して 3D
     スケッチを作成するための新しいコンセプトを紹介します。
@@ -336,7 +336,7 @@ learn:
     特にピクセルや多くの空間内の多数の形状を扱う場合に重要なことが多数処理できる
     特別なハードウェア、グラフィックスプロセッシングユニット（GPU）があります。
   getting-started-in-webgl-coords-and-transform-p4x1: >-
-    まず、<a class="code">createCanvas()</a> に3番目のパラメータとして WEBGL を渡すことで、p5.js を
+    まず、<a class="code">createCanvas()</a> に3番目のパラメーターとして WEBGL を渡すことで、p5.js を
     WebGL を使用するように設定します。
   getting-started-in-webgl-coords-and-transform-heading2: '3D 座標空間: 3D での位置決め'
   getting-started-in-webgl-coords-and-transform-info1x1: 座標系が理解できない場合は、以下のチュートリアルを再度確認することをお勧めします。
@@ -439,8 +439,8 @@ learn:
   getting-started-in-webgl-coords-and-transform-glossary-term6-definition: 3D 空間の位置 x、y、z を持つ点。
   getting-started-in-webgl-coords-and-transform-glossary-term7-title: 面
   getting-started-in-webgl-coords-and-transform-glossary-term7-definition: 3つの点からなる集合体で、固体の表面を作り出します。
-  getting-started-in-webgl-custom-geometry-title: WebGL でカスタムジオメトリを作成します。
-  getting-started-in-webgl-custom-geometry: WebGL でカスタムジオメトリを作成します。
+  getting-started-in-webgl-custom-geometry-title: WebGL でカスタムジオメトリを作成
+  getting-started-in-webgl-custom-geometry: WebGL でカスタムジオメトリを作成します。(日本語ページ)
   getting-started-in-webgl-custom-geometry-p1x1: >-
     p5.js には <a class="code">box()</a> や <a class="code">sphere()</a>
     などの基本的な形状がいくつかありますが、p5.js は3D モデルファイルやコードから複雑なカスタムジオメトリをレンダリングすることもできます。
@@ -458,7 +458,7 @@ learn:
   getting-started-in-webgl-custom-geometry-p3x1: >-
     カスタムモデルで発生することがよくある問題は、スケーリングです。モデルがどのように構築されているかに応じて、p5.js
     で描画するとはるかに異なるサイズになる場合があり、描画できない場合もあります。<a class="code">loadModel()</a>
-    メソッドには、p5.js でうまく機能するサイズにモデルをリサイズする normalize パラメータが含まれています。
+    メソッドには、p5.js でうまく機能するサイズにモデルをリサイズする normalize パラメーターが含まれています。
   getting-started-in-webgl-custom-geometry-info2x1: 'Note: 現時点では、カラーがついた STL ファイルはサポートされていませんが、'
   getting-started-in-webgl-custom-geometry-info2x2: スタイリングと外観
   getting-started-in-webgl-custom-geometry-info2x3: チュートリアルでマテリアルやテクスチャを使って色を付ける方法について学べます。
@@ -467,7 +467,7 @@ learn:
     コードを使って、プロシージャルにジオメトリを定義することもできます。自分自身のルールに従ってジオメトリを作成する方法です。<a
     class="code">quad()</a>、<a class="code">triangle()</a>、<a
     class="code">rect()</a>、<a class="code">circle()</a> など、各メソッドには 3D
-    で使用できるようにするための追加パラメータがあります。
+    で使用できるようにするための追加パラメーターがあります。
   getting-started-in-webgl-custom-geometry-p5x1: ジオメトリを制御するための別の方法があります。
   getting-started-in-webgl-custom-geometry-p5x2: と
   getting-started-in-webgl-custom-geometry-p5x3: というメソッドを使って、点ごとに形状を定義することができます。次の例では、これらのメソッドを使用して、数学的に 3D シェイプを構築する方法を示します。
@@ -498,7 +498,7 @@ learn:
   getting-started-in-webgl-custom-geometry-glossary-term7-title: 正規化
   getting-started-in-webgl-custom-geometry-glossary-term7-definition: 標準範囲内に収まるように何かを変更すること。
   getting-started-in-webgl-appearance-title: スタイリングと外観
-  getting-started-in-webgl-appearance: WebGL でのマテリアルとライティングの基礎
+  getting-started-in-webgl-appearance: WebGL でのマテリアルとライティングの基礎 (日本語ページ)
   getting-started-in-webgl-appearance-p0x1: >-
     3D での作成は、ジオメトリ以上のものです。カメラ、ライト、そしてマテリアルは、視覚的に興味深い 3D シーンを作成するための重要な要素です。
     p5.js には、ジオメトリの外観を変換するためのツールが多数用意されています。
@@ -590,7 +590,7 @@ learn:
   getting-started-in-webgl-appearance-glossary-term7-title: クリッピング
   getting-started-in-webgl-appearance-glossary-term7-definition: カメラのフラスタムの外にあるジオメトリのように、一部のジオメトリを選択的に表示し、他のジオメトリを表示しないこと。
   getting-started-in-webgl-shaders-title: シェーダー入門
-  getting-started-in-webgl-shaders: WebGL を使用して p5js 内でシェーダーを作成する基本
+  getting-started-in-webgl-shaders: WebGL を使用して p5js 内でシェーダーを作成する基本 (日本語ページ)
   getting-started-in-webgl-shaders-p0x1: >-
     シェーダーは、グラフィックス処理ユニット（GPU）上で実行される特別なプログラムで、驚くべきことができます。GPU
     を利用して多くのピクセルを一度に処理し、ノイズ生成、ぼかしのようなフィルターの適用、
@@ -726,15 +726,15 @@ learn:
   getting-started-in-webgl-framebuffers-title: フレームバッファによる階層レンダリング
   getting-started-in-webgl-framebuffers: 複数の段階の描画や、3D深度情報にアクセスするスケッチをセットアップします。
   color-title: 色
-  color: デジタルカラーの紹介。
+  color: デジタルカラーの紹介。 (日本語ページ)
   coordinate-system-and-shapes-title: 座標系と形状
-  coordinate-system-and-shapes: 簡単な形状の描画と座標系の使い方。
+  coordinate-system-and-shapes: 簡単な形状の描画と座標系の使い方。 (日本語ページ)
   interactivity-title: 相互作用
   interactivity: マウスとキーボードを使った相互作用の紹介。
   program-flow-title: プログラムフロー
   program-flow: p5.js でプログラムフローを制御する方法の紹介。
   curves-title: 曲線
-  curves: p5.js の3種類の曲線 (円弧、スプライン曲線、ベジエ曲線) の紹介。
+  curves: p5.js の3種類の曲線 (円弧、スプライン曲線、ベジエ曲線) の紹介。 (日本語ページ)
   becoming-a-better-programmer-title: より優れたプログラマーになる
   debugging-title: デバッグ
   debugging: すべての人に向けたデバッグのフィールドガイド。
@@ -748,7 +748,7 @@ learn:
   looking-inside-title: p5.js の内部を見る
   looking-inside: Luisa Pereira による p5.js 開発のためのファイル構造やツールの紹介。
   writing-tutorial-title: チュートリアルの作成
-  writing-tutorial: p5.js プログラミングチュートリアルの作成ガイド
+  writing-tutorial: p5.js プログラミングチュートリアルの作成ガイド (日本語ページ)
   writing-a-tutorial-title: p5.js チュートリアル投稿ガイド
   writing-a-tutorial-author: このチュートリアルは Tega Brain によって執筆されました。
   writing-a-tutorial-1: >-
@@ -828,7 +828,7 @@ learn:
     に移植しました。もし何かエラーがあった場合やコメントがある場合は、お知らせください。
   color-description2: ' '
   color-p1x1: >-
-    デジタル世界では、色を話す場合、精度が必要です。"あの円を青緑色にできますか？"と言うだけでは不十分です。色は、数値の範囲として定義されます。最も単純な場合から始めましょう。黒と白、またはグレースケールです。0は黒、255は白を意味します。その間にある、50、87、162、209などの数値は、黒から白までのグレーの濃淡の範囲を表します。
+    デジタル世界では、色を話す場合、精度が必要です。"あの円を青緑色にできますか？"と言うだけでは不十分です。色は、数値の範囲として定義されます。最も単純な場合から始めましょう。黒と白、またはグレースケールです。0は黒、255は白を意味します。その間にある、50、87、162、209などの数値は、黒から白までの灰色の濃淡の範囲を表します。
   color-p2x1: 何かを描く前に、
   color-p2x2: ' と '
   color-p2x3: 関数を追加することで、任意の形状の色を設定できます。また、
@@ -947,17 +947,17 @@ learn:
   curves-description4: ' クリエイティブ コモンズ 表示 - 非営利 - 継承 4.0 国際 ライセンスでライセンスされています。'
   curves-p1x1: 'この短いチュートリアルでは、p5.js の3つのカーブタイプを紹介します: 円弧、スプライン曲線、およびベジェ曲線。'
   curves-arcs-title: ' 円弧 '
-  curves-arcs-p1x1: '円弧は描画するのに最も簡単なカーブであり、楕円の一部として定義されています。次のパラメータで関数を呼び出します:'
+  curves-arcs-p1x1: '円弧は描画するのに最も簡単なカーブであり、楕円の一部として定義されています。次のパラメーターで関数を呼び出します:'
   curves-arcs-p2x1: 'arc (x, y, w, h, start, stop, [mode])'
   curves-arcs-p3x1: >-
-    最初の4つのパラメータ（x,y,w,h）は、円弧の境界ボックスを定義し、次の2つ（start, stop）は、円弧の開始角度と終了角度です。
+    最初の4つのパラメーター（x,y,w,h）は、円弧の境界ボックスを定義し、次の2つ（start, stop）は、円弧の開始角度と終了角度です。
     これらの角度はラジアンで与えられ、0度が東を指し、PI ラジアンが180°に相当します。
   curves-spline-curves-title: スプライン曲線
   curves-spline-curves-p1x1: >-
     円弧は良いですが、単純です。次の関数 curve() では、必ずしも円弧の一部であるとは限らない曲線を描画できます。
     この関数は、技術的にはロム-カトマルスプラインと呼ばれるものを描画します。曲線を描画するには、曲線が始まる点と終わる点の (x, y)
     座標を指定する必要があります。また、曲線の方向と湾曲量を決定する2つの制御点も指定する必要があります。
-    最初の2つと最後の2つのパラメータが曲線の制御点です。curve() への呼び出しでは、これらのパラメータが使われます:
+    最初の2つと最後の2つのパラメーターが曲線の制御点です。curve() への呼び出しでは、これらのパラメーターが使われます:
   curves-spline-curves-p2x1: 'curve (cpx1, cpy1, x1, y1, x2, y2, cpx2, cpy2);'
   curves-spline-curves-p3x1: 制御点は曲線の見た目にどのように影響しますか？
   curves-spline-curves-p4x1: 曲線の始点における接線は、制御点1と曲線の終点との間の直線に平行です。曲線の終点における接線は、始点と制御点2との間の直線に平行です。
@@ -970,8 +970,8 @@ learn:
   curves-bezier-curves-title: ベジェ曲線
   curves-bezier-curves-p1x1: >-
     スプライン曲線は円弧よりも優れていますが、芸術的な印象を与える流麗で滑らかな曲線はありません。そういった曲線を描画するには、bezier()
-    関数を使ってベジェ曲線を描画する必要があります。スプライン曲線と同様に、bezier() 関数には8つのパラメータがありますが、順序が異なります。
-    最初の2つと最後の2つのパラメータは開始点と終了点であり、中間の4つの点が制御点です。
+    関数を使ってベジェ曲線を描画する必要があります。スプライン曲線と同様に、bezier() 関数には8つのパラメーターがありますが、順序が異なります。
+    最初の2つと最後の2つのパラメーターは開始点と終了点であり、中間の4つの点が制御点です。
   curves-bezier-curves-p2x1: ' bezier(x1, y1, cpx1, cpy1, cpx2, cpy2, x2, y2); '
   curves-bezier-curves-p3x1: >-
     制御点が curve() にどのように影響するかを視覚化することは難しいですが、制御点がベジェ曲線にどのように影響するかを見るのは少し容易です。

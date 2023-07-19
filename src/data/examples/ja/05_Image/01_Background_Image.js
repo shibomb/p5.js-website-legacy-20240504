@@ -10,7 +10,7 @@ let bg;
 let y = 0;
 
 function setup() {
-  // 背景画像は、createCanvas() メソッドに渡されるパラメータと同じサイズである必要があります。
+  // 背景画像は、createCanvas() メソッドに渡されるパラメーターと同じサイズである必要があります。
   // このプログラムの場合、画像のサイズは720x400ピクセルです。
   bg = loadImage('assets/moonwalk.jpg');
   createCanvas(720, 400);
