@@ -5,7 +5,7 @@ Home: ホーム
 Editor: エディター
 Download: ダウンロード
 Donate: 寄付する
-Start: はじめに
+Start: スタート
 Reference: リファレンス
 Libraries: ライブラリ
 Learn: 学ぶ
@@ -194,7 +194,7 @@ download:
   complete-library-intro1: >-
     p5.js ライブラリファイル、p5.sound アドオン、プロジェクト例を含むダウンロードです。エディタは含まれていません。p5.js
     プロジェクトの設定方法については、
-  complete-library-intro2: はじめに
+  complete-library-intro2: スタート
   complete-library-intro3: をご覧ください。
   p5.js-complete: p5.js 一式
   includes-1: '以下を含みます:'
