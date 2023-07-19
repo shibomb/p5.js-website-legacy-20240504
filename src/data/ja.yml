@@ -292,7 +292,7 @@ learn:
   hello-p5js-title: Hello p5.js
   hello-p5js: この短いビデオでは、p5.js ライブラリとそれができることを紹介します。
   getting-started-title: 初めに
-  getting-started: p5.js へようこそ！<br> このイントロダクションでは、p5.js プロジェクトの基本的な設定について説明します。
+  getting-started: p5.js へようこそ！<br> このイントロダクションでは、p5.js プロジェクトの基本的な設定について説明します。 (日本語ページ)
   p5js-overview-title: p5.js 概要
   p5js-overview: p5.js の主要な機能の概要です。
   p5js-processing-title: p5.js と Processing
@@ -321,7 +321,7 @@ learn:
   getting-started-in-webgl-title: WebGL 入門
   getting-started-in-webgl-glossary-title: 用語集
   getting-started-in-webgl-coords-and-transform-title: 座標と変換
-  getting-started-in-webgl-coords-and-transform: 3D セットアップ、座標、変換の基礎
+  getting-started-in-webgl-coords-and-transform: 3D セットアップ、座標、変換の基礎 (日本語ページ)
   getting-started-in-webgl-coords-and-transform-p1x1: >-
     p5.js は 2D グラフィックを作成する強力なツールですが、3D グラフィックも作成できます。このチュートリアルでは、p5.js を使用して 3D
     スケッチを作成するための新しいコンセプトを紹介します。
@@ -439,8 +439,8 @@ learn:
   getting-started-in-webgl-coords-and-transform-glossary-term6-definition: 3D 空間の位置 x、y、z を持つ点。
   getting-started-in-webgl-coords-and-transform-glossary-term7-title: 面
   getting-started-in-webgl-coords-and-transform-glossary-term7-definition: 3つの点からなる集合体で、固体の表面を作り出します。
-  getting-started-in-webgl-custom-geometry-title: WebGL でカスタムジオメトリを作成します。
-  getting-started-in-webgl-custom-geometry: WebGL でカスタムジオメトリを作成します。
+  getting-started-in-webgl-custom-geometry-title: WebGL でカスタムジオメトリを作成
+  getting-started-in-webgl-custom-geometry: WebGL でカスタムジオメトリを作成します。(日本語ページ)
   getting-started-in-webgl-custom-geometry-p1x1: >-
     p5.js には <a class="code">box()</a> や <a class="code">sphere()</a>
     などの基本的な形状がいくつかありますが、p5.js は3D モデルファイルやコードから複雑なカスタムジオメトリをレンダリングすることもできます。
@@ -498,7 +498,7 @@ learn:
   getting-started-in-webgl-custom-geometry-glossary-term7-title: 正規化
   getting-started-in-webgl-custom-geometry-glossary-term7-definition: 標準範囲内に収まるように何かを変更すること。
   getting-started-in-webgl-appearance-title: スタイリングと外観
-  getting-started-in-webgl-appearance: WebGL でのマテリアルとライティングの基礎
+  getting-started-in-webgl-appearance: WebGL でのマテリアルとライティングの基礎 (日本語ページ)
   getting-started-in-webgl-appearance-p0x1: >-
     3D での作成は、ジオメトリ以上のものです。カメラ、ライト、そしてマテリアルは、視覚的に興味深い 3D シーンを作成するための重要な要素です。
     p5.js には、ジオメトリの外観を変換するためのツールが多数用意されています。
@@ -590,7 +590,7 @@ learn:
   getting-started-in-webgl-appearance-glossary-term7-title: クリッピング
   getting-started-in-webgl-appearance-glossary-term7-definition: カメラのフラスタムの外にあるジオメトリのように、一部のジオメトリを選択的に表示し、他のジオメトリを表示しないこと。
   getting-started-in-webgl-shaders-title: シェーダー入門
-  getting-started-in-webgl-shaders: WebGL を使用して p5js 内でシェーダーを作成する基本
+  getting-started-in-webgl-shaders: WebGL を使用して p5js 内でシェーダーを作成する基本 (日本語ページ)
   getting-started-in-webgl-shaders-p0x1: >-
     シェーダーは、グラフィックス処理ユニット（GPU）上で実行される特別なプログラムで、驚くべきことができます。GPU
     を利用して多くのピクセルを一度に処理し、ノイズ生成、ぼかしのようなフィルターの適用、
@@ -726,15 +726,15 @@ learn:
   getting-started-in-webgl-framebuffers-title: フレームバッファによる階層レンダリング
   getting-started-in-webgl-framebuffers: 複数の段階の描画や、3D深度情報にアクセスするスケッチをセットアップします。
   color-title: 色
-  color: デジタルカラーの紹介。
+  color: デジタルカラーの紹介。 (日本語ページ)
   coordinate-system-and-shapes-title: 座標系と形状
-  coordinate-system-and-shapes: 簡単な形状の描画と座標系の使い方。
+  coordinate-system-and-shapes: 簡単な形状の描画と座標系の使い方。 (日本語ページ)
   interactivity-title: 相互作用
   interactivity: マウスとキーボードを使った相互作用の紹介。
   program-flow-title: プログラムフロー
   program-flow: p5.js でプログラムフローを制御する方法の紹介。
   curves-title: 曲線
-  curves: p5.js の3種類の曲線 (円弧、スプライン曲線、ベジエ曲線) の紹介。
+  curves: p5.js の3種類の曲線 (円弧、スプライン曲線、ベジエ曲線) の紹介。 (日本語ページ)
   becoming-a-better-programmer-title: より優れたプログラマーになる
   debugging-title: デバッグ
   debugging: すべての人に向けたデバッグのフィールドガイド。
@@ -748,7 +748,7 @@ learn:
   looking-inside-title: p5.js の内部を見る
   looking-inside: Luisa Pereira による p5.js 開発のためのファイル構造やツールの紹介。
   writing-tutorial-title: チュートリアルの作成
-  writing-tutorial: p5.js プログラミングチュートリアルの作成ガイド
+  writing-tutorial: p5.js プログラミングチュートリアルの作成ガイド (日本語ページ)
   writing-a-tutorial-title: p5.js チュートリアル投稿ガイド
   writing-a-tutorial-author: このチュートリアルは Tega Brain によって執筆されました。
   writing-a-tutorial-1: >-
