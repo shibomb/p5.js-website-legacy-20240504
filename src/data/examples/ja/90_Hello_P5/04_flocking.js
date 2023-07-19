@@ -1,6 +1,6 @@
 /*
  * @name フロッキング
- * @arialabel 濃いグレーの背景に薄いグレーの円が群れをなして画面を横切ります。
+ * @arialabel 濃い灰色の背景に薄い灰色の円が群れをなして画面を横切ります。
  * @description <a href="http://www.red3d.com/cwr/"> Craig Reynolds の「群れ」行動</a>のデモです。<br>
  * (ルール: 凝集、分離、整列)<br>
  * <a href="http://natureofcode.com">natureofcode.com</a> より。

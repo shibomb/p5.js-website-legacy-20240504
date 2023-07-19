@@ -2145,7 +2145,7 @@
         "v3": "Number: 現在のカラーレンジに対する青または明度の値",
         "alpha": "Number (オプション)",
         "value": "String: カラー文字列",
-        "gray": "Number: グレーの値",
+        "gray": "Number: 灰色の値",
         "values": "Number[]: 色の赤、緑、青、およびアルファ成分を含む配列",
         "color": "p5.Color: 着色する色"
       }

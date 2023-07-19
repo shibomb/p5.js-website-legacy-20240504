@@ -1,11 +1,11 @@
 /*
  * @name フロッキング
- * @arialabel グレーの小さな三角形のグループが、濃いグレーの背景をバックにして移動します。
+ * @arialabel 灰色の小さな三角形のグループが、濃い灰色の背景をバックにして移動します。
  * @description Craig Reynolds の「フロッキング」動作のデモンストレーション。
  * 参照：http://www.red3d.com/cwr/
  * ルール：Cohesion（結束）、Separation（分離）、Alignment（整列）
  * （<a href="http://natureofcode.com">natureofcode.com</a> より）。
- * マウスをドラッグしてボイド（グレーの小さな三角形）を追加します。
+ * マウスをドラッグしてボイド（灰色の小さな三角形）を追加します。
  */
 
 

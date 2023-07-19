@@ -1,6 +1,6 @@
 /* 
  * @name 車のインスタンス
- * @arialabel 垂直に淡いセージ色の背景に、ブルー、イエロー、グレーの3つの長方形が画面を横切って異なる速度で移動しています。
+ * @arialabel 垂直に淡いセージ色の背景に、ブルー、イエロー、灰色の3つの長方形が画面を横切って異なる速度で移動しています。
  * @frame 400,400
  * @description <a href="https://www.rit.edu/directory/wmhics-w-michelle-harris">
    <b>Prof WM Harris,</b></a> からの貢献です。<b>どのように</b> Car のクラスの３つのインスタンスを作成し、
