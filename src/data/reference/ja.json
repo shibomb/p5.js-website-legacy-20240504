@@ -977,7 +977,7 @@
     },
     "getTargetFrameRate": {
       "description": [
-        "_targetFrameRate 変数を返します。デフォルトの_targetFrameRate は60に設定されています。これは、frameRate() を呼び出して所望の値に設定することで変更できます。getTargetFrameRate() が呼び出されると、設定された値が返されるべきです。"
+        "_targetFrameRate 変数を返します。デフォルトの_targetFrameRate は60に設定されています。これは、frameRate() を呼び出して希望する値に設定することで変更できます。getTargetFrameRate() を呼び出した場合は、設定された値が返されます。"
       ],
       "returns": "Number: _targetFrameRate"
     },
