@@ -982,7 +982,7 @@
       "returns": "Number: _targetFrameRate"
     },
     "noCursor": {
-      "description": ["ビューからカーソルを非表示にします。"]
+      "description": ["カーソルを非表示にします。"]
     },
     "webglVersion": {
       "description": [
