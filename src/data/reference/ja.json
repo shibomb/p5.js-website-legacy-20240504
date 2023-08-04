@@ -1007,7 +1007,7 @@
     },
     "windowHeight": {
       "description": [
-        "内部ウィンドウの高さを保存するシステム変数で、window.innerHeight にマップされます。"
+        "内側のウィンドウの高さを保存するシステム変数で、window.innerHeight にマップされます。"
       ]
     },
     "windowResized": {
