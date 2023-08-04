@@ -1002,7 +1002,7 @@
     },
     "windowWidth": {
       "description": [
-        "内部ウィンドウの幅を保存するシステム変数で、window.innerWidth にマップされます。"
+        "内側のウィンドウの幅を保存するシステム変数で、window.innerWidth にマップされます。"
       ]
     },
     "windowHeight": {
