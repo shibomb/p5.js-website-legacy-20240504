@@ -986,8 +986,8 @@
     },
     "webglVersion": {
       "description": [
-        "スケッチが WebGL モードで作成された場合、<code>weglVersion</code> はそれが使用している WebGL のバージョンを示します。 <code>setAttributes({ version: 1 })</code>を介して WebGL1 をリクエストしない限り、 WebGL2 キャンバスを作成しようとします、そして WebGL2 が利用できない場合は WebGL1 にフォールバックします。",
-        "<code>webglVersion</code>は常に<code>WEBGL2</code>、<code>WEBGL</code>、または WebGL モードでない場合は<code>P2D</code>のいずれかになります。"
+        "スケッチが WebGL モードで作成された場合、<code>weglVersion</code> はそのスケッチで使用されている WebGL のバージョンを示します。<code>setAttributes({ version: 1 })</code>を介して WebGL1 をリクエストしない限り、スケッチは WebGL2 キャンバスの作成を試み、WebGL2 が利用できない場合は WebGL1 にフォールバックします。",
+        "<code>webglVersion</code> は常に <code>WEBGL2</code>、<code>WEBGL</code>、または <code>P2D</code>（WebGL モードでない場合）のいずれかになります。"
       ]
     },
     "displayWidth": {
@@ -1002,12 +1002,12 @@
     },
     "windowWidth": {
       "description": [
-        "内部ウィンドウの幅を保存するシステム変数で、window.innerWidth にマップされます。"
+        "内側のウィンドウの幅を保存するシステム変数で、window.innerWidth にマップされます。"
       ]
     },
     "windowHeight": {
       "description": [
-        "内部ウィンドウの高さを保存するシステム変数で、window.innerHeight にマップされます。"
+        "内側のウィンドウの高さを保存するシステム変数で、window.innerHeight にマップされます。"
       ]
     },
     "windowResized": {
