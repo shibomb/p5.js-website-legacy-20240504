@@ -1025,7 +1025,7 @@
     },
     "height": {
       "description": [
-        "描画キャンバスの高さを保存するシステム変数です。<a href=\"#/p5/createCanvas\">createCanvas()</a> 関数の2番目のパラメーターによってこの値が設定されます。たとえば、関数呼び出し createCanvas(320, 240)は、height 変数の値を240に設定します。<a href=\"#/p5/createCanvas\">createCanvas()</a> がプログラムで使用されていない場合、height の値はデフォルトで100になります。"
+        "描画キャンバスの高さを保存するシステム変数です。<a href=\"#/p5/createCanvas\">createCanvas()</a> 関数の2番目のパラメーターによってこの値が設定されます。たとえば、関数呼び出し createCanvas(320, 240)は、height 変数の値を240に設定します。<a href=\"#/p5/createCanvas\">createCanvas()</a> がプログラム内で使用されていない場合、height の値はデフォルトで100になります。"
       ]
     },
     "fullscreen": {
