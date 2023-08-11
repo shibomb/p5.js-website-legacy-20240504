@@ -1020,7 +1020,7 @@
     },
     "width": {
       "description": [
-        "描画キャンバスの幅を保存するシステム変数です。<a href=\"#/p5/createCanvas\">createCanvas()</a> 関数の最初のパラメーターによってこの値が設定されます。たとえば、関数呼び出し createCanvas(320, 240)は、width 変数の値を320に設定します。<a href=\"#/p5/createCanvas\">createCanvas()</a> がプログラムで使用されていない場合、width の値はデフォルトで100になります。"
+        "描画キャンバスの幅を保存するシステム変数です。<a href=\"#/p5/createCanvas\">createCanvas()</a> 関数の最初のパラメーターによってこの値が設定されます。たとえば、関数呼び出し createCanvas(320, 240)は、width 変数の値を320に設定します。<a href=\"#/p5/createCanvas\">createCanvas()</a> がプログラム内で使用されていない場合、width の値はデフォルトで100になります。"
       ]
     },
     "height": {
