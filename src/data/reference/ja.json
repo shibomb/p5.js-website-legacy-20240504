@@ -1071,14 +1071,14 @@
     },
     "preload": {
       "description": [
-        "<a href=\"#/p5/setup\">setup()</a> の直前に呼び出される <a href=\"#/p5/preload\">preload()</a> 関数は、外部ファイルの非同期ロードをブロッキング方式で処理するために使用されます。preload 関数が定義されている場合、<a href=\"#/p5/setup\">setup()</a> はその中の load コールがすべて終了するまで待機します。preload 関数の中には、load コール（<a href=\"#/p5/loadImage\">loadImage</a>、<a href=\"#/p5/loadJSON\">loadJSON</a>、<a href=\"#/p5/loadFont\">loadFont</a>、<a href=\"#/p5/loadStrings\">loadStrings</a> など）以外のものは入れないでください。非同期ロードが望ましい場合は、代わりにコールバックパラメーターを使用して <a href=\"#/p5/setup\">setup()</a> や他の場所で load メソッドを呼び出すことができます。",
-        "デフォルトでは、「loading...」というテキストが表示されます。独自のローディングページを作成するには、ページに ID「p5_loading」の HTML 要素を含めてください。詳細は <a href=\"http://bit.ly/2kQ6Nio\">こちら</a>。"
+        "<a href=\"#/p5/setup\">setup()</a> の直前に呼び出される <a href=\"#/p5/preload\">preload()</a> 関数は、外部ファイルの非同期ロードをブロッキング方式で処理するために使用されます。preload 関数が定義されている場合、<a href=\"#/p5/setup\">setup()</a> はその中の load コールがすべて終了するまで待機します。preload 関数の中には、load コール（<a href=\"#/p5/loadImage\">loadImage</a>、<a href=\"#/p5/loadJSON\">loadJSON</a>、<a href=\"#/p5/loadFont\">loadFont</a>、<a href=\"#/p5/loadStrings\">loadStrings</a> など）以外の関数は入れないでください。非同期ロードが望ましい場合は、代わりにコールバックパラメーターを使用して <a href=\"#/p5/setup\">setup()</a> や他の場所で load メソッドを呼び出すことができます。",
+        "デフォルトでは、「loading...」というテキストが表示されます。独自のローディングページを作成するには、ID が「p5_loading」の HTML 要素をページに含めてください。詳細は <a href=\"http://bit.ly/2kQ6Nio\">こちら</a>。"
       ]
     },
     "setup": {
       "description": [
-        "プログラムが開始されるときに一度だけ呼び出される <a href=\"#/p5/setup\">setup()</a> 関数は、スクリーンサイズや背景色などの初期環境プロパティを定義し、プログラムの開始時に画像やフォントなどのメディアをロードするために使用されます。各プログラムにはひとつの <a href=\"#/p5/setup\">setup()</a> 関数があり、初回実行後に再度呼び出すことはできません。",
-        "注意:<a href=\"#/p5/setup\">setup()</a> 内で宣言された変数は、<a href=\"#/p5/draw\">draw()</a> を含む他の関数内ではアクセスできません。"
+        "<a href=\"#/p5/setup\">setup()</a> 関数は、プログラムの開始時に一度だけ呼び出される関数で、スクリーンサイズや背景色などの初期環境プロパティを定義し、プログラムの開始時に画像やフォントなどのメディアをロードするために使用されます。各プログラムにはひとつの <a href=\"#/p5/setup\">setup()</a> 関数があり、初回実行後に再度呼び出すことはできません。",
+        "注意: <a href=\"#/p5/setup\">setup()</a> 内で宣言された変数は、<a href=\"#/p5/draw\">draw()</a> を含む他の関数内ではアクセスできません。"
       ]
     },
     "draw": {
