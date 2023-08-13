@@ -1083,11 +1083,11 @@
     },
     "draw": {
       "description": [
-        "<a href=\"#/p5/setup\">setup()</a> の直後に呼び出される <a href=\"#/p5/draw\">draw()</a> 関数は、プログラムが停止するか <a href=\"#/p5/noLoop\">noLoop()</a> が呼び出されるまで、そのブロック内に含まれるコードを連続して実行します。ただし、<a href=\"#/p5/setup\">setup()</a> で <a href=\"#/p5/noLoop\">noLoop()</a> が呼び出された場合でも、<a href=\"#/p5/draw\">draw()</a> は停止する前に一度だけ実行されます。<a href=\"#/p5/draw\">draw()</a> は自動的に呼び出されるため、明示的に呼び出すことはありません。",
-        "<a href=\"#/p5/noLoop\">noLoop()</a>、<a href=\"#/p5/redraw\">redraw()</a>、<a href=\"#/p5/loop\">loop()</a> を使って制御する必要があります。<a href=\"#/p5/noLoop\">noLoop()</a> が <a href=\"#/p5/draw\">draw()</a> 内のコードの実行を停止した後、<a href=\"#/p5/redraw\">redraw()</a> は <a href=\"#/p5/draw\">draw()</a> 内のコードを1回だけ実行し、<a href=\"#/p5/loop\">loop()</a> は <a href=\"#/p5/draw\">draw()</a> 内のコードを連続して実行し続けるようになります。",
+        "<a href=\"#/p5/setup\">setup()</a> の直後に呼び出される <a href=\"#/p5/draw\">draw()</a> 関数は、プログラムが停止するか <a href=\"#/p5/noLoop\">noLoop()</a> が呼び出されるまで、そのブロック内に含まれるコードを連続して実行します。ただし、<a href=\"#/p5/setup\">setup()</a> で <a href=\"#/p5/noLoop\">noLoop()</a> が呼び出された場合でも、<a href=\"#/p5/draw\">draw()</a> は停止する前に一度だけ実行されます。<a href=\"#/p5/draw\">draw()</a> は自動的に呼び出されるため、明示的に呼び出すことはできません。",
+        "この関数を制御するには <a href=\"#/p5/noLoop\">noLoop()</a>、<a href=\"#/p5/redraw\">redraw()</a>、<a href=\"#/p5/loop\">loop()</a> を使う必要があります。<a href=\"#/p5/noLoop\">noLoop()</a> で <a href=\"#/p5/draw\">draw()</a> 内のコードの実行が停止された後、<a href=\"#/p5/redraw\">redraw()</a> で <a href=\"#/p5/draw\">draw()</a> 内のコードを1回だけ実行し、<a href=\"#/p5/loop\">loop()</a> で <a href=\"#/p5/draw\">draw()</a> 内のコードの実行が継続的に再開されます。",
         "<a href=\"#/p5/draw\">draw()</a> が1秒間に何回実行されるかは、<a href=\"#/p5/frameRate\">frameRate()</a> 関数で制御できます。",
-        "各スケッチにはひとつの <a href=\"#/p5/draw\">draw()</a> 関数があり、コードを連続して実行する場合や、<a href=\"#/p5/mousePressed\">mousePressed()</a> などのイベントを処理する場合には、<a href=\"#/p5/draw\">draw()</a> が必要です。場合によっては、例のようにプログラム内で <a href=\"#/p5/draw\">draw()</a> を空呼び出しすることがあります。",
-        "描画座標系は、各 <a href=\"#/p5/draw\">draw()</a> 呼び出しの最初にリセットされることに注意が必要です。<a href=\"#/p5/draw\">draw()</a> 内で変換が実行された場合（例:スケール、回転、移動）、その効果は <a href=\"#/p5/draw\">draw()</a> の最初にもとに戻されるため、変換は時間とともに蓄積されません。一方で、適用されたスタイリング（例:塗りつぶし、ストロークなど）は継続して効果があります。"
+        "各スケッチにはひとつの <a href=\"#/p5/draw\">draw()</a> 関数があり、コードを連続して実行する場合や、<a href=\"#/p5/mousePressed\">mousePressed()</a> などのイベントを処理する場合には、<a href=\"#/p5/draw\">draw()</a> が必要です。場合によっては、例のようにプログラム内で <a href=\"#/p5/draw\">draw()</a> を空呼び出しすることがあるかもしれません。",
+        "描画座標系は、各 <a href=\"#/p5/draw\">draw()</a> 呼び出しの最初にリセットされることに注意が必要です。<a href=\"#/p5/draw\">draw()</a> 内で変換が実行された場合（例: スケール、回転、移動）、その効果は <a href=\"#/p5/draw\">draw()</a> の最初にもとに戻されるため、変換は時間とともに蓄積されません。一方で、適用されたスタイリング（例: 塗りつぶし、ストロークなど）はその効果が持続します。"
       ]
     },
     "remove": {
