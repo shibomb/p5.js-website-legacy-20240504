@@ -23,7 +23,7 @@ function PenroseLSystem() {
   this.steps = 0;
 
   // ペンローズ菱形の L システムの公理と規則
-  // リファレンスがあればいいのですが、私は見つけられませんでした。
+  // リファレンスがあれば良いのですが、私は見つけられませんでした。
   this.axiom = "[X]++[X]++[X]++[X]++[X]";
   this.ruleW = "YF++ZF----XF[-YF----WF]++";
   this.ruleX = "+YF--ZF[---WF--XF]+";
