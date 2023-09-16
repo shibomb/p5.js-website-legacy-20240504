@@ -1104,7 +1104,7 @@
     },
     "let": {
       "description": [
-        "新しい変数を作成し、名前を付けます。変数は値のコンテナです。",
+        "新しい変数を作成し、名前を付けます。変数とは値を入れる入れ物です。",
         "let で宣言された変数はブロックスコープを持ちます。これは、変数は <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block\">ブロック</a> 内で作成された範囲でのみ存在することを意味します。",
         "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let\">MDN のエントリ</a> より:ブロックスコープのローカル変数を宣言し、オプションで値を初期化します。"
       ]
