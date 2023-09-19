@@ -1150,8 +1150,8 @@
     "if-else": {
       "description": [
         "<a href=\"#/p5/if-else\">if-else</a> 文は、コードのフローを制御するのに役立ちます。",
-        "'if'に続く括弧の間に条件が置かれ、その条件が <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/truthy\">truthy</a> に評価されると、次の中括弧の間のコードが実行されます。逆に、条件が <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Falsy\">falsy</a> に評価されると、'else'ブロックの中括弧の間のコードが代わりに実行されます。else ブロックの記述はオプションです。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else\">MDN エントリ</a> より: 'if'文は、指定された条件が truthy である場合に文を実行します。条件が falsy である場合、別の文を実行することができます。"
+        "「if」に続く括弧の間に条件が置かれ、その条件が <a href=\"https://developer.mozilla.org/ja/docs/Glossary/truthy\">truthy（真値）</a> に評価されると、次の中括弧の間のコードが実行されます。逆に、条件が <a href=\"https://developer.mozilla.org/ja/docs/Glossary/Falsy\">falsy（偽値）</a> に評価されると、「else」ブロックの中括弧の間のコードが代わりに実行されます。else ブロックの記述はオプションです。",
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/if...else\">MDN エントリ</a> より: if...else 文は、指定された条件が真値ならば文を実行します。条件が偽値なら、オプションの else 節にあるもう一方の文を実行します。"
       ]
     },
     "function": {
