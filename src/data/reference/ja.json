@@ -1156,9 +1156,9 @@
     },
     "function": {
       "description": [
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions\">関数</a> を作成し、名前を付けます。 <a href=\"#/p5/function\">関数</a> は、タスクを実行する一連の文です。",
-        "オプションで、関数はパラメーターをもつことができます。<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Parameter\">パラメーター</a> は、関数にスコープされた変数で、関数を呼び出す際に値を割り当てることができます。複数のパラメーターは、カンマで区切って与えることができます。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function\">MDN エントリ</a> より: 指定されたパラメーターで関数を宣言します。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Functions\">関数</a> を作成し、名前を付けます。 <a href=\"#/p5/function\">関数</a> は、タスクを実行する一連の文です。",
+        "オプションで、関数はパラメーターをもつことができます。<a href=\"https://developer.mozilla.org/ja/docs/Glossary/Parameter\">パラメーター</a> は、関数にスコープされた変数で、関数を呼び出す際に値を割り当てることができます。カンマで区切ることで複数のパラメーターを与えることができます。",
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/function\">MDN エントリ</a> より: function 宣言は、指定された引数を使用して関数を定義します。"
       ]
     },
     "return": {
