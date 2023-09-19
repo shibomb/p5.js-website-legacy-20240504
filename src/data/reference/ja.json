@@ -80,7 +80,7 @@
       "description": [
         "キャンバスにスクリーンリーダー対応の説明を作成します。最初のパラメーターは、キャンバスの説明を示す文字列である必要があります。2つ目のパラメーターはオプションです。指定された場合、説明の表示方法が決まります。",
         "<code class=\"language-javascript\">describe(text, LABEL)</code> は、キャンバスに隣接する div 内にある <a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">キャプションパネル</a> として、すべてのユーザーに説明を表示します。CSS で好みのスタイルに変更できます。",
-        "<code class=\"language-javascript\">describe(text, FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> で、スクリーンリーダーユーザーのみが説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで説明はスクリーンリーダーユーザーにのみ利用可能です。"
+        "<code class=\"language-javascript\">describe(text, FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> で、スクリーンリーダーユーザーのみが説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで説明はスクリーンリーダーユーザーにのみ利用可能です。"
       ],
       "params": {
         "text": "String: キャンバスの説明",
@@ -91,7 +91,7 @@
       "description": [
         "この関数は、キャンバス内の要素（一緒に意味を作り出す形状または形状のグループ）に対してスクリーンリーダー対応の説明を作成します。最初のパラメーターは要素の名前である必要があります。2つ目のパラメーターは、要素の説明を示す文字列である必要があります。3つ目のパラメーターはオプションです。指定された場合、要素の説明の表示方法が決まります。",
         "<code class=\"language-javascript\">describeElement(name, text, LABEL)</code> は、キャンバスに隣接する div 内にある <a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">キャプションパネル</a> として、すべてのユーザーに要素の説明を表示します。CSS で好みのスタイルに変更できます。",
-        "<code class=\"language-javascript\">describeElement(name, text, FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> で、スクリーンリーダーユーザーのみが要素の説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで要素の説明はスクリーンリーダーユーザーにのみ利用可能です。"
+        "<code class=\"language-javascript\">describeElement(name, text, FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> で、スクリーンリーダーユーザーのみが要素の説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで要素の説明はスクリーンリーダーユーザーにのみ利用可能です。"
       ],
       "params": {
         "name": "String: 要素の名前",
@@ -102,7 +102,7 @@
     "textOutput": {
       "description": [
         "<code class=\"language-javascript\">textOutput()</code> は、キャンバス上に存在する形状を説明するスクリーンリーダー対応の出力を作成します。キャンバスの一般的な説明には、キャンバスのサイズ、キャンバスの色、キャンバス内の要素の数（例:「あなたの出力は、400 x 400ピクセルのラベンダーブルーのキャンバスで、以下の4つの形状が含まれています:」）が含まれます。この説明の後に、各形状の色、位置、面積が説明された形状のリストが続きます（例:「キャンバスの1%を覆う左上のオレンジ色の楕円」）。各要素を選択すると詳細が表示され、要素のテーブルも提供されます。このテーブルでは、形状、色、位置、座標、面積が説明されています（例:「オレンジ色の楕円 位置 = 左上 面積 = 2」）。",
-        "<code class=\"language-javascript\">textOutput()</code> および <code class=\"language-javascript\">textOutput(FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">textOutput(LABEL)</code> は、キャンバスに隣接する出力が含まれる追加の div を作成しますが、これはコーディング時にキャンバスのサブ DOM 外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABEL を使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみ LABEL を使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
+        "<code class=\"language-javascript\">textOutput()</code> および <code class=\"language-javascript\">textOutput(FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">textOutput(LABEL)</code> は、キャンバスに隣接する出力が含まれる追加の div を作成しますが、これはコーディング時にキャンバスのサブ DOM 外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABEL を使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみ LABEL を使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
       ],
       "params": {
         "display": "Constant: (オプション) FALLBACK または LABEL のいずれか"
@@ -111,7 +111,7 @@
     "gridOutput": {
       "description": [
         "<code class=\"language-javascript\">gridOutput()</code> は、キャンバスの内容を、各形状の空間的な位置にもとづいたグリッド（html テーブル）の形でレイアウトします。テーブル出力の前に、キャンバスの簡単な説明が利用可能です。この説明には、背景の色、キャンバスのサイズ、オブジェクトの数、オブジェクトの種類（例:「ラベンダーブルーのキャンバスは200 x 200で、3つの楕円とひとつの長方形が含まれています」）が含まれます。グリッドは空間的にコンテンツを記述し、各要素はその位置に応じてテーブルのセルに配置されます。各セル内の要素には、その要素の色と形状の種類が利用可能です（例:「オレンジ色の楕円」）。これらの説明は個別に選択して詳細を取得できます。形状、色、位置、面積が説明された要素のリスト（例:「オレンジ色の楕円 位置 = 左上 面積 = 1%」）も利用可能です。",
-        "<code class=\"language-javascript\">gridOutput()</code> および <code class=\"language-javascript\">gridOutput(FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">gridOutput(LABEL)</code> は、キャンバスに隣接する出力が含まれる追加の div を作成しますが、これはコーディング時にキャンバスのサブ DOM 外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABEL を使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみ LABEL を使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
+        "<code class=\"language-javascript\">gridOutput()</code> および <code class=\"language-javascript\">gridOutput(FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">gridOutput(LABEL)</code> は、キャンバスに隣接する出力が含まれる追加の div を作成しますが、これはコーディング時にキャンバスのサブ DOM 外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABEL を使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみ LABEL を使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
       ],
       "params": {
         "display": "Constant: (オプション) FALLBACK または LABEL のいずれか"
@@ -960,7 +960,7 @@
         "カーソルを事前定義された記号や画像に設定するか、すでに非表示の場合は表示するようにします。カーソルとして画像を設定する場合、推奨されるサイズは16×16または32×32ピクセルです。パラメーター x と y の値は、画像の寸法よりも小さくする必要があります。"
       ],
       "params": {
-        "type": "String|Constant: 組み込み: ARROW, CROSS, HAND, MOVE, TEXT, WAIT  ネイティブ CSS プロパティ: 'grab', 'progress', 'cell'など  外部: カーソル画像のパス（許可されるファイル拡張子: .cur, .gif, .jpg, .jpeg, .png）  ネイティブ CSS カーソルと url の詳細については、次のリンクを参照してください: <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/cursor\">https://developer.mozilla.org/en-US/docs/Web/CSS/cursor</a>",
+        "type": "String|Constant: 組み込み: ARROW, CROSS, HAND, MOVE, TEXT, WAIT  ネイティブ CSS プロパティ: 'grab', 'progress', 'cell'など  外部: カーソル画像のパス（許可されるファイル拡張子: .cur, .gif, .jpg, .jpeg, .png）  ネイティブ CSS カーソルと url の詳細については、次のリンクを参照してください: <a href=\"https://developer.mozilla.org/ja/docs/Web/CSS/cursor\">https://developer.mozilla.org/ja/docs/Web/CSS/cursor</a>",
         "x": "Number: (オプション) カーソルの水平方向のアクティブスポット（32未満にする必要があります）",
         "y": "Number: (オプション) カーソルの垂直方向のアクティブスポット（32未満にする必要があります）"
       }
@@ -1105,65 +1105,65 @@
     "let": {
       "description": [
         "新しい変数を作成し、名前を付けます。変数とは値を入れる入れ物です。",
-        "let で宣言された変数はブロックスコープを持ちます。これは、変数は <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block\">ブロック</a> 内で作成された範囲でのみ存在することを意味します。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let\">MDN のエントリ</a> より:ブロックスコープのローカル変数を宣言し、オプションで値を初期化します。"
+        "let で宣言された変数はブロックスコープを持ちます。これは、変数は <a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/block\">ブロック</a> 内で作成された範囲でのみ存在することを意味します。",
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/let\">MDN のエントリ</a> より:ブロックスコープのローカル変数を宣言し、オプションで値を初期化します。"
       ]
     },
     "const": {
       "description": [
         "新しい定数を作成し、名前を付けます。let で作成された変数のように、const で作成された定数も値の入れ物ですが、宣言された後は再代入できません。ただし、オブジェクトや配列などの非プリミティブデータ型の要素は変更可能です。したがって、変数に配列が割り当てられている場合でも、配列から要素を追加したり削除したりできますが、別の配列を再割り当てすることはできません。また、const を使って値なしで変数を宣言することはできません。",
-        "定数はブロックスコープを持ちます。これは、定数は <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block\">ブロック</a> 内で作成された範囲でのみ存在することを意味します。定数は、すでに存在するスコープ内で再宣言することはできません。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const\">MDN のエントリ</a> より:読み取り専用の名前付き定数を宣言します。定数はブロックスコープであり、「let」文で定義された変数と同様です。定数の値は再代入で変更できず、再宣言もできません。"
+        "定数はブロックスコープを持ちます。これは、定数は <a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/block\">ブロック</a> 内で作成された範囲でのみ存在することを意味します。定数は、すでに存在するスコープ内で再宣言することはできません。",
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/const\">MDN のエントリ</a> より:読み取り専用の名前付き定数を宣言します。定数はブロックスコープであり、「let」文で定義された変数と同様です。定数の値は再代入で変更できず、再宣言もできません。"
       ]
     },
     "===": {
       "description": [
         "厳密な等価演算子 <a href=\"#/p5/===\">===</a> は、2つの値が等しく、同じ型であるかどうかをチェックします。",
         "比較式は常に <a href=\"#/p5/boolean\">ブール値</a> に評価されます。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDN エントリ</a> より: 非同一性演算子は、オペランドが等しくないおよび/または同じ型でない場合に true を返します。",
-        "注: ウェブ上の一部の例では、比較に代わりに使われる <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality\">==</a> のような二重等号を見ることがあります。これは Javascript の非厳密な等価演算子です。これは、比較する前に比較される2つの値を同じ型に変換します。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDN エントリ</a> より: 非同一性演算子は、オペランドが等しくないおよび/または同じ型でない場合に true を返します。",
+        "注: ウェブ上の一部の例では、比較に代わりに使われる <a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality\">==</a> のような二重等号を見ることがあります。これは Javascript の非厳密な等価演算子です。これは、比較する前に比較される2つの値を同じ型に変換します。"
       ]
     },
     ">": {
       "description": [
-        "より大きい演算子 <a href=\"#/p5/>\">></a> は、左の値が右の値より大きい場合に true に評価されます。 <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDN で比較演算子に関する詳細情報があります。</a>"
+        "より大きい演算子 <a href=\"#/p5/>\">></a> は、左の値が右の値より大きい場合に true に評価されます。 <a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDN で比較演算子に関する詳細情報があります。</a>"
       ]
     },
     ">=": {
       "description": [
         "大きいか等しい演算子 <a href=\"#/p5/>=\">>=</a> は、左の値が右の値より大きいか等しい場合に true に評価されます。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDN で比較演算子に関する詳細情報があります。</a>"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDN で比較演算子に関する詳細情報があります。</a>"
       ]
     },
     "<": {
       "description": [
         "より小さい演算子 <a href=\"#/p5/<\"><</a> は、左の値が右の値より小さい場合に true に評価されます。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDN で比較演算子に関する詳細情報があります。</a>"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDN で比較演算子に関する詳細情報があります。</a>"
       ]
     },
     "<=": {
       "description": [
         "小さいか等しい演算子 <a href=\"#/p5/<=\"><=</a> は、左の値が右の値より小さいか等しい場合に true に評価されます。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDN で比較演算子に関する詳細情報があります。</a>"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators\">MDN で比較演算子に関する詳細情報があります。</a>"
       ]
     },
     "if-else": {
       "description": [
         "<a href=\"#/p5/if-else\">if-else</a> 文は、コードのフローを制御するのに役立ちます。",
-        "'if'に続く括弧の間に条件が置かれ、その条件が <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/truthy\">truthy</a> に評価されると、次の中括弧の間のコードが実行されます。逆に、条件が <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Falsy\">falsy</a> に評価されると、'else'ブロックの中括弧の間のコードが代わりに実行されます。else ブロックの記述はオプションです。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else\">MDN エントリ</a> より: 'if'文は、指定された条件が truthy である場合に文を実行します。条件が falsy である場合、別の文を実行することができます。"
+        "「if」に続く括弧の間に条件が置かれ、その条件が <a href=\"https://developer.mozilla.org/ja/docs/Glossary/truthy\">truthy（真値）</a> に評価されると、次の中括弧の間のコードが実行されます。逆に、条件が <a href=\"https://developer.mozilla.org/ja/docs/Glossary/Falsy\">falsy（偽値）</a> に評価されると、「else」ブロックの中括弧の間のコードが代わりに実行されます。else ブロックの記述はオプションです。",
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/if...else\">MDN エントリ</a> より: if...else 文は、指定された条件が真値ならば文を実行します。条件が偽値なら、オプションの else 節にあるもう一方の文を実行します。"
       ]
     },
     "function": {
       "description": [
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions\">関数</a> を作成し、名前を付けます。 <a href=\"#/p5/function\">関数</a> は、タスクを実行する一連の文です。",
-        "オプションで、関数はパラメーターをもつことができます。<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Parameter\">パラメーター</a> は、関数にスコープされた変数で、関数を呼び出す際に値を割り当てることができます。複数のパラメーターは、カンマで区切って与えることができます。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function\">MDN エントリ</a> より: 指定されたパラメーターで関数を宣言します。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Functions\">関数</a> を作成し、名前を付けます。 <a href=\"#/p5/function\">関数</a> は、タスクを実行する一連の文です。",
+        "オプションで、関数はパラメーターをもつことができます。<a href=\"https://developer.mozilla.org/ja/docs/Glossary/Parameter\">パラメーター</a> は、関数にスコープされた変数で、関数を呼び出す際に値を割り当てることができます。カンマで区切ることで複数のパラメーターを与えることができます。",
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/function\">MDN エントリ</a> より: function 宣言は、指定された引数を使用して関数を定義します。"
       ]
     },
     "return": {
       "description": [
-        "関数から返される値を指定します。詳細は、<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return\">MDN の return エントリ</a> をご覧ください。"
+        "関数から返される値を指定します。詳細は、<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/return\">MDN の return エントリ</a> をご覧ください。"
       ]
     },
     "boolean": {
@@ -1177,25 +1177,25 @@
     },
     "string": {
       "description": [
-        "<a href=\"#/p5/string\">文字列</a> は、JavaScript の7つの <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Primitive_values\">プリミティブデータ型</a> のひとつです。文字列は一連のテキスト文字です。JavaScript では、文字列値はシングルクォーテーション（'）またはダブルクォーテーション（\"）で囲む必要があります。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/string\">MDN エントリ</a> から:文字列とは、テキストを表す一連の文字です。"
+        "<a href=\"#/p5/string\">文字列</a> は、JavaScript の7つの <a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Data_structures#Primitive_values\">プリミティブデータ型</a> のひとつです。文字列は一連のテキスト文字です。JavaScript では、文字列値はシングルクォーテーション（'）またはダブルクォーテーション（\"）で囲む必要があります。",
+        "<a href=\"https://developer.mozilla.org/ja/docs/Glossary/string\">MDN エントリ</a> から:文字列とは、テキストを表す一連の文字です。"
       ]
     },
     "number": {
       "description": [
-        "<a href=\"#/p5/number\">数値</a> は、JavaScript の7つの <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Primitive_values\">プリミティブデータ型</a> のひとつです。数値は整数または小数です。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/number\">数値の MDN エントリ</a>"
+        "<a href=\"#/p5/number\">数値</a> は、JavaScript の7つの <a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Data_structures#Primitive_values\">プリミティブデータ型</a> のひとつです。数値は整数または小数です。",
+        "<a href=\"https://developer.mozilla.org/ja/docs/Glossary/number\">数値の MDN エントリ</a>"
       ]
     },
     "object": {
       "description": [
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics\">MDN のオブジェクトの基本</a> から:<a href=\"#/p5/object\">オブジェクト</a> は、関連するデータおよび/または機能（通常、いくつかの変数と関数で構成されます。これらは、オブジェクト内にあるときにプロパティとメソッドと呼ばれます。）のコレクションです。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics\">MDN のオブジェクトの基本</a> から:<a href=\"#/p5/object\">オブジェクト</a> は、関連するデータおよび/または機能（通常、いくつかの変数と関数で構成されます。これらは、オブジェクト内にあるときにプロパティとメソッドと呼ばれます。）のコレクションです。"
       ]
     },
     "class": {
       "description": [
         "<a href=\"#/p5/class\">クラス</a> は、<a href=\"#/p5/object\">オブジェクト</a> の作成に使用されるテンプレートを作成および命名するためのものです。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class\">MDN エントリ</a> から:クラス宣言は、プロトタイプベースの継承を使用して、指定された名前をもつ新しいクラスを作成します。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/class\">MDN エントリ</a> から:クラス宣言は、プロトタイプベースの継承を使用して、指定された名前をもつ新しいクラスを作成します。"
       ]
     },
     "for": {
@@ -1204,7 +1204,7 @@
         "'for ループ'は、括弧内に3つの異なる式が含まれ、すべてがオプションです。これらの式は、ループが実行される回数を制御するために使用されます。最初の式は、ループの初期状態を設定するために使用される文です。2番目の式は、各ループの前にチェックする条件です。この式が false を返すと、ループは終了します。3番目の式は、各ループの終わりに実行されます。これらの式は、セミコロン（;）で区切られます。空の式の場合、セミコロンだけが書かれます。",
         "ループ本体の（波括弧内の）コードは、2番目の式と3番目の式の評価の間に実行されます。",
         "どのループにおいても、ループを '終了' するか、テスト条件が false に評価されることを確認することが重要です。for ループにおけるテスト条件は、上記で詳述された2番目の式です。この式が最終的に false になるように確保することで、ループが無限に実行されることがなく、ブラウザーがクラッシュすることを防ぎます。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for\">MDN エントリ</a> から:指定された文が false に評価されるまで、文を繰り返し実行するループを作成します。条件は文を実行した後に評価され、指定された文が少なくとも1回実行されます。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/for\">MDN エントリ</a> から:指定された文が false に評価されるまで、文を繰り返し実行するループを作成します。条件は文を実行した後に評価され、指定された文が少なくとも1回実行されます。"
       ]
     },
     "while": {
@@ -1212,7 +1212,7 @@
         "<a href=\"#/p5/while\">while</a> は、コードのひとつのセクションを複数回実行するために便利なループを作成します。",
         "'while ループ'では、ループ本体のコード（波括弧内）は、テスト条件（括弧内）が false になるまで繰り返し実行されます。<a href=\"#/p5/while\">while</a> では、コード本体を実行する前に条件をテストするため、条件が最初から false の場合、ループ本体または文は実行されません。",
         "どのループにおいても、ループを '終了' するか、テスト条件が false に評価されることを確認することが重要です。これにより、ループが無限に実行されることがなく、ブラウザーがクラッシュすることを防ぎます。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while\">MDN エントリ</a> から:指定された条件が true に評価される限り、指定された文を繰り返し実行するループを作成します。条件は文を実行する前に評価されます。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/while\">MDN エントリ</a> から:指定された条件が true に評価される限り、指定された文を繰り返し実行するループを作成します。条件は文を実行する前に評価されます。"
       ]
     },
     "createCanvas": {
@@ -1286,7 +1286,7 @@
     },
     "drawingContext": {
       "description": [
-        "p5.js API にはグラフィックを作成するための多くの機能がありますが、p5 では公開されていないネイティブの HTML5 Canvas 機能があります。ただし、変数 <code>drawingContext</code> を使用して直接呼び出すことができます。これは <code>canvas.getContext('2d');</code> または <code>canvas.getContext('webgl');</code> を呼び出すのと同等です。可能な描画関数については、ネイティブキャンバス API の <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D\">リファレンス</a> を参照してください。"
+        "p5.js API にはグラフィックを作成するための多くの機能がありますが、p5 では公開されていないネイティブの HTML5 Canvas 機能があります。ただし、変数 <code>drawingContext</code> を使用して直接呼び出すことができます。これは <code>canvas.getContext('2d');</code> または <code>canvas.getContext('webgl');</code> を呼び出すのと同等です。可能な描画関数については、ネイティブキャンバス API の <a href=\"https://developer.mozilla.org/ja/docs/Web/API/CanvasRenderingContext2D\">リファレンス</a> を参照してください。"
       ]
     },
     "noLoop": {
@@ -1587,8 +1587,8 @@
       "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
       "params": {
         "src": "String: 画像の src パスまたは URL",
-        "alt": "String: 画像が読み込まれない場合に使用される <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img#Attributes\">代替テキスト</a>。画像が意図的に表示されない場合は空の文字列（<code>\"\"</code>）を使用できます。",
-        "crossOrigin": "String: <code>img</code> 要素の <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes\">crossOrigin プロパティ</a>。'anonymous'または'use-credentials'を使用して、クロスオリジンアクセスで画像を取得します（後で <code>canvas</code> として使用するため）。空の文字列（<code>\"\"</code>）が渡された場合、CORS は使用されません",
+        "alt": "String: 画像が読み込まれない場合に使用される <a href=\"https://developer.mozilla.org/ja/docs/Web/HTML/Element/Img#Attributes\">代替テキスト</a>。画像が意図的に表示されない場合は空の文字列（<code>\"\"</code>）を使用できます。",
+        "crossOrigin": "String: <code>img</code> 要素の <a href=\"https://developer.mozilla.org/ja/docs/Web/HTML/CORS_settings_attributes\">crossOrigin プロパティ</a>。'anonymous'または'use-credentials'を使用して、クロスオリジンアクセスで画像を取得します（後で <code>canvas</code> として使用するため）。空の文字列（<code>\"\"</code>）が渡された場合、CORS は使用されません",
         "successCallback": "Function: (オプション) 画像データが読み込まれると、引数として <a href=\"#/p5.Element\">p5.Element</a> を使用して呼び出されるコールバック"
       }
     },
@@ -1686,7 +1686,7 @@
     },
     "createVideo": {
       "description": [
-        "HTML5 の <code>&lt;video&gt;</code> 要素を DOM に作成し、オーディオ/ビデオのシンプルな再生ができます。デフォルトで表示され、.<a href=\"#/p5.Element/hide\">hide()</a> で非表示にし、<a href=\"#/p5/image\">image()</a> を使ってキャンバスに描画できます。第1引数は、ビデオファイルへの単一の文字列パス、または同じビデオの異なる形式への文字列パスの配列のいずれかです。これは、異なるブラウザーでビデオを再生できるようにするために役立ちます。各ブラウザーは異なる形式をサポートしています。サポートされている形式についての詳細は、<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats'>このページ</a> を参照してください。"
+        "HTML5 の <code>&lt;video&gt;</code> 要素を DOM に作成し、オーディオ/ビデオのシンプルな再生ができます。デフォルトで表示され、.<a href=\"#/p5.Element/hide\">hide()</a> で非表示にし、<a href=\"#/p5/image\">image()</a> を使ってキャンバスに描画できます。第1引数は、ビデオファイルへの単一の文字列パス、または同じビデオの異なる形式への文字列パスの配列のいずれかです。これは、異なるブラウザーでビデオを再生できるようにするために役立ちます。各ブラウザーは異なる形式をサポートしています。サポートされている形式についての詳細は、<a href='https://developer.mozilla.org/ja/docs/Web/HTML/Supported_media_formats'>このページ</a> を参照してください。"
       ],
       "returns": "p5.MediaElement: ビデオ <a href=\"#/p5.MediaElement\">p5.MediaElement</a> へのポインタ",
       "params": {
@@ -1696,7 +1696,7 @@
     },
     "createAudio": {
       "description": [
-        "HTML5 の <code>&lt;audio&gt;</code> 要素を DOM 内に隠し、シンプルなオーディオ再生を行います。第1引数は、オーディオファイルへの単一の文字列パス、または同じオーディオの異なる形式への文字列パスの配列のいずれかです。これは、各ブラウザーが異なる形式をサポートしているため、オーディオが異なるブラウザー間で再生できることを確認するために役立ちます。<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats'>このページでは、サポートされている形式に関する詳細情報が提供されています</a>。"
+        "HTML5 の <code>&lt;audio&gt;</code> 要素を DOM 内に隠し、シンプルなオーディオ再生を行います。第1引数は、オーディオファイルへの単一の文字列パス、または同じオーディオの異なる形式への文字列パスの配列のいずれかです。これは、各ブラウザーが異なる形式をサポートしているため、オーディオが異なるブラウザー間で再生できることを確認するために役立ちます。<a href='https://developer.mozilla.org/ja/docs/Web/HTML/Supported_media_formats'>このページでは、サポートされている形式に関する詳細情報が提供されています</a>。"
       ],
       "returns": "p5.MediaElement: オーディオへのポインタ <a href=\"#/p5.MediaElement\">p5.MediaElement</a>",
       "params": {
@@ -1708,7 +1708,7 @@
       "description": [
         "ウェブカメラの音声/ビデオフィードを含む新しい HTML5 の <code>&lt;video&gt;</code> 要素を作成します。この要素はキャンバスとは別で、デフォルトで表示されます。要素は、.<a href=\"#/p5.Element/hide\">hide()</a> を使って非表示にすることができます。フィードは <a href=\"#/p5/image\">image()</a> を使ってキャンバスに描画することができます。loadedmetadata プロパティは要素が完全にロードされたことを検出するために使用できます(2つ目の例を参照)。",
         "フィードのより具体的なプロパティは、Constraints オブジェクトを渡すことで指定できます。<a href='http://w3c.github.io/mediacapture-main/getusermedia.html#media-track-constraints'>W3C の仕様</a> に可能なプロパティが記載されています。ただし、すべてのブラウザーでこれらがサポートされているわけではありません。",
-        "<em>セキュリティに関する注意</em>:新しいブラウザーのセキュリティ仕様では、<a href=\"#/p5/createCapture\">createCapture()</a> の背後にある getUserMedia は、コードをローカルで実行している場合、または HTTPS でのみ動作するようになっています。詳細は <a href='http://stackoverflow.com/questions/34197653/getusermedia-in-chrome-47-without-using-https'>こちら</a> と <a href='https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia'>こちら</a> を参照してください。"
+        "<em>セキュリティに関する注意</em>:新しいブラウザーのセキュリティ仕様では、<a href=\"#/p5/createCapture\">createCapture()</a> の背後にある getUserMedia は、コードをローカルで実行している場合、または HTTPS でのみ動作するようになっています。詳細は <a href='http://stackoverflow.com/questions/34197653/getusermedia-in-chrome-47-without-using-https'>こちら</a> と <a href='https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getUserMedia'>こちら</a> を参照してください。"
       ],
       "returns": "p5.Element: キャプチャビデオ <a href=\"#/p5.Element\">p5.Element</a>",
       "params": {
@@ -2167,7 +2167,7 @@
     },
     "pixels": {
       "description": [
-        "ディスプレイウィンドウ内のすべてのピクセルの値を含む <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference /Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a> です。これらの値は数値です。この配列は、ディスプレイウィンドウのサイズ（<a href=\"#/p5/pixelDensity\">pixelDensity</a> の適切な係数を含む）x4 で、各ピクセルの R、G、B、A の値を左から右へ、各行から下へ移動しながら順番に表現しています。Retina やその他の高密度ディスプレイは、ピクセル密度の二乗の係数であるピクセル[]を持っています。たとえば、画像が100 × 100ピクセルの場合、40,000になります。Retina ディスプレイでは160,000になります。",
+        "ディスプレイウィンドウ内のすべてのピクセルの値を含む <a href='https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a> です。これらの値は数値です。この配列は、ディスプレイウィンドウのサイズ（<a href=\"#/p5/pixelDensity\">pixelDensity</a> の適切な係数を含む）x4 で、各ピクセルの R、G、B、A の値を左から右へ、各行から下へ移動しながら順番に表現しています。Retina やその他の高密度ディスプレイは、ピクセル密度の二乗の係数であるピクセル[]を持っています。たとえば、画像が100 × 100ピクセルの場合、40,000になります。Retina ディスプレイでは160,000になります。",
         "配列の最初の4つの値（インデックス0-3）は、ピクセル(0, 0)の R、G、B、A の値です。次の4つの値（インデックス4-7）は、ピクセル(1, 0)の R、G、B、A の値が含まれます。一般的には、(x, y)のピクセルの値を設定するには、次のようにします:<pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
         "上記の方法は複雑ですが、任意の pixelDensity で動作する柔軟性があります。<a href=\"#/p5/set\">set()</a> は、任意の pixelDensity で指定された(x, y)に対して <a href=\"#/p5/pixels\">pixels[]</a> 内の適切な値を自動的に設定しますが、ピクセル配列に多くの変更が加えられるとパフォーマンスが低下することがあります。",
         "この配列にアクセスする前に、<a href=\"#/p5/loadPixels\">loadPixels()</a> 関数でデータをロードする必要があります。配列データが変更された後、<a href=\"#/p5/updatePixels\">updatePixels()</a> 関数を実行して変更を更新する必要があります。",
@@ -3737,7 +3737,7 @@
     },
     "userStartAudio": {
       "description": [
-        "ユーザーにオーディオの開始制御を与えることはよい慣習だけでなく、iOS や <a href=\"https://goo.gl/7K7WLu\" title=\"Google Chrome's autoplay policy\">Google Chrome</a> などの多くの Web ブラウザーによって強制されるポリシーです。これらのブラウザー固有のポリシーでは、Web Audio API の <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/AudioContext\" title=\"Audio Context @ MDN\">Audio Context</a> は一時停止状態で作成されます。",
+        "ユーザーにオーディオの開始制御を与えることはよい慣習だけでなく、iOS や <a href=\"https://goo.gl/7K7WLu\" title=\"Google Chrome's autoplay policy\">Google Chrome</a> などの多くの Web ブラウザーによって強制されるポリシーです。これらのブラウザー固有のポリシーでは、Web Audio API の <a href=\"https://developer.mozilla.org/ja/docs/Web/API/AudioContext\" title=\"Audio Context @ MDN\">Audio Context</a> は一時停止状態で作成されます。",
         "これらの場合、ユーザーが操作イベント（例: <code>mousePressed()</code>）を明示的に再開するか、オーディオノードを開始するまで、サウンドは再生されません。これは、<code>p5.Oscillator</code> の <code>start()</code>、<code>p5.SoundFile</code> の <code>play()</code>、または <code>userStartAudio()</code> を呼び出すことで達成できます。",
         "<code>userStartAudio()</code> は、ユーザージェスチャーで AudioContext を開始します。デフォルトの動作では、どの mouseUp または touchEnd イベントでもオーディオが有効になります。下の例のように、<code>mousePressed()</code> などの特定のインタラクション関数に配置することもできます。この方法では、Yotam Mann による <a href=\"https://github.com/tambien/StartAudioContext\">StartAudioContext </a> ライブラリ（MIT ライセンス、2016年）を使用します。"
       ],
@@ -4095,7 +4095,7 @@
     },
     "position": {
       "description": [
-        "要素の位置を設定します。位置タイプの引数が与えられない場合、位置はウィンドウの(0, 0)に対して相対的になります。基本的に、これにより position:absolute および style の left および top プロパティが設定されます。位置タイプを指定するオプションの第3引数が与えられた場合、x 座標と y 座標は <a target=\"_blank\" href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/position\">位置決めスキーム</a> にもとづいて解釈されます。引数が与えられない場合、関数は要素の x および y 位置を返します。"
+        "要素の位置を設定します。位置タイプの引数が与えられない場合、位置はウィンドウの(0, 0)に対して相対的になります。基本的に、これにより position:absolute および style の left および top プロパティが設定されます。位置タイプを指定するオプションの第3引数が与えられた場合、x 座標と y 座標は <a target=\"_blank\" href=\"https://developer.mozilla.org/ja/docs/Web/CSS/position\">位置決めスキーム</a> にもとづいて解釈されます。引数が与えられない場合、関数は要素の x および y 位置を返します。"
       ],
       "returns": "Object: 要素の位置を含むオブジェクト { x: 0, y: 0 }形式のオブジェクト",
       "params": {
@@ -4167,7 +4167,7 @@
     "drop": {
       "description": [
         "要素にドロップされたファイルがすべて読み込まれるたびに呼び出されるコールバックを登録します。p5 は、ドロップされたすべてのファイルをメモリーに読み込み、p5.File オブジェクトとしてコールバックに渡します。同時にドロップされた複数のファイルは、コールバックが複数回呼び出される結果となります。",
-        "必要に応じて、2つ目のコールバックを渡すこともできます。これは、生の <a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/drop\">drop</a> イベントに登録されます。そのため、コールバックは元の <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/DragEvent\">DragEvent</a> が提供されます。同時に複数のファイルをドロップすると、2つ目のコールバックは1回のドロップごとにトリガーされますが、最初のコールバックはロードされたファイルごとにトリガーされます。"
+        "必要に応じて、2つ目のコールバックを渡すこともできます。これは、生の <a href=\"https://developer.mozilla.org/ja/docs/Web/Events/drop\">drop</a> イベントに登録されます。そのため、コールバックは元の <a href=\"https://developer.mozilla.org/ja/docs/Web/API/DragEvent\">DragEvent</a> が提供されます。同時に複数のファイルをドロップすると、2つ目のコールバックは1回のドロップごとにトリガーされますが、最初のコールバックはロードされたファイルごとにトリガーされます。"
       ],
       "params": {
         "callback": "Function: 読み込まれたファイルを受け取るコールバックで、ドロップされた各ファイルに対して呼び出されます。",
@@ -4216,7 +4216,7 @@
   "JSON": {
     "stringify": {
       "description": [
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify\">MDN エントリ</a> から: JSON.stringify() メソッドは、JavaScript オブジェクトまたは値を JSON<a href=\"#/p5/string\">文字列</a> に変換します。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify\">MDN エントリ</a> から: JSON.stringify() メソッドは、JavaScript オブジェクトまたは値を JSON<a href=\"#/p5/string\">文字列</a> に変換します。"
       ],
       "params": {
         "object": "Object: JSON に変換したい JavaScript オブジェクト"
@@ -4227,8 +4227,8 @@
     "log": {
       "description": [
         "メッセージをブラウザーのウェブコンソールに出力します。p5 を使用する場合、<a href=\"#/p5/print\">print</a> と <a href=\"#/p5/console/log\">console.log</a> を互換性があります。",
-        "コンソールは、使用しているブラウザーによって異なる方法で開きます。以下は、<a href=\"https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console\">Firefox</a>、<a href=\"https://developers.google.com/web/tools/chrome-devtools/open\">Chrome</a>、<a href=\"https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/console\">Edge</a>、および <a href=\"https://support.apple.com/en-ca/guide/safari/sfri20948/mac\">Safari</a> でコンソールを開く方法に関するリンクです。 <a href=\"https://editor.p5js.org/\">オンライン p5 エディタ</a> では、コンソールはコードエディタの下に直接埋め込まれています。",
-        "<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Console/log\">MDN エントリ</a> から: Console メソッド log() は、ウェブコンソールにメッセージを出力します。メッセージは、単一の <a href=\"#/p5/string\">文字列</a>（オプションの置換値付き）であっても、ひとつ以上の JavaScript <a href=\"#/p5/object\">オブジェクト</a> であっても構いません。"
+        "コンソールは、使用しているブラウザーによって異なる方法で開きます。以下は、<a href=\"https://developer.mozilla.org/ja/docs/Tools/Web_Console/Opening_the_Web_Console\">Firefox</a>、<a href=\"https://developers.google.com/web/tools/chrome-devtools/open\">Chrome</a>、<a href=\"https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/console\">Edge</a>、および <a href=\"https://support.apple.com/en-ca/guide/safari/sfri20948/mac\">Safari</a> でコンソールを開く方法に関するリンクです。 <a href=\"https://editor.p5js.org/\">オンライン p5 エディタ</a> では、コンソールはコードエディタの下に直接埋め込まれています。",
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/API/Console/log\">MDN エントリ</a> から: Console メソッド log() は、ウェブコンソールにメッセージを出力します。メッセージは、単一の <a href=\"#/p5/string\">文字列</a>（オプションの置換値付き）であっても、ひとつ以上の JavaScript <a href=\"#/p5/object\">オブジェクト</a> であっても構いません。"
       ],
       "params": {
         "message": "String|Expression|Object: コンソールに出力したいメッセージ"
@@ -5643,7 +5643,7 @@
     },
     "pixels": {
       "description": [
-        "フレームバッファ内のすべてのピクセルの値を含む <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference /Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a> です。",
+        "フレームバッファ内のすべてのピクセルの値を含む <a href='https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a> です。",
         "<a href=\"#/p5/pixels\">メインキャンバスの pixels プロパティ</a> と同様に、読み取る前に <a href=\"#/p5.Framebuffer/loadPixels\">loadPixels()</a> を呼び出し、その後 <a href=\"#/p5.Framebuffer/updatePixels\">updatePixels()</a> を呼び出してデータを更新します。",
         "このプロパティ経由でピクセルを更新すると、 <a href=\"#/p5.Framebuffer/begin\">フレームバッファに直接描画する</a> よりも遅くなることに注意してください。ピクセル上でループする代わりにシェーダーを使用することを検討してください。"
       ]
@@ -6748,12 +6748,12 @@
   },
   "p5.Panner3D": {
     "description": [
-      "Panner3D は <a title=\"Web Audio Panner docs\" href= \"https://developer.mozilla.org/en-US/docs/Web/API/PannerNode\"> Web Audio Spatial Panner Node</a> にもとづいています。このパナーは、音声を 3D 空間に配置および方向付けするための空間処理ノードです。",
-      "位置は <a title=\"Web Audio Listener docs\" href= \"https://developer.mozilla.org/en-US/docs/Web/API/AudioListener\">Audio Context Listener</a> に相対的で、<code>p5.soundOut.audiocontext.listener</code> によってアクセスできます。"
+      "Panner3D は <a title=\"Web Audio Panner docs\" href= \"https://developer.mozilla.org/ja/docs/Web/API/PannerNode\"> Web Audio Spatial Panner Node</a> にもとづいています。このパナーは、音声を 3D 空間に配置および方向付けするための空間処理ノードです。",
+      "位置は <a title=\"Web Audio Listener docs\" href= \"https://developer.mozilla.org/ja/docs/Web/API/AudioListener\">Audio Context Listener</a> に相対的で、<code>p5.soundOut.audiocontext.listener</code> によってアクセスできます。"
     ],
     "panner": {
       "description": [
-        "<a title=\"Web Audio Panner docs\" href= \"https://developer.mozilla.org/en-US/docs/Web/API/PannerNode\"> Web Audio Spatial Panner Node</a>",
+        "<a title=\"Web Audio Panner docs\" href= \"https://developer.mozilla.org/ja/docs/Web/API/PannerNode\"> Web Audio Spatial Panner Node</a>",
         "プロパティには <a href=\"https://www.w3.org/TR/webaudio/#idl-def-PanningModelType\">Panning Model</a>: \"equal power\"または\"HRTF\"、<a href=\"https://www.w3.org/TR/webaudio/#idl-def-DistanceModelType\">DistanceModel</a>: \"linear\"、\"inverse\"、または\"exponential\"が含まれます。"
       ]
     },
