@@ -1195,7 +1195,7 @@
     "class": {
       "description": [
         "<a href=\"#/p5/class\">クラス</a> は、<a href=\"#/p5/object\">オブジェクト</a> の作成に使用されるテンプレートを作成および命名するためのものです。",
-        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/class\">MDN エントリ</a> から:クラス宣言は、プロトタイプベースの継承を使用して、指定された名前をもつ新しいクラスを作成します。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/class\">MDN エントリ</a> から: クラス宣言は、プロトタイプベースの継承を使用して、指定された名前をもつ新しいクラスを作成します。"
       ]
     },
     "for": {
