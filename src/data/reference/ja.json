@@ -1189,7 +1189,7 @@
     },
     "object": {
       "description": [
-        "<a href=\"https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics\">MDN のオブジェクトの基本</a> から:<a href=\"#/p5/object\">オブジェクト</a> は、関連するデータおよび/または機能（通常、いくつかの変数と関数で構成されます。これらは、オブジェクト内にあるときにプロパティとメソッドと呼ばれます。）のコレクションです。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics\">MDN のオブジェクトの基本</a> から: <a href=\"#/p5/object\">オブジェクト</a> は、関連するデータおよび/または機能のコレクションです（通常、いくつかの変数と関数で構成されます。これらは、オブジェクト内にあるときにプロパティとメソッドと呼ばれます）。"
       ]
     },
     "class": {
