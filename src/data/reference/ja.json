@@ -1178,7 +1178,7 @@
     "string": {
       "description": [
         "<a href=\"#/p5/string\">文字列</a> は、JavaScript の7つの <a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Data_structures#Primitive_values\">プリミティブデータ型</a> のひとつです。文字列は一連のテキスト文字です。JavaScript では、文字列値はシングルクォーテーション（'）またはダブルクォーテーション（\"）で囲む必要があります。",
-        "<a href=\"https://developer.mozilla.org/ja/docs/Glossary/string\">MDN エントリ</a> から:文字列とは、テキストを表す一連の文字です。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Glossary/string\">MDN エントリ</a> から: 文字列（string）とはテキストを表す連続した文字のことです。"
       ]
     },
     "number": {
@@ -1189,13 +1189,13 @@
     },
     "object": {
       "description": [
-        "<a href=\"https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics\">MDN のオブジェクトの基本</a> から:<a href=\"#/p5/object\">オブジェクト</a> は、関連するデータおよび/または機能（通常、いくつかの変数と関数で構成されます。これらは、オブジェクト内にあるときにプロパティとメソッドと呼ばれます。）のコレクションです。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics\">MDN のオブジェクトの基本</a> から: <a href=\"#/p5/object\">オブジェクト</a> は、関連するデータおよび/または機能のコレクションです（通常、いくつかの変数と関数で構成されます。これらは、オブジェクト内にあるときにプロパティとメソッドと呼ばれます）。"
       ]
     },
     "class": {
       "description": [
         "<a href=\"#/p5/class\">クラス</a> は、<a href=\"#/p5/object\">オブジェクト</a> の作成に使用されるテンプレートを作成および命名するためのものです。",
-        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/class\">MDN エントリ</a> から:クラス宣言は、プロトタイプベースの継承を使用して、指定された名前をもつ新しいクラスを作成します。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/class\">MDN エントリ</a> から: クラス宣言は、プロトタイプベースの継承を使用して、指定された名前をもつ新しいクラスを作成します。"
       ]
     },
     "for": {
