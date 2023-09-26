@@ -310,8 +310,7 @@ module.exports = function(grunt) {
     clean: {
       assets: [
         '<%= config.dist %>/**/*.*',
-        '!<%= config.dist %>/download/release.php',
-        '!<%= config.dist %>/download/version.json', // i18n-ja working only. don't merge to original repo.
+        '!<%= config.dist %>/download/version.json',
         '!<%= config.dist %>/git-pull.php',
         '!<%= config.dist %>/books/media.zip',
         '!<%= config.dist %>/learn/books/media.zip',
