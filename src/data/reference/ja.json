@@ -1178,7 +1178,7 @@
     "string": {
       "description": [
         "<a href=\"#/p5/string\">文字列</a> は、JavaScript の7つの <a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Data_structures#Primitive_values\">プリミティブデータ型</a> のひとつです。文字列は一連のテキスト文字です。JavaScript では、文字列値はシングルクォーテーション（'）またはダブルクォーテーション（\"）で囲む必要があります。",
-        "<a href=\"https://developer.mozilla.org/ja/docs/Glossary/string\">MDN エントリ</a> から:文字列とは、テキストを表す一連の文字です。"
+        "<a href=\"https://developer.mozilla.org/ja/docs/Glossary/string\">MDN エントリ</a> から: 文字列（string）とはテキストを表す連続した文字のことです。"
       ]
     },
     "number": {
