@@ -1217,17 +1217,14 @@
     },
     "createCanvas": {
       "description": [
-        "システム変数の幅と高さは、この関数に渡されたパラメーターによって設定されます。 <a href=\"#/p5/createCanvas\">createCanvas()</a> を使用しない場合、ウィンドウにはデフォルトサイズの100 × 100ピクセルが与えられます。",
-        "キャンバスを配置する別の方法については、<a href='https://github.com/processing/p5.js/wiki/Positioning-your-canvas'>キャンバスの位置づけ</a> Wiki ページを参照してください。",
-
-        "ドキュメント内でキャンバス要素を作成し、ピクセル単位でその寸法を設定します。この関数は <a href=\"#/p5/setup\">setup()</a> の開始時に一度だけ呼び出すべきです。<a href=\"#/p5/createCanvas\">createCanvas</a> をスケッチで複数回呼び出すと、非常に予測不可能な動作が生じます。複数の描画キャンバスが必要な場合は、<a href=\"#/p5/createGraphics\">createGraphics()</a> (デフォルトでは非表示ですが表示することが可能です)を使用できます。",
-        "重要な注意: 2D モード（つまり、<code>p5.Renderer</code> が設定されていない場合）では、原点（0,0）は画面の左上に位置します。3D モード（つまり、<code>p5.Renderer</code> が <code>WEBGL</code> に設定されている場合）では、原点はキャンバスの中心に位置します。詳しくは <a href=\"https://github.com/processing/p5.js/issues/1545\">この課題</a> をご覧ください。",
-        "WebGL キャンバスは、ブラウザがサポートしていれば WebGL2 コンテキストを使用します。 <a href=\"#/p5/webglVersion\">webglVersion</a> プロパティを確認して使用しているバージョンを確認するか、 <a href=\"#/p5/setAttributes\">setAttributes({ version: 1 })</a> を呼び出して WebGL1 コンテキストを作成します。",
-        "システム変数 width と height は、この関数に渡されたパラメーターによって設定されます。<a href=\"#/p5/createCanvas\">createCanvas()</a> を使用しない場合、ウィンドウにはデフォルトのサイズである 100 × 100ピクセルが割り当てられます。",
-        "オプションとして、セレクター(例: document.getElementById(''))を使用して既存のキャンバスを渡すことができます。指定した場合は、後で<code>setAttributes()</code>を使用しないようにしてください。これは既存のキャンバスを取り除き、再度作成します。",
+        "ドキュメント内でキャンバス要素を作成し、ピクセル単位でその寸法を設定します。この関数は <a href=\"#/p5/setup\">setup()</a> の開始時に一度だけ呼び出すようにしてください。<a href=\"#/p5/createCanvas\">createCanvas</a> をスケッチで複数回呼び出すと、まったく予測不可能な動作を引き起こします。複数の描画キャンバスが必要な場合は、<a href=\"#/p5/createGraphics\">createGraphics()</a>（デフォルトでは非表示ですが表示させることができます）を使用できます。",
+        "重要な注意: 2D モード（つまり、<code>p5.Renderer</code> が設定されていない場合）では、原点（0,0）は画面の左上に位置します。3D モード（つまり、<code>p5.Renderer</code> が <code>WEBGL</code> に設定されている場合）では、原点はキャンバスの中心に位置します。詳しくは <a href=\"https://github.com/processing/p5.js/issues/1545\">この issue</a> をご覧ください。",
+        "WebGL キャンバスは、ブラウザーがサポートしていれば WebGL2 コンテキストを使用します。<a href=\"#/p5/webglVersion\">webglVersion</a> プロパティで使用しているバージョンを確認するか、<a href=\"#/p5/setAttributes\">setAttributes({ version: 1 })</a> を呼び出して WebGL1 コンテキストを作成します。",
+        "システム変数 width と height は、この関数に渡されたパラメーターによって設定されます。<a href=\"#/p5/createCanvas\">createCanvas()</a> を使用しない場合、ウィンドウにはデフォルトのサイズである100×100ピクセルが割り当てられます。",
+        "オプションとして、セレクター（例: document.getElementById('')）を使用して既存のキャンバスを渡すことができます。指定した場合は、後で <code>setAttributes()</code> を使用しないようにしてください。これは既存のキャンバスを取り除き、再度作成します。",
         "その他のキャンバスを配置する方法については、 <a href='https://github.com/processing/p5.js/wiki/Positioning-your-canvas'>キャンバスの配置</a> の wiki ページを参照してください。"
       ],
-      "returns": "p5.Renderer: キャンバスを保持する p5.Renderer へのポインタ",
+      "returns": "p5.Renderer: キャンバスを保持する p5.Renderer へのポインター",
       "params": {
         "w": "Number: キャンバスの幅",
         "h": "Number: キャンバスの高さ",
@@ -1253,7 +1250,7 @@
     "createGraphics": {
       "description": [
         "新しい p5.Graphics オブジェクトを作成して返します。オフスクリーンのグラフィックスバッファに描画する必要がある場合は、このクラスを使用します。2つのパラメーターは、ピクセル単位の幅と高さを定義します。",
-        "WebGL p5.Graphics は、ブラウザが WebGL2 をサポートしている場合、 WebGL2 コンテキストを使用します。",
+        "WebGL p5.Graphics は、ブラウザーが WebGL2 をサポートしている場合、 WebGL2 コンテキストを使用します。",
         "レンダラの <a href=\"#/p5/webglVersion\">pg.webglVersion</a> プロパティを確認して使用しているバージョンを確認するか、<a href=\"#/p5/setAttributes\">pg.setAttributes({ version: 1 })</a>を呼び出して WebGL1 コンテキストを作成します。",
         "オプションとして、セレクター(例: document.getElementById(''))を使用して既存のキャンバスを渡すことができます。デフォルトではこのキャンバスは非表示（オフスクリーンバッファ）になりますが、表示するには、要素のスタイルを display:block; に設定します。"
       ],
@@ -1344,7 +1341,7 @@
       ],
       "params": {
         "sketch": "Object: p5.js スケッチを含む関数",
-        "node": "String|Object: スケッチを含む HTML DOM ノードの ID またはポインタ"
+        "node": "String|Object: スケッチを含む HTML DOM ノードの ID またはポインター"
       }
     },
     "applyMatrix": {
@@ -1557,7 +1554,7 @@
       "description": [
         "与えられた内部 HTML をもつ DOM 内に <code>&lt;div&gt;&lt;/div&gt;</code> 要素を作成します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "html": "String: (オプション) 作成された要素の内部 HTML"
       }
@@ -1566,7 +1563,7 @@
       "description": [
         "与えられた内部 HTML をもつ DOM 内の <code>&lt;p&gt;&lt;/p&gt;</code> 要素を作成します。段落の長さのテキストに使用されます。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "html": "String: (オプション) 作成された要素の内部 HTML"
       }
@@ -1575,7 +1572,7 @@
       "description": [
         "与えられた内部 HTML をもつ DOM 内の <code>&lt;span&gt;&lt;/span&gt;</code> 要素を作成します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "html": "String: (オプション) 作成された要素の内部 HTML"
       }
@@ -1584,7 +1581,7 @@
       "description": [
         "与えられた src および代替テキストを使用して、DOM 内に <code>&lt;img&gt;</code> 要素を作成します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "src": "String: 画像の src パスまたは URL",
         "alt": "String: 画像が読み込まれない場合に使用される <a href=\"https://developer.mozilla.org/ja/docs/Web/HTML/Element/Img#Attributes\">代替テキスト</a>。画像が意図的に表示されない場合は空の文字列（<code>\"\"</code>）を使用できます。",
@@ -1596,7 +1593,7 @@
       "description": [
         "DOM に <code>&lt;a&gt;&lt;/a&gt;</code> 要素を作成し、ハイパーリンクを含めます。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "href": "String: リンク先のページの URL",
         "html": "String: リンク要素内に表示する内部 HTML",
@@ -1607,7 +1604,7 @@
       "description": [
         "DOM にスライダーの <code>&lt;input&gt;&lt;/input&gt;</code> 要素を作成します。.size() を使って、スライダーの表示長さを設定します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "min": "Number:  スライダーの最小値",
         "max": "Number:  スライダーの最大値",
@@ -1619,7 +1616,7 @@
       "description": [
         "DOM に <code>&lt;button&gt;&lt;/button&gt;</code> 要素を作成します。.size() を使って、ボタンの表示サイズを設定します。.mousePressed() を使って、押下時の動作を指定します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "label": "String:  ボタンに表示されるラベル",
         "value": "String:  (オプション) ボタンの値"
@@ -1629,7 +1626,7 @@
       "description": [
         "DOM にチェックボックスの <code>&lt;input&gt;&lt;/input&gt;</code> 要素を作成します。チェックボックスに対して .checked() を呼び出すと、チェックされているかどうかを示すブール値が返されます。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "label": "String: (オプション) チェックボックスの後に表示されるラベル",
         "value": "Boolean: (オプション) チェックボックスの値; チェックされている場合は true、チェックされていない場合は false"
@@ -1639,7 +1636,7 @@
       "description": [
         "DOMに<code>&lt;select&gt;&lt;/select&gt;</code>要素のドロップダウンメニューを作成します。既存の選択ボックスを選択する際に、<a href=\"#/p5.Element\">p5.Element</a>に選択関連のメソッドも割り当てます。メニューのオプションは<code>name</code>（表示テキスト）で一意です。 <ul> <li><code>.option(name, [value])</code> を使用して、<code>name</code>（表示テキスト）および<code>value</code>を選択要素に追加するオプションを追加できます。選択要素内に<code>name</code>が既に存在する場合は、このメソッドでその値を<code>value</code>に変更します。</li> <li><code>.value()</code> は現在選択されているオプションを返します。</li> <li><code>.selected()</code> は現在のドロップダウン要素（<a href=\"#/p5.Element\">p5.Element</a>のインスタンス）を返します。</li> <li><code>.selected(value)</code>を使用すると、指定されたオプションをページが最初に読み込まれたときにデフォルトで選択されるようにすることができます。</li> <li><code>.disable()</code> はドロップダウン要素全体を無効にします。</li> <li><code>.disable(value)</code> は指定されたオプションを無効にします。</li> <li><code>.enable()</code> はドロップダウン要素全体が初めに無効化されている場合、ドロップダウン要素全体を有効にします。</li> <li><code>.enable(value)</code> は初期オプションが無効な場合、指定したオプションを有効にします。</li> </ul>"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "multiple": "Boolean: (オプション) ドロップダウンが複数の選択肢をサポートする場合は true",
         "existing": "Object: DOM の select 要素"
@@ -1649,7 +1646,7 @@
       "description": [
         "DOM にラジオボタン要素を作成します。また、既存のラジオボタンに <a href=\"#/p5.Element/\">p5.Element</a> のメソッドを割り当てるのに役立ちます。 <ul> <li><code>.option(value, [label])</code> は、要素に新しいオプションを作成するために使用できます。すでに値が存在するオプションがある場合は、それが返されます。<code>value</code> の入力として文字列値を使用することが推奨されます。オプションとして、2つ目の引数としてラベルを提供できます。</li> <li><code>.remove(value)</code> は、要素のオプションを削除するために使用できます。<code>value</code> の入力として文字列値が推奨されます。</li> <li><code>.value()</code> メソッドは、現在選択されている値を返します。</li> <li><code>.selected()</code> メソッドは、現在選択されている入力要素を返します。</li> <li><code>.selected(value)</code> メソッドは、オプションを選択して返します。<code>value</code> の入力として文字列値が推奨されます。</li> <li><code>.disable(Boolean)</code> メソッドは、ラジオボタン要素全体を有効/無効にします。</li> </ul>"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "containerElement": "Object: すべての既存のラジオ入力がオプションと見なされる div または span の HTML 要素コンテナ。",
         "name": "String: (オプション) 各入力要素の名前パラメーター。"
@@ -1659,7 +1656,7 @@
       "description": [
         "DOM 上でカラー入力のための colorPicker 要素を作成します。.value() メソッドは16進数のカラー文字列（#rrggbb）を返します。.color() メソッドは現在選択されているカラーの <a href=\"#/p5.Color\">p5.Color</a> オブジェクトを返します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "value": "String|p5.Color: 要素のデフォルトカラー(オプション)"
       }
@@ -1668,7 +1665,7 @@
       "description": [
         "DOM でテキスト入力用の <code>&lt;input&gt;&lt;/input&gt;</code> 要素を作成します。.<a href=\"#/p5.Element/size\">size()</a> を使ってボックスの表示長さを設定します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "value": "String: 入力ボックスのデフォルト値",
         "type": "String: テキストの種類(オプション)、例:text、password など。デフォルトは text。最初に値を指定する必要があります。"
@@ -1678,7 +1675,7 @@
       "description": [
         "DOM に 'file' タイプの <code>&lt;input&gt;&lt;/input&gt;</code> 要素を作成します。これにより、ユーザーはローカルファイルをスケッチで使用するために選択できます。"
       ],
-      "returns": "p5.Element: 作成された DOM 要素を保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成された DOM 要素を保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "callback": "Function: ファイルが読み込まれたときのコールバック関数",
         "multiple": "Boolean: (オプション) 複数のファイルを選択できるようにするオプション"
@@ -1688,7 +1685,7 @@
       "description": [
         "HTML5 の <code>&lt;video&gt;</code> 要素を DOM に作成し、オーディオ/ビデオのシンプルな再生ができます。デフォルトで表示され、.<a href=\"#/p5.Element/hide\">hide()</a> で非表示にし、<a href=\"#/p5/image\">image()</a> を使ってキャンバスに描画できます。第1引数は、ビデオファイルへの単一の文字列パス、または同じビデオの異なる形式への文字列パスの配列のいずれかです。これは、異なるブラウザーでビデオを再生できるようにするために役立ちます。各ブラウザーは異なる形式をサポートしています。サポートされている形式についての詳細は、<a href='https://developer.mozilla.org/ja/docs/Web/HTML/Supported_media_formats'>このページ</a> を参照してください。"
       ],
-      "returns": "p5.MediaElement: ビデオ <a href=\"#/p5.MediaElement\">p5.MediaElement</a> へのポインタ",
+      "returns": "p5.MediaElement: ビデオ <a href=\"#/p5.MediaElement\">p5.MediaElement</a> へのポインター",
       "params": {
         "src": "String|String[]: ビデオファイルへのパス、または異なるブラウザーをサポートするためのパスの配列",
         "callback": "Function: (オプション) 'canplaythrough' イベントが発火したときに呼ばれるコールバック関数。つまり、ブラウザーがメディアを再生でき、コンテンツのさらなるバッファリングが不要な状態でメディアを最後まで再生できると推定されるデータがロードされたとき"
@@ -1698,7 +1695,7 @@
       "description": [
         "HTML5 の <code>&lt;audio&gt;</code> 要素を DOM 内に隠し、シンプルなオーディオ再生を行います。第1引数は、オーディオファイルへの単一の文字列パス、または同じオーディオの異なる形式への文字列パスの配列のいずれかです。これは、各ブラウザーが異なる形式をサポートしているため、オーディオが異なるブラウザー間で再生できることを確認するために役立ちます。<a href='https://developer.mozilla.org/ja/docs/Web/HTML/Supported_media_formats'>このページでは、サポートされている形式に関する詳細情報が提供されています</a>。"
       ],
-      "returns": "p5.MediaElement: オーディオへのポインタ <a href=\"#/p5.MediaElement\">p5.MediaElement</a>",
+      "returns": "p5.MediaElement: オーディオへのポインター <a href=\"#/p5.MediaElement\">p5.MediaElement</a>",
       "params": {
         "src": "String|String[]: (オプション) オーディオファイルへのパス、または異なるブラウザーをサポートするためのパスの配列",
         "callback": "Function: (オプション) 'canplaythrough' イベントが発火した際に呼び出されるコールバック関数。つまり、ブラウザーがメディアを再生でき、コンテンツのさらなるバッファリングなしにメディアを最後まで再生できると予測される十分なデータがロードされたとき"
@@ -1718,7 +1715,7 @@
     },
     "createElement": {
       "description": ["指定されたタグと内容で DOM 内に要素を作成します。"],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインタ",
+      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "tag": "String: 新しい要素のタグ",
         "content": "String: (オプション) 要素に挿入される HTML コンテンツ"
@@ -2003,12 +2000,12 @@
     },
     "requestPointerLock": {
       "description": [
-        "関数 <a href=\"#/p5/requestPointerLock\">requestPointerLock()</a> は、ポインタを現在の位置にロックし、不可視にします。<a href=\"#/p5/movedX\">movedX</a> と <a href=\"#/p5/movedY\">movedY</a> を使って、draw の最後の呼び出し以降にマウスが移動した差分を取得します。すべてのブラウザーがこの機能をサポートしているわけではないことに注意してください。これにより、マウスが画面の外に出ても、繰り返し一方向に移動しても制限されないエクスペリエンスを作成できます。たとえば、一人称視点のエクスペリエンス。"
+        "関数 <a href=\"#/p5/requestPointerLock\">requestPointerLock()</a> は、ポインターを現在の位置にロックし、不可視にします。<a href=\"#/p5/movedX\">movedX</a> と <a href=\"#/p5/movedY\">movedY</a> を使って、draw の最後の呼び出し以降にマウスが移動した差分を取得します。すべてのブラウザーがこの機能をサポートしているわけではないことに注意してください。これにより、マウスが画面の外に出ても、繰り返し一方向に移動しても制限されないエクスペリエンスを作成できます。たとえば、一人称視点のエクスペリエンス。"
       ]
     },
     "exitPointerLock": {
       "description": [
-        "関数 <a href=\"#/p5/exitPointerLock\">exitPointerLock()</a> は、以前にトリガーされた <a href=\"#/p5/requestPointerLock\">ポインタロック</a> を終了させます。たとえば、UI 要素を使用可能にするためなど。"
+        "関数 <a href=\"#/p5/exitPointerLock\">exitPointerLock()</a> は、以前にトリガーされた <a href=\"#/p5/requestPointerLock\">ポインターロック</a> を終了させます。たとえば、UI 要素を使用可能にするためなど。"
       ]
     },
     "touches": {
@@ -3306,7 +3303,7 @@
         "sensitivityX": "Number: (オプション) X 軸に沿ったマウス移動の感度",
         "sensitivityY": "Number: (オプション) Y 軸に沿ったマウス移動の感度",
         "sensitivityZ": "Number: (オプション) Z 軸に沿ったスクロール移動の感度",
-        "options": "Object: (オプション) 追加の設定を含むオブジェクト、disableTouchActions - Boolean: デフォルト値は true です。これを true に設定すると、orbit中の偶然のページインタラクションが防がれるで、モバイルでのインタラクションがスムーズになります。しかし、すでにcssを通じて行っているか、デフォルトのタッチアクションが必要な場合は、これを false に設定することを検討してください。 freeRotation - Boolan: デフォルト値は false です。デフォルトでは、マウスまたはタッチポインタの水平方向の動きはカメラを y 軸周りに回転させ、垂直方向の動きはカメラを x 軸周りに回転させます。しかし、このオプションを true に設定すると、カメラは常にポインタが移動している方向に回転します。ズームと移動については、 true/false に関係なく挙動は同じです。"
+        "options": "Object: (オプション) 追加の設定を含むオブジェクト、disableTouchActions - Boolean: デフォルト値は true です。これを true に設定すると、orbit中の偶然のページインタラクションが防がれるで、モバイルでのインタラクションがスムーズになります。しかし、すでにcssを通じて行っているか、デフォルトのタッチアクションが必要な場合は、これを false に設定することを検討してください。 freeRotation - Boolan: デフォルト値は false です。デフォルトでは、マウスまたはタッチポインターの水平方向の動きはカメラを y 軸周りに回転させ、垂直方向の動きはカメラを x 軸周りに回転させます。しかし、このオプションを true に設定すると、カメラは常にポインターが移動している方向に回転します。ズームと移動については、 true/false に関係なく挙動は同じです。"
       }
     },
     "debugMode": {
@@ -3849,7 +3846,7 @@
       "<a href=\"#/p5/color\">color()</a> は、このクラスのインスタンスを作成するのに推奨される方法です。"
     ],
     "params": {
-      "pInst": "P5: (オプション) p5インスタンスへのポインタ",
+      "pInst": "P5: (オプション) p5インスタンスへのポインター",
       "vals": "Number[]|String: 赤、緑、青、およびアルファチャンネル、または、 CSS カラーの色値を含む配列。"
     },
     "toString": {
@@ -3900,7 +3897,7 @@
     ],
     "params": {
       "elt": "HTMLElement: ラップされた DOM ノード",
-      "pInst": "P5: (オプション) p5 インスタンスへのポインタ"
+      "pInst": "P5: (オプション) p5 インスタンスへのポインター"
     },
     "elt": {
       "description": [
@@ -4183,7 +4180,7 @@
       "w": "Number: 幅",
       "h": "Number: 高さ",
       "renderer": "Constant: 使用するレンダラーで、P2D または WEBGL のいずれか",
-      "pInst": "P5: (オプション) p5 インスタンスへのポインタ",
+      "pInst": "P5: (オプション) p5 インスタンスへのポインター",
       "canvas": "Object: (オプション) 既存の HTML Canvas 要素"
     },
     "reset": {
@@ -4209,7 +4206,7 @@
     ],
     "params": {
       "elt": "HTMLElement: ラップされた DOM ノード",
-      "pInst": "P5: (オプション) p5 インスタンスへのポインタ",
+      "pInst": "P5: (オプション) p5 インスタンスへのポインター",
       "isMainCanvas": "Boolean: (オプション) メインキャンバスとして使用するかどうか"
     }
   },
@@ -6526,7 +6523,7 @@
     "start": {
       "description": [
         "オーディオ入力処理を開始します。これにより、getLevel() などの他 AudioIn メソッドを使用できるようになります。デフォルトでは、AudioIn は p5.sound の出力に接続されていないため、connect() メソッドを使用しない限り、何も聞こえません。<br/>",
-        "一部のブラウザーは、ユーザーのマイクへのアクセスを制限しています。たとえば、Chrome ブラウザでは localhost と https からのアクセスのみ許可されています。このため、mic アクセスが提供されない場合に呼び出される errorCallback（関数）を含めた方がよい場合があります。"
+        "一部のブラウザーは、ユーザーのマイクへのアクセスを制限しています。たとえば、Chrome ブラウザーでは localhost と https からのアクセスのみ許可されています。このため、mic アクセスが提供されない場合に呼び出される errorCallback（関数）を含めた方がよい場合があります。"
       ],
       "params": {
         "successCallback": "Function: (オプション) 成功時に呼び出す関数の名前",
