@@ -1250,7 +1250,7 @@
     "createGraphics": {
       "description": [
         "新しい p5.Graphics オブジェクトを作成して返します。オフスクリーンのグラフィックスバッファに描画する必要がある場合は、このクラスを使用します。2つのパラメーターは、ピクセル単位の幅と高さを定義します。",
-        "WebGL p5.Graphics は、ブラウザが WebGL2 をサポートしている場合、 WebGL2 コンテキストを使用します。",
+        "WebGL p5.Graphics は、ブラウザーが WebGL2 をサポートしている場合、 WebGL2 コンテキストを使用します。",
         "レンダラの <a href=\"#/p5/webglVersion\">pg.webglVersion</a> プロパティを確認して使用しているバージョンを確認するか、<a href=\"#/p5/setAttributes\">pg.setAttributes({ version: 1 })</a>を呼び出して WebGL1 コンテキストを作成します。",
         "オプションとして、セレクター(例: document.getElementById(''))を使用して既存のキャンバスを渡すことができます。デフォルトではこのキャンバスは非表示（オフスクリーンバッファ）になりますが、表示するには、要素のスタイルを display:block; に設定します。"
       ],
@@ -6523,7 +6523,7 @@
     "start": {
       "description": [
         "オーディオ入力処理を開始します。これにより、getLevel() などの他 AudioIn メソッドを使用できるようになります。デフォルトでは、AudioIn は p5.sound の出力に接続されていないため、connect() メソッドを使用しない限り、何も聞こえません。<br/>",
-        "一部のブラウザーは、ユーザーのマイクへのアクセスを制限しています。たとえば、Chrome ブラウザでは localhost と https からのアクセスのみ許可されています。このため、mic アクセスが提供されない場合に呼び出される errorCallback（関数）を含めた方がよい場合があります。"
+        "一部のブラウザーは、ユーザーのマイクへのアクセスを制限しています。たとえば、Chrome ブラウザーでは localhost と https からのアクセスのみ許可されています。このため、mic アクセスが提供されない場合に呼び出される errorCallback（関数）を含めた方がよい場合があります。"
       ],
       "params": {
         "successCallback": "Function: (オプション) 成功時に呼び出す関数の名前",
