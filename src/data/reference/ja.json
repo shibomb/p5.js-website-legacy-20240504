@@ -1217,14 +1217,11 @@
     },
     "createCanvas": {
       "description": [
-        "システム変数の幅と高さは、この関数に渡されたパラメーターによって設定されます。 <a href=\"#/p5/createCanvas\">createCanvas()</a> を使用しない場合、ウィンドウにはデフォルトサイズの100 × 100ピクセルが与えられます。",
-        "キャンバスを配置する別の方法については、<a href='https://github.com/processing/p5.js/wiki/Positioning-your-canvas'>キャンバスの位置づけ</a> Wiki ページを参照してください。",
-
-        "ドキュメント内でキャンバス要素を作成し、ピクセル単位でその寸法を設定します。この関数は <a href=\"#/p5/setup\">setup()</a> の開始時に一度だけ呼び出すべきです。<a href=\"#/p5/createCanvas\">createCanvas</a> をスケッチで複数回呼び出すと、非常に予測不可能な動作が生じます。複数の描画キャンバスが必要な場合は、<a href=\"#/p5/createGraphics\">createGraphics()</a> (デフォルトでは非表示ですが表示することが可能です)を使用できます。",
-        "重要な注意: 2D モード（つまり、<code>p5.Renderer</code> が設定されていない場合）では、原点（0,0）は画面の左上に位置します。3D モード（つまり、<code>p5.Renderer</code> が <code>WEBGL</code> に設定されている場合）では、原点はキャンバスの中心に位置します。詳しくは <a href=\"https://github.com/processing/p5.js/issues/1545\">この課題</a> をご覧ください。",
-        "WebGL キャンバスは、ブラウザがサポートしていれば WebGL2 コンテキストを使用します。 <a href=\"#/p5/webglVersion\">webglVersion</a> プロパティを確認して使用しているバージョンを確認するか、 <a href=\"#/p5/setAttributes\">setAttributes({ version: 1 })</a> を呼び出して WebGL1 コンテキストを作成します。",
-        "システム変数 width と height は、この関数に渡されたパラメーターによって設定されます。<a href=\"#/p5/createCanvas\">createCanvas()</a> を使用しない場合、ウィンドウにはデフォルトのサイズである 100 × 100ピクセルが割り当てられます。",
-        "オプションとして、セレクター(例: document.getElementById(''))を使用して既存のキャンバスを渡すことができます。指定した場合は、後で<code>setAttributes()</code>を使用しないようにしてください。これは既存のキャンバスを取り除き、再度作成します。",
+        "ドキュメント内でキャンバス要素を作成し、ピクセル単位でその寸法を設定します。この関数は <a href=\"#/p5/setup\">setup()</a> の開始時に一度だけ呼び出すようにしてください。<a href=\"#/p5/createCanvas\">createCanvas</a> をスケッチで複数回呼び出すと、まったく予測不可能な動作を引き起こします。複数の描画キャンバスが必要な場合は、<a href=\"#/p5/createGraphics\">createGraphics()</a>（デフォルトでは非表示ですが表示させることができます）を使用できます。",
+        "重要な注意: 2D モード（つまり、<code>p5.Renderer</code> が設定されていない場合）では、原点（0,0）は画面の左上に位置します。3D モード（つまり、<code>p5.Renderer</code> が <code>WEBGL</code> に設定されている場合）では、原点はキャンバスの中心に位置します。詳しくは <a href=\"https://github.com/processing/p5.js/issues/1545\">この issue</a> をご覧ください。",
+        "WebGL キャンバスは、ブラウザーがサポートしていれば WebGL2 コンテキストを使用します。<a href=\"#/p5/webglVersion\">webglVersion</a> プロパティで使用しているバージョンを確認するか、<a href=\"#/p5/setAttributes\">setAttributes({ version: 1 })</a> を呼び出して WebGL1 コンテキストを作成します。",
+        "システム変数 width と height は、この関数に渡されたパラメーターによって設定されます。<a href=\"#/p5/createCanvas\">createCanvas()</a> を使用しない場合、ウィンドウにはデフォルトのサイズである100×100ピクセルが割り当てられます。",
+        "オプションとして、セレクター（例: document.getElementById('')）を使用して既存のキャンバスを渡すことができます。指定した場合は、後で <code>setAttributes()</code> を使用しないようにしてください。これは既存のキャンバスを取り除き、再度作成します。",
         "その他のキャンバスを配置する方法については、 <a href='https://github.com/processing/p5.js/wiki/Positioning-your-canvas'>キャンバスの配置</a> の wiki ページを参照してください。"
       ],
       "returns": "p5.Renderer: キャンバスを保持する p5.Renderer へのポインタ",
