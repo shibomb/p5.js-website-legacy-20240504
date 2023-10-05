@@ -1244,7 +1244,7 @@
     },
     "noCanvas": {
       "description": [
-        "canvas が必要ない p5 スケッチのデフォルトの canvas を削除します。"
+        "キャンバスが必要ない p5 スケッチのデフォルトのキャンバスを削除します。"
       ]
     },
     "createGraphics": {
