@@ -1251,8 +1251,8 @@
       "description": [
         "新しい p5.Graphics オブジェクトを作成して返します。オフスクリーンのグラフィックスバッファに描画する必要がある場合は、このクラスを使用します。2つのパラメーターは、ピクセル単位の幅と高さを定義します。",
         "WebGL p5.Graphics は、ブラウザーが WebGL2 をサポートしている場合、WebGL2 コンテキストを使用します。",
-        "レンダラーの <a href=\"#/p5/webglVersion\">pg.webglVersion</a> プロパティを確認して使用しているバージョンを確認するか、<a href=\"#/p5/setAttributes\">pg.setAttributes({ version: 1 })</a>を呼び出して WebGL1 コンテキストを作成します。",
-        "オプションとして、セレクター(例: document.getElementById(''))を使用して既存のキャンバスを渡すことができます。デフォルトではこのキャンバスは非表示（オフスクリーンバッファ）になりますが、表示するには、要素のスタイルを display:block; に設定します。"
+        "レンダラーの <a href=\"#/p5/webglVersion\">pg.webglVersion</a> プロパティを確認して使用しているバージョンを確認するか、<a href=\"#/p5/setAttributes\">pg.setAttributes({ version: 1 })</a> を呼び出して WebGL1 コンテキストを作成します。",
+        "オプションとして、セレクター（例: document.getElementById('')）を使用して既存のキャンバスを渡すことができます。デフォルトではこのキャンバスは非表示（オフスクリーンバッファ）になりますが、表示するには、要素のスタイルを display:block; に設定します。"
       ],
       "returns": "p5.Graphics: オフスクリーングラフィックバッファ",
       "params": {
