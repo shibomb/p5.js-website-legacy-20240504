@@ -17,6 +17,8 @@
    // シェーダーを使うためには WEBGL モードにする必要があります。
    createCanvas(710, 400, WEBGL);
    noStroke();
+
+   describe('a 2d example containing a sage green polygon, rotating in the middle of the sketch. As the mouse moves horizontally, the number of sides for the polygon change.')
  }
 
  function draw() {
@@ -25,7 +27,7 @@
 
    // 解像度、マウス、時間をシェーダーに送信しましょう。
    // マウスと時間を送信する前に、シェーダーで扱いやすくなるようにデータ加工しています。
-   theShader.setUniform('resolution', [width, height]);
+   theShader.setUniform('resolution', [width * displayDensity(), height * displayDensity()]);
    theShader.setUniform('mouse', map(mouseX, 0, width, 0, 7));
    theShader.setUniform('time', frameCount * 0.01);
 
