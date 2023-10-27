@@ -223,6 +223,37 @@
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a> オブジェクト、色成分の配列、または CSS カラー文字列"
       }
     },
+    "beginClip": {
+      "description": [
+        "Start defining a shape that will mask subsequent things drawn to the canvas. Only opaque regions of the mask shape will allow content to be drawn. Any shapes drawn between this and <a href=\"#/p5/endClip\">endClip()</a> will contribute to the mask shape.",
+        "The mask will apply to anything drawn after this call. To draw without a mask, contain the code to apply the mask and to draw the masked content between <a href=\"#/p5/push\">push()</a> and <a href=\"#/p5/pop\">pop()</a>.",
+        "Alternatively, rather than drawing the mask between this and <a href=\"#/p5/endClip\">endClip()</a>, draw the mask in a callback function passed to <a href=\"#/p5/clip\">clip()</a>.",
+        "Options can include: <ul> <li><code>invert</code>: A boolean specifying whether or not to mask the areas <em>not</em> filled by the mask shape. Defaults to false.</li> </ul>",
+        "///"
+      ],
+      "params": {
+        "options": "Object: (Optional) An object containing clip settings."
+      }
+    },
+    "endClip": {
+      "description": [
+        "Finishes defining a shape that will mask subsequent things drawn to the canvas. Only opaque regions of the mask shape will allow content to be drawn. Any shapes drawn between <a href=\"#/p5/beginClip\">beginClip()</a> and this will contribute to the mask shape.",
+        "///"
+      ]
+    },
+    "clip": {
+      "description": [
+        "Use the shape drawn by a callback function to mask subsequent things drawn to the canvas. Only opaque regions of the mask shape will allow content to be drawn.",
+        "The mask will apply to anything drawn after this call. To draw without a mask, contain the code to apply the mask and to draw the masked content between <a href=\"#/p5/push\">push()</a> and <a href=\"#/p5/pop\">pop()</a>.",
+        "Alternatively, rather than drawing the mask shape in a function, draw the shape between <a href=\"#/p5/beginClip\">beginClip()</a> and <a href=\"#/p5/endClip\">endClip()</a>.",
+        "Options can include: <ul> <li><code>invert</code>: A boolean specifying whether or not to mask the areas <em>not</em> filled by the mask shape. Defaults to false.</li> </ul>",
+        "///"
+      ],
+      "params": {
+        "callback": "Function: A function that draws the mask shape.",
+        "options": "Object: (Optional) An object containing clip settings."
+      }
+    },
     "background": {
       "description": [
         "<a href=\"#/p5/background\">background()</a> 関数は、p5.js キャンバスの背景に使用される色を設定します。デフォルトの背景は透明です。この関数は通常、<a href=\"#/p5/draw\">draw()</a> 内で各フレームの開始時にディスプレイウィンドウをクリアするために使用されますが、<a href=\"#/p5/setup\">setup()</a> 内でアニメーションの最初のフレームの背景を設定するために使用されることもありますし、背景を一度だけ設定する必要がある場合にも使用できます。",
@@ -230,7 +261,6 @@
         "単一の文字列引数が提供された場合、RGB、RGBA、および16進数の CSS カラー文字列およびすべての名前付きカラー文字列がサポートされます。この場合、2番目の引数としてのアルファ数値はサポートされず、RGBA 形式を使用する必要があります。",
         "<a href=\"#/p5.Color\">p5.Color</a> オブジェクトを渡して背景色を設定することもできます。",
         "また、<a href=\"#/p5.Image\">p5.Image</a> を渡して背景画像を設定することもできます。",
-
         "キャンバスの背景に使用される色を設定します。デフォルトでは、背景は透明です。この関数は通常、<a href=\"#/p5/draw\">draw()</a>内で使用され、各フレームの開始時に表示ウィンドウをクリアするために使用されます。また、<a href=\"#/p5/setup\">setup()</a>内で使用して、アニメーションの最初のフレームの背景を設定することもできます。",
         "<code>background()</code>のパラメーターが1つあるバージョンは、その値を4つの方法で解釈します。パラメーターが数字の場合、それはグレースケール値と解釈されます。パラメーターが文字列の場合、それは CSS カラー文字列と解釈されます。RGB、RGBA、HSL、HSLA、16進数、および名前付き色文字列がサポートされています。パラメーターが<a href=\"#/p5.Color\">p5.Color</a>オブジェクトの場合、それは背景色として使用されます。パラメーターが<a href=\"#/p5.Image\">p5.Image</a>オブジェクトの場合、それは背景画像として使用されます。",
         "<code>background()</code>のパラメーターが2つあるバージョンは、最初のパラメーターをグレースケール値と解釈します。2番目のパラメーターはアルファ（透明度）値を設定します。",
@@ -719,10 +749,13 @@
     },
     "endShape": {
       "description": [
+        "The <a href=\"#/p5/endShape\">endShape()</a> function is the companion to <a href=\"#/p5/beginShape\">beginShape()</a> and may only be called after <a href=\"#/p5/beginShape\">beginShape()</a>. When <a href=\"#/p5/endshape\">endShape()</a> is called, all of the image data defined since the previous call to <a href=\"#/p5/beginShape\">beginShape()</a> is written into the image buffer. The constant CLOSE is the value for the <code>mode</code> parameter to close the shape (to connect the beginning and the end). When using instancing with <a href=\"#/p5/endShape\">endShape()</a> the instancing will not apply to the strokes. When the count parameter is used with a value greater than 1, it enables instancing for shapes built when in WEBGL mode. Instancing is a feature that allows the GPU to efficiently draw multiples of the same shape. It's often used for particle effects or other times when you need a lot of repetition. In order to take advantage of instancing, you will also need to write your own custom shader using the gl_InstanceID keyword. You can read more about instancing <a href=\"https://webglfundamentals.org/webgl/lessons/webgl-instanced-drawing.html\">here</a> or by working from the example on this page.",
+        "///",
         "<a href=\"#/p5/endShape\">endShape()</a> 関数は、<a href=\"#/p5/beginShape\">beginShape()</a> とペアで使用され、<a href=\"#/p5/beginShape\">beginShape()</a> の後でのみ呼び出すことができます。<a href=\"#/p5/endshape\">endShape()</a> が呼び出されると、前回の <a href=\"#/p5/beginShape\">beginShape()</a> の呼び出し以降に定義されたすべての画像データが画像バッファに書き込まれます。定数 CLOSE を <code>mode</code> パラメーターの値として使用して、図形を閉じる（始点と終点を接続する）ことができます。"
       ],
       "params": {
-        "mode": "Constant: (オプション) 図形を閉じるために CLOSE を使用"
+        "mode": "Constant: (オプション) 図形を閉じるために CLOSE を使用",
+        "count": "Integer: (Optional) number of times you want to draw/instance the shape (for WebGL mode)."
       }
     },
     "quadraticVertex": {
@@ -770,6 +803,10 @@
     },
     "WEBGL": {
       "description": [
+        "One of the two render modes in p5.js, used for computationally intensive tasks like 3D rendering and shaders.",
+        "<code>WEBGL</code> differs from the default <a href=\"/reference/#/p5/P2D\"><code>P2D</code></a> renderer in the following ways: <ul> <li><strong>Coordinate System</strong> - When drawing in <code>WEBGL</code> mode, the origin point (0,0,0) is located at the center of the screen, not the top-left corner. See <a href=\"https://p5js.org/learn/getting-started-in-webgl-coords-and-transform.html\">the learn page about coordinates and transformations</a>.</li> <li><strong>3D Shapes</strong> - <code>WEBGL</code> mode can be used to draw 3-dimensional shapes like <a href=\"/reference/#/p5/box\">box()</a>, <a href=\"/reference/#/p5/sphere\">sphere()</a>, <a href=\"/reference/#/p5/cone\">cone()</a>, and <a href=\"/#Shape3D%20Primitives\">more</a>. See <a href=\"https://p5js.org/learn/getting-started-in-webgl-custom-geometry.html\">the learn page about custom geometry</a> to make more complex objects.</li> <li><strong>Shape Detail</strong> - When drawing in <code>WEBGL</code> mode, you can specify how smooth curves should be drawn by using a <code>detail</code> parameter. See <a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#3d-primitives-shapes\">the wiki section about shapes</a> for a more information and an example.</li> <li><strong>Textures</strong> - A texture is like a skin that wraps onto a shape. See <a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#textures\">the wiki section about textures</a> for examples of mapping images onto surfaces with textures.</li> <li><strong>Materials and Lighting</strong> - <code>WEBGL</code> offers different types of lights like <a href=\"/reference/#/p5/ambientLight\">ambientLight()</a> to place around a scene. Materials like <a href=\"/reference/#/p5/specularMaterial\">specularMaterial()</a> reflect the lighting to convey shape and depth. See <a href=\"https://p5js.org/learn/getting-started-in-webgl-appearance.html\">the learn page for styling and appearance</a> to experiment with different combinations.</li> <li><strong>Camera</strong> - The viewport of a <code>WEBGL</code> sketch can be adjusted by changing camera attributes. See <a href=\"https://p5js.org/learn/getting-started-in-webgl-appearance.html#camera\">the learn page section about cameras</a> for an explanation of camera controls.</li> <li><strong>Text</strong> - <code>WEBGL</code> requires opentype/truetype font files to be preloaded using <a href=\"/reference/#/p5/loadFont\">loadFont()</a>. See <a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#text\">the wiki section about text</a> for details, along with a workaround.</li> <li><strong>Shaders</strong> - Shaders are hardware accelerated programs that can be used for a variety of effects and graphics. See the <a href=\"https://p5js.org/learn/getting-started-in-webgl-shaders.html\">introduction to shaders</a> to get started with shaders in p5.js.</li> <li><strong>Graphics Acceleration</strong> - <code>WEBGL</code> mode uses the graphics card instead of the CPU, so it may help boost the performance of your sketch (example: drawing more shapes on the screen at once).</li> </ul>",
+        "To learn more about WEBGL mode, check out <a href=\"https://p5js.org/learn/#:~:text=Getting%20Started%20in%20WebGL\">all the interactive WEBGL tutorials</a> in the \"Learn\" section of this website, or read the wiki article <a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5\">\"Getting started with WebGL in p5\"</a>.",
+        "///",
         "p5.jsの2つのレンダーモードの1つで、3Dレンダリングやシェーダーなどの計算処理が重い作業に使われます。",
         "<code>WEBGL</code> は、デフォルトの <a href=\"/#/p5/P2D\"><code>P2D</code></a> レンダラーと以下のように異なります: <ul> <li><strong>座標系</strong> - <code>WEBGL</code> モードで描画する場合、原点（0,0,0）は画面の左上ではなく、中央に位置します。<a href=\"https://p5js.org/learn/getting-started-in-webgl-coords-and-transform.html\">座標と変換についての学習ページ</a>をご覧ください。</li> <li><strong>3D形状</strong> - <code>WEBGL</code> モードは、<a href=\"/#/p5/box\">box()</a>, <a href=\"/#/p5/sphere\">sphere()</a>, <a href=\"/#/p5/cone\">cone()</a>, および<a href=\"/#Shape3D%20Primitives\">その他</a>など、3次元の形状の描画に利用できます。より複雑なオブジェクトを作成するためには、<a href=\"https://p5js.org/learn/getting-started-in-webgl-custom-geometry.html\">カスタムジオメトリについての学習ページ</a>をご覧ください。</li> <li><strong>形状の詳細</strong> - <code>WEBGL</code> モードで描画する際、<code>detail</code> パラメーターを使用して曲線がどの程度滑らかに描かれるかを指定できます。<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#3d-primitives-shapes\">形状に関するwikiセクション</a>をご覧いただければ、より多くの情報と例を見つけられます。</li> <li><strong>テクスチャ</strong> - テクスチャは、形状に被せるスキンのようなものです。<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#textures\">テクスチャに関するwikiセクション</a>を参照して、テクスチャを使って面に画像をマッピングする例をご覧ください。</li> <li><strong>素材と照明</strong> - <code>WEBGL</code> は、シーンを配置するための、<a href=\"/#/p5/ambientLight\">ambientLight()</a>などのさまざまなタイプのライトを提供します。照明を反射し形状と深度を伝える素材として<a href=\"/#/p5/specularMaterial\">specularMaterial()</a>などがあります。異なる組み合わせで実験をするためには、<a href=\"https://p5js.org/learn/getting-started-in-webgl-appearance.html\">スタイリングと外観についての学習ページ</a>をご覧ください。</li> <li><strong>カメラ</strong> - <code>WEBGL</code>スケッチのビューポートは、カメラの属性を変更することで調整できます。<a href=\"https://p5js.org/learn/getting-started-in-webgl-appearance.html#camera\">カメラについての学習ページセクション</a>をご覧いただくと、カメラコントロールの説明があります。</li> <li><strong>テキスト</strong> - <code>WEBGL</code>では、opentype/truetypeフォントファイルを<a href=\"/#/p5/loadFont\">loadFont()</a>を使用して事前に読み込む必要があります。<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#text\">テキストについてのwikiセクション</a>をご覧いただくと、詳細と回避策があります。</li> <li><strong>シェーダー</strong> - シェーダーは、さまざまなエフェクトやグラフィックスに使用できるハードウェアアクセラレートプログラムです。p5.jsでシェーダーの使い方を始めるには、<a href=\"https://p5js.org/learn/getting-started-in-webgl-shaders.html\">シェーダーの導入</a>をご覧ください。</li> <li><strong>グラフィックスアクセラレーション</strong> - <code>WEBGL</code> モードでは、CPUではなくグラフィックカードを利用するため、スケッチのパフォーマンスを向上させる可能性があります（例：一度に画面上により多くの形状を描画する）。</li> </ul>",
         "WEBGL モードについて詳しく知りたい場合は、このウェブサイトの「学ぶ」セクションの<a href=\"https://p5js.org/learn/#:~:text=Getting%20Started%20in%20WebGL\">さまざまなインタラクティブなWEBGLチュートリアル</a>をチェックするか、wiki記事 <a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5\">「p5でWebGLを始める」</a>を読んでください。"
@@ -858,6 +895,8 @@
     "HSL": {},
     "AUTO": {
       "description": [
+        "AUTO allows us to automatically set the width or height of an element (but not both), based on the current height and width of the element. Only one parameter can be passed to the <a href=\"/reference/#/p5.Element/size\">size</a> function as AUTO, at a time.",
+        "///",
         "AUTO を使用すると、要素の現在の高さと幅にもとづいて、要素の幅または高さ（両方ではない）を自動的に設定できます。<a href=\"/#/p5.Element/size\">size</a> 関数に AUTO として渡すことができるパラメーターは一度にひとつだけです。"
       ]
     },
@@ -929,6 +968,7 @@
     "UNSIGNED_BYTE": {},
     "UNSIGNED_INT": {},
     "FLOAT": {},
+    "HALF_FLOAT": {},
     "RGBA": {},
     "print": {
       "description": [
@@ -967,6 +1007,10 @@
     },
     "frameRate": {
       "description": [
+        "Specifies the number of frames to be displayed every second. For example, the function call frameRate(30) will attempt to refresh 30 times a second. If the processor is not fast enough to maintain the specified rate, the frame rate will not be achieved. Setting the frame rate within <a href=\"#/p5/setup\">setup()</a> is recommended. The default frame rate is based on the frame rate of the display (here also called \"refresh rate\"), which is set to 60 frames per second on most computers. A frame rate of 24 frames per second (usual for movies) or above will be enough for smooth animations. This is the same as setFrameRate(val).",
+        "Calling <a href=\"#/p5/frameRate\">frameRate()</a> with no arguments or with arguments that are not of type Number or are non-positive returns an approximation of the current frame rate. The draw function must run at least once before it will return a value.",
+        "Even if the code in your draw() function consistently produces frames in time for them to be displayed at the desired frame rate, the value frameRate() returns will vary frame to frame because it's an inaccurate approximation. To accurately test the performance of your sketches, use your browser's performance profiling tools.",
+        "///",
         "1秒あたりに表示されるフレーム数を指定します。たとえば、関数コール frameRate(30) は、毎秒30回リフレッシュを試みます。プロセッサが指定されたレートを維持できない場合、フレームレートは達成されません。フレームレートの設定は、<a href=\"#/p5/setup\">setup()</a> 内に記述することをお勧めします。デフォルトのフレームレートは、ディスプレイのフレームレート（ここでは「リフレッシュレート」とも呼ばれます）にもとづいており、ほとんどのコンピューターでは1秒あたり60フレームに設定されています。映画で一般的な24フレーム/秒以上のフレームレートであればアニメーションがスムーズになります。これは、setFrameRate(val)と同じです。",
         "<a href=\"#/p5/frameRate\">frameRate()</a> を引数なしで呼び出すと、現在のフレームレートが返されます。draw 関数は、値を返す前に少なくとも1回実行する必要があります。これは、<a href=\"#/p5/getFrameRate\">getFrameRate()</a> と同じです。",
         "型が Number でない、または非正の引数で <a href=\"#/p5/frameRate\">frameRate()</a> を呼び出した場合も、現在のフレームレートが返されます。"
@@ -986,6 +1030,8 @@
     },
     "webglVersion": {
       "description": [
+        "If the sketch was created in WebGL mode, then <code>weglVersion</code> will indicate which version of WebGL it is using. It will try to create a WebGL2 canvas unless you have requested WebGL1 via <code>setAttributes({ version: 1 })</code>, and will fall back to WebGL1 if WebGL2 is not available.",
+        "///",
         "スケッチが WebGL モードで作成された場合、<code>webglVersion</code> はそのスケッチで使用されている WebGL のバージョンを示します。<code>setAttributes({ version: 1 })</code>を介して WebGL1 をリクエストしない限り、スケッチは WebGL2 キャンバスの作成を試み、WebGL2 が利用できない場合は WebGL1 にフォールバックします。",
         "<code>webglVersion</code> は常に <code>WEBGL2</code>、<code>WEBGL</code>、または <code>P2D</code>（WebGL モードでない場合）のいずれかになります。"
       ]
@@ -1015,7 +1061,7 @@
         "<a href=\"#/p5/windowResized\">windowResized()</a> 関数は、ブラウザーウィンドウがリサイズされるたびに一度呼び出されます。この関数を利用してキャンバスのサイズを変更したり、新しいウィンドウサイズに合わせて他の調整を行うと良いでしょう。"
       ],
       "params": {
-        "event": "Object: (オプション) オプションのイベントコールバック引数。"
+        "event": "UIEvent: (オプション) オプションのイベントコールバック引数。"
       }
     },
     "width": {
@@ -1229,7 +1275,7 @@
         "w": "Number: キャンバスの幅",
         "h": "Number: キャンバスの高さ",
         "renderer": "Constant: (オプション) P2D または WEBGL",
-        "canvas": "Object: (オプション) 既存の HTML Canvas 要素"
+        "canvas": "HTMLCanvasElement: (オプション) 既存の HTML Canvas 要素"
       }
     },
     "resizeCanvas": {
@@ -1259,11 +1305,15 @@
         "w": "Number: オフスクリーングラフィックバッファの幅",
         "h": "Number: オフスクリーングラフィックバッファの高さ",
         "renderer": "Constant: (オプション) P2D または WEBGL。未定義の場合は P2D がデフォルトです。",
-        "canvas": "Object: (オプション) 既存の HTML Canvas 要素"
+        "canvas": "HTMLCanvasElement: (オプション) 既存の HTML Canvas 要素"
       }
     },
     "createFramebuffer": {
       "description": [
+        "Creates and returns a new <a href=\"#/p5.Framebuffer\">p5.Framebuffer</a>, a high-performance WebGL object that you can draw to and then use as a texture.",
+        "Options can include: <ul> <li><code>format</code>: The data format of the texture, either <code>UNSIGNED_BYTE</code>, <code>FLOAT</code>, or <code>HALF_FLOAT</code>. The default is <code>UNSIGNED_BYTE</code>.</li> <li><code>channels</code>: What color channels to store, either <code>RGB</code> or <code>RGBA</code>. The default is to match the channels in the main canvas (with alpha unless disabled with <code>setAttributes</code>.)</li> <li><code>depth</code>: A boolean, whether or not to include a depth buffer. Defaults to true.</li> <li><code>depthFormat</code>: The data format for depth information, either <code>UNSIGNED_INT</code> or <code>FLOAT</code>. The default is <code>FLOAT</code> if available, or <code>UNSIGNED_INT</code> otherwise.</li> <li><code>stencil</code>: A boolean, whether or not to include a stencil buffer, which can be used for masking. This may only be used if also using a depth buffer. Defaults to the value of <code>depth</code>, which is true if not provided.</li> <li><code>antialias</code>: Boolean or Number, whether or not to render with antialiased edges, and if so, optionally the number of samples to use. Defaults to whether or not the main canvas is antialiased, using a default of 2 samples if so. Antialiasing is only supported when WebGL 2 is available.</li> <li><code>width</code>: The width of the texture. Defaults to matching the main canvas.</li> <li><code>height</code>: The height of the texture. Defaults to matching the main canvas.</li> <li><code>density</code>: The pixel density of the texture. Defaults to the pixel density of the main canvas.</li> <li><code>textureFiltering</code>: Either <code>LINEAR</code> (nearby pixels will be interpolated when reading values from the color texture) or <code>NEAREST</code> (no interpolation.) Generally, use <code>LINEAR</code> when using the texture as an image, and use <code>NEAREST</code> if reading the texture as data. Defaults to <code>LINEAR</code>.</li> </ul>",
+        "If <code>width</code>, <code>height</code>, or <code>density</code> are specified, then the framebuffer will keep that size until manually changed. Otherwise, it will be autosized, and it will update to match the main canvas's size and density when the main canvas changes.",
+        "///",
         "新しい <a href=\"#/p5.Framebuffer\">p5.Framebuffer</a> を作成し返します。これは高性能な WebGL オブジェクトで、これに描画したり、テクスチャとして使用することができます。",
         "オプションには以下のものがあります: <ul> <li><code>format</code>: テクスチャのデータフォーマット。<code>UNSIGNED_BYTE</code>、<code>FLOAT</code>、<code>HALF_FLOAT</code> のいずれか。デフォルトは <code>UNSIGNED_BYTE</code> です。</li> <li><code>channels</code>: 保存する色チャンネル。<code>RGB</code> または <code>RGBA</code>。デフォルトでは、メインキャンバスのチャンネルを一致させます（<code>setAttributes</code> で無効化しない限り、アルファが含まれます）。</li> <li><code>depth</code>: デプスバッファを含めるかどうかのブール値。デフォルトは true です。</li> <li><code>depthFormat</code>: デプス情報のデータフォーマット。<code>UNSIGNED_INT</code> または <code>FLOAT</code>。デフォルトは利用可能な場合は <code>FLOAT</code>、それ以外の場合は <code>UNSIGNED_INT</code> です。</li> <li><code>antialias</code>: ブール値または数値で、エッジが滑らかになるようにレンダリングするかどうか、またはその場合、使用するサンプルの数。メインキャンバスが滑らかに描画されるかどうかにもとづきますが、デフォルトでは2つのサンプルを使用します。アンチエイリアシングは WebGL 2 が利用可能な場合のみサポートされます。</li> <li><code>width</code>: テクスチャの幅。デフォルトはメインキャンバスと一致します。</li> <li><code>height</code>: テクスチャの高さ。デフォルトはメインキャンバスと一致します。</li> <li><code>density</code>: テクスチャのピクセル密度。デフォルトはメインキャンバスのピクセル密度と一致します。</li> <li><code>textureFiltering</code>: <code>LINEAR</code>（色テクスチャから値を読み取る際に近くのピクセルが補間されます）か <code>NEAREST</code>（補間なし）。通常、テクスチャを画像として使用する場合は <code>LINEAR</code> を、テクスチャをデータとして読み取る場合は <code>NEAREST</code> を使用します。デフォルトは <code>LINEAR</code> です。</li> </ul>",
         "<code>width</code>、<code>height</code>、<code>density</code> が指定されている場合、フレームバッファはそのサイズを手動で変更されるまで保持されます。それ以外の場合は、自動サイズが設定され、メインキャンバスのサイズや密度が変更されたときにそれに合わせて更新されます。"
@@ -1853,7 +1903,7 @@
         "オペレーティングシステムがキーのリピートを処理する方法のため、キーを押し続けると、<a href=\"#/p5/keyTyped\">keyTyped()</a>（および <a href=\"#/p5/keyReleased\">keyReleased()</a> も）が複数回呼び出される場合があります。リピートの速度は、オペレーティングシステムと各コンピューターの設定によって決まります。ブラウザーは、さまざまなキーイベントに対してデフォルトの動作をもつ場合があります。このイベントのデフォルト動作を防ぐには、「return false」をメソッドの最後に追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意の KeyboardEvent コールバック引数。"
+        "event": "KeyboardEvent: (オプション) オプションの KeyboardEvent コールバック引数。"
       }
     },
     "keyReleased": {
@@ -1861,7 +1911,7 @@
         "<a href=\"#/p5/keyReleased\">keyReleased()</a> 関数は、キーが離されるたびに1回呼び出されます。<a href=\"#/p5/key\">key</a> および <a href=\"#/p5/keyCode\">keyCode</a> を参照してください。ブラウザーには、さまざまなキーイベントに対して異なるデフォルトの動作が関連付けられている場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に \"return false\" を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意の KeyboardEvent コールバック引数。"
+        "event": "KeyboardEvent: (オプション) オプションの KeyboardEvent コールバック引数。"
       }
     },
     "keyTyped": {
@@ -1870,7 +1920,7 @@
         "オペレーティングシステムがキーリピートを処理する方法のため、キーを押し続けると、<a href=\"#/p5/keyTyped\">keyTyped()</a>（および <a href=\"#/p5/keyReleased\">keyReleased()</a>）が複数回呼び出されます。リピートの速度は、オペレーティングシステムと各コンピューターの設定によって決まります。ブラウザーには、さまざまなキーイベントに対して異なるデフォルトの動作が付与されている場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "オブジェクト: (オプション) オプションの KeyboardEvent コールバック引数。"
+        "event": "KeyboardEvent: (オプション) オプションの KeyboardEvent コールバック引数。"
       }
     },
     "keyIsDown": {
@@ -1947,7 +1997,7 @@
         "<a href=\"#/p5/mouseMoved\">mouseMoved()</a> 関数は、マウスが移動し、マウスボタンが押されていない場合に呼び出されます。ブラウザーには、さまざまなマウスイベントに関連付けられたデフォルトの動作が異なる場合があります。このイベントのデフォルトの動作を防ぐには、「return false」をメソッドの最後に追加します。"
       ],
       "params": {
-        "event": "Object: (オプション) オプションの MouseEvent コールバック引数。"
+        "event": "MouseEvent: (オプション) オプションの MouseEvent コールバック引数。"
       }
     },
     "mouseDragged": {
@@ -1955,7 +2005,7 @@
         "<a href=\"#/p5/mouseDragged\">mouseDragged()</a> 関数は、マウスが移動し、マウスボタンが押されるたびに1回呼び出されます。 <a href=\"#/p5/mouseDragged\">mouseDragged()</a> 関数が定義されていない場合、代わりに <a href=\"#/p5/touchMoved\">touchMoved()</a> 関数が呼び出されます（定義されている場合）。ブラウザーには、さまざまなマウスイベントに対して異なるデフォルトの動作が付随している場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意の MouseEvent コールバック引数。"
+        "event": "MouseEvent: (オプション) オプションの MouseEvent コールバック引数。"
       }
     },
     "mousePressed": {
@@ -1963,7 +2013,7 @@
         "<a href=\"#/p5/mousePressed\">mousePressed()</a> 関数は、マウスボタンが押されるたびに1回呼び出されます。mouseButton 変数（関連するリファレンスエントリを参照）を使用して、どのボタンが押されたかを判断できます。<a href=\"#/p5/mousePressed\">mousePressed()</a> 関数が定義されていない場合、代わりに <a href=\"#/p5/touchStarted\">touchStarted()</a> 関数が呼び出されます（定義されている場合）。ブラウザーには、さまざまなマウスイベントに対して異なるデフォルトの動作が付随している場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意の MouseEvent コールバック引数。"
+        "event": "MouseEvent: (オプション) オプションの MouseEvent コールバック引数。"
       }
     },
     "mouseReleased": {
@@ -1971,7 +2021,7 @@
         "<a href=\"#/p5/mouseReleased\">mouseReleased()</a> 関数は、マウスボタンが離されるたびに呼び出されます。 <a href=\"#/p5/mouseReleased\">mouseReleased()</a> 関数が定義されていない場合、代わりに <a href=\"#/p5/touchEnded\">touchEnded()</a> 関数が定義されている場合はそれが呼び出されます。ブラウザーには、さまざまなマウスイベントに関連するデフォルトの動作が異なる場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) オプションの MouseEvent コールバック引数。"
+        "event": "MouseEvent: (オプション) オプションの MouseEvent コールバック引数。"
       }
     },
     "mouseClicked": {
@@ -1979,7 +2029,7 @@
         "<a href=\"#/p5/mouseClicked\">mouseClicked()</a> 関数は、マウスボタンが押されてから離された後に1回だけ呼び出されます。ブラウザーはクリックを異なる方法で処理するため、この関数は左マウスボタンがクリックされたときに実行されることが保証されています。他のマウスボタンが押されたり離されたりするのを処理するには、<a href=\"#/p5/mousePressed\">mousePressed()</a> または <a href=\"#/p5/mouseReleased\">mouseReleased()</a> を参照してください。ブラウザーには、さまざまなマウスイベントに関連するデフォルトの動作が異なる場合があります。このイベントのデフォルトの動作を防ぐには、関数の最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) オプションの MouseEvent コールバック引数。"
+        "event": "MouseEvent: (オプション) オプションの MouseEvent コールバック引数。"
       }
     },
     "doubleClicked": {
@@ -1987,7 +2037,7 @@
         "<a href=\"#/p5/doubleClicked\">doubleClicked()</a> 関数は、DOM L3 仕様の一部である dblclick イベントを検出したイベントリスナーがあるたびに実行されます。doubleClicked イベントは、ポインティングデバイスのボタン（通常はマウスのプライマリボタン）がひとつの要素上で2回クリックされると発火します。dblclick イベントの詳細については、mozilla のドキュメントを参照してください: <a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/dblclick\">https://developer.mozilla.org/en-US/docs/Web/Events/dblclick</a>"
       ],
       "params": {
-        "event": "Object: (オプション) 任意の MouseEvent コールバック引数。"
+        "event": "MouseEvent: (オプション) オプションの MouseEvent コールバック引数。"
       }
     },
     "mouseWheel": {
@@ -1995,7 +2045,7 @@
         "関数 <a href=\"#/p5/mouseWheel\">mouseWheel()</a> は、実際のマウスホイールまたはタッチパッドによってトリガーされるたびに、垂直方向のマウスホイールイベントが検出されるたびに実行されます。event.delta プロパティは、マウスホイールがスクロールした量を返します。値は、スクロール方向によって正または負になることがあります（macOS で「ナチュラル」スクロールが有効になっている場合、符号が反転します）。ブラウザーによっては、さまざまなマウスイベントにデフォルトの動作が関連付けられていることがあります。このイベントのデフォルトの動作を防ぐには、メソッドの最後に「return false」を追加します。現在の Safari における「wheel」イベントのサポート状況のため、Safari を使用している場合には、期待通りの動作をするために「return false」を含める必要があります。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意の WheelEvent コールバック引数。"
+        "event": "WheelEvent: (オプション) オプションの WheelEvent コールバック引数。"
       }
     },
     "requestPointerLock": {
@@ -2019,7 +2069,7 @@
         "touchStarted() 関数は、タッチが登録されるたびに1回呼び出されます。もし <a href=\"#/p5/touchStarted\">touchStarted()</a> 関数が定義されていない場合、代わりに定義されている <a href=\"#/p5/mousePressed\">mousePressed()</a> 関数が呼び出されます。ブラウザーは、さまざまなタッチイベントに対して異なるデフォルトの動作を持っている場合があります。このイベントのデフォルトの動作を防ぐには、メソッドの最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意の TouchEvent コールバック引数。"
+        "event": "TouchEvent: (オプション) オプションの TouchEvent コールバック引数。"
       }
     },
     "touchMoved": {
@@ -2027,7 +2077,7 @@
         "<a href=\"#/p5/touchMoved\">touchMoved()</a> 関数は、タッチムーブが登録されるたびに呼び出されます。もし <a href=\"#/p5/touchMoved\">touchMoved()</a> 関数が定義されていない場合、代わりに定義されている <a href=\"#/p5/mouseDragged\">mouseDragged()</a> 関数が呼び出されます。ブラウザーは、さまざまなタッチイベントに対して異なるデフォルトの動作を持っている場合があります。このイベントのデフォルトの動作を防ぐには、メソッドの最後に「return false」を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意の TouchEvent コールバック引数。"
+        "event": "TouchEvent: (オプション) オプションの TouchEvent コールバック引数。"
       }
     },
     "touchEnded": {
@@ -2035,16 +2085,19 @@
         "<a href=\"#/p5/touchEnded\">touchEnded()</a> 関数はタッチが終了するたびに呼び出されます。 <a href=\"#/p5/touchEnded\">touchEnded()</a> 関数が定義されていない場合、代わりに定義されている <a href=\"#/p5/mouseReleased\">mouseReleased()</a> 関数が呼び出されます。ブラウザーは、さまざまなタッチイベントに添付された異なるデフォルトの動作をもつことがあります。このイベントのデフォルトの動作を防ぐには、メソッドの最後に \"return false\" を追加してください。"
       ],
       "params": {
-        "event": "Object: (オプション) 任意の TouchEvent コールバック引数。"
+        "event": "TouchEvent: (オプション) オプションの TouchEvent コールバック引数。"
       }
     },
     "createImage": {
       "description": [
+        "Creates a new <a href=\"#/p5.Image\">p5.Image</a> object. The new image is transparent by default.",
+        "<code>createImage()</code> uses the <code>width</code> and <code>height</code> paremeters to set the new <a href=\"#/p5.Image\">p5.Image</a> object's dimensions in pixels. The new <a href=\"#/p5.Image\">p5.Image</a> can be modified by updating its <a href=\"#/p5.Image/pixels\">pixels</a> array or by calling its <a href=\"#/p5.Image/get\">get()</a> and <a href=\"#/p5.Image/set\">set()</a> methods. The <a href=\"#/p5.Image/loadPixels\">loadPixels()</a> method must be called before reading or modifying pixel values. The <a href=\"#/p5.Image/updatePixels\">updatePixels()</a> method must be called for updates to take effect.",
+        "///",
         "新しい <a href=\"#/p5.Image\">p5.Image</a>（画像を格納するデータ型）を作成します。これにより、新しいピクセルバッファが利用できるようになります。バッファのサイズを、width および height パラメーターで設定します。",
         ".<a href=\"#/p5.Image/pixels\">pixels</a> は、表示ウィンドウ内のすべてのピクセルの値を含む配列にアクセスできます。これらの値は数字です。この配列は、表示ウィンドウのサイズ（<a href=\"#/p5/pixelDensity\">pixelDensity</a> の適切な係数を含む）x4 で、各ピクセルの R、G、B、A の値を順番に、各行を左から右に、各列を上から下に移動して表現しています。詳細については、.<a href=\"#/p5.Image/pixels\">pixels</a> を参照してください。また、<a href=\"#/p5.Image/set\">set()</a> や <a href=\"#/p5.Image/get\">get()</a> を使用する方が簡単かもしれません。",
         "画像のピクセルにアクセスする前に、<a href=\"#/p5.Image/loadPixels\">loadPixels()</a> 関数を使用してデータをロードする必要があります。配列データが変更された後、変更を更新するために <a href=\"#/p5.Image/updatePixels\">updatePixels()</a> 関数を実行する必要があります。"
       ],
-      "returns": "p5.Image: <a href=\"#/p5.Image\">p5.Image</a> オブジェクト",
+      "returns": "p5.Image: 新しい <a href=\"#/p5.Image\">p5.Image</a> オブジェクト",
       "params": {
         "width": "Integer: ピクセル単位の幅",
         "height": "Integer: ピクセル単位の高さ"
@@ -2052,30 +2105,43 @@
     },
     "saveCanvas": {
       "description": [
+        "Saves the current canvas as an image. The browser will either save the file immediately or prompt the user with a dialogue window.",
+        "///",
         "現在のキャンバスを画像として保存します。ブラウザーは、ファイルをすぐに保存するか、ダイアログウィンドウでユーザーにプロンプトを表示します。"
       ],
       "params": {
-        "selectedCanvas": "p5.Element|HTMLCanvasElement: 特定の html5 キャンバスを表す変数 (オプション) ",
-        "filename": "String (オプション) ",
-        "extension": "String: (オプション) 'jpg'または'png'"
+        "selectedCanvas": "p5.Element|HTMLCanvasElement: reference to a  specific HTML5 canvas element. /// p5.Element|HTMLCanvasElement: 特定の html5 キャンバスを表す変数 (オプション) ",
+        "filename": "String: (Optional) file name. Defaults to 'untitled'.  /// String (オプション) ",
+        "extension": "String: (Optional) file extension, either 'jpg' or 'png'. Defaults to 'png'. /// String: (オプション) 'jpg'または'png'"
       }
     },
     "saveFrames": {
       "description": [
+        "Captures a sequence of frames from the canvas that can be used to create a movie. Frames are downloaded as individual image files by default.",
+        "The first parameter, <code>filename</code>, sets the prefix for the file names. For example, setting the prefix to <code>'frame'</code> would generate the image files <code>frame0.png</code>, <code>frame1.png</code>, and so on. The second parameter, <code>extension</code>, sets the file type to either <code>'png'</code> or <code>'jpg'</code>.",
+        "The third parameter, <code>duration</code>, sets the duration to record in seconds. The maximum duration is 15 seconds. The fourth parameter, <code>framerate</code>, sets the number of frames to record per second. The maximum frame rate value is 22. Limits are placed on <code>duration</code> and <code>framerate</code> to avoid using too much memory. Recording large canvases can easily crash sketches or even web browsers.",
+        "The fifth parameter, <code>callback</code>, is optional. If a function is passed, image files won't be saved by default. The callback function can be used to process an array containing the data for each captured frame. The array of image data contains a sequence of objects with three properties for each frame: <code>imageData</code>, <code>filename</code>, and <code>extension</code>.",
+        "///",
         "映画を作成するために使用できるフレームのシーケンスをキャプチャします。コールバックを受け入れます。たとえば、フレームをサーバーに送信して保存したり、映画に変換したりする場合があります。コールバックが提供されない場合、ブラウザーは作成されたばかりのすべての画像をダウンロードしようとする保存ダイアログをポップアップします。コールバックが提供された場合、画像データはデフォルトでは保存されず、代わりにコールバック関数の引数としてオブジェクトの配列として渡されます。配列のサイズは、フレームの合計数に等しくなります。",
         "引数 <code>duration</code> と <code>framerate</code> は、それぞれ15以下、および22以下に制約されています。これは、1秒あたり22フレームで最大15秒分のフレームをダウンロードできることを意味し、フレームの合計数は330になります。これは、十分な大きさのキャンバスが簡単にコンピューターのメモリーを埋め尽くし、プログラムやブラウザーをクラッシュさせる可能性があるため、メモリーの問題を避けるために行われています。",
         "より長いアニメーションをエクスポートするには、<a href=\"https://github.com/spite/ccapture.js/\">ccapture.js</a> のようなライブラリを検討してみてください。"
       ],
       "params": {
-        "filename": "String",
-        "extension": "String: 'jpg'または'png'",
-        "duration": "Number: フレームを保存するための秒単位の期間。このパラメーターは15以下に制約されます。",
-        "framerate": "Number: フレームを保存するフレームレート。このパラメーターは22以下に制約されます。",
-        "callback": "Function(Array): (オプション) 画像データを処理するために実行されるコールバック関数。この関数は引数として配列を受け入れる必要があります。配列には、指定された数のフレームオブジェクトが含まれます。各オブジェクトには3つのプロパティがあります:imageData - image/octet-stream、filename、および extension。"
+        "filename": "String: prefix of file name. /// String",
+        "extension": "String: file extension, either 'jpg' or 'png'. /// String: 'jpg'または'png'",
+        "duration": "Number: duration in seconds to record. This parameter will be constrained to be less or equal to 15. /// Number: フレームを保存するための秒単位の期間。このパラメーターは15以下に制約されます。",
+        "framerate": "Number: number of frames to save per second. This parameter will be constrained to be less or equal to 22. /// Number: フレームを保存するフレームレート。このパラメーターは22以下に制約されます。",
+        "callback": "Function(Array): (Optional) callback function that will be executed  to handle the image data. This function  should accept an array as argument. The  array will contain the specified number of  frames of objects. Each object has three  properties: <code>imageData</code>, <code>filename</code>, and <code>extension</code>. /// Function(Array): (オプション) 画像データを処理するために実行されるコールバック関数。この関数は引数として配列を受け入れる必要があります。配列には、指定された数のフレームオブジェクトが含まれます。各オブジェクトには3つのプロパティがあります:imageData - image/octet-stream、filename、および extension。"
       }
     },
     "loadImage": {
       "description": [
+        "Loads an image to create a <a href=\"#/p5.Image\">p5.Image</a> object.",
+        "<code>loadImage()</code> interprets the first parameter one of three ways. If the path to an image file is provided, <code>loadImage()</code> will load it. Paths to local files should be relative, such as <code>'assets/thundercat.jpg'</code>. URLs such as <code>'https://example.com/thundercat.jpg'</code> may be blocked due to browser security. Raw image data can also be passed as a base64 encoded image in the form <code>'data:image/png;base64,arandomsequenceofcharacters'</code>.",
+        "The second parameter is optional. If a function is passed, it will be called once the image has loaded. The callback function can optionally use the new <a href=\"#/p5.Image\">p5.Image</a> object.",
+        "The third parameter is also optional. If a function is passed, it will be called if the image fails to load. The callback function can optionally use the event error.",
+        "Images can take time to load. Calling <code>loadImage()</code> in <a href=\"#/p5/preload\">preload()</a> ensures images load before they're used in <a href=\"#/p5/setup\">setup()</a> or <a href=\"#/p5/draw\">draw()</a>.",
+        "///",
         "画像をパスから読み込み、<a href=\"#/p5.Image\">p5.Image</a> を作成します。",
         "画像はレンダリングのためにすぐに利用できない場合があります。画像が準備完了してから何かを行いたい場合は、<a href=\"#/p5/loadImage\">loadImage()</a> を <a href=\"#/p5/preload\">preload()</a> の中に入れてください。また、準備ができたときに画像を処理するためのコールバック関数を提供することもできます。",
         "画像へのパスは、スケッチにリンクする HTML ファイルに対して相対的であるべきです。URL や他のリモート場所からの画像の読み込みは、ブラウザーの組み込みセキュリティによってブロックされることがあります。",
@@ -2083,13 +2149,17 @@
       ],
       "returns": "p5.Image: <a href=\"#/p5.Image\">p5.Image</a> オブジェクト",
       "params": {
-        "path": "String: 読み込む画像のパス",
-        "successCallback": "function(p5.Image): (オプション) 画像が読み込まれたら呼び出される関数。<a href=\"#/p5.Image\">p5.Image</a> が渡されます。",
-        "failureCallback": "Function(Event): (オプション) 画像の読み込みに失敗した場合、イベントエラーとともに呼び出されます。"
+        "path": "String: path of the image to be loaded or base64 encoded image. /// String: 読み込む画像のパス",
+        "successCallback": "function(p5.Image): (Optional) function called with  <a href=\"#/p5.Image\">p5.Image</a> once it  loads. /// function(p5.Image): (オプション) 画像が読み込まれたら呼び出される関数。<a href=\"#/p5.Image\">p5.Image</a> が渡されます。",
+        "failureCallback": "Function(Event): (Optional) function called with event  error if the image fails to load. /// Function(Event): (オプション) 画像の読み込みに失敗した場合、イベントエラーとともに呼び出されます。"
       }
     },
     "saveGif": {
       "description": [
+        "Generates a gif from a sketch and saves it to a file. <code>saveGif()</code> may be called in <a href=\"#/p5/setup\">setup()</a> or at any point while a sketch is running.",
+        "The first parameter, <code>fileName</code>, sets the gif's file name. The second parameter, <code>duration</code>, sets the gif's duration in seconds.",
+        "The third parameter, <code>options</code>, is optional. If an object is passed, <code>saveGif()</code> will use its properties to customize the gif. <code>saveGif()</code> recognizes the properties <code>delay</code>, <code>units</code>, <code>silent</code>, <code>notificationDuration</code>, and <code>notificationID</code>.",
+        "///",
         "現在のアニメーションを gif として生成し、コンピューターにダウンロードします！",
         "duration 引数は、アニメーションから録画したい秒数を指定します。この値は、units の値に応じて、生成する必要があるフレーム数に変換されます。次の段落で詳しく説明します。",
         "さらに2つの引数を含むオプションのオブジェクトです:delay（number）および units（string）。",
@@ -2099,13 +2169,23 @@
         "これは、setup で呼び出すことも、以下の例のように、keyPressed や mousePressed などのイベント関数内で呼び出すこともできます。"
       ],
       "params": {
-        "filename": "String: gif ファイルのファイル名",
-        "duration": "Number: スケッチからキャプチャしたい秒数の長さ",
-        "options": "Object: 5つの引数を含むことができるオプションのオブジェクトです: delay, 録画するまでの待ち時間を指定します。; units, 'seconds' または 'frames' の文字列です。デフォルトは 'seconds' です。; silent, 進捗通知の有無を定義するブール値です。デフォルトは false です。; notificationDuration, 最終通知が表示される時間を秒単位で定義する数値です。デフォルト値の 0 は、通知が削除されないことを意味します。; notificationID, 通知先の DOM 要素 ID を指定する文字列です。デフォルトでは 'progressBar' です。"
+        "filename": "String: file name of gif. /// String: gif ファイルのファイル名",
+        "duration": "Number: duration in seconds to capture from the sketch. /// Number: スケッチからキャプチャしたい秒数の長さ",
+        "options": "Object: (Optional) an object that can contain five more properties:  <code>delay</code>, a Number specifying how much time to wait before recording;  <code>units</code>, a String that can be either 'seconds' or 'frames'. By default it's 'seconds’;  <code>silent</code>, a Boolean that defines presence of progress notifications. By default it’s <code>false</code>;  <code>notificationDuration</code>, a Number that defines how long in seconds the final notification  will live. By default it's <code>0</code>, meaning the notification will never be removed;  <code>notificationID</code>, a String that specifies the id of the notification's DOM element. By default it’s <code>'progressBar’</code>. /// Object: 5つの引数を含むことができるオプションのオブジェクトです: delay, 録画するまでの待ち時間を指定します。; units, 'seconds' または 'frames' の文字列です。デフォルトは 'seconds' です。; silent, 進捗通知の有無を定義するブール値です。デフォルトは false です。; notificationDuration, 最終通知が表示される時間を秒単位で定義する数値です。デフォルト値の 0 は、通知が削除されないことを意味します。; notificationID, 通知先の DOM 要素 ID を指定する文字列です。デフォルトでは 'progressBar' です。"
       }
     },
     "image": {
       "description": [
+        "Draws a source image to the canvas.",
+        "The first parameter, <code>img</code>, is the source image to be drawn. The second and third parameters, <code>dx</code> and <code>dy</code>, set the coordinates of the destination image's top left corner. See <a href=\"#/p5/imageMode\">imageMode()</a> for other ways to position images.",
+        "Here's a diagram that explains how optional parameters work in <code>image()</code>:",
+        "<img src=\"assets/drawImage.png\"></img>",
+        "The fourth and fifth parameters, <code>dw</code> and <code>dh</code>, are optional. They set the the width and height to draw the destination image. By default, <code>image()</code> draws the full source image at its original size.",
+        "The sixth and seventh parameters, <code>sx</code> and <code>sy</code>, are also optional. These coordinates define the top left corner of a subsection to draw from the source image.",
+        "The eighth and ninth parameters, <code>sw</code> and <code>sh</code>, are also optional. They define the width and height of a subsection to draw from the source image. By default, <code>image()</code> draws the full subsection that begins at (<code>sx</code>, <code>sy</code>) and extends to the edges of the source image.",
+        "The ninth parameter, <code>fit</code>, is also optional. It enables a subsection of the source image to be drawn without affecting its aspect ratio. If <code>CONTAIN</code> is passed, the full subsection will appear within the destination rectangle. If <code>COVER</code> is passed, the subsection will completely cover the destination rectangle. This may have the effect of zooming into the subsection.",
+        "The tenth and eleventh paremeters, <code>xAlign</code> and <code>yAlign</code>, are also optional. They determine how to align the fitted subsection. <code>xAlign</code> can be set to either <code>LEFT</code>, <code>RIGHT</code>, or <code>CENTER</code>. <code>yAlign</code> can be set to either <code>TOP</code>, <code>BOTTOM</code>, or <code>CENTER</code>. By default, both <code>xAlign</code> and <code>yAlign</code> are set to <code>CENTER</code>.",
+        "///",
         "p5.js キャンバスに画像を描画します。",
         "この関数は、異なる数のパラメーターで使用できます。最もシンプルな使い方では、img、x、および y の3つのパラメーターだけが必要で、(x, y)は画像の位置です。さらに2つのパラメーターをオプションで追加して、画像の幅と高さを指定できます。",
         "この関数は、8つの Number パラメーターでも使用できます。これらすべてのパラメーターを区別するために、p5.js では、「destination rectangle」（これに対応するのは「dx」、「dy」など）と「source image」（これに対応するのは「sx」、「sy」など）という言葉を使用しています。ソース画像の一部を表示したい場合に、「source image」の寸法を指定すると便利です。さらに説明するための図を参照してください: <img src=\"assets/drawImage.png\"></img>",
@@ -2132,17 +2212,22 @@
     },
     "tint": {
       "description": [
+        "Tints images using a specified color.",
+        "The version of <code>tint()</code> with one parameter interprets it one of four ways. If the parameter is a number, it's interpreted as a grayscale value. If the parameter is a string, it's interpreted as a CSS color string. An array of <code>[R, G, B, A]</code> values or a <a href=\"#/p5.Color\">p5.Color</a> object can also be used to set the tint color.",
+        "The version of <code>tint()</code> with two parameters uses the first one as a grayscale value and the second as an alpha value. For example, calling <code>tint(255, 128)</code> will make an image 50% transparent.",
+        "The version of <code>tint()</code> with three parameters interprets them as RGB or HSB values, depending on the current <a href=\"#/p5/colorMode\">colorMode()</a>. The optional fourth parameter sets the alpha value. For example, <code>tint(255, 0, 0, 100)</code> will give images a red tint and make them transparent.",
+        "///",        
         "画像の表示に使用する塗りつぶしの値を設定します。画像は指定された色に着色されたり、アルファ値を含むことで透明になったりします。",
         "画像の色に影響を与えずに透明性を適用するには、塗り色に白を使用し、アルファ値を指定してください。たとえば、tint(255, 128)は、画像を50％透明にします（デフォルトのアルファ範囲が0-255であることを前提にしていますが、<a href=\"#/p5/colorMode\">colorMode()</a> で変更することができます）。",
         "gray パラメーターの値は、<a href=\"#/p5/colorMode\">colorMode()</a> で指定された現在の最大値以下でなければなりません。デフォルトの最大値は255です。"
       ],
       "params": {
-        "v1": "Number: 現在のカラーレンジに対する赤または色相の値",
-        "v2": "Number: 現在のカラーレンジに対する緑または彩度の値",
-        "v3": "Number: 現在のカラーレンジに対する青または明度の値",
+        "v1": "Number: 赤または色相の値",
+        "v2": "Number: 緑または彩度の値",
+        "v3": "Number: 青または明度の値",
         "alpha": "Number (オプション)",
-        "value": "String: カラー文字列",
-        "gray": "Number: 灰色の値",
+        "value": "String: CSSカラー文字列",
+        "gray": "Number: グレースケールの値",
         "values": "Number[]: 色の赤、緑、青、およびアルファ成分を含む配列",
         "color": "p5.Color: 着色する色"
       }
@@ -2154,6 +2239,11 @@
     },
     "imageMode": {
       "description": [
+        "Changes the location from which images are drawn when <a href=\"#/p5/image\">image()</a> is called.",
+        "By default, the first two parameters of <a href=\"#/p5/image\">image()</a> are the x- and y-coordinates of the image's upper-left corner. The next parameters are its width and height. This is the same as calling <code>imageMode(CORNER)</code>.",
+        "<code>imageMode(CORNERS)</code> also uses the first two parameters of <a href=\"#/p5/image\">image()</a> as the x- and y-coordinates of the image's top-left corner. The third and fourth parameters are the coordinates of its bottom-right corner.",
+        "<code>imageMode(CENTER)</code> uses the first two parameters of <a href=\"#/p5/image\">image()</a> as the x- and y-coordinates of the image's center. The next parameters are its width and height.",
+        "///",
         "画像モードを設定します。<a href=\"#/p5/image\">image()</a> に与えられるパラメーターの解釈方法を変更することで、画像が描画される位置を変更します。デフォルトのモードは imageMode(CORNER) で、<a href=\"#/p5/image\">image()</a> の第2および第3のパラメーターを画像の左上の角として解釈します。さらに2つのパラメーターが指定されている場合、それらは画像の幅と高さを設定するために使用されます。",
         "imageMode(CORNERS)は、<a href=\"#/p5/image\">image()</a> の第2および第3のパラメーターをひとつの角の位置として解釈し、第4および第5のパラメーターを反対側の角として解釈します。",
         "imageMode(CENTER)は、<a href=\"#/p5/image\">image()</a> の第2および第3のパラメーターを画像の中心点として解釈します。さらに2つのパラメーターが指定されている場合、それらは画像の幅と高さを設定するために使用されます。"
@@ -2164,6 +2254,11 @@
     },
     "pixels": {
       "description": [
+        "An array containing the color of each pixel on the canvas. Colors are stored as numbers representing red, green, blue, and alpha (RGBA) values. <code>pixels</code> is a one-dimensional array for performance reasons.",
+        "Each pixel occupies four elements in the <code>pixels</code> array, one for each RGBA value. For example, the pixel at coordinates (0, 0) stores its RGBA values at <code>pixels[0]</code>, <code>pixels[1]</code>, <code>pixels[2]</code>, and <code>pixels[3]</code>, respectively. The next pixel at coordinates (1, 0) stores its RGBA values at <code>pixels[4]</code>, <code>pixels[5]</code>, <code>pixels[6]</code>, and <code>pixels[7]</code>. And so on. The <code>pixels</code> array for a 100×100 canvas has 100 × 100 × 4 = 40,000 elements.",
+        "Some displays use several smaller pixels to set the color at a single point. The <a href=\"#/p5/pixelDensity\">pixelDensity()</a> function returns the pixel density of the canvas. High density displays often have a <a href=\"#/p5/pixelDensity\">pixelDensity()</a> of 2. On such a display, the <code>pixels</code> array for a 100×100 canvas has 200 × 200 × 4 = 160,000 elements.",
+        "Accessing the RGBA values for a point on the canvas requires a little math as shown below. The <a href=\"#/p5/loadPixels\">loadPixels()</a> function must be called before accessing the <code>pixels</code> array. The <a href=\"#/p5/updatePixels\">updatePixels()</a> function must be called after any changes are made.",
+        "///",
         "ディスプレイウィンドウ内のすべてのピクセルの値を含む <a href='https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a> です。これらの値は数値です。この配列は、ディスプレイウィンドウのサイズ（<a href=\"#/p5/pixelDensity\">pixelDensity</a> の適切な係数を含む）x4 で、各ピクセルの R、G、B、A の値を左から右へ、各行から下へ移動しながら順番に表現しています。Retina やその他の高密度ディスプレイは、ピクセル密度の二乗の係数であるピクセル[]を持っています。たとえば、画像が100 × 100ピクセルの場合、40,000になります。Retina ディスプレイでは160,000になります。",
         "配列の最初の4つの値（インデックス0-3）は、ピクセル(0, 0)の R、G、B、A の値です。次の4つの値（インデックス4-7）は、ピクセル(1, 0)の R、G、B、A の値が含まれます。一般的には、(x, y)のピクセルの値を設定するには、次のようにします:<pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
         "上記の方法は複雑ですが、任意の pixelDensity で動作する柔軟性があります。<a href=\"#/p5/set\">set()</a> は、任意の pixelDensity で指定された(x, y)に対して <a href=\"#/p5/pixels\">pixels[]</a> 内の適切な値を自動的に設定しますが、ピクセル配列に多くの変更が加えられるとパフォーマンスが低下することがあります。",
@@ -2173,6 +2268,8 @@
     },
     "blend": {
       "description": [
+        "Copies a region of pixels from one image to another. The <code>blendMode</code> parameter blends the images' colors to create different effects.",
+        "///",
         "指定されたブレンドモードを使用して、ある画像のピクセル領域を別の画像にコピーします。"
       ],
       "params": {
@@ -2190,6 +2287,8 @@
     },
     "copy": {
       "description": [
+        "Copies pixels from a source image to a region of the canvas. The source image can be the canvas itself or a <a href=\"#/p5.Image\">p5.Image</a> object. <code>copy()</code> will scale pixels from the source region if it isn't the same size as the destination region.",
+        "///",
         "キャンバスの一部を別の領域にコピーし、srcImg パラメーターとして使用される画像のピクセル領域をキャンバスにコピーします。srcImage が指定されている場合、これがソースとして使用されます。ソースと宛先の領域が同じサイズでない場合、ソースのピクセルが自動的に指定されたターゲット領域に合わせてサイズ変更されます。"
       ],
       "params": {
@@ -2206,6 +2305,18 @@
     },
     "filter": {
       "description": [
+        "Applies an image filter to the canvas. The preset options are:",
+        "<code>INVERT</code> Inverts the colors in the image. No parameter is used.",
+        "<code>GRAY</code> Converts the image to grayscale. No parameter is used.",
+        "<code>THRESHOLD</code> Converts the image to black and white. Pixels with a grayscale value above a given threshold are converted to white. The rest are converted to black. The threshold must be between 0.0 (black) and 1.0 (white). If no value is specified, 0.5 is used.",
+        "<code>OPAQUE</code> Sets the alpha channel to entirely opaque. No parameter is used.",
+        "<code>POSTERIZE</code> Limits the number of colors in the image. Each color channel is limited to the number of colors specified. Values between 2 and 255 are valid, but results are most noticeable with lower values. The default value is 4.",
+        "<code>BLUR</code> Blurs the image. The level of blurring is specified by a blur radius. Larger values increase the blur. The default value is 4. A gaussian blur is used in <code>P2D</code> mode. A box blur is used in <code>WEBGL</code> mode.",
+        "<code>ERODE</code> Reduces the light areas. No parameter is used.",
+        "<code>DILATE</code> Increases the light areas. No parameter is used.",
+        "<code>filter()</code> uses WebGL in the background by default because it's faster. This can be disabled in <code>P2D</code> mode by adding a <code>false</code> argument, as in <code>filter(BLUR, false)</code>. This may be useful to keep computation off the GPU or to work around a lack of WebGL support.",
+        "In <code>WEBGL</code> mode, <code>filter()</code> can also use custom shaders. See <a href=\"#/p5/createFilterShader\">createFilterShader()</a> for more information.",
+        "///",
         "キャンバスにフィルターを適用します。プリセットオプションは以下の通りです:",
         "THRESHOLD 画像を、ピクセルが level パラメーターで定義された閾値より上か下かによって、白黒のピクセルに変換します。パラメーターは0.0(黒)から1.0(白)の間でなければなりません。level が指定されていない場合、0.5が使用されます。",
         "GRAY 画像内のすべての色をグレースケールに変換します。パラメーターは使用されません。",
@@ -2218,19 +2329,28 @@
         "filter() は WebGL モードでは動作しません。WebGL モードではカスタムシェーダーを使用して類似の効果を実現できます。Adam Ferriss は、フィルターの例にある多くの効果を含む <a href=\"https://github.com/aferriss/p5jsShaderExamples\" target='_blank'>シェーダーの例の選択</a> を書いています。"
       ],
       "params": {
-        "filterType": "Constant: THRESHOLD, GRAY, OPAQUE, INVERT,  POSTERIZE, BLUR, ERODE, DILATE, BLUR のいずれか。Filters.js のドキュメントに各利用可能なフィルターについて記載されています。",
-        "filterParam": "Number: (オプション) 各フィルタに固有のオプションパラメーター。上記を参照"
+        "filterType": "Constant: THRESHOLD, GRAY, OPAQUE, INVERT,  POSTERIZE, BLUR, ERODE, DILATE, BLUR のいずれか。",
+        "filterParam": "Number: (オプション) 各フィルタに固有のオプションパラメーター。",
+        "useWebGL": "Boolean: (Optional) flag to control whether to use fast  WebGL filters (GPU) or original image  filters (CPU); defaults to <code>true</code>.",
+        "shaderFilter": "p5.Shader: shader that's been loaded, with the  frag shader using a <code>tex0</code> uniform."
       }
     },
     "get": {
       "description": [
+        "Gets a pixel or a region of pixels from the canvas.",
+        "<code>get()</code> is easy to use but it's not as fast as <a href=\"#/p5/pixels\">pixels</a>. Use <a href=\"#/p5/pixels\">pixels</a> to read many pixel values.",
+        "The version of <code>get()</code> with no parameters returns the entire canvas.",
+        "The version of <code>get()</code> with two parameters interprets them as coordinates. It returns an array with the <code>[R, G, B, A]</code> values of the pixel at the given point.",
+        "The version of <code>get()</code> with four parameters interprets them as coordinates and dimensions. It returns a subsection of the canvas as a <a href=\"#/p5.Image\">p5.Image</a> object. The first two parameters are the coordinates for the upper-left corner of the subsection. The last two parameters are the width and height of the subsection.",
+        "Use <a href=\"#/p5.Image/get\">p5.Image.get()</a> to work directly with <a href=\"#/p5.Image\">p5.Image</a> objects.",
+        "///",
         "キャンバスからピクセルの領域、またはひとつのピクセルを取得します。",
         "任意のピクセルの[R,G,B,A]の値の配列を返すか、画像の一部を取得します。パラメーターが指定されていない場合、画像全体が返されます。x と y パラメーターを使用してひとつのピクセルの値を取得します。表示ウィンドウの一部を取得するには、追加の w と h パラメーターを指定します。画像を取得する場合、x および y パラメーターは、現在の <a href=\"#/p5/imageMode\">imageMode()</a> に関係なく、画像の左上隅の座標を定義します。",
         "get(x, y)を使用してひとつのピクセルの色を取得することは簡単ですが、<a href=\"#/p5/pixels\">pixels[]</a> からデータを直接取得するより速くはありません。ピクセル密度 d をもつ <a href=\"#/p5/pixels\">pixels[]</a> を使用した get(x, y)の同等の文は次のとおりです。<pre><code class=\"language-javascript\">let x, y, d; // これらを座標に設定します let off = (y * width + x) * d * 4; let components = [  pixels[off],  pixels[off + 1],  pixels[off + 2],  pixels[off + 3] ]; print(components); </code></pre>",
         "<a href=\"#/p5/pixels\">pixels[]</a> に関する詳細情報は、リファレンスを参照してください。",
         "p5.Image オブジェクトから色の配列やサブ画像を抽出する場合は、<a href=\"#/p5.Image/get\">p5.Image.get()</a> を参照してください。"
       ],
-      "returns": "p5.Image: 矩形 <a href=\"#/p5.Image\">p5.Image</a>",
+      "returns": "p5.Image: subsection as a <a href=\"#/p5.Image\">p5.Image</a> object. /// p5.Image: 矩形 <a href=\"#/p5.Image\">p5.Image</a>",
       "params": {
         "x": "Number: ピクセルの x 座標",
         "y": "Number: ピクセルの y 座標",
@@ -2240,11 +2360,18 @@
     },
     "loadPixels": {
       "description": [
+        "Loads the current value of each pixel on the canvas into the <a href=\"#/p5/pixels\">pixels</a> array. This function must be called before reading from or writing to <a href=\"#/p5/pixels\">pixels</a>.",
+        "///",
         "表示ウィンドウのピクセルデータを <a href=\"#/p5/pixels\">pixels[]</a> 配列にロードします。この関数は、<a href=\"#/p5/pixels\">pixels[]</a> から読み取るか、書き込む前に必ず呼び出す必要があります。 <a href=\"#/p5/set\">set()</a> で行われた変更、または <a href=\"#/p5/pixels\">pixels[]</a> への直接の操作だけが発生することに注意してください。"
       ]
     },
     "set": {
       "description": [
+        "Sets the color of a pixel or draws an image to the canvas.",
+        "<code>set()</code> is easy to use but it's not as fast as <a href=\"#/p5/pixels\">pixels</a>. Use <a href=\"#/p5/pixels\">pixels</a> to set many pixel values.",
+        "<code>set()</code> interprets the first two parameters as x- and y-coordinates. It interprets the last parameter as a grayscale value, a <code>[R, G, B, A]</code> pixel array, a <a href=\"#/p5.Color\">p5.Color</a> object, or a <a href=\"#/p5.Image\">p5.Image</a> object. If an image is passed, the first two parameters set the coordinates for the image's upper-left corner, regardless of the current <a href=\"#/p5/imageMode\">imageMode()</a>.",
+        "<a href=\"#/p5/updatePixels\">updatePixels()</a> must be called after using <code>set()</code> for changes to appear.",
+        "///",
         "任意のピクセルの色を変更するか、画像を直接表示ウィンドウに書き込みます。x および y パラメーターは、変更するピクセルを指定し、c パラメーターは色の値を指定します。これは、<a href=\"#/p5.Color\">p5.Color</a> オブジェクト、または [R, G, B, A] ピクセル配列であることができます。また、単一のグレースケール値でも構いません。画像を設定する場合、x および y パラメーターは、現在の <a href=\"#/p5/imageMode\">imageMode()</a> に関係なく、画像の左上隅の座標を定義します。",
         "<a href=\"#/p5/set\">set()</a> を使用した後、変更を反映させるために <a href=\"#/p5/updatePixels\">updatePixels()</a> を呼び出す必要があります。これは、すべてのピクセルが設定された後に一度だけ呼び出す必要があり、.<a href=\"#/p5/get\">get()</a> を呼び出すか、画像を描画する前に呼び出す必要があります。",
         "set(x, y) を使ってひとつのピクセルの色を設定するのは簡単ですが、<a href=\"#/p5/pixels\">pixels[]</a> に直接データを入れるより速くはありません。リタイナディスプレイで作業している場合、<a href=\"#/p5/pixels\">pixels[]</a> の値を直接設定することは複雑になるかもしれませんが、多くのピクセルを毎回ループで直接設定する必要がある場合は、パフォーマンスが向上します。<a href=\"#/p5/pixels\">pixels[]</a> に関する詳細は、そのリファレンスを参照してください。"
@@ -2252,11 +2379,14 @@
       "params": {
         "x": "Number: ピクセルの x 座標",
         "y": "Number: ピクセルの y 座標",
-        "c": "Number|Number[]|Object: グレースケール値を挿入 | ピクセル配列 |  <a href=\"#/p5.Color\">p5.Color</a> オブジェクト | コピーする <a href=\"#/p5.Image\">p5.Image</a>"
+        "c": "Number|Number[]|Object: グレースケール値 | ピクセル配列 |  <a href=\"#/p5.Color\">p5.Color</a> オブジェクト | コピーする <a href=\"#/p5.Image\">p5.Image</a>"
       }
     },
     "updatePixels": {
       "description": [
+        "Updates the canvas with the RGBA values in the <a href=\"#/p5/pixels\">pixels</a> array.",
+        "<code>updatePixels()</code> only needs to be called after changing values in the <a href=\"#/p5/pixels\">pixels</a> array. Such changes can be made directly after calling <a href=\"#/p5/loadPixels\">loadPixels()</a> or by calling <a href=\"#/p5/set\">set()</a>.",
+        "///",
         "画面に <a href=\"#/p5/pixels\">pixels[]</a> 配列のデータを更新します。<a href=\"#/p5/loadPixels\">loadPixels()</a> と併用して使用してください。配列からピクセルを読み取るだけであれば、<a href=\"#/p5/updatePixels\">updatePixels()</a> を呼び出す必要はありません。更新は変更を適用する場合にのみ必要です。 <a href=\"#/p5/updatePixels\">updatePixels()</a> は、pixels 配列が操作されるたび、または <a href=\"#/p5/set\">set()</a> が呼び出されるたびに呼び出されるべきであり、<a href=\"#/p5/set\">set()</a> で行われた変更や <a href=\"#/p5/pixels\">pixels[]</a> への直接の変更のみが発生します。"
       ],
       "params": {
@@ -2427,6 +2557,8 @@
     },
     "abs": {
       "description": [
+        "Calculates the absolute value of a number. A number's absolute value is its distance from zero on the number line. -5 and 5 are both five units away from zero, so calling <code>abs(-5)</code> and <code>abs(5)</code> both return 5. The absolute value of a number is always positive.",
+        "///",
         "数値の絶対値（大きさ）を計算します。Math.abs() にマッピングされます。数値の絶対値は常に正です。"
       ],
       "returns": "Number: 与えられた数値の絶対値",
@@ -2436,6 +2568,8 @@
     },
     "ceil": {
       "description": [
+        "Calculates the closest integer value that is greater than or equal to the parameter's value. For example, calling <code>ceil(9.03)</code> returns the value 10.",
+        "///",
         "パラメーターの値以上の最も近い int 値を計算します。Math.ceil() にマッピングされます。たとえば、ceil(9.03)は値10を返します。"
       ],
       "returns": "Integer: 切り上げられた数値",
@@ -2444,7 +2578,11 @@
       }
     },
     "constrain": {
-      "description": ["最小値と最大値の間に値を制限します。"],
+      "description": [
+        "Constrains a number between a minimum and maximum value.",
+        "///",
+        "最小値と最大値の間に値を制限します。"
+      ],
       "returns": "Number: 制限された数値",
       "params": {
         "n": "Number: 制限する数値",
@@ -2454,6 +2592,11 @@
     },
     "dist": {
       "description": [
+        "Calculates the distance between two points.",
+        "The version of <code>dist()</code> with four parameters calculates distance in two dimensions.",
+        "The version of <code>dist()</code> with six parameters calculates distance in three dimensions.",
+        "Use <a href=\"#/p5.Vector/dist\">p5.Vector.dist()</a> to calculate the distance between two <a href=\"#/p5.Vector\">p5.Vector</a> objects.",
+        "///",
         "2点間の距離を、2次元または3次元で計算します。2つのベクトル間の距離を探している場合は、<a herf=\"#/p5.Vector/dist\">p5.Vector.dist()</a> を参照してください。"
       ],
       "returns": "Number: 2点間の距離",
@@ -2468,6 +2611,8 @@
     },
     "exp": {
       "description": [
+        "Returns Euler's number e (2.71828...) raised to the power of the <code>n</code> parameter.",
+        "///",
         "オイラーの数 e（2.71828...）を、n パラメーターの冪乗にしたものを返します。Math.exp() にマッピングされます。"
       ],
       "returns": "Number: e^n",
@@ -2477,6 +2622,8 @@
     },
     "floor": {
       "description": [
+        "Calculates the closest integer value that is less than or equal to the value of the <code>n</code> parameter.",
+        "///",
         "パラメーターの値以下の最も近い int 値を計算します。Math.floor() にマッピングされます。"
       ],
       "returns": "Integer: 切り捨てられた数値",
@@ -2486,6 +2633,9 @@
     },
     "lerp": {
       "description": [
+        "Calculates a number between two numbers at a specific increment. The <code>amt</code> parameter is the amount to interpolate between the two numbers. 0.0 is equal to the first number, 0.1 is very near the first number, 0.5 is half-way in between, and 1.0 is equal to the second number. The <code>lerp()</code> function is convenient for creating motion along a straight path and for drawing dotted lines.",
+        "If the value of <code>amt</code> is less than 0 or more than 1, <code>lerp()</code> will return a number outside of the original interval. For example, calling <code>lerp(0, 10, 1.5)</code> will return 15.",
+        "///",
         "特定の増分で2つの数値の間の数値を計算します。amt パラメーターは、2つの値の間で補間する量で、0.0は最初のポイントと等しく、0.1は最初のポイントに非常に近く、0.5は中間で、1.0は2番目のポイントと等しいです。amt の値が1.0を超えるか、0.0未満の場合、2つの与えられた数値の比率に応じて数値が計算されます。lerp() 関数は、直線上の動きを作成したり、点線を描画するのに便利です。"
       ],
       "returns": "Number: lerped 値",
@@ -2497,6 +2647,8 @@
     },
     "log": {
       "description": [
+        "Calculates the natural logarithm (the base-e logarithm) of a number. This function expects the <code>n</code> parameter to be a value greater than 0.0.",
+        "///",
         "数値の自然対数（底 e の対数）を計算します。この関数は、n パラメーターが0.0より大きい値であることを期待しています。Math.log() にマップされます。"
       ],
       "returns": "Number: n の自然対数",
@@ -2506,16 +2658,22 @@
     },
     "mag": {
       "description": [
+        "Calculates the magnitude, or length, of a vector. A vector is like an arrow pointing in space. Vectors are commonly used for programming motion.",
+        "Vectors don't have a \"start\" position because the same arrow can be drawn anywhere. A vector's magnitude can be thought of as the distance from the origin (0, 0) to its tip at (x, y). <code>mag(x, y)</code> is a shortcut for calling <code>dist(0, 0, x, y)</code>.",
+        "///",
         "ベクトルの大きさ（または長さ）を計算します。ベクトルは、コンピューターグラフィックスや線形代数でよく使われる空間上の方向を表します。ベクトルには「開始」位置がないため、ベクトルの大きさは座標0,0からその x,y 値までの距離と考えることができます。したがって、<a href=\"#/p5/mag\">mag()</a> は、dist(0, 0, x, y) を書くためのショートカットです。"
       ],
-      "returns": "Number: (0,0) から (a,b) までのベクトルの大きさ",
+      "returns": "Number: (0,0) から (x,y) までのベクトルの大きさ",
       "params": {
-        "a": "Number: 第一の値",
-        "b": "Number: 第二の値"
+        "x": "Number: 第1の成分",
+        "y": "Number: 第2の成分"
       }
     },
     "map": {
       "description": [
+        "Re-maps a number from one range to another.",
+        "For example, calling <code>map(2, 0, 10, 0, 100)</code> returns 20. The first three arguments set the original value to 2 and the original range from 0 to 10. The last two arguments set the target range from 0 to 100. 20's position in the target range [0, 100] is proportional to 2's position in the original range [0, 10].",
+        "///",
         "ある範囲の数値を別の範囲に再マップします。",
         "最初の例では、数値25が、0から100の範囲の値から、ウィンドウの左端(0)から右端(width)までの範囲の値に変換されます。"
       ],
@@ -2531,28 +2689,40 @@
     },
     "max": {
       "description": [
+        "Returns the largest value in a sequence of numbers.",
+        "The version of <code>max()</code> with one parameter interprets it as an array of numbers and returns the largest number.",
+        "The version of <code>max()</code> with two or more parameters interprets them as individual numbers and returns the largest number.",
+        "///",
         "一連の数値の中で最大の値を決定し、その値を返します。 <a href=\"#/p5/max\">max()</a> は、任意の数の Number パラメーター、または任意の長さの配列を受け入れます。"
       ],
       "returns": "Number: 最大の数値",
       "params": {
-        "n0": "Number: 比較する数値",
-        "n1": "Number: 比較する数値",
-        "nums": "Number[]: 比較する数値"
+        "n0": "Number: 1つ目の比較する数値",
+        "n1": "Number: 2つ目の比較する数値",
+        "nums": "Number[]: 比較する数値配列"
       }
     },
     "min": {
       "description": [
+        "Returns the smallest value in a sequence of numbers.",
+        "The version of <code>min()</code> with one parameter interprets it as an array of numbers and returns the smallest number.",
+        "The version of <code>min()</code> with two or more parameters interprets them as individual numbers and returns the smallest number.",
+        "///",
         "一連の数値の中で最小の値を決定し、その値を返します。<a href=\"#/p5/min\">min()</a> は、任意の数の Number パラメーター、または任意の長さの配列を受け入れます。"
       ],
       "returns": "Number: 最小の数値",
       "params": {
-        "n0": "Number: 比較する数値",
-        "n1": "Number: 比較する数値",
-        "nums": "Number[]: 比較する数値"
+        "n0": "Number: 1つ目の比較する数値",
+        "n1": "Number: 2つ目の比較する数値",
+        "nums": "Number[]: 比較する数値配列"
       }
     },
     "norm": {
       "description": [
+        "Maps a number from one range to a value between 0 and 1.",
+        "For example, <code>norm(2, 0, 10)</code> returns 0.2. 2's position in the original range [0, 10] is proportional to 0.2's position in the range [0, 1]. This is equivalent to calling <code>map(2, 0, 10, 0, 1)</code>.",
+        "Numbers outside of the original range are not constrained between 0 and 1. Out-of-range values are often intentional and useful.",
+        "///",
         "別の範囲の数値を0から1の範囲に正規化します。map(value, low, high, 0, 1)と同一です。範囲外の数値は、範囲外の値が意図的で有用であることがよくあるため、0および1にクランプされません。(例を参照してください。)"
       ],
       "returns": "Number: 正規化された数値",
@@ -2564,6 +2734,9 @@
     },
     "pow": {
       "description": [
+        "Calculates exponential expressions such as 2^3.",
+        "For example, <code>pow(2, 3)</code> is equivalent to the expression 2 × 2 × 2. <code>pow(2, -3)</code> is equivalent to 1 ÷ (2 × 2 × 2).",
+        "///",
         "指数表現を容易にします。<a href=\"#/p5/pow\">pow()</a> 関数は、数値を自分自身（またはその逆数）と大量にかける効率的な方法です。たとえば、pow(3, 5)は式 3 × 3 × 3 × 3 × 3 と等価であり、pow(3, -5)は 1 / 3 × 3 × 3 × 3 × 3 と等価です。Math.pow() にマップされます。"
       ],
       "returns": "Number: n^e",
@@ -2574,6 +2747,8 @@
     },
     "round": {
       "description": [
+        "Calculates the integer closest to the <code>n</code> parameter. For example, <code>round(133.8)</code> returns the value 134.",
+        "///",
         "n パラメーターに最も近い整数を計算します。たとえば、round(133.8)は値134を返します。Math.round() にマップされます。"
       ],
       "returns": "Integer: 四捨五入された数値",
@@ -2584,6 +2759,9 @@
     },
     "sq": {
       "description": [
+        "Squares a number, which means multiplying the number by itself. The value returned is always a positive number.",
+        "For example, <code>sq(3)</code> evaluates 3 × 3 which is 9. <code>sq(-3)</code> evaluates -3 × -3 which is also 9. Multiplying two negative numbers produces a positive number.",
+        "///",
         "数値の二乗（数値を自分自身で乗算）。結果は常に正の数です。なぜなら、2つの負の数を乗算すると常に正の結果が得られるからです。たとえば、-1 * -1 = 1。"
       ],
       "returns": "Number: 二乗された数値",
@@ -2593,6 +2771,9 @@
     },
     "sqrt": {
       "description": [
+        "Calculates the square root of a number. A number's square root can be multiplied by itself to produce the original number.",
+        "For example, <code>sqrt(9)</code> returns 3 because 3 × 3 = 9. <code>sqrt()</code> always returns a positive value. <code>sqrt()</code> doesn't work with negative arguments such as <code>sqrt(-9)</code>.",
+        "///",
         "数値の平方根を計算します。数値の平方根は常に正ですが、有効な負のルートがある場合もあります。数値 a の平方根 s は、s*s = a となるものです。二乗の逆の操作です。Math.sqrt() にマップされます。"
       ],
       "returns": "Number: 数値の平方根",
@@ -2601,17 +2782,24 @@
       }
     },
     "fract": {
-      "description": ["数値の小数部分を計算します。"],
-      "returns": "Number: x の小数部分、すなわち、{x}",
+      "description": [
+        "Calculates the fractional part of a number. For example, <code>fract(12.34)</code> returns 0.34.",
+        "///",
+        "数値の小数部分を計算します。"
+      ],
+      "returns": "Number: fractional part of n. /// Number: x の小数部分、すなわち、{x}",
       "params": {
-        "num": "Number: 小数部分を求める数値"
+        "n": "Number: number whose fractional part will be found. /// Number: 小数部分を求める数値"
       }
     },
     "createVector": {
       "description": [
+        "Creates a new <a href=\"#/p5.Vector\">p5.Vector</a> object. A vector is like an arrow pointing in space. Vectors have both magnitude (length) and direction. Calling <code>createVector()</code> without arguments sets the new vector's components to 0.",
+        "<a href=\"#/p5.Vector\">p5.Vector</a> objects are often used to program motion because they simplify the math. For example, a moving ball has a position and a velocity. Position describes where the ball is in space. The ball's position vector extends from the origin to the ball's center. Velocity describes the ball's speed and the direction it's moving. If the ball is moving straight up, its velocity vector points straight up. Adding the ball's velocity vector to its position vector moves it, as in <code>pos.add(vel)</code>. Vector math relies on methods inside the <a href=\"#/p5.Vector\">p5.Vector</a>` class.",
+        "///",
         "新しい <a href=\"#/p5.Vector\">p5.Vector</a>（ベクトルを格納するデータ型）を作成します。これにより、二次元または三次元のユークリッド（幾何学的）ベクトルが提供されます。ベクトルとは、大きさと方向の両方をもつエンティティです。"
       ],
-      "returns": "p5.Vector:",
+      "returns": "p5.Vector: new <a href=\"#/p5.Vector\">p5.Vector</a> object. /// p5.Vector:",
       "params": {
         "x": "Number: (オプション) ベクトルの x 成分",
         "y": "Number: (オプション) ベクトルの y 成分",
@@ -2620,9 +2808,17 @@
     },
     "noise": {
       "description": [
+        "Returns random numbers that can be tuned to feel more organic. The values returned will always be between 0 and 1.",
+        "Values returned by <a href=\"#/p5/random\">random()</a> and <a href=\"#/p5/randomGaussian\">randomGaussian()</a> can change by large amounts between function calls. By contrast, values returned by <code>noise()</code> can be made \"smooth\". Calls to <code>noise()</code> with similar inputs will produce similar outputs. <code>noise()</code> is used to create textures, motion, shapes, terrains, and so on. Ken Perlin invented <code>noise()</code> while animating the original <em>Tron</em> film in the 1980s.",
+        "<code>noise()</code> returns the same value for a given input while a sketch is running. It produces different results each time a sketch runs. The <a href=\"#/p5/noiseSeed\">noiseSeed()</a> function can be used to generate the same sequence of Perlin noise values each time a sketch runs.",
+        "The character of the noise can be adjusted in two ways. The first way is to scale the inputs. <code>noise()</code> interprets inputs as coordinates. The sequence of noise values will be smoother when the input coordinates are closer. The second way is to use the <a href=\"#/p5/noiseDetail\">noiseDetail()</a> function.",
+        "The version of <code>noise()</code> with one parameter computes noise values in one dimension. This dimension can be thought of as space, as in <code>noise(x)</code>, or time, as in <code>noise(t)</code>.",
+        "The version of <code>noise()</code> with two parameters computes noise values in two dimensions. These dimensions can be thought of as space, as in <code>noise(x, y)</code>, or space and time, as in <code>noise(x, t)</code>.",
+        "The version of <code>noise()</code> with three parameters computes noise values in three dimensions. These dimensions can be thought of as space, as in <code>noise(x, y, z)</code>, or space and time, as in <code>noise(x, y, t)</code>.",
+        "///",
         "指定された座標でのパーリンノイズ値を返します。パーリンノイズは、標準の <a href=\"#/p5/random\">random()</a> 関数と比較して、より自然に順序付けられた調和のある数列を生成するランダムシーケンスジェネレータです。1980年代に Ken Perlin によって発明され、以降、グラフィカルアプリケーションで手続き的テクスチャ、自然な動き、形状、地形などを生成するために使用されています。<br /><br /><a href=\"#/p5/random\">random()</a> 関数との主な違いは、パーリンノイズは無限の n 次元空間で定義されており、座標のペアごとに固定の半乱数値（プログラムの寿命に対してのみ固定; <a href=\"#/p5/noiseSeed\">noiseSeed()</a> 関数を参照）が対応していることです。p5.js は、与えられた座標の数に応じて 1D、2D、3D のノイズを計算することができます。結果として得られる値は常に0.0から1.0の間になります。ノイズ値は、例で示されているように、ノイズ空間を移動することでアニメーション化することができます。第2および第3の次元は、時間としても解釈できます。<br /><br />実際のノイズは、周波数の利用に関してオーディオ信号に似た構造を持っています。物理学の調和の概念に似て、パーリンノイズはいくつかのオクターブで計算され、最終結果に加算されます。<br /><br />結果として得られるシーケンスの性格を調整するもうひとつの方法は、入力座標のスケールです。関数が無限の空間で動作するため、座標の値自体は重要ではなく、連続する座標間の距離だけが重要です(たとえば、ループ内で <a href=\"#/p5/noise\">noise()</a> を使用する場合)。一般的には、座標間の差が小さいほど、得られるノイズシーケンスは滑らかになります。ほとんどのアプリケーションでは0.005-0.03のステップが最適ですが、用途によっては異なります。"
       ],
-      "returns": "Number: 指定された座標でのパーリンノイズ値（0から1の間）",
+      "returns": "Number: Perlin noise value at specified coordinates. /// Number: 指定された座標でのパーリンノイズ値（0から1の間）",
       "params": {
         "x": "Number: ノイズ空間の x 座標",
         "y": "Number: (オプション) ノイズ空間の y 座標",
@@ -2631,6 +2827,10 @@
     },
     "noiseDetail": {
       "description": [
+        "Adjusts the character of the noise produced by the <a href=\"#/p5/noise\">noise()</a> function.",
+        "Perlin noise values are created by adding layers of noise together. The noise layers, called octaves, are similar to harmonics in music. Lower octaves contribute more to the output signal. They define the overall intensity of the noise. Higher octaves create finer-grained details.",
+        "By default, noise values are created by combining four octaves. Each higher octave contributes half as much (50% less) compared to its predecessor. <code>noiseDetail()</code> changes the number of octaves and the falloff amount. For example, calling <code>noiseDetail(6, 0.25)</code> ensures that <a href=\"#/p5/noise\">noise()</a> will use six octaves. Each higher octave will contribute 25% as much (75% less) compared to its predecessor. Falloff values between 0 and 1 are valid. However, falloff values greater than 0.5 might result in noise values greater than 1.",
+        "///",
         "パーリンノイズ関数で生成されるノイズの特性とディテールのレベルを調整します。物理学の調和に似て、ノイズはいくつかのオクターブで計算されます。低オクターブは出力信号に大きく寄与し、ノイズの全体的な強度を定義します。一方、高オクターブはノイズ配列の細かいディテールを作成します。デフォルトでは、ノイズは4つのオクターブで計算され、各オクターブは直前のオクターブのちょうど半分の寄与をしています。ひとつ目のオクターブの強度は50%から始まります。この減衰量は、追加の関数パラメーターを追加することで変更することができます。たとえば、減衰係数が0.75の場合、各オクターブは前の低オクターブの75%の影響をもつことになります（25%少なくなります）。 0.0から1.0の間の任意の値が有効ですが、0.5より大きい値は、<a href=\"#/p5/noise\">noise()</a> が1.0より大きい値を返す可能性があることに注意してください。これらのパラメーターを変更することで、<a href=\"#/p5/noise\">noise()</a> 関数で生成される信号は、非常に特定のニーズや特性に適応させることができます。"
       ],
       "params": {
@@ -2640,6 +2840,8 @@
     },
     "noiseSeed": {
       "description": [
+        "Sets the seed value for <a href=\"#/p5/noise\">noise()</a>. By default, <a href=\"#/p5/noise\">noise()</a> produces different results each time a sketch is run. Calling <code>noiseSeed()</code> with a constant argument, such as <code>noiseSeed(99)</code>, makes <a href=\"#/p5/noise\">noise()</a> produce the same results each time a sketch is run.",
+        "///",
         "<a href=\"#/p5/noise\">noise()</a> のシード値を設定します。デフォルトでは、<a href=\"#/p5/noise\">noise()</a> はプログラムが実行されるたびに異なる結果を生成します。<code>seed</code> パラメーターを定数に設定すると、ソフトウェアが実行されるたびに同じ疑似乱数が返されます。"
       ],
       "params": {
@@ -2648,6 +2850,8 @@
     },
     "randomSeed": {
       "description": [
+        "Sets the seed value for <a href=\"#/p5/random\">random()</a> and <a href=\"#/p5/randomGaussian\">randomGaussian()</a>. By default, <a href=\"#/p5/random\">random()</a> and <a href=\"#/p5/randomGaussian\">randomGaussian()</a> produce different results each time a sketch is run. Calling <code>randomSeed()</code> with a constant argument, such as <code>randomSeed(99)</code>, makes these functions produce the same results each time a sketch is run.",
+        "///",
         "<a href=\"#/p5/random\">random()</a> のシード値を設定します。",
         "デフォルトでは、<a href=\"#/p5/random\">random()</a> はプログラムが実行されるたびに異なる結果を生成します。シードパラメーターを定数に設定すると、ソフトウェアが実行されるたびに同じ疑似乱数が返されます。"
       ],
@@ -2657,6 +2861,13 @@
     },
     "random": {
       "description": [
+        "Returns a random number or a random element from an array.",
+        "<code>random()</code> follows uniform distribution, which means that all outcomes are equally likely. When <code>random()</code> is used to generate numbers, all numbers in the output range are equally likely to be returned. When <code>random()</code> is used to select elements from an array, all elements are equally likely to be chosen.",
+        "By default, <code>random()</code> produces different results each time a sketch runs. The <a href=\"#/p5/randomSeed\">randomSeed()</a> function can be used to generate the same sequence of numbers or choices each time a sketch runs.",
+        "The version of <code>random()</code> with no parameters returns a random number from 0 up to but not including 1.",
+        "The version of <code>random()</code> with one parameter works one of two ways. If the argument passed is a number, <code>random()</code> returns a random number from 0 up to but not including the number. For example, calling <code>random(5)</code> returns values between 0 and 5. If the argument passed is an array, <code>random()</code> returns a random element from that array. For example, calling <code>random(['🦁', '🐯', '🐻'])</code> returns either a lion, tiger, or bear emoji.",
+        "The version of <code>random()</code> with two parameters returns a random number from a given range. The arguments passed set the range's lower and upper bounds. For example, calling <code>random(-5, 10.2)</code> returns values from -5 up to but not including 10.2.",
+        "///",
         "ランダムな浮動小数点数を返します。",
         "引数は、未指定、または、ひとつ、または、2つを与えることができます。",
         "引数が未指定の場合、0から1未満のランダムな数を返します。",
@@ -2673,6 +2884,13 @@
     },
     "randomGaussian": {
       "description": [
+        "Returns a random number fitting a Gaussian, or normal, distribution. Normal distributions look like bell curves when plotted. Values from a normal distribution cluster around a central value called the mean. The cluster's standard deviation describes its spread.",
+        "By default, <code>randomGaussian()</code> produces different results each time a sketch runs. The <a href=\"#/p5/randomSeed\">randomSeed()</a> function can be used to generate the same sequence of numbers each time a sketch runs.",
+        "There's no minimum or maximum value that <code>randomGaussian()</code> might return. Values far from the mean are very unlikely and values near the mean are very likely.",
+        "The version of <code>randomGaussian()</code> with no parameters returns values with a mean of 0 and standard deviation of 1.",
+        "The version of <code>randomGaussian()</code> with one parameter interprets the argument passed as the mean. The standard deviation is 1.",
+        "The version of <code>randomGaussian()</code> with two parameters interprets the first argument passed as the mean and the second as the standard deviation.",
+        "///",
         "ガウス分布、または正規分布に従うランダムな数を返します。<a href=\"#/p5/randomGaussian\">randomGaussian()</a> が理論的に返す最小値や最大値はありません。むしろ、平均値から離れた値が返される確率は非常に低く、平均値に近い数が返される確率が高いです。0、1、または2の引数を取ります。引数がない場合、平均は0で標準偏差は1です。引数がひとつの場合、その引数が平均で標準偏差は1です。引数が2つの場合、最初の引数が平均で、2つ目が標準偏差です。"
       ],
       "returns": "Number: ランダムな数",
@@ -2683,6 +2901,8 @@
     },
     "acos": {
       "description": [
+        "The inverse of <a href=\"#/p5/cos\">cos()</a>, returns the arc cosine of a value. This function expects arguments in the range -1 to 1. By default, <code>acos()</code> returns values in the range 0 to π (about 3.14). If the <a href=\"#/p5/angleMode\">angleMode()</a> is <code>DEGREES</code>, then values are returned in the range 0 to 180.",
+        "///",
         "<a href=\"#/p5/cos\">cos()</a> の逆関数で、値の逆余弦を返します。この関数は、-1から1の範囲の値を想定しており、<a href=\"#/p5/angleMode\">angleMode()</a> が RADIANS の場合は0からPI(3.1415927)の範囲の値が、DEGREES の場合は0から180の範囲の値が返されます。"
       ],
       "returns": "Number: 与えられた値の逆余弦",
@@ -2692,6 +2912,8 @@
     },
     "asin": {
       "description": [
+        "The inverse of <a href=\"#/p5/sin\">sin()</a>, returns the arc sine of a value. This function expects input values in the range of -1 to 1. By default, <code>asin()</code> returns values in the range -π ÷ 2 (about -1.57) to π ÷ 2 (about 1.57). If the <a href=\"#/p5/angleMode\">angleMode()</a> is <code>DEGREES</code> then values are returned in the range -90 to 90.",
+        "///",
         "<a href=\"#/p5/sin\">sin()</a> の逆関数で、値の逆正弦を返します。この関数は、-1から1の範囲の値を想定しており、angleMode が RADIANS の場合は-PI / 2 から PI / 2 の範囲の値が、DEGREES の場合は-90から90の範囲の値が返されます。"
       ],
       "returns": "Number: 与えられた値の逆正弦",
@@ -2701,6 +2923,8 @@
     },
     "atan": {
       "description": [
+        "The inverse of <a href=\"#/p5/tan\">tan()</a>, returns the arc tangent of a value. This function expects input values in the range of -Infinity to Infinity. By default, <code>atan()</code> returns values in the range -π ÷ 2 (about -1.57) to π ÷ 2 (about 1.57). If the <a href=\"#/p5/angleMode\">angleMode()</a> is <code>DEGREES</code> then values are returned in the range -90 to 90.",
+        "///",
         "<a href=\"#/p5/tan\">tan()</a> の逆関数で、値の逆正接を返します。この関数は、-Infinity から Infinity(exclusive) の範囲の値を想定しており、angleMode が RADIANS の場合は -PI / 2 から PI / 2 の範囲の値が、DEGREES の場合は-90から90の範囲の値が返されます。"
       ],
       "returns": "Number: 与えられた値の逆正接",
@@ -2710,6 +2934,9 @@
     },
     "atan2": {
       "description": [
+        "Calculates the angle formed by a specified point, the origin, and the positive x-axis. By default, <code>atan2()</code> returns values in the range -π (about -3.14) to π (3.14). If the <a href=\"#/p5/angleMode\">angleMode()</a> is <code>DEGREES</code>, then values are returned in the range -180 to 180. The <code>atan2()</code> function is most often used for orienting geometry to the mouse's position.",
+        "Note: The y-coordinate of the point is the first parameter and the x-coordinate is the second parameter.",
+        "///",
         "指定した点から座標原点までの角度を、正の x 軸から測定したラジアン単位で計算します。値は、<a href=\"#/p5/angleMode\">angleMode()</a> が RADIANS の場合は PI から-PI の範囲の浮動小数点で返され、DEGREES の場合は180から-180の範囲で返されます。<a href=\"#/p5/\">atan2()</a> 関数は、ジオメトリをカーソルの位置に合わせて向きを決定するために最もよく使用されます。",
         "注: 点の y 座標が最初のパラメーターで、x 座標が2番目のパラメーターです。これは、正接を計算する構造によるものです。"
       ],
@@ -2721,6 +2948,8 @@
     },
     "cos": {
       "description": [
+        "Calculates the cosine of an angle. <code>cos()</code> is useful for many geometric tasks in creative coding. The values returned oscillate between -1 and 1 as the input angle increases. <code>cos()</code> takes into account the current <a href=\"#/p5/angleMode\">angleMode</a>.",
+        "///",
         "角度の余弦を計算します。この関数は、現在の <a href=\"#/p5/angleMode\">angleMode</a> を考慮しています。値は、-1から1の範囲で返されます。"
       ],
       "returns": "Number: 角度の余弦",
@@ -2730,6 +2959,8 @@
     },
     "sin": {
       "description": [
+        "Calculates the sine of an angle. <code>sin()</code> is useful for many geometric tasks in creative coding. The values returned oscillate between -1 and 1 as the input angle increases. <code>sin()</code> takes into account the current <a href=\"#/p5/angleMode\">angleMode</a>.",
+        "///",
         "角度の正弦を計算します。この関数は、現在の <a href=\"#/p5/angleMode\">angleMode</a> を考慮しています。値は、-1から1の範囲で返されます。"
       ],
       "returns": "Number: 角度の正弦",
@@ -2739,6 +2970,8 @@
     },
     "tan": {
       "description": [
+        "Calculates the tangent of an angle. <code>tan()</code> is useful for many geometric tasks in creative coding. The values returned range from -Infinity to Infinity and repeat periodically as the input angle increases. <code>tan()</code> takes into account the current <a href=\"#/p5/angleMode\">angleMode</a>.",
+        "///",
         "角度の正接を計算します。この関数は、現在の <a href=\"#/p5/angleMode\">angleMode</a> を考慮しています。値は、すべての実数の範囲で返されます。"
       ],
       "returns": "Number: 角度の正接",
@@ -2748,6 +2981,8 @@
     },
     "degrees": {
       "description": [
+        "Converts an angle measurement in radians to its corresponding value in degrees. Degrees and radians are two ways of measuring the same thing. There are 360 degrees in a circle and 2 × π (about 6.28) radians in a circle. For example, 90° = π ÷ 2 (about 1.57) radians. This function doesn't take into account the current <a href=\"#/p5/angleMode\">angleMode()</a>.",
+        "///",
         "ラジアン単位の測定値を、対応する角度の値に変換します。ラジアンと角度は、同じことを測定する2つの方法です。円には360度があり、円には 2 * PI ラジアンがあります。たとえば、90° = PI / 2 = 1.5707964。この関数は、現在の <a href=\"#/p5/angleMode\">angleMode()</a> は考慮しません。"
       ],
       "returns": "Number: 変換された角度",
@@ -2757,6 +2992,8 @@
     },
     "radians": {
       "description": [
+        "Converts an angle measurement in degrees to its corresponding value in radians. Degrees and radians are two ways of measuring the same thing. There are 360 degrees in a circle and 2 × π (about 6.28) radians in a circle. For example, 90° = π ÷ 2 (about 1.57) radians. This function doesn't take into account the current <a href=\"#/p5/angleMode\">angleMode()</a>.",
+        "///",
         "角度の測定値を、対応するラジアンの値に変換します。ラジアンと角度は、同じことを測定する2つの方法です。円には360度があり、円には 2 * PI ラジアンがあります。たとえば、90° = PI / 2 = 1.5707964。この関数は、現在の <a href=\"#/p5/angleMode\">angleMode</a> は考慮しません。"
       ],
       "returns": "Number: 変換された角度",
@@ -2766,6 +3003,9 @@
     },
     "angleMode": {
       "description": [
+        "Changes the way trigonometric functions interpret angle values. By default, the mode is <code>RADIANS</code>.",
+        "Calling <code>angleMode()</code> with no arguments returns current angle mode.",
+        "///",
         "p5 の現在のモードを指定されたモードに設定します。デフォルトのモードは RADIANS です。",
         "<a href=\"#/p5/angleMode\">angleMode()</a> を引数なしで呼び出すと、現在の angleMode が返されます。"
       ],
@@ -2809,7 +3049,11 @@
       }
     },
     "textWidth": {
-      "description": ["任意の文字やテキスト文字列の幅を計算して返します。"],
+      "description": [
+        "Calculates and returns the width of any character or the maximum width of any paragrph.",
+        "///",
+        "任意の文字やテキスト文字列の幅を計算して返します。"
+      ],
       "returns": "Number: 計算された幅",
       "params": {
         "theText": "String: 測定する文字の文字列"
@@ -2841,40 +3085,57 @@
     },
     "loadFont": {
       "description": [
+        "Loads a font and creates a <a href=\"#/p5.Font\">p5.Font</a> object. <code>loadFont()</code> can load fonts in either .otf or .ttf format. Loaded fonts can be used to style text on the canvas and in HTML elements.",
+        "The first parameter, <code>path</code>, is the path to a font file. Paths to local files should be relative. For example, <code>'assets/inconsolata.otf'</code>. The Inconsolata font used in the following examples can be downloaded for free <a href=\"https://www.fontsquirrel.com/fonts/inconsolata\" target=\"_blank\">here</a>. Paths to remote files should be URLs. For example, <code>'https://example.com/inconsolata.otf'</code>. URLs may be blocked due to browser security.",
+        "The second parameter, <code>successCallback</code>, is optional. If a function is passed, it will be called once the font has loaded. The callback function may use the new <a href=\"#/p5.Font\">p5.Font</a> object if needed.",
+        "The third parameter, <code>failureCallback</code>, is also optional. If a function is passed, it will be called if the font fails to load. The callback function may use the error <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Event\" target=\"_blank\">Event</a> object if needed.",
+        "Fonts can take time to load. Calling <code>loadFont()</code> in <a href=\"#/p5/preload\">preload()</a> ensures fonts load before they're used in <a href=\"#/p5/setup\">setup()</a> or <a href=\"#/p5/draw\">draw()</a>.",
+        "///",
         "ファイルまたは URL から OpenType フォントファイル（.otf、.ttf）をロードし、<a href=\"#/p5.Font\">p5.Font</a> オブジェクトを返します。この関数は非同期であり、スケッチの次の行が実行される前に終了しない場合があります。",
         "フォントへのパスは、スケッチにリンクされた HTML ファイルに対して相対的である必要があります。URL や他のリモート場所からのフォントの読み込みは、ブラウザーの組み込みセキュリティによりブロックされることがあります。"
       ],
       "returns": "p5.Font: <a href=\"#/p5.Font\">p5.Font</a> オブジェクト",
       "params": {
-        "path": "String:  ロードするファイルまたは URL の名前",
-        "callback": "関数: (オプション) <a href=\"#/p5/loadFont\">loadFont()</a> が完了した後に実行される関数",
-        "onError": "関数: (オプション) エラーが発生した場合に実行される関数"
+        "path": "String: path of the font to be loaded. /// String:  ロードするファイルまたは URL の名前",
+        "successCallback": "Function: (Optional) function called with the  <a href=\"#/p5.Font\">p5.Font</a> object after it  loads. /// 関数: (オプション) <a href=\"#/p5/loadFont\">loadFont()</a> が完了した後に実行される関数",
+        "failureCallback": "Function: (Optional) function called with the error  <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Event\" target=\"_blank\">Event</a>  object if the font fails to load. /// 関数: (オプション) エラーが発生した場合に実行される関数"
       }
     },
     "text": {
       "description": [
+        "Draws text to the canvas.",
+        "The first parameter, <code>str</code>, is the text to be drawn. The second and third parameters, <code>x</code> and <code>y</code>, set the coordinates of the text's bottom-left corner. See <a href=\"#/p5/textAlign\">textAlign()</a> for other ways to align text.",
+        "The fourth and fifth parameters, <code>maxWidth</code> and <code>maxHeight</code>, are optional. They set the dimensions of the invisible rectangle containing the text. By default, they set its maximum width and height. See <a href=\"#/p5/rectMode\">rectMode()</a> for other ways to define the rectangular text box. Text will wrap to fit within the text box. Text outside of the box won't be drawn.",
+        "Text can be styled a few ways. Call the <a href=\"#/p5/fill\">fill()</a> function to set the text's fill color. Call <a href=\"#/p5/stroke\">stroke()</a> and <a href=\"#/p5/strokeWeight\">strokeWeight()</a> to set the text's outline. Call <a href=\"#/p5/textSize\">textSize()</a> and <a href=\"#/p5/textFont\">textFont()</a> to set the text's size and font, respectively.",
+        "Note: <code>WEBGL</code> mode only supports fonts loaded with <a href=\"#/p5/loadFont\">loadFont()</a>. Calling <a href=\"#/p5/stroke\">stroke()</a> has no effect in <code>WEBGL</code> mode.",
+        "///",
         "画面上にテキストを描画します。追加のパラメーターで指定された位置に、最初のパラメーターで指定された情報を画面上に表示します。<a href=\"#/p5/textFont\">textFont()</a> 関数でフォントが設定されていない場合はデフォルトのフォントが使用され、<a href=\"#/p5/textSize\">textSize()</a> でフォントサイズが設定されていない場合はデフォルトのサイズが使用されます。テキストの色を <a href=\"#/p5/fill\">fill()</a> 関数で変更します。テキストのアウトラインを <a href=\"#/p5/stroke\">stroke()</a> 関数と <a href=\"#/p5/strokeWeight\">strokeWeight()</a> 関数で変更します。",
         "テキストは <a href=\"#/p5/textAlign\">textAlign()</a> 関数に関連して表示され、座標の左、右、および中央に描画するオプションがあります。",
         "x2 および y2 パラメーターは、文字列データのみで使用できる表示範囲を定義し、現在の <a href=\"#/p5/rectMode\">rectMode()</a> 設定にもとづいて解釈されます。指定された矩形内に完全に収まらないテキストは画面に描画されません。x2 と y2 が指定されていない場合、デフォルトのベースライン揃えが適用され、テキストは x および y から上向きに描画されます。",
         "<b>WebGL</b>: Opentype/Truetype フォントのみがサポートされています。例のように、<a href=\"#/p5/loadFont\">loadFont()</a> メソッドを使ってフォントを読み込む必要があります。<a href=\"#/p5/stroke\">stroke()</a> は、現在 webgl モードでは効果がありません。WebGL モードでテキストを操作する方法については、<a href=\"https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5#text\">wiki</a> を参照してください。"
       ],
       "params": {
-        "str": "String|Object|Array|Number|Boolean: 表示する英数字のシンボル",
-        "x": "Number: テキストの x 座標",
-        "y": "Number: テキストの y 座標",
-        "x2": "Number: (オプション) デフォルトでは、テキストボックスの幅で、<a href=\"#/p5/rectMode\">rectMode()</a> で詳細を確認できます",
-        "y2": "Number: (オプション) デフォルトでは、テキストボックスの高さで、<a href=\"#/p5/rectMode\">rectMode()</a> で詳細を確認できます"
+        "str": "String|Object|Array|Number|Boolean: text to be displayed. /// String|Object|Array|Number|Boolean: 表示する英数字のシンボル",
+        "x": "Number: テキストボックスの x 座標",
+        "y": "Number: テキストボックスの y 座標",
+        "maxWidth": "Number: (Optional) maximum width of the text box. See  <a href=\"#/p5/rectMode\">rectMode()</a> for  other options. /// Number: (オプション) デフォルトでは、テキストボックスの幅で、<a href=\"#/p5/rectMode\">rectMode()</a> で詳細を確認できます",
+        "maxHeight": "Number: (Optional) maximum height of the text box. See  <a href=\"#/p5/rectMode\">rectMode()</a> for  other options. /// Number: (オプション) デフォルトでは、テキストボックスの高さで、<a href=\"#/p5/rectMode\">rectMode()</a> で詳細を確認できます"
       }
     },
     "textFont": {
       "description": [
+        "Sets the font used by the <a href=\"#/p5/text\">text()</a> function.",
+        "The first parameter, <code>font</code>, sets the font. <code>textFont()</code> recognizes either a <a href=\"#/p5.Font\">p5.Font</a> object or a string with the name of a system font. For example, <code>'Courier New'</code>.",
+        "The second parameter, <code>size</code>, is optional. It sets the font size in pixels. This has the same effect as calling <a href=\"#/p5/textSize\">textSize()</a>.",
+        "Note: <code>WEBGL</code> mode only supports fonts loaded with <a href=\"#/p5/loadFont\">loadFont()</a>.",
+        "///",
         "<a href=\"#/p5/text\">text()</a> 関数で描画される現在のフォントを設定します。textFont() が引数なしで呼び出されると、すでに設定されているフォントがあれば現在のフォントを返します。そうでなければ、デフォルトフォントの名前を文字列として返します。textFont() が使用するフォントで呼び出されると、p5 オブジェクトを返します。",
         "<b>WebGL</b>: <a href=\"#/p5/loadFont\">loadFont()</a> で読み込まれたフォントのみがサポートされています。"
       ],
-      "returns": "Object: 現在のフォント / p5 オブジェクト",
+      "returns": "Object: 現在のフォント または p5 オブジェクト",
       "params": {
-        "font": "Object|String: <a href=\"#/p5/loadFont\">loadFont()</a> で読み込まれたフォント、または <a href=\"https://mzl.la/2dOw8WD\">ウェブセーフフォント</a>（一般的にすべてのシステムで利用可能なフォント）を表す文字列",
-        "size": "Number:  (オプション) 使用するフォントサイズ"
+        "font": "Object|String: font as a <a href=\"#/p5.Font\">p5.Font</a> object or a string. /// Object|String: <a href=\"#/p5/loadFont\">loadFont()</a> で読み込まれたフォント、または <a href=\"https://mzl.la/2dOw8WD\">ウェブセーフフォント</a>（一般的にすべてのシステムで利用可能なフォント）を表す文字列",
+        "size": "Number: (Optional) font size in pixels. /// Number:  (オプション) 使用するフォントサイズ"
       }
     },
     "append": {
@@ -3213,6 +3474,42 @@
       ],
       "returns": "Integer: 現在の年"
     },
+    "beginGeometry": {
+      "description": [
+        "Starts creating a new p5.Geometry. Subsequent shapes drawn will be added to the geometry and then returned when <a href=\"#/p5/endGeometry\">endGeometry()</a> is called. One can also use <a href=\"#/p5/buildGeometry\">buildGeometry()</a> to pass a function that draws shapes.",
+        "If you need to draw complex shapes every frame which don't change over time, combining them upfront with <code>beginGeometry()</code> and <code>endGeometry()</code> and then drawing that will run faster than repeatedly drawing the individual pieces.",
+        "///"
+      ]
+    },
+    "endGeometry": {
+      "description": [
+        "Finishes creating a new <a href=\"#/p5.Geometry\">p5.Geometry</a> that was started using <a href=\"#/p5/beginGeometry\">beginGeometry()</a>. One can also use <a href=\"#/p5/buildGeometry\">buildGeometry()</a> to pass a function that draws shapes.",
+        "///"
+      ],
+      "returns": "p5.Geometry: The model that was built."
+    },
+    "buildGeometry": {
+      "description": [
+        "Creates a new <a href=\"#/p5.Geometry\">p5.Geometry</a> that contains all the shapes drawn in a provided callback function. The returned combined shape can then be drawn all at once using <a href=\"#/p5/model\">model()</a>.",
+        "If you need to draw complex shapes every frame which don't change over time, combining them with <code>buildGeometry()</code> once and then drawing that will run faster than repeatedly drawing the individual pieces.",
+        "One can also draw shapes directly between <a href=\"#/p5/beginGeometry\">beginGeometry()</a> and <a href=\"#/p5/endGeometry\">endGeometry()</a> instead of using a callback function.",
+        "///"
+      ],
+      "returns": "p5.Geometry: The model that was built from the callback function.",
+      "params": {
+        "callback": "Function: A function that draws shapes."
+      }
+    },
+    "freeGeometry": {
+      "description": [
+        "Clears the resources of a model to free up browser memory. A model whose resources have been cleared can still be drawn, but the first time it is drawn again, it might take longer.",
+        "This method works on models generated with <a href=\"#/p5/buildGeometry\">buildGeometry()</a> as well as those loaded from <a href=\"#/p5/loadModel\">loadModel()</a>.",
+        "///"
+      ],
+      "params": {
+        "The": "p5.Geometry: geometry whose resources should be freed"
+      }
+    },
     "plane": {
       "description": ["指定された幅と高さで平面を描画します。"],
       "params": {
@@ -3499,6 +3796,19 @@
       "params": {
         "vertSrc": "String: 頂点シェーダーのソースコード",
         "fragSrc": "String: フラグメントシェーダーのソースコード"
+      }
+    },
+    "createFilterShader": {
+      "description": [
+        "Creates a new <a href=\"#/p5.Shader\">p5.Shader</a> using only a fragment shader, as a convenience method for creating image effects. It's like <a href=\"#/createShader\">createShader()</a> but with a default vertex shader included.",
+        "<a href=\"#/createFilterShader\">createFilterShader()</a> is intended to be used along with <a href=\"#/filter\">filter()</a> for filtering the contents of a canvas in WebGL mode. A filter shader will not be applied to any geometries.",
+        "The fragment shader receives some uniforms: <ul> <li><code>sampler2D tex0</code>, which contains the canvas contents as a texture</li> <li><code>vec2 canvasSize</code>, which is the width and height of the canvas</li> <li><code>vec2 texelSize</code>, which is the size of a pixel (<code>1.0/width</code>, <code>1.0/height</code>)</li> </ul>",
+        "For more info about filters and shaders, see Adam Ferriss' <a href=\"https://github.com/aferriss/p5jsShaderExamples\">repo of shader examples</a> or the <a href=\"https://p5js.org/learn/getting-started-in-webgl-shaders.html\">introduction to shaders</a> page.",
+        "///"
+      ],
+      "returns": "p5.Shader: a shader object created from the provided  fragment shader.",
+      "params": {
+        "fragSrc": "String: source code for the fragment shader"
       }
     },
     "shader": {
@@ -4181,7 +4491,7 @@
       "h": "Number: 高さ",
       "renderer": "Constant: 使用するレンダラーで、P2D または WEBGL のいずれか",
       "pInst": "P5: (オプション) p5 インスタンスへのポインター",
-      "canvas": "Object: (オプション) 既存の HTML Canvas 要素"
+      "canvas": "HTMLCanvasElement: (オプション) 既存の HTML Canvas 要素"
     },
     "reset": {
       "description": [
@@ -4529,6 +4839,9 @@
   },
   "p5.Image": {
     "description": [
+      "A class to describe an image. Images are rectangular grids of pixels that can be displayed and modified.",
+      "Existing images can be loaded by calling <a href=\"#/p5/loadImage\">loadImage()</a>. Blank images can be created by calling <a href=\"#/p5/createImage\">createImage()</a>. <code>p5.Image</code> objects have methods for common tasks such as applying filters and modifying pixel values.",
+      "///",
       "<a href=\"#/p5.Image\">p5.Image</a> を新規に作成します。 <a href=\"#/p5.Image\">p5.Image</a> はキャンバスをバックエンドに使用した画像の表現です。",
       "p5 は.gif、.jpg、.png の画像を表示することができます。画像は 2D および 3D の空間で表示できます。画像を使用する前に、<a href=\"#/p5/loadImage\">loadImage()</a> 関数で画像をロードする必要があります。 <a href=\"#/p5.Image\">p5.Image</a> クラスには、画像の幅と高さを示すフィールドと、画像内のすべてのピクセルの値を含む <a href=\"#/p5.Image/pixels\">pixels[]</a> という配列が含まれています。",
       "以下で説明するメソッドは、画像のピクセルやアルファチャンネルへの簡単なアクセスと合成のプロセスを簡素化します。",
@@ -4546,51 +4859,89 @@
     },
     "pixels": {
       "description": [
+        "An array containing the color of each pixel in the <a href=\"#/p5.Image\">p5.Image</a> object. Colors are stored as numbers representing red, green, blue, and alpha (RGBA) values. <code>img.pixels</code> is a one-dimensional array for performance reasons.",
+        "Each pixel occupies four elements in the pixels array, one for each RGBA value. For example, the pixel at coordinates (0, 0) stores its RGBA values at <code>img.pixels[0]</code>, <code>img.pixels[1]</code>, <code>img.pixels[2]</code>, and <code>img.pixels[3]</code>, respectively. The next pixel at coordinates (1, 0) stores its RGBA values at <code>img.pixels[4]</code>, <code>img.pixels[5]</code>, <code>img.pixels[6]</code>, and <code>img.pixels[7]</code>. And so on. The <code>img.pixels</code> array for a 100×100 <a href=\"#/p5.Image\">p5.Image</a> object has 100 × 100 × 4 = 40,000 elements.",
+        "Accessing the RGBA values for a pixel in the <a href=\"#/p5.Image\">p5.Image</a> object requires a little math as shown below. The <a href=\"#/p5.Image/loadPixels\">img.loadPixels()</a> method must be called before accessing the <code>img.pixels</code> array. The <a href=\"#/p5.Image/updatePixels\">img.updatePixels()</a> method must be called after any changes are made.",
+        "///",
         "ディスプレイウィンドウ内のすべてのピクセルの値を含む配列です。これらの値は数値です。この配列のサイズは、ピクセル密度の適切な係数を含めたディスプレイウィンドウのサイズ×4 で、各ピクセルの R、G、B、A 値が順番に表示されます。左から右に各行を移動し、各列を下に移動します。Retina やその他の高密度ディスプレイでは、ピクセルがより多く存在します（pixelDensity^2 倍）。「たとえば、画像が100×100ピクセルの場合、40000ピクセルがあります。pixelDensity = 2 の場合、160000になります。配列内の最初の4つの値（インデックス0〜3）は、（0、0）のピクセルの R、G、B、A 値です。次の4つの値（インデックス4〜7）には、（1、0）のピクセルの R、G、B、A 値が含まれます。一般的に、（x、y）のピクセルの値を設定するには:<pre><code class=\"language-javascript\">let d = pixelDensity(); for (let i = 0; i < d; i++) {  for (let j = 0; j < d; j++) {  // loop over  index = 4 * ((y * d + j) * width * d + (x * d + i));  pixels[index] = r;  pixels[index+1] = g;  pixels[index+2] = b;  pixels[index+3] = a;  } } </code></pre>",
         "この配列にアクセスする前に、<a href=\"#/p5.Image/loadPixels\">loadPixels()</a> 関数でデータを読み込む必要があります。配列データが変更された後、変更内容を反映させるには、<a href=\"#/p5.Image/updatePixels\">updatePixels()</a> 関数を実行する必要があります。"
       ]
     },
+    "pixelDensity": {
+      "description": [
+        "Gets or sets the pixel density for high pixel density displays. By default, the density will be set to 1.",
+        "Call this method with no arguments to get the default density, or pass in a number to set the density. If a non-positive number is provided, it defaults to 1.",
+        "///"
+      ],
+      "returns": "Number: The current density if called without arguments, or the instance for chaining if setting density.",
+      "params": {
+        "density": "Number: (Optional) A scaling factor for the number of pixels per side"
+      }
+    },
     "loadPixels": {
-      "description": ["この画像のピクセルデータを[pixels]属性にロードします。"]
+      "description": [
+        "Loads the current value of each pixel in the <a href=\"#/p5.Image\">p5.Image</a> object into the <code>img.pixels</code> array. This method must be called before reading or modifying pixel values.",
+        "///",
+        "この画像のピクセルデータを[pixels]属性にロードします。"
+      ]
     },
     "updatePixels": {
       "description": [
+        "Updates the canvas with the RGBA values in the <a href=\"#/p5.Image/pixels\">img.pixels</a> array.",
+        "<code>img.updatePixels()</code> only needs to be called after changing values in the <a href=\"#/p5.Image/pixels\">img.pixels</a> array. Such changes can be made directly after calling <a href=\"#/p5.Image/loadPixels\">img.loadPixels()</a> or by calling <a href=\"#/p5.Image/set\">img.set()</a>.",
+        "The optional parameters <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code> define a subsection of the <a href=\"#/p5.Image\">p5.Image</a> object to update. Doing so can improve performance in some cases.",
+        "If the <a href=\"#/p5.Image\">p5.Image</a> object was loaded from a GIF, then calling <code>img.updatePixels()</code> will update the pixels in current frame.",
+        "///",
         "この画像のバッキングキャンバスを[pixels]配列の内容で更新します。",
         "この画像がアニメーション GIF の場合、ピクセルは現在表示されているフレームで更新されます。"
       ],
       "params": {
-        "x": "Integer: アンダーラインキャンバスのターゲット更新領域の x オフセット",
-        "y": "Integer: アンダーラインキャンバスのターゲット更新領域の y オフセット",
-        "w": "Integer: アンダーラインキャンバスのターゲット更新領域の幅",
-        "h": "Integer: アンダーラインキャンバスのターゲット更新領域の高さ"
+        "x": "Integer: x-coordinate of the upper-left corner  of the subsection to update. /// Integer: アンダーラインキャンバスのターゲット更新領域の x オフセット",
+        "y": "Integer: y-coordinate of the upper-left corner  of the subsection to update. /// Integer: アンダーラインキャンバスのターゲット更新領域の y オフセット",
+        "w": "Integer: width of the subsection to update. /// Integer: アンダーラインキャンバスのターゲット更新領域の幅",
+        "h": "Integer: height of the subsection to update. /// Integer: アンダーラインキャンバスのターゲット更新領域の高さ"
       }
     },
     "get": {
       "description": [
+        "Gets a pixel or a region of pixels from a <a href=\"#/p5.Image\">p5.Image</a> object.",
+        "<code>img.get()</code> is easy to use but it's not as fast as <a href=\"#/p5.Image/pixels\">img.pixels</a>. Use <a href=\"#/p5.Image/pixels\">img.pixels</a> to read many pixel values.",
+        "The version of <code>img.get()</code> with no parameters returns the entire image.",
+        "The version of <code>img.get()</code> with two parameters interprets them as coordinates. It returns an array with the <code>[R, G, B, A]</code> values of the pixel at the given point.",
+        "The version of <code>img.get()</code> with four parameters interprets them as coordinates and dimensions. It returns a subsection of the canvas as a <a href=\"#/p5.Image\">p5.Image</a> object. The first two parameters are the coordinates for the upper-left corner of the subsection. The last two parameters are the width and height of the subsection.",
+        "Use <a href=\"#/p5.Image/get\">img.get()</a> to work directly with <a href=\"#/p5.Image\">p5.Image</a> objects.",
+        "///",
         "画像からピクセルの領域を取得します。",
         "パラメーターが指定されていない場合、全体の画像が返されます。x と y だけが渡された場合、単一のピクセルが抽出されます。すべてのパラメーターが渡された場合、矩形領域が抽出され、<a href=\"#/p5.Image\">p5.Image</a> が返されます。"
       ],
-      "returns": "p5.Image: 矩形 <a href=\"#/p5.Image\">p5.Image</a>。",
+      "returns": "p5.Image: subsection as a <a href=\"#/p5.Image\">p5.Image</a> object. /// p5.Image: 矩形 <a href=\"#/p5.Image\">p5.Image</a>。",
       "params": {
         "x": "Number:ピクセルの x 座標",
         "y": "Number:ピクセルの y 座標",
-        "w": "Number:幅",
-        "h": "Number:高さ"
+        "w": "Number: width of the subsection to be returned. /// Number:幅",
+        "h": "Number: height of the subsection to be returned. /// Number:高さ"
       }
     },
     "set": {
       "description": [
+        "Sets the color of one or more pixels within a <a href=\"#/p5.Image\">p5.Image</a> object.",
+        "<code>img.set()</code> is easy to use but it's not as fast as <a href=\"#/p5.Image/pixels\">img.pixels</a>. Use <a href=\"#/p5.Image/pixels\">img.pixels</a> to set many pixel values.",
+        "<code>img.set()</code> interprets the first two parameters as x- and y-coordinates. It interprets the last parameter as a grayscale value, a <code>[R, G, B, A]</code> pixel array, a <a href=\"#/p5.Color\">p5.Color</a> object, or another <a href=\"#/p5.Image\">p5.Image</a> object.",
+        "<a href=\"#/p5.Image/updatePixels\">img.updatePixels()</a> must be called after using <code>img.set()</code> for changes to appear.",
+        "///",
         "単一のピクセルの色を設定するか、この <a href=\"#/p5.Image\">p5.Image</a> に画像を書き込みます。",
         "多数のピクセルを扱う場合、pixels 配列を直接操作し、<a href=\"#/p5.Image/updatePixels\">updatePixels()</a> を呼び出す方が高速です。"
       ],
       "params": {
         "x": "Number:ピクセルの x 座標",
         "y": "Number:ピクセルの y 座標",
-        "a": "Number|Number[]|Object: グレースケール値 | ピクセル配列 | <a href=\"#/p5.Color\">p5.Color</a> | コピーする画像"
+        "a": "Number|Number[]|Object: グレースケール値 | ピクセル配列 | <a href=\"#/p5.Color\">p5.Color</a> | コピーする <a href=\"#/p5.Image\">p5.Image</a>"
       }
     },
     "resize": {
       "description": [
+        "Resizes the <a href=\"#/p5.Image\">p5.Image</a> object to a given <code>width</code> and <code>height</code>. The image's original aspect ratio can be kept by passing 0 for either <code>width</code> or <code>height</code>. For example, calling <code>img.resize(50, 0)</code> on an image that was 500 × 300 pixels will resize it to 50 × 30 pixels.",
+        "///",
         "画像を新しい幅と高さにリサイズします。画像を比例的にスケーリングするには、wide または high パラメーターの値として0を使用します。たとえば、画像の幅を150ピクセルにし、同じ比率で高さを変更するには、resize(150, 0)を使用します。"
       ],
       "params": {
@@ -4600,6 +4951,8 @@
     },
     "copy": {
       "description": [
+        "Copies pixels from a source <a href=\"#/p5.Image\">p5.Image</a>  to this one. Calling <code>img.copy()</code> will scale pixels from the source  region if it isn't the same size as the destination region.",
+        "///",
         "画像の一部を別の画像にコピーします。srcImage が指定されていない場合は、これがソースとして使用されます。ソースと宛先の領域が同じサイズでない場合、ソースピクセルを自動的に指定されたターゲット領域に合わせてリサイズします。"
       ],
       "params": {
@@ -4624,6 +4977,16 @@
     },
     "filter": {
       "description": [
+        "Applies an image filter to the <a href=\"#/p5.Image\">p5.Image</a> object. The preset options are:",
+        "<code>INVERT</code> Inverts the colors in the image. No parameter is used.",
+        "<code>GRAY</code> Converts the image to grayscale. No parameter is used.",
+        "<code>THRESHOLD</code> Converts the image to black and white. Pixels with a grayscale value above a given threshold are converted to white. The rest are converted to black. The threshold must be between 0.0 (black) and 1.0 (white). If no value is specified, 0.5 is used.",
+        "<code>OPAQUE</code> Sets the alpha channel to be entirely opaque. No parameter is used.",
+        "<code>POSTERIZE</code> Limits the number of colors in the image. Each color channel is limited to the number of colors specified. Values between 2 and 255 are valid, but results are most noticeable with lower values. The default value is 4.",
+        "<code>BLUR</code> Blurs the image. The level of blurring is specified by a blur radius. Larger values increase the blur. The default value is 4. A gaussian blur is used in <code>P2D</code> mode. A box blur is used in <code>WEBGL</code> mode.",
+        "<code>ERODE</code> Reduces the light areas. No parameter is used.",
+        "<code>DILATE</code> Increases the light areas. No parameter is used.",
+        "///",
         "<a href=\"#/p5.Image\">p5.Image</a> に画像フィルターを適用します。",
         "THRESHOLD は、レベルパラメーターで定義された閾値を基準に、画像を白黒のピクセルに変換します。パラメーターは0.0（黒）から1.0（白）の間でなければなりません。レベルが指定されていない場合、0.5が使用されます。",
         "GRAY は、画像内の任意の色をグレースケールに変換します。パラメーターは使用されません。",
@@ -4636,12 +4999,14 @@
         "filter() は WebGL モードでは機能しません。 WebGL モードでは、カスタムシェーダーを使用して類似の効果を実現できます。 Adam Ferriss は、フィルターの例に含まれる多くの効果を含む <a href=\"https://github.com/aferriss/p5jsShaderExamples\" target='_blank'>シェーダー例の選択</a> を作成しました。"
       ],
       "params": {
-        "filterType": "Constant: THRESHOLD、GRAY、OPAQUE、INVERT、POSTERIZE、ERODE、DILATE、BLUR のいずれか。使用可能な各フィルターに関するドキュメントについては、Filters.js を参照してください。",
-        "filterParam": "Number:  (オプション) 各フィルターユニークなパラメーター。上記を参照してください。"
+        "filterType": "Constant: THRESHOLD、GRAY、OPAQUE、INVERT、POSTERIZE、ERODE、DILATE、BLUR のいずれか。",
+        "filterParam": "Number:  (オプション) 各フィルターユニークなパラメーター。"
       }
     },
     "blend": {
       "description": [
+        "Copies a region of pixels from another <a href=\"#/p5.Image\">p5.Image</a> object into this one. The <code>blendMode</code> parameter blends the images' colors to create different effects.",
+        "///",
         "指定されたブレンドモードを使用して、ひとつの画像からピクセルの領域をコピーし、他の画像に貼り付けます。"
       ],
       "params": {
@@ -4659,49 +5024,70 @@
     },
     "save": {
       "description": [
+        "Saves the <a href=\"#/p5.Image\">p5.Image</a> object to a file. The browser will either save the file immediately or prompt the user with a dialogue window.",
+        "By default, calling <code>img.save()</code> will save the image as <code>untitled.png</code>.",
+        "Calling <code>img.save()</code> with one argument, as in <code>img.save('photo.png')</code>, will set the image's filename and type together.",
+        "Calling <code>img.save()</code> with two arguments, as in <code>image.save('photo', 'png')</code>, will set the image's filename and type separately.",
+        "The image will only be downloaded as an animated GIF if the <a href=\"#/p5.Image\">p5.Image</a> object was loaded from a GIF file. See <a href=\"#/p5/saveGif\">saveGif()</a> to create new GIFs.",
+        "///",
         "画像をファイルに保存し、ブラウザーをダウンロードするように指示します。ファイル名と拡張子の2つの文字列を受け入れます。png（デフォルト）、jpg、および gif がサポートされています。 p5.Image が GIF ファイルから読み込まれた場合のみ、ファイルはアニメーション GIF としてダウンロードされます。"
       ],
       "params": {
-        "filename": "String:  ファイル名を指定してください",
-        "extension": "String:  'png'または'jpg'"
+        "filename": "String: filename. Defaults to 'untitled'. /// String:  ファイル名を指定してください",
+        "extension": "String: (Optional) file extension, either 'png' or 'jpg'.  Defaults to 'png'. /// String:  'png'または'jpg'"
       }
     },
     "reset": {
-      "description": ["アニメーション GIF を最初の状態から再生します。"]
+      "description": [
+        "Restarts an animated GIF at its first frame.",
+        "///",
+        "アニメーション GIF を最初の状態から再生します。"
+      ]
     },
     "getCurrentFrame": {
       "description": [
+        "Gets the index of the current frame in an animated GIF.",
+        "///",
         "アニメーション GIF で現在表示されているフレームのインデックスを取得します。"
       ],
       "returns": "Number:  アニメーション GIF で現在表示されているフレームのインデックス"
     },
     "setFrame": {
       "description": [
+        "Sets the current frame in an animated GIF.",
+        "///",
         "アニメーション GIF で現在表示されているフレームのインデックスを設定します。"
       ],
       "params": {
-        "index": "Number:  表示するフレームのインデックス"
+        "index": "Number: index of the frame to display. /// Number:  表示するフレームのインデックス"
       }
     },
     "numFrames": {
       "description": ["アニメーション GIF のフレーム数を返します。"],
-      "returns": "Number: "
+      "returns": "Number: number of frames in the GIF. /// Number: "
     },
     "play": {
       "description": [
-        "<a href=\"#/p5.Image/pause\">pause()</a> で一時停止されたアニメーション GIF を再生します。"
+        "<a href=\"#/p5.Image/pause\">img.pause()</a> で一時停止されたアニメーション GIF を再生します。"
       ]
     },
     "pause": {
-      "description": ["アニメーション GIF を一時停止します。"]
+      "description": [
+        "Pauses an animated GIF. The GIF can be resumed by calling <a href=\"#/p5.Image/play\">img.play()</a>.",
+        "///",
+        "アニメーション GIF を一時停止します。"
+      ]
     },
     "delay": {
       "description": [
+        "Changes the delay between frames in an animated GIF.",
+        "The second parameter, <code>index</code>, is optional. If provided, only the frame at <code>index</code> will have its delay modified. All other frames will keep their default delay.",
+        "///",
         "アニメーション GIF のフレーム間の遅延時間を変更します。2番目のオプションパラメーターを指定することで、特定のフレームの遅延時間を変更できます。インデックスが指定されていない場合、すべてのフレームに新しい遅延時間が適用されます。"
       ],
       "params": {
-        "d": "Number:  フレームを切り替える間の遅延時間（ミリ秒単位）",
-        "index": "Number:  (オプション) 新しい遅延時間が適用されるフレームのインデックス {オプション}"
+        "d": "Number: delay in milliseconds between switching frames. /// Number:  フレームを切り替える間の遅延時間（ミリ秒単位）",
+        "index": "Number: (Optional) index of the frame that will have its delay modified. /// Number:  (オプション) 新しい遅延時間が適用されるフレームのインデックス {オプション}"
       }
     }
   },
@@ -5153,6 +5539,9 @@
   },
   "p5.Vector": {
     "description": [
+      "A class to describe a two or three-dimensional vector. A vector is like an arrow pointing in space. Vectors have both magnitude (length) and direction.",
+      "<code>p5.Vector</code> objects are often used to program motion because they simplify the math. For example, a moving ball has a position and a velocity. Position describes where the ball is in space. The ball's position vector extends from the origin to the ball's center. Velocity describes the ball's speed and the direction it's moving. If the ball is moving straight up, its velocity vector points straight up. Adding the ball's velocity vector to its position vector moves it, as in <code>pos.add(vel)</code>. Vector math relies on methods inside the <code>p5.Vector</code> class.",
+      "///",
       "2次元または3次元ベクトルを記述するためのクラスです。ベクトルは大きさと方向をもつエンティティで、データ型はベクトルの成分 (<code>x</code> と <code>y</code> は 2D、<code>x</code>、<code>y</code>、<code>z</code> は 3D) を格納します。大きさと方向は、<a href=\"#/p5.Vector/mag\">p5.Vector.mag()</a> と <a href=\"#/p5.Vector/heading\">heading()</a> メソッドを介してアクセスできます。",
       "p5.js の多くの例では、位置、速度、または加速度を表すために <a href=\"#/p5.Vector\">p5.Vector</a> が使用されます。たとえば、画面上を移動する四角形を考えると、任意の瞬間にその位置（原点からその場所を指すベクトル）、速度（オブジェクトの位置が時間単位あたりにどのように変化するかを表すベクトル）、および加速度（オブジェクトの速度が時間単位あたりにどのように変化するかを表すベクトル）があります。",
       "ベクトルは値のグループを表すため、従来の加算/乗算などを単純に使用することはできません。代わりに、<a href=\"#/p5.Vector\">p5.Vector</a> クラス内のメソッドを使用する必要があります。"
@@ -5173,12 +5562,16 @@
     },
     "toString": {
       "description": [
+        "Returns a string representation of a vector. This method is useful for printing vectors to the console while debugging.",
+        "///",
         "ベクトル <code>v</code> の文字列表現を、<code>String(v)</code> または <code>v.toString()</code> を呼び出して取得します。このメソッドは、コンソールにベクトルを記録するために役立ちます。"
       ],
       "returns": "String: ベクトルの文字列表現"
     },
     "set": {
       "description": [
+        "Sets the <code>x</code>, <code>y</code>, and <code>z</code> components of the vector using separate numbers, a <a href=\"#/p5.Vector\">p5.Vector</a> object, or an array of numbers. Calling <code>set()</code> with no arguments sets the vector's components to 0.",
+        "///",
         "2つまたは3つの別々の変数、<a href=\"#/p5.Vector\">p5.Vector</a> のデータ、または float 配列の値を使用して、ベクトルの <code>x</code>、<code>y</code>、<code>z</code> 成分を設定します。"
       ],
       "params": {
@@ -5190,6 +5583,8 @@
     },
     "copy": {
       "description": [
+        "Returns a copy of the <a href=\"#/p5.Vector\">p5.Vector</a> object.",
+        "///",
         "ベクトルのコピーを取得し、<a href=\"#/p5.Vector\">p5.Vector</a> オブジェクトを返します。"
       ],
       "returns": "p5.Vector: <a href=\"#/p5.Vector\">p5.Vector</a> オブジェクトのコピー",
@@ -5199,6 +5594,9 @@
     },
     "add": {
       "description": [
+        "Adds to a vector's <code>x</code>, <code>y</code>, and <code>z</code> components using separate numbers, another <a href=\"#/p5.Vector\">p5.Vector</a> object, or an array of numbers. Calling <code>add()</code> with no arguments has no effect.",
+        "The static version of <code>add()</code>, as in <code>p5.Vector.add(v2, v1)</code>, returns a new <a href=\"#/p5.Vector\">p5.Vector</a> object and doesn't change the originals.",
+        "///",
         "<code>x</code>、<code>y</code> および <code>z</code> 成分をベクトルに加算したり、ひとつのベクトルを別のベクトルに加算したり、2つの独立したベクトルを合わせたりします。2つのベクトルを加算するメソッドのバージョンは静的メソッドで、<a href=\"#/p5.Vector\">p5.Vector</a> を返します。その他のバージョンは、ベクトルに直接作用します。また、このメソッドの引数に配列を指定することもできます。詳細については、例を参照してください。"
       ],
       "params": {
@@ -5213,6 +5611,9 @@
     },
     "rem": {
       "description": [
+        "Performs modulo (remainder) division with a vector's <code>x</code>, <code>y</code>, and <code>z</code> components using separate numbers, another <a href=\"#/p5.Vector\">p5.Vector</a> object, or an array of numbers.",
+        "The static version of <code>rem()</code> as in <code>p5.Vector.rem(v2, v1)</code>, returns a new <a href=\"#/p5.Vector\">p5.Vector</a> object and doesn't change the originals.",
+        "///",
         "ベクトルを他のベクトルで割ったときの余りを返します。詳細については、例を参照してください。"
       ],
       "params": {
@@ -5226,6 +5627,9 @@
     },
     "sub": {
       "description": [
+        "Subtracts from a vector's <code>x</code>, <code>y</code>, and <code>z</code> components using separate numbers, another <a href=\"#/p5.Vector\">p5.Vector</a> object, or an array of numbers. Calling <code>sub()</code> with no arguments has no effect.",
+        "The static version of <code>sub()</code>, as in <code>p5.Vector.sub(v2, v1)</code>, returns a new <a href=\"#/p5.Vector\">p5.Vector</a> object and doesn't change the originals.",
+        "///",
         "ベクトルから <code>x</code>、<code>y</code>、<code>z</code> 成分を引きます。また、ひとつのベクトルから別のベクトルを引き、2つの独立したベクトルを引くこともできます。2つのベクトルを引くメソッドは静的メソッドで、<a href=\"#/p5.Vector\">p5.Vector</a> を返します。その他のメソッドはベクトルに直接作用します。このメソッドに引数を配列として提供することもできます。詳細については、例を参照してください。"
       ],
       "params": {
@@ -5240,6 +5644,9 @@
     },
     "mult": {
       "description": [
+        "Multiplies a vector's <code>x</code>, <code>y</code>, and <code>z</code> components by the same number, separate numbers, the components of another <a href=\"#/p5.Vector\">p5.Vector</a> object, or an array of numbers. Calling <code>mult()</code> with no arguments has no effect.",
+        "The static version of <code>mult()</code>, as in <code>p5.Vector.mult(v, 2)</code>, returns a new <a href=\"#/p5.Vector\">p5.Vector</a> object and doesn't change the originals.",
+        "///",
         "ベクトルをスカラーで乗算し、ベクトルの <code>x</code>、<code>y</code>、<code>z</code> 成分を乗算するか、2つの独立したベクトルの <code>x</code>、<code>y</code>、<code>z</code> 成分を乗算します。ベクトルをスカラーで乗算する場合、ベクトルの <code>x</code>、<code>y</code>、<code>z</code> 成分はすべてスカラーで乗算されます。ベクトルを別のベクトルで乗算する場合、2つのベクトルの <code>x</code>、<code>y</code>、<code>z</code> 成分を互いに乗算します（たとえば、2つのベクトル <code>a</code> と <code>b</code> の場合:<code>a.x * b.x</code>、<code>a.y * b.y</code>、<code>a.z * b.z</code>）。このメソッドの静的バージョンは新しい <a href=\"#/p5.Vector\">p5.Vector</a> を作成し、非静的バージョンはベクトルに直接作用します。また、この関数に引数を配列として提供することもできます。詳細については、例を参照してください。"
       ],
       "params": {
@@ -5256,6 +5663,9 @@
     },
     "div": {
       "description": [
+        "Divides a vector's <code>x</code>, <code>y</code>, and <code>z</code> components by the same number, separate numbers, the components of another <a href=\"#/p5.Vector\">p5.Vector</a> object, or an array of numbers. Calling <code>div()</code> with no arguments has no effect.",
+        "The static version of <code>div()</code>, as in <code>p5.Vector.div(v, 2)</code>, returns a new <a href=\"#/p5.Vector\">p5.Vector</a> object and doesn't change the originals.",
+        "///",
         "ベクトルをスカラーで除算したり、ベクトルを <code>x</code>、<code>y</code>、<code>z</code> の各成分で除算したり、2つのベクトルの <code>x</code>、<code>y</code>、<code>z</code> 成分同士を除算したりします。スカラーでベクトルを除算する場合、ベクトルの <code>x</code>、<code>y</code>、<code>z</code> 成分がスカラーで除算されます。ベクトルでベクトルを除算する場合、ソースベクトルの <code>x</code>、<code>y</code>、<code>z</code> 成分が被除数、引数の <code>x</code>、<code>y</code>、<code>z</code> 成分が除数として扱われます。たとえば、2つのベクトル <code>a</code> と <code>b</code> の場合、<code>a.x / b.x</code>、<code>a.y / b.y</code>、<code>a.z / b.z</code> のようになります。第2のベクトルのいずれかの成分が0の場合、除算0エラーがログに出力されます。ただし、両方のベクトルの <code>z</code> 成分に0がある場合は、<code>x</code> と <code>y</code> 成分のみが除算されます。このメソッドの static 版は新しい <a href=\"#/p5.Vector\">p5.Vector</a> を作成し、non-static 版はベクトル自体に作用します。このメソッドに引数を配列として提供することもできます。詳細については、例を参照してください。"
       ],
       "params": {
@@ -5272,6 +5682,8 @@
     },
     "mag": {
       "description": [
+        "Returns the magnitude (length) of the vector.",
+        "///",
         "ベクトルの長さ（大きさ）を計算し、その結果を浮動小数点数で返します。これは単純に式 <code>sqrt(xx + yy + zz)</code> です。"
       ],
       "returns": "Number: ベクトルの長さ",
@@ -5281,6 +5693,8 @@
     },
     "magSq": {
       "description": [
+        "Returns the magnitude (length) of the vector squared.",
+        "///",
         "ベクトルの長さの2乗を計算し、その結果を浮動小数点数で返します。これは単に式 <code>xx + yy + zz</code> です。ベクトルを比較する場合など、実際の長さが必要ない場合には、より高速です。"
       ],
       "returns": "Number: ベクトルの長さの2乗",
@@ -5290,6 +5704,11 @@
     },
     "dot": {
       "description": [
+        "Returns the dot product of two vectors. The dot product is a number that describes the overlap between two vectors. Visually, the dot product can be thought of as the \"shadow\" one vector casts on another. The dot product's magnitude is largest when two vectors point in the same or opposite directions. Its magnitude is 0 when two vectors form a right angle.",
+        "The version of <code>dot()</code> with one parameter interprets it as another <a href=\"#/p5.Vector\">p5.Vector</a> object.",
+        "The version of <code>dot()</code> with multiple parameters interprets them as the <code>x</code>, <code>y</code>, and <code>z</code> components of another vector.",
+        "The static version of <code>dot()</code>, as in <code>p5.Vector.dot(v1, v2)</code>, is the same as calling <code>v1.dot(v2)</code>.",
+        "///",
         "2つのベクトルの内積を計算します。2つの独立したベクトルの内積を計算するバージョンは、静的メソッドです。より詳細なコンテキストについては、例を参照してください。"
       ],
       "returns": "Number: 内積",
@@ -5297,16 +5716,19 @@
         "x": "Number: ベクトルの x 成分",
         "y": "Number: (オプション) ベクトルの y 成分",
         "z": "Number: (オプション) ベクトルの z 成分",
-        "value": "p5.Vector: ベクトルの value 成分または <a href=\"#/p5.Vector\">p5.Vector</a>",
+        "v": "p5.Vector: <a href=\"#/p5.Vector\">p5.Vector</a> to be dotted. /// p5.Vector: ベクトルの value 成分または <a href=\"#/p5.Vector\">p5.Vector</a>",
         "v1": "p5.Vector: 最初の <a href=\"#/p5.Vector\">p5.Vector</a>",
         "v2": "p5.Vector: 2番目の <a href=\"#/p5.Vector\">p5.Vector</a>"
       }
     },
     "cross": {
       "description": [
+        "Returns the cross product of two vectors. The cross product is a vector that points straight out of the plane created by two vectors. The cross product's magnitude is the area of the parallelogram formed by the original two vectors.",
+        "The static version of <code>cross()</code>, as in <code>p5.Vector.cross(v1, v2)</code>, is the same as calling <code>v1.cross(v2)</code>.",
+        "///",
         "2つのベクトルの外積から構成されるベクトルを計算し、返します。静的および非静的メソッドの両方が新しい <a href=\"#/p5.Vector\">p5.Vector</a> を返します。より詳細なコンテキストについては、例を参照してください。"
       ],
-      "returns": "p5.Vector: 外積から構成される <a href=\"#/p5.Vector\">p5.Vector</a>",
+      "returns": "p5.Vector: cross product as a <a href=\"#/p5.Vector\">p5.Vector</a>. /// p5.Vector: 外積から構成される <a href=\"#/p5.Vector\">p5.Vector</a>",
       "params": {
         "v": "p5.Vector: 外積を取る <a href=\"#/p5.Vector\">p5.Vector</a>",
         "v1": "p5.Vector: 最初の <a href=\"#/p5.Vector\">p5.Vector</a>",
@@ -5315,6 +5737,10 @@
     },
     "dist": {
       "description": [
+        "Returns the distance between two points represented by vectors. A point's coordinates can be thought of as a vector's components.",
+        "The static version of <code>dist()</code>, as in <code>p5.Vector.dist(v1, v2)</code>, is the same as calling <code>v1.dist(v2)</code>.",
+        "Use <a href=\"#/p5/dist\">dist()</a> to calculate the distance between points using coordinates as in <code>dist(x1, y1, x2, y2)</code>.",
+        "///",
         "2点間のユークリッド距離（点をベクトルオブジェクトとして扱う）を計算します。2点間の距離を計算する場合は <a href=\"#/p5/dist\">dist()</a> を使用してください。"
       ],
       "returns": "Number: 距離",
@@ -5325,7 +5751,12 @@
       }
     },
     "normalize": {
-      "description": ["ベクトルの長さを1に正規化します。"],
+      "description": [
+        "Scales the components of a <a href=\"#/p5.Vector\">p5.Vector</a> object so that its magnitude is 1.",
+        "The static version of <code>normalize()</code>, as in <code>p5.Vector.normalize(v)</code>, returns a new <a href=\"#/p5.Vector\">p5.Vector</a> object and doesn't change the original.",
+        "///",
+        "ベクトルの長さを1に正規化します。"
+      ],
       "returns": "p5.Vector: 正規化された <a href=\"#/p5.Vector\">p5.Vector</a>",
       "params": {
         "v": "p5.Vector: 正規化するベクトル",
@@ -5334,6 +5765,9 @@
     },
     "limit": {
       "description": [
+        "Limits a vector's magnitude to a maximum value.",
+        "The static version of <code>limit()</code>, as in <code>p5.Vector.limit(v, 5)</code>, returns a new <a href=\"#/p5.Vector\">p5.Vector</a> object and doesn't change the original.",
+        "///",
         "このベクトルの大きさを <code>max</code> パラメーターで指定された値に制限します。"
       ],
       "params": {
@@ -5344,6 +5778,9 @@
     },
     "setMag": {
       "description": [
+        "Sets a vector's magnitude to a given value.",
+        "The static version of <code>setMag()</code>, as in <code>p5.Vector.setMag(v, 10)</code>, returns a new <a href=\"#/p5.Vector\">p5.Vector</a> object and doesn't change the original.",
+        "///",
         "このベクトルの大きさを、<code>len</code> パラメーターで指定した値に設定します。"
       ],
       "params": {
@@ -5354,6 +5791,10 @@
     },
     "heading": {
       "description": [
+        "Calculates the angle a 2D vector makes with the positive x-axis. Angles increase in the clockwise direction.",
+        "If the vector was created with <a href=\"#/p5/createVector\">createVector()</a>, <code>heading()</code> returns angles in the units of the current <a href=\"#/p5/angleMode\">angleMode()</a>.",
+        "The static version of <code>heading()</code>, as in <code>p5.Vector.heading(v)</code>, works the same way.",
+        "///",
         "このベクトルの回転角度を計算します (2D ベクトルのみ)。 <a href=\"#/p5/createVector\">createVector()</a> で作成された p5.Vector は、現在 <a href=\"#/p5/angleMode\">angleMode()</a> を考慮して、ラジアンまたは度数で角度を返します。"
       ],
       "returns": "Number: 回転角度",
@@ -5363,6 +5804,9 @@
     },
     "setHeading": {
       "description": [
+        "Rotates a 2D vector to a specific angle without changing its magnitude. By convention, the positive x-axis has an angle of 0. Angles increase in the clockwise direction.",
+        "If the vector was created with <a href=\"#/p5/createVector\">createVector()</a>, <code>setHeading()</code> uses the units of the current <a href=\"#/p5/angleMode\">angleMode()</a>.",
+        "///",
         "このベクトルを、特定の角度 (2D ベクトルのみ) に回転させます。大きさは変わりません。"
       ],
       "params": {
@@ -5371,6 +5815,10 @@
     },
     "rotate": {
       "description": [
+        "Rotates a 2D vector by an angle without changing its magnitude. By convention, the positive x-axis has an angle of 0. Angles increase in the clockwise direction.",
+        "If the vector was created with <a href=\"#/p5/createVector\">createVector()</a>, <code>rotate()</code> uses the units of the current <a href=\"#/p5/angleMode\">angleMode()</a>.",
+        "The static version of <code>rotate()</code>, as in <code>p5.Vector.rotate(v, PI)</code>, returns a new <a href=\"#/p5.Vector\">p5.Vector</a> object and doesn't change the original.",
+        "///",
         "このベクトルを、指定された角度 (2D ベクトルのみ) で回転させます。大きさは変わりません。"
       ],
       "params": {
@@ -5381,6 +5829,9 @@
     },
     "angleBetween": {
       "description": [
+        "Returns the angle between two vectors. The angles returned are signed, which means that <code>v1.angleBetween(v2) === -v2.angleBetween(v1)</code>.",
+        "If the vector was created with <a href=\"#/p5/createVector\">createVector()</a>, <code>angleBetween()</code> returns angles in the units of the current <a href=\"#/p5/angleMode\">angleMode()</a>.",
+        "///",
         "2つのベクトルの間の角度を計算して返します。現在の <a href=\"#/p5/angleMode\">angleMode</a> を考慮し、ラジアンまたは度数法で角度を返します。"
       ],
       "returns": "Number: 2つのベクトルの間の角度",
@@ -5391,13 +5842,18 @@
       }
     },
     "lerp": {
-      "description": ["線形補間によってベクトルを別のベクトルに移動します。"],
+      "description": [
+        "Calculates new <code>x</code>, <code>y</code>, and <code>z</code> components that are proportionally the same distance between two vectors. The <code>amt</code> parameter is the amount to interpolate between the old vector and the new vector. 0.0 keeps all components equal to the old vector's, 0.5 is halfway between, and 1.0 sets all components equal to the new vector's.",
+        "The static version of <code>lerp()</code>, as in <code>p5.Vector.lerp(v0, v1, 0.5)</code>, returns a new <a href=\"#/p5.Vector\">p5.Vector</a> object and doesn't change the original.",
+        "///",
+        "線形補間によってベクトルを別のベクトルに移動します。"
+      ],
       "params": {
         "x": "Number: x 成分。",
         "y": "Number: y 成分。",
         "z": "Number: z 成分。",
-        "amt": "Number: 補間の割合。0.0 (移動元ベクトル) から1.0 (移動先ベクトル) までの値。0.9は移動先のベクトルに非常に近く、0.5は中間点になります。",
-        "v": "p5.Vector: 移動先の <a href=\"#/p5.Vector\">p5.Vector</a>。",
+        "amt": "Number: amount of interpolation between 0.0 (old vector)  and 1.0 (new vector). 0.5 is halfway between. /// Number: 補間の割合。0.0 (移動元ベクトル) から1.0 (移動先ベクトル) までの値。0.9は移動先のベクトルに非常に近く、0.5は中間点になります。",
+        "v": "p5.Vector: <a href=\"#/p5.Vector\">p5.Vector</a> to lerp toward. /// p5.Vector: 移動先の <a href=\"#/p5.Vector\">p5.Vector</a>。",
         "v1": "p5.Vector",
         "v2": "p5.Vector",
         "target": "p5.Vector: (オプション) 結果を受け取るベクトル。"
@@ -5405,12 +5861,16 @@
     },
     "slerp": {
       "description": [
+        "Calculates a new heading and magnitude that are between two vectors. The <code>amt</code> parameter is the amount to interpolate between the old vector and the new vector. 0.0 keeps the heading and magnitude equal to the old vector's, 0.5 sets them halfway between, and 1.0 sets the heading and magnitude equal to the new vector's.",
+        "<code>slerp()</code> differs from <a href=\"#/p5.Vector/lerp\">lerp()</a> because it interpolates magnitude. Calling <code>v0.slerp(v1, 0.5)</code> sets <code>v0</code>'s magnitude to a value halfway between its original magnitude and <code>v1</code>'s. Calling <code>v0.lerp(v1, 0.5)</code> makes no such guarantee.",
+        "The static version of <code>slerp()</code>, as in <code>p5.Vector.slerp(v0, v1, 0.5)</code>, returns a new <a href=\"#/p5.Vector\">p5.Vector</a> object and doesn't change the original.",
+        "///",
         "他のベクトルと球面線形補間を実行し、結果のベクトルを返します。これは 3D と 2D の両方で機能します。2D について、 2D ベクトルとの補完の結果は常に 2D ベクトルになります。"
       ],
       "returns": "p5.Vector:",
       "params": {
-        "v": "p5.Vector: 移動先 p5.Vector",
-        "amt": "Number: 補間の割合。 0.0 (移動元のベクトル) と1.0 (移動先のベクトル)までの値。 0.9は移動先のベクトルに非常に近く、0.5は中間になります。",
+        "v": "p5.Vector: <a href=\"#/p5.Vector\">p5.Vector</a> to slerp toward. /// p5.Vector: 移動先 p5.Vector",
+        "amt": "Number: amount of interpolation between 0.0 (old vector)  and 1.0 (new vector). 0.5 is halfway between. /// Number: 補間の割合。 0.0 (移動元のベクトル) と1.0 (移動先のベクトル)までの値。 0.9は移動先のベクトルに非常に近く、0.5は中間になります。",
         "v1": "p5.Vector: 移動元のベクトル",
         "v2": "p5.Vector: 移動先のベクトル",
         "target": "p5.Vector: (オプション) 結果を受け取るベクトル。"
@@ -5418,6 +5878,9 @@
     },
     "reflect": {
       "description": [
+        "Reflects a vector about a line in 2D or a plane in 3D. The orientation of the line or plane is described by a normal vector that points away from the shape.",
+        "The static version of <code>reflect()</code>, as in <code>p5.Vector.reflect(v, n)</code>, returns a new <a href=\"#/p5.Vector\">p5.Vector</a> object and doesn't change the original.",
+        "///",
         "2D の線の法線または 3D の平面の法線について、ベクトルを反射します。"
       ],
       "params": {
@@ -5428,15 +5891,22 @@
     },
     "array": {
       "description": [
+        "Returns the vector's components as an array of numbers.",
+        "///",
         "このベクトルを浮動小数点数配列として表します。これは一時的な使用のためのものです。他の用途に使用する場合は、自分自身のベクトルにコピーするために <b>p5.Vector.<a href=\"#/p5.Vector/copy\">copy()</a></b> メソッドを使用して、内容をコピーする必要があります。"
       ],
-      "returns": "Number[]: 3つの値をもつ配列",
+      "returns": "Number[]: array with the vector's components. /// Number[]: 3つの値をもつ配列",
       "params": {
         "v": "p5.Vector: 配列に変換するベクトル。"
       }
     },
     "equals": {
       "description": [
+        "Returns <code>true</code> if the vector's components are all the same as another vector's and <code>false</code> if not.",
+        "The version of <code>equals()</code> with one parameter interprets it as another <a href=\"#/p5.Vector\">p5.Vector</a> object.",
+        "The version of <code>equals()</code> with multiple parameters interprets them as the components of another vector. Any missing parameters are assigned the value 0.",
+        "The static version of <code>equals()</code>, as in <code>p5.Vector.equals(v0, v1)</code>, interprets both parameters as <a href=\"#/p5.Vector\">p5.Vector</a> objects.",
+        "///",
         "<a href=\"#/p5.Vector\">p5.Vector</a> に対する等価性チェック。"
       ],
       "returns": "Boolean: ベクトルが等しい場合に true、そうでない場合に false を返します。",
@@ -5453,7 +5923,7 @@
       "description": ["指定した角度から 2D ベクトルを作成します。"],
       "returns": "p5.Vector: 新しい <a href=\"#/p5.Vector\">p5.Vector</a> オブジェクト",
       "params": {
-        "angle": "Number: 角度（単位は弧度法、<a href=\"#/p5/angleMode\">angleMode</a> に影響されません）",
+        "angle": "Number: desired angle, in radians. Unaffected by <a href=\"#/p5/angleMode\">angleMode()</a>. /// Number: 角度（単位は弧度法、<a href=\"#/p5/angleMode\">angleMode</a> に影響されません）",
         "length": "Number: (オプション) 新しいベクトルの長さ（デフォルトは1）"
       }
     },
@@ -5461,54 +5931,78 @@
       "description": ["2つの ISO 球面角から新しい 3D ベクトルを作成します。"],
       "returns": "p5.Vector: 新しい <a href=\"#/p5.Vector\">p5.Vector</a> オブジェクト",
       "params": {
-        "theta": "Number: 極角（単位は弧度法、上を0度とします）",
-        "phi": "Number: 方位角（単位は弧度法、スクリーンから外側を0度とします）",
+        "theta": "Number: polar angle in radians (zero is up). /// Number: 極角（単位は弧度法、上を0度とします）",
+        "phi": "Number: azimuthal angle in radians  (zero is out of the screen). /// Number: 方位角（単位は弧度法、スクリーンから外側を0度とします）",
         "length": "Number: (オプション) 新しいベクトルの長さ（デフォルトは1）"
       }
     },
     "random2D": {
       "description": [
+        "Make a new 2D unit vector with a random heading.",
+        "///",
         "ランダムな角度から新しい2次元単位ベクトルを作成します。"
       ],
       "returns": "p5.Vector: 新しい <a href=\"#/p5.Vector\">p5.Vector</a> オブジェクト"
     },
     "random3D": {
-      "description": ["新しいランダムな3次元単位ベクトルを作成します。"],
+      "description": [
+        "Make a new 3D unit vector with a random heading.",
+        "///",
+        "新しいランダムな3次元単位ベクトルを作成します。"
+      ],
       "returns": "p5.Vector: 新しい <a href=\"#/p5.Vector\">p5.Vector</a> オブジェクト"
     }
   },
   "p5.Font": {
-    "description": ["フォントのベースクラス"],
+    "description": [
+      "A class to describe fonts.",
+      "///",
+      "フォントのベースクラス"
+    ],
     "params": {
       "pInst": "P5: (オプション) p5 インスタンスへのポインター"
     },
     "font": {
-      "description": ["内部のオープンタイプフォント実装"]
+      "description": [
+        "Underlying <a href=\"https://opentype.js.org/\" target=\"_blank\">opentype.js</a> font object.",
+        "///",
+        "内部のオープンタイプフォント実装"
+      ]
     },
     "textBounds": {
       "description": [
+        "Returns the bounding box for a string of text written using this <a href=\"#/p5.Font\">p5.Font</a>.",
+        "The first parameter, <code>str</code>, is a string of text. The second and third parameters, <code>x</code> and <code>y</code>, are the text's position. By default, they set the coordinates of the bounding box's bottom-left corner. See <a href=\"#/p5/textAlign\">textAlign()</a> for more ways to align text.",
+        "The fourth parameter, <code>fontSize</code>, is optional. It sets the font size used to determine the bounding box. By default, <code>font.textBounds()</code> will use the current <a href=\"#/p5/textSize\">textSize()</a>.",
+        "///",
         "このフォントを使用して、指定されたテキスト文字列に対して、タイトな境界ボックスを返します。"
       ],
-      "returns": "オブジェクト: x、y、w、h プロパティをもつ矩形オブジェクト",
+      "returns": "Object: object describing the bounding box with  properties x, y, w, and h. /// オブジェクト: x、y、w、h プロパティをもつ矩形オブジェクト",
       "params": {
         "line": "String: テキストの行",
-        "x": "Number: x 座標",
-        "y": "Number: y 座標",
-        "fontSize": "Number: (オプション) 使用するフォントサイズ (デフォルトは12)",
-        "options": "オブジェクト: (オプション) opentype オプション (オプション) opentype フォントには alignment と baseline オプションが含まれています。デフォルトは'LEFT'と'alphabetic'"
+        "x": "Number: テキストの x 座標",
+        "y": "Number: テキストの y 座標",
+        "fontSize": "Number: (Optional) font size. Defaults to the current  <a href=\"#/p5/textSize\">textSize()</a>. /// Number: (オプション) 使用するフォントサイズ (デフォルトは12)"
       }
     },
     "textToPoints": {
       "description": [
+        "Returns an array of points outlining a string of text written using this <a href=\"#/p5.Font\">p5.Font</a>.",
+        "The first parameter, <code>str</code>, is a string of text. The second and third parameters, <code>x</code> and <code>y</code>, are the text's position. By default, they set the coordinates of the bounding box's bottom-left corner. See <a href=\"#/p5/textAlign\">textAlign()</a> for more ways to align text.",
+        "The fourth parameter, <code>fontSize</code>, is optional. It sets the text's font size. By default, <code>font.textToPoints()</code> will use the current <a href=\"#/p5/textSize\">textSize()</a>.",
+        "The fifth parameter, <code>options</code>, is also optional. <code>font.textToPoints()</code> expects an object with the following properties:",
+        "<code>sampleFactor</code> is the ratio of the text's path length to the number of samples. It defaults to 0.1. Higher values produce more points along the path and are more precise.",
+        "<code>simplifyThreshold</code> removes collinear points if it's set to a number other than 0. The value represents the threshold angle to use when determining whether two edges are collinear.",
+        "///",
         "指定されたテキストのパスにしたがって点の配列を計算します。"
       ],
-      "returns": "Array:  x、y、alpha（パスの角度）をもつ各ポイントの配列",
+      "returns": "Array: array of point objects, each with x, y, and alpha (path angle) properties. /// Array:  x、y、alpha（パスの角度）をもつ各ポイントの配列",
       "params": {
         "txt": "String: テキストの行",
-        "x": "Number: x 座標",
-        "y": "Number: y 座標",
-        "fontSize": "Number: 使用するフォントサイズ (オプション) ",
-        "options": "オブジェクト: (オプション) サンプルファクター - パスの長さとサンプル数の比率（デフォルト=.1）; 大きい値はより多くの点を生成し、より正確です simplifyThreshold - 非ゼロの値に設定する場合、共線性のあるポイントはポリゴンから削除されます。2つのエッジが共線であるかどうかを判断するときに使用する閾値角度を表します"
+        "x": "Number: テキストの x 座標",
+        "y": "Number: テキストの y 座標",
+        "fontSize": "Number: (Optional) font size. Defaults to the current  <a href=\"#/p5/textSize\">textSize()</a>. /// Number: 使用するフォントサイズ (オプション) ",
+        "options": "Object: (Optional) object with sampleFactor and simplifyThreshold  properties. /// オブジェクト: (オプション) サンプルファクター - パスの長さとサンプル数の比率（デフォルト=.1）; 大きい値はより多くの点を生成し、より正確です simplifyThreshold - 非ゼロの値に設定する場合、共線性のあるポイントはポリゴンから削除されます。2つのエッジが共線であるかどうかを判断するときに使用する閾値角度を表します"
       }
     }
   },
@@ -5765,8 +6259,23 @@
       "vertSrc": "String: 頂点シェーダーのソースコード（文字列形式）",
       "fragSrc": "String: フラグメントシェーダーのソースコード（文字列形式）"
     },
+    "copyToContext": {
+      "description": [
+        "Shaders belong to the main canvas or a p5.Graphics. Once they are compiled, they can only be used in the context they were compiled on.",
+        "Use this method to make a new copy of a shader that gets compiled on a different context.",
+        "///"
+      ],
+      "returns": "p5.Shader: A new shader on the target context.",
+      "params": {
+        "context": "p5|p5.Graphics: The graphic or instance to copy this shader to. Pass <code>window</code> if you need to copy to the main canvas."
+      }
+    },
     "setUniform": {
       "description": [
+        "Used to set the uniforms of a <a href=\"#/p5.Shader\">p5.Shader</a> object.",
+        "Uniforms are used as a way to provide shader programs (which run on the GPU) with values from a sketch (which runs on the CPU).",
+        "Here are some examples of uniforms you can make: <ul> <li>booleans<ul> <li>Example: <code>setUniform('x', true)</code> becomes <code>uniform float x</code> with the value <code>1.0</code></li> </ul> </li> <li>numbers<ul> <li>Example: <code>setUniform('x', -2)</code> becomes <code>uniform float x</code> with the value <code>-2.0</code></li> </ul> </li> <li>arrays of numbers<ul> <li>Example: <code>setUniform('x', [0, 0.5, 1])</code> becomes <code>uniform vec3 x</code> with the value <code>vec3(0.0, 0.5, 1.0)</code></li> </ul> </li> <li>a p5.Image, p5.Graphics, p5.MediaElement, or p5.Texture<ul> <li>Example: <code>setUniform('x', img)</code> becomes <code>uniform sampler2D x</code></li> </ul> </li> </ul>",
+        "///",
         "<a href=\"#/p5.Shader\">p5.Shader</a> オブジェクトの uniform を設定するために使用します。",
         "uniform は、GPU で実行されるシェーダープログラムにスケッチ（CPU 上で実行される）から値を提供する方法として使用されます。"
       ],
