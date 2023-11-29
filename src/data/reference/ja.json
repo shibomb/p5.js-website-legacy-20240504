@@ -73,14 +73,19 @@
     ],
     "returns": "p5: p5 インスタンス",
     "params": {
-      "sketch": "Function: 与えられた p5 インスタンスにオプションで <a href=\"#/p5/preload\">preload()</a>、<a href=\"#/p5/setup\">setup()</a>、および/または <a href=\"#/p5/draw\">draw()</a> プロパティを設定できるクロージャー",
+      "sketch": "Function(p5): 与えられた p5 インスタンスにオプションで <a href=\"#/p5/preload\">preload()</a>、<a href=\"#/p5/setup\">setup()</a>、および/または <a href=\"#/p5/draw\">draw()</a> プロパティを設定できるクロージャー",
       "node": "HTMLElement: (オプション) キャンバスをアタッチする要素"
     },
     "describe": {
       "description": [
         "キャンバスにスクリーンリーダー対応の説明を作成します。最初のパラメーターは、キャンバスの説明を示す文字列である必要があります。2つ目のパラメーターはオプションです。指定された場合、説明の表示方法が決まります。",
         "<code class=\"language-javascript\">describe(text, LABEL)</code> は、キャンバスに隣接する div 内にある <a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">キャプションパネル</a> として、すべてのユーザーに説明を表示します。CSS で好みのスタイルに変更できます。",
-        "<code class=\"language-javascript\">describe(text, FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> で、スクリーンリーダーユーザーのみが説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで説明はスクリーンリーダーユーザーにのみ利用可能です。"
+        "<code class=\"language-javascript\">describe(text, FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> で、スクリーンリーダーユーザーのみが説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで説明はスクリーンリーダーユーザーにのみ利用可能です。",
+        "///",
+        "Creates a screen reader-accessible description for the canvas.",
+        "The first parameter, <code>text</code>, is the description of the canvas.",
+        "The second parameter, <code>display</code>, is optional. It determines how the description is displayed. If <code>LABEL</code> is passed, as in <code>describe('A description.', LABEL)</code>, the description will be visible in a div element next to the canvas. If <code>FALLBACK</code> is passed, as in <code>describe('A description.', FALLBACK)</code>, the description will only be visible to screen readers. This is the default mode.",
+        "Read <a href=\"/learn/labeling-canvases.html\">How to label your p5.js code</a> to learn more about making sketches accessible."
       ],
       "params": {
         "text": "String: キャンバスの説明",
@@ -89,6 +94,12 @@
     },
     "describeElement": {
       "description": [
+        "Creates a screen reader-accessible description for elements in the canvas. Elements are shapes or groups of shapes that create meaning together.",
+        "The first parameter, <code>name</code>, is the name of the element.",
+        "The second parameter, <code>text</code>, is the description of the element.",
+        "The third parameter, <code>display</code>, is optional. It determines how the description is displayed. If <code>LABEL</code> is passed, as in <code>describe('A description.', LABEL)</code>, the description will be visible in a div element next to the canvas. Using <code>LABEL</code> creates unhelpful duplicates for screen readers. Only use <code>LABEL</code> during development. If <code>FALLBACK</code> is passed, as in <code>describe('A description.', FALLBACK)</code>, the description will only be visible to screen readers. This is the default mode.",
+        "Read <a href=\"/learn/labeling-canvases.html\">How to label your p5.js code</a> to learn more about making sketches accessible.",
+        "///",
         "この関数は、キャンバス内の要素（一緒に意味を作り出す形状または形状のグループ）に対してスクリーンリーダー対応の説明を作成します。最初のパラメーターは要素の名前である必要があります。2つ目のパラメーターは、要素の説明を示す文字列である必要があります。3つ目のパラメーターはオプションです。指定された場合、要素の説明の表示方法が決まります。",
         "<code class=\"language-javascript\">describeElement(name, text, LABEL)</code> は、キャンバスに隣接する div 内にある <a href=\"https://en.wikipedia.org/wiki/Museum_label\" target=\"_blank\">キャプションパネル</a> として、すべてのユーザーに要素の説明を表示します。CSS で好みのスタイルに変更できます。",
         "<code class=\"language-javascript\">describeElement(name, text, FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> で、スクリーンリーダーユーザーのみが要素の説明を利用できるようにします。2つ目のパラメーターが指定されていない場合、デフォルトで要素の説明はスクリーンリーダーユーザーにのみ利用可能です。"
@@ -101,6 +112,13 @@
     },
     "textOutput": {
       "description": [
+        "Creates a screen reader-accessible description for shapes on the canvas. <code>textOutput()</code> adds a general description, list of shapes, and table of shapes to the web page.",
+        "The general description includes the canvas size, canvas color, and number of shapes. For example, <code>Your output is a, 100 by 100 pixels, gray canvas containing the following 2 shapes:</code>.",
+        "A list of shapes follows the general description. The list describes the color, location, and area of each shape. For example, <code>a red circle at middle covering 3% of the canvas</code>. Each shape can be selected to get more details.",
+        "<code>textOutput()</code> uses its table of shapes as a list. The table describes the shape, color, location, coordinates and area. For example, <code>red circle location = middle area = 3%</code>. This is different from <a href=\"#/p5/gridOutput\">gridOutput()</a>, which uses its table as a grid.",
+        "The <code>display</code> parameter is optional. It determines how the description is displayed. If <code>LABEL</code> is passed, as in <code>textOutput(LABEL)</code>, the description will be visible in a div element next to the canvas. Using <code>LABEL</code> creates unhelpful duplicates for screen readers. Only use <code>LABEL</code> during development. If <code>FALLBACK</code> is passed, as in <code>textOutput(FALLBACK)</code>, the description will only be visible to screen readers. This is the default mode.",
+        "Read <a href=\"/learn/labeling-canvases.html\">How to label your p5.js code</a> to learn more about making sketches accessible.",
+        "///",
         "<code class=\"language-javascript\">textOutput()</code> は、キャンバス上に存在する形状を説明するスクリーンリーダー対応の出力を作成します。キャンバスの一般的な説明には、キャンバスのサイズ、キャンバスの色、キャンバス内の要素の数（例:「あなたの出力は、400 x 400ピクセルのラベンダーブルーのキャンバスで、以下の4つの形状が含まれています:」）が含まれます。この説明の後に、各形状の色、位置、面積が説明された形状のリストが続きます（例:「キャンバスの1%を覆う左上のオレンジ色の楕円」）。各要素を選択すると詳細が表示され、要素のテーブルも提供されます。このテーブルでは、形状、色、位置、座標、面積が説明されています（例:「オレンジ色の楕円 位置 = 左上 面積 = 2」）。",
         "<code class=\"language-javascript\">textOutput()</code> および <code class=\"language-javascript\">textOutput(FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">textOutput(LABEL)</code> は、キャンバスに隣接する出力が含まれる追加の div を作成しますが、これはコーディング時にキャンバスのサブ DOM 外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABEL を使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみ LABEL を使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
       ],
@@ -110,6 +128,13 @@
     },
     "gridOutput": {
       "description": [
+        "Creates a screen reader-accessible description for shapes on the canvas. <code>gridOutput()</code> adds a general description, table of shapes, and list of shapes to the web page.",
+        "The general description includes the canvas size, canvas color, and number of shapes. For example, <code>gray canvas, 100 by 100 pixels, contains 2 shapes: 1 circle 1 square</code>.",
+        "<code>gridOutput()</code> uses its table of shapes as a grid. Each shape in the grid is placed in a cell whose row and column correspond to the shape's location on the canvas. The grid cells describe the color and type of shape at that location. For example, <code>red circle</code>. These descriptions can be selected individually to get more details. This is different from <a href=\"#/p5/textOutput\">textOutput()</a>, which uses its table as a list.",
+        "A list of shapes follows the table. The list describes the color, type, location, and area of each shape. For example, <code>red circle, location = middle, area = 3 %</code>.",
+        "The <code>display</code> parameter is optional. It determines how the description is displayed. If <code>LABEL</code> is passed, as in <code>gridOutput(LABEL)</code>, the description will be visible in a div element next to the canvas. Using <code>LABEL</code> creates unhelpful duplicates for screen readers. Only use <code>LABEL</code> during development. If <code>FALLBACK</code> is passed, as in <code>gridOutput(FALLBACK)</code>, the description will only be visible to screen readers. This is the default mode.",
+        "Read <a href=\"/learn/labeling-canvases.html\">How to label your p5.js code</a> to learn more about making sketches accessible.",
+        "///",
         "<code class=\"language-javascript\">gridOutput()</code> は、キャンバスの内容を、各形状の空間的な位置にもとづいたグリッド（html テーブル）の形でレイアウトします。テーブル出力の前に、キャンバスの簡単な説明が利用可能です。この説明には、背景の色、キャンバスのサイズ、オブジェクトの数、オブジェクトの種類（例:「ラベンダーブルーのキャンバスは200 x 200で、3つの楕円とひとつの長方形が含まれています」）が含まれます。グリッドは空間的にコンテンツを記述し、各要素はその位置に応じてテーブルのセルに配置されます。各セル内の要素には、その要素の色と形状の種類が利用可能です（例:「オレンジ色の楕円」）。これらの説明は個別に選択して詳細を取得できます。形状、色、位置、面積が説明された要素のリスト（例:「オレンジ色の楕円 位置 = 左上 面積 = 1%」）も利用可能です。",
         "<code class=\"language-javascript\">gridOutput()</code> および <code class=\"language-javascript\">gridOutput(FALLBACK)</code> は、<a href=\"https://developer.mozilla.org/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility\" target=\"_blank\">キャンバス要素内のサブ DOM</a> でスクリーンリーダーにアクセス可能な出力を利用可能にします。<code class=\"language-javascript\">gridOutput(LABEL)</code> は、キャンバスに隣接する出力が含まれる追加の div を作成しますが、これはコーディング時にキャンバスのサブ DOM 外に出力を表示したい非スクリーンリーダーユーザーにとって便利です。ただし、LABEL を使用すると、スクリーンリーダーユーザーにとって不要な冗長性が生じます。スケッチの開発プロセスの一部としてのみ LABEL を使用し、公開またはスクリーンリーダーユーザーと共有する前に削除することをお勧めします。"
       ],
@@ -972,55 +997,72 @@
     "RGBA": {},
     "print": {
       "description": [
+        "Displays text in the web browser's console.",
+        "<code>print()</code> is helpful for printing values while debugging. Each call to <code>print()</code> creates a new line of text.",
+        "Note: Call <code>print('\\n')</code> to print a blank line. Calling <code>print()</code> without an argument opens the browser's dialog for printing documents.",
+        "///",
         "<a href=\"#/p5/print\">print()</a> 関数を使用するとブラウザーのコンソールエリアに出力することができます。この関数は、プログラムが生成しているデータを確認するのに役立ちます。この関数を使用すると、関数が呼び出されるたびに新しい行でテキストが作成されます。個々の要素はクォート（\"\"）で区切り、加算演算子（+）で結合できます。",
         "引数なしで print() を呼び出すと、window.print() 関数が呼び出され、ブラウザーの印刷ダイアログが開きます。コンソールに空行を出力するには、print('\\n')と記述します。"
       ],
       "params": {
-        "contents": "Any: 印刷する Number、String、Object、Boolean、Array の任意の組み合わせ"
+        "contents": "Any: content to print to the console. /// Any: 印刷する Number、String、Object、Boolean、Array の任意の組み合わせ"
       }
     },
     "frameCount": {
       "description": [
+        "Tracks the number of frames drawn since the sketch started.",
+        "<code>frameCount</code>'s value is 0 inside <a href=\"#/p5/setup\">setup()</a>. It increments by 1 each time the code in <a href=\"#/p5/draw\">draw()</a> finishes executing.",
+        "///",
         "システム変数 <a href=\"#/p5/frameCount\">frameCount</a> は、プログラムが開始されてから表示されたフレームの数を格納します。この変数の値は <a href=\"#/p5/setup\">setup()</a> 内では0で、<a href=\"#/p5/draw\">draw()</a> の最初の反復後に1以上になります。"
       ]
     },
     "deltaTime": {
       "description": [
+        "Tracks the amount of time, in milliseconds, it took for <a href=\"#/p5/draw\">draw</a> to draw the previous frame. <code>deltaTime</code> is useful for simulating physics.",
+        "///",
         "システム変数 <a href=\"#/p5/deltaTime\">deltaTime</a> には、前のフレームの開始と現在のフレームの開始の間の時間差がミリ秒単位で格納されます。",
         "この変数は、時間に厳密なアニメーションや、フレームレートに関係なく一定であるべき物理計算を作成するのに便利です。"
       ]
     },
     "focused": {
       "description": [
+        "Tracks whether the browser window is focused and can receive user input. <code>focused</code> is <code>true</code> if the window if focused and <code>false</code> if not.",
+        "///",
         "ウィンドウが p5.js プログラムで「フォーカス」されているかどうかを確認します。フォーカスされている場合、スケッチがマウスやキーボードの入力を受け付けます。この変数はウィンドウがフォーカスされている場合は「true」で、フォーカスされていない場合は「false」です。"
       ]
     },
     "cursor": {
       "description": [
+        "Changes the cursor's appearance.",
+        "The first parameter, <code>type</code>, sets the type of cursor to display. The built-in options are <code>ARROW</code>, <code>CROSS</code>, <code>HAND</code>, <code>MOVE</code>, <code>TEXT</code>, and <code>WAIT</code>. <code>cursor()</code> also recognizes standard CSS cursor properties passed as strings: <code>'help'</code>, <code>'wait'</code>, <code>'crosshair'</code>, <code>'not-allowed'</code>, <code>'zoom-in'</code>, and <code>'grab'</code>. If the path to an image is passed, as in <code>cursor('assets/target.png')</code>, then the image will be used as the cursor. Images must be in .cur, .gif, .jpg, .jpeg, or .png format.",
+        "The parameters <code>x</code> and <code>y</code> are optional. If an image is used for the cursor, <code>x</code> and <code>y</code> set the location pointed to within the image. They are both 0 by default, so the cursor points to the image's top-left corner. <code>x</code> and <code>y</code> must be less than the image's width and height, respectively.",
+        "///",
         "カーソルを事前定義された記号や画像に設定するか、すでに非表示の場合は表示するようにします。カーソルとして画像を設定する場合、推奨されるサイズは16×16または32×32ピクセルです。パラメーター x と y の値は、画像の寸法よりも小さくする必要があります。"
       ],
       "params": {
-        "type": "String|Constant: 組み込み: ARROW, CROSS, HAND, MOVE, TEXT, WAIT  ネイティブ CSS プロパティ: 'grab', 'progress', 'cell'など  外部: カーソル画像のパス（許可されるファイル拡張子: .cur, .gif, .jpg, .jpeg, .png）  ネイティブ CSS カーソルと url の詳細については、次のリンクを参照してください: <a href=\"https://developer.mozilla.org/ja/docs/Web/CSS/cursor\">https://developer.mozilla.org/ja/docs/Web/CSS/cursor</a>",
-        "x": "Number: (オプション) カーソルの水平方向のアクティブスポット（32未満にする必要があります）",
-        "y": "Number: (オプション) カーソルの垂直方向のアクティブスポット（32未満にする必要があります）"
+        "type": "String|Constant: Built-in: either ARROW, CROSS, HAND, MOVE, TEXT, or WAIT.  Native CSS properties: 'grab', 'progress', and so on.  Path to cursor image. /// String|Constant: 組み込み: ARROW, CROSS, HAND, MOVE, TEXT, WAIT  ネイティブ CSS プロパティ: 'grab', 'progress', 'cell'など  外部: カーソル画像のパス（許可されるファイル拡張子: .cur, .gif, .jpg, .jpeg, .png）  ネイティブ CSS カーソルと url の詳細については、次のリンクを参照してください: <a href=\"https://developer.mozilla.org/ja/docs/Web/CSS/cursor\">https://developer.mozilla.org/ja/docs/Web/CSS/cursor</a>",
+        "x": "Number: (Optional) horizontal active spot of the cursor. /// Number: (オプション) カーソルの水平方向のアクティブスポット（32未満にする必要があります）",
+        "y": "Number: (Optional) vertical active spot of the cursor. /// Number: (オプション) カーソルの垂直方向のアクティブスポット（32未満にする必要があります）"
       }
     },
     "frameRate": {
       "description": [
-        "Specifies the number of frames to be displayed every second. For example, the function call frameRate(30) will attempt to refresh 30 times a second. If the processor is not fast enough to maintain the specified rate, the frame rate will not be achieved. Setting the frame rate within <a href=\"#/p5/setup\">setup()</a> is recommended. The default frame rate is based on the frame rate of the display (here also called \"refresh rate\"), which is set to 60 frames per second on most computers. A frame rate of 24 frames per second (usual for movies) or above will be enough for smooth animations. This is the same as setFrameRate(val).",
-        "Calling <a href=\"#/p5/frameRate\">frameRate()</a> with no arguments or with arguments that are not of type Number or are non-positive returns an approximation of the current frame rate. The draw function must run at least once before it will return a value.",
-        "Even if the code in your draw() function consistently produces frames in time for them to be displayed at the desired frame rate, the value frameRate() returns will vary frame to frame because it's an inaccurate approximation. To accurately test the performance of your sketches, use your browser's performance profiling tools.",
+        "Sets the number of frames to draw per second.",
+        "Calling <code>frameRate()</code> with one numeric argument, as in <code>frameRate(30)</code>, attempts to draw 30 frames per second (FPS). The target frame rate may not be achieved depending on the sketch's processing needs. Most computers default to a frame rate of 60 FPS. Frame rates of 24 FPS and above are fast enough for smooth animations.",
+        "Calling <code>frameRate()</code> without an argument returns the current frame rate. The value returned is an approximation.",
         "///",
         "1秒あたりに表示されるフレーム数を指定します。たとえば、関数コール frameRate(30) は、毎秒30回リフレッシュを試みます。プロセッサが指定されたレートを維持できない場合、フレームレートは達成されません。フレームレートの設定は、<a href=\"#/p5/setup\">setup()</a> 内に記述することをお勧めします。デフォルトのフレームレートは、ディスプレイのフレームレート（ここでは「リフレッシュレート」とも呼ばれます）にもとづいており、ほとんどのコンピューターでは1秒あたり60フレームに設定されています。映画で一般的な24フレーム/秒以上のフレームレートであればアニメーションがスムーズになります。これは、setFrameRate(val)と同じです。",
         "<a href=\"#/p5/frameRate\">frameRate()</a> を引数なしで呼び出すと、現在のフレームレートが返されます。draw 関数は、値を返す前に少なくとも1回実行する必要があります。これは、<a href=\"#/p5/getFrameRate\">getFrameRate()</a> と同じです。",
         "型が Number でない、または非正の引数で <a href=\"#/p5/frameRate\">frameRate()</a> を呼び出した場合も、現在のフレームレートが返されます。"
       ],
       "params": {
-        "fps": "Number: 1秒あたりに表示されるフレーム数"
+        "fps": "Number: number of frames to draw per second /// Number: 1秒あたりに表示されるフレーム数"
       }
     },
     "getTargetFrameRate": {
       "description": [
+        "Returns the target frame rate. The value is either the system frame rate or the last value passed to <a href=\"#/p5/frameRate\">frameRate()</a>.",
+        "///",
         "_targetFrameRate 変数を返します。デフォルトの_targetFrameRate は60に設定されています。これは、frameRate() を呼び出して希望する値に設定することで変更できます。getTargetFrameRate() を呼び出した場合は、設定された値が返されます。"
       ],
       "returns": "Number: _targetFrameRate"
@@ -1030,7 +1072,8 @@
     },
     "webglVersion": {
       "description": [
-        "If the sketch was created in WebGL mode, then <code>weglVersion</code> will indicate which version of WebGL it is using. It will try to create a WebGL2 canvas unless you have requested WebGL1 via <code>setAttributes({ version: 1 })</code>, and will fall back to WebGL1 if WebGL2 is not available.",
+        "A string variable with the WebGL version in use. Its value equals one of the followin string constants: <ul> <li><code>WEBGL2</code> whose value is <code>'webgl2'</code>,</li> <li><code>WEBGL</code> whose value is <code>'webgl'</code>, or</li> <li><code>P2D</code> whose value is <code>'p2d'</code>. This is the default for 2D sketches.</li> </ul>",
+        "See <a href=\"#/p5/setAttributes\">setAttributes()</a> for ways to set the WebGL version.",
         "///",
         "スケッチが WebGL モードで作成された場合、<code>webglVersion</code> はそのスケッチで使用されている WebGL のバージョンを示します。<code>setAttributes({ version: 1 })</code>を介して WebGL1 をリクエストしない限り、スケッチは WebGL2 キャンバスの作成を試み、WebGL2 が利用できない場合は WebGL1 にフォールバックします。",
         "<code>webglVersion</code> は常に <code>WEBGL2</code>、<code>WEBGL</code>、または <code>P2D</code>（WebGL モードでない場合）のいずれかになります。"
@@ -1038,79 +1081,117 @@
     },
     "displayWidth": {
       "description": [
+        "A numeric variable that stores the width of the screen display. Its value depends on the current <a href=\"#/p5/pixelDensity\">pixelDensity()</a>. <code>displayWidth</code> is useful for running full-screen programs.",
+        "Note: The actual screen width can be computed as <code>displayWidth * pixelDensity()</code>.",
+        "///",
         "デフォルトの <a href=\"#/p5/pixelDensity\">pixelDensity</a> にしたがって画面表示の幅を保存するシステム変数です。これは、任意の表示サイズでフルスクリーンプログラムを実行するために使用されます。実際の画面サイズを返すには、これに pixelDensity を掛けます。"
       ]
     },
     "displayHeight": {
       "description": [
+        "A numeric variable that stores the height of the screen display. Its value depends on the current <a href=\"#/p5/pixelDensity\">pixelDensity()</a>. <code>displayHeight</code> is useful for running full-screen programs.",
+        "Note: The actual screen height can be computed as <code>displayHeight * pixelDensity()</code>.",
+        "///",
         "デフォルトの <a href=\"#/p5/pixelDensity\">pixelDensity</a> にしたがって画面表示の高さを保存するシステム変数です。これは、任意の表示サイズでフルスクリーンプログラムを実行するために使用されます。実際の画面サイズを返すには、これに pixelDensity を掛けます。"
       ]
     },
     "windowWidth": {
       "description": [
+        "A numeric variable that stores the width of the browser's <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Layout_viewport\" target=\"_blank\">layout viewport</a>. This viewport is the area within the browser that's available for drawing.",
+        "///",
         "内側のウィンドウの幅を保存するシステム変数で、window.innerWidth にマップされます。"
       ]
     },
     "windowHeight": {
       "description": [
+        "A numeric variable that stores the height of the browser's <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Layout_viewport\" target=\"_blank\">layout viewport</a>. This viewport is the area within the browser that's available for drawing.",
+        "///",
         "内側のウィンドウの高さを保存するシステム変数で、window.innerHeight にマップされます。"
       ]
     },
     "windowResized": {
       "description": [
+        "The code in <code>windowResized()</code> is called once each time the browser window is resized. It's a good place to resize the canvas or make other adjustments to accommodate the new window size.",
+        "The <code>event</code> parameter is optional. If added to the function definition, it can be used for debugging or other purposes.",
+        "///",
         "<a href=\"#/p5/windowResized\">windowResized()</a> 関数は、ブラウザーウィンドウがリサイズされるたびに一度呼び出されます。この関数を利用してキャンバスのサイズを変更したり、新しいウィンドウサイズに合わせて他の調整を行うと良いでしょう。"
       ],
       "params": {
-        "event": "UIEvent: (オプション) オプションのイベントコールバック引数。"
+        "event": "UIEvent: (Optional) optional resize Event. /// UIEvent: (オプション) オプションのイベントコールバック引数。"
       }
     },
     "width": {
       "description": [
+        "A numeric variable that stores the width of the drawing canvas. Its default value is 100.",
+        "Calling <a href=\"#/p5/createCanvas\">createCanvas()</a> or <a href=\"#/p5/resizeCanvas\">resizeCanvas()</a> changes the value of <code>width</code>. Calling <a href=\"#/p5/noCanvas\">noCanvas()</a> sets its value to 0.",
+        "///",
         "描画キャンバスの幅を保存するシステム変数です。<a href=\"#/p5/createCanvas\">createCanvas()</a> 関数の最初のパラメーターによってこの値が設定されます。たとえば、関数呼び出し createCanvas(320, 240)は、width 変数の値を320に設定します。<a href=\"#/p5/createCanvas\">createCanvas()</a> がプログラム内で使用されていない場合、width の値はデフォルトで100になります。"
       ]
     },
     "height": {
       "description": [
+        "A numeric variable that stores the height of the drawing canvas. Its default value is 100.",
+        "Calling <a href=\"#/p5/createCanvas\">createCanvas()</a> or <a href=\"#/p5/resizeCanvas\">resizeCanvas()</a> changes the value of <code>height</code>. Calling <a href=\"#/p5/noCanvas\">noCanvas()</a> sets its value to 0.",
+        "///",
         "描画キャンバスの高さを保存するシステム変数です。<a href=\"#/p5/createCanvas\">createCanvas()</a> 関数の2番目のパラメーターによってこの値が設定されます。たとえば、関数呼び出し createCanvas(320, 240)は、height 変数の値を240に設定します。<a href=\"#/p5/createCanvas\">createCanvas()</a> がプログラム内で使用されていない場合、height の値はデフォルトで100になります。"
       ]
     },
     "fullscreen": {
       "description": [
+        "Toggles full-screen mode or returns the current mode.",
+        "Calling <code>fullscreen(true)</code> makes the sketch full-screen. Calling <code>fullscreen(false)</code> makes the sketch its original size.",
+        "Calling <code>fullscreen()</code> without an argument returns <code>true</code> if the sketch is in full-screen mode and <code>false</code> if not.",
+        "Note: Due to browser restrictions, <code>fullscreen()</code> can only be called with user input such as a mouse press.",
+        "///",
         "引数が与えられた場合、引数の値にもとづいてスケッチをフルスクリーンにするかどうかを設定します。引数が与えられなかった場合、現在のフルスクリーン状態を返します。ただし、ブラウザーの制限により、この関数を呼び出せるのはユーザー入力時のみです。たとえば、下記の例のようにマウスプレス時に呼び出せます。"
       ],
       "returns": "Boolean: 現在のフルスクリーン状態",
       "params": {
-        "val": "Boolean: (オプション) スケッチをフルスクリーンモードにするかどうか"
+        "val": "Boolean: (Optional) whether the sketch should be in fullscreen mode. /// Boolean: (オプション) スケッチをフルスクリーンモードにするかどうか"
       }
     },
     "pixelDensity": {
       "description": [
+        "Sets the pixel scaling for high pixel density displays.",
+        "By default, the pixel density is set to match display density. Calling <code>pixelDensity(1)</code> turn this off.",
+        "Calling <code>pixelDensity()</code> without an argument returns the current pixel density.",
+        "///",
         "高ピクセル密度ディスプレイのピクセルスケーリングを設定します。デフォルトでは、ピクセル密度は表示密度に合わせて設定されています。これをオフにするには、pixelDensity(1) を呼び出します。<a href=\"#/p5/pixelDensity\">pixelDensity()</a> を引数なしで呼び出すと、スケッチの現在のピクセル密度が返されます。"
       ],
       "params": {
-        "val": "Number: スケッチを拡大縮小するかどうか、またはどの程度拡大縮小するか"
+        "val": "Number: (Optional) desired pixel density. /// Number: スケッチを拡大縮小するかどうか、またはどの程度拡大縮小するか"
       }
     },
     "displayDensity": {
       "description": [
+        "Returns the display's current pixel density.",
+        "///",        
         "スケッチが実行されている現在のディスプレイのピクセル密度を返します。"
       ],
       "returns": "Number: ディスプレイの現在のピクセル密度"
     },
     "getURL": {
       "description": [
+        "Returns the sketch's current <a href=\"https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL\" target=\"_blank\">URL</a> as a string.",
+        "///",
         "現在の URL を取得します。注意: p5 エディターを使用している場合、スケッチが iframe に埋め込まれているため、この関数は空のオブジェクトを返します。エディターのプレゼント URL やシェア URL でスケッチを表示すると、正しく機能します。"
       ],
       "returns": "String: url"
     },
     "getURLPath": {
       "description": [
+        "Returns the current <a href=\"https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#path_to_resource\" target=\"_blank\">URL</a> path as an array of strings.",
+        "For example, consider a sketch hosted at the URL <code>https://example.com/sketchbook</code>. Calling <code>getURLPath()</code> returns <code>['sketchbook']</code>. For a sketch hosted at the URL <code>https://example.com/sketchbook/monday</code>, <code>getURLPath()</code> returns <code>['sketchbook', 'monday']</code>.",
+        "///",
         "現在の URL パスを配列として取得します。注意: p5 エディターを使用している場合、スケッチが iframe に埋め込まれているため、この関数は空のオブジェクトを返します。エディターのプレゼント URL やシェア URL でスケッチを表示すると、正しく機能します。"
       ],
       "returns": "String[]: パス要素"
     },
     "getURLParams": {
       "description": [
+        "Returns the current <a href=\"https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#parameters\" target=\"_blank\">URL parameters</a> in an Object.",
+        "For example, calling <code>getURLParams()</code> in a sketch hosted at the URL <code>http://p5js.org?year=2014&month=May&day=15</code> returns <code>{ year: 2014, month: 'May', day: 15 }</code>.",
+        "///",
         "現在の URL パラメーターをオブジェクトとして取得します。注意: p5 エディターを使用している場合、スケッチが iframe に埋め込まれているため、この関数は空のオブジェクトを返します。エディターのプレゼント URL やシェア URL でスケッチを表示すると、正しく機能します。"
       ],
       "returns": "Object: URL パラメーター"
@@ -1561,112 +1642,153 @@
     },
     "select": {
       "description": [
+        "Searches the page for the first element that matches the given <a href=\"https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics#different_types_of_selectors\" target=\"_blank\">CSS selector string</a>. The string can be an ID, class, tag name, or a combination. <code>select()</code> returns a <a href=\"#/p5.Element\">p5.Element</a> object if it finds a match and <code>null</code> otherwise.",
+        "The second parameter, <code>container</code>, is optional. It specifies a container to search within. container can be CSS selector string, a <a href=\"#/p5.Element\">p5.Element</a> object, or an <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement\" target=\"_blank\">HTMLElement</a> object.",
+        "///",
         "与えられた CSS セレクタ文字列（ID、クラス、タグ名、またはそれらの組み合わせ）と一致するページ上の最初の要素を検索し、<a href=\"#/p5.Element\">p5.Element</a> として返します。DOM ノード自体は.elt でアクセスできます。見つからない場合は null を返します。検索範囲としてコンテナを指定することもできます。"
       ],
-      "returns": "p5.Element|null: 見つかったノードを含む <a href=\"#/p5.Element\">p5.Element</a>",
+      "returns": "p5.Element|null: <a href=\"#/p5.Element\">p5.Element</a> containing the element. /// p5.Element|null: 見つかったノードを含む <a href=\"#/p5.Element\">p5.Element</a>",
       "params": {
         "selectors": "String: 検索対象の要素の CSS セレクタ文字列",
-        "container": "String|p5.Element|HTMLElement: (オプション) CSS セレクタ文字列、<a href=\"#/p5.Element\">p5.Element</a>、または検索対象の HTML 要素"
+        "container": "String|p5.Element|HTMLElement: (Optional) CSS selector string, <a href=\"#/p5.Element\">p5.Element</a>, or  <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement\" target=\"_blank\">HTMLElement</a> to search within. /// String|p5.Element|HTMLElement: (オプション) CSS セレクタ文字列、<a href=\"#/p5.Element\">p5.Element</a>、または検索対象の HTML 要素"
       }
     },
     "selectAll": {
       "description": [
+        "Searches the page for all elements that matches the given <a href=\"https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics#different_types_of_selectors\" target=\"_blank\">CSS selector string</a>. The string can be an ID, class, tag name, or a combination. <code>selectAll()</code> returns an array of <a href=\"#/p5.Element\">p5.Element</a> objects if it finds any matches and an empty array otherwise.",
+        "The second parameter, <code>container</code>, is optional. It specifies a container to search within. container can be CSS selector string, a <a href=\"#/p5.Element\">p5.Element</a> object, or an <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement\" target=\"_blank\">HTMLElement</a> object.",
+        "///",
         "与えられた CSS セレクタ文字列（ID、クラス、タグ名、またはそれらの組み合わせ）と一致するページ上の要素を検索し、それらを配列内の <a href=\"#/p5.Element\">p5.Element</a> として返します。DOM ノード自体は.elt でアクセスできます。見つからない場合は空の配列を返します。検索範囲としてコンテナを指定することもできます。"
       ],
-      "returns": "p5.Element[]: 見つかったノードを含む <a href=\"#/p5.Element\">p5.Element</a> の配列",
+      "returns": "p5.Element[]: array of <a href=\"#/p5.Element\">p5.Element</a>s containing any elements found. /// p5.Element[]: 見つかったノードを含む <a href=\"#/p5.Element\">p5.Element</a> の配列",
       "params": {
-        "selectors": "String: 検索対象の要素の CSS セレクタ文字列",
-        "container": "String|p5.Element|HTMLElement: (オプション) CSS セレクタ文字列、<a href=\"#/p5.Element\">p5.Element</a> 、または検索対象の HTML 要素"
+        "selectors": "String: CSS selector string of element to search for. /// String: 検索対象の要素の CSS セレクタ文字列",
+        "container": "String|p5.Element|HTMLElement: (Optional) CSS selector string, <a href=\"#/p5.Element\">p5.Element</a>, or  <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement\" target=\"_blank\">HTMLElement</a> to search within. /// String|p5.Element|HTMLElement: (オプション) CSS セレクタ文字列、<a href=\"#/p5.Element\">p5.Element</a> 、または検索対象の HTML 要素"
       }
     },
     "removeElements": {
       "description": [
+        "Removes all elements created by p5.js, including any event handlers. There are two exceptions: canvas elements created by <a href=\"#/p5/createCanvas\">createCanvas</a> and <a href=\"#/p5.Renderer\">p5.Render</a> objects created by <a href=\"#/p5/createGraphics\">createGraphics</a>.",
+        "///",
         "p5 によって作成されたすべての要素を削除しますが、<a href=\"#/p5/createCanvas\">createCanvas</a> や <a href=\"#/p5/createGraphics\">createGraphics</a> で作成されたキャンバス/グラフィック要素は除外されます。イベントハンドラが削除され、要素が DOM から削除されます。"
       ]
     },
     "changed": {
       "description": [
+        "<code>myElement.changed()</code> sets a function to call when the value of the <a href=\"#/p5.Element\">p5.Element</a> object changes. Calling <code>myElement.changed(false)</code> disables the function.",
+        "///",
         ".<a href=\"#/p5.Element/changed\">changed()</a> 関数は、要素の値が変更されたときに呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: 要素の値が変更されたときに発火する関数。代わりに <code>false</code> が渡されると、以前に発火していた関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the element changes.  <code>false</code> disables the function. /// Function|Boolean: 要素の値が変更されたときに発火する関数。代わりに <code>false</code> が渡されると、以前に発火していた関数はもう発火しなくなります。"
       }
     },
     "input": {
       "description": [
+        "<code>myElement.input()</code> sets a function to call when input is detected within the <a href=\"#/p5.Element\">p5.Element</a> object. It's often used to with text inputs and sliders. Calling <code>myElement.input(false)</code> disables the function.",
+        "///",
         ".<a href=\"#/p5.Element/input\">input()</a> 関数は、要素でユーザー入力が検出されると呼び出されます。input イベントは、入力要素でのキーストロークや、スライダー要素の変更を検出するためによく使われます。これを使って、要素固有のイベントリスナーをアタッチできます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: 要素内でユーザー入力が検出されると発火する関数。 <code>false</code> が代わりに渡されると、以前に発火していた関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when input is detected within  the element.  <code>false</code> disables the function. /// Function|Boolean: 要素内でユーザー入力が検出されると発火する関数。 <code>false</code> が代わりに渡されると、以前に発火していた関数はもう発火しなくなります。"
       }
     },
     "createDiv": {
       "description": [
+        "Creates a <code>&lt;div&gt;&lt;/div&gt;</code> element. It's commonly used as a container for other elements.",
+        "The parameter <code>html</code> is optional. It accepts a string that sets the inner HTML of the new <code>&lt;div&gt;&lt;/div&gt;</code>.",
+        "///",
         "与えられた内部 HTML をもつ DOM 内に <code>&lt;div&gt;&lt;/div&gt;</code> 要素を作成します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
-        "html": "String: (オプション) 作成された要素の内部 HTML"
+        "html": "String: (Optional) inner HTML for the new <code>&lt;div&gt;&lt;/div&gt;</code> element. /// String: (オプション) 作成された要素の内部 HTML"
       }
     },
     "createP": {
       "description": [
+        "Creates a <code>&lt;p&gt;&lt;/p&gt;</code> element. It's commonly used for paragraph-length text.",
+        "The parameter <code>html</code> is optional. It accepts a string that sets the inner HTML of the new <code>&lt;p&gt;&lt;/p&gt;</code>.",
+        "///",
         "与えられた内部 HTML をもつ DOM 内の <code>&lt;p&gt;&lt;/p&gt;</code> 要素を作成します。段落の長さのテキストに使用されます。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
-        "html": "String: (オプション) 作成された要素の内部 HTML"
+        "html": "String: (Optional) inner HTML for the new <code>&lt;p&gt;&lt;/p&gt;</code> element. /// String: (オプション) 作成された要素の内部 HTML"
       }
     },
     "createSpan": {
       "description": [
+        "Creates a <code>&lt;span&gt;&lt;/span&gt;</code> element. It's commonly used as a container for inline elements. For example, a <code>&lt;span&gt;&lt;/span&gt;</code> can hold part of a sentence that's a <span style=\"color: deeppink;\">different</span> style.",
+        "The parameter <code>html</code> is optional. It accepts a string that sets the inner HTML of the new <code>&lt;span&gt;&lt;/span&gt;</code>.",
+        "///",
         "与えられた内部 HTML をもつ DOM 内の <code>&lt;span&gt;&lt;/span&gt;</code> 要素を作成します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
-        "html": "String: (オプション) 作成された要素の内部 HTML"
+        "html": "String: (Optional) inner HTML for the new <code>&lt;span&gt;&lt;/span&gt;</code> element. /// String: (オプション) 作成された要素の内部 HTML"
       }
     },
     "createImg": {
       "description": [
+        "Creates an <code>&lt;img&gt;</code> element that can appear outside of the canvas.",
+        "The first parameter, <code>src</code>, is a string with the path to the image file. <code>src</code> should be a relative path, as in <code>'assets/image.png'</code>, or a URL, as in <code>'https://example.com/image.png'</code>.",
+        "The second parameter, <code>alt</code>, is a string with the <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes\" target=\"_blank\">alternate text</a> for the image. An empty string <code>''</code> can be used for images that aren't displayed.",
+        "The third parameter, <code>crossOrigin</code>, is optional. It's a string that sets the <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes\" target=\"_blank\">crossOrigin property</a> of the image. Use <code>'anonymous'</code> or <code>'use-credentials'</code> to fetch the image with cross-origin access.",
+        "The fourth parameter, <code>callback</code>, is also optional. It sets a function to call after the image loads. The new image is passed to the callback function as a <a href=\"#/p5.Element\">p5.Element</a> object.",
+        "///",
         "与えられた src および代替テキストを使用して、DOM 内に <code>&lt;img&gt;</code> 要素を作成します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
-        "src": "String: 画像の src パスまたは URL",
-        "alt": "String: 画像が読み込まれない場合に使用される <a href=\"https://developer.mozilla.org/ja/docs/Web/HTML/Element/Img#Attributes\">代替テキスト</a>。画像が意図的に表示されない場合は空の文字列（<code>\"\"</code>）を使用できます。",
-        "crossOrigin": "String: <code>img</code> 要素の <a href=\"https://developer.mozilla.org/ja/docs/Web/HTML/CORS_settings_attributes\">crossOrigin プロパティ</a>。'anonymous'または'use-credentials'を使用して、クロスオリジンアクセスで画像を取得します（後で <code>canvas</code> として使用するため）。空の文字列（<code>\"\"</code>）が渡された場合、CORS は使用されません",
-        "successCallback": "Function: (オプション) 画像データが読み込まれると、引数として <a href=\"#/p5.Element\">p5.Element</a> を使用して呼び出されるコールバック"
+        "src": "String: relative path or URL for the image. /// String: 画像の src パスまたは URL",
+        "alt": "String: alternate text for the image. /// String: 画像が読み込まれない場合に使用される <a href=\"https://developer.mozilla.org/ja/docs/Web/HTML/Element/Img#Attributes\">代替テキスト</a>。画像が意図的に表示されない場合は空の文字列（<code>\"\"</code>）を使用できます。",
+        "crossOrigin": "String: (Optional) crossOrigin property to use when fetching the image. /// String: <code>img</code> 要素の <a href=\"https://developer.mozilla.org/ja/docs/Web/HTML/CORS_settings_attributes\">crossOrigin プロパティ</a>。'anonymous'または'use-credentials'を使用して、クロスオリジンアクセスで画像を取得します（後で <code>canvas</code> として使用するため）。空の文字列（<code>\"\"</code>）が渡された場合、CORS は使用されません",
+        "successCallback": "Function: (Optional) function to call once the image loads. The new image will be passed  to the function as a <a href=\"#/p5.Element\">p5.Element</a> object. /// Function: (オプション) 画像データが読み込まれると、引数として <a href=\"#/p5.Element\">p5.Element</a> を使用して呼び出されるコールバック"
       }
     },
     "createA": {
       "description": [
+        "Creates an <code>&lt;a&gt;&lt;/a&gt;</code> element that links to another web page.",
+        "The first parmeter, <code>href</code>, is a string that sets the URL of the linked page.",
+        "The second parameter, <code>html</code>, is a string that sets the inner HTML of the link. It's common to use text, images, or buttons as links.",
+        "The third parameter, <code>target</code>, is optional. It's a string that tells the web browser where to open the link. By default, links open in the current browser tab. Passing <code>'_blank'</code> will cause the link to open in a new browser tab. MDN describes a few <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target\" target=\"_blank\">other options</a>.",
+        "///",
         "DOM に <code>&lt;a&gt;&lt;/a&gt;</code> 要素を作成し、ハイパーリンクを含めます。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
-        "href": "String: リンク先のページの URL",
-        "html": "String: リンク要素内に表示する内部 HTML",
-        "target": "String: (オプション) 新しいリンクを開く対象。_blank、_self、_parent、_top のいずれか。"
+        "href": "String: URL of linked page. /// String: リンク先のページの URL",
+        "html": "String: inner HTML of link element to display. /// String: リンク要素内に表示する内部 HTML",
+        "target": "String: (Optional) target where the new link should open,  either <code>'_blank'</code>, <code>'_self'</code>, <code>'_parent'</code>, or <code>'_top'</code>. /// String: (オプション) 新しいリンクを開く対象。_blank、_self、_parent、_top のいずれか。"
       }
     },
     "createSlider": {
       "description": [
+        "Creates a slider <code>&lt;input&gt;&lt;/input&gt;</code> element. Range sliders are useful for quickly selecting numbers from a given range.",
+        "The first two parameters, <code>min</code> and <code>max</code>, are numbers that set the slider's minimum and maximum.",
+        "The third parameter, <code>value</code>, is optional. It's a number that sets the slider's default value.",
+        "The fourth parameter, <code>step</code>, is also optional. It's a number that sets the spacing between each value in the slider's range. Setting <code>step</code> to 0 allows the slider to move smoothly from <code>min</code> to <code>max</code>.",
+        "///",
         "DOM にスライダーの <code>&lt;input&gt;&lt;/input&gt;</code> 要素を作成します。.size() を使って、スライダーの表示長さを設定します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "min": "Number:  スライダーの最小値",
         "max": "Number:  スライダーの最大値",
         "value": "Number:  (オプション) スライダーのデフォルト値",
-        "step": "Number:  (オプション) スライダーの各目盛りのステップサイズ (ステップが0に設定されている場合、スライダーは最小値から最大値まで連続して移動します)"
+        "step": "Number: (Optional) size for each step in the slider's range. /// Number:  (オプション) スライダーの各目盛りのステップサイズ (ステップが0に設定されている場合、スライダーは最小値から最大値まで連続して移動します)"
       }
     },
     "createButton": {
       "description": [
-        "DOM に <code>&lt;button&gt;&lt;/button&gt;</code> 要素を作成します。.size() を使って、ボタンの表示サイズを設定します。.mousePressed() を使って、押下時の動作を指定します。"
+        "Creates a <code>&lt;button&gt;&lt;/button&gt;</code> element.",
+        "The first parameter, <code>label</code>, is a string that sets the label displayed on the button.",
+        "The second parameter, <code>value</code>, is optional. It's a string that sets the button's value. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#value\" target=\"_blank\">MDN</a> for more details.",
+        "///",
+         "DOM に <code>&lt;button&gt;&lt;/button&gt;</code> 要素を作成します。.size() を使って、ボタンの表示サイズを設定します。.mousePressed() を使って、押下時の動作を指定します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "label": "String:  ボタンに表示されるラベル",
         "value": "String:  (オプション) ボタンの値"
@@ -1674,101 +1796,145 @@
     },
     "createCheckbox": {
       "description": [
+        "Creates a checkbox <code>&lt;input&gt;&lt;/input&gt;</code> element. Checkboxes extend the <a href=\"#/p5.Element\">p5.Element</a> class with a <code>checked()</code> method. Calling <code>myBox.checked()</code> returns <code>true</code> if it the box is checked and <code>false</code> otherwise.",
+        "The first parameter, <code>label</code>, is optional. It's a string that sets the label to display next to the checkbox.",
+        "The second parameter, <code>value</code>, is also optional. It's a boolean that sets the checkbox's value.",
+        "///",
         "DOM にチェックボックスの <code>&lt;input&gt;&lt;/input&gt;</code> 要素を作成します。チェックボックスに対して .checked() を呼び出すと、チェックされているかどうかを示すブール値が返されます。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "label": "String: (オプション) チェックボックスの後に表示されるラベル",
-        "value": "Boolean: (オプション) チェックボックスの値; チェックされている場合は true、チェックされていない場合は false"
+        "value": "Boolean: (Optional) value of the checkbox. Checked is <code>true</code> and unchecked is <code>false</code>. /// Boolean: (オプション) チェックボックスの値; チェックされている場合は true、チェックされていない場合は false"
       }
     },
     "createSelect": {
       "description": [
+        "Creates a dropdown menu <code>&lt;select&gt;&lt;/select&gt;</code> element.",
+        "The parameter is optional. If <code>true</code> is passed, as in <code>let mySelect = createSelect(true)</code>, then the dropdown will support multiple selections. If an existing <code>&lt;select&gt;&lt;/select&gt;</code> element is passed, as in <code>let mySelect = createSelect(otherSelect)</code>, the existing element will be wrapped in a new <a href=\"#/p5.Element\">p5.Element</a> object.",
+        "Dropdowns extend the <a href=\"#/p5.Element\">p5.Element</a> class with a few helpful methods for managing options: <ul> <li><code>mySelect.option(name, [value])</code> adds an option to the menu. The first paremeter, <code>name</code>, is a string that sets the option's name and value. The second parameter, <code>value</code>, is optional. If provided, it sets the value that corresponds to the key <code>name</code>. If an option with <code>name</code> already exists, its value is changed to <code>value</code>.</li> <li><code>mySelect.value()</code> returns the currently-selected option's value.</li> <li><code>mySelect.selected()</code> returns the currently-selected option.</li> <li><code>mySelect.selected(option)</code> selects the given option by default.</li> <li><code>mySelect.disable()</code> marks the whole dropdown element as disabled.</li> <li><code>mySelect.disable(option)</code> marks a given option as disabled.</li> <li><code>mySelect.enable()</code> marks the whole dropdown element as enabled.</li> <li><code>mySelect.enable(option)</code> marks a given option as enabled.</li> </ul>",
+        "///",
         "DOMに<code>&lt;select&gt;&lt;/select&gt;</code>要素のドロップダウンメニューを作成します。既存の選択ボックスを選択する際に、<a href=\"#/p5.Element\">p5.Element</a>に選択関連のメソッドも割り当てます。メニューのオプションは<code>name</code>（表示テキスト）で一意です。 <ul> <li><code>.option(name, [value])</code> を使用して、<code>name</code>（表示テキスト）および<code>value</code>を選択要素に追加するオプションを追加できます。選択要素内に<code>name</code>が既に存在する場合は、このメソッドでその値を<code>value</code>に変更します。</li> <li><code>.value()</code> は現在選択されているオプションを返します。</li> <li><code>.selected()</code> は現在のドロップダウン要素（<a href=\"#/p5.Element\">p5.Element</a>のインスタンス）を返します。</li> <li><code>.selected(value)</code>を使用すると、指定されたオプションをページが最初に読み込まれたときにデフォルトで選択されるようにすることができます。</li> <li><code>.disable()</code> はドロップダウン要素全体を無効にします。</li> <li><code>.disable(value)</code> は指定されたオプションを無効にします。</li> <li><code>.enable()</code> はドロップダウン要素全体が初めに無効化されている場合、ドロップダウン要素全体を有効にします。</li> <li><code>.enable(value)</code> は初期オプションが無効な場合、指定したオプションを有効にします。</li> </ul>"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
-        "multiple": "Boolean: (オプション) ドロップダウンが複数の選択肢をサポートする場合は true",
-        "existing": "Object: DOM の select 要素"
+        "multiple": "oolean: (Optional) support multiple selections. /// Boolean: (オプション) ドロップダウンが複数の選択肢をサポートする場合は true",
+        "existing": "Object: select element to wrap, either as a <a href=\"#/p5.Element\">p5.Element</a> or  a <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement\" target=\"_blank\">HTMLSelectElement</a>. /// Object: DOM の select 要素"
       }
     },
     "createRadio": {
       "description": [
+        "Creates a radio button element.",
+        "The parameter is optional. If a string is passed, as in <code>let myRadio = createSelect('food')</code>, then each radio option will have <code>\"food\"</code> as its <code>name</code> parameter: <code>&lt;input name=\"food\"&gt;&lt;/input&gt;</code>. If an existing <code>&lt;div&gt;&lt;/div&gt;</code> or <code>&lt;span&gt;&lt;/span&gt;</code> element is passed, as in <code>let myRadio = createSelect(container)</code>, it will become the radio button's parent element.",
+        "Radio buttons extend the <a href=\"#/p5.Element\">p5.Element</a> class with a few helpful methods for managing options: <ul> <li><code>myRadio.option(value, [label])</code> adds an option to the menu. The first paremeter, <code>value</code>, is a string that sets the option's value and label. The second parameter, <code>label</code>, is optional. If provided, it sets the label displayed for the <code>value</code>. If an option with <code>value</code> already exists, its label is changed and its value is returned.</li> <li><code>myRadio.value()</code> returns the currently-selected option's value.</li> <li><code>myRadio.selected()</code> returns the currently-selected option.</li> <li><code>myRadio.selected(value)</code> selects the given option and returns it as an <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement\" target=\"_blank\"><code>HTMLInputElement</code></a>.</li> <li><code>myRadio.disable(shouldDisable)</code> enables the entire radio button if <code>true</code> is passed and disables it if <code>false</code> is passed.</li> </ul>",
+        "///",
         "DOM にラジオボタン要素を作成します。また、既存のラジオボタンに <a href=\"#/p5.Element/\">p5.Element</a> のメソッドを割り当てるのに役立ちます。 <ul> <li><code>.option(value, [label])</code> は、要素に新しいオプションを作成するために使用できます。すでに値が存在するオプションがある場合は、それが返されます。<code>value</code> の入力として文字列値を使用することが推奨されます。オプションとして、2つ目の引数としてラベルを提供できます。</li> <li><code>.remove(value)</code> は、要素のオプションを削除するために使用できます。<code>value</code> の入力として文字列値が推奨されます。</li> <li><code>.value()</code> メソッドは、現在選択されている値を返します。</li> <li><code>.selected()</code> メソッドは、現在選択されている入力要素を返します。</li> <li><code>.selected(value)</code> メソッドは、オプションを選択して返します。<code>value</code> の入力として文字列値が推奨されます。</li> <li><code>.disable(Boolean)</code> メソッドは、ラジオボタン要素全体を有効/無効にします。</li> </ul>"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
-        "containerElement": "Object: すべての既存のラジオ入力がオプションと見なされる div または span の HTML 要素コンテナ。",
-        "name": "String: (オプション) 各入力要素の名前パラメーター。"
+        "containerElement": "Object: (Optional) container HTML Element, either a <code>&lt;div&gt;&lt;/div&gt;</code> or <code>&lt;span&gt;&lt;/span&gt;</code>. /// Object: すべての既存のラジオ入力がオプションと見なされる div または span の HTML 要素コンテナ。",
+        "name": "String: (Optional) name parameter assigned to each option's <code>&lt;input&gt;&lt;/input&gt;</code> element. /// String: (オプション) 各入力要素の名前パラメーター。"
       }
     },
     "createColorPicker": {
       "description": [
+        "Creates a color picker element.",
+        "The parameter, <code>value</code>, is optional. If a color string or <a href=\"#/p5.Color\">p5.Color</a> object is passed, it will set the default color.",
+        "Color pickers extend the <a href=\"#/p5.Element\">p5.Element</a> class with a couple of helpful methods for managing colors: <ul> <li><code>myPicker.value()</code> returns the current color as a hex string in the format <code>'#rrggbb'</code>.</li> <li><code>myPicker.color()</code> returns the current color as a <a href=\"#/p5.Color\">p5.Color</a> object.</li> </ul>",
+        "///",
         "DOM 上でカラー入力のための colorPicker 要素を作成します。.value() メソッドは16進数のカラー文字列（#rrggbb）を返します。.color() メソッドは現在選択されているカラーの <a href=\"#/p5.Color\">p5.Color</a> オブジェクトを返します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
-        "value": "String|p5.Color: 要素のデフォルトカラー(オプション)"
+        "value": "String|p5.Color: (Optional) default color as a <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/color\" target=\"_blank\">CSS color string</a>. /// String|p5.Color: 要素のデフォルトカラー(オプション)"
       }
     },
     "createInput": {
       "description": [
+        "Creates a text <code>&lt;input&gt;&lt;/input&gt;</code> element. Call <code>myInput.size()</code> to set the length of the text box.",
+        "The first parameter, <code>value</code>, is optional. It's a string that sets the input's default value. The input is blank by default.",
+        "The second parameter, <code>type</code>, is also optional. It's a string that specifies the type of text being input. See MDN for a full <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input\" target=\"_blank\">list of options</a>. The default is <code>'text'</code>.",
+        "///",
         "DOM でテキスト入力用の <code>&lt;input&gt;&lt;/input&gt;</code> 要素を作成します。.<a href=\"#/p5.Element/size\">size()</a> を使ってボックスの表示長さを設定します。"
       ],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
-        "value": "String: 入力ボックスのデフォルト値",
-        "type": "String: テキストの種類(オプション)、例:text、password など。デフォルトは text。最初に値を指定する必要があります。"
+        "value": "String: (Optional) default value of the input box. Defaults to an empty string <code>''</code>. /// String: 入力ボックスのデフォルト値",
+        "type": "String: (Optional) type of input. Defaults to <code>'text'</code>. /// String: テキストの種類(オプション)、例:text、password など。デフォルトは text。最初に値を指定する必要があります。"
       }
     },
     "createFileInput": {
       "description": [
+        "Creates an <code>&lt;input&gt;&lt;/input&gt;</code> element of type <code>'file'</code>. This allows users to select local files for use in a sketch.",
+        "The first parameter, <code>callback</code>, is a function that's called when the file loads. The callback function should have one parameter, <code>file</code>, that's a <a href=\"#/p5.File\">p5.File</a> object.",
+        "The second parameter, <code>multiple</code>, is optional. It's a boolean value that allows loading multiple files if set to <code>true</code>. If <code>true</code>, <code>callback</code> will be called once per file.",
+        "///",
         "DOM に 'file' タイプの <code>&lt;input&gt;&lt;/input&gt;</code> 要素を作成します。これにより、ユーザーはローカルファイルをスケッチで使用するために選択できます。"
       ],
-      "returns": "p5.Element: 作成された DOM 要素を保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成された DOM 要素を保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
-        "callback": "Function: ファイルが読み込まれたときのコールバック関数",
-        "multiple": "Boolean: (オプション) 複数のファイルを選択できるようにするオプション"
+        "callback": "Function: function to call once the file loads. /// Function: ファイルが読み込まれたときのコールバック関数",
+        "multiple": "Boolean: (Optional) allow multiple files to be selected. /// Boolean: (オプション) 複数のファイルを選択できるようにするオプション"
       }
     },
     "createVideo": {
       "description": [
+        "Creates a <code>&lt;video&gt;</code> element for simple audio/video playback. Returns a new <a href=\"#/p5.MediaElement\">p5.MediaElement</a> object.",
+        "Videos are shown by default. They can be hidden by calling <code>video.hide()</code> and drawn to the canvas using <a href=\"#/p5/image\">image()</a>.",
+        "The first parameter, <code>src</code>, is the path the video. If a single string is passed, as in <code>'assets/topsecret.mp4'</code>, a single video is loaded. An array of strings can be used to load the same video in different formats. For example, <code>['assets/topsecret.mp4', 'assets/topsecret.ogv', 'assets/topsecret.webm']</code>. This is useful for ensuring that the video can play across different browsers with different capabilities. See <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats'>MDN</a> for more information about supported formats.",
+        "The second parameter, <code>callback</code>, is optional. It's a function to call once the video is ready to play.",
+        "///",
         "HTML5 の <code>&lt;video&gt;</code> 要素を DOM に作成し、オーディオ/ビデオのシンプルな再生ができます。デフォルトで表示され、.<a href=\"#/p5.Element/hide\">hide()</a> で非表示にし、<a href=\"#/p5/image\">image()</a> を使ってキャンバスに描画できます。第1引数は、ビデオファイルへの単一の文字列パス、または同じビデオの異なる形式への文字列パスの配列のいずれかです。これは、異なるブラウザーでビデオを再生できるようにするために役立ちます。各ブラウザーは異なる形式をサポートしています。サポートされている形式についての詳細は、<a href='https://developer.mozilla.org/ja/docs/Web/HTML/Supported_media_formats'>このページ</a> を参照してください。"
       ],
-      "returns": "p5.MediaElement: ビデオ <a href=\"#/p5.MediaElement\">p5.MediaElement</a> へのポインター",
+      "returns": "p5.MediaElement: new <a href=\"#/p5.MediaElement\">p5.MediaElement</a> object. /// p5.MediaElement: ビデオ <a href=\"#/p5.MediaElement\">p5.MediaElement</a> へのポインター",
       "params": {
         "src": "String|String[]: ビデオファイルへのパス、または異なるブラウザーをサポートするためのパスの配列",
-        "callback": "Function: (オプション) 'canplaythrough' イベントが発火したときに呼ばれるコールバック関数。つまり、ブラウザーがメディアを再生でき、コンテンツのさらなるバッファリングが不要な状態でメディアを最後まで再生できると推定されるデータがロードされたとき"
+        "callback": "Function: (Optional) function to call once the video is ready to play. /// Function: (オプション) 'canplaythrough' イベントが発火したときに呼ばれるコールバック関数。つまり、ブラウザーがメディアを再生でき、コンテンツのさらなるバッファリングが不要な状態でメディアを最後まで再生できると推定されるデータがロードされたとき"
       }
     },
     "createAudio": {
       "description": [
+        "Creates a hidden <code>&lt;audio&gt;</code> element for simple audio playback. Returns a new <a href=\"#/p5.MediaElement\">p5.MediaElement</a> object.",
+        "The first parameter, <code>src</code>, is the path the video. If a single string is passed, as in <code>'assets/video.mp4'</code>, a single video is loaded. An array of strings can be used to load the same video in different formats. For example, <code>['assets/video.mp4', 'assets/video.ogv', 'assets/video.webm']</code>. This is useful for ensuring that the video can play across different browsers with different capabilities. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\" target=\"_blank\">MDN</a> for more information about supported formats.",
+        "The second parameter, <code>callback</code>, is optional. It's a function to call once the audio is ready to play.",
+        "///",
         "HTML5 の <code>&lt;audio&gt;</code> 要素を DOM 内に隠し、シンプルなオーディオ再生を行います。第1引数は、オーディオファイルへの単一の文字列パス、または同じオーディオの異なる形式への文字列パスの配列のいずれかです。これは、各ブラウザーが異なる形式をサポートしているため、オーディオが異なるブラウザー間で再生できることを確認するために役立ちます。<a href='https://developer.mozilla.org/ja/docs/Web/HTML/Supported_media_formats'>このページでは、サポートされている形式に関する詳細情報が提供されています</a>。"
       ],
-      "returns": "p5.MediaElement: オーディオへのポインター <a href=\"#/p5.MediaElement\">p5.MediaElement</a>",
+      "returns": "p5.MediaElement: new <a href=\"#/p5.MediaElement\">p5.MediaElement</a> object. /// p5.MediaElement: オーディオへのポインター <a href=\"#/p5.MediaElement\">p5.MediaElement</a>",
       "params": {
         "src": "String|String[]: (オプション) オーディオファイルへのパス、または異なるブラウザーをサポートするためのパスの配列",
-        "callback": "Function: (オプション) 'canplaythrough' イベントが発火した際に呼び出されるコールバック関数。つまり、ブラウザーがメディアを再生でき、コンテンツのさらなるバッファリングなしにメディアを最後まで再生できると予測される十分なデータがロードされたとき"
+        "callback": "Function: (Optional) function to call once the audio is ready to play. /// Function: (オプション) 'canplaythrough' イベントが発火した際に呼び出されるコールバック関数。つまり、ブラウザーがメディアを再生でき、コンテンツのさらなるバッファリングなしにメディアを最後まで再生できると予測される十分なデータがロードされたとき"
       }
     },
     "createCapture": {
       "description": [
+        "Creates a <code>&lt;video&gt;</code> element that \"captures\" the audio/video stream from the webcam and microphone. Returns a new <a href=\"#/p5.Element\">p5.Element</a> object.",
+        "Videos are shown by default. They can be hidden by calling <code>capture.hide()</code> and drawn to the canvas using <a href=\"#/p5/image\">image()</a>.",
+        "The first parameter, <code>type</code>, is optional. It sets the type of capture to use. By default, <code>createCapture()</code> captures both audio and video. If <code>VIDEO</code> is passed, as in <code>createCapture(VIDEO)</code>, only video will be captured. If <code>AUDIO</code> is passed, as in <code>createCapture(AUDIO)</code>, only audio will be captured. A constraints object can also be passed to customize the stream. See the <a href=\"http://w3c.github.io/mediacapture-main/getusermedia.html#media-track-constraints\" target=\"_blank\"> W3C documentation</a> for possible properties. Different browsers support different properties.",
+        "The second parameter, <code>callback</code>, is optional. It's a function to call once the capture is ready for use. The callback function should have one parameter, <code>stream</code>, that's a <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/MediaStream\" target=\"_blank\">MediaStream</a> object.",
+        "Note: <code>createCapture()</code> only works when running a sketch locally or using HTTPS. Learn more <a href=\"http://stackoverflow.com/questions/34197653/getusermedia-in-chrome-47-without-using-https\" target=\"_blank\">here</a> and <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia\" target=\"_blank\">here</a>.",
+        "///",
         "ウェブカメラの音声/ビデオフィードを含む新しい HTML5 の <code>&lt;video&gt;</code> 要素を作成します。この要素はキャンバスとは別で、デフォルトで表示されます。要素は、.<a href=\"#/p5.Element/hide\">hide()</a> を使って非表示にすることができます。フィードは <a href=\"#/p5/image\">image()</a> を使ってキャンバスに描画することができます。loadedmetadata プロパティは要素が完全にロードされたことを検出するために使用できます(2つ目の例を参照)。",
         "フィードのより具体的なプロパティは、Constraints オブジェクトを渡すことで指定できます。<a href='http://w3c.github.io/mediacapture-main/getusermedia.html#media-track-constraints'>W3C の仕様</a> に可能なプロパティが記載されています。ただし、すべてのブラウザーでこれらがサポートされているわけではありません。",
         "<em>セキュリティに関する注意</em>:新しいブラウザーのセキュリティ仕様では、<a href=\"#/p5/createCapture\">createCapture()</a> の背後にある getUserMedia は、コードをローカルで実行している場合、または HTTPS でのみ動作するようになっています。詳細は <a href='http://stackoverflow.com/questions/34197653/getusermedia-in-chrome-47-without-using-https'>こちら</a> と <a href='https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getUserMedia'>こちら</a> を参照してください。"
       ],
-      "returns": "p5.Element: キャプチャビデオ <a href=\"#/p5.Element\">p5.Element</a>",
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: キャプチャビデオ <a href=\"#/p5.Element\">p5.Element</a>",
       "params": {
-        "type": "String|Constant|Object: キャプチャのタイプで、VIDEO や AUDIO が指定されていない場合はデフォルトで両方、または Constraints オブジェクト",
-        "callback": "Function: (オプション) ストリームがロードされたら呼ばれる関数"
+        "type": "String|Constant|Object: (Optional) type of capture, either AUDIO or VIDEO,  or a constraints object. Both video and audio  audio streams are captured by default. /// String|Constant|Object: キャプチャのタイプで、VIDEO や AUDIO が指定されていない場合はデフォルトで両方、または Constraints オブジェクト",
+        "callback": "Function: (Optional) function to call once the stream  has loaded. /// Function: (オプション) ストリームがロードされたら呼ばれる関数"
       }
     },
     "createElement": {
-      "description": ["指定されたタグと内容で DOM 内に要素を作成します。"],
-      "returns": "p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
+      "description": [
+        "Creates a new <a href=\"#/p5.Element\">p5.Element</a> object.",
+        "The first parameter, <code>tag</code>, is a string an HTML tag such as <code>'h5'</code>.",
+        "The second parameter, <code>content</code>, is optional. It's a string that sets the HTML content to insert into the new element. New elements have no content by default.",
+        "///",
+        "指定されたタグと内容で DOM 内に要素を作成します。"],
+      "returns": "p5.Element: new <a href=\"#/p5.Element\">p5.Element</a> object. /// p5.Element: 作成されたノードを保持する <a href=\"#/p5.Element\">p5.Element</a> へのポインター",
       "params": {
         "tag": "String: 新しい要素のタグ",
-        "content": "String: (オプション) 要素に挿入される HTML コンテンツ"
+        "content": "String: (オプション) 要素に挿入する HTML コンテンツ"
       }
     },
     "deviceOrientation": {
@@ -2110,7 +2276,7 @@
         "現在のキャンバスを画像として保存します。ブラウザーは、ファイルをすぐに保存するか、ダイアログウィンドウでユーザーにプロンプトを表示します。"
       ],
       "params": {
-        "selectedCanvas": "p5.Element|HTMLCanvasElement: reference to a  specific HTML5 canvas element. /// p5.Element|HTMLCanvasElement: 特定の html5 キャンバスを表す変数 (オプション) ",
+        "selectedCanvas": "p5.Framebuffer|p5.Element|HTMLCanvasElement: reference to a  specific HTML5 canvas element. /// p5.Element|HTMLCanvasElement: 特定の html5 キャンバスを表す変数 (オプション) ",
         "filename": "String: (Optional) file name. Defaults to 'untitled'.  /// String (オプション) ",
         "extension": "String: (Optional) file extension, either 'jpg' or 'png'. Defaults to 'png'. /// String: (オプション) 'jpg'または'png'"
       }
@@ -3015,6 +3181,11 @@
     },
     "textAlign": {
       "description": [
+        "Sets the way text is aligned when <a href=\"#/p5/text\">text()</a> is called.",
+        "By default, calling <code>text('hi', 10, 20)</code> places the bottom-left corner of the text's bounding box at (10, 20).",
+        "The first parameter, <code>horizAlign</code>, changes the way <a href=\"#/p5/text\">text()</a> interprets x-coordinates. By default, the x-coordinate sets the left edge of the bounding box. <code>textAlign()</code> accepts the following values for <code>horizAlign</code>: <code>LEFT</code>, <code>CENTER</code>, or <code>RIGHT</code>.",
+        "The second parameter, <code>vertAlign</code>, is optional. It changes the way <a href=\"#/p5/text\">text()</a> interprets y-coordinates. By default, the y-coordinate sets the bottom edge of the bounding box. <code>textAlign()</code> accepts the following values for <code>vertAlign</code>: <code>TOP</code>, <code>BOTTOM</code>, <code>CENTER</code>, or <code>BASELINE</code>.",
+        "///",
         "テキストの描画に使用する現在のアライメントを設定します。2つの引数を受け入れます: horizAlign（LEFT、CENTER、または RIGHT）と vertAlign（TOP、BOTTOM、CENTER、または BASELINE）。",
         "horizAlign パラメーターは、<a href=\"#/p5/text\">text()</a> 関数の x 値を参照し、vertAlign パラメーターは y 値を参照します。",
         "したがって、textAlign(LEFT)と記述すると、テキストの左端を <a href=\"#/p5/text\">text()</a> で指定した x 値に揃えます。textAlign(RIGHT, TOP)と記述すると、テキストの右端を x 値に、上端を y 値に揃えます。"
@@ -3026,61 +3197,76 @@
     },
     "textLeading": {
       "description": [
+        "Sets the spacing between lines of text when <a href=\"#/p5/text\">text()</a> is called. Spacing is measured in pixels.",
+        "Calling <code>textLeading()</code> without an argument returns the current spacing.",
+        "///",
         "テキストの行間をピクセル単位で設定/取得します。この設定は、以降の <a href=\"#/p5/text\">text()</a> 関数の呼び出しで使用されます。"
       ],
       "params": {
-        "leading": "Number: 行間のピクセル単位のサイズ"
+        "leading": "Number: spacing between lines of text in units of pixels. /// Number: 行間のピクセル単位のサイズ"
       }
     },
     "textSize": {
       "description": [
+        "Sets the font size when <a href=\"#/p5/text\">text()</a> is called. Font size is measured in pixels.",
+        "Calling <code>textSize()</code> without an arugment returns the current size.",
+        "///",
         "現在のフォントサイズを設定/取得します。このサイズは、以降の <a href=\"#/p5/text\">text()</a> 関数の呼び出しで使用されます。フォントサイズはピクセル単位で測定されます。"
       ],
       "params": {
-        "theSize": "Number: 文字のサイズ（ピクセル単位）"
+        "size": "Number: 文字のサイズ（ピクセル単位）"
       }
     },
     "textStyle": {
       "description": [
+        "Sets the style for system fonts when <a href=\"#/p5/text\">text()</a> is called. <code>textStyle()</code> accepts the following values: <code>NORMAL</code>, <code>ITALIC</code>, <code>BOLD</code> or <code>BOLDITALIC</code>.",
+        "<code>textStyle()</code> may be overridden by CSS styling. This function doesn't affect fonts loaded with <a href=\"#/p5/loadFont\">loadFont()</a>.",
+        "///",
         "システムフォントのテキストスタイルを NORMAL、ITALIC、BOLD、または BOLDITALIC に設定/取得します。注意: これは CSS のスタイル設定によって上書きされる場合があります。非システムフォント（オープンタイプ、トゥルータイプなど）の場合は、代わりにスタイル付きフォントを読み込んでください。"
       ],
       "params": {
-        "theStyle": "Constant: テキストのスタイル。NORMAL、ITALIC、BOLD、BOLDITALIC"
+        "style": "Constant: テキストのスタイル。NORMAL、ITALIC、BOLD、BOLDITALIC"
       }
     },
     "textWidth": {
       "description": [
-        "Calculates and returns the width of any character or the maximum width of any paragrph.",
+        "Returns the maximum width of a string of text drawn when <a href=\"#/p5/text\">text()</a> is called.",
         "///",
         "任意の文字やテキスト文字列の幅を計算して返します。"
       ],
-      "returns": "Number: 計算された幅",
+      "returns": "Number: width measured in units of pixels. /// Number: 計算された幅",
       "params": {
-        "theText": "String: 測定する文字の文字列"
+        "str": "String: 測定するテキスト文字列"
       }
     },
     "textAscent": {
       "description": [
         "現在のフォントの上昇を、現在のサイズで返します。上昇は、ベースラインから最も高い文字までの距離（ピクセル単位）を表します。"
       ],
-      "returns": "Number:"
+      "returns": "Number: ascent measured in units of pixels. /// "
     },
     "textDescent": {
       "description": [
         "現在のフォントの下降を、現在のサイズで返します。下降は、ベースラインから最も長い降り幅をもつ文字までの距離（ピクセル単位）を表します。"
       ],
-      "returns": "Number:"
+      "returns": "Number: descent measured in units of pixels. /// "
     },
     "textWrap": {
       "description": [
+        "Sets the style for wrapping text when <a href=\"#/p5/text\">text()</a> is called. <code>textWrap()</code> accepts the following values:",
+        "<code>WORD</code> starts new lines of text at spaces. If a string of text doesn't have spaces, it may overflow the text box and the canvas. This is the default style.",
+        "<code>CHAR</code> starts new lines as needed to stay within the text box.",
+        "<code>textWrap()</code> only works when the maximum width is set for a text box. For example, calling <code>text('Have a wonderful day', 0, 10, 100)</code> sets the maximum width to 100 pixels.",
+        "Calling <code>textWrap()</code> without an argument returns the current style.",
+        "///",
         "テキストボックス内でのテキスト行の折り返し方法を指定します。これには、<a href=\"#/p5/text\">text()</a> のパラメーター <code>x2</code> で指定されたテキスト領域の最大幅が必要です。",
         "WORD ラップスタイルは、空白でのみ行を折り返します。空白がない単一の文字列で、キャンバスやテキスト領域の境界を超える場合は、テキストは切り捨てられず、指定された領域をオーバーフローし、キャンバスの端で消えます。",
         "CHAR ラップスタイルは、テキストボックス内に収まるように必要に応じて行を折り返します。",
         "WORD はデフォルトのラップスタイルであり、両方のスタイルでは、元のテキストで指定された改行（<code>\\n</code>）で行が折り返されます。テキストエリアの最大高さパラメーター（<code>y2</code>）は、両方のスタイルで折り返されたテキストにも適用され、テキストエリアに収まらないテキストの行は画面に描画されません。"
       ],
-      "returns": "String: wrapStyle",
+      "returns": "String: スタイル",
       "params": {
-        "wrapStyle": "Constant: テキストの折り返しスタイル。WORD または CHAR"
+        "style": "Constant: テキストの折り返しスタイル。WORD または CHAR"
       }
     },
     "loadFont": {
@@ -3507,7 +3693,7 @@
         "///"
       ],
       "params": {
-        "The": "p5.Geometry: geometry whose resources should be freed"
+        "The": "p5.Geometry: The geometry whose resources should be freed /// "
       }
     },
     "plane": {
@@ -3699,6 +3885,17 @@
         "color": "p5.Color|Number[]|String: <a href=\"#/p5.Color\">p5.Color</a>、配列、または CSS 文字列としての色"
       }
     },
+    "imageLight": {
+      "description": [
+        "Creates an image light with the given image.",
+        "The image light simulates light from all the directions. This is done by using the image as a texture for an infinitely large sphere light. This sphere contains or encapsulates the whole scene/drawing. It will have different effect for varying shininess of the object in the drawing. Under the hood it is mainly doing 2 types of calculations, the first one is creating an irradiance map the environment map of the input image. The second one is managing reflections based on the shininess or roughness of the material used in the scene.",
+        "Note: The image's diffuse light will be affected by fill() and the specular reflections will be affected by specularMaterial() and shininess().",
+        "///"
+      ],
+      "params": {
+        "img": "p5.image: image for the background /// "
+      }
+    },
     "lights": {
       "description": [
         "シーンにアンビエントライトとディレクショナルライトを配置します。ライトは、ambientLight(128, 128, 128)および directionalLight(128, 128, 128, 0, 0, -1)に設定されます。",
@@ -3777,6 +3974,7 @@
       "description": [
         "提供された頂点シェーダーとフラグメントシェーダーファイルから新しい <a href=\"#/p5.Shader\">p5.Shader</a> オブジェクトを作成します。",
         "シェーダーファイルはバックグラウンドで非同期にロードされるため、このメソッドは <a href=\"#/p5/preload\">preload()</a> で使用する必要があります。",
+        "Shaders can alter the positioning of shapes drawn with them. To ensure consistency in rendering, it's recommended to use the vertex shader in the <a href=\"#/p5/createShader\">createShader example</a>. /// add 1 line",
         "注意:シェーダーは WebGL モードでのみ使用できます。"
       ],
       "returns": "p5.Shader: 提供された頂点シェーダーとフラグメントシェーダーファイルから作成されたシェーダーオブジェクト。",
@@ -3790,7 +3988,8 @@
     "createShader": {
       "description": [
         "提供された頂点シェーダーとフラグメントシェーダーのコードから新しい <a href=\"#/p5.Shader\">p5.Shader</a> オブジェクトを作成します。",
-        "注意:シェーダーは WebGL モードでのみ使用できます。"
+        "注意:シェーダーは WebGL モードでのみ使用できます。",
+        "Shaders can alter the positioning of shapes drawn with them. To ensure consistency in rendering, it's recommended to use the vertex shader shown in the example below. ///  add 1 line"
       ],
       "returns": "p5.Shader: 提供された頂点シェーダーとフラグメントシェーダーから作成されたシェーダーオブジェクト。",
       "params": {
@@ -3801,19 +4000,20 @@
     "createFilterShader": {
       "description": [
         "Creates a new <a href=\"#/p5.Shader\">p5.Shader</a> using only a fragment shader, as a convenience method for creating image effects. It's like <a href=\"#/createShader\">createShader()</a> but with a default vertex shader included.",
-        "<a href=\"#/createFilterShader\">createFilterShader()</a> is intended to be used along with <a href=\"#/filter\">filter()</a> for filtering the contents of a canvas in WebGL mode. A filter shader will not be applied to any geometries.",
-        "The fragment shader receives some uniforms: <ul> <li><code>sampler2D tex0</code>, which contains the canvas contents as a texture</li> <li><code>vec2 canvasSize</code>, which is the width and height of the canvas</li> <li><code>vec2 texelSize</code>, which is the size of a pixel (<code>1.0/width</code>, <code>1.0/height</code>)</li> </ul>",
+        "<a href=\"#/createFilterShader\">createFilterShader()</a> is intended to be used along with <a href=\"#/filter\">filter()</a> for filtering the contents of a canvas. A filter shader will not be applied to any geometries.",
+        "The fragment shader receives some uniforms: <ul> <li><code>sampler2D tex0</code>, which contains the canvas contents as a texture</li> <li><code>vec2 canvasSize</code>, which is the p5 width and height of the canvas (not including pixel density)</li> <li><code>vec2 texelSize</code>, which is the size of a physical pixel including pixel density (<code>1.0/(width*density)</code>, <code>1.0/(height*density)</code>)</li> </ul>",
         "For more info about filters and shaders, see Adam Ferriss' <a href=\"https://github.com/aferriss/p5jsShaderExamples\">repo of shader examples</a> or the <a href=\"https://p5js.org/learn/getting-started-in-webgl-shaders.html\">introduction to shaders</a> page.",
         "///"
       ],
-      "returns": "p5.Shader: a shader object created from the provided  fragment shader.",
+      "returns": "p5.Shader: a shader object created from the provided  fragment shader. /// ",
       "params": {
-        "fragSrc": "String: source code for the fragment shader"
+        "fragSrc": "String: source code for the fragment shader /// "
       }
     },
     "shader": {
       "description": [
         "次に描画される図形に使用される <a href=\"#/p5.Shader\">p5.Shader</a> オブジェクトを設定します。",
+        "Shaders can alter the positioning of shapes drawn with them. To ensure consistency in rendering, it's recommended to use the vertex shader in the <a href=\"#/p5/createShader\">createShader example</a>. /// add 1 line",
         "カスタムシェーダーは、<a href=\"#/p5/createShader\">createShader()</a> および <a href=\"#/p5/loadShader\">loadShader()</a> 関数を使用して作成できます。",
         "デフォルトのシェーダーを復元するには、<a href=\"#/p5/resetShader\">resetShader()</a> を使用してください。",
         "注意:シェーダーは WebGL モードでのみ使用できます。"
@@ -3948,6 +4148,9 @@
       "description": [
         "3D スケッチの現在のカメラに対して透視投影を設定します。この投影は、縮尺を通じて奥行きを表現します。カメラに近いオブジェクトは実際のサイズで表示され、カメラから離れたオブジェクトは小さく表示されます。",
         "この関数のパラメーターは、垂直視野角、アスペクト比（通常は幅/高さ）、および、近距離および遠距離クリッピング平面を通じて、視錐台（カメラによってオブジェクトが見られる切り取られたピラミッド）を定義します。",
+        "If no parameters are given, the default values are used as: <ul> <li><code>fov</code> : The default field of view for the camera is such that the full height of renderer is visible when it is positioned at a default distance of 800 units from the camera.</li> <li><code>aspect</code> : The default aspect ratio is the ratio of renderer's width to renderer's height.</li> <li><code>near</code> : The default value for the near clipping plane is 80, which is 0.1 times the default distance from the camera to its subject.</li> <li><code>far</code> : The default value for the far clipping plane is 8000, which is 10 times the default distance from the camera to its subject.</li> </ul>",
+        "If you prefer a fixed field of view, follow these steps: <ol> <li>Choose your desired field of view angle (<code>fovy</code>). This is how wide the camera can see.</li> <li>To ensure that you can see the entire width across horizontally and height across vertically, place the camera a distance of <code>(height / 2) / tan(fovy / 2)</code> back from its subject.</li> <li>Call perspective with the chosen field of view, canvas aspect ratio, and near/far values: <code>perspective(fovy, width / height, cameraDistance / 10, cameraDistance * 10);</code></li> </ol>",
+        "/// change 1 line to 2 lines",
         "パラメーターが指定されていない場合、デフォルトで次のようになります: perspective(PI/3, width/height, eyeZ/10, eyeZ*10)。ここで、eyeZ は((height/2) / tan(PI/6))と等しいです。"
       ],
       "params": {
@@ -4203,14 +4406,19 @@
   },
   "p5.Element": {
     "description": [
+      "A class to describe an <a href=\"https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started\" target=\"_blank\">HTML element</a>. Sketches can use many elements. Common elements include the drawing canvas, buttons, sliders, webcam feeds, and so on.",
+      "All elements share the methods of the <code>p5.Element</code> class. They're created with functions such as <a href=\"#/p5/createCanvas\">createCanvas()</a> and <a href=\"#/p5/createButton\">createButton()</a>.",
+      "///",
       "スケッチに追加されるすべての要素の基底クラスで、キャンバス、グラフィックスバッファ、およびその他の HTML 要素が含まれます。直接呼び出されることはありませんが、<a href=\"#/p5.Element\">p5.Element</a> オブジェクトは、<a href=\"#/p5/createCanvas\">createCanvas()</a>、<a href=\"#/p5/createGraphics\">createGraphics()</a>、<a href=\"#/p5/createDiv\">createDiv()</a>、<a href=\"#/p5/createImg\">createImg()</a>、<a href=\"#/p5/createInput\">createInput()</a> などを呼び出すことで作成されます。"
     ],
     "params": {
-      "elt": "HTMLElement: ラップされた DOM ノード",
+      "elt": "HTMLElement: wrapped DOM element. /// HTMLElement: ラップされた DOM ノード",
       "pInst": "P5: (オプション) p5 インスタンスへのポインター"
     },
     "elt": {
       "description": [
+        "Underlying <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement\" target=\"_blank\">HTMLElement</a> object. Its properties and methods can be used directly.",
+        "///",
         "基礎となる HTML 要素。これに対してすべての通常の HTML メソッドを呼び出すことができます。"
       ]
     },
@@ -4218,10 +4426,15 @@
     "height": {},
     "parent": {
       "description": [
+        "Attaches this element to a parent element.",
+        "For example, a <code>&lt;div&gt;&lt;/div&gt;</code> element may be used as a box to hold two pieces of text, a header and a paragraph. The <code>&lt;div&gt;&lt;/div&gt;</code> is the parent element of both the header and paragraph.",
+        "The parameter <code>parent</code> can have one of three types. <code>parent</code> can be a string with the parent element's ID, as in <code>myElement.parent('container')</code>. It can also be another <a href=\"#/p5.Element\">p5.Element</a> object, as in <code>myElement.parent(myDiv)</code>. Finally, <code>parent</code> can be an <code>HTMLElement</code> object, as in <code>myElement.parent(anotherElement)</code>.",
+        "Calling <code>myElement.parent()</code> without an argument returns this element's parent.",
+        "///",
         "指定された親要素に要素をアタッチします。要素のコンテナを設定する方法です。文字列 ID、DOM ノード、または <a href=\"#/p5.Element\">p5.Element</a> を受け入れます。引数がない場合、親ノードが返されます。キャンバスの位置を決める他の方法については、<a href='https://github.com/processing/p5.js/wiki/Positioning-your-canvas'>キャンバスの配置</a> の wiki ページを参照してください。"
       ],
       "params": {
-        "parent": "String|p5.Element|Object: 望ましい親要素の ID、DOM ノード、または <a href=\"#/p5.Element\">p5.Element</a>"
+        "parent": "String|p5.Element|Object: ID, <a href=\"#/p5.Element\">p5.Element</a>,  or HTMLElement of desired parent element. /// String|p5.Element|Object: 望ましい親要素の ID、DOM ノード、または <a href=\"#/p5.Element\">p5.Element</a>"
       }
     },
     "id": {
@@ -4234,6 +4447,9 @@
     },
     "class": {
       "description": [
+        "Adds a <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class\" target=\"_blank\">class attribute</a> to the element.",
+        "Calling <code>myElement.class()</code> without an argument returns a string with its current classes.",
+        "///",
         "指定されたクラスを要素に追加します。クラス引数が渡されない場合は、代わりに要素の現在のクラスを含む文字列が返されます。"
       ],
       "params": {
@@ -4242,108 +4458,142 @@
     },
     "mousePressed": {
       "description": [
+        "Calls a function when the mouse is pressed over the element. Calling <code>myElement.mousePressed(false)</code> disables the function.",
+        "Note: Some mobile browsers may also trigger this event when the element receives a quick tap.",
+        "///",
         "<a href=\"#/p5.Element/mousePressed\">mousePressed()</a> メソッドは、要素の上でマウスボタンが押されるたびに1回呼び出されます。一部のモバイルブラウザーでは、ユーザーが素早くタップすると、タッチスクリーンでもこのイベントがトリガーされる場合があります。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: 要素の上でマウスが押されたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the mouse is  pressed over the element.  <code>false</code> disables the function. ||| Function|Boolean: 要素の上でマウスが押されたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "doubleClicked": {
       "description": [
+        "Calls a function when the mouse is pressed twice over the element. Calling <code>myElement.doubleClicked(false)</code> disables the function.",
+        "///",
         "<a href=\"#/p5.Element/doubleClicked\">doubleClicked()</a> メソッドは、要素の上でマウスボタンが2回押されるたびに1回呼び出されます。これは、要素とアクション固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: 要素の上でマウスがダブルクリックされたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the mouse is  double clicked over the element.  <code>false</code> disables the function. /// Function|Boolean: 要素の上でマウスがダブルクリックされたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "mouseWheel": {
       "description": [
+        "Calls a function when the mouse wheel scrolls over th element.",
+        "The callback function, <code>fxn</code>, is passed an <code>event</code> object. <code>event</code> has two numeric properties, <code>deltaY</code> and <code>deltaX</code>. <code>event.deltaY</code> is negative if the mouse wheel rotates away from the user. It's positive if the mouse wheel rotates toward the user. <code>event.deltaX</code> is positive if the mouse wheel moves to the right. It's negative if the mouse wheel moves to the left.",
+        "Calling <code>myElement.mouseWheel(false)</code> disables the function.",
+        "///",
         "要素の上でマウスホイールがスクロールされるたびに、<a href=\"#/p5.Element/mouseWheel\">mouseWheel()</a> メソッドが1回呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。",
         "このメソッドは、コールバック関数を引数として受け入れ、要素で <code>wheel</code> イベントがトリガーされると実行されます。コールバック関数には、<code>event</code> というひとつの引数が渡されます。<code>event.deltaY</code> プロパティは、マウスホイールが上に回転するか、ユーザーから離れる方向に回転すると負の値を返し、他の方向では正の値を返します。<code>event.deltaX</code> は、<code>event.deltaY</code> と同様のことを行いますが、マウスホイールの水平方向のスクロールを読み取ります。",
         "macOS で「ナチュラル」スクロールが有効になっている場合、<code>event.deltaY</code> の値は反転します。"
       ],
       "params": {
-        "fxn": "Function|Boolean: 要素の上でマウスがスクロールされたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the mouse wheel is  scrolled over the element.  <code>false</code> disables the function. /// Function|Boolean: 要素の上でマウスがスクロールされたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "mouseReleased": {
       "description": [
+        "Calls a function when the mouse is released over the element. Calling <code>myElement.mouseReleased(false)</code> disables the function.",
+        "Note: Some mobile browsers may also trigger this event when the element receives a quick tap.",
+        "///",
         "要素の上でマウスボタンが離されるたびに、<a href=\"#/p5.Element/mouseReleased\">mouseReleased()</a> メソッドが1回呼び出されます。一部のモバイルブラウザーでは、ユーザーが素早くタップすると、タッチスクリーンでもこのイベントがトリガーされる場合があります。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: 要素の上でマウスが離されたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the mouse is  pressed over the element.  <code>false</code> disables the function. /// Function|Boolean: 要素の上でマウスが離されたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "mouseClicked": {
       "description": [
+        "Calls a function when the mouse is pressed and released over the element. Calling <code>myElement.mouseReleased(false)</code> disables the function.",
+        "Note: Some mobile browsers may also trigger this event when the element receives a quick tap.",
+        "///",
         "要素の上でマウスボタンが押されて離された後、<a href=\"#/p5.Element/mouseClicked\">mouseClicked()</a> メソッドが1回呼び出されます。一部のモバイルブラウザーでは、ユーザーが素早くタップすると、タッチスクリーンでもこのイベントがトリガーされる場合があります。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: 要素の上でマウスがクリックされたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the mouse is  pressed and released over the element.  <code>false</code> disables the function. /// Function|Boolean: 要素の上でマウスがクリックされたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "mouseMoved": {
       "description": [
+        "Calls a function when the mouse moves over the element. Calling <code>myElement.mouseMoved(false)</code> disables the function.",
+        "///",
         "マウスが要素の上を移動するたびに、<a href=\"#/p5.Element/mouseMoved\">mouseMoved()</a> メソッドが1回呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: マウスが要素の上を移動したときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the mouse  moves over the element.  <code>false</code> disables the function. /// Function|Boolean: マウスが要素の上を移動したときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "mouseOver": {
       "description": [
-        "マウスが要素に移動するたびに、<a href=\"#/p5.Element/mouseOver\">mouseOver()</a> メソッドが1回呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
+        "マウスが要素に移動するたびに、<a href=\"#/p5.Element/mouseOver\">mouseOver()</a> メソッドが1回呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。",
+        "///",
+        "Calls a function when the mouse moves onto the element. Calling <code>myElement.mouseOver(false)</code> disables the function."
       ],
       "params": {
-        "fxn": "Function|Boolean: マウスが要素に移動したときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the mouse  moves onto the element.  <code>false</code> disables the function. /// Function|Boolean: マウスが要素に移動したときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "mouseOut": {
       "description": [
+        "Calls a function when the mouse moves off the element. Calling <code>myElement.mouseOut(false)</code> disables the function.",
+        "///",
         "マウスが要素から離れるたびに、<a href=\"#/p5.Element/mouseOut\">mouseOut()</a> メソッドが1回呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: マウスが要素から離れたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the mouse  moves off the element.  <code>false</code> disables the function. /// Function|Boolean: マウスが要素から離れたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "touchStarted": {
       "description": [
+        "Calls a function when the element is touched. Calling <code>myElement.touchStarted(false)</code> disables the function.",
+        "Note: Touch functions only work on mobile devices.",
+        "///",
         "タッチが登録されるたびに、<a href=\"#/p5.Element/touchStarted\">touchStarted()</a> メソッドが1回呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: 要素上でタッチが開始されたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the touch  starts.  <code>false</code> disables the function. /// Function|Boolean: 要素上でタッチが開始されたときに発火する関数。代わりに <code>false</code> が渡された場合、以前の発火関数はもう発火しなくなります。"
       }
     },
     "touchMoved": {
       "description": [
+        "Calls a function when the user touches the element and moves their finger. Calling <code>myElement.touchMoved(false)</code> disables the function.",
+        "Note: Touch functions only work on mobile devices.",
+        "///",
         "touchMoved() メソッドは、タッチが移動するたびに一度呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: タッチが要素の上を移動するときに発火する関数。代わりに <code>false</code> を渡すと、以前に発火していた関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the touch  moves over the element.  <code>false</code> disables the function. /// Function|Boolean: タッチが要素の上を移動するときに発火する関数。代わりに <code>false</code> を渡すと、以前に発火していた関数はもう発火しなくなります。"
       }
     },
     "touchEnded": {
       "description": [
+        "Calls a function when the user stops touching the element. Calling <code>myElement.touchMoved(false)</code> disables the function.",
+        "Note: Touch functions only work on mobile devices.",
+        "///",
         "touchEnded() メソッドは、タッチが終了するたびに一度呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: タッチが要素の上で終了するときに発火する関数。代わりに <code>false</code> を渡すと、以前に発火していた関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the touch  ends.  <code>false</code> disables the function. /// Function|Boolean: タッチが要素の上で終了するときに発火する関数。代わりに <code>false</code> を渡すと、以前に発火していた関数はもう発火しなくなります。"
       }
     },
     "dragOver": {
       "description": [
+        "Calls a function when a file is dragged over the element. Calling <code>myElement.dragOver(false)</code> disables the function.",
+        "///",
         "dragOver() メソッドは、ファイルが要素の上にドラッグされるたびに一度呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: ファイルが要素の上にドラッグされるときに発火する関数。代わりに <code>false</code> を渡すと、以前に発火していた関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the file is  dragged over the element.  <code>false</code> disables the function. /// Function|Boolean: ファイルが要素の上にドラッグされるときに発火する関数。代わりに <code>false</code> を渡すと、以前に発火していた関数はもう発火しなくなります。"
       }
     },
     "dragLeave": {
       "description": [
+        "Calls a function when a file is dragged off the element. Calling Calling <code>myElement.dragLeave(false)</code> disables the function.",
+        "///",
         "dragLeave() メソッドは、ドラッグされたファイルが要素領域を離れるたびに一度呼び出されます。これは、要素固有のイベントリスナーをアタッチするために使用できます。"
       ],
       "params": {
-        "fxn": "Function|Boolean: ファイルが要素からドラッグされたときに発火する関数。代わりに <code>false</code> を渡すと、以前に発火していた関数はもう発火しなくなります。"
+        "fxn": "Function|Boolean: function to call when the file is  dragged off the element.  <code>false</code> disables the function. /// Function|Boolean: ファイルが要素からドラッグされたときに発火する関数。代わりに <code>false</code> を渡すと、以前に発火していた関数はもう発火しなくなります。"
       }
     },
     "addClass": {
@@ -4413,16 +4663,25 @@
     },
     "style": {
       "description": [
+        "Applies a style to an element by adding a <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax\" target=\"_blank\">CSS declaration</a>.",
+        "The first parameter, <code>property</code>, is a string. If the name of a style property is passed, as in <code>myElement.style('color')</code>, the method returns the current value as a string or <code>null</code> if it hasn't been set. If a <code>property:style</code> string is passed, as in <code>myElement.style('color:deeppink')</code>, the method sets <code>property</code> to <code>value</code>.",
+        "The second parameter, <code>value</code>, is optional. It sets the property's value. <code>value</code> can be a string, as in <code>myElement.style('color', 'deeppink')</code>, or a <a href=\"#/p5.Color\">p5.Color</a> object, as in <code>myElement.style('color', myColor)</code>.",
+        "///",
         "与えられたスタイル（CSS）プロパティ（第1引数）を、与えられた値（第2引数）で要素に設定します。単一の引数が与えられた場合、.style() は指定されたプロパティの値を返します。ただし、単一の引数が CSS 構文（'text-align:center'）で与えられた場合、.style() は適切に CSS を設定します。"
       ],
       "returns": "String: プロパティの値",
       "params": {
-        "property": "String: 設定するプロパティ",
+        "property": "String: 設定するスタイルプロパティ",
         "value": "String|p5.Color: プロパティに割り当てる値"
       }
     },
     "attribute": {
       "description": [
+        "Adds an <a href=\"https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#attributes\" target=\"_blank\">attribute</a> to the element. This method is useful for advanced tasks.",
+        "Most commonly-used attributes, such as <code>id</code>, can be set with their dedicated methods. For example, <code>nextButton.id('next')</code> sets an element's <code>id</code> attribute.",
+        "The first parameter, <code>attr</code>, is the attribute's name as a string. Calling <code>myElement.attribute('align')</code> returns the attribute's current value as a string or <code>null</code> if it hasn't been set.",
+        "The second parameter, <code>value</code>, is optional. It's a string used to set the attribute's value. For example, calling <code>myElement.attribute('align', 'center')</code> sets the element's horizontal alignment to <code>center</code>.",
+        "///",
         "指定された要素に新しい属性を追加するか、既存の属性の値を変更します。値が指定されていない場合、指定された属性の値を返すか、属性が設定されていない場合は null を返します。"
       ],
       "returns": "String: 属性の値",
@@ -4432,13 +4691,22 @@
       }
     },
     "removeAttribute": {
-      "description": ["指定された要素の属性を削除します。"],
+      "description": [
+        "Removes an attribute from the element.",
+        "The parameter <code>attr</code> is the attribute's name as a string. For example, calling <code>myElement.removeAttribute('align')</code> removes its <code>align</code> attribute if it's been set.",
+        "///",
+        "指定された要素の属性を削除します。"
+      ],
       "params": {
         "attr": "String: 削除する属性"
       }
     },
     "value": {
       "description": [
+        "Returns or sets the element's value.",
+        "Calling <code>myElement.value()</code> returns the element's current value.",
+        "The parameter, <code>value</code>, is an optional number or string. If provided, as in <code>myElement.value(123)</code>, it's used to set the element's value.",
+        "///",
         "引数が与えられない場合は要素の値を返すか、要素の値を設定します。"
       ],
       "returns": "String|Number: 要素の値",
@@ -4448,16 +4716,23 @@
     },
     "show": {
       "description": [
-        "現在の要素を表示します。基本的に、style に display:block を設定します。"
+        "現在の要素を表示します。"
       ]
     },
     "hide": {
       "description": [
-        "現在の要素を非表示にします。基本的に、style に display:none を設定します。"
+        "現在の要素を非表示にします。"
       ]
     },
     "size": {
       "description": [
+        "Sets the element's width and height.",
+        "Calling <code>myElement.size()</code> without an argument returns the element's size as an object with the properties <code>width</code> and <code>height</code>. For example,  <code>{ width: 20, height: 10 }</code>.",
+        "The first parameter, <code>width</code>, is optional. It's a number used to set the element's width. Calling <code>myElement.size(10)</code>",
+        "The second parameter, 'height<code>, is also optional. It's a number used to set the element's height. For example, calling </code>myElement.size(20, 10)` sets the element's width to 20 pixels and height to 10 pixels.",
+        "The constant <code>AUTO</code> can be used to adjust one dimension at a time while maintaining the aspect ratio, which is <code>width / height</code>. For example, consider an element that's 200 pixels wide and 100 pixels tall. Calling <code>myElement.size(20, AUTO)</code> sets the width to 20 pixels and height to 10 pixels.",
+        "Note: In the case of elements that need to load data, such as images, wait to call <code>myElement.size()</code> until after the data loads.",
+        "///",
         "要素の幅と高さを設定します。AUTO を使用して、一度にひとつの次元だけを調整することもできます。引数が与えられない場合、オブジェクトで要素の幅と高さを返します。画像など、読み込む必要のある要素の場合は、要素の読み込みが完了した後に関数を呼び出すことをお勧めします。"
       ],
       "returns": "Object: オブジェクト内の要素の幅と高さ",
@@ -4468,17 +4743,29 @@
     },
     "remove": {
       "description": [
-        "要素を削除し、すべてのメディアストリームを停止し、すべてのリスナーを登録解除します。"
+        "要素を削除し、すべての音声/映像ストリームを停止し、すべてのコールバック関数を登録解除します。"
       ]
     },
     "drop": {
       "description": [
+        "Sets a function to call when the user drops a file on the element.",
+        "The first parameter, <code>callback</code>, is a function to call once the file loads. The callback function should have one parameter, <code>file</code>, that's a <a href=\"#/p5.File\">p5.File</a> object. If the user drops multiple files on the element, <code>callback</code>, is called once for each file.",
+        "The second parameter, <code>fxn</code>, is a function to call when the browser detects one or more dropped files. The callback function should have one parameter, <code>event</code>, that's a <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/DragEvent\">DragEvent</a>.",
+        "///",
         "要素にドロップされたファイルがすべて読み込まれるたびに呼び出されるコールバックを登録します。p5 は、ドロップされたすべてのファイルをメモリーに読み込み、p5.File オブジェクトとしてコールバックに渡します。同時にドロップされた複数のファイルは、コールバックが複数回呼び出される結果となります。",
         "必要に応じて、2つ目のコールバックを渡すこともできます。これは、生の <a href=\"https://developer.mozilla.org/ja/docs/Web/Events/drop\">drop</a> イベントに登録されます。そのため、コールバックは元の <a href=\"https://developer.mozilla.org/ja/docs/Web/API/DragEvent\">DragEvent</a> が提供されます。同時に複数のファイルをドロップすると、2つ目のコールバックは1回のドロップごとにトリガーされますが、最初のコールバックはロードされたファイルごとにトリガーされます。"
       ],
       "params": {
-        "callback": "Function: 読み込まれたファイルを受け取るコールバックで、ドロップされた各ファイルに対して呼び出されます。",
-        "fxn": "Function: (オプション) ファイルがドロップされたときに、ドロップイベントでトリガーされるコールバック。"
+        "callback": "Function: called when a file loads. Called once for each file dropped. /// Function: 読み込まれたファイルを受け取るコールバックで、ドロップされた各ファイルに対して呼び出されます。",
+        "fxn": "Function: (Optional) called once when any files are dropped. /// Function: (オプション) ファイルがドロップされたときに、ドロップイベントでトリガーされるコールバック。"
+      }
+    },
+    "draggable": {
+      "description": [
+        "Turns p5.Element into a draggable item. If an argument is given, it will drag that p5.Element instead, ie. drag a entire GUI panel (parent container) with the panel's title bar. /// "
+      ],
+      "params": {
+        "elmnt": "p5.Element: (Optional) pass another p5.Element /// "
       }
     }
   },
@@ -4674,46 +4961,74 @@
   },
   "p5.MediaElement": {
     "description": [
+      "A class to handle audio and video.",
+      "<code>p5.MediaElement</code> extends <a href=\"#/p5.Element\">p5.Element</a> with methods to handle audio and video. <code>p5.MediaElement</code> objects are created by calling <a href=\"#/p5/createVideo\">createVideo</a>, <a href=\"#/p5/createAudio\">createAudio</a>, and <a href=\"#/p5/createCapture\">createCapture</a>.",
+      "///",
       "<a href=\"#/p5.Element\">p5.Element</a> を拡張してオーディオとビデオを処理します。 <a href=\"#/p5.Element\">p5.Element</a> のメソッドに加えて、メディアを制御するメソッドも含まれています。直接呼び出されることはありませんが、<a href=\"#/p5/createVideo\">createVideo</a>、<a href=\"#/p5/createAudio\">createAudio</a>、および <a href=\"#/p5/createCapture\">createCapture</a> を呼び出すことで <a href=\"#/p5.MediaElement\">p5.MediaElement</a> が作成されます。"
     ],
     "params": {
       "elt": "String: ラップされる DOM ノード"
     },
     "src": {
-      "description": ["メディア要素のソースへのパス。"],
+      "description": [
+        "Path to the media element's source as a string.",
+        "///",
+        "メディア要素のソースへのパス。"
+      ],
       "returns": "String: src"
     },
     "play": {
-      "description": ["HTML5 メディア要素を再生します。"]
+      "description": [
+        "Play audio or video from a media element.",
+        "///",
+        "HTML5 メディア要素を再生します。"
+      ]
     },
     "stop": {
       "description": [
+        "Stops a media element and sets its current time to zero. Calling <code>media.play()</code> will restart playing audio/video from the beginning.",
+        "///",
         "HTML5 メディア要素を停止します（現在の時間をゼロに設定）。"
       ]
     },
     "pause": {
-      "description": ["HTML5 メディア要素を一時停止します。"]
+      "description": [
+        "Pauses a media element. Calling <code>media.play()</code> will resume playing audio/video from the moment it paused.",
+        "///",
+        "HTML5 メディア要素を一時停止します。"
+      ]
     },
     "loop": {
       "description": [
+        "Play the audio/video repeatedly in a loop.",
+        "///",
         "HTML5 メディア要素の'loop'を true に設定し、再生を開始します。"
       ]
     },
     "noLoop": {
       "description": [
+        "Stops the audio/video from playing in a loop. It will stop when it reaches the end.",
+        "///",
         "HTML5 メディア要素の'loop'を false に設定します。要素は最後に達すると停止します。"
       ]
     },
     "autoplay": {
       "description": [
+        "Sets the audio/video to play once it's loaded.",
+        "The parameter, <code>shouldAutoplay</code>, is optional. Calling <code>media.autoplay()</code> without an argument causes the media to play automatically. If <code>true</code> is passed, as in <code>media.autoplay(true)</code>, the media will automatically play. If <code>false</code> is passed, as in <code>media.autoPlay(false)</code>, it won't play automatically.",
+        "///",
         "HTML5 メディア要素を自動再生するかどうかを設定します。引数が指定されていない場合、デフォルトで自動再生されます。"
       ],
       "params": {
-        "shouldAutoplay": "Boolean: 要素が自動再生すべきかどうか"
+        "shouldAutoplay": "Boolean: (オプション) 要素が自動再生すべきかどうか"
       }
     },
     "volume": {
       "description": [
+        "Manages the audio/video volume.",
+        "Calling <code>media.volume()</code> without an argument returns the current volume as a number in the range 0 (off) to 1 (maximum).",
+        "The parameter, <code>val</code>, is optional. It's a number that sets the volume from 0 (off) to 1 (maximum). For example, calling <code>media.volume(0.5)</code> sets the volume to half of its maximum.",
+        "///",
         "この HTML5 メディア要素のボリュームを設定します。引数が与えられていない場合、現在のボリュームを返します。"
       ],
       "returns": "Number: 現在のボリューム",
@@ -4723,15 +5038,22 @@
     },
     "speed": {
       "description": [
+        "Manages the audio/video playback speed. Calling <code>media.speed()</code> returns the current speed as a number.",
+        "The parameter, <code>val</code>, is optional. It's a number that sets the playback speed. 1 plays the media at normal speed, 0.5 plays it at half speed, 2 plays it at double speed, and so on. -1 plays the media at normal speed in reverse.",
+        "Note: Not all browsers support backward playback. Even if they do, playback might not be smooth.",
+        "///",
         "引数が与えられていない場合、要素の現在の再生速度を返します。speed パラメーターは、2.0で要素を2倍の速度で再生し、0.5で半分の速度で再生し、-1 で通常の速度で逆再生します。（すべてのブラウザーが後方再生をサポートしているわけではなく、サポートしていても再生がスムーズでない場合があります。）"
       ],
-      "returns": "Number: 要素の現在の再生速度",
+      "returns": "Number: 現在の再生速度",
       "params": {
-        "speed": "Number: 要素の再生速度の乗数"
+        "speed": "Number: 再生速度の乗数"
       }
     },
     "time": {
       "description": [
+        "Manages the media element's playback time. Calling <code>media.time()</code> returns the number of seconds the audio/video has played. Time resets to 0 when the looping media restarts.",
+        "The parameter, <code>time</code>, is optional. It's a number that specifies the time, in seconds, to jump to when playback begins.",
+        "///",
         "引数が与えられていない場合、要素の現在の時間を返します。引数が与えられた場合、要素の現在の時間がそれに設定されます。"
       ],
       "returns": "Number: 現在の時間（秒単位）",
@@ -4740,15 +5062,22 @@
       }
     },
     "duration": {
-      "description": ["HTML5 メディア要素の再生時間を返します。"],
-      "returns": "Number: 再生時間"
+      "description": [
+        "Returns the audio/video's duration in seconds.",
+        "///",
+        "HTML5 メディア要素の再生時間を返します。"
+      ],
+      "returns": "Number: 再生時間（秒単位）"
     },
     "onended": {
       "description": [
+        "Calls a function when the audio/video reaches the end of its playback The function won't be called if the media is looping.",
+        "The <code>p5.MediaElement</code> is passed as an argument to the callback function.",
+        "///",
         "オーディオまたはビデオ要素が終了したときに呼び出されるイベントをスケジュールします。要素がループしている場合、これは呼び出されません。要素は、onended コールバックの引数として渡されます。"
       ],
       "params": {
-        "callback": "Function: サウンドファイルが終了したときに呼び出す関数。メディア要素がコールバックの引数として渡されます。"
+        "callback": "Function: function to call when playback ends.  The <code>p5.MediaElement</code> is passed as  the argument. /// Function: サウンドファイルが終了したときに呼び出す関数。メディア要素がコールバックの引数として渡されます。"
       }
     },
     "connect": {
@@ -4767,72 +5096,99 @@
     },
     "showControls": {
       "description": [
+        "Show the default <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement\" target=\"_blank\">HTMLMediaElement</a> controls. These vary between web browser.",
+        "///",
         "ウェブブラウザーによって決定されるデフォルトの MediaElement コントロールを表示します。"
       ]
     },
     "hideControls": {
       "description": [
+        "Hide the default <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement\" target=\"_blank\">HTMLMediaElement</a> controls.",
+        "///",
         "デフォルトの mediaElement コントロールを非表示にします。"
       ]
     },
     "addCue": {
       "description": [
+        "Schedules a function to call when the audio/video reaches a specific time during its playback.",
+        "The first parameter, <code>time</code>, is the time, in seconds, when the function should run. This value is passed to <code>callback</code> as its first argument.",
+        "The second parameter, <code>callback</code>, is the function to call at the specified cue time.",
+        "The third parameter, <code>value</code>, is optional and can be any type of value. <code>value</code> is passed to <code>callback</code>.",
+        "Calling <code>media.addCue()</code> returns an ID as a string. This is useful for removing the cue later.",
+        "///",
         "MediaElement（オーディオ/ビデオ）が再生キューポイントに到達するたびにトリガーされるイベントをスケジュールします。",
         "コールバック関数、トリガーする時間（秒単位）、およびコールバックのオプションのパラメーターを受け入れます。",
         "時間はコールバック関数の最初のパラメーターとして渡され、param は2番目のパラメーターとして渡されます。"
       ],
-      "returns": "Number: id このキューの ID。removeCue(id)に便利です。",
+      "returns": "Number: id ID of this cue,  useful for `media.removeCue(id)`. /// Number: id このキューの ID。removeCue(id)に便利です。",
       "params": {
-        "time": "Number: このメディア要素の再生に関連する秒単位の時間。たとえば、再生が2秒に達するたびにイベントをトリガーするには、数値2を渡します。これは、コールバック関数に最初のパラメーターとして渡されます。",
-        "callback": "Function: 指定された時間に呼び出される関数の名前。コールバックは、時間と（オプションで）パラメーターを2つのパラメーターとして受け取ります。",
-        "value": "Object: (オプション) コールバック関数に2番目のパラメーターとして渡されるオブジェクト。"
+        "time": "Number: cue time to run the callback function. /// Number: このメディア要素の再生に関連する秒単位の時間。たとえば、再生が2秒に達するたびにイベントをトリガーするには、数値2を渡します。これは、コールバック関数に最初のパラメーターとして渡されます。",
+        "callback": "Function: function to call at the cue time. /// Function: 指定された時間に呼び出される関数の名前。コールバックは、時間と（オプションで）パラメーターを2つのパラメーターとして受け取ります。",
+        "value": "Object: (Optional) object to pass as the argument to  <code>callback</code>. /// Object: (オプション) コールバック関数に2番目のパラメーターとして渡されるオブジェクト。"
       }
     },
     "removeCue": {
       "description": [
-        "ID にもとづいてコールバックを削除します。ID は addCue メソッドによって返されます。"
+        "ID にもとづいてコールバックを削除します。"
       ],
       "params": {
-        "id": "Number: addCue によって返されるキューの ID"
+        "id": "Number: ID of the cue, created by <code>media.addCue()</code>. /// Number: addCue によって返されるキューの ID"
       }
     },
     "clearCues": {
       "description": [
-        "addCue メソッドを介して元々スケジュールされていたすべてのコールバックを削除します。"
-      ],
-      "params": {
-        "id": "Number: addCue によって返されるキューの ID"
-      }
+        "Removes all functions scheduled with <code>media.addCue()</code>. /// addCue メソッドを介して元々スケジュールされていたすべてのコールバックを削除します。"
+      ]
     }
   },
   "p5.File": {
     "description": [
+      "A class to describe a file.",
+      "<code>p5.File</code> objects are used by <a href=\"#/p5.Element/drop\">myElement.drop()</a> and created by <a href=\"#/p5/createFileInput\">createFileInput</a>.",
+      "///",
       "ファイルの基本クラス。Element.drop や createFileInput で使用されます。"
     ],
     "params": {
-      "file": "File: ラップされたファイル"
+      "file": "File: wrapped file. /// File: ラップされたファイル"
     },
     "file": {
       "description": [
+        "Underlying <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/File\" target=\"_blank\">File</a> object. All <code>File</code> properties and methods are accessible.",
+        "///",
         "基礎となる File オブジェクト。このオブジェクトに対して File クラスの通常のメソッドが呼び出せます。"
       ]
     },
     "type": {
-      "description": ["ファイルの種類（画像、テキストなど）"]
+      "description": [
+        "The file <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types\" target=\"_blank\">MIME type</a> as a string. For example, <code>'image'</code>, <code>'text'</code>, and so on.",
+        "///",
+        "ファイルの種類（画像、テキストなど）"]
     },
     "subtype": {
       "description": [
+        "The file subtype as a string. For example, a file with an <code>'image'</code> <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types\" target=\"_blank\">MIME type</a> may have a subtype such as <code>png</code> or <code>jpeg</code>.",
+        "///",
         "ファイルのサブタイプ（一般的には拡張子 jpg、png、xml など）"
       ]
     },
     "name": {
-      "description": ["ファイル名"]
+      "description": [
+        "The file name as a string.",
+        "///",
+        "ファイル名"
+      ]
     },
     "size": {
-      "description": ["ファイルのサイズ"]
+      "description": [
+        "The number of bytes in the file.",
+        "///",
+        "ファイルのサイズ"
+      ]
     },
     "data": {
       "description": [
+        "A string containing either the file's image data, text contents, or a parsed object in the case of JSON and <a href=\"#/p5.XML\">p5.XML</a> objects.",
+        "///",
         "ファイルが JSON であれば解析されたオブジェクト、XML であれば p5.XML、画像であれば画像データ、テキストであればテキストデータが含まれる URL 文字列"
       ]
     }
@@ -6228,6 +6584,12 @@
       "detailY": "Integer: (オプション) y 軸に沿った頂点数。",
       "callback": "Function: (オプション) オブジェクトのインスタンス化時に呼び出す関数。"
     },
+    "clearColors": {
+      "description": [
+        "Removes the internal colors of p5.Geometry. Using <code>clearColors()</code>, you can use <code>fill()</code> to supply new colors before drawing each shape. If <code>clearColors()</code> is not used, the shapes will use their internal colors by ignoring <code>fill()</code>.",
+        "///"
+      ]
+    },
     "computeFaces": {
       "description": [
         "ジオメトリオブジェクトの頂点にもとづいて、面を計算します。"
@@ -6235,8 +6597,16 @@
     },
     "computeNormals": {
       "description": [
+        "This function calculates normals for each face, where each vertex's normal is the average of the normals of all faces it's connected to. i.e computes smooth normals per vertex as an average of each face.",
+        "When using <code>FLAT</code> shading, vertices are disconnected/duplicated i.e each face has its own copy of vertices. When using <code>SMOOTH</code> shading, vertices are connected/deduplicated i.e each face has its vertices shared with other faces.",
+        "Options can include: <ul> <li><code>roundToPrecision</code>: Precision value for rounding computations. Defaults to 3.</li> </ul>",
+        "///",
         "各頂点について、各面の平均としてスムーズな法線を計算します。"
-      ]
+      ],
+      "params": {
+        "shadingType": "String: (Optional) shading type (<code>FLAT</code> for flat shading or <code>SMOOTH</code> for smooth shading) for buildGeometry() outputs. Defaults to <code>FLAT</code>. /// ",
+        "options": "Object: (Optional) An optional object with configuration. /// "
+      }
     },
     "averageNormals": {
       "description": ["頂点の法線を平均化します。曲面で使用されます。"]
