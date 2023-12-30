@@ -33,7 +33,6 @@ tagline5: Processing コミュニティと JavaScript コミュニティ
 tagline6: Processing の力と JavaScript の広がり
 tagline7: p5.js コミュニティは Black Lives Matter を支持します。
 home:
-  search-bar: p5js.orgを検索
   start-creating: p5 Editor で作成を開始しましょう！
   p1xh1: こんにちは！
   p1x1: >-
@@ -266,33 +265,21 @@ download:
   support-33: >-
     は、オリジナルの Processing ソフトウェア
     に10年以上取り組んだ後、2012年に設立されました。同財団の使命は、視覚芸術におけるソフトウェアリテラシーと技術関連分野における視覚リテラシーを促進し、これらの分野を多様なコミュニティにとって利用しやすいものにすることです。私たちの目標は、あらゆる興味やバックグラウンドを持つ人々がプログラミングの方法を学び、コードを介してクリエイティブな作品を作成する力を与えることであり、特にこれらのツールやリソースにアクセスできないような人々をサポートすることです。
-  support-17-alt: >-
-    p5.js Contributors Conference at CMU STUDIO for Creative Inquiry in
-    Pittsburgh
-  support-18-alt: >-
-    Processing Fellow Saskia Freeke organizing Code Liberation x Processing
-    workshops in London
-  support-19-alt: 'Learning to Teach, Teaching to Learn conference with SFPC'
-  support-20-alt: Processing Foundation Fellow Cassie Tarakajian's workshop at Code Art Miami
-  support-21-alt: Taeyoon Choi and ASL interpretor at Signing Coders p5.js workshop
-  support-22-alt: Google Summer of Code kickoff participants
-  support-23-alt: Processing Foundation Fellow Cassie Tarakajian's workshop at Code Art Miami
-  support-24-alt: >-
-    Luisa Pereira and Yeseul Song facilitate a sign language based p5.js
-    workshop
-  support-25-alt: >-
-    p5.js Contributors Conference at CMU STUDIO for Creative Inquiry in
-    Pittsburgh
-  support-26-alt: >-
-    Processing Fellow Digital Citizens Lab panel on STEM teaching at the
-    International Center of Photography
-  support-27-alt: 'Participants at p5.js workshop in Santiago, Chile'
-  support-28-alt: Claire Kearney-Volpe helping facilitate a sign language based p5.js workshop
-  support-29-alt: >-
-    Processing Foundation Fellow DIY Girls run a creative coding program in Los
-    Angeles
-  support-30-alt: Processing Fellow Digital Citizens Lab
-  support-31-alt: Bicoastal p5.js meetup at UCLA DMA and NYU ITP
+  support-17-alt: ''
+  support-18-alt: ''
+  support-19-alt: ''
+  support-20-alt: ''
+  support-21-alt: ''
+  support-22-alt: ''
+  support-23-alt: ''
+  support-24-alt: ''
+  support-25-alt: ''
+  support-26-alt: ''
+  support-27-alt: ''
+  support-28-alt: ''
+  support-29-alt: ''
+  support-30-alt: ''
+  support-31-alt: ''
 learn:
   learn-title: 学ぶ
   teach-title2: 教える
@@ -1681,7 +1668,6 @@ examples:
   Arrays: 配列
   Control: 制御
   Image: 画像
-  Image_Processing: Image Processing
   Color: 色
   Math: 数学
   Simulate: シミュレーション
