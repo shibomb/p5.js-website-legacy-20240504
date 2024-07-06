@@ -660,11 +660,11 @@
         "y2": "数字：第一个控制点的 y 坐标",
         "x3": "数字：第二个控制点的 x 坐标",
         "y3": "数字：第二个控制点的 y 坐标",
-        "x4": "数字：第一个锚点的 x 坐标",
-        "y4": "数字：第二个锚点的 x 坐标",
-        "z2": "Number: z-coordinate for the first control point (for WebGL mode)",
-        "z3": "Number: z-coordinate for the second control point (for WebGL mode)",
-        "z4": "Number: z-coordinate for the anchor point (for WebGL mode)"
+        "x4": "数字：锚点的 x 坐标",
+        "y4": "数字：锚点的 y 坐标",
+        "z2": "数字：第一个控制点的 z 坐标（适用于WebGL模式）",
+        "z3": "数字：第二个控制点的 z 坐标（适用于WebGL模式）",
+        "z4": "数字：锚点的 z 坐标（适用于WebGL模式）"
       }
     },
     "curveVertex": {
@@ -6314,7 +6314,7 @@
   },
   "p5.Pulse": {
     "description": [
-      "Creates a Pulse object, an oscillator that implements Pulse Width Modulation. The pulse is created with two oscillators. Accepts a parameter for frequency, and to set the width between the pulses. See <a href=\" http://p5js.org/reference/#/p5.Oscillator\"> <code>p5.Oscillator</code> for a full list of methods."
+      "Creates a Pulse object, an oscillator that implements Pulse Width Modulation. The pulse is created with two oscillators. Accepts a parameter for frequency, and to set the width between the pulses. See <a href=\" http://p5js.org/zh-hans/reference/#/p5.Oscillator\"> <code>p5.Oscillator</code> for a full list of methods."
     ],
     "params": {
       "freq": "Number: (Optional) Frequency in oscillations per second (Hz)",
